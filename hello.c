@@ -8,6 +8,6 @@ int main(void)
     int number = get_int("Please enter your contact number: ");
 
     printf("Name: %s\n", name);
-    printf("Name: %i\n", age);
-    printf("Name: %i\n", number);
+    printf("Age: %i\n", age);
+    printf("Contact no: %i\n", number);
 }
