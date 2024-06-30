@@ -3,5 +3,6 @@
 int main(void)
 {
     int name = get_string("Please enter you name: ")
-    int
+    int age = get_string("Please enter your age: ")
+    str
 }
