@@ -4,5 +4,5 @@ int main(void)
 {
     string name = get_string("Please enter you name: ")
     int age = get_int("Please enter your age: ")
-    int number = fet
+    int number = get_int()
 }
