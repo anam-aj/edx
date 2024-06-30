@@ -7,5 +7,5 @@ int main(void)
     int age = get_int("Please enter your age: ");
     int number = get_int("Please enter your contact number: ");
 
-    printf()
+    printf("Name: )
 }
