@@ -15,9 +15,10 @@ int main(void)
 }
 
 // Function to calculate quarters
-int no_of_quarter(amount)
+int no_of_quarters(int amount)
 {
-    
+    quarters = quotient(amount,25);
+    return quarters;
 }
 
 
