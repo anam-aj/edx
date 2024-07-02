@@ -25,7 +25,7 @@ int no_of_quarters(int amount)
 int no_of_dimes(int amount)
 {
     dimes = quotient(amount,10);
-    return pennies;
+    return dimes;
 }
 
 // Function to to return quotient
