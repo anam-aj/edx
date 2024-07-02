@@ -24,17 +24,26 @@ int main(void)
 // Print row of bricks(right aligned)
 void print_row(int spaces, int bricks)
 {
-    // Print spaces
+    // Print left spaces
     for (int j = 0; j < spaces; j++)
     {
         printf(" ");
     }
 
-    // Print bricks
+    // Print left bricks
     for (int i = 0; i < bricks; i++)
     {
         printf("#");
     }
 
-    printf("\n");
+    // Print centre spaces
+    printf("  ");
+
+    // Print right bricks
+    for (int i = 0; i < bricks; i++)
+    {
+        printf("#");
+    }
+
+
 }
