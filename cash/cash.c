@@ -11,7 +11,7 @@ int main(void)
     }
     while (change < 0);
 
-    if 
+    if change >= 25
     // No of Quarters
     int quarters = no_of_coins(change, 25);
     change %= 25
