@@ -12,9 +12,19 @@ int main(void)
     while (change < 0);
 
     // No of Quarters
-    int quarters = no
+    int quarters = no_of_coins(change, 25);
+    change %= 25
 
+    // No of dimes
+    int dimes = no_of_coins(change, 10);
+    change %= 10
 
+    // No of nickles
+    int nickles = no_of_coins(change, 5);
+    change %= 25
+
+    // No of pennies
+    int pennies = no_of_coins(change, 1);
 }
 
 
