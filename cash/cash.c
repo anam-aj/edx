@@ -15,10 +15,11 @@ int main(void)
 }
 
 
-// Function to calculate no of quarters to be given
-int quotient(number)
+// Function to to return quotient
+int quotient(int dividend, int divisor)
 {
-    int remainder = amount % 25;
-    int quarters = (amount - remainder)/25
-
+    int remainder = (dividned % divisor);
+    int quotient = (dividend - remainder)/divisor;
+    return quotient;
 }
+
