@@ -13,4 +13,11 @@ int main(void)
         height = get_int("Please enter the height: ");
     }
     while (height < 1);
+
+    while (height > 8);
+    {
+        height = get_int("Please enter the height: ");
+    }
+
+    printf("done");
 }
