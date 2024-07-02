@@ -10,18 +10,10 @@ int main(void)
         change = get_int("Change owed: ");
     }
     while (change < 0);
+}
 
-    int quarter = 0;
-    while (change >= 25);
-    {
-        change -= 25
-        quarter++
-    }
-
-    while (change >= 10);
-    {
-        change -= 10
-        number++
-    }
+// Function to calculate no of quarters to be given
+int no_of_quarters(amount)
+{
 
 }
