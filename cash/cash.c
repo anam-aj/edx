@@ -11,6 +11,9 @@ int main(void)
     }
     while (change < 0);
 
+    // No of Quarters
+    int quarters = no
+
 
 }
 
