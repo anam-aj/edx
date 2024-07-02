@@ -14,6 +14,7 @@ int main(void)
 
 }
 
+
 // Function to calculate quarters
 int no_of_quarters(int amount)
 {
@@ -21,12 +22,30 @@ int no_of_quarters(int amount)
     return quarters;
 }
 
+
 // Function to calculate dimes
 int no_of_dimes(int amount)
 {
     dimes = quotient(amount,10);
     return dimes;
 }
+
+
+// Function to calculate nickles
+int no_of_dimes(int amount)
+{
+    nickles = quotient(amount,10);
+    return dimes;
+}
+
+
+// Function to calculate dimes
+int no_of_dimes(int amount)
+{
+    dimes = quotient(amount,10);
+    return dimes;
+}
+
 
 // Function to to return quotient
 int quotient(int dividend, int divisor)
