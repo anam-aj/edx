@@ -29,6 +29,10 @@ int main(void)
     if (change >= 1)
     // No of pennies
     int pennies = no_of_coins(change, 1);
+
+    int total_coins = (quarters + dimes + nickles + pennies)
+
+    printf("")
 }
 
 
