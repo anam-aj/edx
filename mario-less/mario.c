@@ -13,6 +13,7 @@ int main(void)
         height = get_int("Please enter the height: ");
     }
     while (height < 1);
+
     // prints the pyramid with given height
     for (int r = 1; r <= height; r++)
     {
@@ -20,12 +21,16 @@ int main(void)
     }
 }
 
+// Print row of bricks(right aligned)
 void print_row(int spaces, int bricks)
 {
+    // Print spaces
     for (int j = 1; j <= spaces; j++)
     {
         printf(" ");
     }
+
+    // Print bricks
     for (int i = 1; i <= bricks; i++)
     {
         printf("#");
