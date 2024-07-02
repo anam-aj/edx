@@ -45,5 +45,6 @@ void print_row(int spaces, int bricks)
         printf("#");
     }
 
+    printf("\n")
 
 }
