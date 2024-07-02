@@ -21,6 +21,12 @@ int no_of_quarters(int amount)
     return quarters;
 }
 
+// Function to calculate quarters
+int no_of_quarters(int amount)
+{
+    quarters = quotient(amount,25);
+    return quarters;
+}
 
 // Function to to return quotient
 int quotient(int dividend, int divisor)
