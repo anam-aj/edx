@@ -13,7 +13,7 @@ int main(void)
         height = get_int("Please enter the height: ");
     }
     while (height < 1);
-
+    // prints the pyramid with given height
     for (int r = 1; r <= height; r++)
     {
         print_row(height - r, r);
