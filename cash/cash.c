@@ -22,12 +22,12 @@ int main(void)
     if (change >= 10)
     // No of dimes
     int dimes = no_of_coins(change, 10);
-    change %= 10
+    change %= 10;
 
     if (change >= 5)
     // No of nickles
     int nickles = no_of_coins(change, 5);
-    change %= 5
+    change %= 5;
 
     if (change >= 1)
     // No of pennies
