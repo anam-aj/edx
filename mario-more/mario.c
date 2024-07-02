@@ -7,7 +7,7 @@ void print_row(int spaces, int bricks);
 int main(void)
 {
     // Promt the user for pyramid height
-    int height;
+    int height; 
     do
     {
         height = get_int("Please enter the height: ");
