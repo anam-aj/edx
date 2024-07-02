@@ -19,5 +19,6 @@ int main(void)
 int no_of_quarters(amount)
 {
     int remainder = amount % 25;
-    int quarters = ()
+    int quarters = (amount - remainder)/25
+    
 }
