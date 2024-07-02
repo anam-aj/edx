@@ -1,6 +1,6 @@
 // Print the the no of minimum coins
-#include <cs50>
-#include <stdio>
+#include <cs50.h>
+#include <stdio.h>
 
 int main(void)
 {
