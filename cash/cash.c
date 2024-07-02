@@ -11,11 +11,11 @@ int main(void)
     }
     while (change < 0);
 
-    int number = 0;
+    int quarter = 0;
     while (change >= 25);
     {
         change -= 25
-        number++
+        quarter++
     }
 
     while (change >= 10);
