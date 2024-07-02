@@ -11,5 +11,17 @@ int main(void)
     }
     while (change < 0);
 
-    while ()
+    int number = 0;
+    while (change >= 25);
+    {
+        change -= 25
+        number++
+    }
+
+    while (change >= 10);
+    {
+        change -= 10
+        number++
+    }
+
 }
