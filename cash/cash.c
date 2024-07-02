@@ -14,6 +14,12 @@ int main(void)
 
 }
 
+// Function to calculate quarters
+int no_of_quarter(amount)
+{
+    
+}
+
 
 // Function to to return quotient
 int quotient(int dividend, int divisor)
