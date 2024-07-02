@@ -8,16 +8,12 @@ int main(void)
 {
     // Promt the user for pyramid height
     int height;
-    do
+    if do
     {
         height = get_int("Please enter the height: ");
     }
     while (height < 1);
 
-    while (height > 8);
-    {
-        height = get_int("Please enter the height: ");
-    }
 
     printf("done");
 }
