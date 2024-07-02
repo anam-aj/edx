@@ -15,35 +15,11 @@ int main(void)
 }
 
 
-// Function to calculate quarters
-int no_of_quarters(int amount)
+// Function to calculate no of coins of given value
+int no_of_coins(int amount, int coin_value)
 {
-    quarters = quotient(amount,25);
-    return quarters;
-}
-
-
-// Function to calculate dimes
-int no_of_dimes(int amount)
-{
-    dimes = quotient(amount,10);
-    return dimes;
-}
-
-
-// Function to calculate nickles
-int no_of_dimes(int amount)
-{
-    nickles = quotient(amount,10);
-    return dimes;
-}
-
-
-// Function to calculate dimes
-int no_of_dimes(int amount)
-{
-    dimes = quotient(amount,10);
-    return dimes;
+    int coins = quotient(amount, coin_value);
+    return coins;
 }
 
 
