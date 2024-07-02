@@ -14,22 +14,22 @@ int main(void)
     }
     while (change < 0);
 
-    if (change >= 25)
+
     // No of Quarters
     int quarters = no_of_coins(change, 25);
     change %= 25;
 
-    if (change >= 10)
+
     // No of dimes
     int dimes = no_of_coins(change, 10);
     change %= 10;
 
-    if (change >= 5)
+
     // No of nickles
     int nickles = no_of_coins(change, 5);
     change %= 5;
 
-    if (change >= 1)
+    
     // No of pennies
     int pennies = no_of_coins(change, 1);
 
