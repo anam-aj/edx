@@ -2,6 +2,9 @@
 #include <cs50.h>
 #include <stdio.h>
 
+int no_of_coins(int amount, int coin_value);
+int quotient(int dividend, int divisor);
+
 int main(void)
 {
     int change;
@@ -14,7 +17,7 @@ int main(void)
     if (change >= 25)
     // No of Quarters
     int quarters = no_of_coins(change, 25);
-    change %= 25
+    change %= 25;
 
     if (change >= 10)
     // No of dimes
@@ -32,7 +35,7 @@ int main(void)
 
     int total_coins = (quarters + dimes + nickles + pennies)
 
-    printf("")
+    printf("%i\n", total_coins)
 }
 
 
