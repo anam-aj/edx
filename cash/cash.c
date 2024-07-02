@@ -17,16 +17,19 @@ int main(void)
     // No of Quarters
     int quarters = no_of_coins(change, 25);
 
+    // Remaining change
     change %= 25;
 
     // No of dimes
     int dimes = no_of_coins(change, 10);
 
+    // Remaining change
     change %= 10;
 
     // No of nickles
     int nickles = no_of_coins(change, 5);
-    
+
+    // Remaining change
     change %= 5;
 
     // No of pennies
