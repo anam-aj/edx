@@ -7,15 +7,13 @@ void print_row(int spaces, int bricks);
 int main(void)
 {
     // Promt the user for pyramid height from 1 to 8(inclusive)
-
     int height = get_int("Please enter the height: ");
-    if (x <= 8)
+    while (height < 1)
     {
-        do
+        while (height > 8)
         {
-            height = get_int("Please enter the height: ");
+                
         }
-        while (height < 1);
     }
 
 
