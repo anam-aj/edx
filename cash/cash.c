@@ -51,6 +51,6 @@ int no_of_coins(int amount, int coin_value)
 int quotient(int dividend, int divisor)
 {
     int remainder = (dividend % divisor);
-    int quotient = (dividend - remainder)/divisor;
+    int quotient = (dividend - remainder) / divisor;
     return quotient;
 }
