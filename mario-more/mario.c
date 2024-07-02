@@ -21,7 +21,7 @@ int main(void)
     }
 }
 
-// Print row of bricks(right aligned)
+// Print row of bricks
 void print_row(int spaces, int bricks)
 {
     // Print left spaces
