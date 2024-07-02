@@ -15,9 +15,9 @@ int main(void)
     while (height < 1);
 
     // prints the pyramid with given height
-    for (int r = 1; r <= height; r++)
+    for (int r = 0; r < height; r++)
     {
-        print_row(height - r, r);
+        print_row(height - (r + 1), r + 1);
     }
 }
 
@@ -25,13 +25,13 @@ int main(void)
 void print_row(int spaces, int bricks)
 {
     // Print spaces
-    for (int j = 1; j <= spaces; j++)
+    for (int j = 0; j < spaces; j++)
     {
         printf(" ");
     }
 
     // Print bricks
-    for (int i = 1; i <= bricks; i++)
+    for (int i = 0; i < bricks; i++)
     {
         printf("#");
     }
