@@ -1,4 +1,4 @@
-// Prints right-aligned pyramid
+// Prints pyramid
 #include <cs50.h>
 #include <stdio.h>
 
