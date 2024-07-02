@@ -23,13 +23,11 @@ int main(void)
     // No of dimes
     int dimes = no_of_coins(change, 10);
 
-    // Remaining change
     change %= 10;
 
     // No of nickles
     int nickles = no_of_coins(change, 5);
 
-    // Remaining change
     change %= 5;
 
     // No of pennies
