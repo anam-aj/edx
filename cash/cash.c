@@ -21,7 +21,7 @@ int main(void)
 
     // No of nickles
     int nickles = no_of_coins(change, 5);
-    change %= 25
+    change %= 5
 
     // No of pennies
     int pennies = no_of_coins(change, 1);
