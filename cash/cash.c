@@ -29,7 +29,7 @@ int main(void)
     int nickles = no_of_coins(change, 5);
     change %= 5;
 
-    
+
     // No of pennies
     int pennies = no_of_coins(change, 1);
 
@@ -50,7 +50,7 @@ int no_of_coins(int amount, int coin_value)
 // Function to to return quotient
 int quotient(int dividend, int divisor)
 {
-    int remainder = (dividned % divisor);
+    int remainder = (dividend % divisor);
     int quotient = (dividend - remainder)/divisor;
     return quotient;
 }
