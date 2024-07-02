@@ -14,7 +14,7 @@ int main(void)
     }
     while (height < 1);
 
-    // prints the pyramid with given height
+    // Prints the pyramid with given height
     for (int r = 0; r < height; r++)
     {
         print_row(height - (r + 1), r + 1);
