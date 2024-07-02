@@ -10,5 +10,5 @@ int main(void)
         change = get_int("Change owed: ");
     }
     while (change < 0);
-
+    
 }
