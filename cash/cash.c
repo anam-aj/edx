@@ -15,5 +15,5 @@ int main(void)
 // Function to calculate no of quarters to be given
 int no_of_quarters(amount)
 {
-
+    int remainder = 
 }
