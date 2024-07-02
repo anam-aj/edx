@@ -21,10 +21,10 @@ int no_of_quarters(int amount)
     return quarters;
 }
 
-// Function to calculate quarters
-int no_of_quarters(int amount)
+// Function to calculate dimes
+int no_of_dimes(int amount)
 {
-    quarters = quotient(amount,25);
+    dimes = quotient(amount,25);
     return quarters;
 }
 
