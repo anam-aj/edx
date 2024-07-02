@@ -5,5 +5,5 @@
 int main(void)
 {
     long number = get_long("Enter Card Number: ");
-    printf("%i\n", number)
+    printf("%li\n", number);
 }
