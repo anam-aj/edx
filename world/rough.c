@@ -12,5 +12,5 @@ int main(void)
     {
         height = get_int("Please enter the height: ");
     }
-    while (height < 1 or );
+    while (height < 1);
 }
