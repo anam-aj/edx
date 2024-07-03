@@ -12,8 +12,8 @@ int main(void)
     }
     while (card_number <= 0);
 
-    long quotient = card_number/3;
+    int quotient = card_number/3;
 
-    printf("%li\n", quotient);
+    printf("%i\n", quotient);
 
 }
