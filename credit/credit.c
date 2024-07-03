@@ -30,7 +30,8 @@ int main(void)
         {
             printf("MASTERCARD\n");
         }
-        
+
+
         else if ((no_of_digits(card_number) == 13 || no_of_digits(card_number) == 16) &&
                  (first_digit(card_number) == 4))
         {
