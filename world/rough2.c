@@ -1,44 +1,106 @@
-// Print the the no of minimum coins
+// Programme to check validity and type of card
 #include <cs50.h>
 #include <stdio.h>
 
 int check_sum(long number);
+int no_of_digits(long number);
+long first_digit(long number);
+long first_two_digits(long number);
 
 int main(void)
 {
-    long number;
+    long card_number;
     // Promts the user to enter card no
     do
     {
-        number = get_long("Enter Card Number: ");
+        card_number = get_long("Enter Card Number: ");
     }
-    while (number <= 0);
+    while (card_number <= 0);
 
+    if ((check_sum(card_number)) == 0)
+    {
+        if ((no_of_digits(card_number) == 15) &&
+            (first_two_digits(card_number) == 34 || first_two_digits(card_number) == 37))
+        {
+            printf("AMEX\n");
+        }
 
+        else if ((no_of_digits(card_number) == 16) &&
+                 (first_two_digits(card_number) > 50 && first_two_digits(card_number) < 56))
+        {
+            printf("MASTERCARD\n");
+        }
+
+        else if ((no_of_digits(card_number) == 13 || no_of_digits(card_number) == 16) &&
+                 (first_digit(card_number) == 4))
+        {
+            printf("VISA\n");
+        }
+    }
+
+    else
+    {
+        printf("INVALID\n");
+    }
+}
+
+// function to give first digit of the given number
+long first_digit(long number)
+{
+    while (no_of_digits(number) > 1)
+    {
+        number = (number / 10);
+    }
+    return number;
+}
+
+// function to give first two digits of the given number
+long first_two_digits(long number)
+{
+    while (no_of_digits(number) > 2)
+    {
+        number = (number / 10);
+    }
+    return number;
+}
+
+// function to calculate no of digits
+int no_of_digits(long number)
+{
+    int digit_count = 0;
+    while (number > 0)
+    {
+        digit_count++;
+        number = (number / 10);
+    }
+    return digit_count;
+}
+
+// Defining checksum according to lunh alogrithm
+int check_sum(long number)
+{
     int sum_of_even_place_digits = 0;
     int sum_of_odd_place_digits = 0;
-    int i = 1;
 
     while (number > 0)
     {
-        printf("--%i\n", i);
         int digit_at_odd_place = number % 10;
-        printf("odd %i\n", digit_at_odd_place);
         sum_of_odd_place_digits += digit_at_odd_place;
         number = (number / 10);
-        printf("%li\n", number);
 
         int digit_at_even_place = number % 10;
-        printf("even %i\n", digit_at_even_place);
-        sum_of_even_place_digits += digit_at_even_place;
+        int twice = (2 * digit_at_even_place);
+        while (twice > 0)
+        {
+            int unitdigit = (twice % 10);
+            sum_of_even_place_digits += unitdigit;
+            int tensdigit = (twice / 10);
+            sum_of_even_place_digits += tensdigit;
+        }
         number = (number / 10);
-        printf("%li\n", number);
-        i++;
     }
-    printf("even %i\n", sum_of_even_place_digits);
-    printf("odd %i\n", net_sum)
-    int net_sum = (sum_of_odd_place_digits) + (2 * sum_of_even_place_digits);
-    printf("sum %i\n", net_sum);
+
+    int net_sum = (sum_of_odd_place_digits) + (sum_of_even_place_digits);
     int unit_digit = net_sum % 10;
-    printf("unit %i\n", unit_digit);
+    return unit_digit;
 }
