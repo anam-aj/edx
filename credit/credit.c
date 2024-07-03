@@ -15,7 +15,7 @@ int main(void)
 }
 
 
-// function to calcilate no of digits
+// function to calculate no of digits
 int no_of_digits(long number)
 {
     int digit_count = 0;
