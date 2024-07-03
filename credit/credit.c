@@ -13,6 +13,8 @@ int main(void)
     do
     card_number = get_long("Enter Card Number: ");
     while (card_number <= 0);
+
+    printf("%i/n", check_sum)
 }
 
 // function to give first digit of the given number
