@@ -9,29 +9,32 @@ long first_two_digits(long number);
 
 int main(void)
 {
-    long card_number;
     // Promts the user to enter card no
+    long card_number;
     do
     {
         card_number = get_long("Enter Card Number: ");
     }
     while (card_number <= 0);
+
     // checks if checksum is correct
     if ((check_sum(card_number)) == 0)
     {
-        // checks criterio
+        // Checks criteria for American Express
         if ((no_of_digits(card_number) == 15) &&
             (first_two_digits(card_number) == 34 || first_two_digits(card_number) == 37))
         {
             printf("AMEX\n");
         }
 
+        // Checks criteria for MasterCard
         else if ((no_of_digits(card_number) == 16) &&
                  (first_two_digits(card_number) > 50 && first_two_digits(card_number) < 56))
         {
             printf("MASTERCARD\n");
         }
 
+        // Checks criteria for Visa
         else if ((no_of_digits(card_number) == 13 || no_of_digits(card_number) == 16) &&
                  (first_digit(card_number) == 4))
         {
