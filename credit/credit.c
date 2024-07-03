@@ -25,11 +25,11 @@ int peter_lunh_sum(long number)
     {
         int digit_at_odd_place = number % 10;
         sum_of_odd_place_digits += digit_at_odd_place;
-        quotient(number, 10);
+        number = quotient(number, 10);
 
         int digit_at_even_place = number % 10;
         sum_of_even_place_digits += digit_at_even_place;
-        quotient(number, 10);
+        number = quotient(number, 10);
     }
 
     int peter_lunh_sum = (sum_of_odd_place_digits) + (2 * sum_of_even_place_digits);
