@@ -10,4 +10,7 @@ int main(void)
     number = get_long("Enter Card Number: ");
     while (number <= 0);
 
+    while (number > 0);
+    
+
 }
