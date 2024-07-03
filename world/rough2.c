@@ -21,7 +21,7 @@ int main(void)
 
     while (number > 0)
     {
-        printf("%i\n", i);
+        printf("--%i\n", i);
         int digit_at_odd_place = number % 10;
         sum_of_odd_place_digits += digit_at_odd_place;
         number = (number / 10);
