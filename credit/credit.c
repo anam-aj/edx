@@ -21,8 +21,16 @@ int checksum(long number)
     {
         int no_at_odd_place = number % 10;
         sum_of_odd_digits += no_at_odd_place;
-        number 
+        number
 
     }
 
+}
+
+// Function to to return quotient with out decimal part
+int quotient(int dividend, int divisor)
+{
+    int remainder = (dividend % divisor);
+    int quotient = (dividend - remainder) / divisor;
+    return quotient;
 }
