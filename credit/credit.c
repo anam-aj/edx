@@ -4,19 +4,19 @@
 
 int main(void)
 {
-    long number;
+    long card_number;
     // Promts the user to enter card no
     do
-    number = get_long("Enter Card Number: ");
-    while (number <= 0);
+    card_number = get_long("Enter Card Number: ");
+    while (card_number <= 0);
 
-    
+    // defining Checksum
+    int checksum(long number)
     int sum_of_even_digits = 0;
     int sum_of_odd_digits = 0;
-
     while (number > 0);
     {
-        sum
+        int no_at_odd_place =
     }
 
 }
