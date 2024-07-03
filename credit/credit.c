@@ -21,8 +21,8 @@ int first_two_digits(long number)
     {
         number = quotien(number);
     }
+    return number;
 }
-
 
 
 // function to calculate no of digits
