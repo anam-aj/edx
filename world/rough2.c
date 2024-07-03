@@ -1,18 +1,54 @@
-// Prints pyramid
+// Print the the no of minimum coins
 #include <cs50.h>
 #include <stdio.h>
 
+int no_of_coins(int amount, int coin_value);
+int quotient(int dividend, int divisor);
 
 int main(void)
 {
+    int change;
+    do
+    {
+        change = get_int("Change owed: ");
+    }
+    while (change < 0);
 
+    // No of Quarters
+    int quarters = no_of_coins(change, 25);
 
-    long card_number = get_long("Enter Card Number: ");
+    // Remaining change
+    change %= 25;
 
+    // No of dimes
+    int dimes = no_of_coins(change, 10);
 
+    change %= 10;
 
-    int quotient = (card_number)/3;
+    // No of nickles
+    int nickles = no_of_coins(change, 5);
 
-    printf("%i\n", quotient);
+    change %= 5;
 
+    // No of pennies
+    int pennies = no_of_coins(change, 1);
+
+    int total_coins = (quarters + dimes + nickles + pennies);
+
+    printf("%i\n", total_coins);
+}
+
+// Function to calculate no of coins of given value
+int no_of_coins(int amount, int coin_value)
+{
+    int coins = quotient(amount, coin_value);
+    return coins;
+}
+
+// Function to to return quotient with out decimal part
+int quotient(int dividend, int divisor)
+{
+    int remainder = (dividend % divisor);
+    int quotient = (dividend - remainder) / divisor;
+    return quotient;
 }
