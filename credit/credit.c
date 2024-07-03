@@ -2,6 +2,9 @@
 #include <cs50.h>
 #include <stdio.h>
 
+int quotient(int dividend, int divisor);
+int checksum(long number);
+
 int main(void)
 {
     long card_number;
@@ -21,7 +24,7 @@ int checksum(long number)
     {
         int no_at_odd_place = number % 10;
         sum_of_odd_digits += no_at_odd_place;
-        number
+        quotient()
 
     }
 
