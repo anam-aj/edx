@@ -13,6 +13,6 @@ int main(void)
 
     int quotient = (card_number)/3;
 
-    printf("%i\n", quotient);
+    printf("%li\n", quotient);
 
 }
