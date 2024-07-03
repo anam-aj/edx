@@ -9,14 +9,19 @@ int main(void)
     do
     card_number = get_long("Enter Card Number: ");
     while (card_number <= 0);
+}
 
-    // defining Checksum
-    int checksum(long number)
+
+// defining Checksum
+int checksum(long number)
+{
     int sum_of_even_digits = 0;
     int sum_of_odd_digits = 0;
     while (number > 0);
     {
-        int no_at_odd_place =
+        int no_at_odd_place = number % 10;
+        sum_of_odd_digits += no_at_odd_place;
+
     }
 
 }
