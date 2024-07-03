@@ -13,7 +13,7 @@ int main(void)
     }
     while (change < 0);
 
-    if (change == (10 || 11))
+    if (change == 11 || change == 10)
     {
         printf("b");
     }
