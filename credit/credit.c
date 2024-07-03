@@ -2,10 +2,8 @@
 #include <cs50.h>
 #include <stdio.h>
 
-
-int check_sum(int number);
+int check_sum(long number);
 int no_of_digits(long number);
-int peter_lunh_sum(long number);
 long first_digit(long number);
 long first_two_digits(long number);
 
