@@ -23,12 +23,12 @@ int main(void)
         {
             printf("AMEX\n");
         }
-        else if ((no_of_digits(card_number) == 16) &&
-        (first_two_digits(card_number) == (51 || 52 || 53 || 54 || 55)))
+        else if ((no_of_digits(card_number) == (13 || 16)) && (first_digit(card_number) == 4))
         {
             printf("VISA\n");
         }
-        else if ((no_of_digits(card_number) == (13 || 16)) && (first_digit(card_number) == 4))
+        else if ((no_of_digits(card_number) == 16) &&
+        (first_two_digits(card_number) == (51 || 52 || 53 || 54 || 55)))
         {
             printf("VISA\n");
         }
