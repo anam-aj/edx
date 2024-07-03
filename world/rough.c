@@ -50,8 +50,7 @@ int first_two_digits(long number)
     {
         number = quotient(number, 10);
     }
-    int (number);
-    return (number);
+    return (int (number));
 }
 
 
