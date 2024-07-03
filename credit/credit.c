@@ -14,6 +14,18 @@ int main(void)
     while (card_number <= 0);
 }
 
+
+// function to give first digit of the given number
+int first_digit(long number)
+{
+    while (no_of_digits(number) > 1)
+    {
+        number = quotient(number, 10);
+    }
+    return number;
+}
+
+
 // function to give first two digits of the given number
 int first_two_digits(long number)
 {
