@@ -36,10 +36,10 @@ int main(void)
         {
             printf("VISA\n");
         }
-        
+
         else
         {
-        printf("INVALID\n");
+            printf("INVALID\n");
         }
     }
 
