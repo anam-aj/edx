@@ -20,13 +20,9 @@ int main(void)
     if check_sum(card_number) == 0;
     {
         if ((no_of_digits(card_number) == 15);
-        {}
-            if (first_two_digits(card_number)) == (32 || 35));
-            {
-
-            }
+        {
+            (first_two_digits(card_number)) == (32 || 35));
         }
-
     }
     else
     {
