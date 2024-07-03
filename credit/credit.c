@@ -19,11 +19,11 @@ int main(void)
 
     if check_sum(card_number) == 0;
     {
-
+        
     }
     else
     {
-       printf("\n");
+       printf("INVALID\n");
     }
 
     printf("%i\n", check_sum(card_number));
