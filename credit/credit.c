@@ -12,7 +12,9 @@ int main(void)
     long card_number;
     // Promts the user to enter card no
     do
-    card_number = get_long("Enter Card Number: ");
+    {
+        card_number = get_long("Enter Card Number: ");
+    }
     while (card_number <= 0);
 
     printf("%i/n", check_sum(card_number));
@@ -47,7 +49,7 @@ int no_of_digits(long number)
     int digit_count = 0;
     while (number > 0)
     {
-        digit_count++ ;
+        digit_count++;
         number = (number / 10);
     }
     return digit_count;
