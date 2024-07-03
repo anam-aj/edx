@@ -23,16 +23,13 @@ int main(void)
         {
             printf("VISA\n")
         }
-    }
-
-    if check_sum(card_number) == 0;
-    {
-        if no_of_digits(card_number) == 15;
+        else if ((no_of_digits(card_number) == 15) && (first_two_digits(card_number) == (32 || 35)));
         {
-            if first_two_digits(card_number) == (32 || 35);
-            {
-                printf("VISA\n")
-            }
+            printf("VISA\n")
+        }
+        else if ((no_of_digits(card_number) == 15) && (first_two_digits(card_number) == (32 || 35)));
+        {
+            printf("VISA\n")
         }
     }
     else
