@@ -73,7 +73,7 @@ long first_two_digits(long number)
     return number;
 }
 
-// function to calculate no of digits
+// function to calculate no of digits in the given number
 int no_of_digits(long number)
 {
     int digit_count = 0;
