@@ -14,6 +14,8 @@ int main(void)
     while (card_number <= 0);
 }
 
+
+// function to calcilate no of digits
 int no_of_digits(long number)
 {
     int digit_count = 0;
