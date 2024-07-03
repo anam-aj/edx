@@ -17,6 +17,7 @@ int main(void)
 
     printf("%i\n", no_of_digits(card_number));
     printf("%i\n", peter_lunh_sum(card_number));
+    printf("%i\n", first_two_digits(card_number));
 }
 
 // peter_lunh_sum means sum according to Lunh's algorithm
@@ -39,6 +40,18 @@ int peter_lunh_sum(long number)
     int peter_lunh_sum = (sum_of_odd_place_digits) + (2 * sum_of_even_place_digits);
     return peter_lunh_sum;
 }
+
+
+// function to give first two digits of the given number
+int first_two_digits(long number)
+{
+    while (no_of_digits(number) > 2)
+    {
+        number = quotien(number);
+    }
+    return number;
+}
+
 
 int no_of_digits(long number)
 {
