@@ -17,7 +17,7 @@ int main(void)
     }
     while (card_number <= 0);
 
-    if (check_sum(card_number) == 0);
+    if ((check_sum(card_number)) == 0)
     {
         if ((no_of_digits(card_number) == 15)
         && (first_two_digits(card_number) == 34 || first_two_digits(card_number) == 37))
