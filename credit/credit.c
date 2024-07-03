@@ -18,13 +18,13 @@ int main(void)
 
 
 // function to give first digit of the given number
-long first_digit(long number)
+int first_digit(long number)
 {
     while (no_of_digits(number) > 1)
     {
         number = quotient(number, 10);
     }
-    return number;
+    return int(number);
 }
 
 
