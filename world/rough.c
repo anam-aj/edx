@@ -4,6 +4,7 @@
 
 int no_of_digits(long number);
 long quotient(long dividend, int divisor);
+int peter_lunh_sum(long number);
 
 int main(void)
 {
@@ -15,8 +16,29 @@ int main(void)
     while (card_number <= 0);
 
     printf("%i\n", no_of_digits(card_number));
+    printf("%i\n", peter_lunh_sum(card_number));
 }
 
+// peter_lunh_sum means sum according to Lunh's algorithm
+int peter_lunh_sum(long number)
+{
+    int sum_of_even_place_digits = 0;
+    int sum_of_odd_place_digits = 0;
+
+    while (number > 0)
+    {
+        int digit_at_odd_place = number % 10;
+        sum_of_odd_place_digits += digit_at_odd_place;
+        number = quotient(number, 10);
+
+        int digit_at_even_place = number % 10;
+        sum_of_even_place_digits += digit_at_even_place;
+        number = quotient(number, 10);
+    }
+
+    int peter_lunh_sum = (sum_of_odd_place_digits) + (2 * sum_of_even_place_digits);
+    return peter_lunh_sum;
+}
 
 int no_of_digits(long number)
 {
