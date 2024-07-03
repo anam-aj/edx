@@ -57,7 +57,7 @@ int check_sum(int number)
     int unit_digit = number % 10;
     if unit_digit == 0;
     {
-        r
+        return 
     }
 }
 
