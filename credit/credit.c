@@ -54,7 +54,11 @@ int no_of_digits(long number)
 // Defining checksum according to lunh alogrithm
 int check_sum(int number)
 {
-    int unit_digit = number
+    int unit_digit = number % 10;
+    if unit_digit == 0;
+    {
+        r
+    }
 }
 
 // peter_lunh_sum means sum of digits according to Lunh's algorithm
