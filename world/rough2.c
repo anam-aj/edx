@@ -35,6 +35,7 @@ int main(void)
     }
 
     int net_sum = (sum_of_odd_place_digits) + (2 * sum_of_even_place_digits);
+    printf("%i\n", net_sum);
     int unit_digit = net_sum % 10;
     printf("%i\n", unit_digit);
 }
