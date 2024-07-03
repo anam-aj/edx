@@ -17,6 +17,12 @@ int main(void)
     }
     while (card_number <= 0);
 
+    if check_sum(card_number) == 0;
+    {
+
+    }
+    else
+
     printf("%i\n", check_sum(card_number));
     printf("%i\n", no_of_digits(card_number));
     printf("%li\n", first_digit(card_number));
