@@ -16,9 +16,10 @@ int main(void)
         card_number = get_long("Enter Card Number: ");
     }
     while (card_number <= 0);
-
+    // checks if checksum is correct
     if ((check_sum(card_number)) == 0)
     {
+        // checks criterio
         if ((no_of_digits(card_number) == 15) &&
             (first_two_digits(card_number) == 34 || first_two_digits(card_number) == 37))
         {
