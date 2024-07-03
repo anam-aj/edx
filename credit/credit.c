@@ -92,17 +92,15 @@ int check_sum(long number)
         int twice = (2 * digit_at_even_place);
         while (twice > 0)
         {
-            int unitdigit = twice % 10;
+            int unitdigit = (twice % 10);
             sum_of_even_place_digits += unitdigit;
             int tensdigit = (twice / 10);
             sum_of_even_place_digits += tensdigit;
         }
-
-        sum_of_even_place_digits += digit_at_even_place;
         number = (number / 10);
     }
 
-    int net_sum = (sum_of_odd_place_digits) + (2 * sum_of_even_place_digits);
+    int net_sum = (sum_of_odd_place_digits) + (sum_of_even_place_digits);
     int unit_digit = net_sum % 10;
     return unit_digit;
 }
