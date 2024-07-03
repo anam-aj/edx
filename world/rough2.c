@@ -15,7 +15,7 @@ int main(void)
     while (number <= 0);
 
     int new = number/10;
-    printf("%i\n", new)
+    printf("%i\n", new);
 
 
 }
