@@ -24,8 +24,8 @@ int main(void)
         {
             printf("AMEX\n");
         }
-        else if ((no_of_digits(card_number) == 13 || no_of_digits(card_number) == 13)
-        && (first_digit(card_number) == 4))
+        else if ((no_of_digits(card_number) == 16)
+        && (first_two_digit(card_number) == 4))
         {
             printf("VISA\n");
         }
