@@ -4,8 +4,18 @@
 
 int check_sum(long number);
 
+int main(void)
+{
+    long card_number;
+    // Promts the user to enter card no
+    do
+    {
+        card_number = get_long("Enter Card Number: ");
+    }
+    while (card_number <= 0);
 
-
+    printf("")
+}
 
 int check_sum(long number)
 {
