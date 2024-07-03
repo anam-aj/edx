@@ -24,11 +24,13 @@ int main(void)
         {
             printf("AMEX\n");
         }
+
         else if ((no_of_digits(card_number) == 16) &&
-                 (first_two_digits(card_number) > 50 && first_two_digits(card_number) < 56 ))
+                 (first_two_digits(card_number) > 50 && first_two_digits(card_number) < 56))
         {
             printf("MASTERCARD\n");
         }
+        
         else if ((no_of_digits(card_number) == 13 || no_of_digits(card_number) == 16) &&
                  (first_digit(card_number) == 4))
         {
