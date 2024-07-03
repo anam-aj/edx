@@ -6,19 +6,15 @@ int check_sum(long number);
 
 int main(void)
 {
-    long card_number;
+    long number;
     // Promts the user to enter card no
     do
     {
-        card_number = get_long("Enter Card Number: ");
+        number = get_long("Enter Card Number: ");
     }
-    while (card_number <= 0);
+    while (number <= 0);
 
-    printf("")
-}
 
-int check_sum(long number)
-{
     int sum_of_even_place_digits = 0;
     int sum_of_odd_place_digits = 0;
 
@@ -27,13 +23,15 @@ int check_sum(long number)
         int digit_at_odd_place = number % 10;
         sum_of_odd_place_digits += digit_at_odd_place;
         number = (number / 10);
+        printf("%li\n", number);
 
         int digit_at_even_place = number % 10;
         sum_of_even_place_digits += digit_at_even_place;
         number = (number / 10);
+        printf("%li\n", number);
     }
 
     int net_sum = (sum_of_odd_place_digits) + (2 * sum_of_even_place_digits);
     int unit_digit = net_sum % 10;
-    return unit_digit;
+    printf("%i\n", unit_digit);
 }
