@@ -21,6 +21,7 @@ int checksum(long number)
     {
         int no_at_odd_place = number % 10;
         sum_of_odd_digits += no_at_odd_place;
+        
 
     }
 
