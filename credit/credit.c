@@ -22,10 +22,13 @@ int checksum(long number)
     int sum_of_odd_digits = 0;
     while (number > 0);
     {
-        int no_at_odd_place = number % 10;
-        sum_of_odd_digits += no_at_odd_place;
-        quotient()
+        int digit_at_odd_place = number % 10;
+        sum_of_odd_digits += digit_at_odd_place;
+        quotient(number, 10);
 
+        int digit_at_even_place = number % 10;
+        sum_of_even_digits += digit_at_even_place;
+        quotient(number, 10);
     }
 
 }
