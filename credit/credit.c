@@ -3,7 +3,9 @@
 #include <stdio.h>
 
 long quotient(long dividend, int divisor);
-int checksum(long number);
+int check_sum(int number);
+long first_digit(long number);
+int first_two_digits(long number);
 
 int main(void)
 {
@@ -57,6 +59,7 @@ int check_sum(int number)
     int unit_digit = number % 10;
     return unit_digit;
 }
+
 
 // peter_lunh_sum means sum of digits according to Lunh's algorithm
 int peter_lunh_sum(long number)
