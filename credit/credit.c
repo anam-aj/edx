@@ -90,7 +90,7 @@ int check_sum(long number)
 
         int digit_at_even_place = number % 10;
         int twice = (2 * digit_at_even_place);
-        while (twice > 0)
+        if (twice > 0)
         {
             int unitdigit = (twice % 10);
             sum_of_even_place_digits += unitdigit;
