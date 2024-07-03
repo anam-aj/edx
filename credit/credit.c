@@ -19,18 +19,18 @@ int main(void)
 
     if ((check_sum(card_number)) == 0)
     {
-        if ((no_of_digits(card_number) == 15)
-        && (first_two_digits(card_number) == 34 || first_two_digits(card_number) == 37))
+        if ((no_of_digits(card_number) == 15) &&
+            (first_two_digits(card_number) == 34 || first_two_digits(card_number) == 37))
         {
             printf("AMEX\n");
         }
-        else if ((no_of_digits(card_number) == 16)
-        && (first_two_digits(card_number) > 50 && first_two_digits(card_number) < 56 ))
+        else if ((no_of_digits(card_number) == 16) &&
+                 (first_two_digits(card_number) > 50 && first_two_digits(card_number) < 56 ))
         {
             printf("MASTERCARD\n");
         }
         else if ((no_of_digits(card_number) == 13 || no_of_digits(card_number) == 16) &&
-        (first_digit(card_number) == 4))
+                 (first_digit(card_number) == 4))
         {
             printf("VISA\n");
         }
@@ -38,7 +38,7 @@ int main(void)
 
     else
     {
-       printf("INVALID\n");
+        printf("INVALID\n");
     }
 }
 
