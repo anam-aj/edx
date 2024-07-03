@@ -2,9 +2,12 @@
 #include <cs50.h>
 #include <stdio.h>
 
+
 int check_sum(int number);
-int first_two_digits(long number);
+int no_of_digits(long number);
 long first_digit(long number);
+long first_two_digits(long number);
+
 
 int main(void)
 {
@@ -14,7 +17,10 @@ int main(void)
     card_number = get_long("Enter Card Number: ");
     while (card_number <= 0);
 
-    printf("%i/n", check_sum)
+    printf("%i/n", check_sum);
+    printf("%i/n", no_of_digits);
+    printf("%li/n", first_digit);
+    printf("%li/n", first_two_digits);
 }
 
 // function to give first digit of the given number
@@ -28,7 +34,7 @@ long first_digit(long number)
 }
 
 // function to give first two digits of the given number
-int first_two_digits(long number)
+long first_two_digits(long number)
 {
     while (no_of_digits(number) > 2)
     {
