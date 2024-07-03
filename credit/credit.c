@@ -10,12 +10,12 @@ int main(void)
     number = get_long("Enter Card Number: ");
     while (number <= 0);
 
-    int sum_of_even_digits = 0
-    int sum_of_odd_digits = 0
-    
+    int sum_of_even_digits = 0;
+    int sum_of_odd_digits = 0;
+
     while (number > 0);
     {
-
+        
     }
 
 }
