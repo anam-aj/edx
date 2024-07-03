@@ -23,11 +23,13 @@ int main(void)
     {
         printf("--%i\n", i);
         int digit_at_odd_place = number % 10;
+        printf("odd %i\n", digit_at_odd_place);
         sum_of_odd_place_digits += digit_at_odd_place;
         number = (number / 10);
         printf("%li\n", number);
 
         int digit_at_even_place = number % 10;
+        printf("even %i\n", digit_at_even_place);
         sum_of_even_place_digits += digit_at_even_place;
         number = (number / 10);
         printf("%li\n", number);
