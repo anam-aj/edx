@@ -2,7 +2,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int quotient(long dividend, int divisor);
+long quotient(long dividend, int divisor);
 int checksum(long number);
 
 int main(void)
@@ -30,8 +30,8 @@ int checksum(long number)
 
 }
 
-// Function to to return quotient with out decimal part
-int quotient(long dividend, int divisor)
+// Function to to return quotient(with out decimal part)
+long quotient(long dividend, int divisor)
 {
     int remainder = (dividend % divisor);
     long quotient = (dividend - remainder) / divisor;
