@@ -5,6 +5,7 @@
 int no_of_digits(long number);
 long quotient(long dividend, int divisor);
 int peter_lunh_sum(long number);
+long first_two_digits(long number);
 
 int main(void)
 {
@@ -17,7 +18,7 @@ int main(void)
 
     printf("%i\n", no_of_digits(card_number));
     printf("%i\n", peter_lunh_sum(card_number));
-    printf("%i\n", first_two_digits(card_number));
+    printf("%li\n", first_two_digits(card_number));
 }
 
 // peter_lunh_sum means sum according to Lunh's algorithm
@@ -43,11 +44,11 @@ int peter_lunh_sum(long number)
 
 
 // function to give first two digits of the given number
-int first_two_digits(long number)
+long first_two_digits(long number)
 {
     while (no_of_digits(number) > 2)
     {
-        number = quotien(number);
+        number = quotient(number);
     }
     return number;
 }

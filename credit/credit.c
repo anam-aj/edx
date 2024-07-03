@@ -19,7 +19,7 @@ int first_two_digits(long number)
 {
     while (no_of_digits(number) > 2)
     {
-        number = quotien(number);
+        number = quotient(number);
     }
     return number;
 }
