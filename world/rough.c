@@ -48,7 +48,7 @@ long first_two_digits(long number)
 {
     while (no_of_digits(number) > 2)
     {
-        number = quotient(number);
+        number = quotient(number, 10);
     }
     return number;
 }
