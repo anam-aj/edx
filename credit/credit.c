@@ -4,6 +4,9 @@
 
 int main(void)
 {
-    long number = get_long("Enter Card Number: ");
+    long number;
+    do
+    number = get_long("Enter Card Number: ");
     printf("%li\n", number);
+    while ()
 }
