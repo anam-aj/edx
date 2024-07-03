@@ -14,31 +14,8 @@ int main(void)
     }
     while (number <= 0);
 
+    int new = number/10;
+    printf("%i\n", new)
 
-    int sum_of_even_place_digits = 0;
-    int sum_of_odd_place_digits = 0;
-    int i = 1;
 
-    while (number > 0)
-    {
-        printf("--%i\n", i);
-        int digit_at_odd_place = number % 10;
-        printf("odd %i\n", digit_at_odd_place);
-        sum_of_odd_place_digits += digit_at_odd_place;
-        number = (number / 10);
-        printf("%li\n", number);
-
-        int digit_at_even_place = number % 10;
-        printf("even %i\n", digit_at_even_place);
-        sum_of_even_place_digits += digit_at_even_place;
-        number = (number / 10);
-        printf("%li\n", number);
-        i++;
-    }
-    printf("even %i\n", sum_of_even_place_digits);
-    printf("odd %i\n", sum_of_odd_place_digits);
-    int net_sum = (sum_of_odd_place_digits) + (2 * sum_of_even_place_digits);
-    printf("sum %i\n", net_sum);
-    int unit_digit = net_sum % 10;
-    printf("unit %i\n", unit_digit);
 }
