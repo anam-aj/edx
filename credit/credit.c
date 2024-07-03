@@ -94,9 +94,8 @@ int check_sum(long number)
         {
             int unitdigit = twice % 10;
             sum_of_even_place_digits += unitdigit;
-            int  = (twice / 10);
-
-
+            int tensdigit = (twice / 10);
+            sum_of_even_place_digits += tensdigit;
         }
 
         sum_of_even_place_digits += digit_at_even_place;
