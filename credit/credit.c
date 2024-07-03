@@ -15,10 +15,10 @@ int main(void)
     card_number = get_long("Enter Card Number: ");
     while (card_number <= 0);
 
-    printf("%i/n", check_sum());
-    printf("%i/n", no_of_digits);
-    printf("%li/n", first_digit);
-    printf("%li/n", first_two_digits);
+    printf("%i/n", check_sum(card_number));
+    printf("%i/n", no_of_digits(card_number));
+    printf("%li/n", first_digit(card_number));
+    printf("%li/n", first_two_digits(card_number));
 }
 
 // function to give first digit of the given number
