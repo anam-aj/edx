@@ -15,7 +15,7 @@ int main(void)
 }
 
 
-// peter_lunh_sum = sum according to Lunh's algorithm
+// peter_lunh_sum means sum according to Lunh's algorithm
 int peter_lunh_sum(long number)
 {
     int sum_of_even_place_digits = 0;
