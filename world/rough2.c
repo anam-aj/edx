@@ -17,9 +17,11 @@ int main(void)
 
     int sum_of_even_place_digits = 0;
     int sum_of_odd_place_digits = 0;
+    int i = 1;
 
     while (number > 0)
     {
+        
         int digit_at_odd_place = number % 10;
         sum_of_odd_place_digits += digit_at_odd_place;
         number = (number / 10);
