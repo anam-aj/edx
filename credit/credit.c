@@ -55,10 +55,7 @@ int no_of_digits(long number)
 int check_sum(int number)
 {
     int unit_digit = number % 10;
-    if unit_digit == 0;
-    {
-        return 
-    }
+    return unit_digit;
 }
 
 // peter_lunh_sum means sum of digits according to Lunh's algorithm
