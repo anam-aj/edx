@@ -16,7 +16,7 @@ int main(void)
 
 
 // function to give first digit of the given number
-int first_digit(long number)
+long first_digit(long number)
 {
     while (no_of_digits(number) > 1)
     {
