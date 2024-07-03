@@ -15,8 +15,8 @@ int main(void)
 }
 
 
-// defining Checksum
-int checksum(long number)
+// peter_lunh_sum = sum according to Lunh's algorithm
+int peter_lunh_sum(long number)
 {
     int sum_of_even_place_digits = 0;
     int sum_of_odd_place_digits = 0;
@@ -32,8 +32,8 @@ int checksum(long number)
         quotient(number, 10);
     }
 
-    int sum_of_all_digits = (sum_of_odd_place_digits + sum_of_odd_place_digits);
-    return sum_of_all_digits;
+    int peter_lunh_sum = (sum_of_odd_place_digits) + (2 * sum_of_even_place_digits);
+    return peter_lunh_sum;
 }
 
 
