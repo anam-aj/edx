@@ -14,6 +14,13 @@ int main(void)
     while (card_number <= 0);
 }
 
+// function to give first two digits of the given number
+int first_two_digits(long number)
+{
+    
+}
+
+
 
 // function to calculate no of digits
 int no_of_digits(long number)
