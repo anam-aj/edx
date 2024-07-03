@@ -22,6 +22,9 @@ int main(void)
 
     }
     else
+    {
+       printf("\n");
+    }
 
     printf("%i\n", check_sum(card_number));
     printf("%i\n", no_of_digits(card_number));
