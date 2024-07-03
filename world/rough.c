@@ -19,7 +19,7 @@ int main(void)
 int no_of_digits(long number)
 {
     int digit_count = 0;
-    while (number > 0);
+    while (number > 0)
     {
         digit_count++ ;
         number = quotient(number, 10);
