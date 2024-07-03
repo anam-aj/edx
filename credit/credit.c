@@ -56,14 +56,7 @@ int no_of_digits(long number)
 }
 
 // Defining checksum according to lunh alogrithm
-int check_sum(int number)
-{
-    int unit_digit = number % 10;
-    return unit_digit;
-}
-
-// peter_lunh_sum means sum of digits according to Lunh's algorithm
-int peter_lunh_sum(long number)
+int check_sum(long number)
 {
     int sum_of_even_place_digits = 0;
     int sum_of_odd_place_digits = 0;
@@ -79,6 +72,7 @@ int peter_lunh_sum(long number)
         number = (number / 10);
     }
 
-    int peter_lunh_sum = (sum_of_odd_place_digits) + (2 * sum_of_even_place_digits);
-    return peter_lunh_sum;
+    int net_sum = (sum_of_odd_place_digits) + (2 * sum_of_even_place_digits);
+    int unit_digit = net_sum % 10;
+    return unit_digit;
 }
