@@ -33,15 +33,11 @@ int main(void)
             printf("VISA\n");
         }
     }
+    
     else
     {
        printf("INVALID\n");
     }
-
-    printf("%i\n", check_sum(card_number));
-    printf("%i\n", no_of_digits(card_number));
-    printf("%li\n", first_digit(card_number));
-    printf("%li\n", first_two_digits(card_number));
 }
 
 // function to give first digit of the given number
