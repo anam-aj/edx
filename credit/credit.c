@@ -2,10 +2,9 @@
 #include <cs50.h>
 #include <stdio.h>
 
-long quotient(long dividend, int divisor);
 int check_sum(int number);
-long first_digit(long number);
 int first_two_digits(long number);
+long first_digit(long number);
 
 int main(void)
 {
@@ -16,28 +15,25 @@ int main(void)
     while (card_number <= 0);
 }
 
-
 // function to give first digit of the given number
-int first_digit(long number)
+long first_digit(long number)
 {
     while (no_of_digits(number) > 1)
     {
-        number = quotient(number, 10);
+        number = (number / 10);
     }
-    return int(number);
+    return number;
 }
-
 
 // function to give first two digits of the given number
 int first_two_digits(long number)
 {
     while (no_of_digits(number) > 2)
     {
-        number = quotient(number, 10);
+        number = (number / 10);
     }
     return number;
 }
-
 
 // function to calculate no of digits
 int no_of_digits(long number)
@@ -46,12 +42,11 @@ int no_of_digits(long number)
     while (number > 0)
     {
         digit_count++ ;
-        number = quotient(number, 10);
+        number = (number / 10);
     }
 
     return digit_count;
 }
-
 
 // Defining checksum according to lunh alogrithm
 int check_sum(int number)
@@ -59,7 +54,6 @@ int check_sum(int number)
     int unit_digit = number % 10;
     return unit_digit;
 }
-
 
 // peter_lunh_sum means sum of digits according to Lunh's algorithm
 int peter_lunh_sum(long number)
@@ -71,22 +65,13 @@ int peter_lunh_sum(long number)
     {
         int digit_at_odd_place = number % 10;
         sum_of_odd_place_digits += digit_at_odd_place;
-        number = quotient(number, 10);
+        number = (number / 10);
 
         int digit_at_even_place = number % 10;
         sum_of_even_place_digits += digit_at_even_place;
-        number = quotient(number, 10);
+        number = (number / 10);
     }
 
     int peter_lunh_sum = (sum_of_odd_place_digits) + (2 * sum_of_even_place_digits);
     return peter_lunh_sum;
-}
-
-
-// Function to to return quotient(with out decimal part)
-long quotient(long dividend, int divisor)
-{
-    int remainder = (dividend % divisor);
-    long quotient = (dividend - remainder) / divisor;
-    return quotient;
 }
