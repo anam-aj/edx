@@ -17,7 +17,10 @@ int main(void)
 // function to give first two digits of the given number
 int first_two_digits(long number)
 {
-    
+    while (no_of_digits(number) > 2)
+    {
+        
+    }
 }
 
 
@@ -26,7 +29,7 @@ int first_two_digits(long number)
 int no_of_digits(long number)
 {
     int digit_count = 0;
-    while (number > 0);
+    while (number > 0)
     {
         digit_count++ ;
         number = quotient(number, 10);
@@ -42,7 +45,7 @@ int peter_lunh_sum(long number)
     int sum_of_even_place_digits = 0;
     int sum_of_odd_place_digits = 0;
 
-    while (number > 0);
+    while (number > 0)
     {
         int digit_at_odd_place = number % 10;
         sum_of_odd_place_digits += digit_at_odd_place;
