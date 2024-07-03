@@ -14,6 +14,11 @@ int main(void)
     while (card_number <= 0);
 }
 
+int no_of_digits(long number)
+{
+    int digit_count = 0;
+     number = quotient(number, 10);
+}
 
 // peter_lunh_sum means sum according to Lunh's algorithm
 int peter_lunh_sum(long number)
