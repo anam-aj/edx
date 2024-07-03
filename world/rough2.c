@@ -44,11 +44,3 @@ int no_of_coins(int amount, int coin_value)
     int coins = quotient(amount, coin_value);
     return coins;
 }
-
-// Function to to return quotient with out decimal part
-int quotient(int dividend, int divisor)
-{
-    int remainder = (dividend % divisor);
-    int quotient = (dividend - remainder) / divisor;
-    return quotient;
-}
