@@ -13,6 +13,8 @@ int main(void)
     card_number = get_long("Enter Card Number: ");
     }
     while (card_number <= 0);
+
+    printf("%i\n", no_of_digits(card_number));
 }
 
 
