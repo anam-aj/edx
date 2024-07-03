@@ -3,7 +3,6 @@
 #include <stdio.h>
 
 int no_of_coins(int amount, int coin_value);
-int quotient(int dividend, int divisor);
 
 int main(void)
 {
@@ -41,6 +40,6 @@ int main(void)
 // Function to calculate no of coins of given value
 int no_of_coins(int amount, int coin_value)
 {
-    int coins = quotient(amount, coin_value);
+    int coins = (amount / coin_value);
     return coins;
 }
