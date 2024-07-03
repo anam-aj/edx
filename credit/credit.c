@@ -27,10 +27,10 @@ int main(void)
         else if ((no_of_digits(card_number) == 16)
         && (first_two_digit(card_number) > 50 && first_two_digit(card_number) < 56 ))
         {
-            printf("VISA\n");
+            printf("MASTERCARD\n");
         }
-        else if ((no_of_digits(card_number) == 16) &&
-        (first_two_digits(card_number) == (51 || 52 || 53 || 54 || 55)))
+        else if ((no_of_digits(card_number) == 13 || no_of_digits(card_number) == 16) &&
+        (first_digit(card_number) == 4))
         {
             printf("VISA\n");
         }
