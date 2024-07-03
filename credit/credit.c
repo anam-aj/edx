@@ -17,8 +17,15 @@ int main(void)
 int no_of_digits(long number)
 {
     int digit_count = 0;
-     number = quotient(number, 10);
+    while (number > 0);
+    {
+        digit_count++ ;
+        number = quotient(number, 10);
+    }
+
+    return digit_count;
 }
+
 
 // peter_lunh_sum means sum according to Lunh's algorithm
 int peter_lunh_sum(long number)
