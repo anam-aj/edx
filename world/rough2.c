@@ -5,14 +5,13 @@
 
 int main(void)
 {
-    long card_number;
-    do
-    {
-    card_number = get_long("Enter Card Number: ");
-    }
-    while (card_number <= 0);
 
-    int quotient = card_number/3;
+
+    long card_number = get_long("Enter Card Number: ");
+
+
+
+    int quotient = (card_number)/3;
 
     printf("%i\n", quotient);
 
