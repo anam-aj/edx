@@ -89,6 +89,12 @@ int check_sum(long number)
         number = (number / 10);
 
         int digit_at_even_place = number % 10;
+        int twice_of_digit_at_even_place = (2 * digit_at_even_place);
+        while (twice_of_digit_at_even_place > 0)
+        {
+            
+        }
+
         sum_of_even_place_digits += digit_at_even_place;
         number = (number / 10);
     }
