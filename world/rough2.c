@@ -21,7 +21,7 @@ int main(void)
 
     while (number > 0)
     {
-        
+        printf("%i\n", i);
         int digit_at_odd_place = number % 10;
         sum_of_odd_place_digits += digit_at_odd_place;
         number = (number / 10);
@@ -31,6 +31,7 @@ int main(void)
         sum_of_even_place_digits += digit_at_even_place;
         number = (number / 10);
         printf("%li\n", number);
+        i++;
     }
 
     int net_sum = (sum_of_odd_place_digits) + (2 * sum_of_even_place_digits);
