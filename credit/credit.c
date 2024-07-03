@@ -25,7 +25,7 @@ int main(void)
             printf("AMEX\n");
         }
         else if ((no_of_digits(card_number) == 16)
-        && (first_two_digit(card_number) == 4))
+        && (first_two_digit(card_number) > 50 && first_two_digit(card_number) < 56 ))
         {
             printf("VISA\n");
         }

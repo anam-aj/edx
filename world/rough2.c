@@ -16,7 +16,7 @@ int main(void)
     if (change == 11 ||
     change == 10)
     {
-        printf("b");
+        printf("b\n");
     }
 
 }
