@@ -16,4 +16,7 @@ int main(void)
         card_number = get_long("Enter Card Number: ");
     }
     while (card_number <= 0);
+
+    int num = card_number % 10;
+    printf("%i\n", num);
 }
