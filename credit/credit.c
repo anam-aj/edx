@@ -16,7 +16,7 @@ int main(void)
     card_number = get_long("Enter Card Number: ");
     while (card_number <= 0);
 
-    printf("%i/n", check_sum);
+    printf("%i/n", check_sum());
     printf("%i/n", no_of_digits);
     printf("%li/n", first_digit);
     printf("%li/n", first_two_digits);
@@ -51,7 +51,6 @@ int no_of_digits(long number)
         digit_count++ ;
         number = (number / 10);
     }
-
     return digit_count;
 }
 
