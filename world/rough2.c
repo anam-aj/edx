@@ -7,5 +7,9 @@
 
 int main(void)
 {
-    char c1 = 
+    int c1 = 72;
+    int c2 = 73;
+    int c3 = 33;
+
+    printf("%c%c%c\n", c1, c2, c3);
 }
