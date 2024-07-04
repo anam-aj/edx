@@ -12,5 +12,5 @@ int main(void)
     //float c3 = 12;
     //double c4 = 12
 
-    printf("%i %li \n", c1, c2);
+    printf("%li %li \n", c1, c2);
 }
