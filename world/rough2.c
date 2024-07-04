@@ -7,8 +7,8 @@
 
 int main(void)
 {
-    int c1 = 121;
-    char c2 = "a";
+    int c1 = 'b';
+    char c2 = 'a';
     int c3 = 33;
 
     printf("%c %c %c\n", c1, c2, c3);
