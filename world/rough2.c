@@ -7,11 +7,9 @@
 
 int main(void)
 {
-    int c1 = 72;
+    int c1 = 128;
     int c2 = 73;
     int c3 = 33;
 
-    char h = c1/2;
-
-    printf("%f%c%c%i\n", c1, c2, c3,h);
+    printf("%c%c%c\n", c1, c2, c3);
 }
