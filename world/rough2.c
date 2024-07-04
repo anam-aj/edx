@@ -7,7 +7,7 @@
 
 int main(void)
 {
-    char c1 = 72;
+    char c1 = 128;
     int c2 = 73;
     int c3 = 33;
 
