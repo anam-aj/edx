@@ -8,8 +8,9 @@
 int main(void)
 {
     int c1 = 12;
-    char c2 = 'a';
-    int c3 = 1333;
+    long c2 = 12;
+    //float c3 = 12;
+    //double c4 = 12
 
-    printf("%i %c %c\n", c1, c2, c3);
+    printf("%i %li \n", c1, c2);
 }
