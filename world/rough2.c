@@ -7,10 +7,13 @@
 
 int main(void)
 {
-    int c1 = 12;
-    char c2 = 12;
-    char c3 = 12;
+    char c1[3];
+    c1[0]= 'a';
+    c1[1]= 'b';
+    c1[2]= 'c';
 
 
-    printf("%i %i %i\n", c1, c2, c3);
+
+
+    printf("%c %c %c\n", c1[0], c1[1], c1[2]);
 }
