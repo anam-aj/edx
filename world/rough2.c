@@ -7,7 +7,7 @@
 
 int main(void)
 {
-    char c1 = 'H';
+    float c1 = 'H';
     int c2 = 73;
     int c3 = 33;
 
