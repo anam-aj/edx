@@ -7,9 +7,11 @@
 
 int main(void)
 {
-    int c1 = 'H';
+    char c1 = 'H';
     int c2 = 73;
     int c3 = 33;
 
-    printf("%i%c%c\n", c1, c2, c3);
+    int h = c1/2;
+
+    printf("%c%c%c%i\n", c1, c2, c3,h);
 }
