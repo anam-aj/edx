@@ -11,10 +11,10 @@ int main(int argc, string argv[])
     if (argc != 2)
     {
         printf("wrong");
-        return 1;
+       // return 1;
     }
-    //else
-    //{
-    int height = atoi(argv[1]);
-    //}
+    else
+    {
+        int height = atoi(argv[1]);
+    }
 }
