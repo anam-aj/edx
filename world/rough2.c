@@ -11,9 +11,9 @@ int main(int argc, string argv[])
     if (argc != 2)
     {
         printf("wrong\n");
-        //return 1;
+        return 1;
     }
-    else
+    //else
     {
         int height = atoi(argv[1]);
     }
