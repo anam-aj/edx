@@ -15,5 +15,5 @@ int main(void)
 
 
 
-    printf("%c %c %c\n", c1[0], c1[1], c1[2]);
+    printf("%c %c %c\n", c1[0], );
 }
