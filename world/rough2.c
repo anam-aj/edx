@@ -13,5 +13,5 @@ int main(void)
 
 
 
-    printf("%s %i %i \n", var1, var2, var3);
+    printf("%i %i %i \n", var1[0], var2, var3);
 }
