@@ -12,5 +12,5 @@ int main(void)
 
 
 
-    printf("%c\n", a );
+    printf("%s\n", a );
 }
