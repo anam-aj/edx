@@ -8,7 +8,7 @@
 int main(void)
 {
     string var1 = "H";
-    int var2 = ''H'' ;
+    int var2 = 'H' ;
     char var3 = 72 ;
 
 
