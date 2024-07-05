@@ -10,7 +10,7 @@ int main(int argc, string argv[])
 {
     if (argc != 2)
     {
-        printf("wrong");
+        printf("wrong\n");
         return 1;
     }
     //else
