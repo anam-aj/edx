@@ -18,7 +18,7 @@ int main(void)
     while (card_number <= 0);
 
     // checks if checksum is correct
-    if ((check_sum(card_number)) == 0)
+    if ((check_sum(card_number) ) == 0)
     {
         // Checks criteria for American Express
         if ((no_of_digits(card_number) == 15) &&
