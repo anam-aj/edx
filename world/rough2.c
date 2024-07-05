@@ -7,8 +7,8 @@
 
 int main(void)
 {
-    string var1 = "1";
-    int var2 = '1' ;
+    string var1 = "77";
+    int var2 = 77 ;
 
 
 
