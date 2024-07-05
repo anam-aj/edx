@@ -1,17 +1,19 @@
-// Programme to check validity and type of card
+
 
 #include <cs50.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 
 
-int main(void)
+int main(int argc, int argv[])
 {
-    string var1 = "2";
-    //int var2 = '2' ;
-    //char var3 = 2 ;
-
-
-
-    printf("%s %c %i \n", var1, var1[0], var1[0]);
+    if (argc != 2)
+    {
+        printf("wrong");
+    }
+    else
+    {
+        int height = atoi(argv[1]);
+    }
 }
