@@ -6,13 +6,13 @@
 
 
 
-int main(int argc, int argv[])
+int main(int argc, string argv[])
 {
     if (argc != 2)
     {
         printf("wrong");
     }
-    else
+    //else
     {
         int height = atoi(argv[1]);
     }
