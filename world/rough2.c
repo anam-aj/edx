@@ -13,7 +13,7 @@ int main(int argc, string argv[])
         printf("wrong\n");
         //return 1;
     }
-    //else
+    else
     {
         int height = atoi(argv[1]);
     }
