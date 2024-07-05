@@ -12,5 +12,5 @@ int main(void)
 
 
 
-    printf("%s %i\n", var1, var2);
+    printf("%s %c\n", var1, var2);
 }
