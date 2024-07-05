@@ -7,10 +7,10 @@
 
 int main(void)
 {
-    string a = 36;
+    string var1 = "a";
+    char var2 = 'a' ;
 
 
 
-
-    printf("%s\n", a );
+    printf("%i %i\n", var1, var2 );
 }
