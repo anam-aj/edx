@@ -7,10 +7,10 @@
 
 int main(void)
 {
-    char c1[3];
-   
+    string a = '2';
 
 
 
-    printf("%c %c %c\n", );
+
+    printf("%c\n", a );
 }
