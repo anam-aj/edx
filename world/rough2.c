@@ -7,7 +7,7 @@
 
 int main(void)
 {
-    string a = "36";
+    string a = 36;
 
 
 
