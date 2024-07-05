@@ -8,10 +8,10 @@
 int main(void)
 {
     string var1 = "2";
-    int var2 = '2' ;
-    char var3 = 2 ;
+    //int var2 = '2' ;
+    //char var3 = 2 ;
 
 
 
-    printf("%i %i %i \n", var1[0], var2, var3);
+    printf("%s %c %i \n", var1, var1[0], var1[0]);
 }
