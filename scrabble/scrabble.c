@@ -11,8 +11,8 @@ int score(string word);
 int main(void)
 {
     // Promt user to enter word
-    string p1_word = get_string("Player 1 enter your word");
-    string p2_word = get_string("Player 2 enter your word");
+    string p1_word = get_string("Player 1 enter your word: ");
+    string p2_word = get_string("Player 2 enter your word: ");
 
     // Calculate player score
     int p1_score = score(p1_word);
@@ -21,17 +21,17 @@ int main(void)
     // Declare the result
     if (p1_score > p2_score)
     {
-        printf("Player 1 wins!");
+        printf("Player 1 wins!\n");
     }
 
     else if (p1_score < p2_score)
     {
-        printf("Player 2 wins!");
+        printf("Player 2 wins!\n");
     }
 
     else
     {
-        printf("Tie!");
+        printf("Tie!\n");
     }
 }
 
