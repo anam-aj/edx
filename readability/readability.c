@@ -41,7 +41,7 @@ int main(void)
     }
 }
 
-// Funtion to count no of words
+// Funtion to count words
 int word_count(string text)
 {
     int no_of_spaces = 0;
