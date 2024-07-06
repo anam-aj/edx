@@ -8,6 +8,7 @@
 
 int main(int argc, string argv[])
 {
+    string list0[] = {'a','h'};
     string list0 = "ah";
     string list[] = {"ac","b"};
     string list2[] = {"abc", list0};
