@@ -6,7 +6,7 @@
 #include <string.h>
 
 // Funtions declaration
-int score(string word)
+int score(string word);
 
 int main(void)
 {
@@ -31,7 +31,7 @@ int main(void)
 
     else
     {
-        printf("Tie!")
+        printf("Tie!");
     }
 }
 
@@ -41,7 +41,7 @@ int score(string word)
 
     // Array of letters
     char alphabet[26] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
-                         'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'}
+                         'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
 
     // Array of points
     int points[26] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3
