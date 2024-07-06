@@ -8,10 +8,13 @@
 
 int main(int argc, string argv[])
 {
-    int array1[3] = {}
-    char array2[3] = {'a','p'};
-    string array3[3] = {"ac","b"};
-    string list0 = "ah";
+    int array1[3] = {2,3,4}
+    char array2[3] = {'a','b','c'};
+    string array3[3] = {"abc","qwe","iop"};
+
+    int var1 = 234;
+    char var2 = 't';
+    string var3 = "ghj";
 
     string list2[] = {"abc", list01};
 
