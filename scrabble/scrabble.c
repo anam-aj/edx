@@ -18,7 +18,7 @@ int main(void)
     int p1_score = score(p1_word);
     int p2_score = score(p2_word);
 
-    // Declare the result
+    // Print the winner
     if (p1_score > p2_score)
     {
         printf("Player 1 wins!\n");
