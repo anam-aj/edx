@@ -8,7 +8,7 @@
 
 int main(int argc, string argv[])
 {
-   int list [5] = {1,2,3,4,5};
+   string list [] = {1};
 
-   printf("lenhgt is %i\n", strlen(list));
+   printf("good \n");
 }
