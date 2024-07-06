@@ -5,7 +5,6 @@
 
 int main(void)
 {
-    string para = "a b c";
-    int l = strlen(para);
-    printf("%i\n", l);
+    float i = 2.1;
+    int j = i;
 }
