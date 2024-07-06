@@ -4,9 +4,9 @@
 #include <stdio.h>
 #include <string.h>
 
-// Funtion declaration(in order of )
+// Funtion declaration(in the order they are defined)
 int space_count(string text);
-int letter_count(text);
+int letter_count(string text);
 int sentence_count(string text);
 int sentence_count(string text);
 
@@ -42,7 +42,7 @@ int word_count(string text)
 }
 
 // Function to count letters
-int letter_count(text)
+int letter_count(string text)
 {
     int spaces = space_count(text);
     int no_of_letters = strlen(text) - spaces;
