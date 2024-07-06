@@ -7,5 +7,5 @@ int main(void)
 {
     int i = 2;
     float j = i;
-    printf("");
+    printf("%f\n", j/3);
 }

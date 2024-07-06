@@ -15,13 +15,14 @@ int main(void)
     // Prompts user to enter text
     string user_text = get_string("Please enter the text: ");
 
-    int no_of_words = word_count(user_text);
-    int no_of_letters = letter_count(user_text);
-    int no_of_sentences = sentence_count(user_text);
+    float no_of_words = word_count(user_text);
+    float no_of_letters = letter_count(user_text);
+    float no_of_sentences = sentence_count(user_text);
 
-    float L = (no_of_letters) / (no_of_words/100.0);
-
-
+    /// Calculates Coleman-Liau index
+    float L = (no_of_letters) / (no_of_words/100);
+    float S = (no_of_sentences) / (no_of_words/100);
+    float index = 0.0588 * L - 0.296 * S - 15.8;
 }
 
 // Funtion to count no of spaces between words
