@@ -34,11 +34,11 @@ int fullstop_count(string text)
     {
         if (text[i] == '.')
         {
-            no_of_spaces++;
+            no_of_fullstops++;
         }
     }
 
-    return no_of_spaces;
+    return no_of_fullstops;
 }
 // Function to count word in given text
 int word_count(string text)
@@ -57,4 +57,5 @@ int letter_count(text)
 
     return no_of_letters;
 }
+
 
