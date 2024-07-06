@@ -7,6 +7,6 @@ int main(void)
 {
     int i = 3;
     int j = 2;
-    float k = i/j;
+    float k = i/float(j);
     printf("%f \n", k);
 }
