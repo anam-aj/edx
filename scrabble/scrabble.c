@@ -34,7 +34,10 @@ int score(string word)
 
         for (int j = 0; j < 26; j++)
         {
-            if 
+            if alphabet[j] == letter[i]
+            {
+                
+            }
         }
     }
 
