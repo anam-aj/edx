@@ -71,7 +71,8 @@ int letter_count(string text)
 {
     for (int i = 0, len = strlen(text); i < len; i++)
     {
-        if (text[i] > 'a' && text[i])
+        if (text[i] >= 'a' && text[i] <= 'z')
+        
     }
     int spaces = space_count(text);
     int no_of_letters = strlen(text) - spaces;
