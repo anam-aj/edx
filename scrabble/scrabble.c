@@ -24,12 +24,12 @@ int score(string word)
     int points[26] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3
                       1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4,10}
 
-    int sum1 = 0;
+    int sum = 0;
 
     for (int i = 0, n = strlen(word); i < n; i++)
     {
         // Converts string to uppercase
-         upr_str = toupper(word[i])
+        sum += toupper(word[i])
     }
 
 
