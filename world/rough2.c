@@ -8,7 +8,7 @@
 
 int main(int argc, string argv[])
 {
-    int array1[3] = {2,3,4}
+    int array1[3] = {2,3,4};
     char array2[3] = {'a','b','c'};
     string array3[3] = {"abc","qwe","iop"};
 
@@ -16,7 +16,7 @@ int main(int argc, string argv[])
     char var2 = 't';
     string var3 = "ghj";
 
-    string array4[3] = {"abc", list01};
+    int array4[3] = {2, var2};
 
 
    //printf("good %s  \n", list2[1]);
