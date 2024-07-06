@@ -58,4 +58,4 @@ int letter_count(text)
     return no_of_letters;
 }
 
-
+// Function 
