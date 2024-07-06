@@ -28,7 +28,8 @@ int score(string word)
 
     for (int i = 0, n = strlen(word); i < n; i++)
     {
-        
+        // Converts string to uppercase
+        string upr_str = toupper
     }
 
 
