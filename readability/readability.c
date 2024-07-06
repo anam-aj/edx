@@ -29,7 +29,15 @@ int space_count(string text)
 // Function to count word in given text
 int word_count(string text)
 {
-    int no_of_words = 0;
+    int spaces = space_count(text);
+    int words = spaces + 1;
 
+    return words;
+}
 
+// Function to count letters in fiven text
+int letter_count(text)
+{
+    int spaces = space_count(text);
+    
 }
