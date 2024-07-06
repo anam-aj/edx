@@ -5,6 +5,7 @@
 
 int main(void)
 {
-    float i = 2.1;
-    int j = i;
+    int i = 2;
+    float j = i;
+    printf("");
 }
