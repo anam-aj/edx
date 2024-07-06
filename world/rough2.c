@@ -8,8 +8,7 @@
 
 int main(int argc, string argv[])
 {
-   int list [];
-   list [0] = a;
-   list [1] = b;
+   int list [5] = {1,2,3,4,5};
+
    printf("lenhgt is %i\n", strlen(list));
 }
