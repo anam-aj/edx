@@ -8,13 +8,8 @@
 
 int main(int argc, string argv[])
 {
-    if (argc != 2)
-    {
-        printf("wrong\n");
-        //return 1;
-    }
-    else
-    {
-        int height = atoi(argv[1]);
-    }
+   int list [];
+   list [0] = a;
+   list [1] = b;
+   printf("lenhgt is %i\n", strlen(list));
 }
