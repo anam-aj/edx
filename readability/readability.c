@@ -72,7 +72,7 @@ int letter_count(string text)
             no_of_letters++;
         }
     }
-
+    
     return no_of_letters;
 }
 
