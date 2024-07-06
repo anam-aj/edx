@@ -6,11 +6,15 @@
 
 int main(void)
 {
+    // Promt user to enter word
+    string p1_word = get_string("Player 1 enter your word");
+    string p2_word = get_string("Player 2 enter your word");
     
-
+    // Array of letters
     char letter[26] = {A, B, C, D, E, F, G, H, I, J, K, L, M,
                        N, O, P, Q, R, S, T, U, V, W, X, Y, Z}
 
+    // Array of characters
     int points[26] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3
                       1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4,10}
 
