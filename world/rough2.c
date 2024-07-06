@@ -10,5 +10,5 @@ int main(int argc, string argv[])
 {
    string list [] = {"abc"};
 
-   printf("good \n");
+   printf("good %s \n" list[0]);
 }
