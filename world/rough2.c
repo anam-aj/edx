@@ -16,9 +16,9 @@ int main(int argc, string argv[])
     char var2 = 't';
     string var3 = "ghj";
 
-    string list2[] = {"abc", list01};
+    string array4[] = {"abc", list01};
 
 
-   printf("good %s  \n", list2[1]);
+   //printf("good %s  \n", list2[1]);
 }
 
