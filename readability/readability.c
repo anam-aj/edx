@@ -69,6 +69,7 @@ int word_count(string text)
 // Function to count letters
 int letter_count(string text)
 {
+    for
     int spaces = space_count(text);
     int no_of_letters = strlen(text) - spaces;
 
