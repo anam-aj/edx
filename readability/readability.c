@@ -74,11 +74,13 @@ int letter_count(string text)
     {
         if (text[i] >= 'a' && text[i] <= 'z')
         {
-            
+            no_of_letters++;
+        }
+        else if (text[i] >= 'A' && text[i] <= 'Z')
+        {
+            no_of_letters++;
         }
     }
-    int spaces = space_count(text);
-    int no_of_letters = strlen(text) - spaces;
 
     return no_of_letters;
 }
