@@ -1,11 +1,11 @@
-#include <cs50.h>
+//#include <cs50.h>
 #include <stdio.h>
+#include <string.h>
+
 
 int main(void)
 {
-    int a = 2;
-    int b[1] = {2};
-
-    int c = a;
-    int d = b;
+    string para = "a b c";
+    int l = strlen(para);
+    printf("%i", l)
 }
