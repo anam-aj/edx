@@ -30,7 +30,16 @@ int main(void)
     {
         printf("Before Grade 1");
     }
-    else if ()
+
+    else if (index >= 16)
+    {
+        printf("Grade 16+")
+    }
+
+    else
+    {
+        printf("Grade $i\n", round)
+    }
 }
 
 // Funtion to count no of spaces between words
