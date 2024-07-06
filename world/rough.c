@@ -15,9 +15,9 @@ int main(int argc, string argv[])
     //char var2 = 'a';
     string var3 = "abc";
 
-    string array4[3] = {"abc", var3, array1};
+    //string array4[3] = {"abc", var3, array1};
 
-    //printf("good %i  \n", var2);
-    printf("good %s %s %s \n", array4[0], array4[1], array4[2]);
+    printf("good %i  \n", array2[0]);
+    //printf("good %s %s %s \n", array4[0], array4[1], array4[2]);
 }
 
