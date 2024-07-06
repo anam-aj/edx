@@ -28,7 +28,7 @@ int score(string word)
     for (int i = 0, n = strlen(word); i < n; i++)
     {
         // Converts character to uppercase
-        sum += toupper(word[i])
+        char letter = toupper(word[i]);
     }
 
 
