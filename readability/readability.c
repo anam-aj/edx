@@ -23,7 +23,7 @@ int main(void)
     /// Calculates Coleman-Liau index
     float L = (no_of_letters) / (no_of_words/100.0);
     float S = (no_of_sentences) / (no_of_words/100.0);
-    double index = 0.0588 * L - 0.296 * S - 15.8;
+    float index = 0.0588 * L - 0.296 * S - 15.8;
 
     // Printing grade level
     if (index < 0)
@@ -38,8 +38,7 @@ int main(void)
 
     else
     {
-        int rd_index = (int) (round(index));
-        printf("Grade %i\n", rd_index);
+        printf("Grade %i\n", (int) round(index));
     }
 }
 
@@ -47,7 +46,7 @@ int main(void)
 int space_count(string text)
 {
     int no_of_spaces = 0;
-    for (i = 0, len = strlen(text); i < len; i++)
+    for (int i = 0, len = strlen(text); i < len; i++)
     {
         if (text[i] == ' ')
         {
@@ -80,7 +79,7 @@ int letter_count(string text)
 int sentence_count(string text)
 {
     int no_of_sentences = 0;
-    for (i = 0, len = strlen(text); i < len; i++)
+    for (int i = 0, len = strlen(text); i < len; i++)
     {
         if (text[i] == '.')
         {
