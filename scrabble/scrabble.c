@@ -5,7 +5,7 @@
 
 int main(void)
 {
-    
+     char alphabet[26] = {}
 }
 
 
