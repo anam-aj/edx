@@ -6,8 +6,8 @@
 
 // Funtion declaration(in the order they are defined)
 int space_count(string text);
+int word_count(string text);
 int letter_count(string text);
-int sentence_count(string text);
 int sentence_count(string text);
 
 int main(void)
@@ -15,6 +15,7 @@ int main(void)
     string user_text = get_string("Please enter the text: ");
     int no_of_words = word_count(user_text);
     int no_of_letters = letter_count(user_text);
+    int 
 }
 
 // Funtion to count no of spaces between words
