@@ -8,7 +8,7 @@
 
 int main(int argc, string argv[])
 {
-   string list [] = {1};
+   string list [] = {"1"};
 
    printf("good \n");
 }
