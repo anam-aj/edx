@@ -19,6 +19,8 @@ int main(void)
     int no_of_letters = letter_count(user_text);
     int no_of_sentences = sentence_count(user_text);
 
+    
+
 
 }
 
