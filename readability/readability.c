@@ -12,7 +12,7 @@ int main(void)
 }
 
 // Funtion to count no of spaces between words
-int word_count(string text)
+int space_count(string text)
 {
     int no_of_spaces = 0;
     for (i = 0, len = strlen(text); i < len; i++)
@@ -23,12 +23,11 @@ int word_count(string text)
         }
     }
 
-    int no_of_words = no_of_spaces + 1;
-    return no_of_words;
+    return no_of_spaces;
 }
 
 // Function to count word in given text
-int letter_count(string text)
+int word_count(string text)
 {
     int no_of_words = 0;
 
