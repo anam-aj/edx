@@ -19,6 +19,6 @@ int main(int argc, string argv[])
     //int array4[3] = {2, var2};
 
 
-   printf("good %si \n", array[1]);
+   printf("good %i \n", array1[4]);
 }
 
