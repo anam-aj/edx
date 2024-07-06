@@ -26,7 +26,25 @@ int space_count(string text)
     return no_of_spaces;
 }
 
-// Funtion to count no of fullstops(.) in text
+// Function to count words
+int word_count(string text)
+{
+    int spaces = space_count(text);
+    int words = spaces + 1;
+
+    return words;
+}
+
+// Function to count letters
+int letter_count(text)
+{
+    int spaces = space_count(text);
+    int no_of_letters = strlen(text) - spaces;
+
+    return no_of_letters;
+}
+
+// Funtion to count fullstops(.)
 int fullstop_count(string text)
 {
     int no_of_fullstops = 0;
@@ -40,22 +58,9 @@ int fullstop_count(string text)
 
     return no_of_fullstops;
 }
-// Function to count word in given text
-int word_count(string text)
+
+// Function to count sentences
+int sentence_count(string text)
 {
-    int spaces = space_count(text);
-    int words = spaces + 1;
-
-    return words;
+    
 }
-
-// Function to count letters in fiven text
-int letter_count(text)
-{
-    int spaces = space_count(text);
-    int no_of_letters = strlen(text) - spaces;
-
-    return no_of_letters;
-}
-
-// Function 
