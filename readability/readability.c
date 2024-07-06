@@ -2,6 +2,7 @@
 
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 int main(void)
 {
@@ -10,8 +11,13 @@ int main(void)
     int no_of_letters = letter_count(user_text);
 }
 
+// Funtion to count no of spaces between words
+int space_count(string text)
+{
+    
+}
 // Function to count word in given text
 int word_count(string text)
 {
-    
+
 }
