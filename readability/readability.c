@@ -44,25 +44,18 @@ int letter_count(text)
     return no_of_letters;
 }
 
-// Funtion to count fullstops(.)
-int fullstop_count(string text)
+// Funtcion to count sentences
+int sentence_count(string text)
 {
-    int no_of_fullstops = 0;
+    int no_of_sentences = 0;
     for (i = 0, len = strlen(text); i < len; i++)
     {
         if (text[i] == '.')
         {
-            no_of_fullstops++;
+            no_of_sentences++;
         }
     }
 
     return no_of_fullstops;
 }
 
-// Function to count sentences
-int sentence_count(string text)
-{
-    int fullstops = fullstop_count(text);
-    
-
-}
