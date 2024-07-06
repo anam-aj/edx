@@ -36,7 +36,7 @@ int score(string word)
         {
             if alphabet[j] == letter
             {
-
+                
             }
         }
     }
