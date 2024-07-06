@@ -56,6 +56,5 @@ int sentence_count(string text)
         }
     }
 
-    return no_of_fullstops;
+    return no_of_sentences;
 }
-
