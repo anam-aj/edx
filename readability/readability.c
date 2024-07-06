@@ -63,5 +63,6 @@ int fullstop_count(string text)
 int sentence_count(string text)
 {
     int fullstops = fullstop_count(text);
+    
 
 }
