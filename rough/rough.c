@@ -8,5 +8,5 @@ int main(void)
     //int i = 2;
     float j = 3.3;
 
-    printf("%d\n", round(j));
+    printf("%i\n", int (round(49.5)));
 }
