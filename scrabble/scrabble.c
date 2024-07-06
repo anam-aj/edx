@@ -69,4 +69,3 @@ int score(string word)
 
     return sum;
 }
-
