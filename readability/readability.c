@@ -4,6 +4,12 @@
 #include <stdio.h>
 #include <string.h>
 
+// Funtion declaration(in order of )
+int space_count(string text);
+int letter_count(text);
+int sentence_count(string text);
+int sentence_count(string text);
+
 int main(void)
 {
     string user_text = get_string("Please enter the text: ");
