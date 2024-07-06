@@ -12,10 +12,14 @@ int sentence_count(string text);
 
 int main(void)
 {
+    // Prompts user to enter text
     string user_text = get_string("Please enter the text: ");
+
     int no_of_words = word_count(user_text);
     int no_of_letters = letter_count(user_text);
-    int 
+    int no_of_sentences = sentence_count(user_text);
+
+
 }
 
 // Funtion to count no of spaces between words
