@@ -24,12 +24,11 @@ int word_count(string text)
     }
 
     int no_of_words = no_of_spaces + 1;
-
     return no_of_words;
 }
 
 // Function to count word in given text
-int word_count(string text)
+int letter_count(string text)
 {
     int no_of_words = 0;
 
