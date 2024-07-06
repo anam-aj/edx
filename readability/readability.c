@@ -38,7 +38,7 @@ int main(void)
 
     else
     {
-        int rd_index = (int)(round(index));
+        int rd_index = (int) (round(index));
         printf("Grade $i\n", rd_index);
     }
 }
