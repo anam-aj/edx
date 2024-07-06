@@ -24,7 +24,7 @@ int main(void)
     float S = (no_of_sentences) / (no_of_words / 100.0);
     float index = 0.0588 * L - 0.296 * S - 15.8;
 
-    // Print grade level
+    // Checks and print grade level
     if (index < 0)
     {
         printf("Before Grade 1\n");
@@ -72,7 +72,7 @@ int letter_count(string text)
             no_of_letters++;
         }
     }
-    
+
     return no_of_letters;
 }
 
