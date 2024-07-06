@@ -8,8 +8,10 @@
 
 int main(int argc, string argv[])
 {
-   string list[] = {"ac","b"};
-   string list2[] = {list[]};
+    string x = "8";
+    string list[] = {"ac","b"};
+    string list2[] = {x};
 
-   printf("good %s %s \n", list2[0], list[1]);
+
+   //printf("good %s %s \n", list2[0], list[1]);
 }
