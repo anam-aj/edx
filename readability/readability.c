@@ -1,6 +1,7 @@
 // Program to determine reading grade level
 
 #include <cs50.h>
+#include <math.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -23,6 +24,13 @@ int main(void)
     float L = (no_of_letters) / (no_of_words/100);
     float S = (no_of_sentences) / (no_of_words/100);
     float index = 0.0588 * L - 0.296 * S - 15.8;
+
+    // Printing grade level
+    if (index < 0)
+    {
+        printf("Before Grade 1");
+    }
+    else if ()
 }
 
 // Funtion to count no of spaces between words
