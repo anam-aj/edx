@@ -38,7 +38,8 @@ int main(void)
 
     else
     {
-        printf("Grade $i\n", (int)round(index));
+        int rd_index = (int)(round(index));
+        printf("Grade $i\n", rd_index);
     }
 }
 
