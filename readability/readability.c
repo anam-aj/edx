@@ -70,7 +70,7 @@ int word_count(string text)
 int letter_count(string text)
 {
     int spaces = space_count(text);
-    int no_of_letters = strlen(text) - spaces;
+    int no_of_letters = strlen(text);
 
     return no_of_letters;
 }
