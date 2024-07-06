@@ -3,6 +3,7 @@
 #include <cs50.h>
 #include <ctype.h>
 #include <stdio.h>
+#include <string.h>
 
 int main(void)
 {
@@ -24,7 +25,11 @@ int score(string word)
                       1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4,10}
 
     int sum1 = 0;
-    for 
+
+    for (int i = 0, n = strlen(word); i < n; i++)
+    {
+        
+    }
 
 
 }
