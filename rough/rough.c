@@ -5,7 +5,8 @@
 
 int main(void)
 {
-    int i = 2;
-    float j = i;
-    printf("%f\n", j/3);
+    //int i = 2;
+    float j = 3.3;
+
+    printf("%f\n", j/1);
 }
