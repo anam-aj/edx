@@ -12,7 +12,7 @@ int main(int argc, string argv[])
     char array2[3] = {'a','b','c'};
     string array3[3] = {"abc","qwe","iop"};
 
-    int var1 = 116;
+    int var1 = 4567;
     char var2 = 't';
     string var3 = "ghj";
 
