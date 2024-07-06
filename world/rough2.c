@@ -12,12 +12,13 @@ int main(int argc, string argv[])
     char array2[3] = {'a','b','c'};
     string array3[3] = {"abc","qwe","iop"};
 
-    int var1 = 234;
+    int var1 = 116;
     char var2 = 't';
     string var3 = "ghj";
 
     char array4[3] = {2, var2, var1};
 
-   printf("good %i %i %i \n", array4[0], array4[1], array4[2]);
+    //printf("good %i  \n", var2);
+    printf("good %i %i %i \n", array4[0], array4[1], array4[2]);
 }
 
