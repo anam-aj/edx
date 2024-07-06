@@ -49,10 +49,11 @@ int score(string word)
 
     int sum = 0;
 
-    // Extract letters from one by one from the given word
+    // Traverse given word
     for (int i = 0, n = strlen(word); i < n; i++)
     {
-        // Converts letter to uppercase(if required)
+        // extract letter from given word one by one
+        // and converts to uppercase(if required)
         char letter = toupper(word[i]);
 
         // Traverse the alphabet array to match the letter
