@@ -16,7 +16,7 @@ int main(void)
 // Function to calculate score acoording to scrabble rules
 int score(string word)
 {
-    
+
     // Array of letters
     char letter[26] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
                        'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'}
@@ -31,6 +31,11 @@ int score(string word)
     {
         // Converts character to uppercase
         char letter = toupper(word[i]);
+
+        for (int j = 0; j < 26; j++)
+        {
+            if 
+        }
     }
 
 
