@@ -6,7 +6,6 @@
 #include <string.h>
 
 // Funtion declaration(in the order they are defined)
-int space_count(string text);
 int word_count(string text);
 int letter_count(string text);
 int sentence_count(string text);
@@ -42,8 +41,8 @@ int main(void)
     }
 }
 
-// Funtion to count no of spaces between words
-int space_count(string text)
+// Funtion to count no of words
+int word_count(string text)
 {
     int no_of_spaces = 0;
     for (int i = 0, len = strlen(text); i < len; i++)
@@ -54,16 +53,8 @@ int space_count(string text)
         }
     }
 
-    return no_of_spaces;
-}
-
-// Function to count words
-int word_count(string text)
-{
-    int spaces = space_count(text);
-    int words = spaces + 1;
-
-    return words;
+    int no_of_words = no_of_spaces + 1;
+    return no_of_words;
 }
 
 // Function to count letters
