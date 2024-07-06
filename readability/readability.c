@@ -5,5 +5,8 @@
 
 int main(void)
 {
-    
+    string text = get_string("Please enter the text: ")
+    int no_of_words = word_count(text);
 }
+
+
