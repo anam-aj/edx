@@ -32,10 +32,10 @@ int score(string word)
         // Converts character to uppercase
         char letter = toupper(word[i]);
 
-        // Traverse the alphabet array 
+        // Traverse the alphabet array to match the letter
         for (int j = 0; j < 26; j++)
         {
-            // Find the index and calculate score
+            // Find the index of matched letter and calculate score
             if (alphabet[j] == letter)
             {
                 sum += points[j];
