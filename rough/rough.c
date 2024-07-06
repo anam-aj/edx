@@ -5,8 +5,8 @@
 
 int main(void)
 {
-    //int i = 2;
-    float j = 3.9;
-
-    printf("%i\n", (int) round(j));
+    int i = 3;
+    int j = 2;
+    float k = i/j;
+    printf("%f \n", k);
 }
