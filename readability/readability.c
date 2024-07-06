@@ -33,12 +33,12 @@ int main(void)
 
     else if (index >= 16)
     {
-        printf("Grade 16+")
+        printf("Grade 16+");
     }
 
     else
     {
-        printf("Grade $i\n", (int)round(index))
+        printf("Grade $i\n", (int)round(index));
     }
 }
 
