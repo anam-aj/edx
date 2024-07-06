@@ -19,7 +19,7 @@ int main(void)
     int no_of_letters = letter_count(user_text);
     int no_of_sentences = sentence_count(user_text);
 
-    
+    float L = (no_of_letters) / (no_of_words/100.0);
 
 
 }
