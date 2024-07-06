@@ -91,7 +91,7 @@ int sentence_count(string text)
     int no_of_sentences = 0;
     for (int i = 0, len = strlen(text); i < len; i++)
     {
-        if (text[i] == '.')
+        if (text[i] == '.' || text[i] == '?')
         {
             no_of_sentences++;
         }
