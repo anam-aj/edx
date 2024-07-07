@@ -16,9 +16,8 @@ int main(int argc, string argv[])
         return 1;
     }
 
-// command line arg should only be decimal digits, a non negaive integr
-// if not print "Usage: ./caesar key", return 1
-
+    // command line arg should only be decimal digits, a non negaive integr
+    // if not print "Usage: ./caesar key", return 1
     else
     {
         for (int i = 0, len = strlen(argv[1]); i < len; i++)
@@ -27,6 +26,10 @@ int main(int argc, string argv[])
             {
                 printf("Usage: ./caesar key\n");
                 return 1;
+            }
+            else
+            {
+                printf("ok\n");
             }
         }
 
