@@ -29,15 +29,13 @@ int main(int argc, string argv[])
             }
         }
 
-        printf("ok\n");
+        // user input with get string with two spaces "plaintext:  "
+        string plaintext = get_string("plaintext:  ");
 
+        // output  with one space "ciphertext: "
+        string ciphertext = 
+        // preserve lowercase and upppercase
+
+        // exit main with 0
     }
-// user input with get string with two spaces "plaintext:  "
-
-// output  with one space "ciphertext: "
-
-// preserve lowercase and upppercase
-
-// exit main with 0
-
 }
