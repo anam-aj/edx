@@ -6,8 +6,9 @@
 #include <stdlib.h>
 #include <string.h>
 
+int main(int argc, string argv[])
 // only one command line argument,non negative integer
-// 0 or more, error msg of choice and return 1
+// if 0 or more, error msg of choice and return 1
 
 // command line arg should only be digit
 // if not print "Usage: ./caesar key", return 1
