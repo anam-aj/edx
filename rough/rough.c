@@ -6,6 +6,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+string cipher_text(string text, int key);
+
 int main(int argc, string argv[])
 {
     // only one command line argument
@@ -37,7 +39,7 @@ int main(int argc, string argv[])
         // output  with one space "ciphertext: "
         //preserve lowercase and upppercase
         string ciphertext = cipher_text(plaintext, key);
-        printf("ciphertext: \n", cipher_text);
+        printf("ciphertext: %s\n", ciphertext);
 
         // exit main with 0
         return 0;
@@ -46,14 +48,14 @@ int main(int argc, string argv[])
 
 string cipher_text(string text, int key)
 {
-   for (int i = 0, len = strlen(text); i < len, i++)
+   for (int i = 0, len = strlen(text); i < len; i++)
     {
-        if (isupper(text[i]) != 0);
+        if (isupper(text[i]) != 0)
         {
             text[i] = (text[i] - 'A' + key) % 26;
         }
 
-        else if (islower(text[i]) != 0);
+        else if (islower(text[i]) != 0)
         {
             text[i] = (text[i] - 'a' + key) % 26;
         }
