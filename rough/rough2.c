@@ -6,26 +6,42 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Function decalration
-string ciphertext(string plaintext);
-int isstrdigit(string str);
-
 int main(int argc, string argv[])
 {
-    string s = "a1n";
+    // only one command line argument
+    // if 0 or more, error msg of choice and return 1
+    if (argc != 2)
+    {
+        printf("Please give exactly 1 argument\n");
+        return 1;
+    }
 
-    //int in = atoi(s[1]);
+    // command line arg should only be decimal digits, a non negaive integr
+    // if not print "Usage: ./caesar key", return 1
+    else
+    {
+        for (int i = 0, len = strlen(argv[1]); i < len; i++)
+        {
+            if (isdigit(argv[1][i]) == 0)
+            {
+                printf("Usage: ./caesar key\n");
+                return 1;
+            }
+        }
 
-    //printf("%i\n", in);
-    //printf("%s\n", s[1]);
+        int key = atoi(argv[1]);
+        printf("%i\n", key);
 
-    char str = s[1];
-    printf("%c\n", str);
-    printf("%c\n", s[1]);
+        // user input with get string with two spaces "plaintext:  "
+        //string plaintext = get_string("plaintext:  ");
 
-    str = 'o';
+        // output  with one space "ciphertext: "
+        //string ciphertext = cipher_text(plaintext);
 
-    printf("%c\n", str);
-    printf("%c\n", s[1]);
+        // preserve lowercase and upppercase
 
+        // exit main with 0
+    }
 }
+
+
