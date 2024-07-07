@@ -47,7 +47,7 @@ string cipher_text(string text)
     {
         if (isupper(text(i)) != 0);
         {
-            text[i] = te
+            text[i] = (text[i] - 'A' + )
         }
     }
 }
