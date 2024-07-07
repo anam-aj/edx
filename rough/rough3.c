@@ -10,7 +10,7 @@
 string ciphertext(string plaintext);
 int isstrdigit(string str);
 
-int main(int argc, string argv[])
+int main(void)
 {
     string s = "a1n";
 
@@ -20,6 +20,11 @@ int main(int argc, string argv[])
     //printf("%s\n", s[1]);
 
     string str = s;
+
+    str[2] = 'p';
+
+    printf("%s\n", s);
+
     //printf("%s\n", str);
     //printf("%s\n", s);
 
