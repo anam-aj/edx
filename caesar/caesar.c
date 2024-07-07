@@ -53,7 +53,7 @@ string ciphertext(string plaintext, string key)
             // Cipher the letter
             int p_i = plaintext[i] - 'a';
             string a = key;
-            int c_i = p_i + atoi(a) % 26;
+            int c_i = (p_i + atoi(a)) % 26;
             plaintext[i] = c_i + 'a';
         }
     }
