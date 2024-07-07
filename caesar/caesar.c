@@ -7,7 +7,7 @@
 #include <string.h>
 
 // Function decalration
-string ciphertext(string plaintext);
+string ciphertext(string plaintext, string key);
 int isstrdigit(string str);
 
 int main(int argc, string argv[])
@@ -19,7 +19,7 @@ int main(int argc, string argv[])
         string plain_text = get_string("plaintext:  ");
 
         // Generate ciphertext using function and prints it
-        string cipher_text = ciphertext(plain_text);
+        string cipher_text = ciphertext(plain_text, argv[1]);
         printf("ciphertext: %s\n", cipher_text);
 
         return 1;
@@ -33,7 +33,7 @@ int main(int argc, string argv[])
 }
 
 // convert plaintext into ciphertext
-string ciphertext(string plaintext)
+string ciphertext(string plaintext, string key)
 {
     // Traverse one by one each character of given text
     for (int i = 0, len = strlen(plaintext); i < len; i++)
