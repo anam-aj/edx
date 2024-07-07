@@ -10,8 +10,7 @@ int main(void)
 {
     string s = "abc";
 
-    int p = s[1];
-    s[1] = 2;
+    s = "p";
 
     printf("%s\n", s);
 
