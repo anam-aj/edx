@@ -10,7 +10,7 @@ int main(void)
 {
     string a = "2";
     string b = a;
-    b = "3";
+    //b = "3";
 
     printf("%s\n", a);
     printf("%s\n", b);
