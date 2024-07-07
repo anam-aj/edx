@@ -21,8 +21,11 @@ int main(int argc, string argv[])
 
     else
     {
+        for (int i = 0, len = strlen(argv[1]); i < len; i++)
+        {
+            if 
+        }
 
-        
     }
 // user input with get string with two spaces "plaintext:  "
 
