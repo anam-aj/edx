@@ -27,11 +27,9 @@ int main(int argc, string argv[])
                 printf("Usage: ./caesar key\n");
                 return 1;
             }
-            else
-            {
-                printf("ok\n");
-            }
         }
+
+        printf("ok\n");
 
     }
 // user input with get string with two spaces "plaintext:  "
