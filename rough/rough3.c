@@ -6,20 +6,13 @@
 #include <stdlib.h>
 #include <string.h>
 
-string fun(string str);
-
 int main(void)
 {
-    string s = "abc";
+    string a = "2";
+    string b = a;
+    b = "3";
 
+    printf("%s\n", a);
+    printf("%s\n", b);
 
-
-    printf("%s\n", fun(s));
-
-}
-
-string fun(string str)
-{
-    str[1] = 'p';
-    return str;
 }
