@@ -6,6 +6,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+void cipher_text(void);
+
 int main(int argc, string argv[])
 {
     // only one command line argument
@@ -32,6 +34,8 @@ int main(int argc, string argv[])
         int key = atoi(argv[1]);
         printf("%i\n", key);
 
+        cipher_text();
+
         // user input with get string with two spaces "plaintext:  "
         //string plaintext = get_string("plaintext:  ");
 
@@ -44,7 +48,7 @@ int main(int argc, string argv[])
     }
 }
 
-string cipher_text(string text)
+void cipher_text(void)
 {
     int k = key;
 }
