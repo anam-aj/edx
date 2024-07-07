@@ -47,7 +47,7 @@ string cipher_text(string text)
 {
    for (int i = 0, len = strlen(text); i < len, i++)
     {
-        if (isupper(text(i)) != 0);
+        if (isupper(text[i]) != 0);
         {
             text[i] = (text[i] - 'A' + key) % 26;
         }
