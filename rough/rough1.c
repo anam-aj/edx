@@ -12,18 +12,18 @@ int isstrdigit(string str);
 
 int main(int argc, string argv[])
 {
-    string s[3] = {"abc", "123", "a1"};
+    char s[3] = {'a', '1', 'n'};
 
     //int in = atoi(s[1]);
 
     //printf("%i\n", in);
     //printf("%s\n", s[1]);
 
-    string str[3] = s[];
-    //str = "poi";
+    char str[3]= s;
+    //str = 'o';
 
-    //printf("%s\n", str);
-    //printf("%s\n", s[1]);
+    //printf("%c\n", str);
+    //printf("%c\n", s[1]);
 
 
 
