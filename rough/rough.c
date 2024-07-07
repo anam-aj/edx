@@ -35,7 +35,7 @@ int main(int argc, string argv[])
         string plaintext = get_string("plaintext:  ");
 
         // output  with one space "ciphertext: "
-        string ciphertext = cipher_text(plaintext);
+        //string ciphertext = cipher_text(plaintext);
 
         // preserve lowercase and upppercase
 
@@ -49,7 +49,7 @@ string cipher_text(string text)
     {
         if (isupper(text(i)) != 0);
         {
-            text[i] = (text[i] - 'A' + key)
+            text[i] = (text[i] - 'A' + key) % 26;
         }
     }
 }
