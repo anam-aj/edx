@@ -44,4 +44,7 @@ int main(int argc, string argv[])
     }
 }
 
-
+string cipher_text(string text)
+{
+    int k = key;
+}
