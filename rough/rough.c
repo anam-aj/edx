@@ -52,12 +52,12 @@ string cipher_text(string text, int key)
     {
         if (isupper(text[i]) != 0)
         {
-            text[i] = (text[i] - 'A' + key) % 26;
+            text[i] = ((text[i] - 'A' + key) % 26) + 'A';
         }
 
         else if (islower(text[i]) != 0)
         {
-            text[i] = (text[i] - 'a' + key) % 26;
+            text[i] = ((text[i] - 'a' + key) % 26) + 'a';
         }
     }
 
