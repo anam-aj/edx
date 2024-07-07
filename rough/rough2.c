@@ -10,7 +10,7 @@ string fun(string str);
 
 int main(void)
 {
-    string s = "abc";
+    string s = get_string("give: ");
 
 
 
