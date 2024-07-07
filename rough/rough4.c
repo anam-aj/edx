@@ -3,8 +3,8 @@
 #include <cs50.h>
 int main(void)
 {
-    string s = "abc";
-    string str = s;
+    char s[] = {'a','b','c'};
     s[2] = 'p';
-    printf("%s\n", s);
+
+    printf("%c \n", s[2]);
 }
