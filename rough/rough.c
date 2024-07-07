@@ -33,9 +33,18 @@ int main(int argc, string argv[])
         string plaintext = get_string("plaintext:  ");
 
         // output  with one space "ciphertext: "
-        string ciphertext = 
+        string ciphertext = cipher_text(plaintext);
+
         // preserve lowercase and upppercase
 
         // exit main with 0
+    }
+}
+
+string cipher_text(string text)
+{
+    for (int i = 0, len = strlen(argv[1]); i < len, i++)
+    {
+        
     }
 }
