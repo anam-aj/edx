@@ -23,7 +23,11 @@ int main(int argc, string argv[])
     {
         for (int i = 0, len = strlen(argv[1]); i < len; i++)
         {
-            if 
+            if (isdigit(argv[1][i]) == 0)
+            {
+                printf("Usage: ./caesar key\n");
+                return 1;
+            }
         }
 
     }
