@@ -5,6 +5,6 @@ int main(void)
 {
     string s = "abc";
     string str = s;
-    str[2] = 'p';
+    s[2] = 'p';
     printf("%s\n", s);
 }
