@@ -11,8 +11,8 @@ int main(void)
     string s = "abc";
 
     int p = s[1];
-    s
+    s[1] = p+1;
 
-    printf("%s\n", s[1]);
+    printf("%s\n", s);
 
 }
