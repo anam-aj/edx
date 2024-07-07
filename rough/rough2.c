@@ -34,7 +34,6 @@ int main(int argc, string argv[])
         int key = atoi(argv[1]);
         printf("%i\n", key);
 
-        cipher_text();
 
         // user input with get string with two spaces "plaintext:  "
         //string plaintext = get_string("plaintext:  ");
