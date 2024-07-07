@@ -45,6 +45,9 @@ string cipher_text(string text)
 {
     for (int i = 0, len = strlen(text); i < len, i++)
     {
-        if ();
+        if (isupper(text(i)) != 0);
+        {
+            
+        }
     }
 }
