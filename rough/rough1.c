@@ -8,10 +8,10 @@
 
 int main(void)
 {
-    string s = "abc";
+    string s[] = {"abc","qwe"};
 
-    s[1] = s[1] + 2;
+    s[1][1] = s[1][1] + 2;
 
-    printf("%s\n", s);
+    printf("%s\n", s[1]);
 
 }
