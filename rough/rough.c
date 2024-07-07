@@ -21,6 +21,7 @@ int main(int argc, string argv[])
 
     else
     {
+
         
     }
 // user input with get string with two spaces "plaintext:  "
