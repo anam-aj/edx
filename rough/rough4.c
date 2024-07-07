@@ -1,10 +1,18 @@
+// Program to encrypt msg using caesar cipher
 
-#include <stdio.h>
 #include <cs50.h>
+#include <ctype.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 int main(void)
 {
-    char s[] = {'a','b','c'};
-    s[2] = 'p';
+    int a[3] = {2,3,4};
+    int b = a;
+    //b = "3";
 
-    printf("%c \n", s[2]);
+    //printf("%s\n", a);
+    //printf("%s\n", b);
+
 }
