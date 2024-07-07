@@ -32,10 +32,10 @@ int main(int argc, string argv[])
         int key = atoi(argv[1]);
 
         // user input with get string with two spaces "plaintext:  "
-        //string plaintext = get_string("plaintext:  ");
+        string plaintext = get_string("plaintext:  ");
 
         // output  with one space "ciphertext: "
-//        string ciphertext = cipher_text(plaintext);
+        string ciphertext = cipher_text(plaintext);
 
         // preserve lowercase and upppercase
 
@@ -43,13 +43,13 @@ int main(int argc, string argv[])
     }
 }
 
-//string cipher_text(string text)
-//{
-//   for (int i = 0, len = strlen(text); i < len, i++)
-//    {
-//        if (isupper(text(i)) != 0);
-//        {
-//            text[i] = (text[i] - 'A' + )
-//        }
-//    }
-//}
+string cipher_text(string text)
+{
+   for (int i = 0, len = strlen(text); i < len, i++)
+    {
+        if (isupper(text(i)) != 0);
+        {
+            text[i] = (text[i] - 'A' + key)
+        }
+    }
+}
