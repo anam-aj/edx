@@ -32,7 +32,7 @@ int main(int argc, string argv[])
         }
 
         int key = atoi(argv[1]);
-        printf("%i\n", key);
+
 
 
         // user input with get string with two spaces "plaintext:  "
@@ -47,7 +47,7 @@ int main(int argc, string argv[])
     }
 }
 
-void cipher_text(void)
+string cipher_text(string text, int key)
 {
     int k = key;
 }
