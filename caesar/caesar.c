@@ -14,7 +14,6 @@ int main(int argc, string argv[])
 {
     if ((argc == 2) && (isstrdigit(argv[1]) == 0))
     {
-        str
 
         // Promts user for plaintext
         string plain_text = get_string("plaintext:  ");
