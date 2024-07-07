@@ -8,9 +8,13 @@
 
 int main(int argc, string argv[])
 {
-    // only one command line argument,non negative integer
+    // only one command line argument
     // if 0 or more, error msg of choice and return 1
-    if (argc)
+    if (argc != 2)
+    {
+        printf("Please give exactly 1 argument\n");
+        return 1;
+    }
 
 // command line arg should only be digit, non negaive integr
 // if not print "Usage: ./caesar key", return 1
@@ -22,11 +26,5 @@ int main(int argc, string argv[])
 // preserve lowercase and upppercase
 
 // exit main with 0
-
-}
-
-
-int main(int argc, string argv[])
-{
 
 }
