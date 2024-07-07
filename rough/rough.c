@@ -6,60 +6,12 @@
 #include <stdlib.h>
 #include <string.h>
 
-string cipher_text(string text, int key);
-
-int main(int argc, string argv[])
+int main(void)
 {
-    // only one command line argument
-    // if 0 or more, error msg of choice and return 1
-    if (argc != 2)
-    {
-        printf("Please give exactly 1 argument\n");
-        return 1;
-    }
+    int a = 2;
+     a = 3;
 
-    // command line arg should only be decimal digits, a non negaive integr
-    // if not print "Usage: ./caesar key", return 1
-    else
-    {
-        for (int i = 0, len = strlen(argv[1]); i < len; i++)
-        {
-            if (isdigit(argv[1][i]) == 0)
-            {
-                printf("Usage: ./caesar key\n");
-                return 1;
-            }
-        }
+    printf("%i\n", a);
+    //printf("%i\n", b);
 
-        int key = atoi(argv[1]);
-
-        // user input with get string with two spaces "plaintext:  "
-        string plaintext = get_string("plaintext:  ");
-
-        // output  with one space "ciphertext: "
-        //preserve lowercase and upppercase
-        string ciphertext = cipher_text(plaintext, key);
-        printf("ciphertext: %s\n", ciphertext);
-
-        // exit main with 0
-        return 0;
-    }
-}
-
-string cipher_text(string text, int key)
-{
-   for (int i = 0, len = strlen(text); i < len; i++)
-    {
-        if (isupper(text[i]) != 0)
-        {
-            text[i] = ((text[i] - 'A' + key) % 26) + 'A';
-        }
-
-        else if (islower(text[i]) != 0)
-        {
-            text[i] = ((text[i] - 'a' + key) % 26) + 'a';
-        }
-    }
-
-    return text;
 }
