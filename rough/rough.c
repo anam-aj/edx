@@ -19,6 +19,10 @@ int main(int argc, string argv[])
 // command line arg should only be decimal digits, a non negaive integr
 // if not print "Usage: ./caesar key", return 1
 
+    else
+    {
+        
+    }
 // user input with get string with two spaces "plaintext:  "
 
 // output  with one space "ciphertext: "
