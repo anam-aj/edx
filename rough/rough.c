@@ -51,5 +51,11 @@ string cipher_text(string text, int key)
         {
             text[i] = (text[i] - 'A' + key) % 26;
         }
+
+        else if (islower(text[i]) != 0);
+        {
+            text[i] = (text[i] - 'a' + key) % 26;
+        }
+        
     }
 }
