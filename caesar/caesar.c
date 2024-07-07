@@ -6,74 +6,60 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Function decalration
-string ciphertext(string plaintext, string key);
-int isstrdigit(string str);
+string cipher_text(string text, int key);
 
 int main(int argc, string argv[])
 {
-    if ((argc == 2) && (isstrdigit(argv[1]) == 0))
+    // only one command line argument
+    // if 0 or more, error msg of choice and return 1
+    if (argc != 2)
     {
-
-        // Promts user for plaintext
-        string plain_text = get_string("plaintext:  ");
-
-        // Generate ciphertext using function and prints it
-        string cipher_text = ciphertext(plain_text, argv[1]);
-        printf("ciphertext: %s\n", cipher_text);
-
+        printf("Please give exactly 1 argument\n");
         return 1;
     }
 
+    // command line arg should only be decimal digits, a non negaive integr
+    // if not print "Usage: ./caesar key", return 1
     else
     {
-        printf("Program requires integer key! Usage format: ./caesar key");
+        for (int i = 0, len = strlen(argv[1]); i < len; i++)
+        {
+            if (isdigit(argv[1][i]) == 0)
+            {
+                printf("Usage: ./caesar key\n");
+                return 1;
+            }
+        }
+
+        int key = atoi(argv[1]);
+
+        // user input with get string with two spaces "plaintext:  "
+        string plaintext = get_string("plaintext:  ");
+
+        // output  with one space "ciphertext: "
+        //preserve lowercase and upppercase
+        string ciphertext = cipher_text(plaintext, key);
+        printf("ciphertext: %s\n", ciphertext);
+
+        // exit main with 0
         return 0;
     }
 }
 
-// convert plaintext into ciphertext
-string ciphertext(string plaintext, string key)
+string cipher_text(string text, int key)
 {
-    // Traverse one by one each character of given text
-    for (int i = 0, len = strlen(plaintext); i < len; i++)
+   for (int i = 0, len = strlen(text); i < len; i++)
     {
-        // check if character is uppercase letter
-        if (isupper(plaintext[i]) != 0)
+        if (isupper(text[i]) != 0)
         {
-            // Cipher the letter
-            int p_i = plaintext[i] - 'A';
-            int c_i = (p_i + atoi(key)) % 26;
-            plaintext[i] = c_i + 'A';
+            text[i] = ((text[i] - 'A' + key) % 26) + 'A';
         }
 
-        // check if character is lower case letter
-        else if (islower(plaintext[i]) != 0)
+        else if (islower(text[i]) != 0)
         {
-            // Cipher the letter
-            int p_i = plaintext[i] - 'a';
-            string a = key;
-            int c_i = (p_i + atoi(a)) % 26;
-            plaintext[i] = c_i + 'a';
+            text[i] = ((text[i] - 'a' + key) % 26) + 'a';
         }
     }
 
-    return plaintext;
-}
-
-// Checks if string contains only digits(0-9)
-int isstrdigit(string str)
-{
-    for (int i = 0, len = strlen(str); i < len; i++)
-    {
-        if (str[i] >= 48 && str[i] <=57)
-        {
-        }
-        else
-        {
-            return 1;
-        }
-    }
-
-    return 0;
+    return text;
 }
