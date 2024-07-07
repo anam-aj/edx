@@ -35,11 +35,12 @@ int main(int argc, string argv[])
         string plaintext = get_string("plaintext:  ");
 
         // output  with one space "ciphertext: "
-        //string ciphertext = cipher_text(plaintext);
-
-        // preserve lowercase and upppercase
+        //preserve lowercase and upppercase
+        string ciphertext = cipher_text(plaintext, key);
+        printf("ciphertext: \n", cipher_text);
 
         // exit main with 0
+        return 0;
     }
 }
 
@@ -56,6 +57,7 @@ string cipher_text(string text, int key)
         {
             text[i] = (text[i] - 'a' + key) % 26;
         }
-        
     }
+
+    return text;
 }
