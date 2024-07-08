@@ -21,7 +21,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    // Checks if argument is only alphabetical and for repetition
+    // Checks if argument alphabetical and for repetition
     // prints error msg accordingly
     if ((is_str_alpha(argv[1]) == 'n') || (is_rep(argv[1]) == 'y'))
     {
