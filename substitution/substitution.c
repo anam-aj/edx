@@ -44,10 +44,10 @@ int main(int argc, string argv[])
     }
 }
 
-    // each letter only once, if not then error msg of choice
-    // return 1 from main immediately
+// Function 
 
-
+// Function to check for repeatition in string
+// return 'n' for no repeatiotn else retrun 'y'
 char check_rep(string word)
 {
     for (int i = 0; i < 26; i++)
