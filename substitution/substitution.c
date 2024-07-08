@@ -54,13 +54,14 @@ string cipher_text(string text, string key)
         if (isupper(text[i]) != 0)
         {
             int j = text[i] - 'A';
-            text[i] = toupper(key[i % 26]);
+            text[i] = toupper(key[j]);
         }
 
         // Check if char is lowercase, if yes then cipher it
         else if (islower(text[i]) != 0)
         {
-            text[i] = tolower(key[i % 26]);
+            int j = text[i] - 'a';
+            text[i] = tolower(key[j]);
         }
     }
 
