@@ -7,10 +7,9 @@
 #include <string.h>
 
 // Function declaration(in order they are defined)
-string cipher_text(string text, string key)
+string cipher_text(string text, string key);
+char is_str_alpha(string word);
 char is_rep(string word);
-
-
 
 int main(int argc, string argv[])
 {
