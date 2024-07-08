@@ -8,10 +8,5 @@
 
 int main(void)
 {
-    string a = "abc";
-    printf("%s\n", a);
-
-    string b = a;
-    printf("%s\n", a);
-
+    
 }

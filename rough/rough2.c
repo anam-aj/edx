@@ -8,7 +8,21 @@
 
 int main(void)
 {
-    
+    string a = "abc";
+    printf("%s\n", a);
+
+    string b = a;
+    printf("%s\n", a);
+
+    string p = "xyz";
+    string q = p;
+    printf("%s\n", q);
+
+    q = "abc";
+
+    printf("%s\n", p);
+    printf("%s\n", q);
+
 
 }
 
