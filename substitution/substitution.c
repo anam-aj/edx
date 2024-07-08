@@ -50,14 +50,14 @@ string cipher_text(string text, string key)
     // traverse character of given string one by one
     for (int i = 0, len = strlen(text); i < len; i++)
     {
-        // Check if char is uppercase, if yes then cipher it
+        // Check if char is uppercase letter, if yes then cipher it
         if (isupper(text[i]) != 0)
         {
             int j = text[i] - 'A';
             text[i] = toupper(key[j]);
         }
 
-        // Check if char is lowercase, if yes then cipher it
+        // Check if char is lowercase letter, if yes then cipher it
         else if (islower(text[i]) != 0)
         {
             int j = text[i] - 'a';
