@@ -26,6 +26,11 @@ int main(void)
     char t = q[1];
     printf("%c\n", t);
 
+    q[1] ='k';
+    printf("%s\n", q);
+
+
+
 
 }
 
