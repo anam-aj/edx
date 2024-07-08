@@ -6,22 +6,15 @@
 #include <stdlib.h>
 #include <string.h>
 
+void func(int b);
+
 int main(void)
 {
-    int a = 2;
-    printf("%i\n", a);
-
-    a = 3;
-    printf("%i\n", a);
-
-    int p = 2;
-    int q = p;
-    printf("%i\n", q);
-
-    q = 3;
-
-    printf("%i\n", p);
-    printf("%i\n", q);
+    int a[3] = {1,2,3};
+}
 
 
+void func(int b)
+{
+    b = 4;
 }
