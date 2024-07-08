@@ -77,7 +77,7 @@ char is_str_alpha(string word)
             return 'n';
         }
     }
-    
+
     return 'y';
 }
 
@@ -93,11 +93,8 @@ char is_rep(string word)
             {
                 return 'y';
             }
-
-            else
-            {
-                return 'n';
-            }
         }
     }
+    
+    return 'n';
 }
