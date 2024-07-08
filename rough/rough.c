@@ -18,7 +18,7 @@ int main(void)
     int q = p;
     printf("%i\n", q);
 
-    b = 3;
+    q = 3;
 
     printf("%i\n", p);
     printf("%i\n", q);
