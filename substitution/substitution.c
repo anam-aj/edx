@@ -18,29 +18,19 @@ int main(int argc, string argv[])
     {
         printf("Give exactly 1 argument, only alphbetical,
                 26 character, no repetition"
-              );
+                );
 
         return 1;
     }
 
     // Checks if argument is alphabetical, if not prints error msg
-    for (int i = 0; i < 26; i++)
+    if ((is_alpha(argv[1]) == 'n') || (is_rep(argv[1]) == 'y'))
     {
-        if ((isalpha(argv[1][i]) == 0) || (is_rep(argv[1]) == 'y'))
-        {
-            printf("Give exactly 1 argument, only alphbetical,
-                    26 character, no repetition"
-                   );
+        printf("Give exactly 1 argument, only alphbetical,
+                26 character, no repetition"
+              );
 
-            return 1;
-        }
-
-        else
-        {
-
-        }
-
-
+        return 1;
     }
 }
 
@@ -82,7 +72,6 @@ char is_rep(string word)
         }
     }
 
-}
 
 
 
