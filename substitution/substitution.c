@@ -50,16 +50,16 @@ int main(int argc, string argv[])
 
 // Funtion to convert plaintext to ciphertext
 // by substitution from 'key'
-string cipher_text(string text, int key)
+string cipher_text(string text, string key)
 {
-    
+
 }
 
 // Function to check if string is alphabetical
 // return 'y' if string has only alphabet else return 'n'
 char is_str_alpha(string word)
 {
-    for (int i = 0; i < 26; i++)
+    for (int i = 0, len = strlen(word); i < len; i++)
     {
         if (isalpha(argv[1][i]) == 0)
         {
@@ -77,9 +77,9 @@ char is_str_alpha(string word)
 // return 'n' for no repetition else retrun 'y'
 char is_rep(string word)
 {
-    for (int i = 0; i < 26; i++)
+    for (int i = 0, len = strlen(word); i < len; i++)
     {
-        for (int j = i+1; j < 26; j++)
+        for (int j = i+1; j < len; j++)
         {
             if (word[i] == word[j])
             {
@@ -93,4 +93,3 @@ char is_rep(string word)
         }
     }
 }
-
