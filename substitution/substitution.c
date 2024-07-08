@@ -6,6 +6,11 @@
 // each letter only once, if not then error msg of choice
 // return 1 from main immediately
 
-// key is case insensitive
+// key should be case insensitive
 
-//
+// promt user for plaintext with "plaintext: "
+// one sapce without new line
+
+// output ciphertest with "ciphertext:  "
+// two spaces without new line
+// 
