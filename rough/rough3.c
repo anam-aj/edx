@@ -11,7 +11,7 @@ int main(void)
     int a[3] = {2,3,4};
     //printf("%i\n", a);
 
-    a = {4,5,6};
+    //a = {4,5,6};
     //printf("%i\n", a);
 
     int p[3] = {21,31,41};;
