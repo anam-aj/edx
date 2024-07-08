@@ -11,17 +11,19 @@ int main(void)
     int a[3] = {2,3,4};
     //printf("%i\n", a);
 
-    //a = {4,5,6};
+    //a[3] = {2,3,4};
     //printf("%i\n", a);
 
-    int p[3] = {21,31,41};;
-    int q = p;
-    printf("%i\n", q);
+    int p[3] = a[];
+    //int q = p;
+    //printf("%i\n", q);
 
-    q = 3;
+    //q = 3;
 
-    printf("%i\n", p);
-    printf("%i\n", q);
+    //printf("%i\n", p);
+    //printf("%i\n", q);
+
+
 
 
 }
