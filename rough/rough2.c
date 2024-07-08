@@ -12,7 +12,7 @@ int main(void)
     printf("%s\n", a);
 
     string b = a;
-    printf("%s\n", a);
+    printf("%s\n", b);
 
     string p = "xyz";
     string q = p;
