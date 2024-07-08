@@ -10,6 +10,8 @@ int main(void)
 {
     int a = 2;
     int b = a;
+    printf("%i\n", b);
+
     b = 3;
 
     printf("%i\n", a);

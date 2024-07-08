@@ -8,11 +8,13 @@
 
 int main(void)
 {
-    string a = "2";
-    string b = a;
-    //b = "3";
+    char a = 'x';
+    char b = a;
+    printf("%c\n", a);
+    
+    b = 'z';
 
-    printf("%s\n", a);
-    printf("%s\n", b);
+    printf("%c\n", a);
+    printf("%c\n", b);
 
 }
