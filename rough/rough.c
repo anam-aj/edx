@@ -11,6 +11,8 @@ void func(int b);
 int main(void)
 {
     int a[3] = {1,2,3};
+    printf("%i\n", a[1]);
+
     func(a[1]);
     printf("%i\n", a[1]);
 }
