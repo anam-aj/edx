@@ -27,7 +27,11 @@ int main(void)
     printf("%c\n", t);
 
     q[1] ='k';
-    printf("%s\n", q);
+    //printf("%s\n", q);
+
+    //string l = q;
+    //printf("%s\n", l);
+
 
 
 
