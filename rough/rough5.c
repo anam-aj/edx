@@ -18,7 +18,7 @@ int main(void)
     printf("%c\n", b);
 
     a[1][1] = 'a';
-    printf("%s\n", a[1]);
+    //printf("%s\n", a[1]);
 
 
 
