@@ -11,7 +11,7 @@ int main(void)
     string a[3] = {"abc","xyz","pqr"};
     //printf("%i\n", a);
 
-    string a = {"vbn","asd","qwe"};
+    string a[3] = {"abc","xyz","pqr"};
     //printf("%i\n", a);
 
 
