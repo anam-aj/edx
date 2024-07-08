@@ -14,7 +14,9 @@ int main(int argc, string argv[])
 {
     if (argc != 2)
     {
-        printf("Please enter exactly 1 command line argument");
+        printf("Exactly 1 argument, only alphbetical,
+                26 character, no repetition"
+              );
 
         return 1;
     }
