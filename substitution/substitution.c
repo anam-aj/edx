@@ -21,17 +21,20 @@ int main(int argc, string argv[])
         return 1;
     }
 
-        // key has exactly 26 character
-        // return 1 from main immediately
-
+    // key has exactly 26 character
+    // return 1 from main immediately
     else if (strlen(argv[1]) != 26)
     {
-        printf("Please enter exactly 1 command line argument");
+        printf("Exactly 1 argument, only alphbetical,
+                26 character, no repetition"
+              );
 
         return 1;
     }
-        // only alphabetical
-        // return 1 from main immediately
+
+    // only alphabetical
+    // return 1 from main immediately
+    else if ()
 
         // each letter only once, if not then error msg of choice
         // return 1 from main immediately
