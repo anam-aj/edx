@@ -9,9 +9,10 @@
 int main(void)
 {
     int a = 2;
-    a = 3;
-
     printf("%i\n", a);
-    //printf("%i\n", b);
+
+    a = 3;
+    printf("%i\n", a);
+
 
 }

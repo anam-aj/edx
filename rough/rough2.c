@@ -9,11 +9,11 @@
 int main(void)
 {
     char a = 'p';
-    a = 'q';
-
-
     printf("%c\n", a);
     
+    a = 'q';
+    printf("%c\n", a);
+
 
 }
 
