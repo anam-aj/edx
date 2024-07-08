@@ -14,6 +14,14 @@ int main(void)
     a = {4,5,6};
     //printf("%i\n", a);
 
+    int p = 2;
+    int q = p;
+    printf("%i\n", q);
+
+    q = 3;
+
+    printf("%i\n", p);
+    printf("%i\n", q);
 
 
 }
