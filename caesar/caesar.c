@@ -53,7 +53,6 @@ string cipher_text(string text, int key)
         // Check if char is uppercase, if yes then cipher it
         if (isupper(text[i]) != 0)
         {
-            
             text[i] = ((text[i] - 'A' + key) % 26) + 'A';
         }
 
