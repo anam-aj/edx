@@ -58,15 +58,17 @@ string cipher_text(string text, string key)
         // Check if char is uppercase, if yes then cipher it
         if (isupper(text[i]) != 0)
         {
-            text[i] = 
+            text[i] = toupper(key[i]);
         }
 
         // Check if char is lowercase, if yes then cipher it
         else if (islower(text[i]) != 0)
         {
-            text[i] = ((text[i] - 'a' + key) % 26) + 'a';
+            text[i] = tolower(key[i]);
         }
     }
+
+    return text;
 }
 
 // Function to check if string is alphabetical
