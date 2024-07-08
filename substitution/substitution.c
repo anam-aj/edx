@@ -26,7 +26,7 @@ int main(int argc, string argv[])
     // Checks if argument is alphabetical, if not prints error msg
     for (int i = 0; i < 26; i++)
     {
-        if (isalpha(argv[1][i]) == 0)
+        if ((isalpha(argv[1][i]) == 0) || (check_rep(argv[1]) == 'y'))
         {
             printf("Give exactly 1 argument, only alphbetical,
                     26 character, no repetition"
