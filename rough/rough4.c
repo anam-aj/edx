@@ -8,11 +8,11 @@
 
 int main(void)
 {
-    int a[3] = {2,3,4};
-    int b = a;
-    //b = "3";
+    string a = "abc";
+    
+    b = "3";
 
-    //printf("%s\n", a);
-    //printf("%s\n", b);
+    printf("%s\n", a);
+    printf("%s\n", b);
 
 }
