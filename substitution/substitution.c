@@ -38,7 +38,7 @@ int main(int argc, string argv[])
     {
         for (int i = 0; i < 26; i++)
         {
-            
+            argv[1][i] < 'A'
         }
     }
 
