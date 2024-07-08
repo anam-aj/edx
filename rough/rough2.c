@@ -21,7 +21,10 @@ int main(void)
     q = "abc";
 
     printf("%s\n", p);
-    printf("%s\n", q);
+    printf("%s\n\n", q);
+
+    char t = q[1];
+    printf("%c\n", t);
 
 
 }
