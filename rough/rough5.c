@@ -8,10 +8,10 @@
 
 int main(void)
 {
-    int a[3] = {2,3,4};
+    string a[3] = {"abc","xyz","pqr"};
     //printf("%i\n", a);
 
-    a = {4,5,6};
+    string a = {"vbn","asd","qwe"};
     //printf("%i\n", a);
 
 
