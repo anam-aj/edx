@@ -53,7 +53,8 @@ string cipher_text(string text, string key)
         // Check if char is uppercase, if yes then cipher it
         if (isupper(text[i]) != 0)
         {
-            text[i] = toupper(key[i]);
+            
+            text[i] = toupper(key[i] - 'A');
         }
 
         // Check if char is lowercase, if yes then cipher it
