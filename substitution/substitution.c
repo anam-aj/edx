@@ -14,7 +14,7 @@ char is_rep(string word);
 int main(int argc, string argv[])
 {
     // Check for no of arguments(1) and its length(26)
-    // ContIf conditions met not prints error msg
+    // if not prints error msg
     if ((argc != 2) || (strlen(argv[1]) != 26))
     {
         printf("Give only 1 argument, 26 alphabets, no repetition\n");
