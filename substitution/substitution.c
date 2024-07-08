@@ -17,7 +17,7 @@ int main(int argc, string argv[])
     // if not prints error msg
     if ((argc != 2) || (strlen(argv[1]) != 26))
     {
-        printf("Give only 1 argument, 26 alphabets, no repetition");
+        printf("Give only 1 argument, 26 alphabets, no repetition\n");
 
         return 1;
     }
@@ -26,7 +26,7 @@ int main(int argc, string argv[])
     // prints error msg accordingly
     if ((is_str_alpha(argv[1]) == 'n') || (is_rep(argv[1]) == 'y'))
     {
-        printf("Give only 1 argument, 26 alphabets, no repetition");
+        printf("Give only 1 argument, 26 alphabets, no repetition\n");
 
         return 1;
     }
