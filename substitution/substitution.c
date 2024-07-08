@@ -21,18 +21,31 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    // Checks if any letter iargument is alphabetical, if not prints error msg
-    if ((is_alpha(argv[1]) == 'n') || (is_rep(argv[1]) == 'y'))
+    // Checks if argument is only alphabetical and for repetition
+    // prints error msg accordingly
+    if ((is_str_alpha(argv[1]) == 'n') || (is_rep(argv[1]) == 'y'))
     {
         printf("Give only 1 argument, 26 alphabets, no repetition");
 
         return 1;
     }
+
+
+// promt user for plaintext with "plaintext: "
+// one sapce without new line
+
+// output ciphertest with "ciphertext:  "
+// two spaces without new line
+// in output only alphabetical letters change rest unchanged
+// output must preserve case, uppercase and lowercase
+
+// after output, newline,exit by return 0 from main
+
 }
 
 // Function to check if string is alphabetical
 // return 'y' if string has only alphabet else return 'n'
-char is_alpha(string word)
+char is_str_alpha(string word)
 {
     for (int i = 0; i < 26; i++)
     {
@@ -69,12 +82,3 @@ char is_rep(string word)
     }
 }
 
-// promt user for plaintext with "plaintext: "
-// one sapce without new line
-
-// output ciphertest with "ciphertext:  "
-// two spaces without new line
-// in output only alphabetical letters change rest unchanged
-// output must preserve case, uppercase and lowercase
-
-// after output, newline,exit by return 0 from main
