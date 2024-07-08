@@ -33,7 +33,20 @@ int main(int argc, string argv[])
             return 1;
         }
 
-        if 
+        else
+        {
+            for (int j = i+1; j < 26; j++)
+            {
+                if ((argv[1][i] == argv[1][j]))
+                {
+                    printf("Give exactly 1 argument, only alphbetical,
+                            26 character, no repetition"
+                          );
+
+                    return 1;
+                }
+            }
+        }
 
 
     }
