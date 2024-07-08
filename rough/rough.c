@@ -20,6 +20,7 @@ int main(void)
 
 int func(int b)
 {
+    int e = a[1];
     b = 4;
     return b;
 }
