@@ -38,7 +38,10 @@ int main(int argc, string argv[])
     {
         for (int i = 0; i < 26; i++)
         {
-            argv[1][i] < 'A'
+            if (argv[1][i] < 'A'
+            || (argv[1][i] > 'Z' && argv[1][i] < 'a' )
+            ||  argv[1][i] > 'Z'
+               )
         }
     }
 
