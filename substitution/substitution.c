@@ -72,7 +72,7 @@ char is_str_alpha(string word)
 {
     for (int i = 0, len = strlen(word); i < len; i++)
     {
-        if (isalpha(argv[1][i]) == 0)
+        if (isalpha(word[i]) == 0)
         {
             return 'n';
         }
