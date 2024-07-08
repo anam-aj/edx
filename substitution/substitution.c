@@ -34,7 +34,13 @@ int main(int argc, string argv[])
 
     // only alphabetical
     // return 1 from main immediately
-    else if ()
+    else
+    {
+        for (int i = 0; i < 26; i++)
+        {
+            
+        }
+    }
 
         // each letter only once, if not then error msg of choice
         // return 1 from main immediately
