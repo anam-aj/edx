@@ -14,7 +14,7 @@ int main(void)
     //a[] = {2,3,4};
     //printf("%i\n", a);
 
-    int q[3] = a[];
+    int q[3] = a[1];
     //int q = p;
     //printf("%i\n", q);
 
