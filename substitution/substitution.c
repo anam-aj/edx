@@ -13,7 +13,7 @@ char is_rep(string word);
 
 int main(int argc, string argv[])
 {
-    // Check for no of arguments(only 1) and its length(only 26)
+    // Check for no of arguments(1) and its length(26)
     // if not prints error msg
     if ((argc != 2) || (strlen(argv[1]) != 26))
     {
