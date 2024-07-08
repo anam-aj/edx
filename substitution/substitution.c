@@ -34,11 +34,11 @@ int main(int argc, string argv[])
     string key = argv[1];
 
     // Promt user for plaintext
-    string plaintext = get_string("plaintext: ");
+    string plaintext = get_string("plaintext:  ");
 
     // Convert plaintext to ciphertext and print it
     string ciphertext = cipher_text(plaintext, key);
-    printf("ciphertext:  %s\n", ciphertext);
+    printf("ciphertext: %s\n", ciphertext);
 
     return 0;
 }
