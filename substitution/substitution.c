@@ -6,12 +6,11 @@
 #include <stdlib.h>
 #include <string.h>
 
-// exactly 1 command line argument i.e. key,
-// key has exactly 26 character
-// print error msg of chioce, return 1 from main immediately
+
 
 int main(int argc, string argv[])
 {
+    // Check for no of arguments(only 1) and it length(only 26)
     if ((argc != 2) || (strlen(argv[1]) != 26))
     {
         printf("Exactly 1 argument, only alphbetical,
@@ -21,10 +20,9 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    // only alphabetical
-    // return 1 from main immediately
     else
     {
+        // Checks if argument is alphabetical
         for (int i = 0; i < 26; i++)
         {
             if (isalpha(argv[1][i]) == 0)
