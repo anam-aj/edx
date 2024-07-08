@@ -1,6 +1,19 @@
+// Program to encrypt text using substitution key
+
+#include <cs50.h>
+#include <ctype.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 // exactly 1 command line argument i.e. key,
 // if less than1 or more, print error msg of chioce,
 // return 1 from main immediately
+
+int main(int argc, string argv[])
+{
+    
+}
 
 // key has exactly 26 character, only alphabetical
 // each letter only once, if not then error msg of choice
@@ -13,4 +26,7 @@
 
 // output ciphertest with "ciphertext:  "
 // two spaces without new line
-// 
+// in output only alphabetical letters change rest unchanged
+// output must preserve case, uppercase and lowercase
+
+// after output, newline,exit by return 0 from main
