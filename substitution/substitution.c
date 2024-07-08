@@ -76,12 +76,9 @@ char is_str_alpha(string word)
         {
             return 'n';
         }
-
-        else
-        {
-            return 'y';
-        }
     }
+    
+    return 'y';
 }
 
 // Function to check for repeatition in string
