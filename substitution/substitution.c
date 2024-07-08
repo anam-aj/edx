@@ -31,17 +31,23 @@ int main(int argc, string argv[])
     }
 
 
-// promt user for plaintext with "plaintext: "
-// one sapce without new line
+    // promt user for plaintext with "plaintext: "
+    string plaintext = get_string("plaintext: ");
 
-// output ciphertest with "ciphertext:  "
-// two spaces without new line
-// in output only alphabetical letters change rest unchanged
-// output must preserve case, uppercase and lowercase
+    // output ciphertest with "ciphertext:  "
+    string ciphertext = cipher_text(plaintext);
+    printf("ciphertext:  %s", ciphertext);
+
+
+
 
 // after output, newline,exit by return 0 from main
 
 }
+
+// in output only alphabetical letters change rest unchanged
+// output must preserve case, uppercase and lowercase
+// Funtion to create ciphertext using substitution 
 
 // Function to check if string is alphabetical
 // return 'y' if string has only alphabet else return 'n'
