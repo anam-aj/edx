@@ -21,7 +21,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    // Checks if argument is alphabetical, if not prints error msg
+    // Checks if any letter iargument is alphabetical, if not prints error msg
     if ((is_alpha(argv[1]) == 'n') || (is_rep(argv[1]) == 'y'))
     {
         printf("Give only 1 argument, 26 alphabets, no repetition");
