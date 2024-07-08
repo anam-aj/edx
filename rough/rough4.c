@@ -9,10 +9,9 @@
 int main(void)
 {
     string a = "abc";
-    
-    b = "3";
-
     printf("%s\n", a);
-    printf("%s\n", b);
+
+    string b = a;
+    printf("%s\n", a);
 
 }
