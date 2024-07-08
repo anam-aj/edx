@@ -8,19 +8,16 @@
 
 int main(void)
 {
-    string a = "abc";
+    //string a = "abc";
+    //a[1] = 'k';
 
-    string a[] = {"abc"};
+    //string a[] = {"abc"};
+    //a[0][1] = 'k';
 
-    string a = get_string('s: ');
-
-    char b = a[1][1];
-    printf("%c\n", b);
-
-    a[1][1] = 'a';
-    //printf("%s\n", a[1]);
+    string a = get_string("s: ");
+    a[1] = 'k';
 
 
-
+    printf("%s\n", a);
 
 }
