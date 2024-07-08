@@ -11,10 +11,10 @@ int main(void)
     int a[3] = {2,3,4};
     //printf("%i\n", a);
 
-    a[] = {2,3,4};
+    //a[] = {2,3,4};
     //printf("%i\n", a);
 
-    //int p[3] = a[];
+    int q[3] = a[];
     //int q = p;
     //printf("%i\n", q);
 
