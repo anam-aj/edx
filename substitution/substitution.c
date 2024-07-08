@@ -38,7 +38,7 @@ int main(int argc, string argv[])
 
     // Convert plaintext to ciphertext and print it
     string ciphertext = cipher_text(plaintext, key);
-    printf("ciphertext:  %s", ciphertext);
+    printf("ciphertext:  %s\n", ciphertext);
 
     return 0;
 }
@@ -95,6 +95,6 @@ char is_rep(string word)
             }
         }
     }
-    
+
     return 'n';
 }
