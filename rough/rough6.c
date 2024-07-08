@@ -8,11 +8,11 @@
 
 int main(void)
 {
+    string a = "abc";
+
+    string a[] = {"abc"};
+
     string a = get_string('s: ');
-
-
-    //a[2] = {"abc","xyz","pqr"};
-    //printf("%i\n", a);
 
     char b = a[1][1];
     printf("%c\n", b);
