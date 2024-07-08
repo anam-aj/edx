@@ -52,7 +52,21 @@ int main(int argc, string argv[])
 // by substitution from 'key'
 string cipher_text(string text, string key)
 {
+    // traverse character of given string one by one
+    for (int i = 0, len = strlen(text); i < len; i++)
+    {
+        // Check if char is uppercase, if yes then cipher it
+        if (isupper(text[i]) != 0)
+        {
+            text[i] = ((text[i] - 'A' + key) % 26) + 'A';
+        }
 
+        // Check if char is lowercase, if yes then cipher it
+        else if (islower(text[i]) != 0)
+        {
+            text[i] = ((text[i] - 'a' + key) % 26) + 'a';
+        }
+    }
 }
 
 // Function to check if string is alphabetical
