@@ -21,23 +21,23 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    else
+    // Checks if argument is alphabetical, if not prints error msg
+    for (int i = 0; i < 26; i++)
     {
-        // Checks if argument is alphabetical, if not prints error msg
-        for (int i = 0; i < 26; i++)
+        if (isalpha(argv[1][i]) == 0)
         {
-            if (isalpha(argv[1][i]) == 0)
-            {
-                printf("Give exactly 1 argument, only alphbetical,
-                        26 character, no repetition"
-                      );
+            printf("Give exactly 1 argument, only alphbetical,
+                    26 character, no repetition"
+                   );
 
-                return 1;
-            }
-
-            
+            return 1;
         }
+
+        
+
+
     }
+}
 
     // each letter only once, if not then error msg of choice
     // return 1 from main immediately
