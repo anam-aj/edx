@@ -6,8 +6,10 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Function declaration
+// Function declaration(in order they are defined)
+string cipher_text(string text, string key)
 char is_rep(string word);
+
 
 
 int main(int argc, string argv[])
@@ -30,23 +32,15 @@ int main(int argc, string argv[])
         return 1;
     }
 
-
-    // promt user for plaintext with "plaintext: "
+    // Promt user for plaintext
     string plaintext = get_string("plaintext: ");
 
-    // output ciphertest with "ciphertext:  "
+    // Convert plaintext to ciphertext and print it
     string ciphertext = cipher_text(plaintext);
     printf("ciphertext:  %s", ciphertext);
 
-
-
-
-// after output, newline,exit by return 0 from main
-
+    return 0;
 }
-
-// in output only alphabetical letters change rest unchanged
-// output must preserve case, uppercase and lowercase
 
 // Funtion to convert plaintext to ciphertext
 // by substitution from 'key'
