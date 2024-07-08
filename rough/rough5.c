@@ -9,12 +9,17 @@
 int main(void)
 {
     string a[3] = {"abc","xyz","pqr"};
-    //printf("%i\n", a);
+
 
     //a[2] = {"abc","xyz","pqr"};
     //printf("%i\n", a);
 
-    string q[3] = a;
+    char b = a[1][1];
+    printf("%c\n", b);
+
+    a[1][1] = 'a';
+    printf("%s\n", a[1]);
+
 
 
 
