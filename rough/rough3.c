@@ -14,7 +14,7 @@ int main(void)
     a = {4,5,6};
     //printf("%i\n", a);
 
-    int p = 2;
+    int p[3] = {21,31,41};;
     int q = p;
     printf("%i\n", q);
 
