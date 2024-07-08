@@ -87,7 +87,7 @@ char is_rep(string word)
 {
     for (int i = 0, len = strlen(word); i < len; i++)
     {
-        for (int j = i+1; j < len; j++)
+        for (int j = i + 1; j < len; j++)
         {
             if (word[i] == word[j])
             {
