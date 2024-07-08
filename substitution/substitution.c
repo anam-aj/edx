@@ -14,7 +14,7 @@ int main(int argc, string argv[])
     // if not prints error msg
     if ((argc != 2) || (strlen(argv[1]) != 26))
     {
-        printf("Exactly 1 argument, only alphbetical,
+        printf("Give exactly 1 argument, only alphbetical,
                 26 character, no repetition"
               );
 
@@ -28,7 +28,7 @@ int main(int argc, string argv[])
         {
             if (isalpha(argv[1][i]) == 0)
             {
-                printf("Exactly 1 argument, only alphbetical,
+                printf("Give exactly 1 argument, only alphbetical,
                         26 character, no repetition"
                       );
 
