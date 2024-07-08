@@ -67,12 +67,7 @@ char is_rep(string word)
             }
         }
     }
-
 }
-
-
-
-// key should be case insensitive
 
 // promt user for plaintext with "plaintext: "
 // one sapce without new line
