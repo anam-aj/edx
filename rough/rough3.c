@@ -8,13 +8,6 @@
 
 int main(void)
 {
-    char a = 'x';
-    char b = a;
-    printf("%c\n", b);
-
-    b = 'z';
-
-    printf("%c\n", a);
-    printf("%c\n", b);
+    
 
 }

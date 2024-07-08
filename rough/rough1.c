@@ -8,13 +8,22 @@
 
 int main(void)
 {
-    int a = 2;
-    int b = a;
-    printf("%i\n", b);
+    char a = 'p';
+    printf("%c\n", a);
 
-    b = 3;
+    a = 'q';
+    printf("%c\n", a);
 
-    printf("%i\n", a);
-    printf("%i\n", b);
+    char p = 'x';
+    char q = p;
+    printf("%c\n", q);
+
+    q = 'z';
+
+    printf("%c\n", p);
+    printf("%c\n", q);
+
+
+
 
 }

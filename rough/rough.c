@@ -14,5 +14,14 @@ int main(void)
     a = 3;
     printf("%i\n", a);
 
+    int p = 2;
+    int q = p;
+    printf("%i\n", q);
+
+    b = 3;
+
+    printf("%i\n", p);
+    printf("%i\n", q);
+
 
 }

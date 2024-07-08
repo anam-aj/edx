@@ -8,12 +8,7 @@
 
 int main(void)
 {
-    char a = 'p';
-    printf("%c\n", a);
     
-    a = 'q';
-    printf("%c\n", a);
-
 
 }
 
