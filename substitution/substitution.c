@@ -50,15 +50,20 @@ char check_rep(string word)
 {
     for (int i = 0; i < 26; i++)
     {
-        
-    }
-    for (int j = i+1; j < 26; j++)
+        for (int j = i+1; j < 26; j++)
+        {
+            if (word[i] == word[j])
             {
-                if ((argv[1][i] == argv[1][j]))
-                {
-
-                }
+                return 'y';
             }
+
+            else
+            {
+                return 'n';
+            }
+        }
+    }
+
 }
 
 
