@@ -6,6 +6,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+// Function declaration
+char check_rep(string word);
 
 
 int main(int argc, string argv[])
