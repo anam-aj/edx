@@ -9,11 +9,11 @@
 int main(void)
 {
     int a[3] = {2,3,4};
-    printf("%i\n", a);
+    //printf("%i\n", a);
 
-    a = 3;
-    printf("%i\n", a);
+    a = {3};
+    //printf("%i\n", a);
 
-  
+
 
 }
