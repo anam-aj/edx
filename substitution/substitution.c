@@ -31,7 +31,7 @@ int main(int argc, string argv[])
 }
 
 // Function to check if string is alphabetical
-// return 'y' if string has only alphabet else return 'n;
+// return 'y' if string has only alphabet else return 'n'
 char is_alpha(string word)
 {
     for (int i = 0; i < 26; i++)
@@ -49,7 +49,7 @@ char is_alpha(string word)
 }
 
 // Function to check for repeatition in string
-// return 'n' for no repeatiotn else retrun 'y'
+// return 'n' for no repetition else retrun 'y'
 char is_rep(string word)
 {
     for (int i = 0; i < 26; i++)
