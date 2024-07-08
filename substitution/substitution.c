@@ -19,13 +19,14 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    else if
-    {
         // key has exactly 26 character, only alphabetical
         // each letter only once, if not then error msg of choice
         // return 1 from main immediately
 
+    else if (strlen(argv[1]) != 26)
+    {
         
+
     }
 }
 
