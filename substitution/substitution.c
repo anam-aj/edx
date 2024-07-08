@@ -7,7 +7,7 @@
 #include <string.h>
 
 // Function declaration
-char check_rep(string word);
+char is_rep(string word);
 
 
 int main(int argc, string argv[])
@@ -26,7 +26,7 @@ int main(int argc, string argv[])
     // Checks if argument is alphabetical, if not prints error msg
     for (int i = 0; i < 26; i++)
     {
-        if ((isalpha(argv[1][i]) == 0) || (check_rep(argv[1]) == 'y'))
+        if ((isalpha(argv[1][i]) == 0) || (is_rep(argv[1]) == 'y'))
         {
             printf("Give exactly 1 argument, only alphbetical,
                     26 character, no repetition"
@@ -44,11 +44,27 @@ int main(int argc, string argv[])
     }
 }
 
-// Function 
+// Function to check if string is alphabetical
+// return 'y' if string has only alphabet else return 'n;
+char is_alpha(string word)
+{
+    for (int i = 0; i < 26; i++)
+    {
+        if (isalpha(argv[1][i]) == 0)
+        {
+            return 'n';
+        }
+
+        else
+        {
+            return 'y';
+        }
+    }
+}
 
 // Function to check for repeatition in string
 // return 'n' for no repeatiotn else retrun 'y'
-char check_rep(string word)
+char is_rep(string word)
 {
     for (int i = 0; i < 26; i++)
     {
