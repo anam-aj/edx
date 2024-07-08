@@ -31,6 +31,8 @@ int main(int argc, string argv[])
         return 1;
     }
 
+    string key = argv[1];
+
     // Promt user for plaintext
     string plaintext = get_string("plaintext: ");
 
