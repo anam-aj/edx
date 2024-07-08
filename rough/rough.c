@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-void func(int b);
+int func(int b);
 
 int main(void)
 {
@@ -18,7 +18,8 @@ int main(void)
 }
 
 
-void func(int b)
+int func(int b)
 {
     b = 4;
+    return b;
 }
