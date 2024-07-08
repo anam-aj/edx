@@ -13,7 +13,7 @@ int main(void)
     int a[3] = {1,2,3};
     printf("%i\n", a[1]);
 
-    func(3);
+    int c = func(a[1]);
     printf("%i\n", a[1]);
 }
 
