@@ -16,9 +16,7 @@ int main(int argc, string argv[])
     // if not prints error msg
     if ((argc != 2) || (strlen(argv[1]) != 26))
     {
-        printf("Give exactly 1 argument, only alphbetical,
-                26 character, no repetition"
-                );
+        printf("Give only 1 argument, 26 alphabets, no repetition");
 
         return 1;
     }
@@ -26,9 +24,7 @@ int main(int argc, string argv[])
     // Checks if argument is alphabetical, if not prints error msg
     if ((is_alpha(argv[1]) == 'n') || (is_rep(argv[1]) == 'y'))
     {
-        printf("Give exactly 1 argument, only alphbetical,
-                26 character, no repetition"
-              );
+        printf("Give only 1 argument, 26 alphabets, no repetition");
 
         return 1;
     }
@@ -72,7 +68,7 @@ char is_rep(string word)
         }
     }
 
-
+}
 
 
 
