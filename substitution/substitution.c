@@ -47,7 +47,13 @@ int main(int argc, string argv[])
 
 // in output only alphabetical letters change rest unchanged
 // output must preserve case, uppercase and lowercase
-// Funtion to create ciphertext using substitution 
+
+// Funtion to convert plaintext to ciphertext
+// by substitution from 'key'
+string cipher_text(string text, int key)
+{
+    
+}
 
 // Function to check if string is alphabetical
 // return 'y' if string has only alphabet else return 'n'
