@@ -12,12 +12,22 @@
 
 int main(int argc, string argv[])
 {
-    
+    if (argc != 2)
+    {
+        printf("Please enter exactly 1 command line argument");
+
+        return 1;
+    }
+
+    else
+    {
+        // key has exactly 26 character, only alphabetical
+        // each letter only once, if not then error msg of choice
+        // return 1 from main immediately
+    }
 }
 
-// key has exactly 26 character, only alphabetical
-// each letter only once, if not then error msg of choice
-// return 1 from main immediately
+
 
 // key should be case insensitive
 
