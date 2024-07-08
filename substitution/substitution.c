@@ -8,12 +8,11 @@
 
 // exactly 1 command line argument i.e. key,
 // if less than1 or more, print error msg of chioce,
-// key has exactly 26 character
 // return 1 from main immediately
 
 int main(int argc, string argv[])
 {
-    if ((argc != 2) || (strlen(argv[1]) != 26))
+    if (argc != 2)
     {
         printf("Exactly 1 argument, only alphbetical,
                 26 character, no repetition"
@@ -22,7 +21,9 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    else if
+    // key has exactly 26 character
+    // return 1 from main immediately
+    else if (strlen(argv[1]) != 26)
     {
         printf("Exactly 1 argument, only alphbetical,
                 26 character, no repetition"
@@ -33,9 +34,16 @@ int main(int argc, string argv[])
 
     // only alphabetical
     // return 1 from main immediately
+    else
+    {
+        for (int i = 0; i < 26; i++)
+        {
+            if ( )
+        }
+    }
 
-    // each letter only once, if not then error msg of choice
-    // return 1 from main immediately
+        // each letter only once, if not then error msg of choice
+        // return 1 from main immediately
 
 }
 
