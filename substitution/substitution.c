@@ -24,7 +24,9 @@ int main(int argc, string argv[])
 
     else if (strlen(argv[1]) != 26)
     {
-        
+        printf("Please enter exactly 1 command line argument");
+
+        return 1;
     }
         // only alphabetical
         // return 1 from main immediately
