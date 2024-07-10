@@ -23,6 +23,7 @@ int main(void)
 
     // Find highest number of votes
     int highest_votes = 0;
+    string winner;
     for (int i = 0; i < num_candidates; i++)
     {
         if (candidates[i].votes > highest_votes)
