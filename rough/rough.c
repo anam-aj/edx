@@ -19,7 +19,7 @@ int main(void)
     candidates[1].votes = 12;
 
     candidates[2].name = "Inno";
-    candidates[2].votes = 7;
+    candidates[2].votes = 17;
 
     // Find highest number of votes
     int highest_votes = 0;
