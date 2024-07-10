@@ -1,26 +1,38 @@
-// Program to encrypt msg using caesar cipher
-
 #include <cs50.h>
-#include <ctype.h>
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
-int func(int b);
+typedef struct
+{
+    string name;
+    int votes;
+} candidate;
 
 int main(void)
 {
-    int a[3] = {1,2,3};
-    printf("%i\n", a[1]);
+    const int num_candidates = 3;
+    candidate candidates[num_candidates];
 
-    int c = func(a[1]);
-    printf("%i\n", a[1]);
-}
+    candidates[0].name = "Carter";
+    candidates[0].votes = 10;
 
+    candidates[1].name = "Yuliia";
+    candidates[1].votes = 12;
 
-int func(int b)
-{
-    
-    b = 4;
-    return b;
+    candidates[2].name = "Inno";
+    candidates[2].votes = 7;
+
+    // Find highest number of votes
+    int highest_votes = 0;
+    for (int i = 0; i < num_candidates; i++)
+    {
+        if (candidates[i].votes > highest_votes)
+        {
+            highest_votes = candidates[i].votes;
+            string winner = candidates[i].name;
+        }
+    }
+
+    printf("%i\n", highest_votes);
+    printf("%s\n", winner);
+
 }
