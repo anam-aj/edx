@@ -13,7 +13,7 @@ int main(void)
     candidate candidates[num_candidates];
 
     candidates[0].name = "Carter";
-    candidates[0].votes = 10;
+    candidates[0].votes = 13;
 
     candidates[1].name = "Yuliia";
     candidates[1].votes = 12;
@@ -29,7 +29,7 @@ int main(void)
         if (candidates[i].votes > highest_votes)
         {
             highest_votes = candidates[i].votes;
-            string winner = candidates[i].name;
+            winner = candidates[i].name;
         }
     }
 
