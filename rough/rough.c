@@ -17,5 +17,9 @@ int collatz(int number)
     {
         return counter;
     }
-    
+    else if (number % 2 == 0)
+    {
+        counter++;
+        
+    }
 }
