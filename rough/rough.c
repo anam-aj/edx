@@ -20,12 +20,12 @@ int collatz(int number, int counter)
     {
         return counter;
     }
-    else if (number % 2 == 0)
+    if (number % 2 == 0)
     {
         counter++;
         return collatz(number / 2, counter);
     }
-    else if (number % 2 == 1)
+    if (number % 2 == 1)
     {
         counter++;
         return collatz(((3 * number) + 1) / 2, counter);
