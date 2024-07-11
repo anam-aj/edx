@@ -89,6 +89,10 @@ void print_winner(void)
             maxvotes = candidate[i].votes
         }
     }
-    
+
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if(candidate);
+    }
     return;
 }
