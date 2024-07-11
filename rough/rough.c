@@ -5,14 +5,8 @@ int main(void)
 {
     // int array1[2][3] = {{1, 2 ,3}, {4 ,5 ,6}};
 
-    int a[2] = {1, 2};
-    int b[2] = {3, 4};
-    int c[2] = {5, 6};
+    int a[5] = {5,6};
 
 
-
-    int d[3][2] = {{1, 2}, {3, 4}};
-    int e = d[2][1];
-
-    printf("%i\n",e);
+    printf("%i\n",a[5]);
 }
