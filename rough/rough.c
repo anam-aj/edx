@@ -5,6 +5,7 @@ int collatz(int number);
 
 int main(void)
 {
+    int counter = 0;
 
     printf("%s\n", winner);
 
@@ -12,7 +13,7 @@ int main(void)
 
 int collatz(int number)
 {
-    int counter = 0;
+
     if (number == 1)
     {
         return counter;
