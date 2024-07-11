@@ -1,11 +1,14 @@
 sort1 uses: TODO
 
-How do you know?: time_sorted5000 =0.03 , time_reversed5000 = 0.07, time_random5000 = 0.09,
+How do you know?: big_omega(5000)  = 0.03s,  big_O(5000)  = 0.07s, time_random5000 = 0.09s
+                  big_omega(10000) = s,  big_O(10000) = 0.s, time_random10000 = s
 
 sort2 uses: TODO
 
-How do you know?: time_sorted5000 = 0.03, time_reversed5000 = 0.04, time_random5000 = 0.03 ,
+How do you know?: big_omega(5000)  = 0.03s, big_O(5000) = 0.04s, time_random5000 = 0.03
+                  big_omega(10000) = s,  big_O(10000) = 0.s, time_random10000 = s
 
 sort3 uses: TODO
 
-How do you know?: time_sorted5000 = 0.05, time_reversed5000 = 0.05, time_random5000 = ,0.09
+How do you know?: big_omega(5000)  = 0.05s, big_O(5000) = 0.05s, time_random5000 = 0.09
+                  big_omega(10000) = s,  big_O(10000) = 0.s, time_random10000 = s
