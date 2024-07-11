@@ -66,8 +66,10 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     // TODO
+    // Go through list of candidates
     for (int i = 0; i < candidate_count; i++)
     {
+        // Check validity of vote, if valid update that candidate votes
         if (strcmp(name, candidates[i].name) == 0)
         {
             candidates[i].votes++;
