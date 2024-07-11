@@ -5,6 +5,6 @@
 int main(void)
 {
     int array1[][];
-    
+    l
 
 }
