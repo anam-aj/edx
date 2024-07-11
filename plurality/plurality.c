@@ -69,13 +69,14 @@ bool vote(string name)
     // Go through list of candidates
     for (int i = 0; i < candidate_count; i++)
     {
-        // Check validity of vote, if valid update that candidate votes
+        // Check validity of vote, if valid then increase that candidate votes
         if (strcmp(name, candidates[i].name) == 0)
         {
             candidates[i].votes++;
             return true;
         }
     }
+    
     return false;
 }
 
@@ -83,6 +84,7 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
+    // Finds out the max no of votes
     int maxvotes = 0;
     for (int i = 0; i < candidate_count; i++)
     {
@@ -92,6 +94,7 @@ void print_winner(void)
         }
     }
 
+    // Print the winner(s), who received max votes
     for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].votes == maxvotes)
