@@ -1,35 +1,16 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int collatz
+int collatz(int number);
 
 int main(void)
 {
-    const int num_candidates = 3;
-    candidate candidates[num_candidates];
 
-    candidates[0].name = "Carter";
-    candidates[0].votes = 13;
-
-    candidates[1].name = "Yuliia";
-    candidates[1].votes = 12;
-
-    candidates[2].name = "Inno";
-    candidates[2].votes = 17;
-
-    // Find highest number of votes
-    int highest_votes = 0;
-    string winner;
-    for (int i = 0; i < num_candidates; i++)
-    {
-        if (candidates[i].votes > highest_votes)
-        {
-            highest_votes = candidates[i].votes;
-            winner = candidates[i].name;
-        }
-    }
-
-    printf("%i\n", highest_votes);
     printf("%s\n", winner);
 
+}
+
+int collatz(int number)
+{
+    int counter = 
 }
