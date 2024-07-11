@@ -23,11 +23,11 @@ int collatz(int number, int counter)
     else if (number % 2 == 0)
     {
         counter++;
-        return collatz(number / 2);
+        return collatz(number / 2, counter);
     }
     else
     {
         counter++;
-        return collatz((3 * number + 1) / 2)
+        return collatz((3 * number + 1) / 2, counter);
     }
 }
