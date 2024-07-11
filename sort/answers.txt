@@ -1,11 +1,11 @@
 sort1 uses: TODO
 
-How do you know?: time_random5000 = 0.001s, time_reversed5000 = 0.001,
+How do you know?: time_sorted5000 = , time_reversed5000 = , time_random5000 = 0.09,
 
 sort2 uses: TODO
 
-How do you know?: time_random5000 = 0.001s, time_reversed5000 = 0.001,
+How do you know?: time_sorted5000 = , time_reversed5000 = , time_random5000 = 0.03 ,
 
 sort3 uses: TODO
 
-How do you know?: time_random5000 = 0.001s,
+How do you know?: time_sorted5000 = , time_reversed5000 = , time_random5000 = ,0.09
