@@ -28,6 +28,6 @@ int collatz(int number, int counter)
     else
     {
         counter++;
-        return collatz((3 * number + 1) / 2, counter);
+        return collatz(((3 * number) + 1) / 2, counter);
     }
 }
