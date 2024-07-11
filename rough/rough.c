@@ -5,9 +5,11 @@ int collatz(int number);
 
 int main(void)
 {
-    int counter = 0;
+    int number = get_int("number: ");
 
-    printf("%s\n", winner);
+    int steps = collatz(number, 0);
+
+    printf("%i\n", steps);
 
 }
 
