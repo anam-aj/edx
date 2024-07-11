@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int collatzd
+int collatz
 
 int main(void)
 {
