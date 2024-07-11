@@ -69,14 +69,15 @@ bool vote(string name)
     // Go through list of candidates
     for (int i = 0; i < candidate_count; i++)
     {
-        // Check validity of vote, if valid then increase that candidate votes
+        // Check validity of vote, if valid then increase that candidate votes, return true
         if (strcmp(name, candidates[i].name) == 0)
         {
             candidates[i].votes++;
             return true;
         }
     }
-    
+
+    // If invalid vote, return false
     return false;
 }
 
