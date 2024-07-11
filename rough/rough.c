@@ -12,5 +12,10 @@ int main(void)
 
 int collatz(int number)
 {
-    int counter = 
+    int counter = 0;
+    if (number == 1)
+    {
+        return counter;
+    }
+    
 }
