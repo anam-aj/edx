@@ -13,21 +13,19 @@ int main(void)
 
 }
 
-int collatz(int number, int counter)
+int collatz(int number)
 {
 
     if (number == 1)
     {
-        return counter;
+        return 0;
     }
     else if (number % 2 == 0)
     {
-        counter++;
-        return collatz(number / 2, counter);
+        return 1 + collatz(number / 2);
     }
     else
     {
-        counter++;
-        return collatz((3 * number) + 1, counter);
+        return 1 + collatz((3 * number) + 1);
     }
 }
