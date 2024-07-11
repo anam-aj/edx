@@ -25,7 +25,7 @@ int collatz(int number, int counter)
         counter++;
         return collatz(number / 2, counter);
     }
-    else
+    else if (number % 2 == 1)
     {
         counter++;
         return collatz(((3 * number) + 1) / 2, counter);
