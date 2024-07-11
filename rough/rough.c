@@ -11,7 +11,7 @@ int main(void)
 
 }
 
-int collatz(int number)
+int collatz(int number, int counter)
 {
 
     if (number == 1)
