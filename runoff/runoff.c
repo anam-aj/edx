@@ -130,7 +130,7 @@ bool vote(int voter, int rank, string name)
     // TODO
     for (int i = 1; i < MAX_CANDIDATES; i++)
     {
-        if (strcmp);
+        if (strcmp(name, ));
     }
 
     return false;
