@@ -192,9 +192,10 @@ int find_min(void)
     // TODO
 
     int min_votes = 0;
+    bool cand_elim = candidates[preferences[i][j]].eliminated;
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes < min_votes)
+        if ((candidates[i].votes < min_votes) && (!cand_elim))
         {
             min_votes = candidates[i].votes;
         }
