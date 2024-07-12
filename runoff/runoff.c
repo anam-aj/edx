@@ -185,6 +185,16 @@ bool print_winner(void)
 int find_min(void)
 {
     // TODO
+    int min_votes = 0;
+    int index_min;
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].votes > max_votes)
+        {
+            max_votes = canditaes[i].votes;
+            index_max = i;
+        }
+    }
     return 0;
 }
 
