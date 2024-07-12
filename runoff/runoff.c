@@ -160,6 +160,7 @@ void tabulate(void)
 bool print_winner(void)
 {
     // TODO
+    int max_votes,
     return false;
 }
 
