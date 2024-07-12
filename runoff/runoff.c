@@ -148,6 +148,7 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     // TODO
+    // Give votes to candidates as per first preference of voters
     for (int i = 0; i < voter_count, i++)
     {
         candidates[preferences[i][0]].votes++;
