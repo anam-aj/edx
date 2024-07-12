@@ -146,11 +146,12 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     // TODO
-    // Assign votes to candidates as per first preference of voters
+    // Assign votes to not eliminated candidates
     for (int i = 0; i < voter_count; i++)
     {
         for (int j = 0; j < candidate_count; j++)
         {
+            // Checks if candidate is elimintaed or not
             if (candidates[preferences[i][j]].eliminated == false)
             {
                 candidates[preferences[i][j]].votes++;
@@ -177,6 +178,7 @@ bool print_winner(void)
         }
     }
 
+    // Check for winner, if found, prints it
     if (max_votes > (voter_count / 2))
     {
         printf("%s\n", candidates[index_max].name);
@@ -190,7 +192,6 @@ bool print_winner(void)
 int find_min(void)
 {
     // TODO
-
     int min_votes = 100;
     for (int i = 0; i < candidate_count; i++)
     {
