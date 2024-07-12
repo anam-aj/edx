@@ -136,11 +136,6 @@ bool vote(int voter, int rank, string name)
             // Stores preference
             preferences[voter][rank] = i;
         }
-
-        else
-        {
-            return false;
-        }
     }
 
     return true;
