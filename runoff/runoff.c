@@ -176,6 +176,11 @@ bool print_winner(void)
     {
         printf("%s\n", candidates[index_max].name);
     }
+
+    else
+    {
+        
+    }
     return false;
 }
 
