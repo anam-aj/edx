@@ -151,6 +151,7 @@ void tabulate(void)
     // Give votes to candidates as per first preference of voters
     for (int i = 0; i < voter_count, i++)
     {
+        for (int j = 0; j < )
         candidates[preferences[i][0]].votes++;
     }
     return;
