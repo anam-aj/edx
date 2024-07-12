@@ -189,10 +189,10 @@ int find_min(void)
     int index_min;
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes > max_votes)
+        if (candidates[i].votes < min_votes)
         {
-            max_votes = canditaes[i].votes;
-            index_max = i;
+            min_votes = canditaes[i].votes;
+            index_min = i;
         }
     }
     return 0;
