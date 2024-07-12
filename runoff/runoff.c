@@ -211,9 +211,7 @@ bool is_tie(int min)
         }
     }
 
-    if ()
-
-    return false;
+    return true;
 }
 
 // Eliminate the candidate (or candidates) in last place
