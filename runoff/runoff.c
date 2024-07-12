@@ -135,10 +135,11 @@ bool vote(int voter, int rank, string name)
         {
             // Stores preference
             preferences[voter][rank] = i;
+            return true;
         }
     }
 
-    return true;
+    return false;
 }
 
 // Tabulate votes for non-eliminated candidates
@@ -146,13 +147,13 @@ void tabulate(void)
 {
     // TODO
     // Give votes to candidates as per first preference of voters
-    for (int i = 0; i < voter_count, i++)
+    for (int i = 0; i < voter_count; i++)
     {
-        for (int j = 0; j < candidate_count, j++)
+        for (int j = 0; j < candidate_count; j++)
         {
-            if (candidates[preferences[i][j]].eliminated = false;)
+            if (candidates[preferences[i][j]].eliminated == false)
             {
-                candidates[preferences[i][j]].vote++;
+                candidates[preferences[i][j]].votes++;
                 break;
             }
         }
@@ -171,7 +172,7 @@ bool print_winner(void)
     {
         if (candidates[i].votes > max_votes)
         {
-            max_votes = canditaes[i].votes;
+            max_votes = candidates[i].votes;
             index_max = i;
         }
     }
