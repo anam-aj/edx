@@ -185,6 +185,7 @@ bool print_winner(void)
 int find_min(void)
 {
     // TODO
+    if (candidate_count)
     int min_votes = 0;
     int index_min;
     for (int i = 0; i < candidate_count; i++)
