@@ -205,9 +205,9 @@ bool is_tie(int min)
     int j;
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes == min)
+        if (candidates[i].votes != min)
         {
-            j++;
+            return false;
         }
     }
 
