@@ -160,6 +160,7 @@ void tabulate(void)
 bool print_winner(void)
 {
     // TODO
+    // Finds max votes and index of candidate with max votes
     int max_votes = 0;
     int index_max;
     for (int i = 0; i < candidate_count; i++)
