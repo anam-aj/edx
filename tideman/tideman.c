@@ -175,22 +175,24 @@ void sort_pairs(void)
     int maxpairs = (candidate_count * (candidate_count - 1)) / 2;
 
     for (int j = 0; j < maxpairs, j++)
-    for (int i = 0; i < maxpairs - 1; i++)
     {
-        if (pairs[i].winner < pairs[i + 1].winner)
+        for (int i = 0; i < maxpairs - 1; i++)
         {
-            pair temp;
-            temp.winner = pairs[i].winner;
-            temp.loser = pairs[i].loser;
+            if (pairs[i].winner < pairs[i + 1].winner)
+            {
+                pair temp;
+                temp.winner = pairs[i].winner;
+                temp.loser = pairs[i].loser;
 
-            pairs[i].winner = pairs[i + 1].winner;
-            pairs[i].loser = pairs[i + 1].loser;
+                pairs[i].winner = pairs[i + 1].winner;
+                pairs[i].loser = pairs[i + 1].loser;
 
-            pairs[i + 1].winner = temp.winner;
-            pairs[i + 1].loser = temp.loser;
+                pairs[i + 1].winner = temp.winner;
+                pairs[i + 1].loser = temp.loser;
+            }
         }
-    }
     maxpairs--;
+    }
 
     return;
 }
