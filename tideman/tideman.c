@@ -217,7 +217,7 @@ void print_winner(void)
     return;
 }
 
-int loop(int win)
+int check_loop(int win)
 {
     for (int i = 0; i < candidate_count; i++)
     {
