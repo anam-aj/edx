@@ -221,6 +221,9 @@ int check_loop(int win)
 {
     for (int i = 0; i < candidate_count; i++)
     {
-        pairs[win].winner
+        if (locked[i][pairs[win].winner] = true)
+        {
+            return 
+        }
     }
 }
