@@ -145,6 +145,10 @@ void add_pairs(void)
     int maxpairs = (candidate_count * (candidate_count - 1)) / 2;
     for (int i = 0; i < maxpairs; i++)
     {
+        for (int j = 0; j < candidate_count; j++)
+        {
+            for (int k = j + 1; k < candidate_count, k++)
+        }
         pairs[i].winner = ;
         pairs [i].loser = ;
     }
