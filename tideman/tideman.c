@@ -230,7 +230,7 @@ int check_loop(int win)
 
             else
             {
-
+                check_loop(i);
             }
         }
 
