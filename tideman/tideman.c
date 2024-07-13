@@ -105,7 +105,7 @@ bool vote(int rank, string name, int ranks[])
         // Checks if entered name id valid candidate
         if (strcmp(name, candidates[i]) == 0)
         {
-            // Assign 
+            // Assign elements to rank array
             ranks[j] = i;
             return true;
         }
