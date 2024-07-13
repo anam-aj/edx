@@ -130,6 +130,7 @@ void record_preferences(int ranks[])
                     break;
                 }
             }
+            
 
             if (ranks[i] != j)
             {
