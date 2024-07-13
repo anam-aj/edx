@@ -9,21 +9,6 @@
 int main(void)
 {
     char a = 'p';
-    printf("%c\n", a);
-
-    a = 'q';
-    printf("%c\n", a);
-
-    char p = 'x';
-    char q = p;
-    printf("%c\n", q);
-
-    q = 'z';
-
-    printf("%c\n", p);
-    printf("%c\n", q);
-
-
-
-
 }
+
+f
