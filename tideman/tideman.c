@@ -171,7 +171,7 @@ void sort_pairs(void)
 {
     // TODO
     int maxpairs = (candidate_count * (candidate_count - 1)) / 2;
-    for (int i = 0; i < maxpairs; i++)
+    for (int i = 0; i < maxpairs - 1; i++)
     {
         if (pairs[i].winner > pairs[i + 1].winner)
         {
