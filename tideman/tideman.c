@@ -221,7 +221,7 @@ int check_loop(int win)
 {
     for (int i = 0; i < candidate_count; i++)
     {
-        if (locked[i][pairs[win].winner] = true)
+        if (locked[i][pairs[win].winner] == true)
         {
             if (i == pairs[win].loser)
             {
@@ -230,7 +230,7 @@ int check_loop(int win)
 
             else
             {
-                
+
             }
         }
 
