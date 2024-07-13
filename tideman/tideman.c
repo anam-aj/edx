@@ -149,7 +149,7 @@ void add_pairs(void)
     {
         for (int j = 0; j < candidate_count; j++)
         {
-            for (int k = j + 1; k < candidate_count, k++)
+            for (int k = j + 1; k < candidate_count; k++)
             {
                 if (preferences[j][k] > preferences[k][j])
                 {
@@ -175,7 +175,7 @@ void sort_pairs(void)
     // Bubble sort
     int maxpairs = (candidate_count * (candidate_count - 1)) / 2;
 
-    for (int j = 0; j < maxpairs -1, j++)
+    for (int j = 0; j < maxpairs -1; j++)
     {
         for (int i = 0; i < maxpairs - 1; i++)
         {
@@ -203,7 +203,7 @@ void lock_pairs(void)
 {
     // TODO
     int maxpairs = (candidate_count * (candidate_count - 1)) / 2;
-    for (int i = 0; i < maxpairs, i++)
+    for (int i = 0; i < maxpairs; i++)
     {
         if (check_loop(pairs[i].winner) == 0)
         {
@@ -229,7 +229,7 @@ void print_winner(void)
             }
         }
 
-        printf("%s\n", candidates[i])
+        printf("%s\n", candidates[i]);
     }
     return;
 }
