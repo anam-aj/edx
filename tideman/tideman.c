@@ -175,7 +175,6 @@ void sort_pairs(void)
     int maxpairs = (candidate_count * (candidate_count - 1)) / 2;
     for (int i = 0; i < maxpairs - 1; i++)
     {
-        for (int j = i + 1; j)
         if (pairs[i].winner < pairs[i + 1].winner)
         {
             pair temp;
