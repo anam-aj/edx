@@ -9,6 +9,12 @@
 int main(void)
 {
     char a = 'p';
+    func(3);
+    
 }
 
-f
+int func(int num)
+{
+    int num2 = 2 + num;
+    return num2;
+}
