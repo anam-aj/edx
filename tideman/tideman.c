@@ -105,7 +105,7 @@ bool vote(int rank, string name, int ranks[])
         // Checks if entered name id valid candidate
         if (strcmp(name, candidates[i]) == 0)
         {
-            // Assign elements to rank array
+            // Assign elements to array rank
             ranks[j] = i;
             return true;
         }
@@ -119,7 +119,7 @@ void record_preferences(int ranks[])
     // TODO
     for (int i = 0; i < candidate_count; i++)
     {
-
+        
     }
     return;
 }
