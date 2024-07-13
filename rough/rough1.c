@@ -6,11 +6,13 @@
 #include <stdlib.h>
 #include <string.h>
 
+int func(int num);
+
 int main(void)
 {
     char a = 'p';
     func(3);
-    
+
 }
 
 int func(int num)
