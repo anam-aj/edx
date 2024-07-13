@@ -217,7 +217,10 @@ void print_winner(void)
     return;
 }
 
-int loop(int i)
+int loop(int win)
 {
-    
+    for (int i = 0; i < candidate_count; i++)
+    {
+        pairs[win].winner
+    }
 }
