@@ -223,7 +223,15 @@ int check_loop(int win)
     {
         if (locked[i][pairs[win].winner] = true)
         {
-            return 
+            if (i == pairs[win].loser)
+            {
+                return (-1);
+            }
+
+            
+        }
+        {
+            return
         }
     }
 }
