@@ -217,4 +217,7 @@ void print_winner(void)
     return;
 }
 
-int loop(int )
+int loop(int i)
+{
+    
+}
