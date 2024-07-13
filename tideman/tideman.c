@@ -174,7 +174,7 @@ void sort_pairs(void)
     // Bubble sort
     int maxpairs = (candidate_count * (candidate_count - 1)) / 2;
 
-    for
+    for (int j = 0; j < maxpairs, j++)
     for (int i = 0; i < maxpairs - 1; i++)
     {
         if (pairs[i].winner < pairs[i + 1].winner)
