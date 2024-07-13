@@ -233,6 +233,5 @@ int check_loop(int win)
                 check_loop(i);
             }
         }
-
     }
 }
