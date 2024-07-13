@@ -201,8 +201,11 @@ void sort_pairs(void)
 void lock_pairs(void)
 {
     // TODO
-
-    
+    int maxpairs = (candidate_count * (candidate_count - 1)) / 2;
+    for (int i = 0; i < maxpairs, i++)
+    {
+        pairs[i].winner
+    }
 
     return;
 }
