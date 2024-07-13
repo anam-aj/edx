@@ -32,6 +32,7 @@ void add_pairs(void);
 void sort_pairs(void);
 void lock_pairs(void);
 void print_winner(void);
+int check_loop(int win);
 
 int main(int argc, string argv[])
 {
@@ -220,7 +221,13 @@ void print_winner(void)
 
     for (int i = 0; i < candidate_count; i++)
     {
-        for
+        for (int j = 0; j < candidate_count; j++)
+        {
+            if (locked[i][j] == true)
+            {
+                break;
+            }
+        }
     }
     return;
 }
