@@ -107,7 +107,7 @@ bool vote(int rank, string name, int ranks[])
         if (strcmp(name, candidates[i]) == 0)
         {
             // Assign elements to array rank, according to voter preference
-            ranks[j] = i;
+            ranks[rank] = i;
             return true;
         }
     }
