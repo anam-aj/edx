@@ -148,9 +148,12 @@ void add_pairs(void)
         for (int j = 0; j < candidate_count; j++)
         {
             for (int k = j + 1; k < candidate_count, k++)
+            {
+                pairs[i].winner = ;
+                pairs[i].loser = ;
+
+            }
         }
-        pairs[i].winner = ;
-        pairs [i].loser = ;
     }
     return;
 }
