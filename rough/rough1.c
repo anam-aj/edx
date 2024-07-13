@@ -6,17 +6,22 @@
 #include <stdlib.h>
 #include <string.h>
 
-int func(int num);
+
 
 int main(void)
 {
-    char a = 'p';
-    func(3);
+    typedef struct
+    {
+        int winner;
+        int loser;
+    } pair;
 
-}
+    pair temp;
 
-int func(int num)
-{
-    int num2 = 2 + num;
-    return num2;
+    temp.winner = 10;
+    temp.loser = 22;
+
+    printf("%i  %i \n", temp.winner, temp.loser);
+
+
 }
