@@ -228,7 +228,7 @@ int check_loop(int win)
                 return (-1);
             }
 
-            
+            else 
         }
         {
             return
