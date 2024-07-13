@@ -10,18 +10,14 @@
 
 int main(void)
 {
-    typedef struct
+
+    int n = 10;
+    for (int i = 0; i < n; i++)
     {
-        int winner;
-        int loser;
-    } pair;
+        printf("%i\n", n);
+        n--;
+    }
 
-    pair temp;
-
-    temp.winner = 10;
-    temp.loser = 22;
-
-    printf("%i  %i \n", temp.winner, temp.loser);
 
 
 }
