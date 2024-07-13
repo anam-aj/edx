@@ -204,7 +204,7 @@ void lock_pairs(void)
     int maxpairs = (candidate_count * (candidate_count - 1)) / 2;
     for (int i = 0; i < maxpairs, i++)
     {
-        pairs[i].winner
+        locked[pairs[i].winner][pairs[i].loser] = true;
     }
 
     return;
@@ -216,3 +216,5 @@ void print_winner(void)
     // TODO
     return;
 }
+
+int loop(int )
