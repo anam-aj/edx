@@ -151,7 +151,6 @@ void add_pairs(void)
             {
                 pairs[i].winner = ;
                 pairs[i].loser = ;
-
             }
         }
     }
