@@ -175,26 +175,22 @@ void add_pairs(void)
 
     for (int i = 0; i < maxpairs; i++)
     {
-        printf("pair : %i----------------\n", i);
         for (int j = 0; j < candidate_count; j++)
         {
-            for (int k = j + 1; k < candidate_count; k++)
+            
+            if (preferences[j][k] > preferences[k][j])
             {
-                //printf("first:%i , second:%i/\n\n", preferences[j][k], preferences[k][j]);
-                if (preferences[j][k] > preferences[k][j])
-                {
-                    printf("first:%i  %i/\n\n", preferences[j][k], preferences[k][j]);
-                    pairs[i].winner = j;
-                    pairs[i].loser = k;
-                }
+                printf("first:%i  %i/\n\n", preferences[j][k], preferences[k][j]);
+                pairs[i].winner = j;
+                pairs[i].loser = k;
+            }
 
-                else if (preferences[j][k] < preferences[k][j])
-                {
-                    printf("j: %i  k:%i \n", j, k);
-                    printf("second:%i  %i\n\n", preferences[j][k], preferences[k][j]);
-                    pairs[i].winner = k;
-                    pairs[i].loser = j;
-                }
+            else if (preferences[j][k] < preferences[k][j])
+            {
+                printf("j: %i  k:%i \n", j, k);
+                printf("second:%i  %i\n\n", preferences[j][k], preferences[k][j]);
+                pairs[i].winner = k;
+                pairs[i].loser = j;
             }
         }
     }

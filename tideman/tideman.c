@@ -162,24 +162,22 @@ void add_pairs(void)
     int maxpairs = (candidate_count * (candidate_count - 1)) / 2;
     for (int i = 0; i < maxpairs; i++)
     {
-        for (int j = 0; j < candidate_count; j++)
+        for (int j = i + 1 ; j < maxpairs; j++)
         {
-            for (int k = j + 1; k < candidate_count; k++)
+            if (preferences[i][j] > preferences[j][i])
             {
-                if (preferences[j][k] > preferences[k][j])
-                {
-                    pairs[i].winner = j;
-                    pairs[i].loser = k;
-                }
+                pairs[i].winner = i;
+                pairs[i].loser = j;
+            }
 
-                else if (preferences[j][k] < preferences[k][j])
-                {
-                    pairs[i].winner = k;
-                    pairs[i].loser = j;
-                }
+            else if (preferences[i][j] < preferences[j][i])
+            {
+                pairs[i].winner = j;
+                pairs[i].loser = i;
             }
         }
     }
+    
     return;
 }
 
