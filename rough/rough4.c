@@ -221,6 +221,7 @@ void lock_pairs(void)
     {
         printf("w-%i  l-%i\n", pairs[n1].winner, pairs[n1].loser);
     }
+    printf("\n\n");
 
     for (int i = 0; i < pair_count; i++)
     {
