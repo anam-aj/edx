@@ -8,22 +8,9 @@
 
 int main(void)
 {
-    int a[3] = {2,3,4};
-    //printf("%i\n", a);
+    int preferences[9][9];
 
-    //a[] = {2,3,4};
-    //printf("%i\n", a);
+    int a = preferences[3][1];
 
-    int q[3] = a[1];
-    //int q = p;
-    //printf("%i\n", q);
-
-    //q = 3;
-
-    //printf("%i\n", p);
-    //printf("%i\n", q);
-
-
-
-
+    printf("%i\n", a);
 }
