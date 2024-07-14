@@ -148,6 +148,7 @@ void record_preferences(int ranks[])
             {
                 if (j == ranks[k])
                 {
+                    printf("break\n");
                     id = 1;
                     break;
                 }
