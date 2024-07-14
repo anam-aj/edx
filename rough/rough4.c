@@ -186,7 +186,7 @@ void add_pairs(void)
 
                 else if (preferences[j][k] < preferences[k][j])
                 {
-                    printf("first:%i  %i/\n\n", preferences[j][k], preferences[k][j]);
+                    printf("second:%i  %i/\n\n", preferences[j][k], preferences[k][j]);
                     pairs[i].winner = k;
                     pairs[i].loser = j;
                 }
