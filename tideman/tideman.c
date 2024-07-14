@@ -191,7 +191,7 @@ void sort_pairs(void)
     int p = pair_count;
     for (int j = 0; j < pair_count; j++)
     {
-        for (int i = 0; i < p - 1; i++)
+        for (int i = 0; i < p; i++)
         {
             if (pairs[i].winner < pairs[i + 1].winner)
             {
@@ -206,7 +206,7 @@ void sort_pairs(void)
                 pairs[i + 1].loser = temp.loser;
             }
         }
-        p--;
+        //p--;
     }
 
     return;
