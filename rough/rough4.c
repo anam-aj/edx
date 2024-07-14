@@ -168,6 +168,7 @@ void record_preferences(int ranks[])
                     }
                     printf("\n");
                 }
+                printf("\n");
 
             //}
         }
