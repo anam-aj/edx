@@ -9,7 +9,11 @@
 int main(void)
 {
   int n = 1;
+  for (int i = 1; i < n; i++)
+  {
+    printf("p\n");
+  }
+
 }
 
-int num () 
 
