@@ -159,6 +159,16 @@ void record_preferences(int ranks[])
             //else
             //{
                 preferences[i][j]++;
+
+                for (int i = 0; i < 9; i++)
+                {
+                    for (int j = 0; j < 9; j++)
+                    {
+                        printf("%i ", preferences[i][j]);
+                    }
+                    printf("\n");
+                }
+
             //}
         }
     }
