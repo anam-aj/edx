@@ -20,7 +20,7 @@ int main(void)
 
     for (int i = 0; i < 6; i++)
     {
-        for (int j = 0; j < 6; j++)
+        for (int j = 0; j < 6 - 1; j++)
         {
             if (list[i] < list[i + 1])
             {
@@ -32,7 +32,7 @@ int main(void)
 
     }
 
-    
+
 
     for (int i = 0; i < 6; i++)
     {
