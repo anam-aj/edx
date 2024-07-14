@@ -223,6 +223,7 @@ void lock_pairs(void)
     }
     printf("\n\n");
 
+
     for (int i = 0; i < pair_count; i++)
     {
         int w = check_loop(pairs[i].winner);
