@@ -159,41 +159,29 @@ void record_preferences(int ranks[])
 void add_pairs(void)
 {
     // TODO
-
-    for (int i = 0; i < MAX; i++)
+    //int maxpairs = (candidate_count * (candidate_count - 1)) / 2;
+    int p = 0;
+    for (int i = 0; i < candidate_count; i++)
     {
-        for (int j = 0; j < MAX; j++)
+        printf("p is %i\n", p);
+        for (int j = i + 1 ; j < candidate_count; j++)
         {
-            printf("%i ", preferences[i][j]);
-        }
-        printf("\n");
-    }
-
-    int maxpairs = (candidate_count * (candidate_count - 1)) / 2;
-    printf("candidatecount: %i\n", candidate_count);
-    printf("maxpairs: %i\n", maxpairs);
-
-    for (int i = 0; i < maxpairs; i++)
-    {
-        for (int j = 0; j < candidate_count; j++)
-        {
-            
-            if (preferences[j][k] > preferences[k][j])
+            if (preferences[i][j] > preferences[j][i])
             {
-                printf("first:%i  %i/\n\n", preferences[j][k], preferences[k][j]);
-                pairs[i].winner = j;
-                pairs[i].loser = k;
+                pairs[p].winner = i;
+                pairs[p].loser = j;
+                p++;
             }
 
-            else if (preferences[j][k] < preferences[k][j])
+            else if (preferences[i][j] < preferences[j][i])
             {
-                printf("j: %i  k:%i \n", j, k);
-                printf("second:%i  %i\n\n", preferences[j][k], preferences[k][j]);
-                pairs[i].winner = k;
-                pairs[i].loser = j;
+                pairs[p].winner = j;
+                pairs[p].loser = i;
+                p++;
             }
         }
     }
+
     return;
 }
 
