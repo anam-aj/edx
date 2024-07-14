@@ -6,11 +6,11 @@
 #include <stdlib.h>
 #include <string.h>
 
-int preferences[9][9];
+
 
 int main(void)
 {
-    int preferences[9][9];
+    int preferences[8][8];
 
     for (int i = 0; i < 9; i++)
     {
