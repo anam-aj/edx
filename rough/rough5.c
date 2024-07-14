@@ -10,9 +10,17 @@ int main(void)
 {
     int list[6] = {2,5,4,1,9,6};
 
-    for (int i = 1; i < 6; i++)
+    for (int i = 0; i < 6; i++)
     {
-        for (int j = 1; j < 6; j++)
+        printf("%i, ", list[i]);
+    }
+    printf("\n");
+
+
+
+    for (int i = 0; i < 6; i++)
+    {
+        for (int j = 0; j < 6; j++)
         {
             if (list[i] < list[i + 1])
             {
@@ -24,7 +32,9 @@ int main(void)
 
     }
 
-    for (int i = 1; i < 6; i++)
+    
+
+    for (int i = 0; i < 6; i++)
     {
         printf("%i, ", list[i]);
     }
