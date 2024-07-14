@@ -159,6 +159,16 @@ void record_preferences(int ranks[])
 void add_pairs(void)
 {
     // TODO
+
+    for (int i = 0; i < MAX; i++)
+    {
+        for (int j = 0; j < MAX; j++)
+        {
+            printf("%i ", preferences[i][j]);
+        }
+        printf("\n");
+    }
+
     int maxpairs = (candidate_count * (candidate_count - 1)) / 2;
     for (int i = 0; i < maxpairs; i++)
     {
@@ -166,7 +176,7 @@ void add_pairs(void)
         {
             for (int k = j + 1; k < candidate_count; k++)
             {
-                printf("first:%i , second:%i/\n\n", preferences[j][k], preferences[k][j]);
+                //printf("first:%i , second:%i/\n\n", preferences[j][k], preferences[k][j]);
                 if (preferences[j][k] > preferences[k][j])
                 {
                     pairs[i].winner = j;
