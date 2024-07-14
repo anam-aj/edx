@@ -18,12 +18,17 @@ int main(void)
             {
                 int temp = list[i];
                 list[i] = list[i + 1];
-                list[i + 1] = temp
+                list[i + 1] = temp;
             }
         }
 
     }
 
+    for (int i = 1; i < 6; i++)
+    {
+        printf("%i, ", list[i]);
+    }
+    printf("\n");
 
 
 }
