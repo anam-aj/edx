@@ -9,8 +9,13 @@
 int main(void)
 {
     int preferences[9][9];
+    for (int i = 0; i < 9; i++)
+    {
+        for (int j = 0; j < 9; j++)
+        {
+            printf("%i ", preferences[i][j]);
+        }
+        printf("\n");
+    }
 
-    int a = preferences[3][1];
-
-    printf("%i\n", a);
 }
