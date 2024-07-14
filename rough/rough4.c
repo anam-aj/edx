@@ -170,6 +170,9 @@ void add_pairs(void)
     }
 
     int maxpairs = (candidate_count * (candidate_count - 1)) / 2;
+    printf("candidatecount: %i\n", candidate_count);
+    printf("maxpairs: %i\n", maxpairs);
+
     for (int i = 0; i < maxpairs; i++)
     {
         printf("pair : %i----------------\n", i);
