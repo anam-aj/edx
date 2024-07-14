@@ -187,7 +187,7 @@ void sort_pairs(void)
 {
     // TODO
     // Bubble sort
-    int maxpairs = (candidate_count * (candidate_count - 1)) / 2;
+    //int maxpairs = (candidate_count * (candidate_count - 1)) / 2;
 
     for (int j = 0; j < maxpairs - 1; j++)
     {
