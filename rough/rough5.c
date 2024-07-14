@@ -8,18 +8,12 @@
 
 int main(void)
 {
-    string a[3] = {"abc","xyz","pqr"};
+    int list[6] = {2,5,4,1,9,6};
 
-
-    //a[2] = {"abc","xyz","pqr"};
-    //printf("%i\n", a);
-
-    char b = a[1][1];
-    printf("%c\n", b);
-
-    a[1][1] = 'a';
-    //printf("%s\n", a[1]);
-
+    for (int i = 1; i < 6; i++)
+    {
+        if
+    }
 
 
 
