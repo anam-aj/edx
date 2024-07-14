@@ -143,6 +143,16 @@ void record_preferences(int ranks[])
     {
         for (int j = 0; j < candidate_count; j++)
         {
+            int id = 0;
+            for (int k = 0; k < i ; k++)
+            {
+                if (j == ranks[k])
+                {
+                    printf("break\n");
+                    id = 1;
+                    break;
+                }
+            }
 
             printf("i=%i  j=%i\n", i, j);
             for (int x = 0; x < 9; x++)
@@ -155,17 +165,6 @@ void record_preferences(int ranks[])
                 }
                 printf("\n");
 
-
-            int id = 0;
-            for (int k = 0; k < i ; k++)
-            {
-                if (j == ranks[k])
-                {
-                    printf("break\n");
-                    id = 1;
-                    break;
-                }
-            }
             if (id == 1)
             {
                 break;
