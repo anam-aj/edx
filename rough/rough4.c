@@ -187,16 +187,13 @@ void sort_pairs(void)
 {
     // TODO
     // Bubble sort
-    //int maxpairs = (candidate_count * (candidate_count - 1)) / 2;
-
-    int strength;
-
     int p = pair_count;
-    for (int j = 0; j < pair_count; j++)
+    for (int j = 0; j < pair_count - 1; j++)
     {
         for (int i = 0; i < p - 1; i++)
         {
-            if (pairs[i].winner < pairs[i + 1].winner)
+            if (preferences[pairs[i].winner][pairs[i].loser]
+              < preferences[pairs[i + 1].winner][pairs[i + 1].loser])
             {
                 pair temp;
                 temp.winner = pairs[i].winner;
@@ -209,7 +206,7 @@ void sort_pairs(void)
                 pairs[i + 1].loser = temp.loser;
             }
         }
-        //p--;
+        p--;
     }
 
     return;
@@ -219,9 +216,24 @@ void sort_pairs(void)
 void lock_pairs(void)
 {
     // TODO
-    int maxpairs = (candidate_count * (candidate_count - 1)) / 2;
-    for (int i = 0; i < maxpairs; i++)
+    //int maxpairs = (candidate_count * (candidate_count - 1)) / 2;
+    for (int i = 0; i < pair_count; i++)
     {
+        int w = check_loop(pairs[i].winner);
+        int l = pairs[i].loser;
+        printf("%i--%i\n", w, l);
+
+        for (int i = 0; i < candidate_count; i++)
+        {
+            for (int j = 0; j < candidate_count; j++)
+            {
+                printf("%i ", locked[i][j]);
+            }
+            printf("\n");
+        }
+        printf("\n\n");
+
+
         if (check_loop(pairs[i].winner) == 0)
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
@@ -268,5 +280,6 @@ int check_loop(int win)
             }
         }
     }
+
     return 0;
 }
