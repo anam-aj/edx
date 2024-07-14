@@ -144,6 +144,7 @@ void record_preferences(int ranks[])
         for (int j = 0; j < candidate_count; j++)
         {
 
+            printf("i=%i  j=%i\n", i, j);
             for (int x = 0; x < 9; x++)
                 {
                     for (int y = 0; y < 9; y++)
