@@ -191,7 +191,7 @@ void sort_pairs(void)
     int p = pair_count;
     for (int j = 0; j < pair_count; j++)
     {
-        for (int i = 0; i < p; i++)
+        for (int i = 0; i < p - 1; i++)
         {
             if (pairs[i].winner < pairs[i + 1].winner)
             {

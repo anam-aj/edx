@@ -22,11 +22,11 @@ int main(void)
     {
         for (int j = 0; j < 6 - 1; j++)
         {
-            if (list[i] < list[i + 1])
+            if (list[j] < list[j + 1])
             {
-                int temp = list[i];
-                list[i] = list[i + 1];
-                list[i + 1] = temp;
+                int temp = list[j];
+                list[j] = list[j + 1];
+                list[j + 1] = temp;
             }
         }
 
