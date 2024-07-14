@@ -8,37 +8,9 @@
 
 int main(void)
 {
-    int list[6] = {20,5,47,1,9,6};
+    bool x = true;
+    bool y = false;
 
-    for (int i = 0; i < 6; i++)
-    {
-        printf("%i, ", list[i]);
-    }
-    printf("\n");
-
-
-
-    for (int i = 0; i < 6; i++)
-    {
-        for (int j = 0; j < 6 - 1; j++)
-        {
-            if (list[j] < list[j + 1])
-            {
-                int temp = list[j];
-                list[j] = list[j + 1];
-                list[j + 1] = temp;
-            }
-        }
-
-    }
-
-
-
-    for (int i = 0; i < 6; i++)
-    {
-        printf("%i, ", list[i]);
-    }
-    printf("\n");
-
-
+    printf("%s\n", x);
+    printf("%s\n", y);
 }
