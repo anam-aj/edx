@@ -179,12 +179,14 @@ void add_pairs(void)
                 //printf("first:%i , second:%i/\n\n", preferences[j][k], preferences[k][j]);
                 if (preferences[j][k] > preferences[k][j])
                 {
+                    printf("first:%i  %i/\n\n", preferences[j][k], preferences[k][j]);
                     pairs[i].winner = j;
                     pairs[i].loser = k;
                 }
 
                 else if (preferences[j][k] < preferences[k][j])
                 {
+                    printf("first:%i  %i/\n\n", preferences[j][k], preferences[k][j]);
                     pairs[i].winner = k;
                     pairs[i].loser = j;
                 }
