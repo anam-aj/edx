@@ -159,10 +159,10 @@ void record_preferences(int ranks[])
 void add_pairs(void)
 {
     // TODO
-    int maxpairs = (candidate_count * (candidate_count - 1)) / 2;
-    for (int i = 0; i < maxpairs; i++)
+    //int maxpairs = (candidate_count * (candidate_count - 1)) / 2;
+    for (int i = 0; i < candidate_count; i++)
     {
-        for (int j = i + 1 ; j < maxpairs; j++)
+        for (int j = i + 1 ; j < candidate_count; j++)
         {
             if (preferences[i][j] > preferences[j][i])
             {
@@ -177,7 +177,7 @@ void add_pairs(void)
             }
         }
     }
-    
+
     return;
 }
 
