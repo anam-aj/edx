@@ -142,10 +142,12 @@ void record_preferences(int ranks[])
                     break;
                 }
             }
+
             if (id == 1)
             {
                 continue;
             }
+            
             else
             {
                 preferences[i][j]++;
