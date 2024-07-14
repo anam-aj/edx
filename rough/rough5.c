@@ -12,7 +12,16 @@ int main(void)
 
     for (int i = 1; i < 6; i++)
     {
-        if
+        for (int j = 1; j < 6; j++)
+        {
+            if (list[i] < list[i + 1])
+            {
+                int temp = list[i];
+                list[i] = list[i + 1];
+                list[i + 1] = temp
+            }
+        }
+
     }
 
 
