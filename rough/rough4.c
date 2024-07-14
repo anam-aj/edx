@@ -158,7 +158,7 @@ void record_preferences(int ranks[])
             //}
             //else
             //{
-                preferences[i][j]++;
+                preferences[ranks[i]][j]++;
 
                 for (int k = 0; k < 9; k++)
                 {
