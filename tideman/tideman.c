@@ -206,7 +206,7 @@ void sort_pairs(void)
                 pairs[i + 1].loser = temp.loser;
             }
         }
-        maxpairs--;
+        pair_count--;
     }
 
     return;
