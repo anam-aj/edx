@@ -154,6 +154,8 @@ void record_preferences(int ranks[])
                 }
             }
 
+
+
             printf("i=%i  j=%i\n", i, j);
             for (int x = 0; x < 9; x++)
                 {
@@ -164,6 +166,8 @@ void record_preferences(int ranks[])
                     printf("\n");
                 }
                 printf("\n");
+
+
 
             if (id == 1)
             {
@@ -176,6 +180,8 @@ void record_preferences(int ranks[])
                 preferences[ranks[i]][j]++;
             }
 
+
+
             printf("i=%i  j=%i\n", i, j);
             printf("ranks[i]:%i  j:%i \n", ranks[i], j);
             for (int x = 0; x < 9; x++)
@@ -187,6 +193,10 @@ void record_preferences(int ranks[])
                     printf("\n");
                 }
                 printf("\n");
+
+
+
+                
         }
     }
 
