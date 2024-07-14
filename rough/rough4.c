@@ -167,8 +167,8 @@ void record_preferences(int ranks[])
 
             if (id == 1)
             {
-                printf("break2\n");
-                break;
+                printf("continue\n");
+                continue;
             }
 
             if (ranks[i] != j)
