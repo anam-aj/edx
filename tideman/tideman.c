@@ -176,7 +176,7 @@ void add_pairs(void)
             {
                 pairs[p].winner = j;
                 pairs[p].loser = i;
-                p++
+                p++;
             }
         }
     }
