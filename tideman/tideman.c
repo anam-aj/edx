@@ -222,8 +222,15 @@ void lock_pairs(void)
         int w = check_loop(pairs[i].winner);
         int l = pairs[i].loser;
         printf("%i--%i\n", w, l);
+        for (int i = 0; i < candidate_count; i++)
+        {
+            for (int j = 0; j < candidate_count; j++)
+            {
+                locked[i][j] = false;
+            }
+        }
 
-        
+
         if (check_loop(pairs[i].winner) == 0)
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
