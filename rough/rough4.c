@@ -217,11 +217,11 @@ void lock_pairs(void)
 {
     // TODO
     //int maxpairs = (candidate_count * (candidate_count - 1)) / 2;
-    for (int n1 = 0; n1 < pair_count; n1++)
-    {
-        printf("w-%i  l-%i\n", pairs[n1].winner, pairs[n1].loser);
-    }
-    printf("\n\n");
+    //for (int n1 = 0; n1 < pair_count; n1++)
+    //{
+        //printf("w-%i  l-%i\n", pairs[n1].winner, pairs[n1].loser);
+    //}
+    //printf("\n\n");
 
 
     for (int i = 0; i < pair_count; i++)
