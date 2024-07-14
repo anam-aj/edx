@@ -193,7 +193,7 @@ void sort_pairs(void)
     {
         for (int i = 0; i < p - 1; i++)
         {
-            if (pairs[i].winner < pairs[i + 1].winner)
+            if (preference[pairs[i].winner][pairs[i].loser] < preference[pairs[i + 1].winner])
             {
                 pair temp;
                 temp.winner = pairs[i].winner;
