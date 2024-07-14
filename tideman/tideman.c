@@ -188,10 +188,10 @@ void sort_pairs(void)
     // TODO
     // Bubble sort
     //int maxpairs = (candidate_count * (candidate_count - 1)) / 2;
-    int p = pair_count
-    for (int j = 0; j < pair_count - 1; j++)
+    int p = pair_count;
+    for (int j = 0; j < p - 1; j++)
     {
-        for (int i = 0; i < pair_count - 1; i++)
+        for (int i = 0; i < p - 1; i++)
         {
             if (pairs[i].winner < pairs[i + 1].winner)
             {
@@ -206,7 +206,7 @@ void sort_pairs(void)
                 pairs[i + 1].loser = temp.loser;
             }
         }
-        pair_count--;
+        p--;
     }
 
     return;
