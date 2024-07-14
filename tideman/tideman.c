@@ -159,7 +159,7 @@ void record_preferences(int ranks[])
 void add_pairs(void)
 {
     // TODO
-    int maxpairs = MAX * (MAX - 1) / 2;
+    int maxpairs = (candidate_count * (candidate_count - 1)) / 2;
     for (int i = 0; i < maxpairs; i++)
     {
         for (int j = 0; j < candidate_count; j++)

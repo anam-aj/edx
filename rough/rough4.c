@@ -72,16 +72,6 @@ int main(int argc, string argv[])
         //}
     //}
 
-    for (int i = 0; i < 9; i++)
-    {
-        for (int j = 0; j < 9; j++)
-        {
-            printf("%i ", preferences[i][j]);
-        }
-        printf("\n");
-    }
-
-
     pair_count = 0;
     int voter_count = get_int("Number of voters: ");
 
@@ -135,10 +125,7 @@ bool vote(int rank, string name, int ranks[])
 // Update preferences given one voter's ranks
 void record_preferences(int ranks[])
 {
-    // TODO
-
-
-
+    // TODO - holy duck it was hard as duck
     for (int i = 0; i < candidate_count; i++)
     {
         for (int j = 0; j < candidate_count; j++)
@@ -148,55 +135,20 @@ void record_preferences(int ranks[])
             {
                 if (j == ranks[k])
                 {
-                    printf("break1\n");
                     id = 1;
                     break;
                 }
             }
 
-
-
-            printf("i=%i  j=%i\n", i, j);
-            for (int x = 0; x < 9; x++)
-                {
-                    for (int y = 0; y < 9; y++)
-                    {
-                        printf("%i ", preferences[x][y]);
-                    }
-                    printf("\n");
-                }
-                printf("\n");
-
-
-
             if (id == 1)
             {
-                printf("continue\n");
                 continue;
             }
 
-            if (ranks[i] != j)
+            else if (ranks[i] != j)
             {
                 preferences[ranks[i]][j]++;
             }
-
-
-
-            printf("i=%i  j=%i\n", i, j);
-            printf("ranks[i]:%i  j:%i \n", ranks[i], j);
-            for (int x = 0; x < 9; x++)
-                {
-                    for (int y = 0; y < 9; y++)
-                    {
-                        printf("%i ", preferences[x][y]);
-                    }
-                    printf("\n");
-                }
-                printf("\n");
-
-
-
-                
         }
     }
 
@@ -214,6 +166,7 @@ void add_pairs(void)
         {
             for (int k = j + 1; k < candidate_count; k++)
             {
+                printf()
                 if (preferences[j][k] > preferences[k][j])
                 {
                     pairs[i].winner = j;
