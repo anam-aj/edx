@@ -171,6 +171,7 @@ void add_pairs(void)
                 pairs[p].winner = i;
                 pairs[p].loser = j;
                 p++;
+                printf("winner1: %i loser1: %i\n\n", i, j);
             }
 
             else if (preferences[i][j] < preferences[j][i])
@@ -178,6 +179,7 @@ void add_pairs(void)
                 pairs[p].winner = j;
                 pairs[p].loser = i;
                 p++;
+                printf("winner2: %i loser2: %i\n\n", j, i);
             }
         }
     }
