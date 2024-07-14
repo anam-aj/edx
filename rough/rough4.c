@@ -166,7 +166,7 @@ void add_pairs(void)
         {
             for (int k = j + 1; k < candidate_count; k++)
             {
-                printf()
+                printf("first:%i , second:%i/,", preferences[j][k], preferences[k][j]);
                 if (preferences[j][k] > preferences[k][j])
                 {
                     pairs[i].winner = j;
