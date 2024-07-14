@@ -265,5 +265,6 @@ int check_loop(int win)
             }
         }
     }
+    
     return 0;
 }
