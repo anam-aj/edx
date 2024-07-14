@@ -244,7 +244,7 @@ void lock_pairs(void)
 
         int r = check_loop(pairs[i].winner);
         //int t = pairs[i].loser;
-        printf("%i--\n", r);
+        printf("%i----\n", r);
 
         for (int x = 0; x < candidate_count; x++)
         {
