@@ -241,7 +241,7 @@ void lock_pairs(void)
         }
 
 
-
+        printf("w:%i  l:%i\n", pairs[i].winner, pairs[i].loser);
         int r = check_loop(pairs[i].winner);
         //int t = pairs[i].loser;
         printf("%i----\n", r);
