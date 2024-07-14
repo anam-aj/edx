@@ -144,11 +144,11 @@ void record_preferences(int ranks[])
         for (int j = 0; j < candidate_count; j++)
         {
 
-            for (int k = 0; k < 9; k++)
+            for (int x = 0; x < 9; x++)
                 {
-                    for (int l = 0; l < 9; l++)
+                    for (int y = 0; y < 9; y++)
                     {
-                        printf("%i ", preferences[k][l]);
+                        printf("%i ", preferences[x][y]);
                     }
                     printf("\n");
                 }
