@@ -6,6 +6,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+int preferences[9][9];
+
 int main(void)
 {
     int preferences[9][9];
