@@ -159,27 +159,22 @@ void record_preferences(int ranks[])
 void add_pairs(void)
 {
     // TODO
-    //int maxpairs = (candidate_count * (candidate_count - 1)) / 2;
-    int p = 0;
     for (int i = 0; i < candidate_count; i++)
     {
         for (int j = i + 1 ; j < candidate_count; j++)
         {
-            printf("p is %i, i,j : %i,%i\n", p, i, j);
             if (preferences[i][j] > preferences[j][i])
             {
-                pairs[p].winner = i;
-                pairs[p].loser = j;
-                p++;
-                printf("winner1: %i loser1: %i\n\n", i, j);
+                pairs[pair_count].winner = i;
+                pairs[pair_count].loser = j;
+                pair_count++;
             }
 
             else if (preferences[i][j] < preferences[j][i])
             {
-                pairs[p].winner = j;
-                pairs[p].loser = i;
-                p++;
-                printf("winner2: %i loser2: %i\n\n", j, i);
+                pairs[pair_count].winner = j;
+                pairs[pair_count].loser = i;
+                pair_count++;
             }
         }
     }
@@ -192,11 +187,18 @@ void sort_pairs(void)
 {
     // TODO
     // Bubble sort
-    int maxpairs = (candidate_count * (candidate_count - 1)) / 2;
+    //int maxpairs = (candidate_count * (candidate_count - 1)) / 2;
 
-    for (int j = 0; j < maxpairs - 1; j++)
+    for (int c = 0; c < pair_count; c++)
+    (
+        
+    )
+
+
+    int p = pair_count;
+    for (int j = 0; j < pair_count; j++)
     {
-        for (int i = 0; i < maxpairs - 1; i++)
+        for (int i = 0; i < p - 1; i++)
         {
             if (pairs[i].winner < pairs[i + 1].winner)
             {
@@ -211,7 +213,7 @@ void sort_pairs(void)
                 pairs[i + 1].loser = temp.loser;
             }
         }
-        maxpairs--;
+        //p--;
     }
 
     return;
