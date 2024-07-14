@@ -13,5 +13,5 @@
                 break;
             }
 
-            else if (i != j)
+            else if (rank[i] != j)
             {
