@@ -8,7 +8,7 @@
 
 int main(void)
 {
-    int list[6] = {2,5,4,1,9,6};
+    int list[6] = {20,5,47,1,9,6};
 
     for (int i = 0; i < 6; i++)
     {
