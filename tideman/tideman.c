@@ -32,7 +32,7 @@ void add_pairs(void);
 void sort_pairs(void);
 void lock_pairs(void);
 void print_winner(void);
-int check_loop(int win, int pair_number);
+int check_loop(int pair_number);
 
 int main(int argc, string argv[])
 {
