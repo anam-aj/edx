@@ -32,7 +32,7 @@ void add_pairs(void);
 void sort_pairs(void);
 void lock_pairs(void);
 void print_winner(void);
-int check_loop(int win);
+int check_loop(int winner_index, int pair_number);
 
 int main(int argc, string argv[])
 {
@@ -217,52 +217,12 @@ void lock_pairs(void)
 {
     // TODO
     //int maxpairs = (candidate_count * (candidate_count - 1)) / 2;
-    //for (int n1 = 0; n1 < pair_count; n1++)
-    //{
-        //printf("w-%i  l-%i\n", pairs[n1].winner, pairs[n1].loser);
-    //}
-    //printf("\n\n");
-
-
     for (int i = 0; i < pair_count; i++)
     {
-        int w = check_loop(pairs[i].winner);
-        //int l = pairs[i].loser;
-        printf("%i--\n", w);
-
-        for (int x = 0; x < candidate_count; x++)
-        {
-            for (int y = 0; y < candidate_count; y++)
-            {
-                printf("%i ", locked[x][y]);
-            }
-            printf("\n");
-        }
-        printf("\n\n");
-        printf("w:%i  l:%i\n", pairs[i].winner, pairs[i].loser);
-
-
         if (check_loop(pairs[i].winner, i) == 0)
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
         }
-
-
-        printf("w:%i  l:%i\n", pairs[i].winner, pairs[i].loser);
-        //int t = check_loop(pairs[i].winner);
-        //int t = pairs[i].loser;
-        //printf("%i----\n", t);
-
-
-        for (int v = 0; v < candidate_count; v++)
-        {
-            for (int vv = 0; vv < candidate_count; vv++)
-            {
-                printf("%i ", locked[v][vv]);
-            }
-            printf("\n");
-        }
-        printf("\n\n\n\n");
     }
 
     return;
@@ -272,36 +232,46 @@ void lock_pairs(void)
 void print_winner(void)
 {
     // TODO
-
+    int check = 0;
     for (int i = 0; i < candidate_count; i++)
     {
         for (int j = 0; j < candidate_count; j++)
         {
             if (locked[i][j] == true)
             {
+                check = 1;
                 break;
             }
         }
 
-        printf("%s\n", candidates[i]);
+        if (check == 1)
+        {
+            continue;
+        }
+        else
+        {
+            printf("%s\n", candidates[i]);
+            break;
+        }
     }
+
     return;
 }
 
-int check_loop(int win, int pp)
+int check_loop(int winner_index, int pair_number)
 {
     for (int i = 0; i < candidate_count; i++)
     {
-        if (locked[i][pairs[win].winner] == true)
+        if (locked[i][winner_index] == true)
         {
-            if (i == pairs[win].loser)
+            if (i == pairs[pair_number].loser)
             {
                 return (-1);
             }
 
             else
             {
-                return (check_loop(i));
+                return (check_loop(i, pair_number));
             }
         }
     }
