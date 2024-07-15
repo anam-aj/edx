@@ -254,14 +254,14 @@ int check_loop(int win, int pair_number)
     {
         if (locked[i][pairs[win].winner] == true)
         {
-            if (i == pairs[win].loser)
+            if (i == pairs[pair_number].loser)
             {
                 return (-1);
             }
 
             else
             {
-                return (check_loop(i));
+                return (check_loop(i, pair_number));
             }
         }
     }
