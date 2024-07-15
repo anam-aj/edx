@@ -248,7 +248,7 @@ void print_winner(void)
     return;
 }
 
-int check_loop(int pair_number)
+int check_loop(int win, int pair_number)
 {
     for (int i = 0; i < candidate_count; i++)
     {
