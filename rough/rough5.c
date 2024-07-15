@@ -6,8 +6,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-//#define MAX 9
-//bool locked[MAX][MAX];
+#define MAX 9
+bool locked[MAX][MAX];
 
 int main(void)
 {
