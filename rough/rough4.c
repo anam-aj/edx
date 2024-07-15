@@ -253,15 +253,16 @@ void lock_pairs(void)
         //int t = pairs[i].loser;
         printf("%i----\n", t);
 
-        for (int v = 0; v < candidate_count; v++)
-        {
-            for (int vv = 0; vv < candidate_count; vv++)
-            {
-                printf("%i ", locked[v][vv]);
-            }
-            printf("\n");
-        }
-        printf("\n\n\n\n");
+
+        //for (int v = 0; v < candidate_count; v++)
+        //{
+            //for (int vv = 0; vv < candidate_count; vv++)
+            //{
+                //printf("%i ", locked[v][vv]);
+            //}
+            //printf("\n");
+        //}
+        //printf("\n\n\n\n");
     }
 
     return;
