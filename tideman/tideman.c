@@ -255,7 +255,7 @@ void print_winner(void)
         }
     }
 
-    return;
+    //return;
 }
 
 int check_loop(int winner_index, int pair_number)
