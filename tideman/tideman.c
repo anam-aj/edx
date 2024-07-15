@@ -233,19 +233,20 @@ void print_winner(void)
 {
     // TODO
 
-    for (int i = 0; i < candidate_count; i++)
-    {
-        for (int j = 0; j < candidate_count; j++)
-        {
-            printf("%i", locked[i][j]);
-        }
-        printf("\n");
-    }
+    //for (int i = 0; i < candidate_count; i++)
+    //{
+        //for (int j = 0; j < candidate_count; j++)
+        //{
+            //printf("%i", locked[i][j]);
+        //}
+        //printf("\n");
+    //}
 
 
-    int check = 0;
+
     for (int i = 0; i < candidate_count; i++)
     {
+        int check = 0;
         for (int j = 0; j < candidate_count; j++)
         {
             if (locked[j][i] == true)
