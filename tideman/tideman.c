@@ -232,6 +232,8 @@ void lock_pairs(void)
 void print_winner(void)
 {
     // TODO
+
+    
     int check = 0;
     for (int i = 0; i < candidate_count; i++)
     {
