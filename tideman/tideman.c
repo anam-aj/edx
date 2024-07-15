@@ -248,12 +248,12 @@ void print_winner(void)
         {
             continue;
         }
+
         else
         {
             printf("%s\n", candidates[i]);
         }
     }
-    printf("\n");
 
     return;
 }
