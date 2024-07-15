@@ -6,11 +6,17 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define MAX 9
+bool locked[MAX][MAX];
+
 int main(void)
 {
-    bool x = true;
-    bool y = false;
-
-    printf("%s\n", x);
-    printf("%s\n", y);
+    // Clear graph of locked in pairs
+    for (int i = 0; i < candidate_count; i++)
+    {
+        for (int j = 0; j < candidate_count; j++)
+        {
+            locked[i][j] = false;
+        }
+    }
 }
