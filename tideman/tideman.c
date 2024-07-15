@@ -251,11 +251,11 @@ void print_winner(void)
         else
         {
             printf("%s\n", candidates[i]);
-            return;
         }
     }
+    printf("\n");
 
-    //return;
+    return;
 }
 
 int check_loop(int winner_index, int pair_number)
