@@ -106,7 +106,7 @@ bool vote(int rank, string name, int ranks[])
         // Checks if entered name id valid candidate
         if (strcmp(name, candidates[i]) == 0)
         {
-            // Assign elements to array rank, according to voter preference
+            // Assign elements to array rank, according to voter's preference
             ranks[rank] = i;
             return true;
         }
@@ -122,6 +122,7 @@ void record_preferences(int ranks[])
     {
         for (int j = 0; j < candidate_count; j++)
         {
+            // Checks priority of candidate as per voters choice
             int id = 0;
             for (int k = 0; k < i ; k++)
             {
@@ -132,11 +133,14 @@ void record_preferences(int ranks[])
                 }
             }
 
+            // Skips the vote if candidate "ranks[i]" is not preferred over "j"
+            // "ranks[i]" is index of candidate at index i of array ranks
             if (id == 1)
             {
                 continue;
             }
 
+            // Adds vote if candidate "ranks[i]" is preferred over "j"
             else if (ranks[i] != j)
             {
                 preferences[ranks[i]][j]++;
@@ -208,7 +212,6 @@ void sort_pairs(void)
 void lock_pairs(void)
 {
     // TODO
-    //int maxpairs = (candidate_count * (candidate_count - 1)) / 2;
     for (int i = 0; i < pair_count; i++)
     {
         if (check_loop(pairs[i].winner, i) == 0)
@@ -227,6 +230,7 @@ void print_winner(void)
 
     for (int i = 0; i < candidate_count; i++)
     {
+        // Checks if any other candidate is locked over candidate i
         int check = 0;
         for (int j = 0; j < candidate_count; j++)
         {
@@ -242,6 +246,7 @@ void print_winner(void)
             continue;
         }
 
+        // Print winner(s)
         else
         {
             printf("%s\n", candidates[i]);
@@ -251,6 +256,8 @@ void print_winner(void)
     return;
 }
 
+// Checks if pair having "wiiner_index" as winner will create loop
+// Return -1 if it creates loop, otherwise return 0
 // Yay ! finally used recursive function
 int check_loop(int winner_index, int pair_number)
 {
@@ -265,6 +272,7 @@ int check_loop(int winner_index, int pair_number)
 
             else
             {
+                // recursion  :-)
                 return (check_loop(i, pair_number));
             }
         }
