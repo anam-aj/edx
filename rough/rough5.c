@@ -20,4 +20,13 @@ int main(void)
             locked[i][j] = false;
         }
     }
+
+
+    for (int v = 0; v < 3; v++)
+    {
+        for (int vv = 0; vv < 3; vv++)
+        {
+            printf("%i ", locked[v][vv]);
+        }
+    }
 }
