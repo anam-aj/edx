@@ -28,5 +28,6 @@ int main(void)
         {
             printf("%i ", locked[v][vv]);
         }
+        printf("\n");
     }
 }
