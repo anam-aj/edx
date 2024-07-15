@@ -251,6 +251,7 @@ void print_winner(void)
         else
         {
             printf("%s\n", candidates[i]);
+            return;
         }
     }
 
