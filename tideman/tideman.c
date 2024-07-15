@@ -261,7 +261,7 @@ int check_loop(int winner_index, int pair_number)
 
             else
             {
-                return (check_loop(pair_number));
+                return (check_loop(i, pair_number));
             }
         }
     }
