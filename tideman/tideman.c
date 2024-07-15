@@ -64,14 +64,6 @@ int main(int argc, string argv[])
         }
     }
 
-    //for (int i = 0; i < MAX; i++)
-    //{
-        //for (int j = 0; j < MAX; j++)
-        //{
-            //preferences[i][j] = 0;
-        //}
-    //}
-
     pair_count = 0;
     int voter_count = get_int("Number of voters: ");
 
