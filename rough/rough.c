@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <cs50.h>
+#include <ctype.h>
 
 int main(void)
 {
@@ -9,7 +10,7 @@ int main(void)
     printf("%c \n", s1[1]);
     printf("%c \n", s2[1]);
 
-    s1[1] = 'x';
+    //s1[1] = 'x';
     s2[1] = 'x';
 
     printf("%c \n", s1[1]);
