@@ -15,9 +15,9 @@ int main(void)
     printf("x is %i  y is %i\n", x, y);
 }
 
-void swap(int *a, int *b)
+void swap(int *q, int *r)
 {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
+    int temp = *q;
+    *q = *r;
+    *q = temp;
 }
