@@ -14,6 +14,8 @@ int main(void)
     //swap(a, b);
     printf("x is %p \n", &x);
     printf("x is %p \n", a);
+    printf("x is %i \n", *&x);
+    printf("x is %i \n", *a);
 }
 
 //void swap(int *q, int *r)
