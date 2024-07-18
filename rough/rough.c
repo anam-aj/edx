@@ -19,5 +19,5 @@ void swap(int *q, int *r)
 {
     int temp = *q;
     *q = *r;
-    *q = temp;
+    *r = temp;
 }
