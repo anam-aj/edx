@@ -9,7 +9,7 @@ int main(void)
     int x = 10;
     //int y = 112;
 
-    int a = &x;
+    //int a = &x;
     //int *b = &y;
     //swap(a, b);
     printf("x is %i \n", *&x);
