@@ -10,7 +10,7 @@ int main(void)
     int y = 112;
 
     int* a = &x;
-    int *b = &y;
+    int* b = &y;
     swap(a, b);
     printf("x is %i  y is %i\n", x, y);
 }
