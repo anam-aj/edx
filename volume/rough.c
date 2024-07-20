@@ -8,13 +8,13 @@ int main(void)
 {
     FILE *ptr = fopen("volume.c", "r");
 
-    char ch1 = fgetc(ptr);
+    //char ch1 = fgetc(ptr);
 
-    printf("%c\n", ch1);
+    printf("%c\n", fgetc(ptr));
 
-    char ch2 = fgetc(ptr);
+    //char ch2 = fgetc(ptr);
 
-    printf("%c\n", ch2);
+    //printf("%c\n", ch2);
 
     fclose(ptr);
 }
