@@ -6,16 +6,16 @@
 
 int main(void)
 {
-    int x = 10;
+    char x = -12;
     //int y = 112;
 
-    int *a = &x;
+    //int *a = &x;
     //int *b = &y;
     //swap(a, b);
-    printf("x is %p \n", &x);
-    printf("x is %p \n", a);
-    printf("x is %i \n", *&x);
-    printf("x is %i \n", *a);
+    printf("x is %c \n", x);
+    //printf("x is %p \n", a);
+    //printf("x is %i \n", *&x);
+   // printf("x is %i \n", *a);
 }
 
 //void swap(int *q, int *r)
