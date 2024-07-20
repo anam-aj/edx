@@ -12,5 +12,9 @@ int main(void)
 
     printf("%c\n", ch1);
 
+    char ch2 = fgetc(ptr);
+
+    printf("%c\n", ch2);
+
     fclose(ptr);
 }
