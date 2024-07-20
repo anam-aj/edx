@@ -8,12 +8,14 @@ int main(void)
 {
     FILE *ptr = fopen("volume.c", "r");
 
-    for (int i = 1; i < 44; i++)
-    {
-        printf("%c,\n", fgetc(ptr));
-    }
+    while 
 
-    printf("\n");
+    //for (int i = 1; i < 44; i++)
+    //{
+        //printf("%c,\n", fgetc(ptr));
+    //}
+
+    //printf("\n");
 
     //char ch1 = fgetc(ptr);
 
