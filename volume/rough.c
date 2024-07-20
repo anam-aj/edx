@@ -8,7 +8,8 @@ int main(void)
 {
     FILE *ptr = fopen("volume.c", "r");
 
-    while (fgetc(ptr) != 'e')
+    char ch;
+    while ((ch = fgetc(ptr)) != 'e')
     {
         printf("%c,\n", fgetc(ptr));
     }
