@@ -11,7 +11,7 @@ int main(void)
     char ch;
     while ((ch = fgetc(ptr)) != 'e')
     {
-        printf("%c,\n", fgetc(ptr));
+        printf("%c,\n", ch);
     }
 
     //for (int i = 1; i < 44; i++)
