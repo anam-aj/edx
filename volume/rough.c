@@ -10,7 +10,7 @@ int main(void)
 
     for (int i = 1; i < 44; i++)
     {
-        printf("%c\n, ", fgetc(ptr));
+        printf("%c,\n", fgetc(ptr));
     }
 
     printf("\n");
