@@ -9,5 +9,5 @@
 
 int main(void)
 {
-    int i = 55.5;
+    int i = (int)55.5;
 }
