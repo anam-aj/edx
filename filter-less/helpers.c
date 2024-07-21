@@ -103,7 +103,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             int sum_Bl = 0;
             int sum_Gr = 0;
             int sum_Re = 0;
-            int count = 0;
+            float count = 0;
 
             // Add colour value of valid pixel from (i - 1)th row(Top)
             if (i - 1 >= 0)
