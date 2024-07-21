@@ -37,7 +37,8 @@ int main(int argc, char *argv[])
     char chr;
     for (int i = 0; i < 44; i++)
     {
-        
+        chr = 
+
     }
 
     // TODO: Read samples from input file and write updated data to output file
