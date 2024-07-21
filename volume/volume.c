@@ -43,8 +43,10 @@ int main(int argc, char *argv[])
 
     // TODO: Read samples from input file and write updated data to output file
     int16_t chr2;
+    int16_t chr3;
     while ((chr2 = fread(&chr2, sizeof(int16_t), 1, input)) != EOF)
     {
+        chr3 = 2 * 
         fwrite(&chr2, sizeof(int16_t), 1, output);
     }
 
