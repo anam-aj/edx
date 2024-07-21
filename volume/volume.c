@@ -40,9 +40,9 @@ int main(int argc, char *argv[])
         fread(&chr1, sizeof(char), 1, input);
         fwrite(&chr1, sizeof(char), 1, output);
     }
-    printf("\n");
 
     // TODO: Read samples from input file and write updated data to output file
+    while ()
 
     // Close files
     fclose(input);
