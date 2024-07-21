@@ -17,7 +17,7 @@ int main(void)
     for (int i = 0; i < 44; i++)
     {
 
-       chr = fread(&chr, sizeof(char), 1, pt);
+       chr = fgetc(pt);
        printf("%c,", chr);
 
     }
