@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
     char chr;
     for (int i = 0; i < 44; i++)
     {
-        chr = 
+        frea
 
     }
 
