@@ -38,6 +38,7 @@ int main(int argc, char *argv[])
     {
         char chr1;
         fread(&chr1, sizeof(char), 1, input);
+        
         fwrite(&chr1, sizeof(char), 1, output);
     }
 
@@ -46,7 +47,7 @@ int main(int argc, char *argv[])
     while (chr2 != EOF)
     {
         fread(&chr2, sizeof(int16_t), 1, input);
-        
+
         fwrite(&chr2, sizeof(int16_t), 1, output);
     }
 
