@@ -126,7 +126,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 }
 
                 // Top right
-                if (j + 1 >= 0)
+                if (j + 1 <= width)
                 {
                     sum_Bl += image[i - 1][j + 1].rgbtBlue;
                     sum_Gr += image[i - 1][j + 1].rgbtGreen;
@@ -154,7 +154,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
 
             // Right
-            if (j + 1 >= 0)
+            if (j + 1 <= width)
             {
                 sum_Bl += image[i][j + 1].rgbtBlue;
                 sum_Gr += image[i][j + 1].rgbtGreen;
@@ -163,7 +163,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
 
             // Add colour value of valid pixel from (i + 1)th row(bottom)
-            if (i + 1 >= 0)
+            if (i + 1 <= height)
             {
                 // Bottom left
                 if (j - 1 >= 0)
@@ -183,7 +183,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 }
 
                 // Bottom right
-                if (j + 1 >= 0)
+                if (j + 1 <= width)
                 {
                     sum_Bl += image[i + 1][j + 1].rgbtBlue;
                     sum_Gr += image[i + 1][j + 1].rgbtGreen;
