@@ -108,6 +108,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             // Add colour value of valid pixel from (i - 1)th row
             if (i - 1 >= 0)
             {
+                // Top left
                 if (j - 1 >= 0)
                 {
                     sum_Blue += image[i - 1][j - 1].rgbtBlue;
@@ -115,10 +116,12 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     sum_Red += image[i - 1][j - 1].rgbtRed;
                 }
 
+                // Top center
                 sum_Blue += image[i - 1][j].rgbtBlue;
                 sum_Green += image[i - 1][j].rgbtGreen;
                 sum_Red += image[i - 1][j].rgbtRed;
 
+                
                 if (j + 1 >= 0)
                 {
                     sum_Blue += image[i - 1][j + 1].rgbtBlue;
