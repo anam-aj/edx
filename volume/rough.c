@@ -16,18 +16,18 @@ int main(void)
     //char chr;
     for (int i = 0; i < 10; i++)
     {
-
-       char chr1 = fgetc(pt);
-       printf("%c,", chr1);
+        char chr1;
+        fread(&chr1, sizeof(char), 1, pt);
+        printf("%c,", chr1);
 
     }
     printf("\n");
 
     for (int i = 0; i < 10; i++)
     {
-
-       char chr1 = fgetc(pt);
-       printf("%c,", chr1);
+        char chr1;
+        fread(&chr1, sizeof(char), 1, pt);
+        printf("%c,", chr1);
 
     }
     printf("\n");
