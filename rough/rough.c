@@ -9,7 +9,8 @@
 
 int main(void)
 {
-
-    int i = 11 / 3;
-    printf("%i\n", i);
+    for (int i = 0, int j = 5; i < j; i++)
+    {
+        printf("%i\n", i);
+    }
 }
