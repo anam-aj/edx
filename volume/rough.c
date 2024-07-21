@@ -11,7 +11,7 @@ int main(void)
 {
 
     // TODO: Copy header from input file to output file
-    FILE* pt = fopen("input.wav", "r");
+    FILE *pt = fopen("input.wav", "r");
 
     char chr;
     for (int i = 0; i < 44; i++)
