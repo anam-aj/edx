@@ -53,6 +53,4 @@ int main(int argc, char *argv[])
     // Close files
     fclose(input);
     fclose(output);
-
-    return 0;
 }
