@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
     int16_t chr2;
     while ((chr2 = fread(&chr2, sizeof(int16_t), 1, input)) != EOF)
     {
-        
+        fwrite(&chr2, size0f(int16_t), 1, output);
     }
 
     // Close files
