@@ -14,20 +14,32 @@ int main(void)
     FILE *pt = fopen("input.wav", "r");
 
     //char chr;
-    for (int i = 0; i < 10; i++)
+
+    int i = 0;
+    while (i < 10)
     {
         char chr1;
         fread(&chr1, sizeof(char), 1, pt);
         printf("%c,", chr1);
+        i++;
+    }
 
+    while (i < 10)
+    {
+        char chr1;
+        fread(&chr1, sizeof(char), 1, pt);
+        printf("%c,", chr1);
+        i++;
     }
     printf("\n");
 
-    for (int i = 0; i < 10; i++)
+    i = 0;
+    while (i < 10)
     {
         char chr1;
         fread(&chr1, sizeof(char), 1, pt);
         printf("%c,", chr1);
+        i++;
 
     }
     printf("\n");
