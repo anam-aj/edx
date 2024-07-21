@@ -38,11 +38,12 @@ int main(int argc, char *argv[])
     for (int i = 0; i < 44; i++)
     {
         fread(&chr, sizeof(char), 1, input);
-        
-
+        fwrite(&chr, size0f(char), 1, output);
     }
 
     // TODO: Read samples from input file and write updated data to output file
+
+    while ()
 
     // Close files
     fclose(input);
