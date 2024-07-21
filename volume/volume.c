@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 
     // TODO: Copy header from input file to output file
     char chr;
-    for (int i = 0; i < 44; i++)
+    for (int i = 0; i < HEADER_SIZE; i++)
     {
         fread(&chr, sizeof(char), 1, input);
         fwrite(&chr, sizeof(char), 1, output);
