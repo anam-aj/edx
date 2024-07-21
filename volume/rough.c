@@ -13,16 +13,24 @@ int main(void)
     // TODO: Copy header from input file to output file
     FILE *pt = fopen("input.wav", "r");
 
-    char chr;
-    for (int i = 0; i < 44; i++)
+    //char chr;
+    for (int i = 0; i < 10; i++)
     {
 
-       chr = fgetc(pt);
-       printf("%c,", chr);
+       char chr1 = fgetc(pt);
+       printf("%c,", chr1);
 
     }
     printf("\n");
 
+    for (int i = 0; i < 10; i++)
+    {
+
+       char chr1 = fgetc(pt);
+       printf("%c,", chr1);
+
+    }
+    printf("\n");
     // TODO: Read samples from input file and write updated data to output file
     //int16_t chr2;
     //int16_t chr3;
