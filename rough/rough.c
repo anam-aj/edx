@@ -9,6 +9,7 @@
 
 int main(void)
 {
-    float i = 55.6;
-    int i = (int)55.5;
+
+    int i = 11 / 3;
+    printf("%i\n", i);
 }
