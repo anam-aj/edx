@@ -103,6 +103,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
             int sum = 0;
 
+            // Add valid pixel from (i - 1)th row
             if (i - 1 >= 0)
             {
                 if (j - 1 >= 0)
@@ -118,21 +119,20 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 }
             }
 
-            if (i >= 0)
+            // Add valid pixel from (i)th row
+            if (j - 1 >= 0)
             {
-                if (j - 1 >= 0)
-                {
-                    sum += image[i - 1][j - 1].rgbtBlue;
-                }
-
-                sum += image[i - 1][j].rgbtBlue;
-
-                if (j + 1 >= 0)
-                {
-                    sum += image[i - 1][j + 1].rgbtBlue;
-                }
+                sum += image[i - 1][j - 1].rgbtBlue;
             }
 
+            sum += image[i - 1][j].rgbtBlue;
+
+            if (j + 1 >= 0)
+            {
+                sum += image[i - 1][j + 1].rgbtBlue;
+            }
+
+            // Add valid pixel from (i + 1)th row
             if (i + 1 >= 0)
             {
                 if (j - 1 >= 0)
