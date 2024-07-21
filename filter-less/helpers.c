@@ -73,7 +73,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0, mid = width / 2; j < mid; j++)
         {
-            
+            int temp = image[i][j].rgbtBlue
         }
     }
     return;
