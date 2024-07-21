@@ -76,6 +76,8 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             int temp = image[i][j].rgbtBlue;
             image[i][j].rgbtBlue = image[i][(width - j)].rgbtBlue;
             image[i][(width - j)].rgbtBlue = temp;
+
+            
         }
     }
     return;
