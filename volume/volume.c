@@ -46,8 +46,8 @@ int main(int argc, char *argv[])
     int16_t chr3;
     while ((chr2 = fread(&chr2, sizeof(int16_t), 1, input)) != EOF)
     {
-        chr3 = 2 * 
-        fwrite(&chr2, sizeof(int16_t), 1, output);
+        chr3 = factor * chr2;
+        fwrite(&chr3, sizeof(int16_t), 1, output);
     }
 
     // Close files
