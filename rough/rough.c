@@ -1,26 +1,37 @@
-#include <cs50.h>
-#include <ctype.h>
-#include <stdio.h>
+// Modifies the volume of an audio file
 
-//void swap(int *a, int *b);
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+// Number of bytes in .wav header
+//const int HEADER_SIZE = 44;
 
 int main(void)
 {
-    char x = -12;
-    //int y = 112;
 
-    //int *a = &x;
-    //int *b = &y;
-    //swap(a, b);
-    printf("x is %c \n", x);
-    //printf("x is %p \n", a);
-    //printf("x is %i \n", *&x);
-   // printf("x is %i \n", *a);
+    // TODO: Copy header from input file to output file
+    FILE *pt = fopen("input.wav", "r");
+
+    char chr;
+    for (int i = 0; i < 44; i++)
+    {
+
+       chr = fread(&chr, sizeof(char), 1, pt);
+       printf("%c,", chr);
+
+    }
+    printf("\n");
+
+    // TODO: Read samples from input file and write updated data to output file
+    //int16_t chr2;
+    //int16_t chr3;
+    //while ((fread(&chr2, sizeof(int16_t), 1, input)) != EOF)
+    //{
+        //chr3 = factor * chr2;
+        //fwrite(&chr3, sizeof(int16_t), 1, output);
+    //}
+
+    // Close files
+    fclose(pt);
 }
-
-//void swap(int *q, int *r)
-//{
-    //int temp = *q;
-    //*q = *r;
-    //*r = temp;
-//}
