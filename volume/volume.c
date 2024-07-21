@@ -37,7 +37,8 @@ int main(int argc, char *argv[])
     char chr;
     for (int i = 0; i < 44; i++)
     {
-        frea
+        fread(&chr, sizeof(char), 1, input);
+        
 
     }
 
