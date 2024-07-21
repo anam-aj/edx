@@ -191,5 +191,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             cpy_image[i][j].rgbtRed = avg_Re;
         }
     }
+
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            image[i][j].rgbtBlue = cpy_image[i][j].rgbtBlue;
+            cpy_image[i][j].rgbtGreen = avg_Gr;
+            cpy_image[i][j].rgbtRed = avg_Re;
+        }
+    }
     return;
 }
