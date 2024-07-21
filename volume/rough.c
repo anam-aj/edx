@@ -14,8 +14,9 @@ int main(void)
     char chr;
     for (int i = 0; i < HEADER_SIZE; i++)
     {
-        fread(&chr, sizeof(char), 1, input);
-        fwrite(&chr, sizeof(char), 1, output);
+        
+       chr = fread(&chr, sizeof(char), 1, input);
+
     }
 
     // TODO: Read samples from input file and write updated data to output file
