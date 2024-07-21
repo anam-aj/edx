@@ -38,15 +38,14 @@ int main(int argc, char *argv[])
     for (int i = 0; i < 44; i++)
     {
         fread(&chr, sizeof(char), 1, input);
-        fwrite(&chr, size0f(char), 1, output);
+        fwrite(&chr, sizeof(char), 1, output);
     }
 
     // TODO: Read samples from input file and write updated data to output file
-
     int16_t chr2;
     while ((chr2 = fread(&chr2, sizeof(int16_t), 1, input)) != EOF)
     {
-        fwrite(&chr2, size0f(int16_t), 1, output);
+        fwrite(&chr2, sizeof(int16_t), 1, output);
     }
 
     // Close files
