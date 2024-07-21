@@ -185,6 +185,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             int avg_Bl = (int) round(sum_Bl / 3.0);
             int avg_Gr = (int) round(sum_Gr / 3.0);
             int avg_Re = (int) round(sum_Re / 3.0);
+
+            cpy_image[i][j] = ;
         }
     }
     return;
