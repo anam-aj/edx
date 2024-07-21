@@ -47,6 +47,7 @@ int main(int argc, char *argv[])
     int16_t chr2;
     while ((fread(&chr2, sizeof(int16_t), 1, input)) != 0)
     {
+        chr2 = factor * 
         fwrite(&chr2, sizeof(int16_t), 1, output);
     }
 
