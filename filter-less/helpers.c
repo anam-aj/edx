@@ -197,8 +197,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
             image[i][j].rgbtBlue = cpy_image[i][j].rgbtBlue;
-            cpy_image[i][j].rgbtGreen = avg_Gr;
-            cpy_image[i][j].rgbtRed = avg_Re;
+            image[i][j].rgbtGreen = cpy_image[i][j].rgbtGreen;
+            image[i][j].rgbtRed = cpy_image[i][j].rgbtRed;
         }
     }
     return;
