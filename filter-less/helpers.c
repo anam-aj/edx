@@ -101,11 +101,38 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            int sum;
+            int sum = 0;
 
-            if (i - 1 >= 0 || j - 1 >= 0)
+            if (i - 1 >= 0)
             {
-                sum = image[i - 1][j - 1].rgbtBlue
+                if (j - 1 >= 0)
+                {
+                    sum += image[i - 1][j - 1].rgbtBlue;
+                }
+
+                sum += image[i - 1][j].rgbtBlue;
+
+                if (j + 1 >= 0)
+                {
+                    sum += image[i - 1][j + 1].rgbtBlue;
+                }
+            }
+            
+            if (i - 1 >= 0)
+            {
+                if (j - 1 >= 0)
+                {
+                    sum += image[i - 1][j - 1].rgbtBlue;
+                }
+
+                sum += image[i - 1][j].rgbtBlue;
+
+                if (j + 1 >= 0)
+                {
+                    sum += image[i - 1][j + 1].rgbtBlue;
+                }
+
+
             }
         }
     }
