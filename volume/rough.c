@@ -5,14 +5,10 @@
 #include <stdlib.h>
 
 // Number of bytes in .wav header
-const int HEADER_SIZE = 44;
+//const int HEADER_SIZE = 44;
 
 int main(void)
 {
-
-    }
-
-    float factor = atof(argv[3]);
 
     // TODO: Copy header from input file to output file
     char chr;
@@ -23,15 +19,14 @@ int main(void)
     }
 
     // TODO: Read samples from input file and write updated data to output file
-    int16_t chr2;
-    int16_t chr3;
-    while ((fread(&chr2, sizeof(int16_t), 1, input)) != EOF)
-    {
-        chr3 = factor * chr2;
-        fwrite(&chr3, sizeof(int16_t), 1, output);
-    }
+    //int16_t chr2;
+    //int16_t chr3;
+    //while ((fread(&chr2, sizeof(int16_t), 1, input)) != EOF)
+    //{
+        //chr3 = factor * chr2;
+        //fwrite(&chr3, sizeof(int16_t), 1, output);
+    //}
 
     // Close files
     fclose(input);
-    fclose(output);
 }
