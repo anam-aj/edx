@@ -101,9 +101,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            int sum_Blue = 0;
-            int sum_Green = 0;
-            int sum_Red = 0;
+            int sum_Bl = 0;
+            int sum_Gr = 0;
+            int sum_Re = 0;
 
             // Add colour value of valid pixel from (i - 1)th row(Top)
             if (i - 1 >= 0)
@@ -111,22 +111,24 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 // Top left
                 if (j - 1 >= 0)
                 {
-                    sum_Blue += image[i - 1][j - 1].rgbtBlue;
-                    sum_Green += image[i - 1][j - 1].rgbtGreen;
-                    sum_Red += image[i - 1][j - 1].rgbtRed;
+                    sum_Bl += image[i - 1][j - 1].rgbtBlue;
+                    sum_Gr += image[i - 1][j - 1].rgbtGreen;
+                    sum_Re += image[i - 1][j - 1].rgbtRed;
                 }
 
                 // Top centre
-                sum_Blue += image[i - 1][j].rgbtBlue;
-                sum_Green += image[i - 1][j].rgbtGreen;
-                sum_Red += image[i - 1][j].rgbtRed;
+                {
+                    sum_Bl += image[i - 1][j].rgbtBlue;
+                    sum_Gr += image[i - 1][j].rgbtGreen;
+                    sum_Re += image[i - 1][j].rgbtRed;
+                }
 
                 // Top right
                 if (j + 1 >= 0)
                 {
-                    sum_Blue += image[i - 1][j + 1].rgbtBlue;
-                    sum_Green += image[i - 1][j + 1].rgbtGreen;
-                    sum_Red += image[i - 1][j + 1].rgbtRed;
+                    sum_Bl += image[i - 1][j + 1].rgbtBlue;
+                    sum_Gr += image[i - 1][j + 1].rgbtGreen;
+                    sum_Re += image[i - 1][j + 1].rgbtRed;
                 }
             }
 
@@ -134,22 +136,24 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             // Left
             if (j - 1 >= 0)
             {
-                sum_Blue += image[i][j - 1].rgbtBlue;
-                sum_Green += image[i][j - 1].rgbtGreen;
-                sum_Red += image[i][j - 1].rgbtRed;
+                sum_Bl += image[i][j - 1].rgbtBlue;
+                sum_Gr += image[i][j - 1].rgbtGreen;
+                sum_Re += image[i][j - 1].rgbtRed;
             }
 
             // Centre
-            sum_Blue += image[i][j].rgbtBlue;
-            sum_Green += image[i][j].rgbtGreen;
-            sum_Red += image[i][j].rgbtRed;
+            {
+                sum_Bl += image[i][j].rgbtBlue;
+                sum_Gr += image[i][j].rgbtGreen;
+                sum_Re += image[i][j].rgbtRed;
+            }
 
             // Right
             if (j + 1 >= 0)
             {
-                sum_Blue += image[i][j + 1].rgbtBlue;
-                sum_Green += image[i][j + 1].rgbtGreen;
-                sum_Red += image[i][j + 1].rgbtRed;
+                sum_Bl += image[i][j + 1].rgbtBlue;
+                sum_Gr += image[i][j + 1].rgbtGreen;
+                sum_Re += image[i][j + 1].rgbtRed;
             }
 
             // Add colour value of valid pixel from (i + 1)th row(bottom)
@@ -158,16 +162,24 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 // Bottom left
                 if (j - 1 >= 0)
                 {
-                    sum += image[i - 1][j - 1].rgbtBlue;
+                    sum_Bl += image[i + 1][j - 1].rgbtBlue;
+                    sum_Gr += image[i + 1][j - 1].rgbtGreen;
+                    sum_Re += image[i + 1][j - 1].rgbtRed;
                 }
 
                 // Bottom center
-                sum += image[i - 1][j].rgbtBlue;
+                {
+                    sum_Bl += image[i + 1][j].rgbtBlue;
+                    sum_Gr += image[i + 1][j].rgbtGreen;
+                    sum_Re += image[i + 1][j].rgbtRed;
+                }
 
                 // Bottom right
                 if (j + 1 >= 0)
                 {
-                    sum += image[i - 1][j + 1].rgbtBlue;
+                    sum_Bl += image[i + 1][j + 1].rgbtBlue;
+                    sum_Gr += image[i + 1][j + 1].rgbtGreen;
+                    sum_Re += image[i + 1][j + 1].rgbtRed;
                 }
             }
 
