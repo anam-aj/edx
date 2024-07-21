@@ -11,13 +11,17 @@ int main(void)
 {
 
     // TODO: Copy header from input file to output file
+    FILE* pt = fopen("input.wav", "r");
+
     char chr;
-    for (int i = 0; i < HEADER_SIZE; i++)
+    for (int i = 0; i < 44; i++)
     {
-        
-       chr = fread(&chr, sizeof(char), 1, input);
+
+       chr = fread(&chr, sizeof(char), 1, pt);
+       printf("%c,", chr);
 
     }
+    printf("\n");
 
     // TODO: Read samples from input file and write updated data to output file
     //int16_t chr2;
@@ -29,5 +33,5 @@ int main(void)
     //}
 
     // Close files
-    fclose(input);
+    fclose(pt);
 }
