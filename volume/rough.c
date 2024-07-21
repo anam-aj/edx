@@ -15,25 +15,24 @@ int main(void)
 
     //char chr;
 
-    int i = 0;
-    while (i < 10)
-    {
-        char chr1;
-        fread(&chr1, sizeof(char), 1, pt);
-        printf("%c,", chr1);
-        i++;
-    }
+    //int i = 0;
+    //while (i < 10)
+    //{
+        //char chr1;
+        //fread(&chr1, sizeof(char), 1, pt);
+        //printf("%c,", chr1);
+        //i++;
+    //}
 
-    while (i < 10)
+    for (int i = 0; i < 10; i++)
     {
         char chr1;
         fread(&chr1, sizeof(char), 1, pt);
         printf("%c,", chr1);
-        i++;
     }
     printf("\n");
 
-    i = 0;
+    int i = 0;
     while (i < 10)
     {
         char chr1;
