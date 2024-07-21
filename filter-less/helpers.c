@@ -105,7 +105,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             int sum_Green = 0;
             int sum_Red = 0;
 
-            // Add colour value of valid pixel from (i - 1)th row
+            // Add colour value of valid pixel from (i - 1)th row(Top)
             if (i - 1 >= 0)
             {
                 // Top left
@@ -116,12 +116,12 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     sum_Red += image[i - 1][j - 1].rgbtRed;
                 }
 
-                // Top center
+                // Top centre
                 sum_Blue += image[i - 1][j].rgbtBlue;
                 sum_Green += image[i - 1][j].rgbtGreen;
                 sum_Red += image[i - 1][j].rgbtRed;
 
-                
+                // Top right
                 if (j + 1 >= 0)
                 {
                     sum_Blue += image[i - 1][j + 1].rgbtBlue;
@@ -130,7 +130,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 }
             }
 
-            // Add colour value of valid pixel from (i)th row
+            // Add colour value of valid pixel from (i)th row(Centre)
+            // Left
             if (j - 1 >= 0)
             {
                 sum_Blue += image[i][j - 1].rgbtBlue;
@@ -138,10 +139,12 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 sum_Red += image[i][j - 1].rgbtRed;
             }
 
+            // Centre
             sum_Blue += image[i][j].rgbtBlue;
             sum_Green += image[i][j].rgbtGreen;
             sum_Red += image[i][j].rgbtRed;
 
+            // Right
             if (j + 1 >= 0)
             {
                 sum_Blue += image[i][j + 1].rgbtBlue;
@@ -149,16 +152,19 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 sum_Red += image[i][j + 1].rgbtRed;
             }
 
-            // Add colour value of valid pixel from (i + 1)th row
+            // Add colour value of valid pixel from (i + 1)th row(bottom)
             if (i + 1 >= 0)
             {
+                // Bottom left
                 if (j - 1 >= 0)
                 {
                     sum += image[i - 1][j - 1].rgbtBlue;
                 }
 
+                // Bottom center
                 sum += image[i - 1][j].rgbtBlue;
 
+                // Bottom right
                 if (j + 1 >= 0)
                 {
                     sum += image[i - 1][j + 1].rgbtBlue;
