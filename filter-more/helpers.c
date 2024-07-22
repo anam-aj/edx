@@ -203,10 +203,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 // Top left
                 if (j - 1 >= 0)
                 {
+                    // Updates the sum Gx for respective colours(BGR)
                     sum_Bl_Gx += -1 * image[i - 1][j - 1].rgbtBlue;
                     sum_Gr_Gx += -1 * image[i - 1][j - 1].rgbtGreen;
                     sum_Re_Gx += -1 * image[i - 1][j - 1].rgbtRed;
 
+                    // Updates the sum Gy for respective colours(BGR)
                     sum_Bl_Gy += -1 * image[i - 1][j - 1].rgbtBlue;
                     sum_Gr_Gy += -1 * image[i - 1][j - 1].rgbtGreen;
                     sum_Re_Gy += -1 * image[i - 1][j - 1].rgbtRed;
@@ -214,10 +216,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
                 // Top centre
                 {
+                    // Updates the sum Gx for respective colours(BGR)
                     sum_Bl_Gx += 0 * image[i - 1][j].rgbtBlue;
                     sum_Gr_Gx += 0 * image[i - 1][j].rgbtGreen;
                     sum_Re_Gx += 0 * image[i - 1][j].rgbtRed;
 
+                    // Updates the sum Gy for respective colours(BGR)
                     sum_Bl_Gy += -2 * image[i - 1][j].rgbtBlue;
                     sum_Gr_Gy += -2 * image[i - 1][j].rgbtGreen;
                     sum_Re_Gy += -2 * image[i - 1][j].rgbtRed;
@@ -226,10 +230,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 // Top right
                 if (j + 1 < width)
                 {
+                    // Updates the sum Gx for respective colours(BGR)
                     sum_Bl_Gx += 1 * image[i - 1][j + 1].rgbtBlue;
                     sum_Gr_Gx += 1 * image[i - 1][j + 1].rgbtGreen;
                     sum_Re_Gx += 1 * image[i - 1][j + 1].rgbtRed;
 
+                    // Updates the sum Gy for respective colours(BGR)
                     sum_Bl_Gy += -1 * image[i - 1][j + 1].rgbtBlue;
                     sum_Gr_Gy += -1 * image[i - 1][j + 1].rgbtGreen;
                     sum_Re_Gy += -1 * image[i - 1][j + 1].rgbtRed;
@@ -240,10 +246,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             // Left(of target pixel)
             if (j - 1 >= 0)
             {
+                // Updates the sum Gx for respective colours(BGR)
                 sum_Bl_Gx += -2 * image[i][j - 1].rgbtBlue;
                 sum_Gr_Gx += -2 * image[i][j - 1].rgbtGreen;
                 sum_Re_Gx += -2 * image[i][j - 1].rgbtRed;
 
+                // Updates the sum Gy for respective colours(BGR)
                 sum_Bl_Gy += 0 * image[i][j - 1].rgbtBlue;
                 sum_Gr_Gy += 0 * image[i][j - 1].rgbtGreen;
                 sum_Re_Gy += 0 * image[i][j - 1].rgbtRed;
@@ -251,10 +259,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
             // Centre(target pixel)
             {
+                // Updates the sum Gx for respective colours(BGR)
                 sum_Bl_Gx += 0 * image[i][j].rgbtBlue;
                 sum_Gr_Gx += 0 * image[i][j].rgbtGreen;
                 sum_Re_Gx += 0 * image[i][j].rgbtRed;
 
+                // Updates the sum Gy for respective colours(BGR)
                 sum_Bl_Gy += 0 * image[i][j].rgbtBlue;
                 sum_Gr_Gy += 0 * image[i][j].rgbtGreen;
                 sum_Re_Gy += 0 * image[i][j].rgbtRed;
@@ -263,10 +273,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             // Right(of target pixel)
             if (j + 1 < width)
             {
+                // Updates the sum Gx for respective colours(BGR)
                 sum_Bl_Gx += 2 * image[i][j + 1].rgbtBlue;
                 sum_Gr_Gx += 2 * image[i][j + 1].rgbtGreen;
                 sum_Re_Gx += 2 * image[i][j + 1].rgbtRed;
 
+                // Updates the sum Gy for respective colours(BGR)
                 sum_Bl_Gy += 0 * image[i][j + 1].rgbtBlue;
                 sum_Gr_Gy += 0 * image[i][j + 1].rgbtGreen;
                 sum_Re_Gy += 0 * image[i][j + 1].rgbtRed;
@@ -278,10 +290,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 // Bottom left
                 if (j - 1 >= 0)
                 {
+                    // Updates the sum Gx for respective colours(BGR)
                     sum_Bl_Gx += -1 * image[i + 1][j - 1].rgbtBlue;
                     sum_Gr_Gx += -1 * image[i + 1][j - 1].rgbtGreen;
                     sum_Re_Gx += -1 * image[i + 1][j - 1].rgbtRed;
 
+                    // Updates the sum Gy for respective colours(BGR)
                     sum_Bl_Gy += 1 * image[i + 1][j - 1].rgbtBlue;
                     sum_Gr_Gy += 1 * image[i + 1][j - 1].rgbtGreen;
                     sum_Re_Gy += 1 * image[i + 1][j - 1].rgbtRed;
@@ -289,10 +303,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
                 // Bottom center
                 {
+                    // Updates the sum Gx for respective colours(BGR)
                     sum_Bl_Gx += 0 * image[i + 1][j].rgbtBlue;
                     sum_Gr_Gx += 0 * image[i + 1][j].rgbtGreen;
                     sum_Re_Gx += 0 * image[i + 1][j].rgbtRed;
 
+                    // Updates the sum Gy for respective colours(BGR)
                     sum_Bl_Gy += 2 * image[i + 1][j].rgbtBlue;
                     sum_Gr_Gy += 2 * image[i + 1][j].rgbtGreen;
                     sum_Re_Gy += 2 * image[i + 1][j].rgbtRed;
@@ -301,10 +317,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 // Bottom right
                 if (j + 1 < width)
                 {
+                    // Updates the sum Gx for respective colours(BGR)
                     sum_Bl_Gx += 1 * image[i + 1][j + 1].rgbtBlue;
                     sum_Gr_Gx += 1 * image[i + 1][j + 1].rgbtGreen;
                     sum_Re_Gx += 1 * image[i + 1][j + 1].rgbtRed;
 
+                    // Updates the sum Gy for respective colours(BGR)
                     sum_Bl_Gy += 1 * image[i + 1][j + 1].rgbtBlue;
                     sum_Gr_Gy += 1 * image[i + 1][j + 1].rgbtGreen;
                     sum_Re_Gy += 1 * image[i + 1][j + 1].rgbtRed;
