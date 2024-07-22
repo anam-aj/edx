@@ -75,14 +75,17 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         {
             int temp;
 
+            // Swaps Blue colour
             temp = image[i][j].rgbtBlue;
             image[i][j].rgbtBlue = image[i][(width - 1 - j)].rgbtBlue;
             image[i][(width - 1 - j)].rgbtBlue = temp;
 
+            // Swaps Green colour
             temp = image[i][j].rgbtGreen;
             image[i][j].rgbtGreen = image[i][(width - 1 - j)].rgbtGreen;
             image[i][(width - 1 - j)].rgbtGreen = temp;
 
+            // Swaps Red colour
             temp = image[i][j].rgbtRed;
             image[i][j].rgbtRed = image[i][(width - 1 - j)].rgbtRed;
             image[i][(width - 1 - j)].rgbtRed = temp;
@@ -94,6 +97,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
+    // Creates a copy of image to update blur info
     RGBTRIPLE cpy_image[height][width];
 
     for (int i = 0; i < height; i++)
@@ -192,16 +196,19 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 }
             }
 
+            // Average of colours of valid surrounding pixels
             int avg_Bl = (int) round(sum_Bl / count);
             int avg_Gr = (int) round(sum_Gr / count);
             int avg_Re = (int) round(sum_Re / count);
 
+            // Creates corresponding blurred pixel in copy of image
             cpy_image[i][j].rgbtBlue = avg_Bl;
             cpy_image[i][j].rgbtGreen = avg_Gr;
             cpy_image[i][j].rgbtRed = avg_Re;
         }
     }
 
+    // Copy pixels from blurred copy to original image
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
