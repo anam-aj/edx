@@ -341,7 +341,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             int Red = (int) round(sqrt(SqSum_Gx_Gy_Re));
 
             // Creates corresponding pixel in copy of image
-            // U
+            // BLUE
             if (Blu > 255)
             {
                 cpy_image[i][j].rgbtBlue = 255;
@@ -351,6 +351,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 cpy_image[i][j].rgbtBlue = Blu;
             }
 
+            // GREEN
             if (Gre > 255)
             {
                 cpy_image[i][j].rgbtGreen = 255;
@@ -360,6 +361,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 cpy_image[i][j].rgbtGreen = Gre;
             }
 
+            // RED
             if (Red > 255)
             {
                 cpy_image[i][j].rgbtRed = 255;
