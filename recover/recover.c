@@ -5,6 +5,8 @@ int main(int argc, char *argv[])
 {
     if (argc != 2)
     {
-        printf("Usage: ./recover [flag] infile outfile\n");
+        printf("Usage: ./recover file_name\n");
+        return 1;
     }
+    
 }
