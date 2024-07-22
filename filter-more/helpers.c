@@ -210,8 +210,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     sum_Bl_Gy += -1 * image[i - 1][j - 1].rgbtBlue;
                     sum_Gr_Gy += -1 * image[i - 1][j - 1].rgbtGreen;
                     sum_Re_Gy += -1 * image[i - 1][j - 1].rgbtRed;
-
-                    count++;
                 }
 
                 // Top centre
@@ -223,8 +221,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     sum_Bl_Gy += -2 * image[i - 1][j - 1].rgbtBlue;
                     sum_Gr_Gy += -2 * image[i - 1][j - 1].rgbtGreen;
                     sum_Re_Gy += -2 * image[i - 1][j - 1].rgbtRed;
-
-                    count++;
                 }
 
                 // Top right
@@ -237,8 +233,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     sum_Bl_Gy += -1 * image[i - 1][j - 1].rgbtBlue;
                     sum_Gr_Gy += -1 * image[i - 1][j - 1].rgbtGreen;
                     sum_Re_Gy += -1 * image[i - 1][j - 1].rgbtRed;
-
-                    count++;
                 }
             }
 
@@ -253,8 +247,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 sum_Bl_Gy += 0 * image[i - 1][j - 1].rgbtBlue;
                 sum_Gr_Gy += 0 * image[i - 1][j - 1].rgbtGreen;
                 sum_Re_Gy += 0 * image[i - 1][j - 1].rgbtRed;
-
-                count++;
             }
 
             // Centre(target pixel)
@@ -266,8 +258,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 sum_Bl_Gy += 0 * image[i - 1][j - 1].rgbtBlue;
                 sum_Gr_Gy += 0 * image[i - 1][j - 1].rgbtGreen;
                 sum_Re_Gy += 0 * image[i - 1][j - 1].rgbtRed;
-
-                count++;
             }
 
             // Right(of target pixel)
@@ -280,8 +270,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 sum_Bl_Gy += 0 * image[i - 1][j - 1].rgbtBlue;
                 sum_Gr_Gy += 0 * image[i - 1][j - 1].rgbtGreen;
                 sum_Re_Gy += 0 * image[i - 1][j - 1].rgbtRed;
-
-                count++;
             }
 
             // Add colour value of valid pixel from (i + 1)th row(bottom)
@@ -297,8 +285,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     sum_Bl_Gy += 1 * image[i - 1][j - 1].rgbtBlue;
                     sum_Gr_Gy += 1 * image[i - 1][j - 1].rgbtGreen;
                     sum_Re_Gy += 1 * image[i - 1][j - 1].rgbtRed;
-
-                    count++;
                 }
 
                 // Bottom center
@@ -310,8 +296,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     sum_Bl_Gy += 2 * image[i - 1][j - 1].rgbtBlue;
                     sum_Gr_Gy += 2 * image[i - 1][j - 1].rgbtGreen;
                     sum_Re_Gy += 2 * image[i - 1][j - 1].rgbtRed;
-
-                    count++;
                 }
 
                 // Bottom right
@@ -324,8 +308,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     sum_Bl_Gy += 1 * image[i - 1][j - 1].rgbtBlue;
                     sum_Gr_Gy += 1 * image[i - 1][j - 1].rgbtGreen;
                     sum_Re_Gy += 1 * image[i - 1][j - 1].rgbtRed;
-
-                    count++;
                 }
             }
 
