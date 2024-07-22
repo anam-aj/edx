@@ -25,6 +25,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
+            // Generates the BGR value as per sepia, for ([i][j])th pixel
             float sepiaBlue = .272 * image[i][j].rgbtRed + .534 * image[i][j].rgbtGreen + .131 * image[i][j].rgbtBlue;
             int round_sepiaBlue = (int) round(sepiaBlue);
 
@@ -34,6 +35,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             float sepiaRed = .393 * image[i][j].rgbtRed + .769 * image[i][j].rgbtGreen + .189 * image[i][j].rgbtBlue;
             int round_sepiaRed = (int) round(sepiaRed);
 
+            // Updates the
             if (round_sepiaBlue > 255)
             {
                 image[i][j].rgbtBlue = 255;
@@ -69,11 +71,12 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
+    // Horizontally swaps pixels one by one from left
+    // with their corresponding pixels from right
     for (int i = 0; i < height; i++)
     {
         for (int j = 0, mid = width / 2; j < mid; j++)
         {
-            // Horizontally swaps corresponding pixels
             int temp;
 
             // Swaps Blue colour
