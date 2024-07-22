@@ -340,7 +340,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             int Gre = (int) round(sqrt(SqSum_Gx_Gy_Gr));
             int Red = (int) round(sqrt(SqSum_Gx_Gy_Re));
 
-            //  corresponding pixel's colour info in cpy_image
+            // Adds corresponding pixel's colour info in cpy_image
             // BLUE
             if (Blu > 255)
             {
@@ -373,7 +373,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
         }
     }
 
-    // Creates desired changes to image
+    // Makes desired changes to image
     // by copying pixels' info from cpy_image to image
     for (int i = 0; i < height; i++)
     {
