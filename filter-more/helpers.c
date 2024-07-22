@@ -200,26 +200,26 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 // Top left
                 if (j - 1 >= 0)
                 {
-                    sum_Bl += image[i - 1][j - 1].rgbtBlue;
-                    sum_Gr += image[i - 1][j - 1].rgbtGreen;
-                    sum_Re += image[i - 1][j - 1].rgbtRed;
+                    sum_Bl += -1 * image[i - 1][j - 1].rgbtBlue;
+                    sum_Gr += -1 * image[i - 1][j - 1].rgbtGreen;
+                    sum_Re += -1 * image[i - 1][j - 1].rgbtRed;
                     count++;
                 }
 
                 // Top centre
                 {
-                    sum_Bl += image[i - 1][j].rgbtBlue;
-                    sum_Gr += image[i - 1][j].rgbtGreen;
-                    sum_Re += image[i - 1][j].rgbtRed;
+                    sum_Bl += 0 * image[i - 1][j].rgbtBlue;
+                    sum_Gr += 0 * image[i - 1][j].rgbtGreen;
+                    sum_Re += 0 * image[i - 1][j].rgbtRed;
                     count++;
                 }
 
                 // Top right
                 if (j + 1 < width)
                 {
-                    sum_Bl += image[i - 1][j + 1].rgbtBlue;
-                    sum_Gr += image[i - 1][j + 1].rgbtGreen;
-                    sum_Re += image[i - 1][j + 1].rgbtRed;
+                    sum_Bl += 1 * image[i - 1][j + 1].rgbtBlue;
+                    sum_Gr += 1 * image[i - 1][j + 1].rgbtGreen;
+                    sum_Re += 1 * image[i - 1][j + 1].rgbtRed;
                     count++;
                 }
             }
