@@ -183,7 +183,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 // Detect edges
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
-    // Creates a 2D array cpy_image to update Edges info
+    // Creates a copy of image(2D- Array) to update edges info
     RGBTRIPLE cpy_image[height][width];
 
     for (int i = 0; i < height; i++)
@@ -340,7 +340,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             int Gre = (int) round(sqrt(SqSum_Gx_Gy_Gr));
             int Red = (int) round(sqrt(SqSum_Gx_Gy_Re));
 
-            // Creates corresponding pixel in copy of image
+            //  corresponding pixel's colour info in cpy_image
             // BLUE
             if (Blu > 255)
             {
@@ -374,7 +374,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     }
 
     // Creates desired changes to image
-    // by copying pixels from copy-image to original-image
+    // by copying pixels' info from cpy_image to image
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
