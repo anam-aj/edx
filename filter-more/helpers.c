@@ -183,7 +183,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 // Detect edges
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
-    // Creates a copy of image to update blur info
+    // Creates a 2D array cpy_image to update Edges info
     RGBTRIPLE cpy_image[height][width];
 
     for (int i = 0; i < height; i++)
