@@ -189,13 +189,14 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
+
+            // Varibles to keep track of weighted sum for each colour(BGR)
             int sum_Bl_Gx = 0;
             int sum_Gr_Gx = 0;
             int sum_Re_Gx = 0;
             int sum_Bl_Gy = 0;
             int sum_Gr_Gy = 0;
             int sum_Re_Gy = 0;
-            float count = 0;
 
             // Add colour value of valid pixel from (i - 1)th row(Top)
             if (i - 1 >= 0)
