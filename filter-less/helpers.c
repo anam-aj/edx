@@ -73,6 +73,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0, mid = width / 2; j < mid; j++)
         {
+            // Horizontally swaps corresponding pixels
             int temp;
 
             // Swaps Blue colour
