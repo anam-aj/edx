@@ -334,9 +334,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             }
 
             // Calculate Final colour value from weighted sum
-            float SqSum_Gx_Gy_Bl = (float) ((sum_Bl_Gx * sum_Bl_Gx) + (sum_Bl_Gy * sum_Bl_Gy));
-            float SqSum_Gx_Gy_Gr = (float) ((sum_Gr_Gx * sum_Gr_Gx) + (sum_Gr_Gy * sum_Gr_Gy));
-            float SqSum_Gx_Gy_Re = (float) ((sum_Re_Gx * sum_Re_Gx) + (sum_Re_Gy * sum_Re_Gy));
+            float SqSum_Gx_Gy_Bl = (float)((sum_Bl_Gx * sum_Bl_Gx) + (sum_Bl_Gy * sum_Bl_Gy));
+            float SqSum_Gx_Gy_Gr = (float)((sum_Gr_Gx * sum_Gr_Gx) + (sum_Gr_Gy * sum_Gr_Gy));
+            float SqSum_Gx_Gy_Re = (float)((sum_Re_Gx * sum_Re_Gx) + (sum_Re_Gy * sum_Re_Gy));
 
             int Blu = (int) round(sqrt(SqSum_Gx_Gy_Bl));
             int Gre = (int) round(sqrt(SqSum_Gx_Gy_Gr));
