@@ -41,7 +41,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 
             float sepiaRed = .393 * image[i][j].rgbtRed + .769 * image[i][j].rgbtGreen +
                              .189 * image[i][j].rgbtBlue;
-                             
+
             int round_sepiaRed = (int) round(sepiaRed);
 
             // Change the ([i][j])th pixel with sepia colour value
