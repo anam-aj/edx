@@ -329,11 +329,13 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 }
             }
 
-            float SqSum_Gx_Gy_Bl = (sum_Bl_Gx * sum_Bl_Gx) + (sum_Bl_Gy * sum_Bl_Gy);
-            float SqSum_Gx_Gy_Gr = (sum_Gr_Gx * sum_Gr_Gx) + (sum_Gr_Gy * sum_Gr_Gy);
-            float SqSum_Gx_Gy_Re = (sum_Re_Gx * sum_Re_Gx) + (sum_Re_Gy * sum_Re_Gy);
+            float SqSum_Gx_Gy_Bl = (float) ((sum_Bl_Gx * sum_Bl_Gx) + (sum_Bl_Gy * sum_Bl_Gy);
+            float SqSum_Gx_Gy_Gr = (float) (sum_Gr_Gx * sum_Gr_Gx) + (sum_Gr_Gy * sum_Gr_Gy);
+            float SqSum_Gx_Gy_Re = (float) (sum_Re_Gx * sum_Re_Gx) + (sum_Re_Gy * sum_Re_Gy);
 
-            
+
+
+
             // Creates corresponding blurred pixel in copy of image
             cpy_image[i][j].rgbtBlue = avg_Bl;
             cpy_image[i][j].rgbtGreen = avg_Gr;
