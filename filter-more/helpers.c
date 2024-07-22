@@ -186,7 +186,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     // Creates a copy of image(2D- Array) to update edges info
     RGBTRIPLE cpy_image[height][width];
 
-    // Loops through every pixel
+    // Loops through every pixel in 2D-array image
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
