@@ -245,6 +245,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             }
 
             // Add colour value of valid pixel from (i)th row(Centre)
+
             // Left(of target pixel)
             if (j - 1 >= 0)
             {
