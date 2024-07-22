@@ -333,15 +333,37 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             float SqSum_Gx_Gy_Gr = (float) ((sum_Gr_Gx * sum_Gr_Gx) + (sum_Gr_Gy * sum_Gr_Gy));
             float SqSum_Gx_Gy_Re = (float) ((sum_Re_Gx * sum_Re_Gx) + (sum_Re_Gy * sum_Re_Gy));
 
-            int Blue 
+            int Blu = (int) round(sqrt(SqSum_Gx_Gy_Bl));
+            int Gre = (int) round(sqrt(SqSum_Gx_Gy_Gr));
+            int Red = (int) round(sqrt(SqSum_Gx_Gy_Re));
 
+            // Creates corresponding pixel in copy of image
+            if (Blu > 255)
+            {
+                cpy_image[i][j].rgbtBlue = 255;
+            }
+            else
+            {
+                cpy_image[i][j].rgbtBlue = Blu;
+            }
 
+            if (Gre > 255)
+            {
+                cpy_image[i][j].rgbtGreen = 255;
+            }
+            else
+            {
+                cpy_image[i][j].rgbtGreen = Gre;
+            }
 
-
-            // Creates corresponding blurred pixel in copy of image
-            cpy_image[i][j].rgbtBlue = avg_Bl;
-            cpy_image[i][j].rgbtGreen = avg_Gr;
-            cpy_image[i][j].rgbtRed = avg_Re;
+            if (Red > 255)
+            {
+                cpy_image[i][j].rgbtRed = 255;
+            }
+            else
+            {
+                cpy_image[i][j].rgbtRed = Red;
+            }
         }
     }
 
