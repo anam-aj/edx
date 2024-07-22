@@ -371,7 +371,8 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
         }
     }
 
-    // Copy pixels from copy- to original image
+    // Creates desired changes to image
+    // by copying pixels from copy-image to original-image
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
