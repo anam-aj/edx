@@ -54,6 +54,127 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
+    // Creates a copy of image to update blur info
+    RGBTRIPLE cpy_image[height][width];
+
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            int sum_Bl = 0;
+            int sum_Gr = 0;
+            int sum_Re = 0;
+            float count = 0;
+
+            // Add colour value of valid pixel from (i - 1)th row(Top)
+            if (i - 1 >= 0)
+            {
+                // Top left
+                if (j - 1 >= 0)
+                {
+                    sum_Bl += image[i - 1][j - 1].rgbtBlue;
+                    sum_Gr += image[i - 1][j - 1].rgbtGreen;
+                    sum_Re += image[i - 1][j - 1].rgbtRed;
+                    count++;
+                }
+
+                // Top centre
+                {
+                    sum_Bl += image[i - 1][j].rgbtBlue;
+                    sum_Gr += image[i - 1][j].rgbtGreen;
+                    sum_Re += image[i - 1][j].rgbtRed;
+                    count++;
+                }
+
+                // Top right
+                if (j + 1 < width)
+                {
+                    sum_Bl += image[i - 1][j + 1].rgbtBlue;
+                    sum_Gr += image[i - 1][j + 1].rgbtGreen;
+                    sum_Re += image[i - 1][j + 1].rgbtRed;
+                    count++;
+                }
+            }
+
+            // Add colour value of valid pixel from (i)th row(Centre)
+            // Left
+            if (j - 1 >= 0)
+            {
+                sum_Bl += image[i][j - 1].rgbtBlue;
+                sum_Gr += image[i][j - 1].rgbtGreen;
+                sum_Re += image[i][j - 1].rgbtRed;
+                count++;
+            }
+
+            // Centre
+            {
+                sum_Bl += image[i][j].rgbtBlue;
+                sum_Gr += image[i][j].rgbtGreen;
+                sum_Re += image[i][j].rgbtRed;
+                count++;
+            }
+
+            // Right
+            if (j + 1 < width)
+            {
+                sum_Bl += image[i][j + 1].rgbtBlue;
+                sum_Gr += image[i][j + 1].rgbtGreen;
+                sum_Re += image[i][j + 1].rgbtRed;
+                count++;
+            }
+
+            // Add colour value of valid pixel from (i + 1)th row(bottom)
+            if (i + 1 < height)
+            {
+                // Bottom left
+                if (j - 1 >= 0)
+                {
+                    sum_Bl += image[i + 1][j - 1].rgbtBlue;
+                    sum_Gr += image[i + 1][j - 1].rgbtGreen;
+                    sum_Re += image[i + 1][j - 1].rgbtRed;
+                    count++;
+                }
+
+                // Bottom center
+                {
+                    sum_Bl += image[i + 1][j].rgbtBlue;
+                    sum_Gr += image[i + 1][j].rgbtGreen;
+                    sum_Re += image[i + 1][j].rgbtRed;
+                    count++;
+                }
+
+                // Bottom right
+                if (j + 1 < width)
+                {
+                    sum_Bl += image[i + 1][j + 1].rgbtBlue;
+                    sum_Gr += image[i + 1][j + 1].rgbtGreen;
+                    sum_Re += image[i + 1][j + 1].rgbtRed;
+                    count++;
+                }
+            }
+
+            // Average of colours of valid surrounding pixels
+            int avg_Bl = (int) round(sum_Bl / count);
+            int avg_Gr = (int) round(sum_Gr / count);
+            int avg_Re = (int) round(sum_Re / count);
+
+            // Creates corresponding blurred pixel in copy of image
+            cpy_image[i][j].rgbtBlue = avg_Bl;
+            cpy_image[i][j].rgbtGreen = avg_Gr;
+            cpy_image[i][j].rgbtRed = avg_Re;
+        }
+    }
+
+    // Copy pixels from blurred copy to original image
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            image[i][j].rgbtBlue = cpy_image[i][j].rgbtBlue;
+            image[i][j].rgbtGreen = cpy_image[i][j].rgbtGreen;
+            image[i][j].rgbtRed = cpy_image[i][j].rgbtRed;
+        }
+    }
     return;
 }
 
