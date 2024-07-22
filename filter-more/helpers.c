@@ -10,6 +10,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
         {
             // Calculate avg colour value for ([i][j)th pixel(target pixel)
             float avg = (image[i][j].rgbtBlue + image[i][j].rgbtGreen + image[i][j].rgbtRed) / 3.0;
+
             int round_avg = (int) round(avg);
 
             // Change the colour value for ([i][j])th pixel(target pixel)
