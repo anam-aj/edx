@@ -225,7 +225,31 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             }
             else
             {
-                
+                // Top left
+                if (j - 1 >= 0)
+                {
+                    sum_Bl += image[i - 1][j - 1].rgbtBlue;
+                    sum_Gr += image[i - 1][j - 1].rgbtGreen;
+                    sum_Re += image[i - 1][j - 1].rgbtRed;
+                    count++;
+                }
+
+                // Top centre
+                {
+                    sum_Bl += image[i - 1][j].rgbtBlue;
+                    sum_Gr += image[i - 1][j].rgbtGreen;
+                    sum_Re += image[i - 1][j].rgbtRed;
+                    count++;
+                }
+
+                // Top right
+                if (j + 1 < width)
+                {
+                    sum_Bl += image[i - 1][j + 1].rgbtBlue;
+                    sum_Gr += image[i - 1][j + 1].rgbtGreen;
+                    sum_Re += image[i - 1][j + 1].rgbtRed;
+                    count++;
+                }
             }
 
             // Add colour value of valid pixel from (i)th row(Centre)
