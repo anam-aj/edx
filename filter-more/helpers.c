@@ -341,6 +341,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             int Red = (int) round(sqrt(SqSum_Gx_Gy_Re));
 
             // Creates corresponding pixel in copy of image
+            // U
             if (Blu > 255)
             {
                 cpy_image[i][j].rgbtBlue = 255;
@@ -370,7 +371,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
         }
     }
 
-    // Copy pixels from blurred copy to original image
+    // Copy pixels from copy- to original image
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
