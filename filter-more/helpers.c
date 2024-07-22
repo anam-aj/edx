@@ -189,9 +189,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            int sum_Bl = 0;
-            int sum_Gr = 0;
-            int sum_Re = 0;
+            int sum_Bl_Gx = 0;
+            int sum_Gr_Gx = 0;
+            int sum_Re_Gx = 0;
+            int sum_Bl_Gy = 0;
+            int sum_Gr_Gy = 0;
+            int sum_Re_Gy = 0;
             float count = 0;
 
             // Add colour value of valid pixel from (i - 1)th row(Top)
@@ -200,26 +203,26 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 // Top left
                 if (j - 1 >= 0)
                 {
-                    sum_Bl += -1 * image[i - 1][j - 1].rgbtBlue;
-                    sum_Gr += -1 * image[i - 1][j - 1].rgbtGreen;
-                    sum_Re += -1 * image[i - 1][j - 1].rgbtRed;
+                    sum_Bl_Gx += -1 * image[i - 1][j - 1].rgbtBlue;
+                    sum_Gr_Gx += -1 * image[i - 1][j - 1].rgbtGreen;
+                    sum_Re_Gx += -1 * image[i - 1][j - 1].rgbtRed;
                     count++;
                 }
 
                 // Top centre
                 {
-                    sum_Bl += 0 * image[i - 1][j].rgbtBlue;
-                    sum_Gr += 0 * image[i - 1][j].rgbtGreen;
-                    sum_Re += 0 * image[i - 1][j].rgbtRed;
+                    sum_Bl_Gx += 0 * image[i - 1][j].rgbtBlue;
+                    sum_Gr_Gx += 0 * image[i - 1][j].rgbtGreen;
+                    sum_Re_Gx += 0 * image[i - 1][j].rgbtRed;
                     count++;
                 }
 
                 // Top right
                 if (j + 1 < width)
                 {
-                    sum_Bl += 1 * image[i - 1][j + 1].rgbtBlue;
-                    sum_Gr += 1 * image[i - 1][j + 1].rgbtGreen;
-                    sum_Re += 1 * image[i - 1][j + 1].rgbtRed;
+                    sum_Bl_Gx += 1 * image[i - 1][j + 1].rgbtBlue;
+                    sum_Gr_Gx += 1 * image[i - 1][j + 1].rgbtGreen;
+                    sum_Re_Gx += 1 * image[i - 1][j + 1].rgbtRed;
                     count++;
                 }
             }
@@ -228,26 +231,26 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             // Left(of target pixel)
             if (j - 1 >= 0)
             {
-                sum_Bl += -2 * image[i][j - 1].rgbtBlue;
-                sum_Gr += -2 * image[i][j - 1].rgbtGreen;
-                sum_Re += -2 * image[i][j - 1].rgbtRed;
+                sum_Bl_Gx += -2 * image[i][j - 1].rgbtBlue;
+                sum_Gr_Gx += -2 * image[i][j - 1].rgbtGreen;
+                sum_Re_Gx += -2 * image[i][j - 1].rgbtRed;
                 count++;
             }
 
             // Centre(target pixel)
             {
-                sum_Bl += 0 * image[i][j].rgbtBlue;
-                sum_Gr += 0 * image[i][j].rgbtGreen;
-                sum_Re += 0 * image[i][j].rgbtRed;
+                sum_Bl_Gx += 0 * image[i][j].rgbtBlue;
+                sum_Gr_Gx += 0 * image[i][j].rgbtGreen;
+                sum_Re_Gx += 0 * image[i][j].rgbtRed;
                 count++;
             }
 
             // Right(of target pixel)
             if (j + 1 < width)
             {
-                sum_Bl += 2 * image[i][j + 1].rgbtBlue;
-                sum_Gr += 2 * image[i][j + 1].rgbtGreen;
-                sum_Re += 2 * image[i][j + 1].rgbtRed;
+                sum_Bl_Gx += 2 * image[i][j + 1].rgbtBlue;
+                sum_Gr_Gx += 2 * image[i][j + 1].rgbtGreen;
+                sum_Re_Gx += 2 * image[i][j + 1].rgbtRed;
                 count++;
             }
 
@@ -257,26 +260,26 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 // Bottom left
                 if (j - 1 >= 0)
                 {
-                    sum_Bl += -1 * image[i + 1][j - 1].rgbtBlue;
-                    sum_Gr += -1 * image[i + 1][j - 1].rgbtGreen;
-                    sum_Re += -1 * image[i + 1][j - 1].rgbtRed;
+                    sum_Bl_Gx += -1 * image[i + 1][j - 1].rgbtBlue;
+                    sum_Gr_Gx += -1 * image[i + 1][j - 1].rgbtGreen;
+                    sum_Re_Gx += -1 * image[i + 1][j - 1].rgbtRed;
                     count++;
                 }
 
                 // Bottom center
                 {
-                    sum_Bl += 0 * image[i + 1][j].rgbtBlue;
-                    sum_Gr += 0 * image[i + 1][j].rgbtGreen;
-                    sum_Re += 0 * image[i + 1][j].rgbtRed;
+                    sum_Bl_Gx += 0 * image[i + 1][j].rgbtBlue;
+                    sum_Gr_Gx += 0 * image[i + 1][j].rgbtGreen;
+                    sum_Re_Gx += 0 * image[i + 1][j].rgbtRed;
                     count++;
                 }
 
                 // Bottom right
                 if (j + 1 < width)
                 {
-                    sum_Bl += 1 * image[i + 1][j + 1].rgbtBlue;
-                    sum_Gr += 1 * image[i + 1][j + 1].rgbtGreen;
-                    sum_Re += 1 * image[i + 1][j + 1].rgbtRed;
+                    sum_Bl_Gx += 1 * image[i + 1][j + 1].rgbtBlue;
+                    sum_Gr_Gx += 1 * image[i + 1][j + 1].rgbtGreen;
+                    sum_Re_Gx += 1 * image[i + 1][j + 1].rgbtRed;
                     count++;
                 }
             }
