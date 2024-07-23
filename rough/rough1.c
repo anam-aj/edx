@@ -2,6 +2,8 @@
 
 int main(void)
 {
+    char name[] = {'a','b','c'}
+
     char buffer[13];
 
     int i = 50;
