@@ -2,6 +2,10 @@
 
 int main(void)
 {
+    char *namept;
+    namept = "xyz";
+    printf("%s\n", namept);
+
     char name[] = {'a','b','c','\0'};
     printf("%s\n", name);
 
