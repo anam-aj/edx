@@ -7,6 +7,7 @@ int main(void)
 
     s = "asdf";
     printf("%p\n", s);
+    printf("%p\n", "asdf");
     printf("%p\n", &s);
 
 
@@ -15,6 +16,7 @@ int main(void)
 
     s = "xyz";
     printf("%p\n", s);
+    printf("%p\n", "xyz");
     printf("%p\n", &s);
 
 
