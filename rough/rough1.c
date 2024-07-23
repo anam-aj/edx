@@ -16,8 +16,7 @@ int main(void)
     printf("%p\n", namept);
     //printf("%s\n", namept);
 
-    char *buffer;
-    buffer = "qwe";
+    char buffer[13];
     int i = 50;
     sprintf(buffer, "This is CS%i", i);
     printf("%s\n", buffer);
