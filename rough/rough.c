@@ -6,8 +6,9 @@ int main(void)
 {
 
     char *f = "abcd";
-    char f2[4] = {'a', 'b', 'c', 'd'};
-    //strcpy(f2, f);
+    char f2[5];
+    // = {'a', 'b', 'c', 'd','\0'};
+    strcpy(f2, f);
 
     printf("%p\n", f);
     printf("%p\n", f2);
