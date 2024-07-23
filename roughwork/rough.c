@@ -2,9 +2,9 @@
 
 int main(void)
 {
-    char *name = "abcd";
+    //char *name = "abcd";
 
-    FILE *file1 = fopen("ab", "r");
+    FILE *file1 = fopen("file1", "r");
 
 
 }
