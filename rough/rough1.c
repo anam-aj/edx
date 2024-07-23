@@ -4,5 +4,6 @@ int main(void)
 {
     char a[3] = {'a', 'b', 'c'};
     printf("%c\n", a[0]);
+    char a[3] = {'q', 'b', 'c'};
 
 }
