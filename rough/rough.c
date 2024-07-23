@@ -7,11 +7,10 @@ int main(void)
 
     char *f = "abcd";
     char f2[4];
-    strcpy(f2, f);
+    //strcpy(f2, f);
 
-
-    printf("%p\n", f);
-    printf("%p\n", f2);
+    //printf("%p\n", f);
+    //printf("%p\n", f2);
 
     printf("%s\n", f);
     //printf("%s\n", f2);
