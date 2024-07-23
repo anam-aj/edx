@@ -14,7 +14,7 @@ int main(void)
     printf("%p\n", f2);
 
     printf("%s\n", f);
-    printf("%s\n", f2);
+    //printf("%s\n", f2);
 
 
 
