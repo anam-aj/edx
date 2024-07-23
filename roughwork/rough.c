@@ -2,7 +2,7 @@
 
 int main(void)
 {
-    //char *name[4];
+    char *name[4];
     //name[0] = ;
     //name[1] = ;
     //name[2] = ;
