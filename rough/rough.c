@@ -17,17 +17,14 @@ int main(void)
 
 
     FILE *file1 = fopen("abcd", "w");
+    printf("%p\n", file1);
+    FILE *file1 = fopen("abcd", "w");
+
+
+    printf("%p\n", file1);
+    //printf("%p\n", file2);
+
     fclose(file1);
-    FILE *file2 = fopen("abcd", "w");
-
-
-    printf("%p\n", file1);
-    printf("%p\n", file2);
-
-    //fclose(file1);
-    fclose(file2);
-
-    printf("%p\n", file1);
-    printf("%p\n", file2);
+    //fclose(file2);
 
 }
