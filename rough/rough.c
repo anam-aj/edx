@@ -4,8 +4,10 @@ int main(void)
 {
     char *f = "abcd";
 
-    FILE *file = fopen(f, "w");
+    FILE *file1 = fopen(f, "w");
+    FILE *file2 = fopen("abcd", "w");
 
-    fclose(file);
+    fclose(file1);
+    fclose(file2);
 
 }
