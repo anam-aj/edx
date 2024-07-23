@@ -18,7 +18,7 @@ int main(void)
 
     FILE *file1 = fopen("abcd", "w");
     printf("%p\n", file1);
-    FILE *file1 = fopen("abcd", "w");
+    file1 = fopen("abcd", "w");
 
 
     printf("%p\n", file1);
