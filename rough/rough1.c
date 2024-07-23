@@ -7,9 +7,9 @@ int main(void)
 
     char *namept;
     namept = "xyz";
-    *namept = 'p';
+    char c = *namept;
     printf("%s\n", namept);
-    printf("%c\n", *namept);
+    printf("%c\n", c);
 
 
 }
