@@ -4,11 +4,11 @@
 int main(void)
 {
 
-    char *f;
-    char *f2;
+    char *f = "abcd";
+    char *f2 = "abcd";
 
-
-    //printf("%p\n", f2);
+    printf("%p\n", f);
+    printf("%p\n", f2);
     //FILE *file1 = fopen(f, "w");
     //FILE *file2 = fopen(f2, "w");
 
