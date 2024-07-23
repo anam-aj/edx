@@ -2,7 +2,8 @@
 
 int main(void)
 {
-    char name[4] = {'a','b'};
+    char name[3] = {'a','x', '\0'};
+    fopen(name, "w");
 
     //printf("%p\n", name);
 
