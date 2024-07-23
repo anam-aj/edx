@@ -3,11 +3,11 @@
 
 int main(void)
 {
-    string s;
-    //char *f;
-    //char *f2;
 
-    printf("%s\n", s);
+    char *f;
+    char *f2;
+
+
     //printf("%p\n", f2);
     //FILE *file1 = fopen(f, "w");
     //FILE *file2 = fopen(f2, "w");
