@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    // Reads file to recover from
+    // Open file to recover from, for reading
     FILE *memory_card = fopen("argv[1]", "r");
     if (memory_card = NULL)
     {
@@ -18,6 +18,8 @@ int main(int argc, char *argv[])
     }
 
     
+
+
 
 
 
