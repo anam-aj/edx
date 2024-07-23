@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(void)
-{
+{   "xyz";
     char *name = "abcd";
     printf("%p\n", name);
     printf("%p\n", &name);
