@@ -2,10 +2,7 @@
 
 int main(void)
 {
-    char *namept;
-    namept = "xyz";
-    char c = *namept;
-    printf("%s\n", namept);
-    printf("%c\n", c);
+    char a[3] = {'a', 'b', 'c'};
+    printf("%c\n", a[0]);
 
 }
