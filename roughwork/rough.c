@@ -3,11 +3,21 @@
 int main(void)
 {
     char *s;
-    printf("%p\n", s);
+    //printf("%p\n", s);
+
     s = "asdf";
+    printf("%p\n", s);
+    printf("%p\n", &s);
+
+
     printf("%s\n", s);
 
+
     s = "xyz";
+    printf("%p\n", s);
+    printf("%p\n", &s);
+
+
     printf("%s\n", s);
 
     //char *name[4];
