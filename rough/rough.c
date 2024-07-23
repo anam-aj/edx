@@ -6,14 +6,14 @@ int main(void)
 {
 
     char *f = "abcd";
-    char f2[4];
+    char f2[4] = {'a', 'b', 'c', 'd'};
     //strcpy(f2, f);
 
-    //printf("%p\n", f);
-    //printf("%p\n", f2);
+    printf("%p\n", f);
+    printf("%p\n", f2);
 
     printf("%s\n", f);
-    //printf("%s\n", f2);
+    printf("%s\n", f2);
 
 
 
