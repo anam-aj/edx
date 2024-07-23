@@ -2,9 +2,17 @@
 
 int main(void)
 {
+    int a = 2;
+    printf("%p\n", &a);
+    a = 3;
+    printf("%p\n", &a);
+
+
     char *namept;
     namept = "xyz";
+    printf("%p\n", &namept);
     namept = "abcdef";
+    printf("%p\n", &namept);
     printf("%s\n", namept);
 
     char *buffer;
