@@ -19,6 +19,9 @@ int main(void)
     FILE *file1 = fopen(f, "w");
     FILE *file2 = fopen(f2, "w");
 
+    printf("%p\n", file1);
+    printf("%p\n", file2);
+
     fclose(file1);
     fclose(file2);
 
