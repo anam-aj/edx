@@ -2,7 +2,8 @@
 
 int main(void)
 {
-    char name[] = {'a','b','c'};
+    char name[] = {'a','b','c','\0'};
+    printf("%s\n", name);
 
     char buffer[13];
 
