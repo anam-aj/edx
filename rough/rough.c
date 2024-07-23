@@ -7,12 +7,12 @@ int main(void)
 
     char *f = "abcd";
     char f2[5];
-    strcpy(f2, f);
+strcpy(f2, f);
 
 
 
 
-    FILE *file1 = fopen(f, "w");
+    FILE *file1 = fopen("abcd", "w");
 
 
 }
