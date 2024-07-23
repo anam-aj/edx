@@ -2,5 +2,7 @@
 
 int main(void)
 {
+    char *name = "abcd";
+
     
 }
