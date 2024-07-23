@@ -10,10 +10,10 @@ int main(void)
 
     char *namept;
     namept = "xyz";
-    printf("%p\n", &namept);
+    printf("%p\n", namept);
     namept = "abcdef";
-    printf("%p\n", &namept);
-    printf("%s\n", namept);
+    printf("%p\n", namept);
+    //printf("%s\n", namept);
 
     char *buffer;
     buffer = "qwe";
