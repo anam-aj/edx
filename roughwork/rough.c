@@ -2,14 +2,22 @@
 
 int main(void)
 {
-    char *name[4];
-    name[0] = ;
-    name[1] = ;
-    name[2] = ;
-    name[3] = ;
+    char *s;
+    printf("%p\n", s);
+    s = "asdf";
+    printf("%s\n", s);
 
-    printf("%p\n", name);
+    s = "xyz";
+    printf("%s\n", s);
 
-    FILE *file1 = fopen(name, "w");
+    //char *name[4];
+    //name[0] = ;
+    //name[1] = ;
+    //name[2] = ;
+    //name[3] = ;
+
+    //printf("%p\n", name);
+
+    //FILE *file1 = fopen(name, "w");
 
 }
