@@ -2,9 +2,9 @@
 
 int main(void)
 {
-    
+    char *f = "abcd";
 
-    FILE *file = fopen("cs5033.txt", "w");
+    FILE *file = fopen(f, "w");
 
     fclose(file);
 
