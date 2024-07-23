@@ -2,7 +2,8 @@
 
 int main(void)
 {
-    int a = 2;
+    int a;
+    a = 2;
     printf("%p\n", &a);
     a = 3;
     printf("%p\n", &a);
