@@ -6,12 +6,10 @@ int main(void)
 {
 
     char *f = "abcd";
-    char f2[4] = {'a', 'b', 'c', 'd'};
+    char f2[5] = {'a', 'b', 'c', 'd', '\0'};
 
-
-
-
-    FILE *file1 = fopen(f2, "w");
+    FILE *file1 = fopen(f2, "r");
+    fclose(file1);
 
 
 }
