@@ -2,8 +2,8 @@
 
 int main(void)
 {
-    char name[3] = {'a','x', '\0'};
-    fopen(name, "w");
+    char name[4] = {'a', 't', 'x', '\0'};
+    fopen("abc.txt", "w");
 
     //printf("%p\n", name);
 
