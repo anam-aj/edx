@@ -4,7 +4,9 @@ int main(void)
 {
     char *name = "abcd";
 
-    FILE *file1 = fopen("abcd.txt", "r");
+    FILE *file1 = fopen(name, "w");
+
+    printf("hi\n");
 
 
 }
