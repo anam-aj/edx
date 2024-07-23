@@ -2,7 +2,7 @@
 
 int main(void)
 {
-    char name[] = {'a','b','c'}
+    char name[] = {'a','b','c'};
 
     char buffer[13];
 
