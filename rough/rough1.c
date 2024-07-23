@@ -2,8 +2,9 @@
 
 int main(void)
 {
-    char a[3] = {'a', 'b', 'c'};
-    printf("%c\n", a[0]);
-    char a[3] = {'q', 'b', 'c'};
+    char buffer[13];
 
+    int i = 5;
+    sprintf(buffer, "This is CS%03i", i);
+    printf("%s\n", buffer);
 }
