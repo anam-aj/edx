@@ -6,13 +6,12 @@ int main(void)
 {
 
     char *f = "abcd";
-    char f2[5];
-strcpy(f2, f);
+    char f2[4] = {'a', 'b', 'c', 'd'};
 
 
 
 
-    FILE *file1 = fopen("abcd", "w");
+    FILE *file1 = fopen(f2, "w");
 
 
 }
