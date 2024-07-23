@@ -16,8 +16,8 @@ int main(void)
     printf("%s\n", f2);
 
 
-    FILE *file1 = fopen(f, "w");
-    FILE *file2 = fopen(f2, "w");
+    FILE *file1 = fopen("abcd", "w");
+    FILE *file2 = fopen("abcd", "w");
 
     printf("%p\n", file1);
     printf("%p\n", file2);
