@@ -2,7 +2,9 @@
 
 int main(void)
 {
-    char *name;
-    
-    fopen("","w")
+    char buffer[13];
+
+    int i = 50;
+    sprintf(buffer, "This is CS%i", i);
+    printf("%s\n", buffer);
 }
