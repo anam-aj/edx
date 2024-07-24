@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 
     // Buffer to read from memory card
     uint8_t buffer[512];
-
+    
     // Open first image for writing
     FILE *image = fopen(name, "w");
     if (image == NULL)
