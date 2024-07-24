@@ -34,6 +34,7 @@ int main(int argc, char *argv[])
             (fwrite(buffer, sizeof(uint8_t), 512, name));
             break;
         }
+    }
 
     while ((fread(buffer, sizeof(uint8_t), 512, memory_card)) != 0)
     {
