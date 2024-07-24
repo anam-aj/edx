@@ -67,7 +67,8 @@ int main(int argc, char *argv[])
             (fwrite(buffer, sizeof(uint8_t), 512, image));
         }
         else
-        {   // Keeps writing to ongoing image file
+        {
+            // Keeps writing to ongoing image file
             (fwrite(buffer, sizeof(uint8_t), 512, image));
         }
     }
