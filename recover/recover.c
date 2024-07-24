@@ -23,15 +23,15 @@ int main(int argc, char *argv[])
     int srl_num = 0;
     sprintf(name, "%03i.jpg", srl_num);
 
-    // Buffer to read from memory card
-    uint8_t buffer[512];
-
     // Create file for first image
     FILE *image = fopen(name, "w");
     if (image == NULL)
     {
         return 1;
     }
+
+    // Buffer to read from memory card
+    uint8_t buffer[512];
 
     // Reads memory card
     while ((fread(buffer, sizeof(uint8_t), 512, memory_card)) == 512)
