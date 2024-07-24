@@ -51,8 +51,9 @@ int main(int argc, char *argv[])
         {
             fclose(image);
             srl_num++;
-            printf("%i\n", srl_num);
+            //printf("%i\n", srl_num);
             image = fopen(name, "w");
+            printf("%p\n", image);
             (fwrite(buffer, sizeof(uint8_t), 512, image));
         }
         else
