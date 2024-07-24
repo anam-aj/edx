@@ -11,14 +11,14 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    // Open memory card to recover from, for reading
+    // Open memory card for reading
     FILE *memory_card = fopen(argv[1], "r");
     if (memory_card == NULL)
     {
         return 1;
     }
 
-    // Create name of jpg files
+    // Create name for jpg file
     char name[8];
     int srl_num = 0;
     sprintf(name, "%03i.jpg", srl_num);
@@ -36,6 +36,7 @@ int main(int argc, char *argv[])
     // Reads memory card
     while ((fread(buffer, sizeof(uint8_t), 512, memory_card)) == 512)
     {
+        // Writes 
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&
             (buffer[3] & 0xf0) == 0xe0)
         {
