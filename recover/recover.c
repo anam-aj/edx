@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
         {
             fclose(image);
             name++;
-            fopen(name, "w");
+            FILE *image = fopen(name, "w");
             (fwrite(buffer, sizeof(uint8_t), 512, image));
         }
         else
