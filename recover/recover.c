@@ -28,6 +28,16 @@ int main(int argc, char *argv[])
     // Reads memory card
     while ((fread(buffer, sizeof(uint8_t), 512, memory_card)) != 0)
     {
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
+        {
+            fopen(name, "w");
+            (fwrite(buffer, sizeof(uint8_t), 512, name));
+            break;
+        }
+
+
+    while ((fread(buffer, sizeof(uint8_t), 512, memory_card)) != 0)
+    {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&
             (buffer[3] & 0xf0) == 0xe0)
         {
