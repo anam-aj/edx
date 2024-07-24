@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
     // Buffer to read from memory card
     uint8_t buffer[512];
 
-    // Create first image for writing
+    // Create file for first image
     FILE *image = fopen(name, "w");
     if (image == NULL)
     {
@@ -36,7 +36,8 @@ int main(int argc, char *argv[])
     // Reads memory card
     while ((fread(buffer, sizeof(uint8_t), 512, memory_card)) == 512)
     {
-        // Writes to first image when
+        // Write to image file when first image is found in memory card
+        // and breaks after writing first 512 byte block
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&
             (buffer[3] & 0xf0) == 0xe0)
         {
@@ -45,6 +46,7 @@ int main(int argc, char *argv[])
         }
     }
 
+    // Reads memory card and create an new image file whenever a new image
     while ((fread(buffer, sizeof(uint8_t), 512, memory_card)) == 512)
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&
