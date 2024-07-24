@@ -11,14 +11,14 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    // Open file to recover from, for reading
+    // Open memory card for reading
     FILE *memory_card = fopen(argv[1], "r");
     if (memory_card == NULL)
     {
         return 1;
     }
 
-    // Create name of jpg files
+    // Create name for jpg file
     char name[8];
     int srl_num = 0;
     sprintf(name, "%03i.jpg", srl_num);
@@ -26,40 +26,44 @@ int main(int argc, char *argv[])
     // Buffer to read from memory card
     uint8_t buffer[512];
 
-    // Open first image for writing
+    // Create file for first image
+    FILE *image = fopen(name, "w");
+    if (image == NULL)
+    {
+        return 1;
+    }
 
-
-    // Reads memory card
+    // Reads memory card and create images
     while ((fread(buffer, sizeof(uint8_t), 512, memory_card)) == 512)
     {
+        // Write to image file when first image is found in memory card
+        // and breaks after writing first 512 byte block
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&
             (buffer[3] & 0xf0) == 0xe0)
         {
-            FILE *image = fopen(name, "w");
-            if (image == NULL)
-            {
-                return 1;
-            }
             (fwrite(buffer, sizeof(uint8_t), 512, image));
-            fclose(image);
             break;
         }
     }
 
-    FILE *image = fopen(name, "a");
+    // Reads memory card and continues writing to first image file
+    // also create a new image file whenever a new image is found in memory card
     while ((fread(buffer, sizeof(uint8_t), 512, memory_card)) == 512)
     {
-        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&
+        if (buffer[0] != 0xff || buffer[1]  0xd8 && buffer[2] == 0xff &&
             (buffer[3] & 0xf0) == 0xe0)
         {
+            // Finishes ongoing image
             fclose(image);
             srl_num++;
+
+            // Create new image
             sprintf(name, "%03i.jpg", srl_num);
             image = fopen(name, "w");
             (fwrite(buffer, sizeof(uint8_t), 512, image));
         }
         else
-        {
+        {   // Adds consecutive 512 byte blocks to ongoing image
             (fwrite(buffer, sizeof(uint8_t), 512, image));
         }
     }
