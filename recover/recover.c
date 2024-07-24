@@ -53,7 +53,6 @@ int main(int argc, char *argv[])
             srl_num++;
             sprintf(name, "%03i.jpg", srl_num);
             image = fopen(name, "w");
-            //printf("%p\n", image);
             (fwrite(buffer, sizeof(uint8_t), 512, image));
         }
         else
