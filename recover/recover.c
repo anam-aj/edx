@@ -17,6 +17,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
+    uint8_t buffer[512];
     
 
     fclose(memory_card);
