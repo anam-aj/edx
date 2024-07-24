@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
         }
         else
         {
-            (fwrite(buffer, sizeof(uint8_t), 512, name));
+            (fwrite(buffer, sizeof(uint8_t), 512, image));
         }
     }
     fclose(name);
