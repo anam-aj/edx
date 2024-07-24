@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    // Reads memory card
+    // Reads memory card and create images
     while ((fread(buffer, sizeof(uint8_t), 512, memory_card)) == 512)
     {
         // Write to image file when first image is found in memory card
@@ -46,8 +46,8 @@ int main(int argc, char *argv[])
         }
     }
 
-    // Reads memory card and create an new image file
-    // whenever a new image is found in memory card
+    // Reads memory card and continues writing to first image file
+    // also create a new image file whenever a new image is found in memory card
     while ((fread(buffer, sizeof(uint8_t), 512, memory_card)) == 512)
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&
