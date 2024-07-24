@@ -18,9 +18,6 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    // Buffer to read from memory card
-    uint8_t buffer[512];
-
     // Create name for jpg file
     char name[8];
     int srl_num = 0;
@@ -32,6 +29,9 @@ int main(int argc, char *argv[])
     {
         return 1;
     }
+
+    // Buffer to read from memory card
+    uint8_t buffer[512];
 
     // Reads memory card
     while ((fread(buffer, sizeof(uint8_t), 512, memory_card)) == 512)
