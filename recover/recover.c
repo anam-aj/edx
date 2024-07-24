@@ -25,24 +25,23 @@ int main(int argc, char *argv[])
     // Buffer to read from memory card
     uint8_t buffer[512];
 
+    // Open first image for writing
+    FILE *image = fopen(name, "w");
+    if (image == NULL)
+    {
+        return 1;
+    }
+
     // Reads memory card
     while ((fread(buffer, sizeof(uint8_t), 512, memory_card)) != 0)
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
-            FILE *image = fopen(name, "w");
-            if (image == NULL)
-            {
-                return 1;
-            }
-
             (fwrite(buffer, sizeof(uint8_t), 512, image));
             break;
         }
     }
 
-    FILE *image = fopen(name, "a");
-    
     while ((fread(buffer, sizeof(uint8_t), 512, memory_card)) != 0)
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
