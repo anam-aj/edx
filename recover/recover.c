@@ -53,6 +53,4 @@ int main(int argc, char *argv[])
     fclose(name);
 
     fclose(memory_card);
-
-
 }
