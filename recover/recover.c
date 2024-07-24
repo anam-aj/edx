@@ -30,12 +30,13 @@ int main(int argc, char *argv[])
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
-            fopen(name, "w");
-            if ( == NULL)
+            FILE *image = fopen(name, "w");
+            if (image == NULL)
             {
                 return 1;
             }
-            (fwrite(buffer, sizeof(uint8_t), 512, name));
+
+            (fwrite(buffer, sizeof(uint8_t), 512, image));
             break;
         }
     }
@@ -44,7 +45,7 @@ int main(int argc, char *argv[])
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
-            fclose(name);
+            fclose(image);
             name++;
             fopen(name, "w");
             (fwrite(buffer, sizeof(uint8_t), 512, name));
