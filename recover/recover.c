@@ -31,8 +31,13 @@ int main(int argc, char *argv[])
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&
             (buffer[3] & 0xf0) == 0xe0)
         {
-            fopen(name, "w");
-            (fwrite(buffer, sizeof(uint8_t), 512, name))
+            int t = 1;
+            if (t == 1)
+            {
+                fopen(name, "w");
+                (fwrite(buffer, sizeof(uint8_t), 512, name))
+            }
+
 
 
             fclose(name);
