@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
             (buffer[3] & 0xf0) == 0xe0)
         {
             fopen(name, "w");
-            (fwrite(buffer, sizeof(uint8_t), 512, memory_card))
+            (fwrite(buffer, sizeof(uint8_t), 512, name))
 
 
             fclose(name);
