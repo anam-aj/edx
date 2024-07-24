@@ -53,14 +53,17 @@ int main(int argc, char *argv[])
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&
             (buffer[3] & 0xf0) == 0xe0)
         {
+            // Finishes ongoing image
             fclose(image);
             srl_num++;
+
+            // Create new image
             sprintf(name, "%03i.jpg", srl_num);
             image = fopen(name, "w");
             (fwrite(buffer, sizeof(uint8_t), 512, image));
         }
         else
-        {
+        {   // Adds consecutive 512 byte blocks to ongoing image
             (fwrite(buffer, sizeof(uint8_t), 512, image));
         }
     }
