@@ -11,6 +11,9 @@ int main(int argc, char *argv[])
         return 1;
     }
 
+    // Buffer to read from memory card
+    uint8_t buffer[512];
+
     // Open memory card for reading
     FILE *memory_card = fopen(argv[1], "r");
     if (memory_card == NULL)
@@ -29,9 +32,6 @@ int main(int argc, char *argv[])
     {
         return 1;
     }
-
-    // Buffer to read from memory card
-    uint8_t buffer[512];
 
     // Reads memory card
     while ((fread(buffer, sizeof(uint8_t), 512, memory_card)) == 512)
