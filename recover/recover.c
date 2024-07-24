@@ -11,15 +11,15 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    // Buffer to read from memory card
-    uint8_t buffer[512];
-
     // Open memory card for reading
     FILE *memory_card = fopen(argv[1], "r");
     if (memory_card == NULL)
     {
         return 1;
     }
+
+    // Buffer to read from memory card
+    uint8_t buffer[512];
 
     // Create name for jpg file
     char name[8];
