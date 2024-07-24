@@ -49,6 +49,8 @@ int main(int argc, char *argv[])
             (fwrite(buffer, sizeof(uint8_t), 512, name));
         }
     }
+    fclose(name);
+
 
     fclose(memory_card);
 
