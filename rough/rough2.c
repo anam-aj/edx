@@ -17,5 +17,6 @@ int main(void)
 
 void change_str(char *p)
 {
-    p = "xyz";
+    string q = p;
+    
 }
