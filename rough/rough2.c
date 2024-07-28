@@ -3,11 +3,12 @@
 #include <stdlib.h>
 #include <string.h>
 
-void change_str(char *p);
+//void change_str(char *p);
 
 int main(void)
 {
     char *s = "abc";
+    //s = "xyz";
 
     change_str(s);
 
@@ -16,6 +17,6 @@ int main(void)
 
 void change_str(char *p)
 {
-    *p = "xyz";
+    p = "xyz";
 }
 
