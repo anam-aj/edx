@@ -14,5 +14,7 @@ int main(void)
     node one;
     one.phrase = "xyz";
     one.number = 123;
+
+    printf("%s %i\n", one.phrase, one.number);
 }
 
