@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-void change_str(char *p);
+char *change_str(char *p);
 
 int main(void)
 {
@@ -15,7 +15,8 @@ int main(void)
     printf("%s\n", s);
 }
 
-void change_str(char *p)
+char *change_str(char *p)
 {
-    p = ""
+    p = "xyz";
+    return p;
 }
