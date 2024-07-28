@@ -3,18 +3,20 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef struct node
-{
-    string phrase;
-    int number;
-} node;
+string change_str(string p);
 
 int main(void)
 {
-    node one;
-    one.phrase = "xyz";
-    one.number = 123;
+    string s = "abc";
 
-    printf("%s %i\n", one.phrase, one.number);
+    change_str(s);
+
+    printf("%s\n", s);
+}
+
+string change_str(string p)
+{
+    p = "xyz";
+    return p;
 }
 
