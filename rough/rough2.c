@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-//void change_str(char *p);
+void change_str(char *p);
 
 int main(void)
 {
