@@ -8,7 +8,7 @@ void change_str(char *p);
 int main(void)
 {
     char *s = "abc";
-    //s = "xyz";
+    s = "pqr";
 
     change_str(s);
 
@@ -19,4 +19,3 @@ void change_str(char *p)
 {
     p = "xyz";
 }
-
