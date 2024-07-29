@@ -44,20 +44,20 @@ bool load(const char *dictionary)
     }
 
     // Read word from file
-    char *word_buffer = malloc(sizeof(LENGTH + 1));
-    if (word_buffer == NULL)
+    char *buffer_word = malloc(sizeof(LENGTH + 1));
+    if (buffer_word == NULL)
     {
         return false;
     }
     while (fscanf(file, "%s", word_buffer) != EOF)
     {
-        node *node_buffer = malloc(sizeof(node));
-        if (node_buffer == NULL)
+        node *n = malloc(sizeof(node));
+        if (n == NULL)
         {
             return false;
         }
 
-        strcpy(node_)
+        strcpy(n->)
 
     }
 
