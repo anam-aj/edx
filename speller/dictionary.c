@@ -51,19 +51,16 @@ bool load(const char *dictionary)
     }
     while (fscanf(file, "%s", buffer_word) != EOF)
     {
-        node *list = NULL;
         node *n = malloc(sizeof(node));
         if (n == NULL)
         {
             return false;
         }
         strcpy(n->word, buffer_word);
-        n->next = NULL;
 
         // Hash word to node
         n->next = table[hash(buffer_word)];
-        n->next = list;
-        list = n;
+        table[hash(buffer_word)] = n;
 
     }
 
