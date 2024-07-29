@@ -59,13 +59,10 @@ bool load(const char *dictionary)
 
         strcpy(n->word, buffer_word);
         // Hash word to node
-        hash(buffer_word)
+        table[hash(buffer_word)] =
 
 
     }
-
-
-
 
     // Close file
     free(buffer_word);
