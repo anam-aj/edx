@@ -15,7 +15,7 @@ typedef struct node
 } node;
 
 // TODO: Choose number of buckets in hash table
-const unsigned int N = 26;
+const unsigned int N = 100;
 
 // Hash table
 node *table[N];
@@ -45,7 +45,7 @@ unsigned int hash(const char *word)
         }
     }
 
-    return sum;
+    return (sum % 100);
 }
 
 // Loads dictionary into memory, returning true if successful, else false
