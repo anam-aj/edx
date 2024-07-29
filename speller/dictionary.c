@@ -29,7 +29,7 @@ bool loaded = false;
 bool check(const char *word)
 {
     // TODO
-
+    
     return false;
 }
 
