@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
+#include <string.h>
 #include "dictionary.h"
 
 // Represents a node in a hash table
@@ -43,12 +44,12 @@ bool load(const char *dictionary)
     }
 
     // Read word from file
-    char *buffer = malloc(sizeof(LENGTH + 1));
-    if (buffer == NULL)
+    char *word_buffer = malloc(sizeof(LENGTH + 1));
+    if (word_buffer == NULL)
     {
         return false;
     }
-    while (fscanf(file, "%s", buffer) != EOF)
+    while (fscanf(file, "%s", word_buffer) != EOF)
     {
         char *node_buffer = malloc(sizeof(node));
         if (node_buffer == NULL)
@@ -56,7 +57,7 @@ bool load(const char *dictionary)
             return false;
         }
 
-        
+        strcpy(node_)
 
     }
 
