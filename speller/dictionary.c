@@ -44,14 +44,20 @@ bool load(const char *dictionary)
 
     // Read word from file
     char *buffer = malloc(sizeof(LENGTH + 1));
+    if (buffer == NULL)
+    {
+        return false;
+    }
     while (fscanf(file, "%s", buffer) != EOF)
     {
-
+        
     }
 
     // Hash word to node
 
+
     // Close file
+    free(buffer);
     fclose(file);
     return true;
 }
