@@ -63,10 +63,9 @@ bool load(const char *dictionary)
         // Hash word to node
         n->next = table[hash(buffer_word)];
         table[hash(buffer_word)] = n;
-
     }
 
-    // Close file
+    // Close file and free buffer
     free(buffer_word);
     fclose(file);
     return true;
