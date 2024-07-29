@@ -62,6 +62,8 @@ bool load(const char *dictionary)
 
         // Hash word to node
         list = table[hash(buffer_word)];
+        n->next = list;
+        list = n;
 
     }
 
