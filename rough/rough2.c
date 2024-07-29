@@ -7,9 +7,8 @@ char *change_str(char *p);
 
 int main(void)
 {
-    char *s = "abc;
+    char *s = "abc";
     s = "pqr";
-
     change_str(s);printf("%s\n", s);
 }
 char *change_str(char *p)
