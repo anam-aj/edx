@@ -46,6 +46,7 @@ bool load(const char *dictionary)
     
 
 
+
     // Hash word to node
 
     // Close file
