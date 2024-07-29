@@ -43,14 +43,13 @@ bool load(const char *dictionary)
     }
 
     // Read word from file
-    
+
 
     // Hash word to node
 
     // Close file
     fclose(file);
-
-
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
