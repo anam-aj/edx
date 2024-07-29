@@ -45,7 +45,7 @@ unsigned int hash(const char *word)
         }
     }
 
-    return toupper(word[0]) - 'A';
+    return sum;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
