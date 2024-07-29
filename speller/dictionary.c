@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "dictionary.h"
 
@@ -57,7 +58,7 @@ bool load(const char *dictionary)
             return false;
         }
         strcpy(n->word, buffer_word);
-        n->next = NULL;
+        //n->next = NULL;
 
         // Hash word to node
         n->next = table[hash(buffer_word)];
