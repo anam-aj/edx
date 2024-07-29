@@ -66,7 +66,6 @@ bool load(const char *dictionary)
 
     // Close file
     free(buffer_word);
-    free(n);
     fclose(file);
     return true;
 }
