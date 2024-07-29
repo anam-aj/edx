@@ -20,6 +20,9 @@ const unsigned int N = 100;
 // Hash table
 node *table[N];
 
+// Global variable for size
+int size;
+
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
