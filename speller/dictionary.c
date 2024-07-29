@@ -58,11 +58,13 @@ bool load(const char *dictionary)
         }
 
         strcpy(n->word, buffer_word);
-        
+        // Hash word to node
+        hash(buffer_word)
+
 
     }
 
-    // Hash word to node
+
 
 
     // Close file
