@@ -57,7 +57,8 @@ bool load(const char *dictionary)
             return false;
         }
 
-        strcpy(n->)
+        strcpy(n->word, buffer_word);
+        
 
     }
 
@@ -65,7 +66,8 @@ bool load(const char *dictionary)
 
 
     // Close file
-    free(buffer);
+    free(buffer_word);
+    free(n);
     fclose(file);
     return true;
 }
