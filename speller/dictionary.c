@@ -46,6 +46,7 @@ unsigned int hash(const char *word)
         else
         {
             sum = sum + (toupper(word[index]) - 'A');
+            index++;
         }
     }
 
