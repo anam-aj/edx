@@ -57,6 +57,7 @@ bool load(const char *dictionary)
             return false;
         }
         strcpy(n->word, buffer_word);
+        n->next = NULL;
 
         // Hash word to node
         n->next = table[hash(buffer_word)];
