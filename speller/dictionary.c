@@ -43,6 +43,7 @@ bool load(const char *dictionary)
     }
 
     // Read word from file
+    
 
 
     // Hash word to node
