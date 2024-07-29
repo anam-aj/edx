@@ -44,9 +44,10 @@ bool load(const char *dictionary)
 
     // Read word from file
     node *buffer = malloc(sizeof(node));
-    
-
-
+    while (fscanf(file, "%s", buffer) != EOF)
+    {
+        
+    }
 
     // Hash word to node
 
