@@ -31,7 +31,19 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    
+    int sum = 0;
+    int index = 0;
+    while (true)
+    {
+        if (word[index] == '\n')
+        {
+            break;
+        }
+        else
+        {
+            sum = sum + word[index];
+        }
+    }
 
     return toupper(word[0]) - 'A';
 }
