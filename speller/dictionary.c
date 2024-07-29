@@ -35,12 +35,20 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    // TODO
+    // Open the file to read
     FILE *file = fopen(dictionary, 'r');
     if (file == NULL)
     {
         return false;
     }
+
+    // Read word from file
+    
+
+    // Hash word to node
+
+    // Close file
+    fclose(file);
 
 
 }
