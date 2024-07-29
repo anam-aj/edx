@@ -50,7 +50,13 @@ bool load(const char *dictionary)
     }
     while (fscanf(file, "%s", buffer) != EOF)
     {
-        char *word = malloc();
+        char *word = malloc(sizeof(node));
+        if (word == NULL)
+        {
+            return false;
+        }
+
+        
     }
 
     // Hash word to node
