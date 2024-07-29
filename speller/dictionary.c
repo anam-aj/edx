@@ -60,7 +60,7 @@ bool load(const char *dictionary)
         n->next = NULL;
 
         // Hash word to node
-        table[hash(buffer_word)] =
+        //table[hash(buffer_word)] =;
 
     }
 
