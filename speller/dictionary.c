@@ -22,7 +22,7 @@ node *table[N];
 
 // Global variable
 int word_count = 0;
-bool loaded;
+bool loaded = false;
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
@@ -87,6 +87,7 @@ bool load(const char *dictionary)
     // Close file and free buffer
     free(buffer_word);
     fclose(file);
+    loaded = true;
     return true;
 }
 
