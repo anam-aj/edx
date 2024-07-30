@@ -41,7 +41,7 @@ unsigned int hash(const char *word)
     int index = 0;
     while (true)
     {
-        if (word[index] == '\n')
+        if (word[index] == '\0')
         {
             break;
         }
