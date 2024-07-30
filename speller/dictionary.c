@@ -31,7 +31,6 @@ bool check(const char *word)
     // TODO
     unsigned int hash_value = hash(word);
     node *trav = table[hash_value];
-    
 
 
     return false;
