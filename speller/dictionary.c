@@ -25,6 +25,8 @@ node *table[N];
 int word_count = 0;
 bool loaded = false;
 
+// Intiale 
+
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
