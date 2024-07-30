@@ -25,6 +25,8 @@ int main(void)
             sum = sum + word[index];
             index++;
         }
+        printf("sum : %i\n", sum);
+        printf("index : %i\n", index);
 
         printf("\n\n");
     }
