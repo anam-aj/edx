@@ -30,7 +30,7 @@ bool check(const char *word)
 {
     // TODO
     unsigned int hash_value = hash(word);
-    while (table[hash])
+    while (table[hash_value])
 
 
     return false;
