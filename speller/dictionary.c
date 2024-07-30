@@ -142,5 +142,5 @@ bool unload(void)
             current = ahead;
         }
     }
-    return false;
+    return true;
 }
