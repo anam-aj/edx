@@ -114,8 +114,10 @@ bool load(const char *dictionary)
     }
 
     // Close file and free buffer
-    free(buffer_word);
     fclose(file);
+    free(buffer_word);
+
+    // Update load success and return true
     loaded = true;
     return true;
 }
