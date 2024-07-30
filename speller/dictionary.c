@@ -49,7 +49,6 @@ bool check(const char *word)
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    // TODO: Improve this hash function
     int sum = 0;
     int index = 0;
     while (true)
@@ -89,14 +88,14 @@ bool load(const char *dictionary)
         return false;
     }
 
-    // Read word from file sizeof(char) *
+    // Read word from file
     char *buffer_word = malloc(LENGTH + 1);
     if (buffer_word == NULL)
     {
         return false;
     }
 
-    // char buffer_word[LENGTH + 1];
+    // Read words from file
     while (fscanf(file, "%s", buffer_word) != EOF)
     {
         word_count++;
@@ -106,7 +105,6 @@ bool load(const char *dictionary)
             return false;
         }
         strcpy(n->word, buffer_word);
-        // n->next = NULL;
 
         // Hash word to node
         n->next = table[hash(buffer_word)];
@@ -123,7 +121,6 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    // TODO
     if (loaded)
     {
         return word_count;
@@ -137,7 +134,6 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    // TODO
     for (int i = 0; i < N; i++)
     {
         node *current = table[i];
