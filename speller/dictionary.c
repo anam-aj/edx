@@ -54,7 +54,7 @@ unsigned int hash(const char *word)
     int index = 0;
     while (true)
     {
-        if (index  )
+        if (index > strlen(word))
         {
             break;
         }
