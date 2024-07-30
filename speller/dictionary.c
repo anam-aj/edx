@@ -30,6 +30,7 @@ bool check(const char *word)
 {
     // TODO
     unsigned int hash_value = hash(word);
+    
 
     return false;
 }
