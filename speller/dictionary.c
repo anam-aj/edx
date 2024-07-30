@@ -42,8 +42,7 @@ bool check(const char *word)
         // Change the pointer to next node
         trav = trav->next;
     }
-
-
+    
     return false;
 }
 
