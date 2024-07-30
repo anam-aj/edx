@@ -97,15 +97,18 @@ bool load(const char *dictionary)
     // Read words from file
     while (fscanf(file, "%s", buffer_word) != EOF)
     {
+        // Update word count
         word_count++;
+
+        // Allocate space for node
         node *n = malloc(sizeof(node));
         if (n == NULL)
         {
             return false;
         }
-        strcpy(n->word, buffer_word);
 
-        // Hash word to node
+        // Hash word to node and update linked list pointers
+        strcpy(n->word, buffer_word);
         n->next = table[hash(buffer_word)];
         table[hash(buffer_word)] = n;
     }
