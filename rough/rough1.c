@@ -3,7 +3,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-void change_str(string p);
 
 int main(void)
 
@@ -14,15 +13,20 @@ int main(void)
     int index = 0;
     while (true)
     {
-        if (word[index] == '\0' || index ==  )
+        printf("sum : %i\n", sum);
+        printf("index : %i\n", index);
+
+        if (word[index] == '\0')
         {
             break;
         }
         else
         {
-            sum = sum + (toupper(word[index]) - 'A');
+            sum = sum + word[index];
             index++;
         }
+
+        printf("\n\n");
     }
 }
 
