@@ -5,30 +5,30 @@
 
 
 int main(void)
-
-//unsigned int hash(const char *word)
 {
     const char *word = "abc";
+    hash(word);
+}
+
+// Hashes word to a number
+unsigned int hash(const char *word)
+{
+    // TODO: Improve this hash function
     int sum = 0;
     int index = 0;
     while (true)
     {
-        printf("sum : %i\n", sum);
-        printf("index : %i\n", index);
-
-        if (word[index] == '\0')
+        if (index > strlen(word))
         {
             break;
         }
         else
         {
-            sum = sum + word[index];
+            sum = sum + (toupper(word[index]) - 'A');
             index++;
         }
-        printf("sum : %i\n", sum);
-        printf("index : %i\n", index);
-
-        printf("\n\n");
     }
+
+    return (sum % 100);
 }
 
