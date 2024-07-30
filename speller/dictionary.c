@@ -1,12 +1,12 @@
 // Implements a dictionary's functionality
 
+#include "dictionary.h"
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <strings.h>
-#include "dictionary.h"
 
 // Represents a node in a hash table
 typedef struct node
@@ -96,7 +96,7 @@ bool load(const char *dictionary)
         return false;
     }
 
-    //char buffer_word[LENGTH + 1];
+    // char buffer_word[LENGTH + 1];
     while (fscanf(file, "%s", buffer_word) != EOF)
     {
         word_count++;
@@ -106,7 +106,7 @@ bool load(const char *dictionary)
             return false;
         }
         strcpy(n->word, buffer_word);
-        //n->next = NULL;
+        // n->next = NULL;
 
         // Hash word to node
         n->next = table[hash(buffer_word)];
