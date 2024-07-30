@@ -22,8 +22,8 @@ unsigned int hash(const char *word)
     int index = 0;
     while (true)
     {
-        printf("sum %i\n", sum);
-        printf("ind %i\n", index);
+        printf("sum %i ", sum);
+        printf("ind %i ", index);
         printf("chr %c\n", word[index]);
         if (index > strlen(word))
         {
@@ -34,11 +34,11 @@ unsigned int hash(const char *word)
             sum = sum + (toupper(word[index]) - 'A');
             index++;
         }
-        printf("sum %i\n", sum);
-        printf("ind %i\n", index);
+        printf("sum %i ", sum);
+        printf("ind %i ", index);
         printf("chr %c\n", word[index]);
 
-        printf("\n\n\n");
+        printf("\n\n");
     }
 
 
