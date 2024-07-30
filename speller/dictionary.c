@@ -132,7 +132,8 @@ bool unload(void)
         while (current != NULL)
         {
             ahead = current->next;
-            free
+            free(current);
+            current = ahead;
         }
     }
     return false;
