@@ -78,18 +78,20 @@ bool load(const char *dictionary)
     }
 
     // Open the file to read
-    //FILE *file = fopen(dictionary, "r");
-    //if (file == NULL)
+    FILE *file = fopen(dictionary, "r");
+    if (file == NULL)
+    {
+        return false;
+    }
+
+    // Read word from file
+    //char *buffer_word = malloc(sizeof(LENGTH + 1));
+    //if (buffer_word == NULL)
     //{
         //return false;
     //}
 
-    // Read word from file
-    char *buffer_word = malloc(sizeof(LENGTH + 1));
-    if (buffer_word == NULL)
-    {
-        return false;
-    }
+    char buffer_word[LENGTH + 1];
     while (fscanf(file, "%s", buffer_word) != EOF)
     {
         word_count++;
@@ -107,7 +109,7 @@ bool load(const char *dictionary)
     }
 
     // Close file and free buffer
-    free(buffer_word);
+    //free(buffer_word);
     fclose(file);
     loaded = true;
     return true;
