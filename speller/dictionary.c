@@ -33,7 +33,14 @@ bool check(const char *word)
     node *trav = table[hash_value];
     while (trav != NULL)
     {
-        
+        // Check the word
+        if (strcasecmp(word, trav->word) == 0)
+        {
+            return true;
+        }
+
+        // Change the pointer to next node
+        trav = trav->next;
     }
 
 
