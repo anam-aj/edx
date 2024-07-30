@@ -127,8 +127,8 @@ bool unload(void)
     // TODO
     for (int i = 0; i < N; i++)
     {
-        node *ahead = ;
-        node *current = NULL;
+        node *current = table[i];
+        node *ahead = NULL;
         while (ahead != NULL)
         {
             ahead = ahead->next;
