@@ -89,8 +89,8 @@ bool load(const char *dictionary)
         return false;
     }
 
-    // Read word from file sizeof(char) * 
-    char *buffer_word = malloc((LENGTH + 1));
+    // Read word from file sizeof(char) *
+    char *buffer_word = malloc(LENGTH + 1);
     if (buffer_word == NULL)
     {
         return false;
