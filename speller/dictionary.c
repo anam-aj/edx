@@ -25,11 +25,16 @@ node *table[N];
 int word_count = 0;
 bool loaded = false;
 
-// Intiale 
+// Intialize pointers in table as NULL
+for (unsigned int i = 0; i < N; i++)
+{
+
+};
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
+    int a = N;
     // TODO
     unsigned int hash_value = hash(word);
     node *trav = table[hash_value];
