@@ -25,16 +25,9 @@ node *table[N];
 int word_count = 0;
 bool loaded = false;
 
-// Intialize pointers in table as NULL
-for (unsigned int i = 0; i < N; i++)
-{
-
-};
-
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    int a = N;
     // TODO
     unsigned int hash_value = hash(word);
     node *trav = table[hash_value];
@@ -78,6 +71,12 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
+    // Intialize pointers in table as NULL
+    for (unsigned int i = 0; i < N; i++)
+    {
+        table[i] = NULL;
+    }
+
     // Open the file to read
     FILE *file = fopen(dictionary, "r");
     if (file == NULL)
