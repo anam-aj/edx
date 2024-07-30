@@ -78,11 +78,11 @@ bool load(const char *dictionary)
     }
 
     // Open the file to read
-    FILE *file = fopen(dictionary, "r");
-    if (file == NULL)
-    {
-        return false;
-    }
+    //FILE *file = fopen(dictionary, "r");
+    //if (file == NULL)
+    //{
+        //return false;
+    //}
 
     // Read word from file
     char *buffer_word = malloc(sizeof(LENGTH + 1));
@@ -142,6 +142,6 @@ bool unload(void)
             current = ahead;
         }
     }
-    
+
     return true;
 }
