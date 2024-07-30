@@ -131,8 +131,7 @@ bool unload(void)
         node *ahead = NULL;
         while (current != NULL)
         {
-            ahead = ahead->next;
-
+            ahead = current->next;
             free
         }
     }
