@@ -6,16 +6,23 @@
 void change_str(string p);
 
 int main(void)
+
+//unsigned int hash(const char *word)
 {
-    string s = "abc";
-
-    change_str(s);
-
-    printf("%s\n", s);
-}
-
-void change_str(string p)
-{
-    p = "xyz";
+    const char *word = "abc";
+    int sum = 0;
+    int index = 0;
+    while (true)
+    {
+        if (word[index] == '\0' || index ==  )
+        {
+            break;
+        }
+        else
+        {
+            sum = sum + (toupper(word[index]) - 'A');
+            index++;
+        }
+    }
 }
 
