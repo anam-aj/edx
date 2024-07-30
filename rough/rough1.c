@@ -10,7 +10,7 @@ unsigned int hash(const char *word);
 
 int main(void)
 {
-    const char *word = "abc!dasd ";
+    const char *word = "a 1 !";
     hash(word);
 }
 
