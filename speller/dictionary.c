@@ -129,7 +129,7 @@ bool unload(void)
     {
         node *current = table[i];
         node *ahead = NULL;
-        while (ahead != NULL)
+        while (current != NULL)
         {
             ahead = ahead->next;
 
