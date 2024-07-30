@@ -29,7 +29,8 @@ bool loaded = false;
 bool check(const char *word)
 {
     // TODO
-    int hash_value = hash(word);
+    unsigned int hash_value = hash(word);
+
     return false;
 }
 
