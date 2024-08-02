@@ -1,6 +1,6 @@
 # Programme to check validity and type of card
 
-
+# Funtion import
 from cs50 import get_int
 
 
@@ -12,14 +12,12 @@ def main():
         if card_number < 0:
             break
 
-
     # checks if checksum is correct
     if (check_sum(card_number) == 0)
 
         # Checks criteria for American Express
         if ((no_of_digits(card_number) == 15) and
             (first_two_digits(card_number) == 34 or first_two_digits(card_number) == 37)):
-            
 
             print("AMEX")
 
