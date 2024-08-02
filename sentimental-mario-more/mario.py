@@ -29,7 +29,7 @@ def print_row(spaces, bricks):
         print("#", end="")
 
     # Print centre spaces
-    print("  ")
+    print("  ", end="")
 
     # Print right bricks
     for b in range(bricks):
