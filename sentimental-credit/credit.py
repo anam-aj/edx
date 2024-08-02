@@ -30,7 +30,7 @@ def main():
             print("MASTERCARD")
 
         # Checks criteria for Visa
-        elif (d_count == 13 or d_count == 16) and (d1 == 4):
+        elif (d_count == (13 or 16)) and (d1 == 4):
 
             print("VISA")
 
