@@ -6,7 +6,7 @@ from cs50 import get_float
 
 def main()
 
-    while True:
+   while True:
         change = get_float("Change owed: ")
         if change < 0:
             break
@@ -31,8 +31,8 @@ def main()
     # No of pennies
     pennies = no_of_coins(change, 1)
 
+    # Calculate total coins and print it
     total_coins = (quarters + dimes + nickles + pennies)
-
     print(total_coins)
 
 
