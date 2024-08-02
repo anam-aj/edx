@@ -1,4 +1,4 @@
-# Program to print  
+# Program to print
 
 # Funtion import
 from cs50 import get_int
@@ -24,14 +24,16 @@ def print_row(spaces, bricks):
     for s in range(spaces):
         print(" ", end="")
 
-    # Print bricks
+    # Print left bricks
     for b in range(bricks):
         print("#", end="")
 
     # Print centre spaces
     print("  ")
 
-
+    # Print right bricks
+    for b in range(bricks):
+        print("#", end="")
 
     # Move to next line
     print("")
