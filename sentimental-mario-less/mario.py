@@ -3,7 +3,7 @@
 from cs50 import get_int
 
 
-def main()
+def main():
 
     # Promts user for height
     while True:
@@ -17,7 +17,7 @@ def main()
 
 
 # Print row of bricks(right aligned)
-def print_row(spaces, bricks)
+def print_row(spaces, bricks):
 
     # Print spaces
     for s in range(spaces):
@@ -25,7 +25,7 @@ def print_row(spaces, bricks)
 
     # Print bricks
     for p in range(bricks):
-        print("#");
+        print("#")
 
     print("")
 
