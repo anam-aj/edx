@@ -13,7 +13,7 @@ def main():
             break
 
     # checks if checksum is correct
-    if (check_sum(card_number) == 0)
+    if check_sum(card_number) == 0:
 
         # Checks criteria for American Express
         if ((no_of_digits(card_number) == 15) and
@@ -33,10 +33,10 @@ def main():
 
             print("VISA")
 
-        else
+        else:
             print("INVALID")
 
-    else
+    else:
         print("INVALID")
 
 
@@ -68,7 +68,7 @@ def no_of_digits(number):
 
 
 # Defining checksum according to lunh alogrithm
-def check_sum(number)
+def check_sum(number):
 
     sum_of_even_place_digits = 0
     sum_of_odd_place_digits = 0
