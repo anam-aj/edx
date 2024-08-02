@@ -1,17 +1,14 @@
 # Program to determine reading grade level
 
 
+def main()
 
+    # Prompts user to enter text
+    user_text = input("Please enter the text: ")
 
-
-int main(void)
-
-    // Prompts user to enter text
-    string user_text = get_string("Please enter the text: ");
-
-    float no_of_words = word_count(user_text);
-    float no_of_letters = letter_count(user_text);
-    float no_of_sentences = sentence_count(user_text);
+    no_of_words = float(word_count(user_text))
+    no_of_letters = float(letter_count(user_text))
+    no_of_sentences = float(sentence_count(user_text))
 
     /// Calculates Coleman-Liau index
     float L = (no_of_letters) / (no_of_words / 100.0);
