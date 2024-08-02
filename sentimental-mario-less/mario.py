@@ -8,6 +8,7 @@ def main()
     height = get_int("Enter Height: ")
 
     while height < 0 or height > 8:
-        
+        height = get_int("Enter Height: ")
+
 
 
