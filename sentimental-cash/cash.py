@@ -10,7 +10,8 @@ def main()
         change = get_float("Change owed: ")
         if change < 0:
             break
-    cents = 
+    dollars = change / 1
+    cents =
 
     # No of Quarters
     int quarters = no_of_coins(change, 25)
