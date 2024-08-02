@@ -17,7 +17,7 @@ def main():
 
         # Checks criteria for American Express
         if (no_of_digits(card_number) == 15) and
-        (first_two_digits(card_number) == 34 or first_two_digits(card_number) == 37):
+    (first_two_digits(card_number) == 34 or first_two_digits(card_number) == 37):
 
             print("AMEX")
 
