@@ -4,7 +4,7 @@
 from cs50 import get_float
 
 
-def main()
+def main():
 
    while True:
         change = get_float("Change owed: ")
@@ -37,7 +37,7 @@ def main()
 
 
 # Function to calculate no of coins of given value
-def no_of_coins(amount, coin_value)
+def no_of_coins(amount, coin_value):
 
     coins = (amount / coin_value)
     return coins
