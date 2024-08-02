@@ -7,10 +7,10 @@ def main():
     # TODO: Check for command-line usage
     if len(sys.argv) != 2:
         print("Please provide command-line arguments")
-        sys.exit()
+        sys.exit(1)
 
     # TODO: Read database file into a variable
-    
+
 
     # TODO: Read DNA sequence file into a variable
 
