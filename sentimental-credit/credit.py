@@ -13,11 +13,6 @@ def main():
             break
 
     # checks if checksum is correct
-    print(card_number)
-    print(check_sum(card_number))
-    print(first_digit)
-    print(first_two_digits)
-    print(no_of_digits)
     if check_sum(card_number) == 0:
 
         # Checks criteria for American Express
