@@ -15,7 +15,6 @@ def print_row(int spaces, int bricks)
 {
     # Print spaces
     for s in range():
-    
         printf(" ");
 
     // Print bricks
