@@ -10,7 +10,9 @@ def main():
         sys.exit(1)
 
     # TODO: Read database file into a variable
-    
+    with open .argv[1] as file1:
+
+
 
     # TODO: Read DNA sequence file into a variable
 
