@@ -48,6 +48,7 @@ def first_digit(number):
 
     return number
 
+
 # function to give first two digits of the given number
 def first_two_digits(number):
 
