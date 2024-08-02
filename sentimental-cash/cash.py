@@ -11,10 +11,9 @@ def main():
         if change > 0:
             break
 
-    dollars = change // 1
+    dollars = (change // 1) * 100
     print(dollars)
     cents = (change % 1) * 100
-    print(cents)
 
     change = int(dollars + cents)
     print(change)
