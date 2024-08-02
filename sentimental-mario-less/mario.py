@@ -13,8 +13,8 @@ def main()
 # Print row of bricks(right aligned)
 def print_row(int spaces, int bricks)
 {
-    // Print spaces
-    for (int j = 0; j < spaces; j++)
+    # Print spaces
+    for in
     {
         printf(" ");
     }
