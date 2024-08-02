@@ -23,7 +23,7 @@ def main():
         print("Grade 16+")
 
     else:
-        print("Grade ", round(index))
+        print("Grade", round(index))
 
 
 # Funtion to count words
@@ -48,7 +48,7 @@ def letter_count(text):
 def sentence_count(text):
 
     no_of_sentences = 0
-    for a in len(text):
+    for a in text:
         if (a == '.') or (a == '?') or (a == '!'):
             no_of_sentences += 1
 
