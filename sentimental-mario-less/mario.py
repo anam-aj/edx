@@ -8,7 +8,7 @@ def main():
     # Promts user for height
     while True:
         height = get_int("Enter Height: ")
-        if height >= 0 and height <= 8:
+        if height >= 1 and height <= 8:
             break
 
     # Prints the pyramid with given height
