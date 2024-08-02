@@ -21,11 +21,11 @@ def print_row(spaces, bricks):
 
     # Print spaces
     for s in range(spaces):
-        print(" ")
+        print(" ", end = "")
 
     # Print bricks
     for b in range(bricks):
-        print("#")
+        print("#", end = "")
 
     print("")
 
