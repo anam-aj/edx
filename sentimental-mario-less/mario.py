@@ -5,10 +5,9 @@ from cs50 import get_int
 def main()
 
     # Promts user for height
-    height = get_int("Enter Height: ")
-
-    while height < 0 or height > 8:
+    while True:
         height = get_int("Enter Height: ")
+        if height >= 0 and height <= 8:
+            break
 
-
-
+    
