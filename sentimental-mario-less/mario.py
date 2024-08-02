@@ -20,7 +20,7 @@ def main()
 def print_row(spaces, bricks)
 {
     # Print spaces
-    for s in range():
+    for s in range(spaces):
         printf(" ");
 
     # Print bricks
