@@ -16,36 +16,36 @@ def main():
     # checks if checksum is correct
     if (check_sum(card_number) == 0)
     {
-        // Checks criteria for American Express
+        # Checks criteria for American Express
         if ((no_of_digits(card_number) == 15) &&
             (first_two_digits(card_number) == 34 || first_two_digits(card_number) == 37))
         {
             printf("AMEX\n");
         }
 
-        // Checks criteria for MasterCard
-        else if ((no_of_digits(card_number) == 16) &&
+        # Checks criteria for MasterCard
+        elif ((no_of_digits(card_number) == 16) &&
                  (first_two_digits(card_number) > 50 && first_two_digits(card_number) < 56))
         {
             printf("MASTERCARD\n");
         }
 
-        // Checks criteria for Visa
-        else if ((no_of_digits(card_number) == 13 || no_of_digits(card_number) == 16) &&
+        # Checks criteria for Visa
+        elif ((no_of_digits(card_number) == 13 || no_of_digits(card_number) == 16) &&
                  (first_digit(card_number) == 4))
         {
-            printf("VISA\n");
+            print("VISA");
         }
 
         else
         {
-            printf("INVALID\n");
+            print("INVALID");
         }
     }
 
     else
     {
-        printf("INVALID\n");
+        print("INVALID");
     }
 }
 
@@ -103,3 +103,6 @@ def check_sum(number)
     net_sum = (sum_of_odd_place_digits) + (sum_of_even_place_digits)
     unit_digit = net_sum % 10
     return unit_digit
+
+
+main()
