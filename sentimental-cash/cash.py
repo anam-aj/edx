@@ -12,11 +12,8 @@ def main():
             break
 
     dollars = (change // 1) * 100
-    print(dollars)
     cents = (change % 1) * 100
-
-    change = int(dollars + cents)
-    print(change)
+    change = (dollars + cents)
 
     # No of Quarters
     quarters = no_of_coins(change, 25)
@@ -34,7 +31,7 @@ def main():
     pennies = no_of_coins(change, 1)
 
     # Calculate total coins and print it
-    total_coins = (quarters + dimes + nickles + pennies)
+    total_coins = int(quarters + dimes + nickles + pennies)
     print(total_coins)
 
 
