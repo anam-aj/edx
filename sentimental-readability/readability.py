@@ -32,10 +32,10 @@ def main()
     }
 }
 
-// Funtion to count words
-int word_count(string text)
-{
-    int no_of_spaces = 0;
+# Funtion to count words
+int word_count(text):
+
+    int no_of_spaces = 0
     for (int i = 0, len = strlen(text); i < len; i++)
     {
         if (text[i] == ' ')
