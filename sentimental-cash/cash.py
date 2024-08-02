@@ -18,8 +18,6 @@ def main()
 
     # No of Quarters
     quarters = no_of_coins(change, 25)
-
-    # Remaining change
     change %= 25
 
     # No of dimes
