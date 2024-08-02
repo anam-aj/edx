@@ -48,11 +48,11 @@ int word_count(string text)
     return no_of_words;
 }
 
-// Function to count letters
-int letter_count(string text)
+# Function to count letters
+def letter_count(text)
 {
     int no_of_letters = 0;
-    for (int i = 0, len = strlen(text); i < len; i++)
+    for i in len = strlen(text); i < len; i++)
     {
         if (text[i] >= 'a' && text[i] <= 'z')
         {
