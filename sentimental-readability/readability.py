@@ -10,27 +10,21 @@ def main()
     no_of_letters = float(letter_count(user_text))
     no_of_sentences = float(sentence_count(user_text))
 
-    /// Calculates Coleman-Liau index
-    float L = (no_of_letters) / (no_of_words / 100.0);
-    float S = (no_of_sentences) / (no_of_words / 100.0);
-    float index = 0.0588 * L - 0.296 * S - 15.8;
+    # Calculates Coleman-Liau index
+    L = (no_of_letters) / (no_of_words / 100.0)
+    S = (no_of_sentences) / (no_of_words / 100.0)
+    index = 0.0588 * L - 0.296 * S - 15.8
 
-    // Checks and print grade level
-    if (index < 0)
-    {
-        printf("Before Grade 1\n");
-    }
+    # Checks and print grade level
+    if (index < 0):
+        print("Before Grade 1")
 
-    else if (index >= 16)
-    {
-        printf("Grade 16+\n");
-    }
+    elif (index >= 16):
+        print("Grade 16+")
 
-    else
-    {
-        printf("Grade %i\n", (int) round(index));
-    }
-}
+    else:
+        print("Grade %i\n", (int) round(index))
+
 
 # Funtion to count words
 def word_count(text):
@@ -44,8 +38,8 @@ def word_count(text):
 # Function to count letters
 def letter_count(text):
 
-    total_char = text.count(' ')
-    letters = total_char - no_of_spaces
+    no_of_spaces = text.count(' ')
+    letters = len(text) - no_of_spaces
 
     return letters
 
@@ -58,7 +52,7 @@ def sentence_count(text)
         if (a == '.') or (a == '?') or (a == '!'):
             no_of_sentences += 1
 
-    return no_of_sentences;
+    return no_of_sentences
 
 
 main()
