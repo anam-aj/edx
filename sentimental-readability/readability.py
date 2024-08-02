@@ -42,7 +42,7 @@ def word_count(text):
 
 
 # Function to count letters
-def letter_count(text)
+def letter_count(text):
 {
     int no_of_letters = 0;
     for i in len = strlen(text); i < len; i++)
