@@ -26,7 +26,7 @@ def main():
             print("MASTERCARD")
 
         # Checks criteria for Visa
-        elif (no_of_digits(card_number) == 13 or 16) and (first_digit(card_number) == 4):
+        elif (no_of_digits(card_number) == 13 or no_of_digits(card_number) == 16) and (first_digit(card_number) == 4):
 
             print("VISA")
 
