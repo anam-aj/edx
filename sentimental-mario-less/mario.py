@@ -10,4 +10,20 @@ def main()
         if height >= 0 and height <= 8:
             break
 
-    
+# Print row of bricks(right aligned)
+def print_row(int spaces, int bricks)
+{
+    // Print spaces
+    for (int j = 0; j < spaces; j++)
+    {
+        printf(" ");
+    }
+
+    // Print bricks
+    for (int i = 0; i < bricks; i++)
+    {
+        printf("#");
+    }
+
+    printf("\n");
+}
