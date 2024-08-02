@@ -25,12 +25,12 @@ def main():
             print("AMEX")
 
         # Checks criteria for MasterCard
-        elif (d_count == 16) and (d2 > 50 and d2 < 56):
+        elif (d_num == 16) and (d2 > 50 and d2 < 56):
 
             print("MASTERCARD")
 
         # Checks criteria for Visa
-        elif (d_count == 13 or d_count == 16) and (d1 == 4):
+        elif (d_num == 13 or d_num == 16) and (d1 == 4):
 
             print("VISA")
 
