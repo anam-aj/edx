@@ -1,9 +1,10 @@
-# Print the minimum no of coins
+# Proagrame to calculate minimum no of coins
 
 # Funtion import
 from cs50 import get_float
 
 
+# Calculate minimum no of coins and prints it
 def main():
 
     while True:
