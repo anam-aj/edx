@@ -33,20 +33,13 @@ def main()
 }
 
 # Funtion to count words
-int word_count(text):
+def word_count(text):
 
-    int no_of_spaces = 0
-    for (int i = 0, len = strlen(text); i < len; i++)
-    {
-        if (text[i] == ' ')
-        {
-            no_of_spaces++;
-        }
-    }
+    no_of_spaces = text.count(' ')
+    no_of_words = no_of_spaces + 1
 
-    int no_of_words = no_of_spaces + 1;
-    return no_of_words;
-}
+    return no_of_words
+
 
 # Function to count letters
 def letter_count(text)
