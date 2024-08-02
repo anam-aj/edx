@@ -6,9 +6,9 @@ from cs50 import get_float
 
 def main():
 
-   while True:
+    while True:
         change = get_float("Change owed: ")
-        if change < 0:
+        if change > 0:
             break
 
     dollars = change // 1
