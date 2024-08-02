@@ -8,46 +8,33 @@ def main():
 
     # Promts the user to enter card no
     while True:
-        card_number = get_long("Enter Card Number: ")
+        card_number = get_int("Enter Card Number: ")
         if card_number < 0:
             break
 
 
     # checks if checksum is correct
     if (check_sum(card_number) == 0)
-    {
+    
         # Checks criteria for American Express
-        if ((no_of_digits(card_number) == 15) &&
-            (first_two_digits(card_number) == 34 || first_two_digits(card_number) == 37))
-        {
-            printf("AMEX\n");
-        }
+        if ((no_of_digits(card_number) == 15) and
+            (first_two_digits(card_number) == 34 or first_two_digits(card_number) == 37))
+            print("AMEX\n")
 
         # Checks criteria for MasterCard
-        elif ((no_of_digits(card_number) == 16) &&
-                 (first_two_digits(card_number) > 50 && first_two_digits(card_number) < 56))
-        {
-            printf("MASTERCARD\n");
-        }
+        elif ((no_of_digits(card_number) == 16) and
+                 (first_two_digits(card_number) > 50 and first_two_digits(card_number) < 56))
+            print("MASTERCARD\n")
 
         # Checks criteria for Visa
-        elif ((no_of_digits(card_number) == 13 || no_of_digits(card_number) == 16) &&
+        elif ((no_of_digits(card_number) == 13 or no_of_digits(card_number) == 16) and
                  (first_digit(card_number) == 4))
-        {
-            print("VISA");
-        }
+            print("VISA")
 
         else
-        {
-            print("INVALID");
-        }
-    }
-
+            print("INVALID")
     else
-    {
-        print("INVALID");
-    }
-}
+        print("INVALID")
 
 # function to give first digit of the given number
 def first_digit(number):
