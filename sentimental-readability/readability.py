@@ -23,7 +23,7 @@ def main()
         print("Grade 16+")
 
     else:
-        print("Grade %i\n", (int) round(index))
+        print("Grade ", (int) round(index))
 
 
 # Funtion to count words
