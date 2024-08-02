@@ -65,6 +65,7 @@ def no_of_digits(number):
 
     digit_count = 0
     while (number > 0):
+        digit_count += 1
         number = (number // 10)
 
     return digit_count
