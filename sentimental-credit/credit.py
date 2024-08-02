@@ -3,20 +3,15 @@
 
 from cs50 import get_int
 
-int check_sum(long number);
-int no_of_digits(long number);
-long first_digit(long number);
-long first_two_digits(long number);
 
-int main(void)
-{
-    // Promts the user to enter card no
-    long card_number;
-    do
-    {
-        card_number = get_long("Enter Card Number: ");
-    }
-    while (card_number <= 0);
+def main()
+
+    # Promts the user to enter card no
+    while True:
+        card_number = get_long("Enter Card Number: ")
+        if card_number < 0:
+            break
+
 
     // checks if checksum is correct
     if (check_sum(card_number) == 0)
