@@ -1,4 +1,4 @@
-# Program to print half-pyramid
+# Program to print  
 
 # Funtion import
 from cs50 import get_int
@@ -31,7 +31,7 @@ def print_row(spaces, bricks):
     # Print centre spaces
     print("  ")
 
-    
+
 
     # Move to next line
     print("")
