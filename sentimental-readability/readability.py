@@ -42,8 +42,9 @@ def word_count(text):
 # Function to count letters
 def letter_count(text):
 
-    no_of_spaces = text.count(' ')
-    letters = len(text) - no_of_spaces
+    letters = 0
+    for a in text:
+        if a.
 
     return letters
 
