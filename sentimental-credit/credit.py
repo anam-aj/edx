@@ -17,10 +17,10 @@ def main():
 
         d1 = first_digit(card_number)
         d2 = first_two_digits(card_number)
-        d_count = no_of_digits(card_number)
+        d_num = no_of_digits(card_number)
 
         # Checks criteria for American Express
-        if (d_count == 15) and (d2 == 34 or d2 == 37):
+        if (d_num == 15) and (d2 == 34 or d2 == 37):
 
             print("AMEX")
 
