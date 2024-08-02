@@ -1,4 +1,6 @@
 # Program to print half-pyramid
+
+# Funtion import
 from cs50 import get_int
 
 
@@ -26,7 +28,7 @@ def print_row(spaces, bricks):
     for b in range(bricks):
         print("#", end="")
 
-    # Move to nex
+    # Move to next line
     print("")
 
 
