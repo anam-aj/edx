@@ -6,10 +6,6 @@ def main():
     # Prompts user to enter text
     user_text = input("Please enter the text: ")
 
-    #no_of_words = float(user_text.count(' ') + 1)
-    #no_of_letters = float(letter_count(user_text))
-    #no_of_sentences = float(sentence_count(user_text))
-
     no_of_words = float(word_count(user_text))
     no_of_letters = float(letter_count(user_text))
     no_of_sentences = float(sentence_count(user_text))
