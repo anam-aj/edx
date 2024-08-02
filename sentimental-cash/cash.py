@@ -14,7 +14,7 @@ def main():
     dollars = change // 1
     cents = change % 1
 
-    change = (dollars + cents)
+    change = int(dollars + cents)
 
     # No of Quarters
     quarters = no_of_coins(change, 25)
