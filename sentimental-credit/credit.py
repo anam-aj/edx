@@ -13,7 +13,7 @@ def main():
         if card_number > 0:
             break
 
-    # checks if checksum is correct
+    # Checks if checksum is correct
     if check_sum(card_number) == 0:
 
         d1 = first_digit(card_number)
@@ -42,7 +42,7 @@ def main():
         print("INVALID")
 
 
-# function to give first digit of the given number
+# Function to give first digit of the given number
 def first_digit(number):
 
     while no_of_digits(number) > 1:
@@ -51,7 +51,7 @@ def first_digit(number):
     return number
 
 
-# function to give first two digits of the given number
+# Function to give first two digits of the given number
 def first_two_digits(number):
 
     while no_of_digits(number) > 2:
@@ -60,7 +60,7 @@ def first_two_digits(number):
     return number
 
 
-# function to calculate no of digits in the given number
+# Function to calculate no of digits in the given number
 def no_of_digits(number):
 
     digit_count = 0
