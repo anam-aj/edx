@@ -1,7 +1,7 @@
 # Program to determine reading grade level
 
 
-def main()
+def main():
 
     # Prompts user to enter text
     user_text = input("Please enter the text: ")
@@ -23,7 +23,7 @@ def main()
         print("Grade 16+")
 
     else:
-        print("Grade ", (int) round(index))
+        print("Grade ", round(index))
 
 
 # Funtion to count words
@@ -45,7 +45,7 @@ def letter_count(text):
 
 
 # Funtcion to count sentences
-def sentence_count(text)
+def sentence_count(text):
 
     no_of_sentences = 0
     for a in len(text):
