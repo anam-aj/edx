@@ -4,7 +4,7 @@
 from cs50 import get_int
 
 
-def main()
+def main():
 
     # Promts the user to enter card no
     while True:
@@ -13,7 +13,7 @@ def main()
             break
 
 
-    // checks if checksum is correct
+    # checks if checksum is correct
     if (check_sum(card_number) == 0)
     {
         // Checks criteria for American Express
@@ -49,63 +49,57 @@ def main()
     }
 }
 
-// function to give first digit of the given number
-long first_digit(long number)
-{
-    while (no_of_digits(number) > 1)
-    {
-        number = (number / 10);
-    }
-    return number;
-}
+# function to give first digit of the given number
+def first_digit(number):
 
-// function to give first two digits of the given number
-long first_two_digits(long number)
-{
-    while (no_of_digits(number) > 2)
-    {
-        number = (number / 10);
-    }
-    return number;
-}
+    while no_of_digits(number) > 1:
+        number = number / 10
 
-// function to calculate no of digits in the given number
-int no_of_digits(long number)
-{
-    int digit_count = 0;
-    while (number > 0)
-    {
-        digit_count++;
+    return number
+
+# function to give first two digits of the given number
+def first_two_digits(number):
+
+    while no_of_digits(number) > 2:
         number = (number / 10);
-    }
+
+    return number;
+
+
+# function to calculate no of digits in the given number
+def no_of_digits(number):
+
+    digit_count = 0;
+    while (number > 0):
+        number = (number / 10);
+
     return digit_count;
-}
 
-// Defining checksum according to lunh alogrithm
-int check_sum(long number)
-{
-    int sum_of_even_place_digits = 0;
-    int sum_of_odd_place_digits = 0;
 
-    while (number > 0)
-    {
-        int digit_at_odd_place = number % 10;
-        sum_of_odd_place_digits += digit_at_odd_place;
-        number = (number / 10);
+# Defining checksum according to lunh alogrithm
+def check_sum(number)
 
-        int digit_at_even_place = number % 10;
-        int twice = (2 * digit_at_even_place);
-        if (twice > 0)
-        {
-            int unitdigit = (twice % 10);
-            sum_of_even_place_digits += unitdigit;
-            int tensdigit = (twice / 10);
-            sum_of_even_place_digits += tensdigit;
-        }
-        number = (number / 10);
-    }
+    sum_of_even_place_digits = 0
+    sum_of_odd_place_digits = 0
 
-    int net_sum = (sum_of_odd_place_digits) + (sum_of_even_place_digits);
-    int unit_digit = net_sum % 10;
-    return unit_digit;
-}
+    while (number > 0):
+
+        digit_at_odd_place = number % 10
+        sum_of_odd_place_digits += digit_at_odd_place
+        number = (number // 10)
+
+        digit_at_even_place = number % 10
+        twice = (2 * digit_at_even_place)
+
+        if (twice > 0):
+            unitdigit = (twice % 10)
+            sum_of_even_place_digits += unitdigit
+            tensdigit = (twice // 10)
+            sum_of_even_place_digits += tensdigit
+
+        number = (number // 10)
+
+
+    net_sum = (sum_of_odd_place_digits) + (sum_of_even_place_digits)
+    unit_digit = net_sum % 10
+    return unit_digit
