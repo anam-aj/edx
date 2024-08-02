@@ -43,22 +43,8 @@ def word_count(text):
 
 # Function to count letters
 def letter_count(text):
+    no_of_spaces = text.count(' ')
 
-    no_of_letters = 0
-    for i in len = strlen(text); i < len; i++)
-    {
-        if (text[i] >= 'a' && text[i] <= 'z')
-        {
-            no_of_letters++;
-        }
-        else if (text[i] >= 'A' && text[i] <= 'Z')
-        {
-            no_of_letters++;
-        }
-    }
-
-    return no_of_letters;
-}
 
 // Funtcion to count sentences
 int sentence_count(string text)
