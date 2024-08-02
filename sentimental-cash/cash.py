@@ -11,7 +11,7 @@ def main()
         if change < 0:
             break
     dollars = change / 1
-    cents =
+    cents = chabge % 
 
     # No of Quarters
     int quarters = no_of_coins(change, 25)
