@@ -9,7 +9,7 @@ def main():
     # Promts the user to enter card no
     while True:
         card_number = get_int("Enter Card Number: ")
-        if card_number < 0:
+        if card_number > 0:
             break
 
     # checks if checksum is correct
