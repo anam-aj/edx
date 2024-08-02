@@ -15,20 +15,23 @@ def main():
 
     # checks if checksum is correct
     if (check_sum(card_number) == 0)
-    
+
         # Checks criteria for American Express
         if ((no_of_digits(card_number) == 15) and
-            (first_two_digits(card_number) == 34 or first_two_digits(card_number) == 37))
-            print("AMEX\n")
+            (first_two_digits(card_number) == 34 or first_two_digits(card_number) == 37)):
+
+            print("AMEX")
 
         # Checks criteria for MasterCard
         elif ((no_of_digits(card_number) == 16) and
-                 (first_two_digits(card_number) > 50 and first_two_digits(card_number) < 56))
-            print("MASTERCARD\n")
+              (first_two_digits(card_number) > 50 and first_two_digits(card_number) < 56)):
+
+            print("MASTERCARD")
 
         # Checks criteria for Visa
         elif ((no_of_digits(card_number) == 13 or no_of_digits(card_number) == 16) and
-                 (first_digit(card_number) == 4))
+              (first_digit(card_number) == 4)):
+
             print("VISA")
 
         else
@@ -40,7 +43,7 @@ def main():
 def first_digit(number):
 
     while no_of_digits(number) > 1:
-        number = number / 10
+        number = number // 10
 
     return number
 
@@ -48,19 +51,19 @@ def first_digit(number):
 def first_two_digits(number):
 
     while no_of_digits(number) > 2:
-        number = (number / 10);
+        number = (number // 10)
 
-    return number;
+    return number
 
 
 # function to calculate no of digits in the given number
 def no_of_digits(number):
 
-    digit_count = 0;
+    digit_count = 0
     while (number > 0):
-        number = (number / 10);
+        number = (number // 10)
 
-    return digit_count;
+    return digit_count
 
 
 # Defining checksum according to lunh alogrithm
