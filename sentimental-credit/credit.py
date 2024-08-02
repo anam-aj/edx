@@ -16,20 +16,20 @@ def main():
     if check_sum(card_number) == 0:
 
         # Checks criteria for American Express
-        if ((no_of_digits(card_number) == 15) and
-            (first_two_digits(card_number) == 34 or first_two_digits(card_number) == 37)):
+        if (no_of_digits(card_number) == 15) and
+           (first_two_digits(card_number) == 34 or first_two_digits(card_number) == 37):
 
             print("AMEX")
 
         # Checks criteria for MasterCard
-        elif ((no_of_digits(card_number) == 16) and
-              (first_two_digits(card_number) > 50 and first_two_digits(card_number) < 56)):
+        elif (no_of_digits(card_number) == 16) and
+             (first_two_digits(card_number) > 50 and first_two_digits(card_number) < 56):
 
             print("MASTERCARD")
 
         # Checks criteria for Visa
-        elif ((no_of_digits(card_number) == 13 or no_of_digits(card_number) == 16) and
-              (first_digit(card_number) == 4)):
+        elif (no_of_digits(card_number) == 13 or no_of_digits(card_number) == 16) and
+             (first_digit(card_number) == 4):
 
             print("VISA")
 
