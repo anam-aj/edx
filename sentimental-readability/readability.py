@@ -16,10 +16,10 @@ def main():
     index = 0.0588 * L - 0.296 * S - 15.8
 
     # Checks and print grade level
-    if (index < 0):
+    if index < 0:
         print("Before Grade 1")
 
-    elif (index >= 16):
+    elif index >= 16:
         print("Grade 16+")
 
     else:
