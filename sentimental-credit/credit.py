@@ -19,6 +19,7 @@ def main():
         # Checks criteria for American Express
         if ((no_of_digits(card_number) == 15) and
             (first_two_digits(card_number) == 34 or first_two_digits(card_number) == 37)):
+            
 
             print("AMEX")
 
@@ -36,8 +37,10 @@ def main():
 
         else
             print("INVALID")
+
     else
         print("INVALID")
+
 
 # function to give first digit of the given number
 def first_digit(number):
@@ -89,9 +92,9 @@ def check_sum(number)
 
         number = (number // 10)
 
-
     net_sum = (sum_of_odd_place_digits) + (sum_of_even_place_digits)
     unit_digit = net_sum % 10
+
     return unit_digit
 
 
