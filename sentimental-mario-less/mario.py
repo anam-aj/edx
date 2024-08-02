@@ -18,16 +18,16 @@ def main()
 
 # Print row of bricks(right aligned)
 def print_row(spaces, bricks)
-{
+
     # Print spaces
     for s in range(spaces):
-        printf(" ");
+        print(" ")
 
     # Print bricks
-    for (int i = 0; i < bricks; i++)
-    {
-        printf("#");
-    }
+    for p in range(bricks):
+        print("#");
 
-    printf("")
-}
+    print("")
+
+main()
+
