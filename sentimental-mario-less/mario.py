@@ -24,7 +24,7 @@ def print_row(spaces, bricks):
         print(" ")
 
     # Print bricks
-    for p in range(bricks):
+    for b in range(bricks):
         print("#")
 
     print("")
