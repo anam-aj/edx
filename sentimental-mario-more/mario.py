@@ -17,16 +17,21 @@ def main():
         print_row(height - (r + 1), r + 1)
 
 
-# Print row of bricks(right aligned)
+# Print row
 def print_row(spaces, bricks):
 
-    # Print spaces
+    # Print left spaces
     for s in range(spaces):
         print(" ", end="")
 
     # Print bricks
     for b in range(bricks):
         print("#", end="")
+
+    # Print centre spaces
+    print("  ")
+
+    
 
     # Move to next line
     print("")
