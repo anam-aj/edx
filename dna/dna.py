@@ -28,7 +28,7 @@ def main():
 
     # TODO: Check database for matching profiles
     for i in range(len(list_persons)):
-        
+        for j in 
 
     return
 
