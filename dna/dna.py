@@ -16,15 +16,16 @@ def main():
         print(list1)
 
     # TODO: Read DNA sequence file into a variable
-    #with open (sys.argv[2]) as file:
-        #dna_sequence = file.read()
+    with open (sys.argv[2]) as file:
+        dna_sequence = file.read()
 
     # TODO: Find longest match of each STR in DNA sequence
     key_list = list(list1[0].keys())
     STR_list = key_list.pop(0)
 
-    for index in range(len(STR_list)):
-        if longest matcg STR_list[index]
+    for STR in STR_list:
+        if longest_match(dna_sequence, STR):
+            
 
 
 
