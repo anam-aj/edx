@@ -9,21 +9,18 @@ def main():
         print("Please provide proper command-line arguments")
         sys.exit(1)
 
-    dict_file = csv.DictReader(sys.argv[1])
-    list1 = list(dict_file)
-    print(list1)
-
     # TODO: Read database file into a variable
-    #with open (sys.argv[1]) as file:
-        #dict_file = csv.DictReader(file)
-        #list1 = list(dict_file)
-        #print(list1)
+    with open (sys.argv[1]) as file:
+        dict_file = csv.DictReader(file)
+        list1 = list(dict_file)
+        print(list1)
 
     # TODO: Read DNA sequence file into a variable
-    #with open (sys.argv[2]) as file:
-        #dna_sequence = file.read()
+    with open (sys.argv[2]) as file:
+        dna_sequence = file.read()
 
     # TODO: Find longest match of each STR in DNA sequence
+    
 
     # TODO: Check database for matching profiles
 
