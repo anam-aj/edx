@@ -14,7 +14,7 @@ def main():
         dict_file = csv.DictReader(file)
         list_persons = list(dict_file)
         print((list_persons[0]))
-        list_persons[0]["name"]
+        print(list_persons[0]['name'])
 
     # TODO: Read DNA sequence file into a variable
     with open(sys.argv[2]) as file:
