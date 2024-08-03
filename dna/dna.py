@@ -20,7 +20,7 @@ def main():
 
     # TODO: Find longest match of each STR in DNA sequence
     key_list = list(list_persons[0].keys())
-    print(key_list)
+    print(key_list[0])
     STR_list = key_list
     STR_list.pop(0)
 
