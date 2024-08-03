@@ -23,9 +23,10 @@ def main():
     key_list = list(list1[0].keys())
     STR_list = key_list.pop(0)
 
+    match_dict = {}
     for STR in STR_list:
         if longest_match(dna_sequence, STR):
-            
+            match_dict[STR] = 
 
 
 
