@@ -15,6 +15,7 @@ def main():
         list1 = list(dict_file)
 
     # TODO: Read DNA sequence file into a variable
+    dna_sequence = (sys.argv[2]).read()
 
     # TODO: Find longest match of each STR in DNA sequence
 
