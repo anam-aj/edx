@@ -22,11 +22,12 @@ def main():
     key_list = list(list_persons[1].keys())
     STR_list = list(key_list)
     STR_list.pop(0)
-    print(STR_list)
+
 
     match_dict = {}
     for STR in STR_list:
         match_dict[STR] = longest_match(dna_sequence, STR)
+    print(match_dict)
 
 
     # TODO: Check database for matching profiles
@@ -39,7 +40,7 @@ def main():
         if count == len(STR_list):
             print(list_persons[i][key_list[0]])
             print(list_persons[i])
-            print(key_list[0])
+
             return
 
     print("No match")
