@@ -20,14 +20,14 @@ def main():
 
     # TODO: Find longest match of each STR in DNA sequence
     key_list = list(list_persons[0].keys())
-    STR_list = key_list
+    STR_list = list(key_list)
     STR_list.pop(0)
 
     match_dict = {}
     for STR in STR_list:
         match_dict[STR] = longest_match(dna_sequence, STR)
 
-    print(list_persons)
+
     # TODO: Check database for matching profiles
     for i in range(len(list_persons)):
         count = 0
