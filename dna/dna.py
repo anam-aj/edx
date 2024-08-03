@@ -10,17 +10,18 @@ def main():
         sys.exit(1)
 
     # TODO: Read database file into a variable
-    with open (sys.argv[1]) as file:
+    with open(sys.argv[1]) as file:
         dict_file = csv.DictReader(file)
         list_persons = list(dict_file)
 
     # TODO: Read DNA sequence file into a variable
-    with open (sys.argv[2]) as file:
+    with open(sys.argv[2]) as file:
         dna_sequence = file.read()
 
     # TODO: Find longest match of each STR in DNA sequence
     key_list = list(list_persons[0].keys())
-    STR_list = key_list.pop(0)
+    cpy_list = key_list
+    STR_list = cpy_list.pop(0)
 
     match_dict = {}
     for STR in STR_list:
@@ -34,8 +35,10 @@ def main():
             if list_persons[i][STR_list[j]] != match_dict[STR_list[j]]:
                 break
         if count == len(STR_list):
-            print(list_persons[i])
+            print(list_persons[i][key_list[0]])
+            return
 
+    print("No match")
     return
 
 
