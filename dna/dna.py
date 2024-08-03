@@ -32,7 +32,7 @@ def main():
         count = 0
         for j in range(len(STR_list)):
             count += 1
-            if list_persons[i][STR_list[j]] != match_dict[STR_list[j]]:
+            if int(list_persons[i][STR_list[j]]) != int(match_dict[STR_list[j]]):
                 break
         if count == len(STR_list):
             print(list_persons[i][key_list[0]])
