@@ -38,6 +38,8 @@ def main():
                 break
         if count == len(STR_list):
             print(list_persons[i][key_list[0]])
+            print(list_persons[i])
+            print(key_list[0])
             return
 
     print("No match")
