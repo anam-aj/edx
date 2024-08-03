@@ -28,12 +28,12 @@ def main():
 
     # TODO: Check database for matching profiles
     for i in range(len(list_persons)):
-        count = o
-        for j in range(len(key_list) - 1):
+        count = 0
+        for j in range(len(STR_list)):
             if list_persons[i][STR_list[j]] != match_dict[STR_list[j]]:
                 break
-        if count == len()
-
+        if count == len():
+            
     return
 
 
