@@ -34,9 +34,9 @@ def main():
     for i in range(len(list_persons)):
         count = 0
         for j in range(len(STR_list)):
-            count += 1
             if int(list_persons[i][STR_list[j]]) != int(match_dict[STR_list[j]]):
                 break
+            count += 1
         if count == len(STR_list):
             print(list_persons[i][key_list[0]])
             print(list_persons[i])
