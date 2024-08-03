@@ -35,6 +35,7 @@ def main():
 
         # Variable to count the no of matching STR
         count = 0
+        
         # Loop through each STR of one person and compare with longest_match
         for j in range(len(STR_list)):
             if int(list_persons[i][STR_list[j]]) != int(match_dict[STR_list[j]]):
