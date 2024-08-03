@@ -40,6 +40,7 @@ def main():
         if count == len(STR_list):
             print(list_persons[i][key_list[0]])
             print(list_persons[i])
+            print(list_persons[0])
 
             return
 
