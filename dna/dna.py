@@ -24,19 +24,24 @@ def main():
     # List of STR
     STR_list = list(key_list)
     STR_list.pop(0)
-    #
+    # Dictionary od longest match of each STR
     match_dict = {}
     for STR in STR_list:
         match_dict[STR] = longest_match(dna_sequence, STR)
 
     # TODO: Check database for matching profiles
+    # Loop through each person given in database
     for i in range(len(list_persons)):
+
+        # Variable to count the no of matching STR
         count = 0
+        # Loop through each STR of one person and compare with longest_match
         for j in range(len(STR_list)):
             if int(list_persons[i][STR_list[j]]) != int(match_dict[STR_list[j]]):
                 break
             count += 1
 
+        # Prints winner if all STR match
         if count == len(STR_list):
             print(list_persons[i][key_list[0]])
             return
