@@ -13,8 +13,6 @@ def main():
     with open(sys.argv[1]) as file:
         dict_file = csv.DictReader(file)
         list_persons = list(dict_file)
-        print((list_persons[0]))
-        print(list_persons[0]['name'])
 
     # TODO: Read DNA sequence file into a variable
     with open(sys.argv[2]) as file:
@@ -22,9 +20,8 @@ def main():
 
     # TODO: Find longest match of each STR in DNA sequence
     key_list = list(list_persons[0].keys())
-    cpy_list = key_list
-    cpy_list.pop(0)
-    print(STR_list)
+    STR_list = key_list
+    STR_list.pop(0)
 
 
 
