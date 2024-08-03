@@ -24,7 +24,7 @@ def main():
     # List of STR
     STR_list = list(key_list)
     STR_list.pop(0)
-    # Dictionary od longest match of each STR
+    # Dictionary of longest match of each STR
     match_dict = {}
     for STR in STR_list:
         match_dict[STR] = longest_match(dna_sequence, STR)
