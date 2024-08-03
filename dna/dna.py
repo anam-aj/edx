@@ -21,9 +21,11 @@ def main():
     # TODO: Find longest match of each STR in DNA sequence
     # List of keys
     key_list = list(list_persons[1].keys())
+
     # List of STR
     STR_list = list(key_list)
     STR_list.pop(0)
+
     # Dictionary of longest match of each STR
     match_dict = {}
     for STR in STR_list:
@@ -35,7 +37,7 @@ def main():
 
         # Variable to count the no of matching STR
         count = 0
-        
+
         # Loop through each STR of one person and compare with longest_match
         for j in range(len(STR_list)):
             if int(list_persons[i][STR_list[j]]) != int(match_dict[STR_list[j]]):
