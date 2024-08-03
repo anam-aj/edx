@@ -27,8 +27,6 @@ def main():
     match_dict = {}
     for STR in STR_list:
         match_dict[STR] = longest_match(dna_sequence, STR)
-    print(match_dict)
-
 
     # TODO: Check database for matching profiles
     for i in range(len(list_persons)):
@@ -37,11 +35,9 @@ def main():
             if int(list_persons[i][STR_list[j]]) != int(match_dict[STR_list[j]]):
                 break
             count += 1
+            
         if count == len(STR_list):
             print(list_persons[i][key_list[0]])
-            print(list_persons[i])
-            print(list_persons[0])
-
             return
 
     print("No match")
