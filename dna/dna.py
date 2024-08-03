@@ -27,6 +27,7 @@ def main():
         match_dict[STR] = longest_match(dna_sequence, STR)
 
     # TODO: Check database for matching profiles
+    
 
     return
 
