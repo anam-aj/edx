@@ -21,11 +21,10 @@ def main():
 
     # TODO: Find longest match of each STR in DNA sequence
     key_list = list(list1[0].keys())
-    print(type(key_list))
-    key_list.pop(0)
-    print(key_list)
-    #for index in range(len(key_list)):
-        #if longest matcg key_list[index + 1]
+    STR_list = key_list.pop(0)
+
+    for index in range(len(STR_list)):
+        if longest matcg STR_list[index]
 
 
 
