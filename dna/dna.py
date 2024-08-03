@@ -22,6 +22,7 @@ def main():
     key_list = list(list_persons[1].keys())
     STR_list = list(key_list)
     STR_list.pop(0)
+    print(STR_list)
 
     match_dict = {}
     for STR in STR_list:
