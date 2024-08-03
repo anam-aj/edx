@@ -19,11 +19,12 @@ def main():
         dna_sequence = file.read()
 
     # TODO: Find longest match of each STR in DNA sequence
+    # List of keys
     key_list = list(list_persons[1].keys())
+    # List of STR
     STR_list = list(key_list)
     STR_list.pop(0)
-
-
+    #
     match_dict = {}
     for STR in STR_list:
         match_dict[STR] = longest_match(dna_sequence, STR)
@@ -35,7 +36,7 @@ def main():
             if int(list_persons[i][STR_list[j]]) != int(match_dict[STR_list[j]]):
                 break
             count += 1
-            
+
         if count == len(STR_list):
             print(list_persons[i][key_list[0]])
             return
