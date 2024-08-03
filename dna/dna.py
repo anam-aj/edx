@@ -29,7 +29,9 @@ def main():
     # TODO: Check database for matching profiles
     for i in range(len(list_persons)):
         for j in range(len(key_list) - 1):
-            if list_persons[i][STR_list[j]] != 
+            if list_persons[i][STR_list[j]] != match_dict[STR_list[j]]:
+                break
+        
 
     return
 
