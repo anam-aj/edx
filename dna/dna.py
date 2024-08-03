@@ -21,7 +21,8 @@ def main():
 
     # TODO: Find longest match of each STR in DNA sequence
     key_list = list1[0].keys()
-    for key in 
+    for index in range(len(key_list)):
+
 
 
     # TODO: Check database for matching profiles
