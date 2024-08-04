@@ -7,3 +7,4 @@ with open("favorites.csv", "r") as file:
 
     # Create reader
     reader = csv.reader(file)
+    print((reader))
