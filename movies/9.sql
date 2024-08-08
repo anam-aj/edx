@@ -1,5 +1,5 @@
 -- Select names
-SELECT name
+SELECT name, birth
 FROM people
 WHERE id IN
     (
@@ -14,4 +14,4 @@ WHERE id IN
         WHERE year = 2004
         )
     )
-ORDER BY ;
+ORDER BY birth limit 10;
