@@ -7,4 +7,4 @@ FROM songs;
 | 0.65906     | 0.484443     | 0.71646           |
 +-------------+--------------+-------------------+
 
-
+Infering from the data danceability is highest and valence is lowest(relatively),
