@@ -1,5 +1,5 @@
 -- Select names
-SELECT name, birth
+SELECT *
 FROM people
 WHERE id IN
     (
