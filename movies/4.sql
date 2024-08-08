@@ -3,6 +3,6 @@ FROM movies
 WHERE id = (
     SELECT movie_id
     FROM ratings
-    WHERE rating = 10.0
+    WHERE rating = 10
 )
-limit 100;
+limit 10000;
