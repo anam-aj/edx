@@ -5,8 +5,9 @@ WHERE id IN
     SELECT person_id
     FROM stars
     WHERE movie_id =
-        (SELECT title
+        (
+        SELECT id
         FROM movies
-        WHERE 
+        WHERE title = 'Toy Story'
         )
 )
