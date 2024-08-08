@@ -1,7 +1,7 @@
-SELECT AVG(rating)
+SELECT count(rating)
 FROM ratings
 WHERE movie_id = (
     SELECT id
     FROM movies
-    WHERE 
-)
+    WHERE year = 2012
+);
