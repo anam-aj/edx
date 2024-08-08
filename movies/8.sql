@@ -1,2 +1,3 @@
 SELECT name
-FROM people 
+FROM people JOIN stars JOIN movies
+ON people.id = 
