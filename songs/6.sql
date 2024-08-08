@@ -5,3 +5,4 @@ WHERE id = (
     FROM artists
     WHERE  name = 'Post Malone'
 );
+
