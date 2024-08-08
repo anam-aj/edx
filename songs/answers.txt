@@ -12,4 +12,8 @@
 Infering from the data danceability is highest and valence is lowest(relatively),
 so most likely their aura should be Purple.
 
-It may not be a true representaion of listner as it is based on 3 parame
+It may not be a true representaion of listner as it is based on 3 parameters
+namely energy, valence and danceability only, and does not take into account
+others like tempo, spechiness etc.
+
+To improve 
