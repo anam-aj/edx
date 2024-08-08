@@ -1,3 +1,3 @@
 SELECT name
 FROM songs
-where 
+WHERE name LIKE '%feat%';
