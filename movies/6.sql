@@ -1,7 +1,4 @@
-SELECT count(rating)
-FROM ratings
-WHERE movie_id = (
-    SELECT id
-    FROM movies
-    WHERE year = 2012
-);
+SELECT AVG(rating)
+FROM movies JOIN ratings
+ON movies.id = ratings.movie_id
+WHERE year = 10.0;
