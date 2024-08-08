@@ -1,3 +1,7 @@
 SELECT AVG(rating)
 FROM ratings
-WHERE 
+WHERE movie_id = (
+    SELECT id
+    FROM movies
+    WHERE 
+)
