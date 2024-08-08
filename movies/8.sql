@@ -1,4 +1,4 @@
-SELECT name
-FROM people
-WHERE people JOIN stars ON people.id = stars.person_id
-
+SELECT *
+FROM (people JOIN stars ON people.id = stars.person_id)
+JOIN (stars JOIN movies ON stars.movie_id = movies.id)
+limit 5;
