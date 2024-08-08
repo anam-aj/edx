@@ -8,3 +8,4 @@ FROM songs;
 +-------------+--------------+-------------------+
 
 Infering from the data danceability is highest and valence is lowest(relatively),
+
