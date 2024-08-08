@@ -6,11 +6,11 @@ WHERE id IN
     -- Select person IDs
     SELECT person_id
     FROM stars
-    WHERE movie_id =
+    WHERE movie_id IN
         (
         -- Select movie ID
         SELECT id
         FROM movies
-        WHERE title = 'Toy Story'
+        WHERE year = 'Toy Story'
         )
     );
