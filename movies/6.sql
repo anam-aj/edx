@@ -1,4 +1,3 @@
-SELECT AVG
-FROM movies
-WHERE title LIKE '%Harry Potter%'
-ORDER BY year;
+SELECT AVG(rating)
+FROM ratings
+WHERE 
