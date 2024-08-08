@@ -5,8 +5,8 @@
 
 SELECT count(title)
 FROM movies
-WHERE rating = (
-    select rating
+WHERE id = (
+    select movie_id
     from ratings
     where rating = 10
 );
