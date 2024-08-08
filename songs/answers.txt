@@ -17,4 +17,6 @@ namely energy, valence and danceability only, and does not take into account
 others like tempo, spechiness etc.
 
 To improve, we may take all the parameters into account and assign each parameter
-one colour, e.g. Red to Energy, loudness to blue, etc. Strength of colour will be d
+one colour, e.g. Red to Energy, loudness to blue, etc. Strength of colour will be
+directly or inverely propotional to the value of parameter, like more Energy means
+more Red and less loud means more blue. 
