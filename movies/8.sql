@@ -4,4 +4,9 @@ WHERE id IN
 (
     SELECT person_id
     FROM stars
+    WHERE movie_id =
+        (SELECT title
+        FROM movies
+        WHERE 
+        )
 )
