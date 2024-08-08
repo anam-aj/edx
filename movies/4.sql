@@ -1,6 +1,7 @@
 SELECT title
 FROM movies
-WHERE (
-    SELECT 
+WHERE id = (
+    SELECT movie_id
+    WHERE rating = 10.0
 )
-ORDER BY title;
+limit 100;
