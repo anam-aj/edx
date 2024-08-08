@@ -1,4 +1,4 @@
-(1) Aura of the given
+(1) Aura of the given listener
 
 
 +-------------+--------------+-------------------+
@@ -10,4 +10,6 @@
 Infering from the data danceability is highest and valence is lowest(relatively),
 so most likely their aura should be Purple.
 
+
+(2) 
 
