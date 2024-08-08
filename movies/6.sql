@@ -1,4 +1,4 @@
-SELECT count(rating)
+SELECT avg(rating)
 FROM ratings
 WHERE movie_id = (
     SELECT id
