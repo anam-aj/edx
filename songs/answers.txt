@@ -18,8 +18,8 @@ others like tempo, spechiness etc.
 
 To improve, we may take all the parameters into account and assign each parameter
 one colour, e.g. Red to Energy, loudness to blue, etc. Strength of colour will be
-directly or inverely propotional to the value of parameter, like more Energy means
+directly or inversely propotional to the value of parameter, like more Energy means
 more red and less Loud means more blue. Higher energy will correspond to more red
-and soothing music to more blue. It could be implemented using BGR values.
+and soothing music correspond to more blue. It could be implemented using BGR values.
 
 
