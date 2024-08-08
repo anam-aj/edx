@@ -3,9 +3,10 @@
 --ON movies.id = ratings.movie_id
 --WHERE rating = 10.0;
 
-SELECT title, id
+SELECT count(title)
 FROM movies
-WHERE id in = (
+WHERE id IN
+(
     select movie_id
     from ratings
     where rating = 10
