@@ -1,5 +1,6 @@
 SELECT title
-FROM movies
+FROM movies JOIN ratings
+ON 
 WHERE id = (
     SELECT movie_id
     FROM ratings
