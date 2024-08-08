@@ -1,4 +1,4 @@
-SELECT title
+SELECT *
 FROM movies JOIN ratings
 ON movies.id = ratings.movie_id
 limit 10;
