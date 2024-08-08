@@ -1,4 +1,4 @@
-SELECT *
+SELECT count(title)
 FROM movies JOIN ratings
 ON movies.id = ratings.movie_id
-limit 10;
+WHERE rating = 10.0;
