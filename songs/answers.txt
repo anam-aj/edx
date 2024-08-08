@@ -1,5 +1,5 @@
-SELECT AVG(energy), AVG(valence), AVG(danceability)
-FROM songs;
+(1) Aura of the given
+
 
 +-------------+--------------+-------------------+
 | AVG(energy) | AVG(valence) | AVG(danceability) |
@@ -8,4 +8,6 @@ FROM songs;
 +-------------+--------------+-------------------+
 
 Infering from the data danceability is highest and valence is lowest(relatively),
+so most likely their aura should be Purple.
+
 
