@@ -1,5 +1,7 @@
-(1) Aura of the given listener
+(1) Their aura should be Purple.
 
+
+(2)
 
 +-------------+--------------+-------------------+
 | AVG(energy) | AVG(valence) | AVG(danceability) |
@@ -8,8 +10,7 @@
 +-------------+--------------+-------------------+
 
 Infering from the data danceability is highest and valence is lowest(relatively),
-so most likely their aura should be Purple.
+so most likely their aura should be Purple. 
 
 
-(2) 
 
