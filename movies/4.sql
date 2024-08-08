@@ -3,7 +3,7 @@
 --ON movies.id = ratings.movie_id
 --WHERE rating = 10.0;
 
-SELECT (title, id)
+SELECT title, id
 FROM movies
 WHERE id = (
     select movie_id
