@@ -5,7 +5,7 @@
 
 SELECT title, id
 FROM movies
-WHERE id = (
+WHERE id in = (
     select movie_id
     from ratings
     where rating = 10
