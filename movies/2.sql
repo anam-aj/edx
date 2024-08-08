@@ -1,1 +1,3 @@
-SELECT 
+SELECT birth
+FROM people
+WHERE 
