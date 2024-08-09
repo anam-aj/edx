@@ -1,5 +1,5 @@
 -- Select title
-SELECT *
+SELECT title
 FROM movies
 WHERE id =
     (
@@ -11,14 +11,14 @@ WHERE id =
         -- Select person ID
         SELECT id
         FROM people
-        WHERE name = 'Rudolf Klein-Rhoden'
+        WHERE name = 'Jennifer Lawrence'
         )
         AND
         (
         -- Select person ID
         SELECT id
         FROM people
-        WHERE name = 'Lupu Pick'
+        WHERE name = 'Bradley Cooper'
         )
 
     );
