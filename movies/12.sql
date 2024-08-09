@@ -6,5 +6,5 @@ WHERE id IN
     -- Select movie IDs
     SELECT movie_id
     FROM stars
-    WHERE person_id = 2225369 and 177896
+    WHERE person_id = 459023 and 681726
     );
