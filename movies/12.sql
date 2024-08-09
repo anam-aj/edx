@@ -14,7 +14,7 @@ WHERE id IN (
             WHERE name = 'Bradley Cooper'
         )
     ) > 0
-    
+
     AND
     SUM(
         person_id = (
@@ -24,5 +24,4 @@ WHERE id IN (
             WHERE name = 'Jennifer Lawrence'
         )
     ) > 0
-
-    );
+);
