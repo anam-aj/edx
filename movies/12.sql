@@ -1,5 +1,5 @@
 -- Select title
-SELECT (title)
+SELECT count(title)
 FROM movies
 WHERE id IN
     (
@@ -21,5 +21,3 @@ WHERE id IN
         WHERE name = 'Bradley Cooper'
         )
     );
-
-    select movie_id from stars where person_id = (459029) and (681726);
