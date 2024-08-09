@@ -1,5 +1,5 @@
 -- Select name
-SELECT (name)
+SELECT name
 FROM people
 WHERE id IN(
     -- Select person IDs
