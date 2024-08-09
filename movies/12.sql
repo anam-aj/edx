@@ -13,8 +13,7 @@ WHERE id IN
             SELECT id
             FROM people
             WHERE name = 'Bradley Cooper'
-            ) > 0
-        )
+            )) > 0
 
         AND SUM(
             -- Select person ID
@@ -22,6 +21,5 @@ WHERE id IN
             SELECT id
             FROM people
             WHERE name = 'Jennifer Lawrence'
-            ) > 0
-        )
+            )) > 0
     );
