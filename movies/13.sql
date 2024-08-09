@@ -2,7 +2,7 @@
 SELECT name
 FROM people
 WHERE id IN(
-    -- Select movie IDs
+    -- Select person IDs
     SELECT movie_id
     FROM stars
     GROUP by movie_id
