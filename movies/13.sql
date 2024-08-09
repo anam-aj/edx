@@ -1,13 +1,13 @@
 -- Select name
-SELECT title
-FROM movies
+SELECT name
+FROM people
 WHERE id IN(
     -- Select movie IDs
     SELECT movie_id
     FROM stars
     GROUP by movie_id
     HAVING SUM(
-        
+
     )
         person_id = (
             -- Select person ID
