@@ -1,5 +1,5 @@
 -- Select title
-SELECT (title)
+SELECT count(title)
 FROM movies
 WHERE id IN
     (
