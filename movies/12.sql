@@ -1,8 +1,7 @@
 -- Select title
 SELECT title
 FROM movies
-WHERE id IN
-    (
+WHERE id IN (
     -- Select movie IDs
     SELECT movie_id
     FROM stars
@@ -15,7 +14,7 @@ WHERE id IN
             WHERE name = 'Bradley Cooper'
         )
     ) > 0
-
+    
     AND
     SUM(
         person_id = (
@@ -25,5 +24,5 @@ WHERE id IN
             WHERE name = 'Jennifer Lawrence'
         )
     ) > 0
-    
+
     );
