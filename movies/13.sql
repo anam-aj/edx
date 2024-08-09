@@ -1,16 +1,17 @@
--- Select names
-SELECT name
-FROM people
-WHERE id IN
-    (
+-- Select name
+SELECT title
+FROM movies
+WHERE id IN(
     -- Select movie IDs
-    SELECT person_id
-    FROM directors
-    WHERE movie_id IN
-        (
-        -- Select movie IDs
-        SELECT movie_id
-        FROM ratings
-        WHERE rating >= 9.0
-        )
-    );
+    SELECT movie_id
+    FROM stars
+    GROUP by movie_id
+    HAVING SUM(
+        person_id = (
+            -- Select person ID
+            SELECT id
+            FROM people
+            WHERE name = 'Bradley Cooper'
+
+)
+
