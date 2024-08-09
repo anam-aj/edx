@@ -16,4 +16,5 @@ WHERE id IN(
         )
     )
 )
+AND name != 'Kevin Bacon'
 ORDER BY name;
