@@ -1,9 +1,7 @@
 SELECT count(title)
 FROM movies
-WHERE id IN
-(
-    select movie_id
-    from ratings
-    where rating = 10
+WHERE id IN (
+    SELECT movie_id
+    FROM ratings
+    WHERE rating = 10
 );
-
