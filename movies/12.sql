@@ -1,7 +1,7 @@
--- Select title
-SELECT count(title)
+/*-- Select title
+SELECT *
 FROM movies
-WHERE id IN
+WHERE id =*/
     (
     -- Select movie IDs
     SELECT movie_id
