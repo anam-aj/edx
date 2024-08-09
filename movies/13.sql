@@ -1,11 +1,11 @@
 -- Select name
 SELECT name
 FROM people
-WHERE id IN(
+WHERE id IN (
     -- Select person IDs
     SELECT person_id
     FROM stars
-    WHERE movie_id IN(
+    WHERE movie_id IN (
         SELECT movie_id
         FROM stars
         WHERE person_id = (
