@@ -6,10 +6,5 @@ WHERE id IN
     -- Select movie IDs
     SELECT movie_id
     FROM stars
-    WHERE person_id =
-        (
-        SELECT id
-        FROM people
-        WHERE name = 'Jennifer Lawrence'
-        )
+    WHERE person_id = 2225369 and 177896
     );
