@@ -1,4 +1,6 @@
-    -- Select movie IDs
+
+    select *
+    from 
     SELECT *
     FROM stars
     WHERE person_id =
