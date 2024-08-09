@@ -1,5 +1,5 @@
 -- Select name
-SELECT count(name)
+SELECT (name)
 FROM people
 WHERE id IN(
     -- Select person IDs
@@ -16,4 +16,4 @@ WHERE id IN(
         )
     )
 )
-GROUP BY people;
+ORDER BY name;
