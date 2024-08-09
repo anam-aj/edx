@@ -15,4 +15,5 @@ WHERE id IN(
             WHERE name = 'Kevin Bacon'
         )
     )
-);
+)
+GROUP BY people;
