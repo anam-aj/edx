@@ -1,6 +1,7 @@
 -- Select title
 SELECT title
 FROM movies
+JOIN 
 WHERE id IN
     (
     -- Select movie IDs
