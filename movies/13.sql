@@ -12,8 +12,10 @@ WHERE id IN(
             -- Select person ID
             SELECT id
             FROM people
-            WHERE name = 'Kevin Bacon'
+            WHERE (
+                name = 'Kevin Bacon'
                 AND birth = 1958
+            )
         )
     )
 )
