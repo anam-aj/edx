@@ -8,7 +8,8 @@ WHERE id IN
     FROM stars
     WHERE person_id =
         (
-        SELECT 
+        SELECT id
+        FROM people
+        WHERE name = 'Jennifer Lawrence'
         )
-    )
-limit 20;
+    );
