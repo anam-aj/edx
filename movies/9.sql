@@ -1,5 +1,5 @@
 -- Select names
-SELECT *
+SELECT name
 FROM people
 WHERE id IN
     (
@@ -8,10 +8,10 @@ WHERE id IN
     FROM stars
     WHERE movie_id IN
         (
-        -- Select movie ID
+        -- Select movie IDs
         SELECT id
         FROM movies
         WHERE year = 2004
         )
     )
-ORDER BY birth limit 10;
+ORDER BY birth;
