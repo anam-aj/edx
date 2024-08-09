@@ -21,3 +21,5 @@ WHERE id IN
         WHERE name = 'Bradley Cooper'
         )
     );
+
+    select movie_id from stars where person_id = (459029) and (681726);
