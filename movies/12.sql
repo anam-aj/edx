@@ -1,10 +1,5 @@
--- Select title
-SELECT count(title)
-FROM movies
-WHERE id IN
-    (
     -- Select movie IDs
-    SELECT movie_id
+    SELECT *
     FROM stars
     WHERE person_id =
         (
@@ -12,12 +7,4 @@ WHERE id IN
         SELECT id
         FROM people
         WHERE name = 'Bradley Cooper'
-        )
-        AND
-        (
-        -- Select person ID
-        SELECT id
-        FROM people
-        WHERE name = 'Jennifer Lawrence'
-        )
-    );
+        );
