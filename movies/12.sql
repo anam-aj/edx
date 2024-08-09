@@ -18,7 +18,7 @@ WHERE id =
         -- Select person ID
         SELECT id
         FROM people
-        WHERE name = 'Rudolf Klein-Rhoden'
+        WHERE name = 'Lupu Pick'
         )
 
     );
