@@ -3,9 +3,9 @@ SELECT name
 FROM people
 WHERE id IN(
     -- Select person IDs
-    SELECT movie_id
+    SELECT person_id
     FROM stars
-    GROUP by movie_id
+    WHERE movie_id
     HAVING SUM(
         person_id = (
             -- Select person ID
