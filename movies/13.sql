@@ -1,15 +1,16 @@
--- Select name
+-- Select name of co-stars of Kevin Bacon
 SELECT name
 FROM people
 WHERE id IN (
-    -- Select person IDs
+    -- Select co-stars' IDs
     SELECT person_id
     FROM stars
     WHERE movie_id IN (
+        -- Select movies of Kevin Bacon
         SELECT movie_id
         FROM stars
         WHERE person_id = (
-            -- Select person ID
+            -- Select Kevin's ID
             SELECT id
             FROM people
             WHERE (
