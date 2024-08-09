@@ -13,7 +13,8 @@ WHERE id IN
             SELECT id
             FROM people
             WHERE name = 'Bradley Cooper'
-        )) > 0
+        )
+    ) > 0
     AND
     SUM(
         person_id = (
