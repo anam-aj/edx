@@ -7,20 +7,21 @@ WHERE id IN
     SELECT movie_id
     FROM stars
     GROUP by movie_id
-    HAVING COUNT(
+    HAVING SUM(
         -- Select person ID
             person_id = (
             SELECT id
             FROM people
             WHERE name = 'Bradley Cooper'
-            ) = 1
+            ) > 0
         )
 
-        AND COUNT(
+        AND SUM(
             -- Select person ID
             person_id = (
             SELECT id
             FROM people
-            WHERE name = 'Bradley Cooper'
-            ) = 1
-    )
+            WHERE name = 'Jennifer Lawrence'
+            ) > 0
+        )
+    );
