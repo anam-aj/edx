@@ -19,5 +19,14 @@ WHERE id IN (
         )
     )
 )
-AND name != 'Kevin Bacon'
+AND id != (
+    -- Exclude Kevin Bacon's ID
+    SELECT id
+    FROM people
+    WHERE (
+        name = 'Kevin Bacon'
+        AND birth = 1958
+    )
+)
+--AND name != 'Kevin Bacon'
 ORDER BY name;
