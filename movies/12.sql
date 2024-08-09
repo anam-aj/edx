@@ -11,13 +11,13 @@ WHERE id IN
         -- Select person ID
         SELECT id
         FROM people
-        WHERE name = 'Lupu Pick'
+        WHERE name = 'Jennifer Lawrence'
         )
         AND
         (
         -- Select person ID
         SELECT id
         FROM people
-        WHERE name = 'Rudolf Klein-Rhoden'
+        WHERE name = 'Bradley Cooper'
         )
     );
