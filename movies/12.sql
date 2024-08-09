@@ -8,7 +8,7 @@ WHERE id IN
     FROM stars
     GROUP by movie_id
     HAVING SUM
-            ( person_id =
+            (person_id =
             -- Select person ID
             (
             SELECT id
@@ -20,7 +20,7 @@ WHERE id IN
             AND
 
             SUM
-            ( person_id =
+            (person_id =
             -- Select person ID
             (
             SELECT id
