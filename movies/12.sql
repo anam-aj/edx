@@ -1,11 +1,14 @@
 -- Select title
 SELECT (title)
 FROM movies
-WHERE movies.id IN
+WHERE id IN
     (
     -- Select movie IDs
     SELECT movie_id
     FROM stars
-    WHERE 
+    WHERE person_id =
+        (
+        SELECT 
+        )
     )
 limit 20;
