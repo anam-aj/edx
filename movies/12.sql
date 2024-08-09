@@ -6,6 +6,7 @@ WHERE id IN
     -- Select movie IDs
     SELECT movie_id
     FROM stars
+    
     WHERE person_id =
         (
         -- Select person ID
