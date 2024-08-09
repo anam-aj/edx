@@ -1,7 +1,7 @@
 -- Select title
 SELECT title
 FROM movies
-JOIN 
+JOIN stars ON 
 WHERE id IN
     (
     -- Select movie IDs
