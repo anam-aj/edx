@@ -47,3 +47,5 @@ SELECT * FROM atm_transactions WHERE (year = 2023 AND month = 7 AND day = 28 AND
 +----------------+--------+
 */
 
+-- Get the structure of table phone_calls
+SELECT * FROM phone_calls limit 5;
