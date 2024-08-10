@@ -167,5 +167,8 @@ WHERE passport_number IN (
     )
 )
 
-AND
-phone_number = ((375) 555-8161 or (725) 555-3243);
+
+SELECT *
+FROM people
+limit 2;
+WHERE phone_number = (((375) 555-8161) or ((725) 555-3243));
