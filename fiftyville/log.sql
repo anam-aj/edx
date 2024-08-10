@@ -32,3 +32,18 @@ SELECT * FROM atm_transactions limit 5;
 
 -- Get ATM transaction from ATM on Leggett Street on the morning of the theft day
 SELECT * FROM atm_transactions WHERE (year = 2023 AND month = 7 AND day = 28 AND transaction_type = 'withdraw' AND atm_location = 'Leggett Street');
+/*
++----------------+--------+
+| account_number | amount |
++----------------+--------+
+| 28500762       | 48     |
+| 28296815       | 20     |
+| 76054385       | 60     |
+| 49610011       | 50     |
+| 16153065       | 80     |
+| 25506511       | 20     |
+| 81061156       | 30     |
+| 26013199       | 35     |
++----------------+--------+
+*/
+
