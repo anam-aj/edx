@@ -29,3 +29,6 @@ SELECT * FROM bakery_security_logs WHERE (year = 2023 AND month = 7 AND day = 28
 
 -- Get the structure of table atm_transactions
 SELECT * FROM atm_transactions limit 5;
+
+-- Get ATM transaction on the morning of the theft day
+SELECT * FROM atm_transactions WHERE (year = 2023 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street');
