@@ -168,6 +168,6 @@ WHERE passport_number IN (
 )
 
 
-SELECT 
+SELECT phone_number
 FROM people
-WHERE phone_number = (375) 555-8161
+limit 2
