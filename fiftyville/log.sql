@@ -31,4 +31,4 @@ SELECT * FROM bakery_security_logs WHERE (year = 2023 AND month = 7 AND day = 28
 SELECT * FROM atm_transactions limit 5;
 
 -- Get ATM transaction from ATM on Leggett Street on the morning of the theft day
-SELECT * FROM atm_transactions WHERE (year = 2023 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street');
+SELECT * FROM atm_transactions WHERE (year = 2023 AND month = 7 AND day = 28 AND transaction_type = 'withdraw' AND atm_location = 'Leggett Street');
