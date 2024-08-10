@@ -15,7 +15,8 @@ SELECT * FROM interviews limit 5;
 
 --  Get the interviwes of the the day of theft
 SELECT * FROM interviews WHERE (year = 2023 AND month = 7 AND day = 28 AND transcript LIKE '%bakery%');
--- 1st witness : theif left within 10 mins
+-- 1st witness : theif left within 10 mins by caar from parking lot
+-- 2nd witness : 
 
 -- Get the structure of table bakery_security_logs
 SELECT * FROM bakery_security_logs limit 5;
