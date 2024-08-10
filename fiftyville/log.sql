@@ -7,4 +7,4 @@
 select * from crime_scene_reports limit 5;
 
 --  Get the reports of the the day of theft
-select * from crime_scene_reports where  ;
+select * from crime_scene_reports where year  ;
