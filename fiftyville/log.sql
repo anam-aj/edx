@@ -68,5 +68,8 @@ SELECT * FROM phone_calls WHERE (year = 2023 AND month = 7 AND day = 28 AND dura
 | (338) 555-6650 | (704) 555-2131 |
 +----------------+----------------+
 */
--- Get details of airport   
+-- Get details of airport
 sqlite> SELECT * FROM airports WHERE city LIKE '%Fiftyville%';
+
+-- Get flights departuring from fiftyville on next day
+sqlite> SELECT * FROM flights WHERE (year = 2023 AND month = 7 AND day = 29 AND origin_airport_id = 8);
