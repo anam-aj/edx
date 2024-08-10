@@ -114,7 +114,6 @@ passport_number IN (
             AND month = 7
             AND day = 29
             AND origin_airport_id = 8
+        )
     )
-)
-
 );
