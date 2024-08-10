@@ -166,3 +166,6 @@ WHERE passport_number IN (
         )
     )
 )
+
+AND
+phone_number = 
