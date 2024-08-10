@@ -87,5 +87,5 @@ WHERE license_plate IN (
         AND hour = 10
         AND minute <=30
         AND activity = 'exit'
-        )
+    )
 );
