@@ -168,4 +168,4 @@ WHERE passport_number IN (
 )
 
 AND
-phone_number = ((375) 555-8161)
+phone_number = ((375) 555-8161 )
