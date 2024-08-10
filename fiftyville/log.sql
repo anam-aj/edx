@@ -57,8 +57,10 @@ WHERE account_number IN (
     WHERE (
         year = 2023
         AND month = 7
-        AND day = 28 AND transaction_type = 'withdraw' AND atm_location = 'Leggett Street');
-
+        AND day = 28
+        AND transaction_type = 'withdraw'
+        AND atm_location = 'Leggett Street'
+    )
 )
 
 -- Get the structure of table phone_calls
