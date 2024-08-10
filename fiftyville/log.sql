@@ -22,5 +22,6 @@ SELECT * FROM interviews WHERE (year = 2023 AND month = 7 AND day = 28 AND trans
 -- Get the structure of table bakery_security_logs
 SELECT * FROM bakery_security_logs limit 5;
 
---  Get the security log of the day of theft
-SELECT * FROM bakery_security_logs WHERE (year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND minute <=30 AND activity = 'exit' );
+--  Get the security log of the cars exited parking lot around the time of theft
+SELECT * FROM bakery_security_logs WHERE (year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND minute <=30 AND activity = 'exit');
+-- Licence plate of the cars exited from from from 10:00 to 10:30 are 
