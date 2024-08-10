@@ -91,5 +91,6 @@ WHERE license_plate IN (
 )
 AND
 phone_number IN (
-    SELECT * FROM phone_calls WHERE (year = 2023 AND month = 7 AND day = 28 AND duration < 60);
+    SELECT caller
+     FROM phone_calls WHERE (year = 2023 AND month = 7 AND day = 28 AND duration < 60);
 );
