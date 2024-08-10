@@ -153,7 +153,7 @@ id IN (
 
 
 
-SELECT phone_no
+SELECT phone_number
 FROM (
     SELECT *
 FROM people
