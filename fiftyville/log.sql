@@ -94,7 +94,7 @@ SELECT * FROM flights WHERE (year = 2023 AND month = 7 AND day = 29 AND origin_a
 
 SELECT *
 FROM people
-WHERE (license_plate IN (
+WHERE license_plate IN (
     SELECT license_plate
     FROM bakery_security_logs
     WHERE (
@@ -131,4 +131,20 @@ passport_number IN (
             AND origin_airport_id = 8
         )
     )
-));
+)
+AND
+id IN (
+    SELECT person_id
+    FROM bank_accounts
+    WHERE account_number IN (
+        SELECT account_number
+        FROM atm_transactions
+        WHERE (
+            year = 2023
+            AND month = 7
+            AND day = 28
+            AND transaction_type = 'withdraw'
+            AND atm_location = 'Leggett Street'
+    )   
+)
+);
