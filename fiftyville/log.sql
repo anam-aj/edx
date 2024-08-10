@@ -85,7 +85,7 @@ WHERE flight_id IN (
         AND day = 29
         AND origin_airport_id = 8
     )
-);
+)
 
 SELECT *
 FROM people
@@ -111,4 +111,5 @@ phone_number IN (
         AND day = 28
         AND duration < 60
     )
-);
+)
+AND ;
