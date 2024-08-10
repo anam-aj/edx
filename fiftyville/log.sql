@@ -73,3 +73,19 @@ sqlite> SELECT * FROM airports WHERE city LIKE '%Fiftyville%';
 
 -- Get flights departuring from fiftyville on next day
 sqlite> SELECT * FROM flights WHERE (year = 2023 AND month = 7 AND day = 29 AND origin_airport_id = 8);
+
+
+SELECT *
+FROM people
+WHERE license_plate IN (
+    SELECT *
+    FROM bakery_security_logs
+    WHERE (
+        year = 2023
+        AND month = 7
+        AND day = 28
+        AND hour = 10
+        AND minute <=30
+        AND activity = 'exit'
+        )
+);
