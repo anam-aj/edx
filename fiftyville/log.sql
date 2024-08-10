@@ -170,4 +170,4 @@ WHERE passport_number IN (
 
 SELECT phone_number
 FROM people
-limit 2
+WHERE phone_number = '(375) 555-8161' or 
