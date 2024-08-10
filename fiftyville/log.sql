@@ -19,4 +19,4 @@ SELECT * FROM interviews WHERE (year = 2023 AND month = 7 AND day = 28 AND trans
 SELECT * FROM bakery_security_logs limit 5;
 
 --  Get the security log of the day of theft
-SELECT * FROM bakery_security_logs WHERE (year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND minute <=30 and );
+SELECT * FROM bakery_security_logs WHERE (year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND minute <=30 AND activity = 'exit' );
