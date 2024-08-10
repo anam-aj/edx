@@ -112,4 +112,7 @@ phone_number IN (
         AND duration < 60
     )
 )
-AND ;
+AND
+passport_number IN (
+    
+);
