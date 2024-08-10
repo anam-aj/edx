@@ -168,6 +168,6 @@ WHERE passport_number IN (
 )
 
 
-SELECT phone_number
+SELECT *
 FROM people
-WHERE phone_number = '(375) 555-8161' or 
+WHERE phone_number = '(375) 555-8161' or '(725) 555-3243'
