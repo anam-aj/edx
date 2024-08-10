@@ -48,7 +48,7 @@ SELECT * FROM atm_transactions WHERE (year = 2023 AND month = 7 AND day = 28 AND
 +----------------+--------+
 */
 
--- GET person_id who made withdrw
+-- GET person_id who made withdrawls on theft day morning
 
 -- Get the structure of table phone_calls
 SELECT * FROM phone_calls limit 5;
