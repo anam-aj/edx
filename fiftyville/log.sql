@@ -150,7 +150,9 @@ id IN (
 );
 
 
-
+SELECT *
+FROM people
+WHERE passport_number IN (
     SELECT passport_number
     FROM passengers
     WHERE flight_id IN (
@@ -163,3 +165,4 @@ id IN (
             AND origin_airport_id = 8
         )
     )
+)
