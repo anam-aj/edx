@@ -4,6 +4,7 @@
 .schema
 
 -- Get the structure of table crime_scene_report
-select *  from crime_scene_reports limit 5;
+select * from crime_scene_reports limit 5;
 
---  Get the 
+--  Get the reports of the the day of theft
+select * from crime_scene_reports where  ;
