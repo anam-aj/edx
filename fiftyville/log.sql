@@ -88,4 +88,6 @@ WHERE license_plate IN (
         AND minute <=30
         AND activity = 'exit'
     )
-);
+)
+AND
+phone_;
