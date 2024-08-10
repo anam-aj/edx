@@ -13,4 +13,4 @@ SELECT * FROM crime_scene_reports WHERE (year = 2023 AND month = 7 AND day = 28)
 SELECT * FROM interviews limit 5;
 
 --  Get the interviwes of the the day of theft
-SELECT * FROM interviews WHERE (year = 2023 AND month = 7 AND day = 28);
+SELECT * FROM interviews WHERE (year = 2023 AND month = 7 AND day = 28 AND transcript LIKE '%bakery%');
