@@ -51,4 +51,4 @@ SELECT * FROM atm_transactions WHERE (year = 2023 AND month = 7 AND day = 28 AND
 SELECT * FROM phone_calls limit 5;
 
 --  Get the call details on the the day of theft
-SELECT * FROM phone_calls WHERE (year = 2023 AND month = 7 AND day = 28);
+SELECT * FROM phone_calls WHERE (year = 2023 AND month = 7 AND day = 28 AND duration < 60);
