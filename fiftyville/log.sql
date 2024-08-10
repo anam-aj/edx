@@ -27,5 +27,5 @@ SELECT * FROM bakery_security_logs WHERE (year = 2023 AND month = 7 AND day = 28
 -- Licence plate of the cars exited from from from 10:00 to 10:30 are
 -- 5P2BI95, 94KL13X, 6P58WS2, 4328GD8, G412CB7, L93JTIZ, 322W7JE, 0NTHK55
 
--- Get the structure of table bakery_security_logs
-SELECT * FROM bakery_security_logs limit 5;
+-- Get the structure of table atm_transactions
+SELECT * FROM atm_transactions limit 5;
