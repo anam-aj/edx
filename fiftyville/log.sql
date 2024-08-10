@@ -52,7 +52,13 @@ SELECT * FROM atm_transactions WHERE (year = 2023 AND month = 7 AND day = 28 AND
 SELECT person_id
 FROM bank_accounts
 WHERE account_number IN (
-    
+    SELECT account_number
+    FROM atm_transactions
+    WHERE (
+        year = 2023
+        AND month = 7
+        AND day = 28 AND transaction_type = 'withdraw' AND atm_location = 'Leggett Street');
+
 )
 
 -- Get the structure of table phone_calls
