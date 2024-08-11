@@ -304,3 +304,6 @@ AND license_plate IN (
         AND activity = 'exit'
     )
 )
+AND passport_number IN (
+    
+)
