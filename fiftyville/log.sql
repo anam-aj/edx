@@ -361,4 +361,4 @@ AND passport_number IN (
 -- Details of person who received the call from theif
 SELECT *
 FROM people
-WHERE phone_number = 
+WHERE phone_number = '(375) 555-8161'
