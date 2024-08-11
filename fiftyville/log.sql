@@ -197,16 +197,7 @@ WHERE license_plate IN (
 | 686048 | Bruce   | (367) 555-5533 | 5773159633      | 94KL13X       |
 +--------+---------+----------------+-----------------+---------------+
 */
-/*
-+-----------+
-| person_id |
-+-----------+
-| 686048    |
-| 514354    |
-| 396669    |
-| 467400    |
-+-----------+
-*/
+
 
 -- Get passport_number of people who took flight out of fiftyville
 -- on the next day of theft
@@ -272,7 +263,7 @@ WHERE flight_id IN (
 -- Who made withdrawl on theft day marning from leggett street ATM
 -- AND whose license plate match with the security log of the cars
 --     exited parking lot around the time of theft
--- AND 
+-- AND
 SELECT *
 FROM people
 WHERE id IN (
