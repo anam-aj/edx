@@ -189,19 +189,8 @@ WHERE license_plate IN (
 */
 
 
-AND
-phone_number IN (
-    SELECT caller
-    FROM phone_calls
-    WHERE (
-        year = 2023
-        AND month = 7
-        AND day = 28
-        AND duration < 60
-    )
-)
-AND
-passport_number IN (
+-- Get passport_number of people who took flight out of fiftyville
+-- on the next day of theft
     SELECT passport_number
     FROM passengers
     WHERE flight_id IN (
@@ -215,6 +204,9 @@ passport_number IN (
         )
     )
 )
+
+
+
 AND
 id IN (
     SELECT person_id
