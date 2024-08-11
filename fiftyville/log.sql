@@ -264,8 +264,8 @@ WHERE license_plate IN (
 */
 
 
--- Get passport_number of people who took flight out of fiftyville
--- on the next day of theft
+-- Get passport_number of people who took first flight
+-- out of fiftyville on the next day of theft
 SELECT passport_number
 FROM passengers
 WHERE flight_id IN (
@@ -329,7 +329,7 @@ WHERE flight_id IN (
 -- AND made a call of duration less than 1 min on theft day
 -- AND whose license plate match with the security log of the cars
 --     exited parking lot around the time of theft
--- AND
+-- AND took the 1st flight next day out of town
 SELECT *
 FROM people
 WHERE id IN (
