@@ -266,7 +266,21 @@ WHERE flight_id IN (
 --
 SELECT *
 FROM people
-WHERE 
+WHERE id IN (
+    SELECT person_id
+    FROM bank_accounts
+    WHERE account_number IN (
+        SELECT account_number
+        FROM atm_transactions
+        WHERE (
+            year = 2023
+            AND month = 7
+            AND day = 28
+            AND transaction_type = 'withdraw'
+            AND atm_location = 'Leggett Street'
+        )
+    )
+)
 WHERE license_plate IN (
     SELECT license_plate
     FROM bakery_security_logs
