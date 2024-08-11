@@ -153,7 +153,7 @@ SELECT *
 FROM phone_calls
 limit 5
 
---  Get the call details on the the day of theft
+--  Get the call details on the day of theft
 SELECT *
 FROM phone_calls
 WHERE (
