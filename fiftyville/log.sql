@@ -156,7 +156,7 @@ SELECT * FROM flights WHERE (year = 2023 AND month = 7 AND day = 29 AND origin_a
 +----+-------------------+------------------------+------+-------+-----+------+--------+
 */
 
-
+-- Get the details of people whose licencce plate matches
 SELECT *
 FROM people
 WHERE license_plate IN (
@@ -171,6 +171,7 @@ WHERE license_plate IN (
         AND activity = 'exit'
     )
 )
+
 AND
 phone_number IN (
     SELECT caller
