@@ -261,6 +261,7 @@ WHERE flight_id IN (
 
 -- Get the details of people
 -- Who made withdrawl on theft day marning from leggett street ATM
+-- AND made a call of duration less than 1 min on theft day
 -- AND whose license plate match with the security log of the cars
 --     exited parking lot around the time of theft
 -- AND
@@ -281,6 +282,7 @@ WHERE id IN (
         )
     )
 )
+AND 
 AND license_plate IN (
     SELECT license_plate
     FROM bakery_security_logs
