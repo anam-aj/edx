@@ -282,7 +282,16 @@ WHERE id IN (
         )
     )
 )
-AND 
+AND phone_number IN (
+    SELECT caller
+    FROM phone_calls
+    WHERE (
+        year = 2023
+        AND month = 7
+        AND day = 28
+        AND duration < 60
+    )
+)
 AND license_plate IN (
     SELECT license_plate
     FROM bakery_security_logs
