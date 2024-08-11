@@ -156,7 +156,10 @@ SELECT * FROM flights WHERE (year = 2023 AND month = 7 AND day = 29 AND origin_a
 +----+-------------------+------------------------+------+-------+-----+------+--------+
 */
 
- -- 
+ -- Get the first flight departuring from fiftyville on next day
+ 
+
+
 
 -- Get the details of people whose licencce plate match with the
 -- security log of the cars exited parking lot around the time of theft
