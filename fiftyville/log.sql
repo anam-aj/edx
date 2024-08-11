@@ -248,21 +248,3 @@ WHERE flight_id IN (
 +-----------------+
 */
 
-
-SELECT *
-FROM people
-WHERE passport_number IN (
-    SELECT passport_number
-    FROM passengers
-    WHERE flight_id IN (
-        SELECT id
-        FROM flights
-        WHERE (
-            year = 2023
-            AND month = 7
-            AND day = 29
-            AND origin_airport_id = 8
-        )
-    )
-)
-
