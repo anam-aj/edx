@@ -358,6 +358,7 @@ AND passport_number IN (
     )
 )
 
+
 -- Details of person who received the call from theif
 SELECT *
 FROM people
@@ -374,4 +375,11 @@ WHERE phone_number = '(375) 555-8161'
 -- Name of city thief escaped to
 SELECT *
 FROM airports
-WHERE city LIKE '%Fiftyville%';
+WHERE id = 4
+/*
++----+--------------+-------------------+---------------+
+| id | abbreviation |     full_name     |     city      |
++----+--------------+-------------------+---------------+
+| 4  | LGA          | LaGuardia Airport | New York City |
++----+--------------+-------------------+---------------+
+*/
