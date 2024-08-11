@@ -249,24 +249,6 @@ WHERE flight_id IN (
 */
 
 
-AND
-id IN (
-    SELECT person_id
-    FROM bank_accounts
-    WHERE account_number IN (
-        SELECT account_number
-        FROM atm_transactions
-        WHERE (
-            year = 2023
-            AND month = 7
-            AND day = 28
-            AND transaction_type = 'withdraw'
-            AND atm_location = 'Leggett Street'
-        )
-    )
-);
-
-
 SELECT *
 FROM people
 WHERE passport_number IN (
@@ -284,7 +266,3 @@ WHERE passport_number IN (
     )
 )
 
-
-SELECT *
-FROM people
-WHERE phone_number = '(375) 555-8161' or '(725) 555-3243'
