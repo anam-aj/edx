@@ -311,11 +311,10 @@ AND passport_number IN (
         SELECT id
         FROM flights
         WHERE (
-        year = 2023
-        AND month = 7
-        AND day = 29
-        AND id = 36
+            year = 2023
+            AND month = 7
+            AND day = 29
+            AND id = 36
+        )
     )
-)
-
 )
