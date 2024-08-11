@@ -318,7 +318,7 @@ WHERE id IN (
     )
 )
 AND phone_number IN (
-    -- made a call of duration less than 1 min on theft day
+    -- Phone number of people who made a call of duration less than 1 min on theft day
     SELECT caller
     FROM phone_calls
     WHERE (
@@ -329,6 +329,8 @@ AND phone_number IN (
     )
 )
 AND license_plate IN (
+    -- License plate of people that match with the security log of the cars
+    -- exited parking lot around the time of theft
     SELECT license_plate
     FROM bakery_security_logs
     WHERE (
@@ -341,6 +343,7 @@ AND license_plate IN (
     )
 )
 AND passport_number IN (
+    -- Passport number of people who took the 1st flight next day out of town
     SELECT passport_number
     FROM passengers
     WHERE flight_id IN (
