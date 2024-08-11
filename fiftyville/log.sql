@@ -143,7 +143,7 @@ SELECT * FROM airports WHERE city LIKE '%Fiftyville%';
 */
 
 -- Get flights departuring from fiftyville on next day
-SELECT * FROM flights WHERE (year = 2023 AND month = 7 AND day = 29 AND origin_airport_id = 8) ORDER BY hour;
+SELECT * FROM flights WHERE (year = 2023 AND month = 7 AND day = 29 AND origin_airport_id = 8) ORDER BY hour LIMIT 1;
 /*
 +----+-------------------+------------------------+------+-------+-----+------+--------+
 | id | origin_airport_id | destination_airport_id | year | month | day | hour | minute |
@@ -156,6 +156,7 @@ SELECT * FROM flights WHERE (year = 2023 AND month = 7 AND day = 29 AND origin_a
 +----+-------------------+------------------------+------+-------+-----+------+--------+
 */
 
+ -- 
 
 -- Get the details of people whose licencce plate match with the
 -- security log of the cars exited parking lot around the time of theft
