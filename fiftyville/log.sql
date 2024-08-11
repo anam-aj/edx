@@ -266,6 +266,7 @@ WHERE flight_id IN (
 --
 SELECT *
 FROM people
+WHERE 
 WHERE license_plate IN (
     SELECT license_plate
     FROM bakery_security_logs
