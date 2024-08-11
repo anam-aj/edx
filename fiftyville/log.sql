@@ -9,9 +9,11 @@ SELECT * FROM crime_scene_reports LIMIT 5;
 --  Get the reports of the the day of theft
 SELECT * FROM crime_scene_reports WHERE (year = 2023 AND month = 7 AND day = 28);
 
-/* | 295 | 2023 | 7     | 28  |
+/*
+| 295 | 2023 | 7     | 28  |
 Humphrey Street Theft of the CS50 duck took place at 10:15am at the Humphrey Street bakery.
-Interviews were conducted today with three witnesses who were present at the time – each of their interview transcripts mentions the bakery.*/
+Interviews were conducted today with three witnesses who were present at the time – each of their interview transcripts mentions the bakery.
+*/
 
 
 -- Get the structure of table interviews
@@ -20,7 +22,8 @@ SELECT * FROM interviews limit 5;
 --  Get the interviwes of the the day of theft
 SELECT * FROM interviews WHERE (year = 2023 AND month = 7 AND day = 28 AND transcript LIKE '%bakery%');
 
-/*| 161 | Ruth    | 2023 | 7     | 28  |
+/*
+| 161 | Ruth    | 2023 | 7     | 28  |
 Sometime within ten minutes of the theft, I saw the thief get into a car in the bakery parking lot and drive away.
 If you have security footage from the bakery parking lot, you might want to look for cars that left the parking lot in that time frame.                                                          |
 
@@ -31,7 +34,8 @@ I was walking by the ATM on Leggett Street and saw the thief there withdrawing s
 | 163 | Raymond | 2023 | 7     | 28  |
 As the thief was leaving the bakery, they called someone who talked to them for less than a minute. In the call,
 I heard the thief say that they were planning to take the earliest flight out of Fiftyville tomorrow. The thief
-then asked the person on the other end of the phone to purchase the flight ticket. */
+then asked the person on the other end of the phone to purchase the flight ticket.
+*/
 
 
 -- Get the structure of table bakery_security_logs
@@ -97,20 +101,22 @@ SELECT * FROM phone_calls limit 5;
 --  Get the call details on the the day of theft
 SELECT * FROM phone_calls WHERE (year = 2023 AND month = 7 AND day = 28 AND duration < 60);
 /*
-+----------------+----------------+
-|     caller     |    receiver    |
-+----------------+----------------+
-| (130) 555-0289 | (996) 555-8899 |
-| (499) 555-9472 | (892) 555-8872 |
-| (367) 555-5533 | (375) 555-8161 |
-| (499) 555-9472 | (717) 555-1342 |
-| (286) 555-6063 | (676) 555-6554 |
-| (770) 555-1861 | (725) 555-3243 |
-| (031) 555-6622 | (910) 555-3251 |
-| (826) 555-1652 | (066) 555-9701 |
-| (338) 555-6650 | (704) 555-2131 |
-+----------------+----------------+
++-----+----------------+----------------+------+-------+-----+----------+
+| id  |     caller     |    receiver    | year | month | day | duration |
++-----+----------------+----------------+------+-------+-----+----------+
+| 221 | (130) 555-0289 | (996) 555-8899 | 2023 | 7     | 28  | 51       |
+| 224 | (499) 555-9472 | (892) 555-8872 | 2023 | 7     | 28  | 36       |
+| 233 | (367) 555-5533 | (375) 555-8161 | 2023 | 7     | 28  | 45       |
+| 251 | (499) 555-9472 | (717) 555-1342 | 2023 | 7     | 28  | 50       |
+| 254 | (286) 555-6063 | (676) 555-6554 | 2023 | 7     | 28  | 43       |
+| 255 | (770) 555-1861 | (725) 555-3243 | 2023 | 7     | 28  | 49       |
+| 261 | (031) 555-6622 | (910) 555-3251 | 2023 | 7     | 28  | 38       |
+| 279 | (826) 555-1652 | (066) 555-9701 | 2023 | 7     | 28  | 55       |
+| 281 | (338) 555-6650 | (704) 555-2131 | 2023 | 7     | 28  | 54       |
++-----+----------------+----------------+------+-------+-----+----------+
 */
+
+
 -- Get details of airport
 SELECT * FROM airports WHERE city LIKE '%Fiftyville%';
 
