@@ -4,10 +4,18 @@
 .schema
 
 -- Get the structure of table crime_scene_report
-SELECT * FROM crime_scene_reports LIMIT 5;
+SELECT *
+FROM crime_scene_reports L
+IMIT 5
 
 --  Get the reports of the the day of theft
-SELECT * FROM crime_scene_reports WHERE (year = 2023 AND month = 7 AND day = 28);
+SELECT *
+FROM crime_scene_reports
+WHERE (
+    year = 2023
+    AND month = 7
+    AND day = 28
+)
 
 /*
 | 295 | 2023 | 7     | 28  |
@@ -17,10 +25,19 @@ Interviews were conducted today with three witnesses who were present at the tim
 
 
 -- Get the structure of table interviews
-SELECT * FROM interviews limit 5;
+SELECT *
+FROM interviews
+limit 5
 
 --  Get the interviwes of the the day of theft
-SELECT * FROM interviews WHERE (year = 2023 AND month = 7 AND day = 28 AND transcript LIKE '%bakery%');
+SELECT *
+FROM interviews
+WHERE (
+    year = 2023
+    AND month = 7
+    AND day = 28
+    AND transcript LIKE '%bakery%'
+)
 
 /*
 | 161 | Ruth    | 2023 | 7     | 28  |
@@ -39,10 +56,21 @@ then asked the person on the other end of the phone to purchase the flight ticke
 
 
 -- Get the structure of table bakery_security_logs
-SELECT * FROM bakery_security_logs limit 5;
+SELECT *
+FROM bakery_security_logs
+limit 5
 
 --  Get the security log of the cars exited parking lot around the time of theft
-SELECT * FROM bakery_security_logs WHERE (year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND minute <=30 AND activity = 'exit');
+SELECT *
+FROM bakery_security_logs
+WHERE (
+    year = 2023
+    AND month = 7
+    AND day = 28
+    AND hour = 10
+    AND minute <=30
+    AND activity = 'exit'
+)
 /*
 +-----+------+-------+-----+------+--------+----------+---------------+
 | id  | year | month | day | hour | minute | activity | license_plate |
@@ -60,10 +88,20 @@ SELECT * FROM bakery_security_logs WHERE (year = 2023 AND month = 7 AND day = 28
 
 
 -- Get the structure of table atm_transactions
-SELECT * FROM atm_transactions limit 5;
+SELECT *
+FROM atm_transactions
+limit 5
 
 -- Get ATM transaction from ATM on Leggett Street on the morning of the theft day
-SELECT * FROM atm_transactions WHERE (year = 2023 AND month = 7 AND day = 28 AND transaction_type = 'withdraw' AND atm_location = 'Leggett Street');
+SELECT *
+FROM atm_transactions
+WHERE (
+    year = 2023
+    AND month = 7
+    AND day = 28
+    AND transaction_type = 'withdraw'
+    AND atm_location = 'Leggett Street'
+)
 /*
 +-----+----------------+------+-------+-----+----------------+------------------+--------+
 | id  | account_number | year | month | day |  atm_location  | transaction_type | amount |
@@ -111,10 +149,19 @@ WHERE account_number IN (
 
 
 -- Get the structure of table phone_calls
-SELECT * FROM phone_calls limit 5;
+SELECT *
+FROM phone_calls
+limit 5
 
 --  Get the call details on the the day of theft
-SELECT * FROM phone_calls WHERE (year = 2023 AND month = 7 AND day = 28 AND duration < 60);
+SELECT *
+FROM phone_calls
+WHERE (
+    year = 2023
+    AND month = 7
+    AND day = 28
+    AND duration < 60
+)
 /*
 +-----+----------------+----------------+------+-------+-----+----------+
 | id  |     caller     |    receiver    | year | month | day | duration |
@@ -133,7 +180,9 @@ SELECT * FROM phone_calls WHERE (year = 2023 AND month = 7 AND day = 28 AND dura
 
 
 -- Get details of airport
-SELECT * FROM airports WHERE city LIKE '%Fiftyville%';
+SELECT *
+FROM airports
+WHERE city LIKE '%Fiftyville%';
 /*
 +----+--------------+-----------------------------+------------+
 | id | abbreviation |          full_name          |    city    |
@@ -143,7 +192,14 @@ SELECT * FROM airports WHERE city LIKE '%Fiftyville%';
 */
 
 -- Get flights departuring from fiftyville on next day
-SELECT * FROM flights WHERE (year = 2023 AND month = 7 AND day = 29 AND origin_airport_id = 8);
+SELECT *
+FROM flights
+WHERE (
+    year = 2023
+    AND month = 7
+    AND day = 29
+    AND origin_airport_id = 8
+)
 /*
 +----+-------------------+------------------------+------+-------+-----+------+--------+
 | id | origin_airport_id | destination_airport_id | year | month | day | hour | minute |
@@ -157,7 +213,16 @@ SELECT * FROM flights WHERE (year = 2023 AND month = 7 AND day = 29 AND origin_a
 */
 
  -- Get the first flight departuring from fiftyville on next day
- SELECT * FROM flights WHERE (year = 2023 AND month = 7 AND day = 29 AND origin_airport_id = 8) ORDER BY hour LIMIT 1;
+ SELECT *
+ FROM flights
+ WHERE (
+    year = 2023
+    AND month = 7
+    AND day = 29
+    AND origin_airport_id = 8
+)
+ORDER BY hour
+LIMIT 1
  /*
  +----+-------------------+------------------------+------+-------+-----+------+--------+
 | id | origin_airport_id | destination_airport_id | year | month | day | hour | minute |
