@@ -191,19 +191,19 @@ WHERE license_plate IN (
 
 -- Get passport_number of people who took flight out of fiftyville
 -- on the next day of theft
-    SELECT passport_number
-    FROM passengers
-    WHERE flight_id IN (
-        SELECT id
-        FROM flights
-        WHERE (
-            year = 2023
-            AND month = 7
-            AND day = 29
-            AND origin_airport_id = 8
-        )
+SELECT passport_number
+FROM passengers
+WHERE flight_id IN (
+    SELECT id
+    FROM flights
+    WHERE (
+        year = 2023
+        AND month = 7
+        AND day = 29
+         AND origin_airport_id = 8
     )
 )
+
 
 
 
