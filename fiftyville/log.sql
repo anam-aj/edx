@@ -39,8 +39,21 @@ SELECT * FROM bakery_security_logs limit 5;
 
 --  Get the security log of the cars exited parking lot around the time of theft
 SELECT * FROM bakery_security_logs WHERE (year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND minute <=30 AND activity = 'exit');
--- Licence plate of the cars exited from from from 10:00 to 10:30 are
--- 5P2BI95, 94KL13X, 6P58WS2, 4328GD8, G412CB7, L93JTIZ, 322W7JE, 0NTHK55
+/*
++-----+------+-------+-----+------+--------+----------+---------------+
+| id  | year | month | day | hour | minute | activity | license_plate |
++-----+------+-------+-----+------+--------+----------+---------------+
+| 260 | 2023 | 7     | 28  | 10   | 16     | exit     | 5P2BI95       |
+| 261 | 2023 | 7     | 28  | 10   | 18     | exit     | 94KL13X       |
+| 262 | 2023 | 7     | 28  | 10   | 18     | exit     | 6P58WS2       |
+| 263 | 2023 | 7     | 28  | 10   | 19     | exit     | 4328GD8       |
+| 264 | 2023 | 7     | 28  | 10   | 20     | exit     | G412CB7       |
+| 265 | 2023 | 7     | 28  | 10   | 21     | exit     | L93JTIZ       |
+| 266 | 2023 | 7     | 28  | 10   | 23     | exit     | 322W7JE       |
+| 267 | 2023 | 7     | 28  | 10   | 23     | exit     | 0NTHK55       |
++-----+------+-------+-----+------+--------+----------+---------------+
+*/
+
 
 -- Get the structure of table atm_transactions
 SELECT * FROM atm_transactions limit 5;
