@@ -281,6 +281,7 @@ WHERE id IN (
         )
     )
 )
+
 WHERE license_plate IN (
     SELECT license_plate
     FROM bakery_security_logs
