@@ -231,6 +231,35 @@ LIMIT 1
 +----+-------------------+------------------------+------+-------+-----+------+--------+
 */
 
+-- Get passport_number of people who took first flight
+-- out of fiftyville on the next day of theft
+SELECT passport_number
+FROM passengers
+WHERE flight_id IN (
+    SELECT id
+    FROM flights
+    WHERE (
+        year = 2023
+        AND month = 7
+        AND day = 29
+        AND id = 36
+    )
+)
+/*
++-----------------+
+| passport_number |
++-----------------+
+| 7214083635      |
+| 1695452385      |
+| 5773159633      |
+| 1540955065      |
+| 8294398571      |
+| 1988161715      |
+| 9878712108      |
+| 8496433585      |
++-----------------+
+*/
+
 
 -- Get the details of people whose licencce plate match with the
 -- security log of the cars exited parking lot around the time of theft
@@ -261,66 +290,6 @@ WHERE license_plate IN (
 | 560886 | Kelsey  | (499) 555-9472 | 8294398571      | 0NTHK55       |
 | 686048 | Bruce   | (367) 555-5533 | 5773159633      | 94KL13X       |
 +--------+---------+----------------+-----------------+---------------+
-*/
-
-
--- Get passport_number of people who took first flight
--- out of fiftyville on the next day of theft
-SELECT passport_number
-FROM passengers
-WHERE flight_id IN (
-    SELECT id
-    FROM flights
-    WHERE (
-        year = 2023
-        AND month = 7
-        AND day = 29
-        AND id = 36
-    )
-)
-/*
-+-----------------+
-| passport_number |
-+-----------------+
-| 2835165196      |
-| 6131360461      |
-| 3231999695      |
-| 3592750733      |
-| 2626335085      |
-| 6117294637      |
-| 2996517496      |
-| 3915621712      |
-| 4149859587      |
-| 9183348466      |
-| 7378796210      |
-| 7874488539      |
-| 4195341387      |
-| 6263461050      |
-| 3231999695      |
-| 7951366683      |
-| 7214083635      |
-| 1695452385      |
-| 5773159633      |
-| 1540955065      |
-| 8294398571      |
-| 1988161715      |
-| 9878712108      |
-| 8496433585      |
-| 7597790505      |
-| 6128131458      |
-| 6264773605      |
-| 3642612721      |
-| 4356447308      |
-| 7441135547      |
-| 7894166154      |
-| 6034823042      |
-| 4408372428      |
-| 2312901747      |
-| 1151340634      |
-| 8174538026      |
-| 1050247273      |
-| 7834357192      |
-+-----------------+
 */
 
 
