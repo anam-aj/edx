@@ -143,7 +143,7 @@ SELECT * FROM airports WHERE city LIKE '%Fiftyville%';
 */
 
 -- Get flights departuring from fiftyville on next day
-SELECT * FROM flights WHERE (year = 2023 AND month = 7 AND day = 29 AND origin_airport_id = 8) ORDER BY hour LIMIT 1;
+SELECT * FROM flights WHERE (year = 2023 AND month = 7 AND day = 29 AND origin_airport_id = 8);
 /*
 +----+-------------------+------------------------+------+-------+-----+------+--------+
 | id | origin_airport_id | destination_airport_id | year | month | day | hour | minute |
@@ -157,8 +157,14 @@ SELECT * FROM flights WHERE (year = 2023 AND month = 7 AND day = 29 AND origin_a
 */
 
  -- Get the first flight departuring from fiftyville on next day
- 
-
+ SELECT * FROM flights WHERE (year = 2023 AND month = 7 AND day = 29 AND origin_airport_id = 8) ORDER BY hour LIMIT 1;
+ /*
+ +----+-------------------+------------------------+------+-------+-----+------+--------+
+| id | origin_airport_id | destination_airport_id | year | month | day | hour | minute |
++----+-------------------+------------------------+------+-------+-----+------+--------+
+| 36 | 8                 | 4                      | 2023 | 7     | 29  | 8    | 20     |
++----+-------------------+------------------------+------+-------+-----+------+--------+
+*/
 
 
 -- Get the details of people whose licencce plate match with the
