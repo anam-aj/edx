@@ -258,3 +258,23 @@ WHERE flight_id IN (
 +-----------------+
 */
 
+
+-- Get the details of people
+-- Who made withdrawl on theft day marning from leggett street ATM
+-- AND whose license plate match with the security log of the cars
+--     exited parking lot around the time of theft
+--
+SELECT *
+FROM people
+WHERE license_plate IN (
+    SELECT license_plate
+    FROM bakery_security_logs
+    WHERE (
+        year = 2023
+        AND month = 7
+        AND day = 28
+        AND hour = 10
+        AND minute <=30
+        AND activity = 'exit'
+    )
+)
