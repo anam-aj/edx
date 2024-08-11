@@ -94,6 +94,21 @@ WHERE account_number IN (
         AND atm_location = 'Leggett Street'
     )
 )
+/*
++-----------+
+| person_id |
++-----------+
+| 686048    |
+| 514354    |
+| 458378    |
+| 395717    |
+| 396669    |
+| 467400    |
+| 449774    |
+| 438727    |
++-----------+
+*/
+
 
 -- Get the structure of table phone_calls
 SELECT * FROM phone_calls limit 5;
