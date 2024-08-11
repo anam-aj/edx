@@ -144,8 +144,17 @@ SELECT * FROM airports WHERE city LIKE '%Fiftyville%';
 
 -- Get flights departuring from fiftyville on next day
 SELECT * FROM flights WHERE (year = 2023 AND month = 7 AND day = 29 AND origin_airport_id = 8);
-
-
+/*
++----+-------------------+------------------------+------+-------+-----+------+--------+
+| id | origin_airport_id | destination_airport_id | year | month | day | hour | minute |
++----+-------------------+------------------------+------+-------+-----+------+--------+
+| 18 | 8                 | 6                      | 2023 | 7     | 29  | 16   | 0      |
+| 23 | 8                 | 11                     | 2023 | 7     | 29  | 12   | 15     |
+| 36 | 8                 | 4                      | 2023 | 7     | 29  | 8    | 20     |
+| 43 | 8                 | 1                      | 2023 | 7     | 29  | 9    | 30     |
+| 53 | 8                 | 9                      | 2023 | 7     | 29  | 15   | 20     |
++----+-------------------+------------------------+------+-------+-----+------+--------+
+*/
 
 
 SELECT *
