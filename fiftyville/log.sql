@@ -371,3 +371,7 @@ WHERE phone_number = '(375) 555-8161'
 */
 
 
+-- Name of city thief escaped to
+SELECT *
+FROM airports
+WHERE city LIKE '%Fiftyville%';
