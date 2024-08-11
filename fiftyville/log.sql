@@ -61,19 +61,20 @@ SELECT * FROM atm_transactions limit 5;
 -- Get ATM transaction from ATM on Leggett Street on the morning of the theft day
 SELECT * FROM atm_transactions WHERE (year = 2023 AND month = 7 AND day = 28 AND transaction_type = 'withdraw' AND atm_location = 'Leggett Street');
 /*
-+----------------+--------+
-| account_number | amount |
-+----------------+--------+
-| 28500762       | 48     |
-| 28296815       | 20     |
-| 76054385       | 60     |
-| 49610011       | 50     |
-| 16153065       | 80     |
-| 25506511       | 20     |
-| 81061156       | 30     |
-| 26013199       | 35     |
-+----------------+--------+
++-----+----------------+------+-------+-----+----------------+------------------+--------+
+| id  | account_number | year | month | day |  atm_location  | transaction_type | amount |
++-----+----------------+------+-------+-----+----------------+------------------+--------+
+| 246 | 28500762       | 2023 | 7     | 28  | Leggett Street | withdraw         | 48     |
+| 264 | 28296815       | 2023 | 7     | 28  | Leggett Street | withdraw         | 20     |
+| 266 | 76054385       | 2023 | 7     | 28  | Leggett Street | withdraw         | 60     |
+| 267 | 49610011       | 2023 | 7     | 28  | Leggett Street | withdraw         | 50     |
+| 269 | 16153065       | 2023 | 7     | 28  | Leggett Street | withdraw         | 80     |
+| 288 | 25506511       | 2023 | 7     | 28  | Leggett Street | withdraw         | 20     |
+| 313 | 81061156       | 2023 | 7     | 28  | Leggett Street | withdraw         | 30     |
+| 336 | 26013199       | 2023 | 7     | 28  | Leggett Street | withdraw         | 35     |
++-----+----------------+------+-------+-----+----------------+------------------+--------+
 */
+
 
 -- GET person_id who made withdrawls on theft day morning from leggett street ATM
 SELECT person_id
