@@ -302,6 +302,7 @@ WHERE license_plate IN (
 SELECT *
 FROM people
 WHERE id IN (
+    -- person_id of people made withdrawl on theft day marning from leggett street ATM
     SELECT person_id
     FROM bank_accounts
     WHERE account_number IN (
@@ -317,6 +318,7 @@ WHERE id IN (
     )
 )
 AND phone_number IN (
+    -- made a call of duration less than 1 min on theft day
     SELECT caller
     FROM phone_calls
     WHERE (
