@@ -310,7 +310,7 @@ AND passport_number IN (
     WHERE flight_id IN (
         SELECT id
         FROM flights
-    WHERE (
+        WHERE (
         year = 2023
         AND month = 7
         AND day = 29
