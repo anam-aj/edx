@@ -272,7 +272,7 @@ WHERE flight_id IN (
 -- Who made withdrawl on theft day marning from leggett street ATM
 -- AND whose license plate match with the security log of the cars
 --     exited parking lot around the time of theft
---
+-- AND 
 SELECT *
 FROM people
 WHERE id IN (
