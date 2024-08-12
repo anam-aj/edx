@@ -26,7 +26,7 @@ def main():
         print("Grade", round(index))
 
 
-# Funtion to count words
+# Function to count words
 def word_count(text):
 
     no_of_spaces = text.count(' ')
