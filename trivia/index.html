@@ -36,9 +36,11 @@
 
             document.addEventListener('DOMContentLoaded', function() {
                 document.querySelector('#bcheck').onclick = function() {
-                    document.querySelector('#binput').style.backgroundColor = '#FF0000';
+                    document.querySelector('#binput') = function() {
+                        this.style.backgroundColor = '#FF0000';
+                    }
                 }
-            }):
+            });
 
            //  if (document.querySelector('#responseMCQ').innerHTML = 'Incorrect')
 
