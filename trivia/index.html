@@ -8,49 +8,54 @@
         <title>Trivia!</title>
         <script>
 
+            // Wait for DOM to load
             document.addEventListener('DOMContentLoaded', function() {
+
+                // When 5 is clicked, change colour of button to Red and display 'Incorrect'
                 document.querySelector('#b5').onclick = function() {
+
                     this.style.backgroundColor = '#FF0000';
                     document.querySelector('#responseMCQ').innerHTML = 'Incorrect';
-                }
-            });
+                };
 
-            document.addEventListener('DOMContentLoaded', function() {
+                // When 6 is clicked, change colour of button to Red and display 'Incorrect'
                 document.querySelector('#b6').onclick = function() {
                     this.style.backgroundColor = '#FF0000';
                     document.querySelector('#responseMCQ').innerHTML = 'Incorrect';
-                }
-            });
-
-            document.addEventListener('DOMContentLoaded', function() {
+                };
+                // When 7 is clicked, change colour of button to Green and display 'Correct!'
                 document.querySelector('#b7').onclick = function() {
                     this.style.backgroundColor = '#008000';
                     document.querySelector('#responseMCQ').innerHTML = 'Correct!';
-                }
-            });
+                };
 
-            document.addEventListener('DOMContentLoaded', function() {
+                // When 8 is clicked, change colour of button to Red and display 'Incorrect'
                 document.querySelector('#b8').onclick = function() {
                     this.style.backgroundColor = '#FF0000';
                     document.querySelector('#responseMCQ').innerHTML = 'Incorrect';
-                }
-            });
+                };
 
-            document.addEventListener('DOMContentLoaded', function() {
+                // Determine when 'CHECK' button is clicked
                 document.querySelector('#bcheck').addEventListener('click', function() {
+
+                    // Check if answer is correct
                     if (document.querySelector('#binput').value === 'Asia')
                     {
+                        // Change backgrond colour to Green and print 'Correct!'
                         document.querySelector('#binput').style.backgroundColor = '#008000';
                         document.querySelector('#responseFREE').innerHTML = 'Correct!';
                     }
+
+                    // If answer is wrong
                     else
                     {
+                        // Change backgrond colour to Red and print 'Incorrect'
                         document.querySelector('#binput').style.backgroundColor = '#FF0000';
                         document.querySelector('#responseFREE').innerHTML = 'Incorrect';
                     }
                 })
             });
-            
+
         </script>
     </head>
 
