@@ -8,29 +8,36 @@
         <title>Trivia!</title>
         <script>
 
+            // Wait for DOM to load
             document.addEventListener('DOMContentLoaded', function() {
 
+                // When 5 is clicked, change colour of button to Red and display 'Incorrect'
                 document.querySelector('#b5').onclick = function() {
+
                     this.style.backgroundColor = '#FF0000';
                     document.querySelector('#responseMCQ').innerHTML = 'Incorrect';
                 };
 
+                // When 6 is clicked, change colour of button to Red and display 'Incorrect'
                 document.querySelector('#b6').onclick = function() {
                     this.style.backgroundColor = '#FF0000';
                     document.querySelector('#responseMCQ').innerHTML = 'Incorrect';
                 };
-
+                // When 7 is clicked, change colour of button to Green and display 'Correct'
                 document.querySelector('#b7').onclick = function() {
                     this.style.backgroundColor = '#008000';
                     document.querySelector('#responseMCQ').innerHTML = 'Correct!';
                 };
 
+                // When 8 is clicked, change colour of button to Red and display 'Incorrect'
                 document.querySelector('#b8').onclick = function() {
                     this.style.backgroundColor = '#FF0000';
                     document.querySelector('#responseMCQ').innerHTML = 'Incorrect';
                 };
 
+                // 
                 document.querySelector('#bcheck').addEventListener('click', function() {
+                    //
                     if (document.querySelector('#binput').value === 'Asia')
                     {
                         document.querySelector('#binput').style.backgroundColor = '#008000';
@@ -38,6 +45,7 @@
                     }
                     else
                     {
+                        //
                         document.querySelector('#binput').style.backgroundColor = '#FF0000';
                         document.querySelector('#responseFREE').innerHTML = 'Incorrect';
                     }
