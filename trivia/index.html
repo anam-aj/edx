@@ -37,11 +37,13 @@
 
             document.addEventListener('DOMContentLoaded', function() {
                 document.querySelector('#bcheck').addEventListener('click', function() {
-                    if (document.querySelector('#binput').value === 'Asia') {
+                    if (document.querySelector('#binput').value === 'Asia')
+                    {
                         document.querySelector('#binput').style.backgroundColor = '#008000';
                         document.querySelector('#responseFREE').innerHTML = 'Correct!';
                     }
-                    else {
+                    else
+                    {
                         document.querySelector('#binput').style.backgroundColor = '#FF0000';
                         document.querySelector('#responseFREE').innerHTML = 'Incorrect';
                     }
