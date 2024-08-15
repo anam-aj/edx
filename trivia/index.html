@@ -7,7 +7,6 @@
         <link href="styles.css" rel="stylesheet">
         <title>Trivia!</title>
         <script>
-
             // Wait for DOM to load
             document.addEventListener('DOMContentLoaded', function() {
 
@@ -39,23 +38,20 @@
                 document.querySelector('#bcheck').addEventListener('click', function() {
 
                     // Check if answer is correct
-                    if (document.querySelector('#binput').value === 'Asia')
-                    {
+                    if (document.querySelector('#binput').value === 'Asia') {
                         // Change backgrond colour to Green and print 'Correct!'
                         document.querySelector('#binput').style.backgroundColor = '#008000';
                         document.querySelector('#responseFREE').innerHTML = 'Correct!';
                     }
 
                     // If answer is wrong
-                    else
-                    {
+                    else {
                         // Change backgrond colour to Red and print 'Incorrect'
                         document.querySelector('#binput').style.backgroundColor = '#FF0000';
                         document.querySelector('#responseFREE').innerHTML = 'Incorrect';
                     }
                 })
             });
-
         </script>
     </head>
 
