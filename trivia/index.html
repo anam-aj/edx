@@ -23,7 +23,7 @@
             document.addEventListener('DOMContentLoaded', function() {
                 document.querySelector('#b7').onclick = function() {
                     this.style.backgroundColor = '#008000';
-                    document.querySelector('#responseMCQ').innerHTML = 'Correct';
+                    document.querySelector('#responseMCQ').innerHTML = 'Correct!';
                 }
             });
 
@@ -38,7 +38,7 @@
                 document.querySelector('#bcheck').addEventListener('click', function() {
                     if (document.querySelector('#binput').value === 'Asia') {
                         document.querySelector('#binput').style.backgroundColor = '#008000';
-                        document.querySelector('#responseFREE').innerHTML = 'Correct';
+                        document.querySelector('#responseFREE').innerHTML = 'Correct!';
                     }
                     else {
                         document.querySelector('#binput').style.backgroundColor = '#FF0000';
@@ -46,9 +46,6 @@
                     }
                 })
             });
-
-           //  if (document.querySelector('#responseMCQ').innerHTML = 'Incorrect')
-
         </script>
     </head>
     <body>
