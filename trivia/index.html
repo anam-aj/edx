@@ -34,6 +34,13 @@
                 }
         });
 
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('#bcheck').onclick = function() {
+                    this.style.backgroundColor = '#FF0000';
+                    document.querySelector('#responseMCQ').innerHTML = 'Incorrect';
+                }
+        });
+
 
 
         </script>
