@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
     <head>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
         <link href="styles.css" rel="stylesheet">
         <title>Trivia!</title>
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
 
+            document.addEventListener('DOMContentLoaded', function() {
                 document.querySelector('#b5').onclick = function() {
                     this.style.backgroundColor = '#FF0000';
                     document.querySelector('#responseMCQ').innerHTML = 'Incorrect';
                 }
-            };
-            ,function() {
+            });
+
+            document.addEventListener('DOMContentLoaded', function() {
                 document.querySelector('#b6').onclick = function() {
                     this.style.backgroundColor = '#FF0000';
                     document.querySelector('#responseMCQ').innerHTML = 'Incorrect';
@@ -23,7 +25,7 @@
             document.addEventListener('DOMContentLoaded', function() {
                 document.querySelector('#b7').onclick = function() {
                     this.style.backgroundColor = '#008000';
-                    document.querySelector('#responseMCQ').innerHTML = 'Correct';
+                    document.querySelector('#responseMCQ').innerHTML = 'Correct!';
                 }
             });
 
@@ -35,15 +37,23 @@
             });
 
             document.addEventListener('DOMContentLoaded', function() {
-                document.querySelector('#bcheck').onclick = function() {
-                    document.querySelector('#binput').style.backgroundColor = '#FF0000';
-                }
+                document.querySelector('#bcheck').addEventListener('click', function() {
+                    if (document.querySelector('#binput').value === 'Asia')
+                    {
+                        document.querySelector('#binput').style.backgroundColor = '#008000';
+                        document.querySelector('#responseFREE').innerHTML = 'Correct!';
+                    }
+                    else
+                    {
+                        document.querySelector('#binput').style.backgroundColor = '#FF0000';
+                        document.querySelector('#responseFREE').innerHTML = 'Incorrect';
+                    }
+                })
             });
-
-
 
         </script>
     </head>
+
     <body>
         <div class="header">
             <h1>Trivia!</h1>
@@ -65,11 +75,12 @@
                 <h2>Part 2: Free Response</h2>
                 <hr>
                 <!-- TODO: Add free response question here -->
-                 <h3>Which is the biggest continent on earth ?</h3>
-                 <input id=binput></input>
-                 <button id=bcheck>CHECK</button>
-
+                <h3>Which is the biggest continent on earth ?</h3>
+                <input id=binput></input>
+                <button id=bcheck>CHECK</button>
+                <p id='responseFREE'></p>
             </div>
         </div>
     </body>
+
 </html>
