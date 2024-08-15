@@ -38,9 +38,11 @@
                 document.querySelector('#bcheck').addEventListener('click', function() {
                     if (document.querySelector('#binput').value === 'Asia') {
                         document.querySelector('#binput').style.backgroundColor = '#008000';
+                        document.querySelector('#responseFREE').innerHTML = 'Correct';
                     }
                     else {
                         document.querySelector('#binput').style.backgroundColor = '#FF0000';
+                        document.querySelector('#responseFREE').innerHTML = 'Incorrect';
                     }
                 })
             });
@@ -73,7 +75,7 @@
                  <h3>Which is the biggest continent on earth ?</h3>
                  <input id=binput></input>
                  <button id=bcheck>CHECK</button>
-
+                 <p id='responseFREE'></p>
             </div>
         </div>
     </body>
