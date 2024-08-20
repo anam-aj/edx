@@ -35,5 +35,10 @@ p {
 }
 
 #image {
-    
+    margin: auto;
 }
+
+#description {
+    margin: auto;
+}
+
