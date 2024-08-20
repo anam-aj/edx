@@ -73,5 +73,6 @@ p {
 footer {
     background-color: rgb(255, 153, 153);
     bottom: 0;
-    
+    font-weight: bold;
+    color: white;
 }
