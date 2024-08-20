@@ -35,5 +35,5 @@ p {
 }
 
 #image {
-    margin: auto;
+    float: left;
 }
