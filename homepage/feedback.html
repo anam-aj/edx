@@ -8,6 +8,31 @@
         <link href="styles.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ANAM</title>
+
+        <script>
+
+           // Wait for DOM to load
+            document.addEventListener('DOMContentLoaded', function() {
+
+                // Determine when 'CHECK' button is clicked
+                document.querySelector('#bcheck').addEventListener('click', function() {
+
+                    // Check if answer is correct
+                    if (document.querySelector('#binput').value === 'Asia') {
+                        // Change backgrond colour to Green and print 'Correct!'
+                        document.querySelector('#binput').style.backgroundColor = '#008000';
+                        document.querySelector('#responseFREE').innerHTML = 'Correct!';
+                    }
+
+                    // If answer is wrong
+                    else {
+                        // Change backgrond colour to Red and print 'Incorrect'
+                        document.querySelector('#binput').style.backgroundColor = '#FF0000';
+                        document.querySelector('#responseFREE').innerHTML = 'Incorrect';
+                    }
+                })
+            });
+        </script>
     </head>
 
     <body>
