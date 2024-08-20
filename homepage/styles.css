@@ -9,7 +9,7 @@ h1 {
     background-color: rgb(102, 153, 255);
   }
 
- p {
+ .MenuItem {
     background-color: rgb(102, 153, 255);
     colour: red;
     /*width:50px;*/
