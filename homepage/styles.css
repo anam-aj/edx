@@ -96,7 +96,10 @@ a:hover {
 
 /* Styles for screens smaller than 600px */
 @media (max-width: 600px) {
-    body {
+    .menuBar {
         flex-direction: column;
+    }
+    #image img {
+        width: 100%;
     }
 }
