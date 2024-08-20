@@ -11,7 +11,7 @@ h1 {
 
  .MenuItem {
     background-color: rgb(102, 153, 255);
-    colour: red;
+    color: white;
     /*width:50px;*/
     margin: 10px;
     text-align: center;
