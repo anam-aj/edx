@@ -62,7 +62,7 @@ p {
     font-size: clamp(0.5rem, 5vw, 2rem);
 }
 
-#hi {
+#greeting {
     font-size: 100px;
     color: rgb(102, 153, 255);
 }
