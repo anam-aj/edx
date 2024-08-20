@@ -128,12 +128,10 @@ button {
 }
 
 button:hover {
-  background-color: #04AA6D;
-  color: white;
+    text-decoration: underline;
 }
 
 button:active {
-    background-color: red;
-    color: white;
+    background-color: green;
 }
 
