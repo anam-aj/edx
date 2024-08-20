@@ -50,6 +50,7 @@ p {
 #description {
     margin: auto;
     margin-top: 50px;
+    line-height: 5.8;
     text-align: center;
     font-size: 30px;
 }
