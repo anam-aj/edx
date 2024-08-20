@@ -7,9 +7,9 @@ h1 {
     flex-wrap: wrap;
     justify-content: space-around;
     background-color: rgb(102, 153, 255);
-  }
+}
 
- .MenuItem {
+.MenuItem {
     background-color: rgb(102, 153, 255);
     color: white;
     /*width:50px;*/
@@ -17,4 +17,4 @@ h1 {
     text-align: center;
     line-height: 75px;
     font-size: 30px;
-  }
+}
