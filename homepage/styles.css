@@ -50,10 +50,11 @@ p {
 #description {
     margin: auto;
     margin-top: 50px;
-    border-style: dotted;
     text-align: center;
+    font-size: 30px;
 }
 
 #hi {
     font-size: 100px;
+    color: rgb(102, 153, 255);
 }
