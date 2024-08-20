@@ -2,6 +2,7 @@ h1 {
     text-align: center;
     background-color: rgb(200, 200, 200);
     margin: 0px;
+    color: white;
 }
 
 p {
@@ -24,6 +25,5 @@ p {
     color: white;
     margin: 10px;
     text-align: center;
-    line-height: 75px;
     font-size: 30px;
 }
