@@ -59,7 +59,7 @@ p {
     margin: auto;
     margin-top: 50px;
     text-align: center;
-    font-size: 5vw;
+    font-size: clamp(1rem, 5vw, 2rem);
 }
 
 #hi {
