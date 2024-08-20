@@ -104,7 +104,10 @@ a:hover {
     color: rgb(102, 153, 255);
 }
 
-.impRed {
-    font-size: 130%;
-    color: rgb(255, 153, 153);
-}
+.button {
+    background-color: rgb(255, 153, 153);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+  }
