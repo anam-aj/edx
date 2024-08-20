@@ -92,6 +92,11 @@ a:visited {
 a:hover {
     color: white;
     text-decoration: underline;
-  }
+}
 
-  
+/* Styles for screens smaller than 600px */
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+    }
+}
