@@ -63,8 +63,8 @@ p {
     line-height: 2.5;
 }
 
-footer {
+#footer {
     background-color: rgb(255, 153, 153);
-    margin-bottom: 110px;
-    padding-bottom: 0px;
+    /*margin-bottom: 110px;
+    padding-bottom: 0px;*/
 }
