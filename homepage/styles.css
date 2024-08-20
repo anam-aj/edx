@@ -36,9 +36,14 @@ p {
 
 #image {
     margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #description {
     margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
