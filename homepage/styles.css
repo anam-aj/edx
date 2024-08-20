@@ -109,18 +109,11 @@ a:hover {
     color: rgb(255, 153, 153);
 }
 
-.buttonRed {
-    background-color: rgb(255, 153, 153);
-    border: none;
-    color: white;
-    padding: 5px 5px;
-    text-align: center;
-  }
-
 .buttonBlue {
     background-color: rgb(102, 153, 255);
     border: none;
     color: white;
-    padding: 5px 5px;
+    padding: 5px;
     text-align: center;
+    border-radius: 25px;
   }
