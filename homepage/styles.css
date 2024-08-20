@@ -10,8 +10,9 @@ h1 {
   }
 
   .ntainer > div {
-    background-color: #f1f1f1;
-    // width:50px;
+    background-color: rgb(102, 153, 255);
+    colour: rgb(140, 240, 240):
+    /*width:50px;*/
     margin: 10px;
     text-align: center;
     line-height: 75px;
