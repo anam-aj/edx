@@ -93,3 +93,7 @@ a:hover {
     color: white;
     text-decoration: underline;
 }
+
+#copyright {
+    font-size: 15px;
+}
