@@ -43,6 +43,8 @@ p {
     margin-top: 5px;
     text-align: center;
     font-size: 15px;
+    background-color: white;
+    color: rgb(200, 200, 200)
 }
 
 #description {
