@@ -1,3 +1,7 @@
+h1 {
+    text-align: center;
+}
+
 .ntainer {
     display: flex;
     flex-wrap: wrap;
@@ -7,7 +11,7 @@
 
   .ntainer > div {
     background-color: #f1f1f1;
-    width: 100px;
+    width:100px;
     margin: 10px;
     text-align: center;
     line-height: 75px;
