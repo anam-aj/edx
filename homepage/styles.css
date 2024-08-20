@@ -117,10 +117,10 @@ a:hover {
     text-align: center;
   }
 
-  .buttonBlue {
+.buttonBlue {
     background-color: rgb(102, 153, 255);
     border: none;
     color: white;
-    padding: 5px 15px;
+    padding: 5px 5px;
     text-align: center;
   }
