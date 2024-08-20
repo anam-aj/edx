@@ -74,5 +74,6 @@ footer {
     background-color: rgb(255, 153, 153);
     bottom: 0;
     font-weight: bold;
+    text-align: center;
     color: white;
 }
