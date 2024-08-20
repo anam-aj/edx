@@ -27,3 +27,10 @@ p {
     text-align: center;
     font-size: 30px;
 }
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: rgb(102, 153, 255);
+}
