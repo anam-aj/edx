@@ -37,7 +37,8 @@ p {
 #image {
     margin: auto;
     margin-top: 50px;
-    border-style: dotted;
+    margin-bottom: 5px;
+
 }
 
 #disclaimer {
