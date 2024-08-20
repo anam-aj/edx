@@ -28,9 +28,8 @@ p {
     font-size: 30px;
 }
 
-.content {
+.Content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    
 }
