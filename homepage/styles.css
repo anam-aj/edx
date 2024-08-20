@@ -9,9 +9,9 @@ h1 {
     background-color: rgb(102, 153, 255);
   }
 
-  .ntainer > div {
+  .ntainer > p {
     background-color: rgb(102, 153, 255);
-    colour: red:
+    colour: red;
     /*width:50px;*/
     margin: 10px;
     text-align: center;
