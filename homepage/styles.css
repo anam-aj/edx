@@ -104,10 +104,10 @@ a:hover {
     color: rgb(102, 153, 255);
 }
 
-.button {
+.buttonRed {
     background-color: rgb(255, 153, 153);
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 10px 25px;
     text-align: center;
   }
