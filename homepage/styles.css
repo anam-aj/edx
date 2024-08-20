@@ -2,14 +2,14 @@ h1 {
     text-align: center;
 }
 
-.ntainer {
+.MenuBar {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     background-color: rgb(102, 153, 255);
   }
 
-  .ntainer > p {
+ p {
     background-color: rgb(102, 153, 255);
     colour: red;
     /*width:50px;*/
