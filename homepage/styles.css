@@ -33,3 +33,7 @@ p {
     flex-wrap: wrap;
     justify-content: center;
 }
+
+#image {
+    margin: auto;
+}
