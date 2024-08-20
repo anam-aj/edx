@@ -99,7 +99,12 @@ a:hover {
     vertical-align: sub;
 }
 
-.imp {
+.impBlue {
+    font-size: 130%;
+    color: rgb(102, 153, 255);
+}
+
+.impred {
     font-size: 130%;
     color: rgb(102, 153, 255);
 }
