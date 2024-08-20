@@ -38,12 +38,14 @@ p {
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
+    border-style: dotted;
 }
 
 #description {
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
-    text-align: center;
+    
+    border-style: dotted;
 }
 
