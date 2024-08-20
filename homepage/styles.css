@@ -82,21 +82,25 @@ footer {
 a:link {
     color: white;
     text-decoration: none;
+    background-color: rgb(102, 153, 255);
 }
 
 a:visited {
     color: white;
     text-decoration: none;
+    background-color: rgb(102, 153, 255);
 }
 
 a:hover {
     color: white;
     text-decoration: underline;
+    background-color: rgb(102, 153, 255);
 }
 
 #copyright {
     font-size: 160%;
     vertical-align: sub;
+    
 }
 
 .impBlue {
