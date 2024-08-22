@@ -31,40 +31,39 @@ def index():
 
         # Check validity of name
         if not name:
-            redirect("/")
+            return redirect("/")
 
         # Access month from form
         month = request.form.get("month")
 
         # Check validity of month
         if not month:
-            redirect("/")
+            return redirect("/")
         try:
             month = int(month)
         except ValueError:
-            redirect("/")
+            return redirect("/")
         if month < 1 or month > 12:
-            redirect("/")
+            return redirect("/")
 
         # Access day from form
         day = request.form.get("day")
 
         # Check validity of day
         if not day:
-            redirect("/")
+            return redirect("/")
         try:
             day = int(day)
         except ValueError:
-            redirect("/")
+            return redirect("/")
         if day < 1:
-            redirect("/")
-        if month == 2 and day > 29:
-            redirect("/")
+            return redirect("/")
+        elif month == 2 and day > 29:
+            return redirect("/")
         elif (month == 4 or month == 6 or month == 9 or month == 11) and (day > 30):
-            redirect("/")
+            return redirect("/")
         elif day > 31:
-            redirect("/")
-
+            return redirect("/")
 
         # Write data into database
         db.execute("INSERT INTO birthdays (name, month, day) VALUES(?, ?, ?)", name, month, day)
