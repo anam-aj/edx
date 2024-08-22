@@ -32,7 +32,14 @@ def index():
         if not name:
             redirect("/")
         month = request.form.get("month")
-        
+        if not month:
+            redirect("/")
+        try:
+            month = int(month)
+        except ValueError:
+        if month < 1 or month > 12:
+            redirect("/")
+            
         day = request.form.get("day")
 
         # Write data into database
