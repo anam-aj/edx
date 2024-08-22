@@ -56,10 +56,11 @@ def index():
             day = int(day)
         except ValueError:
             redirect("/")
-        if month == 2:
-            
-
+        if day < 1:
             redirect("/")
+        if month == 2 and day > 28:
+            redirect("/")
+        if month 
 
 
         # Write data into database
