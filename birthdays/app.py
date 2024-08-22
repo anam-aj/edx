@@ -71,6 +71,7 @@ def index():
 
         # Display the entries in the database on index.html
         # Get birthday data from database
+        birthdays = db.execute("SELECT * FROM birthdays")
 
 
         return render_template("index.html")
