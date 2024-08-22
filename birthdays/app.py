@@ -26,21 +26,39 @@ def after_request(response):
 def index():
     if request.method == "POST":
 
-        # TODO: Add the user's entry into the database
-        # Access data from form
+        # Access name from form
         name = request.form.get("name")
+
+        # Check validity of name
         if not name:
             redirect("/")
+
+        # Access month from form
         month = request.form.get("month")
+
+        # Check validity of month
         if not month:
             redirect("/")
         try:
             month = int(month)
         except ValueError:
+            redirect("/")
         if month < 1 or month > 12:
             redirect("/")
-            
+
+        # Access day from form
         day = request.form.get("day")
+
+        # Check validity of day
+        if not day:
+            redirect("/")
+        try:
+            day = int(day)
+        except ValueError:
+            redirect("/")
+        if day < 1 or month > 12:
+            redirect("/")
+
 
         # Write data into database
         db.execute("INSERT INTO birthdays (name, month, day) VALUES(?, ?, ?)", name, month, day)
