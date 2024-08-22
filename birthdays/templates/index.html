@@ -19,8 +19,8 @@
                 <!-- TODO: Create a form for users to submit a name, a month, and a day -->
                  <form action="/" method="post">
                     <input name="name" placeholder="NAME" type="text">
-                    <input name="month" placeholder="MONTH" type="number">
-                    <input name="day" placeholder="DAY" type="number">
+                    <input name="month" placeholder="MONTH" type="number" min="1" max="12">
+                    <input name="day" placeholder="DAY" type="number" min="1" max="31">
                     <input type="submit" value="Add Birthday">
                  </form>
 
