@@ -68,7 +68,7 @@ def index():
         return redirect("/")
 
     else:
-        # Get birthdays  data from database
+        # Get birthdays' data from database
         birthdays_info = db.execute("SELECT * FROM birthdays")
 
         # Renders birthdays page
