@@ -62,7 +62,8 @@ def index():
             redirect("/")
         elif (month == 4 or month == 6 or month == 9 or month == 11) and (day > 30):
             redirect("/")
-        elif
+        elif day > 31:
+            redirect("/")
 
 
         # Write data into database
