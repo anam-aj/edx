@@ -56,7 +56,9 @@ def index():
             day = int(day)
         except ValueError:
             redirect("/")
-        if month 
+        if month == 2:
+            
+
             redirect("/")
 
 
