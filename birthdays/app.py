@@ -34,6 +34,7 @@ def index():
 
         # Write data into database
         db.execute("INSERT INTO birthdays (name, month, date) VALUES(?, ?, ?)", name, month, date)
+        
         return redirect("/")
 
     else:
