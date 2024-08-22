@@ -68,10 +68,8 @@ def index():
         return redirect("/")
 
     else:
-
-        # Display the entries in the database on index.html
         # Get birthday data from database
         birthdays = db.execute("SELECT * FROM birthdays")
 
-
+        # Renders birthdays page
         return render_template("index.html")
