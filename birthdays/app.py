@@ -72,4 +72,4 @@ def index():
         birthdays = db.execute("SELECT * FROM birthdays")
 
         # Renders birthdays page
-        return render_template("index.html")
+        return render_template("index.html", birthdays=birthdays)
