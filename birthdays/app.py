@@ -28,14 +28,12 @@ def index():
 
         # Access name from form
         name = request.form.get("name")
-
         # Check validity of name
         if not name:
             return redirect("/")
 
         # Access month from form
         month = request.form.get("month")
-
         # Check validity of month
         if not month:
             return redirect("/")
@@ -48,7 +46,6 @@ def index():
 
         # Access day from form
         day = request.form.get("day")
-
         # Check validity of day
         if not day:
             return redirect("/")
@@ -72,7 +69,8 @@ def index():
 
     else:
 
-        # TODO: Display the entries in the database on index.html
-        
+        # Display the entries in the database on index.html
+        # Get birthday data from database
+
 
         return render_template("index.html")
