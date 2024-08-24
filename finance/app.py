@@ -106,7 +106,14 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
-    return render_template("qoute.html", data = info)
+
+    # Check if route is requested with POST
+    if request.method == "POST":
+
+        return render_template("qoute_request.html", data = info)
+
+    else:
+        return render_template("qoute_response.html", data = info)
 
 
 @app.route("/register", methods=["GET", "POST"])
