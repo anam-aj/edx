@@ -112,7 +112,7 @@ def quote():
         stock = lookup(symbol)
         price = stock[price]
 
-        return render_template("Price of", symbol, "is", price)
+        return render_template("quote_response.html")
     else:
         return render_template("quote.html")
 
