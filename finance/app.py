@@ -136,7 +136,7 @@ def register():
 
     try:
         # Insert user into database
-        db.execute("INSERT INTO ")
+        db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", name, password)
 
     except ValueError:
         return apology("user name already taken, please use a different username", 403)
