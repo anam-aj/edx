@@ -133,6 +133,7 @@ def register():
         # Ensure re-entered password matches with password
         elif password != re_entered_password:
             return apology("re-entered password does not match")
+    
 
     try:
         # Insert user into database
