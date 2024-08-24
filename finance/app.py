@@ -108,8 +108,11 @@ def quote():
     """Get stock quote."""
     # Check if request method is POST
     if request.method == "POST":
+        # Get symbol from user
         symbol = request.form.get("symbol")
+        # Look for stock
         stock = lookup(symbol)
+        # Display stock price if found
         if stock:
             price = "$" + str(stock["price"])
             return render_template("quote_response.html", price=price, symbol=symbol)
@@ -117,8 +120,8 @@ def quote():
             return apology("stock/symbol not found")
 
     else:
+        # Renders quote page
         return render_template("quote.html")
-
 
 
 @app.route("/register", methods=["GET", "POST"])
