@@ -113,6 +113,8 @@ def quote():
         if stock:
             price = "$" + str(stock["price"])
             return render_template("quote_response.html", price=price, symbol=symbol)
+        ELSE:
+        
     else:
         return render_template("quote.html")
 
