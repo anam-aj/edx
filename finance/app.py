@@ -114,8 +114,9 @@ def register():
     """Register user"""
 
     # Checks if method is POST
-    if request.method == "POST":
-        
+    #if request.method == "POST":
+
+    #
     return apology("TODO")
 
 
