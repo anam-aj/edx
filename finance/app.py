@@ -116,8 +116,12 @@ def register():
     # Check if request method is POST
     if request.method == "POST":
         # Ensure username is submitted
-        if not request.form.get("")
-        return apology("TODO")
+        if not request.form.get("username"):
+            return apology("must provide username", 403)
+        elif not request.form.get("password"):
+            return apology("must provide password", 403)
+        elif not request.form.get("confirmation"):
+            return apology("must provide password", 403)
 
     else:
         # If request method is GET
