@@ -109,6 +109,8 @@ def quote():
     # Check if request method is POST
     if request.method == "POST":
         symbol = request.form.get("symbol")
+        stock = lookup(symbol)
+        price = stock[price]
         
         return
     else:
