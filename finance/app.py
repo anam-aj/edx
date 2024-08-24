@@ -106,7 +106,7 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
-    return apology("TODO")
+    return render_template("qoute.html", data = info)
 
 
 @app.route("/register", methods=["GET", "POST"])
