@@ -110,10 +110,10 @@ def quote():
     # Check if route is requested with POST
     if request.method == "POST":
 
-        return render_template("qoute_request.html", data = info)
+        return render_template("qoute_response.html", data = info)
 
     else:
-        return render_template("qoute_response.html", data = info)
+        return render_template("qoute_request.html", data = info)
 
 
 @app.route("/register", methods=["GET", "POST"])
