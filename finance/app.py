@@ -116,7 +116,7 @@ def register():
     # Check if request method is POST
     if request.method == "POST":
         # Ensure username is submitted
-        
+        if not request.form.get("")
         return apology("TODO")
 
     else:
