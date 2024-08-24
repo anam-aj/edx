@@ -113,11 +113,12 @@ def quote():
 def register():
     """Register user"""
 
-    # Checks if method is POST
+    # Check if request method is POST
     if request.method == "POST":
         return apology("TODO")
 
     else:
+        # If request method is GET
         return render_template("register.html")
 
 
