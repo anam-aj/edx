@@ -120,7 +120,7 @@ def quote():
             return apology("stock/symbol not found")
 
     else:
-        # Renders quote page
+        # Renders quote page(user request via GET)
         return render_template("quote.html")
 
 
