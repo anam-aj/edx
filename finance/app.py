@@ -116,8 +116,9 @@ def register():
     # Checks if method is POST
     #if request.method == "POST":
 
-    #
-    return apology("TODO")
+    # return apology("TODO")
+
+    # 
 
 
 @app.route("/sell", methods=["GET", "POST"])
