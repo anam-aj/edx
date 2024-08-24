@@ -118,10 +118,13 @@ def register():
         # Ensure username is submitted
         if not request.form.get("username"):
             return apology("must provide username", 403)
+        # Ensure password is submitted
         elif not request.form.get("password"):
             return apology("must provide password", 403)
+        # Ensure pasword is re-entered
         elif not request.form.get("confirmation"):
             return apology("must re-enter password", 403)
+        # Ensure re-entered password matcher is submitted
         elif request.form.get("password") != request.form.get("confirmation"):
             return apology("re-entered password does not match", 403)
 
