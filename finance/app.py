@@ -116,22 +116,27 @@ def register():
     # Check if request method is POST
     if request.method == "POST":
 
+        # Get data from form
+        name = request.form.get("username")
+        password = request.form.get("password")
+        re_entered_password = request.form.get("confirmation")
+
         # Ensure username is submitted
-        if not request.form.get("username"):
+        if not name:
             return apology("must provide username")
         # Ensure password is submitted
-        elif not request.form.get("password"):
+        elif not password:
             return apology("must provide password")
         # Ensure pasword is re-entered
-        elif not request.form.get("confirmation"):
+        elif not re_entered_password:
             return apology("must re-enter password")
         # Ensure re-entered password matches with password
-        elif request.form.get("password") != request.form.get("confirmation"):
+        elif password != re_entered_password:
             return apology("re-entered password does not match")
 
     try:
         # Insert user into database
-        db.execute
+        db.execute("INSERT INTO ")
 
     except ValueError:
         return apology("user name already taken, please use a different username", 403)
