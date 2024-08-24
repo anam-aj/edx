@@ -113,7 +113,7 @@ def quote():
         return render_template("qoute_response.html", data = info)
 
     else:
-        return render_template("qoute_request.html", data = info)
+        return render_template("qoute_request.html")
 
 
 @app.route("/register", methods=["GET", "POST"])
