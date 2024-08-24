@@ -128,11 +128,7 @@ def register():
         # Ensure re-entered password matches with password
         elif request.form.get("password") != request.form.get("confirmation"):
             return apology("re-entered password does not match", 403)
-    """try:
-        # Insert user into database
-    except ValueError:
-        return apology("user name already taken, please use a different username", 403)
-    """
+    
     else:
         # If request method is GET
         return render_template("register.html")
