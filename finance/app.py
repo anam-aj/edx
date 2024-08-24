@@ -131,7 +131,7 @@ def register():
     try:
         # Insert user into database
     except ValueError:
-        return redirect("user name already taken, please use a different username", 403)
+        return apology("user name already taken, please use a different username", 403)
 
     else:
         # If request method is GET
