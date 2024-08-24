@@ -106,7 +106,7 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
-    return render_template("qoute.html")
+    return render_template("quote.html")
 
 
 
