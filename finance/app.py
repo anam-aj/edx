@@ -131,7 +131,8 @@ def register():
 
     try:
         # Insert user into database
-        
+        db.execute
+
     except ValueError:
         return apology("user name already taken, please use a different username", 403)
 
