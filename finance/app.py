@@ -133,11 +133,12 @@ def register():
         # Ensure re-entered password matches with password
         elif password != re_entered_password:
             return apology("re-entered password does not match")
-    
+
+    hash = generate_password_hash(password)
 
     try:
         # Insert user into database
-        db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", name, password)
+        db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", name, hash)
 
     except ValueError:
         return apology("user name already taken, please use a different username", 403)
