@@ -46,7 +46,6 @@ def buy():
 
     # Check if request method is POST
     if request.method == "POST":
-
         # Get symbol from user
         symbol = request.form.get("symbol")
         # Ensure symbol is given by user
@@ -73,16 +72,13 @@ def buy():
             return apology("stock/symbol not found")
         # Stock/symbol exist
         else:
-            # Connect to the database
-            conn = SQL.connect('database.db')
-            cursor = conn.cursor()
+            # Fetch a specific value
+            rows = db.execute("SELECT column_name FROM table_name WHERE condition")
+            value = rows[0]["column_name"]
+            if rows:
 
-            # Execute a query
-            cursor.execute("SELECT * FROM users WHERE id = ?", (user_id,))
-            rows = cursor.fetchall()
-
-            # Close the connection
-            conn.close()
+            else:
+                None
 
     else:
         # Renders buy page(user request via GET)
