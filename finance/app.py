@@ -38,6 +38,7 @@ def index():
     info = "hello bhadwe"
     return render_template("index.html", data = info)
 
+
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
 def buy():
