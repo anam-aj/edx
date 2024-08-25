@@ -75,7 +75,6 @@ def buy():
         else:
             return apology("implement buy")
 
-
     else:
         # Renders buy page(user request via GET)
         return render_template("buy.html")
