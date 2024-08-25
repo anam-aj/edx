@@ -55,7 +55,8 @@ def buy():
             return apology("please enter shares")
         try:
             shares = int(shares)
-        except
+        except ValueError:
+            
 
         # Look for stock
         stock = lookup(symbol)
