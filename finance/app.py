@@ -95,6 +95,7 @@ def buy():
 
                 cash = cash - bill
                 db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, session["user_id"])
+                return redirect("/")
     else:
         # Renders buy page(user request via GET)
         return render_template("buy.html")
