@@ -75,19 +75,20 @@ def buy():
             # Fetch cash available
             cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
             # Calculates bill for purchase
-            bill = stock["price"] * shares
+            share_price = stock["price"]
+            bill =  share_price * shares
             # If user does not have enough cash
             if cash < bill:
                 return apology("you do not have enough balance")
             # If user have enough cash, makes the purchae and update the balance
             else:
                 username = db.execute("SELECT username FROM users WHERE id = ?", session["user_id"])
-                rate = 
+                method = "buy"
                 db.execute(
                     "INSERT INTO transactions"
                     "(user_name, symbol, shares, rate, total, method)"
                     "VALUES(?, ?, ?, ?, ?, ?)",
-                    username, symbol, shares, rate, total, method
+                    username, symbol, shares, share_price, bill, method
                     )
 
                 cash = cash - bill
