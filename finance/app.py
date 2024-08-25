@@ -83,6 +83,7 @@ def buy():
             else:
                 cash = cash - bill
                 db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, session["user_id"])
+                db.execute("")
 
     else:
         # Renders buy page(user request via GET)
