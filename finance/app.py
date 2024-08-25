@@ -72,7 +72,7 @@ def buy():
             return apology("stock/symbol not found")
         # Stock exist
         else:
-            # Fetch a specific value
+            # Fetch cash available
             cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
             # Calculates bill for purchase
             bill = stock["price"] * shares
