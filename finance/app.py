@@ -42,21 +42,7 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
-    # Check if request method is POST
-    if request.method == "POST":
-        # Get symbol from user
-        symbol = request.form.get("symbol")
-        # Look for stock
-        stock = lookup(symbol)
-        # Display stock price if found
-        if stock:
-            
-        else:
-            return apology("stock/symbol not found")
-
-    else:
-        # Renders quote page(user request via GET)
-        return render_template("quote.html")
+    
 
     return apology("TODO")
 
