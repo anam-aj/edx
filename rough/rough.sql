@@ -6,5 +6,5 @@ CREATE TABLE transactions (
     rate FLOAT
     total FLOAT
     method TEXT,
-
+    date_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
