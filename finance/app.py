@@ -67,14 +67,19 @@ def buy():
 
         # Look for stock
         stock = lookup(symbol)
-        # Stock/symbol does not exist
+        # Stock does not exist
         if not stock:
             return apology("stock/symbol not found")
-        # Stock/symbol exist
+        # Stock exist
         else:
             # Fetch a specific value
             cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
-            
+            # Check if user have enogh balance to buy shares
+            if cash < (stock["price"] * shares):
+                return apology("you do not have enough balance")
+            else:
+                
+
 
     else:
         # Renders buy page(user request via GET)
