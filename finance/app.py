@@ -73,7 +73,8 @@ def buy():
         # If stock exist
         else:
             # Fetch cash available
-            cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+            cash_dict = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+            cash = cash_dict[0]["cash"]
             # Calculates bill for purchase
             share_price = stock["price"]
             bill =  share_price * shares
