@@ -49,14 +49,15 @@ def buy():
         if not symbol:
             return apology("please enter symbol")
 
-        # Get symbol from user
+        # Get shares from user
         shares =  request.form.get("shares")
         if not shares:
             return apology("please enter shares")
         try:
             shares = int(shares)
         except ValueError:
-            
+            return apology("please enter positive whole number for shares")
+
 
         # Look for stock
         stock = lookup(symbol)
