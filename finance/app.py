@@ -82,6 +82,7 @@ def buy():
             # If user have enough cash, makes the purchae and update the balance
             else:
                 username = db.execute("SELECT username FROM users WHERE id = ?", session["user_id"])
+                rate = 
                 db.execute(
                     "INSERT INTO transactions"
                     "(user_name, symbol, shares, rate, total, method)"
