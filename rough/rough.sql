@@ -1,6 +1,5 @@
 CREATE TABLE transactions (
     id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-    user_name INTEGER,
-    FOREIGN KEY (user_name) REFERENCES users()
-
+    user_name TEXT,
+    FOREIGN KEY (user_name) REFERENCES users(username)
 );
