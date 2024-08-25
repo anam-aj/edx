@@ -67,20 +67,20 @@ def buy():
 
         # Look for stock
         stock = lookup(symbol)
-        # Stock does not exist
+        # If stock does not exist
         if not stock:
             return apology("stock/symbol not found")
-        # Stock exist
+        # If stock exist
         else:
             # Fetch cash available
             cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
             # Calculates bill for purchase
             bill = stock["price"] * shares
-            # Check if user have enogh balance to buy shares
+            # If user does not have enough cash
             if cash < bill:
                 return apology("you do not have enough balance")
+            # If user have enough cash, update the balance after purchase
             else:
-                # Update user's cash after purchase
                 cash = cash - bill
                 db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, session["user_id"])
 
