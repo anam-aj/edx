@@ -68,12 +68,21 @@ def buy():
 
         # Look for stock
         stock = lookup(symbol)
-        # Check for stock
+        # Stock/symbol does not exist
         if not stock:
             return apology("stock/symbol not found")
         # Stock/symbol exist
         else:
-            return apology("implement buy")
+            # Connect to the database
+            conn = sqlite3.connect('database.db')
+            cursor = conn.cursor()
+
+            # Execute a query
+            cursor.execute("SELECT * FROM users WHERE id = ?", (user_id,))
+            rows = cursor.fetchall()
+
+            # Close the connection
+            conn.close()
 
     else:
         # Renders buy page(user request via GET)
