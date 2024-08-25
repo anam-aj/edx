@@ -73,7 +73,7 @@ def buy():
         # Stock/symbol exist
         else:
             # Fetch a specific value
-            rows = db.execute("SELECT cash FROM users WHERE id = ")
+            rows = db.execute("SELECT cash FROM users WHERE id = session["user_id"])
             value = rows[0]["column_name"]
             if rows:
                 none
