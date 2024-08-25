@@ -51,11 +51,14 @@ def buy():
 
         # Look for stock
         stock = lookup(symbol)
-        # Display stock price if found
-        if stock:
-            # Buy the stock
-        else:
+        
+        # Stock/symbol does not exist
+        if not stock:
             return apology("stock/symbol not found")
+        # Stock/symbol exist
+        else:
+            # Buy
+
 
     else:
         # Renders quote page(user request via GET)
