@@ -65,7 +65,6 @@ def buy():
         except ValueError:
             return apology("please enter positive whole number for shares")
 
-
         # Look for stock
         stock = lookup(symbol)
         # check for stock
