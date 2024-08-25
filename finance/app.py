@@ -74,7 +74,7 @@ def buy():
         # Stock/symbol exist
         else:
             # Connect to the database
-            conn = sqlite3.connect('database.db')
+            conn = SQL.connect('database.db')
             cursor = conn.cursor()
 
             # Execute a query
