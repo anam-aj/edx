@@ -3,7 +3,8 @@ CREATE TABLE transactions (
     user_name TEXT,
     symbol TEXT,
     shares INTEGER,
-    rate INTEGER
+    rate FLOAT
+    total FLOAT
     method TEXT,
 
 );
