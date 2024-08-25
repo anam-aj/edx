@@ -208,6 +208,16 @@ def register():
         # Insert user into database if username does not exist already
         try:
             db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", name, password_hash)
+            username_dict = db.execute("SELECT username FROM users WHERE id = ?", session["user_id"])
+            username = username_dict[0]["username"]
+            method = "buy"
+            db.execute(
+                "INSERT INTO transactions"
+                "(user_name, symbol, shares, rate, total, method)"
+                "VALUES(?, ?, ?, ?, ?, ?)",
+                username, symbol, shares, share_price, bill, method
+                )
+
             return render_template("register.html")
 
         except ValueError:
