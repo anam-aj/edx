@@ -42,22 +42,26 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
+
     # Check if request method is POST
     if request.method == "POST":
+
         # Get symbol from user
         symbol = request.form.get("symbol")
+        # Ensure symbol is given by user
         if not symbol:
             return apology("please enter symbol")
 
         # Get shares from user
         shares =  request.form.get("shares")
+        # Ensure shares is given by user
         if not shares:
             return apology("please enter shares")
+        # Ensure shares is positive integer
         try:
             shares = int(shares)
             if (shares % 1) != 0:
                 return apology("please enter positive whole number for shares")
-
         except ValueError:
             return apology("please enter positive whole number for shares")
 
@@ -70,12 +74,12 @@ def buy():
             return apology("stock/symbol not found")
         # Stock/symbol exist
         else:
-            # Buy
+            return apology("implement buy")
 
 
     else:
-        # Renders quote page(user request via GET)
-        return render_template("quote.html")
+        # Renders buy page(user request via GET)
+        return render_template("buy.html")
 
 
 @app.route("/history")
