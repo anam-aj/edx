@@ -49,6 +49,14 @@ def buy():
         if not symbol:
             return apology("please enter symbol")
 
+        # Get symbol from user
+        shares =  request.form.get("shares")
+        if not shares:
+            return apology("please enter shares")
+        try:
+            shares = int(shares)
+        except
+
         # Look for stock
         stock = lookup(symbol)
 
@@ -57,7 +65,7 @@ def buy():
             return apology("stock/symbol not found")
         # Stock/symbol exist
         else:
-            # Buy 
+            # Buy
 
 
     else:
