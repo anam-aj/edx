@@ -74,12 +74,13 @@ def buy():
         else:
             # Fetch a specific value
             cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
-            # Check if user have enogh balance to buy shares
+            # Calculates bill for purchase
             bill = stock["price"] * shares
+            # Check if user have enogh balance to buy shares
             if cash < bill:
                 return apology("you do not have enough balance")
             else:
-                # Update user cash after purchase
+                # Update user's cash after purchase
                 cash = cash - bill
                 db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, session["user_id"])
 
