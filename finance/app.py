@@ -88,8 +88,8 @@ def buy():
                 user_id = userid_dict[0]["id"]
                 method = "buy"
                 db.execute(
-                    "INSERT INTO transactions"
-                    "(user_id, symbol, shares, rate, total, method)"
+                    "INSERT INTO transactions "
+                    "(user_id, symbol, shares, rate, total, method) "
                     "VALUES (?, ?, ?, ?, ?, ?)",
                     user_id, symbol, shares, share_price, bill, method)
 
@@ -124,7 +124,7 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
-    
+
     return apology("TODO")
 
 
