@@ -99,7 +99,7 @@ def buy():
                     "WHERE user_id = ? AND symbol = ?", user_id , symbol)
                 if share_dict:
                     shares_old = share_dict[0][shares]
-                    shares_new = shares_old + 
+                    shares_new = shares_old + shares
 
 
 
