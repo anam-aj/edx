@@ -91,13 +91,15 @@ def buy():
                     "INSERT INTO transactions"
                     "(user_id, symbol, shares, rate, total, method)"
                     "VALUES(?, ?, ?, ?, ?, ?)",
-                    user_id, symbol, shares, share_price, bill, method
-                    )
+                    user_id, symbol, shares, share_price, bill, method)
 
                 # Add/Update share holdings (in the "holdings" table)
-                symbol_dict = db.execute(
+                share_dict = db.execute(
                     "SELECT shares FROM holdings"
-                    "WHERE user_id = ")
+                    "WHERE user_id = ? AND symbol = ?", user_id , symbol)
+                if share_dict:
+                    
+
 
                 # Update cash (in the "users" table)
                 cash = cash - bill
