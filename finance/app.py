@@ -95,7 +95,7 @@ def buy():
                     )
 
                 # Add/Update share holdings (in the "holdings" table)
-                
+                symbol_dict = db.execute("SELECT shares FROM holdings")
 
                 # Update cash (in the "users" table)
                 cash = cash - bill
