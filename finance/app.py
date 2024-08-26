@@ -83,14 +83,14 @@ def buy():
                 return apology("you do not have enough balance")
             # If user have enough cash, makes the purchae and update the balance
             else:
-                username_dict = db.execute("SELECT username FROM users WHERE id = ?", session["user_id"])
-                username = username_dict[0]["username"]
+                userid_dict = db.execute("SELECT id FROM users WHERE id = ?", session["user_id"])
+                user_id = userid_dict[0]["username"]
                 method = "buy"
                 db.execute(
                     "INSERT INTO transactions"
-                    "(user_name, symbol, shares, rate, total, method)"
+                    "(user_id, symbol, shares, rate, total, method)"
                     "VALUES(?, ?, ?, ?, ?, ?)",
-                    username, symbol, shares, share_price, bill, method
+                    user_id, symbol, shares, share_price, bill, method
                     )
 
                 cash = cash - bill
