@@ -83,8 +83,9 @@ def buy():
                 return apology("you do not have enough balance")
             # If user have enough cash, makes the purchase and update the balance
             else:
+                # Add transaction (to the "transaction" table)
                 userid_dict = db.execute("SELECT id FROM users WHERE id = ?", session["user_id"])
-                user_id = userid_dict[0]["username"]
+                user_id = userid_dict[0]["id"]
                 method = "buy"
                 db.execute(
                     "INSERT INTO transactions"
@@ -93,9 +94,13 @@ def buy():
                     user_id, symbol, shares, share_price, bill, method
                     )
 
+                # Add/Update share holdings (in the "holdings" table)
+                
+                # Update cash (in the "users" table)
                 cash = cash - bill
                 db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, session["user_id"])
                 return redirect("/")
+
     else:
         # Renders buy page(user request via GET)
         return render_template("buy.html")
