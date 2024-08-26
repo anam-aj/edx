@@ -96,6 +96,7 @@ def buy():
 
                 # Add/Update share holdings (in the "holdings" table)
                 
+
                 # Update cash (in the "users" table)
                 cash = cash - bill
                 db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, session["user_id"])
