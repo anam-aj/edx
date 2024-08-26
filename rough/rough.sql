@@ -1,6 +1,6 @@
 CREATE TABLE transactions (
     id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-    user_id TEXT,
+    user_id integer,
     symbol TEXT,
     shares INTEGER,
     rate FLOAT,
