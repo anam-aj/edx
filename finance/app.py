@@ -104,8 +104,8 @@ def buy():
                         "UPDATE holdings SET shares = ?"
                         "WHERE user_id = ? AND symbol = ?",
                         shares_new, user_id, symbol)
-
-
+                else:
+                    db.execute("INSERT INTO holdings")
                 # Update cash (in the "users" table)
                 cash = cash - bill
                 db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, session["user_id"])
