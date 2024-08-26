@@ -5,7 +5,21 @@
 {% endblock %}
 
 {% block main %}
-    <p>
-        {{ data }}
-    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Birthday</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Loop through the database entries to display them in this table -->
+            {% for birthday_row in birthdays %}
+                <tr>
+                    <td>{{ birthday_row.name }}</td>
+                    <td>{{ birthday_row.month}}/{{ birthday_row.day}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 {% endblock %}
