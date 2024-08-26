@@ -8,4 +8,6 @@ CREATE TABLE transactions (
     method TEXT,
     date_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY(user_id) REFERENCES users(id)
-    );
+);
+
+CREATE INDEX userid ON transactions 
