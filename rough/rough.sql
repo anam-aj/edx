@@ -10,4 +10,4 @@ CREATE TABLE transactions (
     FOREIGN KEY(user_id) REFERENCES users(id)
 );
 
-CREATE INDEX userid ON transactions 
+CREATE INDEX userid ON transactions (user_id)
