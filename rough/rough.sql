@@ -12,6 +12,7 @@ CREATE TABLE transactions (
 
 CREATE INDEX userid ON transactions (user_id)
 
+
 CREATE TABLE holdings (
     id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
     user_id integer,
@@ -19,3 +20,5 @@ CREATE TABLE holdings (
     shares INTEGER,
     FOREIGN KEY(user_id) REFERENCES users(id)
 );
+
+CREATE UNIQUE INDEX userid_symbol ON holdings (user_id, symbol)
