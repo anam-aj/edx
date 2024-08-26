@@ -62,6 +62,7 @@ def buy():
             shares = float(shares)
             if (shares % 1) != 0 or shares <= 0:
                 return apology("please enter positive whole number for shares")
+            shares = int(shares)
         except ValueError:
             return apology("please enter positive whole number for shares")
 
