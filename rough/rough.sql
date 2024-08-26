@@ -6,7 +6,7 @@ CREATE TABLE transactions (
     rate FLOAT,
     total FLOAT,
     method TEXT,
-    date_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-    FOREIGN KEY(user_id) REFERENCES users(id)
+    date_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY(user_id) REFERENCES users(id),
     INDEX (user_id, symbol)
 );
