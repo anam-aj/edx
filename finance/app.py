@@ -60,7 +60,6 @@ def buy():
         # Ensure shares is positive integer
         try:
             shares = float(shares)
-            if shares
             if (shares % 1) != 0 or shares <= 0:
                 return apology("please enter positive whole number for shares")
         except ValueError:
