@@ -100,7 +100,9 @@ def buy():
                 if share_dict:
                     shares_old = share_dict[0][shares]
                     shares_new = shares_old + shares
-
+                    db.execute(
+                        "UPDTAE holdings SET shares = ?"
+                        "WHERE user_id = ? AND symbol = ?", shares_new, user_id, symbol)
 
 
                 # Update cash (in the "users" table)
