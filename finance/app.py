@@ -98,8 +98,9 @@ def buy():
                     "SELECT shares FROM holdings"
                     "WHERE user_id = ? AND symbol = ?", user_id , symbol)
                 if share_dict:
-                    shares_hold = share_dict[0][shares]
-                    if shares_hold
+                    shares_old = share_dict[0][shares]
+                    shares_new = shares_old + 
+
 
 
                 # Update cash (in the "users" table)
