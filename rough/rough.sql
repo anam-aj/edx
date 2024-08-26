@@ -7,4 +7,5 @@ CREATE TABLE transactions (
     total FLOAT,
     method TEXT,
     date_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    FOREIGN KEY(user_id) REFERENCES users(id)
 );
