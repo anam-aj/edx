@@ -81,7 +81,7 @@ def buy():
             # If user does not have enough cash
             if cash < bill:
                 return apology("you do not have enough balance")
-            # If user have enough cash, makes the purchase and update the balance
+            # If user have enough cash, makes the purchase
             else:
                 # Add transaction (to the "transaction" table)
                 userid_dict = db.execute("SELECT id FROM users WHERE id = ?", session["user_id"])
@@ -109,7 +109,7 @@ def buy():
                                "(user_id, symbol, shares)"
                                "VALUES (?, ?, ?)",
                                user_id, symbol, shares)
-                    
+
                 # Update cash (in the "users" table)
                 cash = cash - bill
                 db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, session["user_id"])
