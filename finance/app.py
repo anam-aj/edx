@@ -95,18 +95,18 @@ def buy():
 
                 # Add/Update share holdings (in the "holdings" table)
                 share_dict = db.execute(
-                    "SELECT shares FROM holdings"
+                    "SELECT shares FROM holdings "
                     "WHERE user_id = ? AND symbol = ?", user_id , symbol)
                 if share_dict:
                     shares_old = share_dict[0][shares]
                     shares_new = shares_old + shares
                     db.execute(
-                        "UPDATE holdings SET shares = ?"
+                        "UPDATE holdings SET shares = ? "
                         "WHERE user_id = ? AND symbol = ?",
                         shares_new, user_id, symbol)
                 else:
-                    db.execute("INSERT INTO holdings"
-                               "(user_id, symbol, shares)"
+                    db.execute("INSERT INTO holdings "
+                               "(user_id, symbol, shares) "
                                "VALUES (?, ?, ?)",
                                user_id, symbol, shares)
 
