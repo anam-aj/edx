@@ -8,4 +8,5 @@ CREATE TABLE transactions (
     method TEXT,
     date_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     FOREIGN KEY(user_id) REFERENCES users(id)
+    INDEX (user_id, symbol)
 );
