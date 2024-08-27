@@ -19,12 +19,12 @@
             <!-- Loop through the database entries to display them in this table -->
             {% for row in holdings_data %}
                 <tr>
-                    <td>{{ birthday_row.name }}</td>
-                    <td>{{ birthday_row.month}}</td>
+                    <td>{{ row.symbol }}</td>
+                    <td>{{ row.shares}}</td>
+            {% endfor %}
                     <td>{{ birthday_row.month}}</td>
                     <td>{{ birthday_row.month}}</td>
                 </tr>
-            {% endfor %}
         </tbody>
 
         <tfoot>
