@@ -307,10 +307,25 @@ def sell():
                 "INSERT INTO transactions "
                 "(user_id, symbol, shares, rate, total, method) "
                 "VALUES (?, ?, ?, ?, ?, ?)",
-                session["user_id"], symbol, shares, share_price, bill, method)
-
+                session["user_id"], symbol, shares, share_price, total, method)
 
             # Update/Add holding (in "holdings" table)
+            share_dict = db.execute(
+                    "SELECT shares FROM holdings "
+                    "WHERE user_id = ? AND symbol = ?", session["user_id"] , symbol)
+            if share_dict:
+                shares_old = share_dict[0]["shares"]
+                shares_new = shares_old + shares
+                db.execute(
+                    "UPDATE holdings SET shares = ? "
+                    "WHERE user_id = ? AND symbol = ?",
+                    shares_new, session["user_id"] , symbol)
+            else:
+                db.execute("INSERT INTO holdings "
+                    "(user_id, symbol, shares) "
+                    "VALUES (?, ?, ?)",
+                    session["user_id"] , symbol, shares)
+
             return redirect("/")
     else:
         holdings_dict = db.execute("SELECT symbol FROM holdings WHERE user_id = ? AND shares > 0", session["user_id"])
