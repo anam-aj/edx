@@ -52,7 +52,7 @@ def index():
         grand_total = grand_total + total
         row["price"] = price
         row["total"] = total
-
+    print(holdings_dict)
     return render_template("index.html", holdings_data = holdings_dict, user_cash = cash, user_total = grand_total)
 
 
