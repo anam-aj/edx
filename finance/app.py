@@ -43,6 +43,7 @@ def index():
     # User's share holdings
     holdings_dict = db.execute("SELECT * FROM holdings WHERE id = ? AND shares > 0", user_id)
     return render_template("index.html", holdings_data = holdings_dict)
+    
 
 
 @app.route("/buy", methods=["GET", "POST"])
