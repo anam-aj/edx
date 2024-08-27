@@ -335,7 +335,7 @@ def sell():
                 "VALUES (?, ?, ?, ?, ?, ?)",
                 session["user_id"], symbol, shares, share_price, total, method)
 
-            # Update/Add holding (in "holdings" table)
+            # Update share holding (in "holdings" table)
             share_dict = db.execute(
                     "SELECT shares FROM holdings "
                     "WHERE user_id = ? AND symbol = ?", session["user_id"] , symbol)
@@ -349,6 +349,7 @@ def sell():
 
             return redirect("/")
     else:
+        # If requested via GET
         holdings_dict = db.execute("SELECT symbol FROM holdings WHERE user_id = ? AND shares > 0", session["user_id"])
         return render_template("sell.html", data = holdings_dict)
 
@@ -363,9 +364,11 @@ def addcash():
 
         # Get amount from user
         amount =  request.form.get("amount")
+
         # Ensure cash is given by user
         if not amount:
             return apology("please enter amount")
+
         # Ensure amount is positive integer
         try:
             amount = float(amount)
