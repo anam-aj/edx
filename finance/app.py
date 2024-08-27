@@ -103,7 +103,6 @@ def buy():
             # If user have enough cash, makes the purchase
             else:
                 # Add transaction (to the "transaction" table)
-                print(bill)
                 userid_dict = db.execute("SELECT id FROM users WHERE id = ?", session["user_id"])
                 user_id = userid_dict[0]["id"]
                 method = "buy"
