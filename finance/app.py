@@ -53,7 +53,7 @@ def index():
         row["price"] = price
         row["total"] = total
 
-    return render_template("index.html", holdings_data = holdings_dict, user_cash = cash, user_total = grand_total )
+    return render_template("index.html", holdings_data = holdings_dict, user_cash = cash, user_total = grand_total)
 
 
 
