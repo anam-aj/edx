@@ -266,7 +266,7 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    holdings_dict = db.execute("SELECT * FROM holdings WHERE user_id = ? AND shares > 0", session["user_id"])
+    
     # If requested via POST
     if request.method ==  "POST":
         # Get stock selected by user
@@ -286,6 +286,7 @@ def sell():
         except ValueError:
             return apology("please enter positive whole number for shares")
         # Ensure user has enough shares demanded for selling
+        holdings_dict = db.execute("SELECT symbol FROM holdings WHERE user_id = ? AND shares > 0", session["user_id"])
 
 
         price = lookup(symbol)["price"]
@@ -302,4 +303,5 @@ def sell():
 
         return redirect("/")
     else:
+        holdings_dict = db.execute("SELECT symbol FROM holdings WHERE user_id = ? AND shares > 0", session["user_id"])
         return render_template("sell.html", data = holdings_dict)
