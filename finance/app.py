@@ -41,7 +41,7 @@ def index():
     user_dict = db.execute("SELECT * FROM users WHERE id = ?", user_id)
     cash = user_dict[0]["cash"]
     # User's share holdings
-    holdings_dict = db.execute("SELECT * FROM holdings WHERE id = ? AND shares > 0", user_id)
+    holdings_dict = db.execute("SELECT * FROM holdings WHERE user_id = ? AND shares > 0", user_id)
     grand_total = cash
     for row in holdings_dict:
         symbol = row["symbol"]
