@@ -266,6 +266,7 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
+    
     # If requested via POST
     if request.method ==  "POST":
         return apology("Implement sell")
