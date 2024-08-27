@@ -271,7 +271,8 @@ def sell():
     if request.method ==  "POST":
         symbol = request.form.get("symbol")
         shares = request.form.get("shares")
-        price = lookup(symbol)
+        price = lookup(symbol)["price"]
+        total = shares * price
         return apology("Implement sell")
     else:
         return render_template("sell.html", data = holdings_dict)
