@@ -57,7 +57,7 @@ def index():
         row["price"] = price
         row["total"] = total
     grand_total = round(grand_total, 2)
-    return render_template("index.html", holdings_data = holdings_dict, user_cash = cash, user_total = grand_total)
+    return render_template("index.html", holdings_data=holdings_dict, user_cash=cash, user_total=grand_total)
 
 
 @app.route("/buy", methods=["GET", "POST"])
@@ -76,12 +76,12 @@ def buy():
             return apology("please enter symbol")
 
         # Get shares from user
-        shares =  request.form.get("shares")
+        shares = request.form.get("shares")
 
         # Ensure shares is given by user
         if not shares:
             return apology("please enter shares")
-        
+
         # Ensure shares is positive integer
         try:
             shares = float(shares)
@@ -106,7 +106,7 @@ def buy():
 
             # Calculates bill for purchase
             share_price = stock["price"]
-            bill =  share_price * shares
+            bill = share_price * shares
 
             # If user does not have enough cash
             if cash < bill:
@@ -127,7 +127,7 @@ def buy():
                 # Add/Update share holdings (in the "holdings" table)
                 share_dict = db.execute(
                     "SELECT shares FROM holdings "
-                    "WHERE user_id = ? AND symbol = ?", user_id , symbol)
+                    "WHERE user_id = ? AND symbol = ?", user_id, symbol)
                 if share_dict:
                     shares_old = share_dict[0]["shares"]
                     shares_new = shares_old + shares
@@ -156,7 +156,7 @@ def buy():
 def history():
     """Show history of transactions"""
     transactions = db.execute("SELECT * FROM transactions WHERE user_id = ?", session["user_id"])
-    return render_template("history.html", transactions_data = transactions)
+    return render_template("history.html", transactions_data=transactions)
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -311,7 +311,8 @@ def sell():
             return apology("please enter positive whole number for shares")
 
         # Query database to ensure user has enough shares for selling
-        shares_dict = db.execute("SELECT shares FROM holdings WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
+        shares_dict = db.execute("SELECT shares FROM holdings "
+                                "WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
         shares_avail = shares_dict[0]["shares"]
 
         # Not enough shares
