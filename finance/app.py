@@ -70,15 +70,18 @@ def buy():
 
         # Get symbol from user
         symbol = request.form.get("symbol")
+
         # Ensure symbol is given by user
         if not symbol:
             return apology("please enter symbol")
 
         # Get shares from user
         shares =  request.form.get("shares")
+
         # Ensure shares is given by user
         if not shares:
             return apology("please enter shares")
+        
         # Ensure shares is positive integer
         try:
             shares = float(shares)
