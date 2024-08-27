@@ -268,7 +268,8 @@ def sell():
     """Sell shares of stock"""
 
     # If requested via POST
-    if request.method ==  "POST":
+    if request.method == "POST":
+
         # Get stock selected by user
         symbol = request.form.get("symbol")
 
@@ -298,8 +299,7 @@ def sell():
             cash_dict = db.execute("SELECT cash FROM users WHERE user_id = ?", session["user_id"])
             cash = cash_dict[0]["cash"]
             cash = cash + total
-            db.execute("UPDATE users SET cash = ?", cash)
-
+            db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, session["user_id"])
 
             # Add transaction (to "transaction" table)
 
