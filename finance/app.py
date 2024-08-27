@@ -152,8 +152,6 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
-
-    #
     transactions = db.execute("SELECT * FROM transactions WHERE user_id = ?", session["user_id"])
     return render_template("history.html", transactions_data = transactions)
 
@@ -212,14 +210,20 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
+
     # Check if request method is POST
     if request.method == "POST":
+
         # Get symbol from user
         symbol = request.form.get("symbol")
+
+        # Ensure symbol is provided
         if not symbol:
             return apology("please enter symbol")
+
         # Look for stock
         stock = lookup(symbol)
+
         # Display stock price if found
         if stock:
             price = stock["price"]
@@ -247,12 +251,15 @@ def register():
         # Ensure username is submitted
         if not name:
             return apology("must provide username")
+
         # Ensure password is submitted
         elif not password:
             return apology("must provide password")
+
         # Ensure pasword is re-entered
         elif not re_entered_password:
             return apology("must re-enter password")
+
         # Ensure re-entered password matches with password
         elif password != re_entered_password:
             return apology("re-entered password does not match")
@@ -286,9 +293,11 @@ def sell():
 
         # Get shares entered by user
         shares = request.form.get("shares")
+
         # Ensure shares is given by user
         if not shares:
             return apology("please enter shares")
+
         # Ensure shares is positive integer
         try:
             shares = float(shares)
@@ -297,12 +306,18 @@ def sell():
             shares = int(shares)
         except ValueError:
             return apology("please enter positive whole number for shares")
-        # Ensure user has enough shares demanded for selling
+
+        # Query database to ensure user has enough shares for selling
         shares_dict = db.execute("SELECT shares FROM holdings WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
         shares_avail = shares_dict[0]["shares"]
+
+        # Not enough shares
         if shares_avail < shares:
             return apology("you do not have enough shares")
+
+        # Enough shares
         else:
+            # Calculate shares' total price
             share_price = lookup(symbol)["price"]
             total = shares * share_price
 
