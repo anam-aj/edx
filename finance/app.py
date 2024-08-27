@@ -46,7 +46,10 @@ def index():
         symbol = row["symbol"]
         stock = lookup(symbol)
         price = stock["price"]
+        shares = row["shares"]
+        total = price * shares
         
+
     return render_template("index.html", holdings_data = holdings_dict)
 
 
