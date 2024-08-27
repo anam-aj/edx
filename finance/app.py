@@ -269,7 +269,10 @@ def sell():
     holdings_dict = db.execute("SELECT symbol FROM holdings WHERE user_id = ? AND shares > 0", session["user_id"])
     # If requested via POST
     if request.method ==  "POST":
+        # Get stock selected by user
         symbol = request.form.get("symbol")
+
+        # Get shares entered by user
         shares = request.form.get("shares")
         # Ensure shares is given by user
         if not shares:
@@ -282,7 +285,9 @@ def sell():
             shares = int(shares)
         except ValueError:
             return apology("please enter positive whole number for shares")
+        # Ensure user has enough shares demanded for selling
         
+
         price = lookup(symbol)["price"]
         total = shares * price
 
