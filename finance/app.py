@@ -211,9 +211,8 @@ def quote():
         stock = lookup(symbol)
         # Display stock price if found
         if stock:
-            print()
-            price = "$" + str(stock["price"])
-            return render_template("quote_response.html", price=price, symbol=symbol)
+            price = stock["price"]
+            return render_template("quote_response.html", price=usd(price), symbol=symbol)
         else:
             return apology("stock/symbol not found")
 
