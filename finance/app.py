@@ -311,8 +311,11 @@ def sell():
             return apology("please enter positive whole number for shares")
 
         # Query database to ensure user has enough shares for selling
-        shares_dict = db.execute("SELECT shares FROM holdings "
-                                "WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
+        shares_dict = db.execute(
+            "SELECT shares FROM holdings "
+            "WHERE user_id = ? AND symbol = ?",
+             session["user_id"], symbol
+            )
         shares_avail = shares_dict[0]["shares"]
 
         # Not enough shares
