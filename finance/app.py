@@ -273,6 +273,16 @@ def sell():
         shares = request.form.get("shares")
         price = lookup(symbol)["price"]
         total = shares * price
+
+        # Update cash (in "users" table)
+
+
+        # Add transaction (to "transaction" table)
+
+
+        # Update/Add holding (in "holdings" table)
+
+        
         return apology("Implement sell")
     else:
         return render_template("sell.html", data = holdings_dict)
