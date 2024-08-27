@@ -271,4 +271,3 @@ def sell():
         return apology("Implement sell")
     else:
         return render_template("sell.html")
-
