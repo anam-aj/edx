@@ -292,8 +292,8 @@ def sell():
         if shares_avail < shares:
             return apology("you do not have enough shares")
         else:
-            price = lookup(symbol)["price"]
-            total = shares * price
+            share_price = lookup(symbol)["price"]
+            total = shares * share_price
 
             # Update cash (in "users" table)
             cash_dict = db.execute("SELECT cash FROM users WHERE user_id = ?", session["user_id"])
@@ -302,14 +302,12 @@ def sell():
             db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, session["user_id"])
 
             # Add transaction (to "transaction" table)
-            userid_dict = db.execute("SELECT id FROM users WHERE id = ?", session["user_id"])
-            user_id = userid_dict[0]["id"]
-            method = "buy"
+            method = "sell"
             db.execute(
                 "INSERT INTO transactions "
                 "(user_id, symbol, shares, rate, total, method) "
                 "VALUES (?, ?, ?, ?, ?, ?)",
-                user_id, symbol, shares, share_price, bill, method)
+                session["user_id"], symbol, shares, share_price, bill, method)
 
 
             # Update/Add holding (in "holdings" table)
