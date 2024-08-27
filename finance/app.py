@@ -211,6 +211,7 @@ def quote():
         stock = lookup(symbol)
         # Display stock price if found
         if stock:
+            print()
             price = "$" + str(stock["price"])
             return render_template("quote_response.html", price=price, symbol=symbol)
         else:
