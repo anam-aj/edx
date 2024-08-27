@@ -14,6 +14,7 @@
                 <th>Total Value</th>
             </tr>
         </thead>
+
         <tbody>
             <!-- Loop through the database entries to display them in this table -->
             {% for birthday_row in birthdays %}
@@ -25,6 +26,19 @@
                 </tr>
             {% endfor %}
         </tbody>
+
+        <tfoot>
+            <tr>
+            	<td colspan="2"></td>
+                <td class="cashtotal">Cash</td>
+                <td class="cashtotal">figure1</td>
+            </tr>
+            <tr>
+            	<td colspan="2"></td>
+                <td class="cashtotal">TOTAL</td>
+                <td class="cashtotal">figure2</td>
+            </tr>
+        </tfoot>
     </table>
 {% endblock %}
 
@@ -47,7 +61,7 @@
         thead {
             background-color: rgba(179, 208, 255, 0.3);
         }
-            
+
         tbody {
             background-color: rgba(230, 230, 230, 0.3);
         }
