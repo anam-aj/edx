@@ -271,11 +271,23 @@ def sell():
     if request.method ==  "POST":
         symbol = request.form.get("symbol")
         shares = request.form.get("shares")
+        # Ensure shares is given by user
+        if not shares:
+            return apology("please enter shares")
+        # Ensure shares is positive integer
+        try:
+            shares = float(shares)
+            if (shares % 1) != 0 or shares <= 0:
+                return apology("please enter positive whole number for shares")
+            shares = int(shares)
+        except ValueError:
+            return apology("please enter positive whole number for shares")
+        
         price = lookup(symbol)["price"]
         total = shares * price
 
         # Update cash (in "users" table)
-        
+
 
         # Add transaction (to "transaction" table)
 
