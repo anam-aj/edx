@@ -267,6 +267,8 @@ def register():
 def sell():
     """Sell shares of stock"""
 
-    # if request metho is POST
-    
-    return apology("TODO")
+    # If requested via POST
+    if request.method ==  "POST";
+        return apology("Implement sell")
+    else:
+        return render_template("sell.html")
