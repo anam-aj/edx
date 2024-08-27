@@ -40,9 +40,9 @@ def index():
     # Cash available with user
     user_dict = db.execute("SELECT * FROM users WHERE id = ?", user_id)
     cash = user_dict[0]["cash"]
-    # 
-    holdings_dict = db.execute("SELECT * FROM holdings WHERE id = ?", user_id)
-    rows =
+    # User's share holdings
+    holdings_dict = db.execute("SELECT * FROM holdings WHERE id = ? AND shares > 0", user_id)
+    no_of_rows = len(holdings_dict)
     return render_template("index.html", data = info)
 
 
