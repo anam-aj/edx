@@ -143,7 +143,7 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
-
+    transactions_data
     return apology("TODO")
 
 
