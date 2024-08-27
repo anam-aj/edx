@@ -314,8 +314,8 @@ def sell():
         shares_dict = db.execute(
             "SELECT shares FROM holdings "
             "WHERE user_id = ? AND symbol = ?",
-             session["user_id"], symbol
-            )
+            session["user_id"], symbol
+        )
         shares_avail = shares_dict[0]["shares"]
 
         # Not enough shares
@@ -344,21 +344,24 @@ def sell():
 
             # Update share holding (in "holdings" table)
             share_dict = db.execute(
-                    "SELECT shares FROM holdings "
-                    "WHERE user_id = ? AND symbol = ?", session["user_id"] , symbol)
+                "SELECT shares FROM holdings "
+                "WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
 
             shares_old = share_dict[0]["shares"]
             shares_new = shares_old - shares
             db.execute(
                 "UPDATE holdings SET shares = ? "
                 "WHERE user_id = ? AND symbol = ?",
-                shares_new, session["user_id"] , symbol)
+                shares_new, session["user_id"], symbol)
 
             return redirect("/")
     else:
         # If requested via GET
-        holdings_dict = db.execute("SELECT symbol FROM holdings WHERE user_id = ? AND shares > 0", session["user_id"])
-        return render_template("sell.html", data = holdings_dict)
+        holdings_dict = db.execute(
+            "SELECT symbol FROM holdings "
+            "WHERE user_id = ? AND shares > 0", session["user_id"])
+
+        return render_template("sell.html", data=holdings_dict)
 
 
 @app.route("/addcash", methods=["GET", "POST"])
@@ -370,7 +373,7 @@ def addcash():
     if request.method == "POST":
 
         # Get amount from user
-        amount =  request.form.get("amount")
+        amount = request.form.get("amount")
 
         # Ensure cash is given by user
         if not amount:
