@@ -35,6 +35,7 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
+
     # User_id of logged-in user
     user_id = session["user_id"]
 
@@ -42,6 +43,7 @@ def index():
     user_dict = db.execute("SELECT * FROM users WHERE id = ?", user_id)
     cash = user_dict[0]["cash"]
     cash = round(cash, 2)
+
     # User's share holdings
     holdings_dict = db.execute("SELECT * FROM holdings WHERE user_id = ? AND shares > 0", user_id)
     grand_total = cash
@@ -65,6 +67,7 @@ def buy():
 
     # Check if request method is POST
     if request.method == "POST":
+        
         # Get symbol from user
         symbol = request.form.get("symbol")
         # Ensure symbol is given by user
