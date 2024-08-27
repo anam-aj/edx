@@ -325,3 +325,39 @@ def sell():
     else:
         holdings_dict = db.execute("SELECT symbol FROM holdings WHERE user_id = ? AND shares > 0", session["user_id"])
         return render_template("sell.html", data = holdings_dict)
+
+
+@app.route("/addcash", methods=["GET", "POST"])
+@login_required
+def addcash():
+    """Add Cash"""
+
+    # Check if request method is POST
+    if request.method == "POST":
+
+        # Get amount from user
+        amount =  request.form.get("amount")
+        # Ensure cash is given by user
+        if not amount:
+            return apology("please enter amount")
+        # Ensure amount is positive integer
+        try:
+            amount = float(amount)
+            if (amount % 1) != 0 or amount <= 0:
+                return apology("please enter positive whole number for amount")
+            amount = int(amount)
+        except ValueError:
+            return apology("please enter positive whole number for amount")
+
+        # Fetch cash available
+        cash_dict = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+        cash = cash_dict[0]["cash"]
+
+        # Update cash (in the "users" table)
+        cash = cash + amount
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, session["user_id"])
+        return redirect("/")
+
+    else:
+        # Renders buy page(user request via GET)
+        return render_template("addcash.html")
