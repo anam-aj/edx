@@ -266,7 +266,7 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    
+    holdings_dict = db.execute("SELECT symbol FROM holdings WHERE user_id = ? AND shares >0", )
     # If requested via POST
     if request.method ==  "POST":
         return apology("Implement sell")
