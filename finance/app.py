@@ -275,14 +275,14 @@ def sell():
         total = shares * price
 
         # Update cash (in "users" table)
-
+        
 
         # Add transaction (to "transaction" table)
 
 
         # Update/Add holding (in "holdings" table)
 
-        
-        return apology("Implement sell")
+
+        return redirect("/")
     else:
         return render_template("sell.html", data = holdings_dict)
