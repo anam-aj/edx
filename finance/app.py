@@ -48,7 +48,8 @@ def index():
         price = stock["price"]
         shares = row["shares"]
         total = price * shares
-        row["price"] = 
+        row["price"] = price
+        row["total"] = total
 
     return render_template("index.html", holdings_data = holdings_dict)
 
