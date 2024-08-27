@@ -49,7 +49,7 @@ def index():
         price = stock["price"]
         shares = row["shares"]
         total = price * shares
-        grand_total = 
+        grand_total = grand_total + total
         row["price"] = price
         row["total"] = total
 
