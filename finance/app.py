@@ -269,7 +269,8 @@ def sell():
     holdings_dict = db.execute("SELECT symbol FROM holdings WHERE user_id = ? AND shares > 0", session["user_id"])
     # If requested via POST
     if request.method ==  "POST":
-        
+        symbol = request.form.get("symbol")
+        share = request.form.get("")
         return apology("Implement sell")
     else:
         return render_template("sell.html", data = holdings_dict)
