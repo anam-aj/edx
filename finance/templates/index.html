@@ -21,8 +21,8 @@
                 <tr>
                     <td>{{ row.symbol }}</td>
                     <td>{{ row.shares }}</td>
-                    <td>{{ row.price }}</td>
-                    <td>{{ row.total }}</td>
+                    <td>{{ row.price | usd }}</td>
+                    <td>{{ row.total | usd }}</td>
                 </tr>
             {% endfor %}
         </tbody>
@@ -31,12 +31,12 @@
             <tr>
             	<td colspan="2"></td>
                 <td class="cashtotal">Cash</td>
-                <td class="cashtotal">{{ user_cash }}</td>
+                <td class="cashtotal">{{ user_cash | usd }}</td>
             </tr>
             <tr>
             	<td colspan="2"></td>
                 <td class="cashtotal">TOTAL</td>
-                <td class="cashtotal">{{ user_total }}</td>
+                <td class="cashtotal">{{ user_total | usd }}</td>
             </tr>
         </tfoot>
     </table>
