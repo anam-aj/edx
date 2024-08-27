@@ -6,10 +6,13 @@
 
 {% block main %}
     <form action="/sell" method="post">
-        <select name="select options">
-            <option disabled selected>select stock</option> 
-            <option>nfls</option>
-        </select>
+        <div class="mb-3">
+            <select name="select options">
+                <option disabled selected>select stock</option>
+                <option>nfls</option>
+            </select>
+        </div>
+        
         <div class="mb-3">
             <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="shares" placeholder="Share" type="number" min="1">
         </div>
