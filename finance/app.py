@@ -67,7 +67,7 @@ def buy():
 
     # Check if request method is POST
     if request.method == "POST":
-        
+
         # Get symbol from user
         symbol = request.form.get("symbol")
         # Ensure symbol is given by user
@@ -90,20 +90,25 @@ def buy():
 
         # Look for stock
         stock = lookup(symbol)
+
         # If stock does not exist
         if not stock:
             return apology("stock/symbol not found")
+
         # If stock exist
         else:
             # Fetch cash available
             cash_dict = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
             cash = cash_dict[0]["cash"]
+
             # Calculates bill for purchase
             share_price = stock["price"]
             bill =  share_price * shares
+
             # If user does not have enough cash
             if cash < bill:
                 return apology("you do not have enough balance")
+
             # If user have enough cash, makes the purchase
             else:
                 # Add transaction (to the "transaction" table)
