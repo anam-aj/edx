@@ -42,16 +42,18 @@ def index():
     cash = user_dict[0]["cash"]
     # User's share holdings
     holdings_dict = db.execute("SELECT * FROM holdings WHERE id = ? AND shares > 0", user_id)
+    grand_total = cash
     for row in holdings_dict:
         symbol = row["symbol"]
         stock = lookup(symbol)
         price = stock["price"]
         shares = row["shares"]
         total = price * shares
+        grand_total = 
         row["price"] = price
         row["total"] = total
 
-    return render_template("index.html", holdings_data = holdings_dict)
+    return render_template("index.html", holdings_data = holdings_dict, user_cash = cash, user_total = grand_total )
 
 
 
