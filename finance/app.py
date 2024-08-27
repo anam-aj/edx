@@ -313,18 +313,13 @@ def sell():
             share_dict = db.execute(
                     "SELECT shares FROM holdings "
                     "WHERE user_id = ? AND symbol = ?", session["user_id"] , symbol)
-            if share_dict:
-                shares_old = share_dict[0]["shares"]
-                shares_new = shares_old + shares
-                db.execute(
-                    "UPDATE holdings SET shares = ? "
-                    "WHERE user_id = ? AND symbol = ?",
-                    shares_new, session["user_id"] , symbol)
-            else:
-                db.execute("INSERT INTO holdings "
-                    "(user_id, symbol, shares) "
-                    "VALUES (?, ?, ?)",
-                    session["user_id"] , symbol, shares)
+
+            shares_old = share_dict[0]["shares"]
+            shares_new = shares_old - shares
+            db.execute(
+                "UPDATE holdings SET shares = ? "
+                "WHERE user_id = ? AND symbol = ?",
+                shares_new, session["user_id"] , symbol)
 
             return redirect("/")
     else:
