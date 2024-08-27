@@ -296,7 +296,7 @@ def sell():
             total = shares * share_price
 
             # Update cash (in "users" table)
-            cash_dict = db.execute("SELECT cash FROM users WHERE user_id = ?", session["user_id"])
+            cash_dict = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
             cash = cash_dict[0]["cash"]
             cash = cash + total
             db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, session["user_id"])
