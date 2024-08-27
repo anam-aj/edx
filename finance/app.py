@@ -37,6 +37,7 @@ def index():
     """Show portfolio of stocks"""
     # User_id of logged-in user
     user_id = session["user_id"]
+
     # Cash available with user
     user_dict = db.execute("SELECT * FROM users WHERE id = ?", user_id)
     cash = user_dict[0]["cash"]
