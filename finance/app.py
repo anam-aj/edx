@@ -42,8 +42,7 @@ def index():
     cash = user_dict[0]["cash"]
     # User's share holdings
     holdings_dict = db.execute("SELECT * FROM holdings WHERE id = ? AND shares > 0", user_id)
-    no_of_rows = len(holdings_dict)
-    return render_template("index.html", data = info)
+    return render_template("index.html", holdings_data = holdings_dict)
 
 
 @app.route("/buy", methods=["GET", "POST"])
