@@ -10,7 +10,7 @@
             <select class="form-select mx-auto w-auto" name="select options">
                 <option disabled selected>select stock</option>
                 {% for options in data %}
-                <option>options.symbol</option>
+                <option>{{ options.symbol }}</option>
                 {% endfor %}
             </select>
         </div>
