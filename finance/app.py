@@ -38,6 +38,7 @@ def index():
 
     userid_dict = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
     user_id = userid_dict[0]["id"]
+    cash = 
     rows = db.execute("SELECT * FROM holdings WHERE")
     return render_template("index.html", data = info)
 
