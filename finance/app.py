@@ -42,7 +42,7 @@ def index():
     cash = user_dict[0]["cash"]
     # User's share holdings
     holdings_dict = db.execute("SELECT * FROM holdings WHERE id = ? AND shares > 0", user_id)
-    symbol = 
+    symbol = holdings_dict[]
     stock = lookup(symbol)
     share_price =
     return render_template("index.html", holdings_data = holdings_dict)
