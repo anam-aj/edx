@@ -212,7 +212,7 @@ def quote():
         # Display stock price if found
         if stock:
             price = stock["price"]
-            return render_template("quote_response.html", price=usd(price), symbol=symbol)
+            return render_template("quote_response.html", price=price, symbol=symbol)
         else:
             return apology("stock/symbol not found")
 

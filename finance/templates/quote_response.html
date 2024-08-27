@@ -5,5 +5,5 @@
 {% endblock %}
 
 {% block main %}
-    Price of 1 share of {{ symbol }} is {{ price }}
+    Price of 1 share of {{ symbol }} is {{ price | usd}}
 {% endblock %}
