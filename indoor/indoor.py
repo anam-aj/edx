@@ -1,6 +1,6 @@
 # Program to convert string to lowercase
 
-def main()
+def main():
     # Promts user for input
     user_input = input("Please type your sentence here: ")
 
