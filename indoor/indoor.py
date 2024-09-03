@@ -1,2 +1,8 @@
-# Promts user for input
-user_input = input("Please type your sentence here: ")
+# Program to convert string to lowercase
+
+def main()
+    # Promts user for input
+    user_input = input("Please type your sentence here: ")
+
+    # Converts to lower case
+    lower = user_input.tolower
