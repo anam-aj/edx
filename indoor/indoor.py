@@ -5,4 +5,10 @@ def main()
     user_input = input("Please type your sentence here: ")
 
     # Converts to lower case
-    lower = user_input.tolower
+    lower = user_input.lower
+
+    # Prints to user
+    print(lower)
+
+
+main()
