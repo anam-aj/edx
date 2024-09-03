@@ -2,15 +2,15 @@
 
 def main():
 
-    # Promts user for input
+    # Promts user for mass
     mass = int(input("Mass: "))
 
-    # Conver mass to energy
+    # Convert mass to energy
     c = 3 * 10**8
-    energy = mass *
+    energy = mass * c**2
 
     # Prints to user
-    print(output)
+    print(energy)
 
 
 main()
