@@ -1,5 +1,6 @@
 # Program to find media type of file
 
+
 def main():
 
     # Promts user for filename
@@ -11,29 +12,32 @@ def main():
     # Prints media type to user
     print(media_type)
 
+
 def check_type(file_name):
 
     if file_name.endswith(".gif"):
-        print("image/gif")
+        return ("image/gif")
 
     elif file_name.endswith(".jpg"):
-        print("image/jpeg")
+        return ("image/jpeg")
 
     elif file_name.endswith(".jpeg"):
-        print("image/jpeg")
+        return ("image/jpeg")
 
     elif file_name.endswith(".png"):
-        print("image/png")
+        return ("image/png")
 
     elif file_name.endswith(".pdf"):
-        print("application/pdf")
+        return ("application/pdf")
 
     elif file_name.endswith(".txt"):
-        print("text/plain")
+        return ("text/plain")
 
     elif file_name.endswith(".zip"):
-        print("image/gif")
+        return ("application/zip")
 
     else:
-        print("application/octet-stream")
+        return ("application/octet-stream")
 
+
+main()
