@@ -6,14 +6,14 @@ def main():
     # Promts user for input
     expression = input("Expression: ")
 
-    # Obtain result
-    result = get_result(expression)
+    # Calculate expression
+    result = calculate_expression(expression)
 
     # Print result to user
     print(result)
 
 
-def get_result(exp):
+def calculate_expression(exp):
 
     # Split input and assign values
     n1, op, n2 = exp.split()
