@@ -26,7 +26,7 @@ def convert(time):
     return decimal_time
 
 
-def meal_type(time)
+def meal_type(time):
 
     if 7 <= time <= 8:
         return "breakfast time"
@@ -36,6 +36,7 @@ def meal_type(time)
 
     elif 18 <= time <= 19:
         return "dinner time"
+
 
 if __name__ == "__main__":
     main()
