@@ -12,8 +12,8 @@ def main():
     # Check greeting
     first_word = words[0].lower()
 
-    if first_worf == "hello":
-        print()
+    if first_word == "hello":
+        print("$0")
 
 
 main()
