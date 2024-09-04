@@ -6,7 +6,10 @@ def main():
     # Promts user for filename
     file = input("File name: ")
 
-    # Check extension and tell media type
+    # Strip spaces and converts to lowercase
+    file = file.lower().strip()
+
+    # Get media type
     media_type = get_media_type(file)
 
     # Prints media type to user
