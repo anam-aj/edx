@@ -3,7 +3,7 @@
 
 def main():
 
-    # Promts user for input
+    # Promts user for mathematical expression
     expression = input("Expression: ")
 
     # Calculate expression
