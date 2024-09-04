@@ -6,6 +6,8 @@ def main():
     # Promts user for time
     time = input("Please Enter Time: ")
 
+    # Convert time to standard format
+
     # Get meal type
     meal = meal_type(time)
 
