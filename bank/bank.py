@@ -6,11 +6,8 @@ def main():
     # Promts user for greeting
     greeting = input("Greeting: ")
 
-     # Strip spaces and converts to lowercase
+    # Strip spaces and converts to lowercase
     greeting = greeting.lower().strip()
-
-    # Split greeting into words
-    # words = greeting.split()
 
     # Check greeting
     if greeting.startswith("hello"):
@@ -19,5 +16,6 @@ def main():
         print("$20")
     else:
         print("$100")
+
 
 main()
