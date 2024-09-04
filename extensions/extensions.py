@@ -26,10 +26,10 @@ def check_type(file_name):
         print("image/png")
 
     elif file_name.endswith(".pdf"):
-        print("image/gif")
+        print("application/pdf")
 
     elif file_name.endswith(".txt"):
-        print("image/gif")
+        print("text/plain")
 
     elif file_name.endswith(".zip"):
         print("image/gif")
