@@ -4,12 +4,12 @@
 def main():
 
     # Promts user for greeting
-    answer = input("What is the answer to Great Question of Life? ")
+    greeting = input("Greeting: ")
 
     # Strip spaces and converts to lowercase
-    answer = answer.lower().strip()
+    greeting = greeting.lower().strip()
 
-    # Check answer
+    # Check greeting
     if answer == "42" or answer == "forty two" or answer == "forty-two":
         print("Yes")
     else:
