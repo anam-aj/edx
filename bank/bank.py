@@ -6,14 +6,14 @@ def main():
     # Promts user for greeting
     greeting = input("Greeting: ")
 
-    # Strip spaces and converts to lowercase
-    greeting = greeting.lower().strip()
+    # Split greeting into words
+    words = greeting.split()
 
     # Check greeting
-    if answer == "42" or answer == "forty two" or answer == "forty-two":
-        print("Yes")
-    else:
-        print("No")
+    first_word = words[0].lower()
+
+    if first_worf == "hello":
+        print()
 
 
 main()
