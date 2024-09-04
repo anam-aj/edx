@@ -12,4 +12,5 @@ def main():
     print(media_type)
 
 def check_type(file_name):
-    
+    exten
+
