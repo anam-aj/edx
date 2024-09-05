@@ -16,9 +16,12 @@ def main():
 # Determine validity of plate
 def is_valid(s):
 
-    # Check length
+    # Ensure length is fron 2 to 6(inclusive)
     if len(s) < 2 or len(s) > 6:
-        
+        return False
+
+    # Ensure first two character are letter
+    
 
 
 
