@@ -21,7 +21,8 @@ def is_valid(s):
         return False
 
     # Ensure first two character are letter
-    if 
+    if not(s[0].isalpha()) or not(s[1].isalpha()):
+        return False
 
 
 
