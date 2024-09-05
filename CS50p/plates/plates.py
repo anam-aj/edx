@@ -3,7 +3,7 @@
 
 def main():
 
-    # Promt user for plate
+    # Prompt user for plate
     plate = input("Plate: ")
 
     # Check and print validity status
@@ -16,7 +16,7 @@ def main():
 # Determine validity of plate
 def is_valid(s):
 
-    # Ensure length is fron 2 to 6(inclusive)
+    # Ensure length is fron 2 to 6 (inclusive)
     if len(s) < 2 or len(s) > 6:
         return False
 
@@ -24,12 +24,12 @@ def is_valid(s):
     if not (s.isalnum()):
         return False
 
-    # Ensure first two character are letter
+    # Ensure first two character are letters
     first_two_chr = s[0:2]
     if not (first_two_chr.isalpha()):
         return False
 
-    # Check that all character after first two. follow numerical rules
+    # Check that all character after first two follow numerical rules
     remaining_string = s[2:]
     number_found = False
 
@@ -38,7 +38,7 @@ def is_valid(s):
             # Ensure first number is not "0"
             if ch == "0" and not number_found:
                 return False
-            # Update that first number is encountered(so further number can be "0")
+            # Update that first number is encountered (so further number can be "0")
             number_found = True
 
         # Ensure that all character following first number are also numbers
