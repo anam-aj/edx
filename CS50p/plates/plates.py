@@ -37,7 +37,8 @@ def is_valid(s):
 
     # Goes through each character of remaining string
     for ch in remaining_string:
-        # Check if character is numeric
+
+        # When character is numeric
         if ch.isnumeric():
             # Ensure first number is not "0"
             if ch == "0" and not number_found:
@@ -45,9 +46,10 @@ def is_valid(s):
             # Update that number is encountered(so further character can be "0")
             number_found = True
 
-            #
-            elif number_found:
-                break
+        # When character is not numeric
+        elif number_found:
+            return False
+
 
     # Remaining string after first number
     last_string = remaining_string[(count + 1):]
