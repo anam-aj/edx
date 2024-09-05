@@ -31,14 +31,21 @@ def is_valid(s):
 
     # Remaining string after first two letters
     remaining_string = s[2:]
+
+    # Variable to track first encounter of numeric character
     number_found = False
 
+    # Goes through each character of remaining string
     for ch in remaining_string:
+
+        # Check if character is numeric
         if ch.isnumeric():
+            # Ensure first digit is not "0"
             if ch == "0" and not number_found:
                 return False
+            # Update 
+            number_found = True
             else:
-                number_found = True
                 break
 
     # Remaining string after first number
