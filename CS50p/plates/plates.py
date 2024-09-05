@@ -29,17 +29,24 @@ def is_valid(s):
     if not(first_two_chr.isalpha()):
         return False
 
-    # Ensure validity of remaining string
-    remain_chr = s[2:len(s)]
+    # Remaining string after first two letters
+    remaining_string = s[2:len(s)]
     count = -1
 
-    for ch in remain_chr:
+    for ch in remaining_string:
+        count += 1
         if ch.isnumeric():
             if ch == "0":
                 return False
             else:
-                count += 1
                 break
 
+    # Remaining string after first number
+    last_string = remaining_string[count:len(remaining_string)]
+
+    if last_string.isnumeric():
+        return True
+    else:
+        return False
 
 main()
