@@ -32,7 +32,7 @@ def is_valid(s):
     # Check that all character after first two. follow numerical rules
     remaining_string = s[2:]
     number_found = False
-    
+
     for ch in remaining_string:
         if ch.isnumeric():
             # Ensure first number is not "0"
@@ -41,8 +41,7 @@ def is_valid(s):
             # Update that first number is encountered(so further number can be "0")
             number_found = True
 
-        # When character is not numeric
-        # (Ensure that all character following first number are also numbers)
+        # Ensure that all character following first number are also numbers
         elif number_found:
             return False
 
