@@ -23,7 +23,6 @@ def make_snake_case(string):
             snake_case += "_" + chr.lower()
         else:
             snake_case += chr
-    print()
 
     return (snake_case)
 
