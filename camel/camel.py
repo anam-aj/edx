@@ -4,7 +4,7 @@
 def main():
 
     # Promts user for input
-    camel_case = input("camelCase: ")
+    camel_case = input("camelCase:  ")
 
     # Coverts into snake_case
     snake_case = make_snake_case(camel_case)
@@ -13,7 +13,7 @@ def main():
     print(f"snake_case: {snake_case}")
 
 
-# Convert
+# Convert camelCase to snake_case
 def make_snake_case(string):
 
     snake_case = ""
@@ -24,6 +24,7 @@ def make_snake_case(string):
         else:
             snake_case += chr
 
-    return (snake_case)
+    return snake_case
+
 
 main()
