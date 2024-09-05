@@ -46,8 +46,8 @@ def is_valid(s):
             # Update that first number is encountered(so further number can be "0")
             number_found = True
 
-        # when character is not numeric
-        # (Ensure that all character following first number are numeric)
+        # When character is not numeric
+        # (Ensure that all character following first number are also numbers)
         elif number_found:
             return False
 
