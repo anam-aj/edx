@@ -16,7 +16,8 @@ def main():
 def make_snake_case(string):
 
     for chr in string:
-        if 
+        if chr.isupper():
+            print
 
 
 main()
