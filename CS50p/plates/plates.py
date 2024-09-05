@@ -37,7 +37,6 @@ def is_valid(s):
 
     # Goes through each character of remaining string
     for ch in remaining_string:
-
         # Check if character is numeric
         if ch.isnumeric():
             # Ensure first number is not "0"
