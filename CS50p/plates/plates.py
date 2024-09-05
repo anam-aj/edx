@@ -29,10 +29,8 @@ def is_valid(s):
     if not (first_two_chr.isalpha()):
         return False
 
-    """Ensure numerical requirements"""
-    # Remaining string after first two letters
+    #Ensure numerical requirements
     remaining_string = s[2:]
-
     # Variable to track first encounter of number
     number_found = False
 
