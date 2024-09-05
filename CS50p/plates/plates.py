@@ -31,13 +31,11 @@ def is_valid(s):
 
     # Remaining string after first two letters
     remaining_string = s[2:]
-    count = -1
     number_found = False
 
     for ch in remaining_string:
-        count += 1
         if ch.isnumeric():
-            if ch == "0":
+            if ch == "0" and not number_found:
                 return False
             else:
                 number_found = True
