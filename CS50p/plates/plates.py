@@ -51,16 +51,5 @@ def is_valid(s):
         elif number_found:
             return False
 
-    # Remaining string after first number
-    last_string = remaining_string[(count + 1):]
-
-    if number_found:
-        if last_string.isnumeric():
-            return True
-        else:
-            return False
-    else:
-        return True
-
-
+   
 main()
