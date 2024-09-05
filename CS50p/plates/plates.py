@@ -16,7 +16,7 @@ def main():
 # Determine validity of plate
 def is_valid(s):
 
-    # Ensure length is fron 2 to 6 (inclusive)
+    # Ensure length is from 2 to 6 (inclusive)
     if len(s) < 2 or len(s) > 6:
         return False
 
