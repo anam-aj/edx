@@ -21,7 +21,7 @@ def is_valid(s):
         return False
 
     # Ensure plate contains only numbers and letters
-    if not(s.alnum())
+    if not(s.isalnum()):
         return False
 
     # Ensure first two character are letter
@@ -40,7 +40,7 @@ def is_valid(s):
             else:
                 no_found = 1
 
-        elif 
+        elif
 
 
 
