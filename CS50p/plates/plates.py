@@ -32,7 +32,8 @@ def is_valid(s):
     # Ensure validity of remaining string
     remain_chr = s[2:len(s)]
     for ch in remain_chr:
-        if ch.isnum()
+        if ch.isnumeric():
+            if ch
 
 
 
