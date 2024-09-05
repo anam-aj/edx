@@ -14,5 +14,9 @@ def main():
         coin_value = int(input("Insert Coin: "))
         amount_due -= coin_value
 
-    print(f"Change Owed: {}")
+    # Chnage owed
+    change = -1 * amount_due
+    print(f"Change Owed: {change}")
 
+
+main()
