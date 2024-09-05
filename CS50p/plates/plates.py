@@ -30,9 +30,9 @@ def is_valid(s):
         return False
 
     # Remaining string after first two letters
-    remaining_string = s[2:len(s)]
+    remaining_string = s[2:]
     count = -1
-    no_found = 0
+    number_found = False
 
     for ch in remaining_string:
         count += 1
