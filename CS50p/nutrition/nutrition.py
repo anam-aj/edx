@@ -29,6 +29,9 @@ def main():
     # Ask user to enter fruit
     fruit = input("Fruit: ")
 
-    
+    # Fetch calorie
+    for name in nutrition_info:
+        if name == fruit:
+            print(f"Calories: {nutrition_info[name]}")
 
 main()
