@@ -16,6 +16,8 @@ def main():
 # Convert
 def make_snake_case(string):
 
+    snake_case = ""
+    
     for chr in string:
         if chr.isupper():
             print(f"_{chr.lower()}", end="")
