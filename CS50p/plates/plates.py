@@ -29,6 +29,8 @@ def is_valid(s):
     if not (first_two_chr.isalpha()):
         return False
 
+    """Checks the numerical requirements"""
+
     # Remaining string after first two letters
     remaining_string = s[2:]
 
