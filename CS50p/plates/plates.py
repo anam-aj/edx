@@ -40,13 +40,13 @@ def is_valid(s):
             if ch == "0":
                 return False
             else:
-                no_found = 1
+                number_found = True
                 break
 
     # Remaining string after first number
     last_string = remaining_string[(count + 1):len(remaining_string)]
 
-    if no_found == 1:
+    if number_found:
         if last_string.isnumeric():
             return True
         else:
