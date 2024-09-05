@@ -3,7 +3,7 @@
 
 def main():
 
-    nutrion_info = {
+    nutrition_info = {
         "Apple" : "130",
         "Avocado" : "50",
         "Banana" : "110",
