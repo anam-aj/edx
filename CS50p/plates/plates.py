@@ -31,15 +31,15 @@ def is_valid(s):
 
     # Ensure validity of remaining string
     remain_chr = s[2:len(s)]
-    no_found = 0
+    count = 0
 
     for ch in remain_chr:
+        count
         if ch.isnumeric():
             if ch == "0":
                 return False
             else:
-                no_found = 1
-
+                break
         elif
 
 
