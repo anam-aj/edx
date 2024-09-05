@@ -8,8 +8,9 @@ def main():
     amount_due = cost
 
     # Promts user for remaining amount
-    while cost > 0:
+    while amount_due > 0:
 
         print(f"Amount Due: {amount_due}")
         coin_value = int(input("Insert Coin: "))
+        amount_due -= coin_value
 
