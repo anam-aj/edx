@@ -43,6 +43,4 @@ def is_valid(s):
         elif
 
 
-
-
 main()
