@@ -35,7 +35,8 @@ def is_valid(s):
         if ch.isnumeric():
             if ch == "0":
                 return False
-            
+
+            remain_chr[]
 
 
 
