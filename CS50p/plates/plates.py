@@ -51,5 +51,8 @@ def is_valid(s):
             return True
         else:
             return False
+    else:
+        return True
+
 
 main()
