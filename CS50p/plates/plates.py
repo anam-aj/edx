@@ -43,7 +43,7 @@ def is_valid(s):
             # Ensure first number is not "0"
             if ch == "0" and not number_found:
                 return False
-            # Update that number is encountered(so further character can be "0")
+            # Update that number is encountered(so further number can be "0")
             number_found = True
 
         # When character is not numeric
