@@ -29,15 +29,11 @@ def is_valid(s):
     if not (first_two_chr.isalpha()):
         return False
 
-    #Ensure numerical requirements
+    # Check that all character after first two. follow numerical rules
     remaining_string = s[2:]
-    # Variable to track first encounter of number
     number_found = False
-
-    # Goes through each character of remaining string
+    
     for ch in remaining_string:
-
-        # When character is numeric
         if ch.isnumeric():
             # Ensure first number is not "0"
             if ch == "0" and not number_found:
