@@ -10,7 +10,7 @@ def main():
         "Cantaloupe" : "50",
         "Grapefruit" : "60",
         "Grapes" : "90",
-        "Honeydew" : "50",
+        "Honeydew Melon" : "50",
         "Kiwifruit" : "90",
         "Lemon" : "15",
         "Lime" : "20",
@@ -19,16 +19,16 @@ def main():
         "Peach" : "60",
         "Pear" : "100",
         "Pineapple" : "50",
-        "" : "70",
-        "" : "50",
-        "" : "100",
-        "" : "50",
-        "" : "80",
-        "" : "",
-        "" : "",
-
-
+        "Plums" : "70",
+        "Strawberries" : "50",
+        "Sweet Cherries" : "100",
+        "Tangerine" : "50",
+        "Watermelon" : "80"
     }
 
+    # Ask user to enter fruit
+    fruit = input("Fruit: ")
+
+    
 
 main()
