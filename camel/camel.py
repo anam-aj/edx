@@ -17,14 +17,14 @@ def main():
 def make_snake_case(string):
 
     snake_case = ""
-    
+
     for chr in string:
         if chr.isupper():
-            print(f"_{chr.lower()}", end="")
+            snake_case += "_" + chr.lower()
         else:
-            print(chr, end="")
-
+            snake_case += chr
     print()
 
+    return (snake_case)
 
 main()
