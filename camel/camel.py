@@ -13,7 +13,10 @@ def main():
     print(snake_case)
 
 
-def make_snake_case(string)
+def make_snake_case(string):
+
+    for chr in string:
+        if 
 
 
 main()
