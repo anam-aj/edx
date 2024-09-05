@@ -10,10 +10,10 @@ def main():
     snake_case = make_snake_case(camel_case)
 
     # Print snake_case to user
-    print(snake_case)
+    print(f"snake_case: {snake_case}")
 
 
-# Convert 
+# Convert
 def make_snake_case(string):
 
     for chr in string:
