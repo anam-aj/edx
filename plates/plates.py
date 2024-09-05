@@ -20,8 +20,8 @@ def is_valid(s):
     if len(s) < 2 or len(s) > 6:
         return False
 
-    # Ensure plate contains only number and letters
-    
+    # Ensure plate contains only numbers and letters
+    if not(s.alp)
 
     # Ensure first two character are letter
     if not(s[0].isalpha()) or not(s[1].isalpha()):
