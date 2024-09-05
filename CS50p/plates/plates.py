@@ -32,10 +32,10 @@ def is_valid(s):
     # Remaining string after first two letters
     remaining_string = s[2:len(s)]
     count = -1
+    no_found = 0
 
     for ch in remaining_string:
         count += 1
-        no_found = 0
         if ch.isnumeric():
             if ch == "0":
                 return False
