@@ -31,10 +31,10 @@ def is_valid(s):
 
     # Ensure validity of remaining string
     remain_chr = s[2:len(s)]
-    count = 0
+    count = -1
 
     for ch in remain_chr:
-        count
+        count += 1
         if ch.isnumeric():
             if ch == "0":
                 return False
