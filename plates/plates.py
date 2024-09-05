@@ -21,7 +21,7 @@ def is_valid(s):
         return False
 
     # Ensure first two character are letter
-    
+    if 
 
 
 
