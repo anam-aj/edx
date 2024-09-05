@@ -25,8 +25,13 @@ def is_valid(s):
         return False
 
     # Ensure first two character are letter
-    if not(s[0].isalpha()) or not(s[1].isalpha()):
+    first_two_chr = s[0:2]
+    if not(first_two_chr.isalpha()):
         return False
+
+    # Ensure validity of remaining string
+    remain_chr = s[2:len(s)]
+    
 
 
 
