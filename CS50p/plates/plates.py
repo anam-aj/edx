@@ -21,12 +21,12 @@ def is_valid(s):
         return False
 
     # Ensure plate contains only numbers and letters
-    if not (s.isalnum()):
+    elif not (s.isalnum()):
         return False
 
     # Ensure first two character are letter
     first_two_chr = s[0:2]
-    if not (first_two_chr.isalpha()):
+    elif not (first_two_chr.isalpha()):
         return False
 
     # Remaining string after first two letters
