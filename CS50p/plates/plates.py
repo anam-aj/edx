@@ -32,7 +32,7 @@ def is_valid(s):
     # Remaining string after first two letters
     remaining_string = s[2:]
 
-    # Variable to track first encounter of numeric character
+    # Variable to track first encounter of number
     number_found = False
 
     # Goes through each character of remaining string
@@ -40,12 +40,14 @@ def is_valid(s):
 
         # Check if character is numeric
         if ch.isnumeric():
-            # Ensure first digit is not "0"
+            # Ensure first number is not "0"
             if ch == "0" and not number_found:
                 return False
-            # Update 
+            # Update that number is encountered(so further character can be "0")
             number_found = True
-            else:
+
+            #
+            elif number_found:
                 break
 
     # Remaining string after first number
