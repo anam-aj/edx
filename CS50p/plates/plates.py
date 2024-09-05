@@ -46,7 +46,7 @@ def is_valid(s):
     # Remaining string after first number
     last_string = remaining_string[(count + 1):len(remaining_string)]
 
-    if no_found = 1:
+    if no_found == 1:
         if last_string.isnumeric():
             return True
         else:
