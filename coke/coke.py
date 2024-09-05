@@ -12,7 +12,8 @@ def main():
 
         print(f"Amount Due: {amount_due}")
         coin_value = int(input("Insert Coin: "))
-        amount_due -= coin_value
+        if coin_value in [5, 10, 25]:
+            amount_due -= coin_value
 
     # Chnage owed
     change = -1 * amount_due
