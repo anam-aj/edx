@@ -35,18 +35,21 @@ def is_valid(s):
 
     for ch in remaining_string:
         count += 1
+        no_found = 0
         if ch.isnumeric():
             if ch == "0":
                 return False
             else:
+                no_found = 1
                 break
 
     # Remaining string after first number
     last_string = remaining_string[count:len(remaining_string)]
 
-    if last_string.isnumeric():
-        return True
-    else:
-        return False
+    if no_found = 1:
+        if last_string.isnumeric():
+            return True
+        else:
+            return False
 
 main()
