@@ -34,13 +34,12 @@ def is_valid(s):
     count = -1
 
     for ch in remain_chr:
-        count += 1
         if ch.isnumeric():
             if ch == "0":
                 return False
             else:
+                count += 1
                 break
-        elif
 
 
 main()
