@@ -51,5 +51,7 @@ def is_valid(s):
         elif number_found:
             return False
 
-   
+    return True
+
+
 main()
