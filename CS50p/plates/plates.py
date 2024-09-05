@@ -33,7 +33,9 @@ def is_valid(s):
     remain_chr = s[2:len(s)]
     for ch in remain_chr:
         if ch.isnumeric():
-            if ch
+            if ch == "0":
+                return False
+            
 
 
 
