@@ -5,7 +5,7 @@ def main():
 
     # Ask user to enter fraction
     fraction = input("Fraction: ")
-    num = 
+    numer , denom = fraction.split("/")
 
     try:
         fraction = float(fraction)
