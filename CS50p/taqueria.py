@@ -17,8 +17,9 @@ def main():
 
     while True:
         item = input("Item: ").lower()
-        try:
-            price = me
+        for key in menu:
+            if item == key.lower():
+                print
 
 
 
