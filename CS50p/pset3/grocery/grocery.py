@@ -13,7 +13,7 @@ def main():
             if item in items:
                 items[item] += 1
             else:
-                
+                items[item] = 1
         except EOFError:
             print()
             return
