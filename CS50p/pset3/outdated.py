@@ -23,9 +23,9 @@ def main():
         try:
             month, day, year = date.split("/")
             month, day, year = int(month), int(day), int(year)
-
         except:
-            pass
+            try:
+                month
         else:
             break
 main()
