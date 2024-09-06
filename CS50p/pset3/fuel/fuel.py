@@ -4,7 +4,12 @@
 def main():
 
     # Ask user to enter fraction
+    fraction = input("Fraction: ")
 
+    try:
+        fraction = float(fraction)
+    except:
+        
 
 
 main()
