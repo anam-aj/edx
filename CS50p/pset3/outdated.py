@@ -1,1 +1,1 @@
-# Prgram to format date 
+# Program to covert date to standard forma
