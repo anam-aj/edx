@@ -71,10 +71,9 @@ def split_on_slash(date):
             except:
                 pass
             else:
-                split_on_slash = True
                 break
 
-    print(f"{year:04}-{month:02}-{day:02}")
+   formatted_date = f"{year:04}-{month:02}-{day:02}"
 
 
 
