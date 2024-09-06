@@ -5,10 +5,11 @@ def main():
 
     # Ask user to enter fraction
     fraction = input("Fraction: ")
-    fraction = float(fraction)
-    #try:
 
-    #except ValueError:
+    try:
+        fraction = float(fraction)
+    except ValueError:
+        print("Enter valid fraction not letters")
 
 
 
