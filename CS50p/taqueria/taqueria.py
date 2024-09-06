@@ -18,16 +18,17 @@ def main():
     bill = 0
 
     while True:
-        item = input("Item: ").title()
 
         try:
+            item = input("Item: ").title()
             bill += menu[item]
-            print(f"${round(bill, 2)}")
         except KeyError:
             pass
         except EOFError:
             print()
             return
+        else:
+            print(f"${round(bill, 2)}")
 
 main()
 
