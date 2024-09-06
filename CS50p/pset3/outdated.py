@@ -22,9 +22,8 @@ def main():
 
         try:
             month, day, year = date.split("/")
-            month = int(month)
-            day = int(day)
-            year = int(year)
+            month, day, year = int(month), int(day), int(year)
+
         except:
             pass
         else:
