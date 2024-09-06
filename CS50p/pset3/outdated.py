@@ -18,6 +18,6 @@ months = [
 
 def main():
 
-    date = input("Date")
+    date = input("Date: ")
 
 main()
