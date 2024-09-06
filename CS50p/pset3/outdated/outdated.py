@@ -57,8 +57,30 @@ def main():
                 split_on_space = True
                 break
 
-    if split_on_slash:
-        print(f"{year:04}-{month:02}-{day:02}")
+def split_on_slash(date):
+
+    try:
+        month, day, year = date.split("/")
+    except:
+        pass
+    else:
+        try:
+            month, day, year = int(month), int(day), int(year)
+            if month < 1 or month > 12 or day < 1 or day > 31:
+                raise ValueError
+            except:
+                pass
+            else:
+                split_on_slash = True
+                break
+
+    print(f"{year:04}-{month:02}-{day:02}")
+
+
+
+
+
+
     elif split_on_space:
         month_count = 0
         for m in months:
