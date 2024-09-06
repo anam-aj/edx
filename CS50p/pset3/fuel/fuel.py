@@ -9,14 +9,17 @@ def main():
         if 0 <= fraction <= 1:
             break
 
+    # Convert to percent
     percent = fraction * 100
 
+    # Display result
     if 0 <= percent <= 1:
         print("E")
     elif 99 <= percent <= 100:
         print("F")
     else:
-        print(round(percent))
+        print(str(round(percent)) + "%")
+
 
 def get_fraction(string):
 
