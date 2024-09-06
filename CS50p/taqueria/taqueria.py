@@ -25,7 +25,9 @@ def main():
                     bill += menu[key]
                     print(f"${round(bill, 2)}")
 
-
+    except EOFError:
+        print()
+        return
 
 
 main()
