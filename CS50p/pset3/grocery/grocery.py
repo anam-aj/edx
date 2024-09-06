@@ -8,12 +8,13 @@ def main():
 
     while True:
         try:
-            item = input("Item: ").upper()
+            item = input().upper()
             if item in items:
                 items[item] += 1
             else:
                 items[item] = 1
         except EOFError:
+            print()
             break
 
     for key in sorted(items):
