@@ -39,10 +39,14 @@ def main():
         else:
             try:
                 if month not in months:
-                    pass
+                    raise KeyError
                 day, year = int(day), int(year)
             except:
                 pass
             else:
                 break
+
+    print 
+
+
 main()
