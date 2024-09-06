@@ -15,8 +15,8 @@ def main():
             else:
                 items[item] = 1
         except EOFError:
-            print()
-            return
+            break
 
-
+        for key in items:
+            print(f"{items[key]} {key}}")
 main()
