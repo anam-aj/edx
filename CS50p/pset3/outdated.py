@@ -30,6 +30,8 @@ def main():
         else:
             try:
                 month, day, year = int(month), int(day), int(year)
+                if month < 1 or month > 12 or day < 1 or day > 31:
+                    raise ValueError
             except:
                 pass
             else:
@@ -38,6 +40,8 @@ def main():
 
         try:
             month, day, year = date.split(" ")
+            if month < 1 or month > 12 or day < 1 or day > 31:
+                raise ValueError
         except:
             pass
         else:
