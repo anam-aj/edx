@@ -29,6 +29,9 @@ def main():
             print()
             return
 
+main()
+
+
 """
 main()
 
