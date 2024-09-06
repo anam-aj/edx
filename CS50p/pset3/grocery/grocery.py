@@ -17,6 +17,7 @@ def main():
         except EOFError:
             break
 
+        sortes_items = 
         for key in items:
             print(f"{items[key]} {key}}")
 main()
