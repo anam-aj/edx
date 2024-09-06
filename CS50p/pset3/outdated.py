@@ -32,5 +32,15 @@ def main():
             else:
                 break
 
-        
+        try:
+            month, day, year = date.split(" ")
+        except:
+            pass
+        else:
+            try:
+                day, year = int(day), int(year)
+            except:
+                pass
+            else:
+                break
 main()
