@@ -22,6 +22,7 @@ def main():
         for key in menu:
             if item == key.lower():
                 bill += menu[key]
+                print(f"${round(bill, 2)}")
 
 
 
