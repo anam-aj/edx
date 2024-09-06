@@ -17,11 +17,13 @@ months = [
 
 
 def main():
+    while True:
+        date = input("Date: ")
 
-    date = input("Date: ")
-    try:
-        mon, day, year = date.split("/")
-    except:
-        pass
-
+        try:
+            mon, day, year = date.split("/")
+        except:
+            pass
+        else:
+            break
 main()
