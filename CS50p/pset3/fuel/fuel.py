@@ -36,7 +36,7 @@ def get_fraction(string):
             numer, denom = int(numer), int(denom)
             return (numer/denom)
         except ValueError:
-            print("Input format 'X/Y' and X,Y are numbers")
+            print("Input format 'X/Y' and X,Y are integers")
         except ZeroDivisionError:
             print("Division by zero not allowed")
 
