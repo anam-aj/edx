@@ -6,9 +6,7 @@ def main():
     # Ask user to enter fraction
     fraction = get_fraction("Fraction: ")
 
-
-
-
+    if frac
 
 
 def get_fraction(string):
