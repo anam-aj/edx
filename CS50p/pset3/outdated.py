@@ -52,6 +52,6 @@ def main():
                 break
 
     if split_on_slash:
-        
+        print(f"")
 
 main()
