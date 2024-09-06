@@ -7,8 +7,10 @@ def main():
     fraction = input("Fraction: ")
     numer , denom = fraction.split("/")
 
+
     try:
-        fraction = float(fraction)
+        numer = float(numer)
+        denom = float(denom)
     except ValueError:
         print("Enter valid fraction not letters")
 
