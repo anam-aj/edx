@@ -22,10 +22,15 @@ def main():
 
         try:
             month, day, year = date.split("/")
-            month, day, year = int(month), int(day), int(year)
         except:
-            try:
-                month
+            pass
         else:
-            break
+            try:
+                month, day, year = int(month), int(day), int(year)
+            except:
+                pass
+            else:
+                break
+
+        
 main()
