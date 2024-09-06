@@ -6,9 +6,9 @@ def main():
     # Ask user to enter fraction
     fraction = input("Fraction: ")
 
-    try:
-        fraction = float(fraction)
-    except ValueError:      
+    #try:
+    fraction = float(fraction)
+    #except ValueError:
 
 
 
