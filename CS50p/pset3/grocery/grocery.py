@@ -9,8 +9,8 @@ def main():
     while True:
 
         try:
-            item = input("Item: ").title()
-            items[item] =
+            item = input("Item: ").upper()
+            if items[item] =
         except EOFError:
             print()
             return
