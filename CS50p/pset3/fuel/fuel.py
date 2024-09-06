@@ -5,7 +5,7 @@ def main():
 
     # Ask user to enter fraction
     fraction = input("Fraction: ")
-    
+    num = 
 
     try:
         fraction = float(fraction)
