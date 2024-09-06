@@ -13,9 +13,9 @@ def main():
     percent = fraction * 100
 
     # Display result
-    if 0 <= percent <= 1:
+    if percent <= 1:
         print("E")
-    elif 99 <= percent <= 100:
+    elif percent >= 99:
         print("F")
     else:
         print(f"{round(percent)}%")
