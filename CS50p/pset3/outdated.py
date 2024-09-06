@@ -52,6 +52,8 @@ def main():
                 break
 
     if split_on_slash:
-        print(f"")
+        print(f"{year:04}-{month:02}-{day:02}")
+    elif split_on_space:
+        
 
 main()
