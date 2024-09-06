@@ -21,7 +21,10 @@ def main():
         date = input("Date: ")
 
         try:
-            mon, day, year = date.split("/")
+            month, day, year = date.split("/")
+            month = int(month)
+            day = int(day)
+            year = int(year)
         except:
             pass
         else:
