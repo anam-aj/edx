@@ -10,7 +10,7 @@ def main():
 
         try:
             item = input("Item: ").title()
-            items = 
+            items[item] =
         except EOFError:
             print()
             return
