@@ -17,12 +17,14 @@ def main():
 
     bill = 0
 
-    while True:
-        item = input("Item: ").lower()
-        for key in menu:
-            if item == key.lower():
-                bill += menu[key]
-                print(f"${round(bill, 2)}")
+    try:
+        while True:
+            item = input("Item: ").lower()
+            for key in menu:
+                if item == key.lower():
+                    bill += menu[key]
+                    print(f"${round(bill, 2)}")
+
 
 
 
