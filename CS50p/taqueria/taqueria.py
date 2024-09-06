@@ -17,6 +17,26 @@ def main():
 
     bill = 0
 
+    while True:
+        try:
+            item = input("Item: ").lower()
+            for key in menu:
+                if item == key.lower():
+                    bill += menu[key]
+                    print(f"${round(bill, 2)}")
+
+    except EOFError:
+        print()
+        return
+
+"""
+main()
+
+
+def main():
+
+    bill = 0
+
     try:
         while True:
             item = input("Item: ").lower()
@@ -31,3 +51,4 @@ def main():
 
 
 main()
+"""
