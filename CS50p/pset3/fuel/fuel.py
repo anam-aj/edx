@@ -16,7 +16,7 @@ def main():
     elif 99 <= percent <= 100:
         print("F")
     else:
-        print(percent)
+        print(round(percent))
 
 def get_fraction(string):
 
