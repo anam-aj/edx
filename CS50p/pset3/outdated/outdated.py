@@ -37,9 +37,7 @@ def split_on_slash(date):
             except:
                 pass
             else:
-                break
-
-   formatted_date = f"{year:04}-{month:02}-{day:02}"
+                formatted_date = f"{year:04}-{month:02}-{day:02}"
 
 
 def split_on_space(date):
@@ -60,16 +58,14 @@ def split_on_space(date):
         except:
             pass
         else:
-            break
-
-        month_count = 0
-        for m in months:
+            month_count = 0
+            for m in months:
             month_count += 1
             if m == month:
                 month = month_count
                 break
 
-        print(f"{year:04}-{month:02}-{day:02}")
+        formatted_date = (f"{year:04}-{month:02}-{day:02}")
 
 
 main()
