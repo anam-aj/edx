@@ -16,8 +16,9 @@ def main():
     }
 
     while True:
-        item = input("Item: ")
-        if item.lower() in (menu.keys()).lower()
+        item = input("Item: ").lower()
+        try:
+            price = me
 
 
 
