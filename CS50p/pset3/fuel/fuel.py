@@ -4,15 +4,23 @@
 def main():
 
     # Ask user to enter fraction
-    fraction = get_fraction("Fraction: ")
+    while True:
+        fraction = get_fraction("Fraction: ")
+        if 0 <= fraction <= 1:
+            break
 
-    print(fraction)
+    percent = fraction * 100
 
+    if 0 <= percent <= 1:
+        print("E")
+    elif 99 <= percent <= 100:
+        print("F")
+    else:
+        print(percent)
 
 def get_fraction(string):
 
     while True:
-
         fraction = input(string)
 
         try:
