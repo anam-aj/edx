@@ -38,6 +38,9 @@ def main():
             pass
         else:
             try:
+                if month in months:
+                    pass
+                else
                 day, year = int(day), int(year)
             except:
                 pass
