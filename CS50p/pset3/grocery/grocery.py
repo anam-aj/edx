@@ -11,7 +11,9 @@ def main():
         try:
             item = input("Item: ").upper()
             if item in items:
-                itmes
+                items[item] += 1
+            else:
+                
         except EOFError:
             print()
             return
