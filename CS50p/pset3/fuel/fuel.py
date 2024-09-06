@@ -4,17 +4,23 @@
 def main():
 
     # Ask user to enter fraction
+    fraction = get_fraction("Fraction: ")
+
+    print(fraction)
+
+
 
 
 def get_fraction(string):
 
     while True:
+
         fraction = input(string)
         numer, denom = fraction.split("/")
 
         try:
             numer, denom = float(numer), float(denom)
-            break
+            return (numer/denom)
         except ValueError:
             print("Input format 'X/Y' and X,Y are numbers")
         except ZeroDivisionError:
