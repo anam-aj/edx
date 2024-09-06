@@ -12,7 +12,7 @@ def main():
             item = input().upper()
             if not item:
                 pass
-            if item in items:
+            elif item in items:
                 items[item] += 1
             else:
                 items[item] = 1
