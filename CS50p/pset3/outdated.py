@@ -20,6 +20,9 @@ def main():
     while True:
         date = input("Date: ")
 
+        split_on_slash = False
+        split_on_space = False
+
         try:
             month, day, year = date.split("/")
         except:
@@ -30,6 +33,7 @@ def main():
             except:
                 pass
             else:
+                split_on_slash = True
                 break
 
         try:
@@ -44,7 +48,10 @@ def main():
             except:
                 pass
             else:
+                split_on_space = True
                 break
 
+    if split_on_slash:
+        
 
 main()
