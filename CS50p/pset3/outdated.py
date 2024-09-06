@@ -46,7 +46,7 @@ def main():
             else:
                 break
 
-    print 
+    for m in months
 
 
 main()
