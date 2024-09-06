@@ -28,7 +28,7 @@ def main():
             print()
             return
         else:
-            print(f"${round(bill, 2)}")
+            print(f"${bill:.2f}")
 
 main()
 
