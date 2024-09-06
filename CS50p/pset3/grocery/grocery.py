@@ -10,7 +10,8 @@ def main():
 
         try:
             item = input("Item: ").upper()
-            if items[item] =
+            if item in items:
+                itmes
         except EOFError:
             print()
             return
