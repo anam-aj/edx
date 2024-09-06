@@ -28,6 +28,11 @@ def get_fraction(string):
 
         try:
             numer, denom = fraction.split("/")
+        except ValueError:
+            print("Input format 'X/Y' and X,Y are numbers")
+
+        try:
+            numer, denom = fraction.split("/")
             numer, denom = int(numer), int(denom)
             return (numer/denom)
         except ValueError:
