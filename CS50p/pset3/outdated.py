@@ -54,6 +54,14 @@ def main():
     if split_on_slash:
         print(f"{year:04}-{month:02}-{day:02}")
     elif split_on_space:
-        
+        month_count = 0
+        for m in months:
+            month_count += 1
+            if m == month:
+                month = month_count
+                break
+
+        print(f"{year:04}-{month:02}-{day:02}")
+
 
 main()
