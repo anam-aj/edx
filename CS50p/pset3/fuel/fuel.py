@@ -8,8 +8,8 @@ def main():
 
     try:
         fraction = float(fraction)
-    except:
-        
+    except ValueError:
+
 
 
 main()
