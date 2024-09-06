@@ -19,5 +19,8 @@ months = [
 def main():
 
     date = input("Date: ")
+    try:
+        mon, day, year = date.split("/")
+    except
 
 main()
