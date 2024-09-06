@@ -7,7 +7,6 @@ def main():
     items = {}
 
     while True:
-
         try:
             item = input("Item: ").upper()
             if item in items:
@@ -17,8 +16,7 @@ def main():
         except EOFError:
             break
 
-        for key in sorted(items):
+    for key in sorted(items):
             print(f"{items[key]} {key}")
-
 
 main()
