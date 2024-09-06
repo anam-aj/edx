@@ -11,7 +11,7 @@ def main():
         try:
             item = input().upper()
             if not item:
-                print
+                pass
             if item in items:
                 items[item] += 1
             else:
