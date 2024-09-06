@@ -17,7 +17,8 @@ def main():
 
     while True:
         item = input("Item: ")
-        
+        if item.lower() in 
+
 
 
 main()
