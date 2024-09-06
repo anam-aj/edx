@@ -46,6 +46,8 @@ def main():
             try:
                 if month not in months:
                     raise KeyError
+                if "," not in day:
+                    raise ValueError
                 day, year = int(day.replace(",", "")), int(year)
                 if day < 1 or day > 31:
                     raise ValueError
