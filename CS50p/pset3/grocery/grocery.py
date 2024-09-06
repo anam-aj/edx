@@ -10,6 +10,8 @@ def main():
     while True:
         try:
             item = input().upper()
+            if not item:
+                print
             if item in items:
                 items[item] += 1
             else:
