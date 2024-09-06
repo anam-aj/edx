@@ -1,9 +1,6 @@
 # Program to place an order
 
-
-def main():
-
-    menu = {
+menu = {
         "Baja Taco": 4.25,
         "Burrito": 7.50,
         "Bowl": 8.50,
@@ -15,11 +12,16 @@ def main():
         "Tortilla Salad": 8.00
     }
 
+
+def main():
+
+    bill = 0
+
     while True:
         item = input("Item: ").lower()
         for key in menu:
             if item == key.lower():
-                print
+                bill += menu[key]
 
 
 
