@@ -17,7 +17,7 @@ def main():
 
     while True:
         item = input("Item: ")
-        if item.lower() in 
+        if item.lower() in (menu.keys()).lower()
 
 
 
