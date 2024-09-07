@@ -88,8 +88,8 @@ def split_on_space(date):
                     month = month_count
                     break
 
-    formatted_date = (f"{year:04}-{month:02}-{day:02}")
-    return formatted_date
+            formatted_date = (f"{year:04}-{month:02}-{day:02}")
+            return formatted_date
 
 
 main()
