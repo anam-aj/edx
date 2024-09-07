@@ -38,6 +38,7 @@ def main():
                 valid_date = True
 
 
+# Convert to standard format from "MM/DD/YYYY"
 def split_on_slash(date):
 
     try:
@@ -46,7 +47,9 @@ def split_on_slash(date):
         return False
     else:
         try:
+            # Ensure month, day, year are integers
             month, day, year = int(month), int(day), int(year)
+            # Ensure month and day are valid numbers
             if month < 1 or month > 12 or day < 1 or day > 31:
                 raise ValueError
         except:
@@ -56,6 +59,7 @@ def split_on_slash(date):
             return formatted_date
 
 
+# Convert to standard format from "Month Day, Year"
 def split_on_space(date):
 
     try:
@@ -63,11 +67,13 @@ def split_on_space(date):
     except:
         return False
     else:
+        # Ensure month is valid
+        if month not in months:
+            raise KeyError
+        # Remove
+        if "," not in day:
+            raise ValueError
         try:
-            if month not in months:
-                raise KeyError
-            if "," not in day:
-                raise ValueError
             day, year = int(day.replace(",", "")), int(year)
             if day < 1 or day > 31:
                 raise ValueError
