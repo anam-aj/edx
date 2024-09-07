@@ -49,7 +49,7 @@ def split_on_slash(date):
         try:
             # Ensure month, day, year are integers
             month, day, year = int(month), int(day), int(year)
-            # Ensure month and day are valid numbers
+            # Ensure month and day are valid
             if month < 1 or month > 12 or day < 1 or day > 31:
                 raise ValueError
         except:
@@ -70,16 +70,17 @@ def split_on_space(date):
         # Ensure month is valid
         if month not in months:
             raise KeyError
-        # Remove
         if "," not in day:
             raise ValueError
         try:
             day, year = int(day.replace(",", "")), int(year)
+            # Ensure day is valid
             if day < 1 or day > 31:
                 raise ValueError
         except:
             return False
         else:
+            # Covert "month-name" to "month-number"
             month_count = 0
             for m in months:
                 month_count += 1
