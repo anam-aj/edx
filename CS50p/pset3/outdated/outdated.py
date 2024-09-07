@@ -39,12 +39,13 @@ def split_on_slash(date):
             formatted_date = f"{year:04}-{month:02}-{day:02}"
             return formatted_date
 
+
 def split_on_space(date):
 
     try:
         month, day, year = date.split(" ")
     except:
-        pass
+        return False
     else:
         try:
             if month not in months:
@@ -55,7 +56,7 @@ def split_on_space(date):
             if day < 1 or day > 31:
                 raise ValueError
         except:
-            pass
+            return False
         else:
             month_count = 0
             for m in months:
@@ -65,6 +66,7 @@ def split_on_space(date):
                 break
 
     formatted_date = (f"{year:04}-{month:02}-{day:02}")
+    return formatted_date
 
 
 main()
