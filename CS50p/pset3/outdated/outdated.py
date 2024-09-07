@@ -17,17 +17,21 @@ months = [
 
 
 def main():
-    
+
+    # Ensure date is of valid format
     valid_date = False
     while not valid_date:
 
+        # Promts user for date
         date = input("Date: ")
 
+        # Convert to standard format when given as "MM/DD/YYYY"
         formatted_date = split_on_slash(date)
         if formatted_date:
             print(formatted_date)
             valid_date = True
         else:
+            # Convert date to standard format when given as "Month Day, Year"
             formatted_date = split_on_space(date)
             if formatted_date:
                 print(formatted_date)
