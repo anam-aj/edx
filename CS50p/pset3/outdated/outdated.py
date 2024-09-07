@@ -21,6 +21,15 @@ def main():
     while True:
         date = input("Date: ")
 
+        formatted_date = split_on_slash(date)
+        if formatted_date:
+            print(formatted_date)
+            break
+        else:
+            formatted_date = split_on_space(date)
+            if formatted_date:
+                print(formatted_date)
+                break
 
 def split_on_slash(date):
 
@@ -60,10 +69,10 @@ def split_on_space(date):
         else:
             month_count = 0
             for m in months:
-            month_count += 1
-            if m == month:
-                month = month_count
-                break
+                month_count += 1
+                if m == month:
+                    month = month_count
+                    break
 
     formatted_date = (f"{year:04}-{month:02}-{day:02}")
     return formatted_date
