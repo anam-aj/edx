@@ -67,12 +67,12 @@ def split_on_space(date):
     except:
         return False
     else:
-        # Ensure month is valid
-        if month not in months:
-            raise KeyError
-        if "," not in day:
-            raise ValueError
         try:
+            # Ensure month is valid
+            if month not in months:
+                raise KeyError
+            if "," not in day:
+                raise ValueError
             day, year = int(day.replace(",", "")), int(year)
             # Ensure day is valid
             if day < 1 or day > 31:
