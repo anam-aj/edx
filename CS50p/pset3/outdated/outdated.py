@@ -17,19 +17,21 @@ months = [
 
 
 def main():
+    
+    valid_date = False
+    while not valid_date:
 
-    while True:
         date = input("Date: ")
 
         formatted_date = split_on_slash(date)
         if formatted_date:
             print(formatted_date)
-            break
+            valid_date = True
         else:
             formatted_date = split_on_space(date)
             if formatted_date:
                 print(formatted_date)
-                break
+                valid_date = True
 
 
 def split_on_slash(date):
