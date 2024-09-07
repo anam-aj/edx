@@ -27,14 +27,14 @@ def split_on_slash(date):
     try:
         month, day, year = date.split("/")
     except:
-        pass
+        return False
     else:
         try:
             month, day, year = int(month), int(day), int(year)
             if month < 1 or month > 12 or day < 1 or day > 31:
                 raise ValueError
         except:
-            pass
+            return False
         else:
             formatted_date = f"{year:04}-{month:02}-{day:02}"
             return formatted_date
