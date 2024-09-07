@@ -17,10 +17,9 @@ months = [
 
 
 def main():
+
     while True:
         date = input("Date: ")
-
-
 
 
 def split_on_slash(date):
@@ -34,11 +33,11 @@ def split_on_slash(date):
             month, day, year = int(month), int(day), int(year)
             if month < 1 or month > 12 or day < 1 or day > 31:
                 raise ValueError
-            except:
-                pass
-            else:
-                formatted_date = f"{year:04}-{month:02}-{day:02}"
-
+        except:
+            pass
+        else:
+            formatted_date = f"{year:04}-{month:02}-{day:02}"
+            return formatted_date
 
 def split_on_space(date):
 
@@ -65,7 +64,7 @@ def split_on_space(date):
                 month = month_count
                 break
 
-        formatted_date = (f"{year:04}-{month:02}-{day:02}")
+    formatted_date = (f"{year:04}-{month:02}-{day:02}")
 
 
 main()
