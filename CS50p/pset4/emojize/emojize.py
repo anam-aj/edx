@@ -9,7 +9,7 @@ def main():
     text = input("Input:  ")
 
     # Print emojized text to user
-    print(emoji.emojize(text), language='alias')
+    print(f"Output: {emoji.emojize(text, language='alias')}")
 
 
 main()
