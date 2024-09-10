@@ -18,7 +18,6 @@ def main():
     bill = 0
 
     while True:
-
         try:
             item = input("Item: ").title()
             bill += menu[item]
