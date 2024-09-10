@@ -8,11 +8,8 @@ def main():
     # Promts user to enter text
     text = input("Input:  ")
 
-    words = text.split()
-
-    for word in words:
-        try:
-            
+    # Print emojized text to user
+    print(emoji.emojize(text), language='alias')
 
 
 main()
