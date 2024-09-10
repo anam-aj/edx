@@ -5,9 +5,14 @@ import emoji
 
 def main():
 
+    # Promts user to enter text
     text = input("Input:  ")
 
-    for word in text
+    words = text.split()
+
+    for word in words:
+        try:
+            
 
 
 main()
