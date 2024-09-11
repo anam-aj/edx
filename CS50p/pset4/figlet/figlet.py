@@ -4,23 +4,15 @@ import random
 import sys
 from pyfiglet import Figlet
 
-
-def main():
-
-    # Get available fonts
+# Get available fonts
     figlet = Figlet()
     fonts = figlet.getFonts()
 
-    # Ensure number of command line arguments is valid
-    if not (len(sys.argv) == 1 or len(sys.argv) == 3):
-        sys.exit("Please give valid Command Line Argument(s) i.e. '0' or '2'")
-    # Check validity of Command line arguments
-    elif sys.argv[1] not in ["-f", "--font"]:
-        sys.exit("Invalid arguments")
-    elif sys.argv[2] not in fonts:
-        sys.exit("Enter valid font")
 
-    else:
+def main():
+
+    if cmnd_line_args_valid():
+        
         # Promts user to enter text
         text = input("Input:  ")
 
@@ -37,6 +29,20 @@ def main():
             # Prints text in user given font
             figlet.setFont(font=sys.argv[2])
             print(figlet.renderText(text))
+
+
+def cmnd_line_args_valid():
+
+    # Ensure number of command line arguments is valid
+    if not (len(sys.argv) == 1 or len(sys.argv) == 3):
+        sys.exit("Please give valid Command Line Argument(s) i.e. '0' or '2'")
+    # Check validity of Command line arguments
+    elif sys.argv[1] not in ["-f", "--font"]:
+        sys.exit("Invalid arguments")
+    elif sys.argv[2] not in fonts:
+        sys.exit("Enter valid font")
+    else:
+        return True
 
 
 main()
