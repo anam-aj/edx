@@ -12,7 +12,7 @@ def main():
         try:
             level = int(level)
             if level < 1:
-                #print("Level has to be a positive integer")
+                # print("Level has to be a positive integer")
                 raise ValueError
         except:
             pass
@@ -28,7 +28,7 @@ def main():
         try:
             guess = int(guess)
             if guess < 1:
-                #print("Level has to be a positive integer")
+                # print("Level has to be a positive integer")
                 raise ValueError
         except:
             pass
