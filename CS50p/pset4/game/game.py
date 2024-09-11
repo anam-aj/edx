@@ -19,6 +19,7 @@ def main():
                 break
 
     correct_value = random.randint(1, level)
+    print(correct_value)
 
     # Ask user for guess
     while True:
