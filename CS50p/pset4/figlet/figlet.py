@@ -18,8 +18,12 @@ def main():
         figlet.setFont(font=rand_font)
         # Prints text in random font
         print(figlet.renderText(text))
-        
+
     elif len(sys.argv[]) == 3:
+        # Get user font
+        fonts = figlet.getFonts()
+        rand_font = random.choice(fonts)
+        figlet.setFont(font=rand_font)
         # Prints text in user given font
 
     else:
