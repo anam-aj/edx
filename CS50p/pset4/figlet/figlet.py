@@ -36,9 +36,10 @@ def cmnd_line_args_valid():
     # Ensure number of command line arguments is valid
     if not (len(sys.argv) == 1 or len(sys.argv) == 3):
         sys.exit("Please give valid Command Line Argument(s) i.e. '0' or '2'")
-    # Check validity of Command line arguments
+    # Check if first argument is valid
     elif sys.argv[1] not in ["-f", "--font"]:
         sys.exit("Invalid arguments")
+    # Check if font is valid
     elif sys.argv[2] not in fonts:
         sys.exit("Enter valid font")
     else:
