@@ -7,8 +7,10 @@ p = inflect.engine()
 
 def main():
 
+    # List for names
     names = []
 
+    # Ask user for name and adds to list
     while True:
         try:
             name = input("Name: ")
@@ -16,6 +18,7 @@ def main():
         except EOFError:
             break
 
+    # Bid adieu to all
     print(f"Adieu, adieu, to {p.join(names)}")
 
 
