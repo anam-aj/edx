@@ -11,13 +11,13 @@ def main():
 
         try:
             level = int(level)
+            if level < 1:
+                print("Level has to be a positive integer")
+                raise ValueError
         except:
             pass
         else:
-            if level < 1:
-                print("Level has to be a positive integer")
-            else:
-                break
+            break
 
     correct_value = random.randint(1, level)
 
@@ -27,6 +27,9 @@ def main():
 
         try:
             guess = int(guess)
+            if guess < 1:
+                print("Level has to be a positive integer")
+                raise ValueError
         except:
             pass
         else:
