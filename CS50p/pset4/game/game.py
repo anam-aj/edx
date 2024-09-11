@@ -40,7 +40,7 @@ def main():
                 print("Too large!")
             else:
                 print("Just right!")
-                return
+                return 0
 
 
 main()
