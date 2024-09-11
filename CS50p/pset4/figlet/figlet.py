@@ -10,18 +10,26 @@ def main():
     # Promts user to enter text
     text = input("Input:  ")
 
+    # Get available fonts
+    fonts = figlet.getFonts()
+
     # Command line argument not given
     if len(sys.argv) == 1:
         # Get random font
-        fonts = figlet.getFonts()
         rand_font = random.choice(fonts)
         figlet.setFont(font=rand_font)
         # Prints text in random font
         print(figlet.renderText(text))
 
+    # Command line arguments given
     elif len(sys.argv) == 3:
         # Check Command line arguments
-        
+        if sys.argv[1] not in ["-f", "--font"]:
+            sys.exit("Invalid arguments")
+        elif sys.argv[2] not in fonts:
+            sys.exit("Enter valid font")
+        else:
+
         # Get user font
 
         figlet.setFont(font=rand_font)
