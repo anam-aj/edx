@@ -9,6 +9,8 @@ def main():
     # Promts user to enter text
     text = input("Input:  ")
 
+    # Command line argument not given
+    if sys.argv[]
     figlet = Figlet()
 
     print(figlet.renderText(text))
