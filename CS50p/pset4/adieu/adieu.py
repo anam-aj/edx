@@ -8,6 +8,7 @@ p = inflect.engine()
 def main():
 
     names = []
+
     while True:
         try:
             name = input("Name: ")
