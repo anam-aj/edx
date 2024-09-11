@@ -40,7 +40,6 @@ def main():
                 print("Too large!")
             else:
                 print("Just right!")
-                print("exiting loop")
                 break
 
 
