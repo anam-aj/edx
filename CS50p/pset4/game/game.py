@@ -43,5 +43,5 @@ def main():
                 print("Just right!")
                 return
 
-
-main()
+if __name__ == "__main__":
+    main()
