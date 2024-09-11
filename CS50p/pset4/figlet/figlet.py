@@ -10,6 +10,7 @@ def main():
     # Promts user to enter text
     text = input("Input:  ")
 
+    figlet = Figlet()
     # Get available fonts
     fonts = figlet.getFonts()
 
