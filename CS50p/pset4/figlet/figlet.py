@@ -29,19 +29,12 @@ def main():
         elif sys.argv[2] not in fonts:
             sys.exit("Enter valid font")
         else:
-
-        # Get user font
-
-        figlet.setFont(font=rand_font)
-        # Prints text in user given font
+            # Prints text in user given font
+            figlet.setFont(font=sys.argv[2])
+            print(figlet.renderText(text))
 
     else:
         sys.exit("Please give valid Command Line Argument(s) i.e. '0' or '2'")
-
-
-    figlet = Figlet()
-
-    print(figlet.renderText(text))
 
 
 main()
