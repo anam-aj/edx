@@ -8,7 +8,7 @@ from pyfiglet import Figlet
 def main():
 
     # Check no of command line arguments
-    if len(sys.argv) == 1 or len(sys.argv) == 3:
+    if not (len(sys.argv) == 1 or len(sys.argv) == 3):
         # Check validity of Command line arguments
         if sys.argv[1] not in ["-f", "--font"]:
             sys.exit("Invalid arguments")
@@ -37,7 +37,7 @@ def main():
             print(figlet.renderText(text))
 
     else:
-        sys.exit("Please give valid Command Line Argument(s) i.e. '0' or '2'")
+
 
 
 main()
