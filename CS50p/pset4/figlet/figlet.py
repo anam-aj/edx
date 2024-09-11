@@ -7,6 +7,10 @@ from pyfiglet import Figlet
 
 def main():
 
+    # Ensure validity iof command line arguments
+    if len(sys.argv) != 1 or len(sys.argv) == 3:
+        
+
     # Promts user to enter text
     text = input("Input:  ")
 
