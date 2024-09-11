@@ -44,4 +44,3 @@ def main():
 
 
 main()
-print("program exited")
