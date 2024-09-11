@@ -11,11 +11,14 @@ def main():
 
     # Command line argument not given
     if len(sys.argv[]) == 1:
-        #todo
+        # Prints text in random font
+        
     elif len(sys.argv[]) == 3:
-        #todo
+        # Prints text in user given font
     else:
-        print
+        sys.exit("Please give valid Command Line Argument(s) i.e. '0' or '2'")
+
+
     figlet = Figlet()
 
     print(figlet.renderText(text))
