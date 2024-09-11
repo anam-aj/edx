@@ -9,6 +9,11 @@ def main():
 
     # Check no of command line arguments
     if len(sys.argv) == 1 or len(sys.argv) == 3:
+        # Check validity of Command line arguments
+        if sys.argv[1] not in ["-f", "--font"]:
+            sys.exit("Invalid arguments")
+        elif sys.argv[2] not in fonts:
+            sys.exit("Enter valid font")
 
         # Promts user to enter text
         text = input("Input:  ")
@@ -27,15 +32,9 @@ def main():
 
         # Command line arguments given
         elif len(sys.argv) == 3:
-            # Check Command line arguments
-            if sys.argv[1] not in ["-f", "--font"]:
-                sys.exit("Invalid arguments")
-            elif sys.argv[2] not in fonts:
-                sys.exit("Enter valid font")
-            else:
-                # Prints text in user given font
-                figlet.setFont(font=sys.argv[2])
-                print(figlet.renderText(text))
+            # Prints text in user given font
+            figlet.setFont(font=sys.argv[2])
+            print(figlet.renderText(text))
 
     else:
         sys.exit("Please give valid Command Line Argument(s) i.e. '0' or '2'")
