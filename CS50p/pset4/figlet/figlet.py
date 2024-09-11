@@ -10,7 +10,8 @@ def main():
     text = input("Input:  ")
 
     # Command line argument not given
-    if sys.argv[]
+    if len(sys.argv[]) == 1:
+        
     figlet = Figlet()
 
     print(figlet.renderText(text))
