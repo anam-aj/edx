@@ -9,6 +9,7 @@ def main():
     while True:
         level = input("Level: ")
 
+        # Ensure validity of level
         try:
             level = int(level)
             if level < 1:
@@ -19,6 +20,7 @@ def main():
         else:
             break
 
+    # Set correct value
     correct_value = random.randint(1, level)
 
     # Ask user for guess
