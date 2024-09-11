@@ -9,11 +9,10 @@ def main():
     while True:
         level = input("Level: ")
 
-        # Ensure validity of level
+        # Ensure level is a positive integer
         try:
             level = int(level)
             if level < 1:
-                # print("Level has to be a positive integer")
                 raise ValueError
         except:
             pass
@@ -28,9 +27,9 @@ def main():
         guess = input("Guess: ")
 
         try:
+            # Ensure guess is a positive integer
             guess = int(guess)
             if guess < 1:
-                # print("Level has to be a positive integer")
                 raise ValueError
         except:
             pass
