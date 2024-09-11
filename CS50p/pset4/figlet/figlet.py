@@ -1,5 +1,6 @@
 # Program to convert text to figlet
 
+import random
 import sys
 from pyfiglet import Figlet
 
@@ -11,8 +12,10 @@ def main():
 
     # Command line argument not given
     if len(sys.argv[]) == 1:
-        # Get list of fonts
+        # Get random font
         fonts = figlet.getFonts()
+        font = random.choice(fonts)
+        
         # Prints text in random font
 
 
