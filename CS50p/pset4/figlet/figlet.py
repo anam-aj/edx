@@ -11,7 +11,7 @@ def main():
     text = input("Input:  ")
 
     # Command line argument not given
-    if len(sys.argv[]) == 1:
+    if len(sys.argv) == 1:
         # Get random font
         fonts = figlet.getFonts()
         rand_font = random.choice(fonts)
@@ -19,10 +19,11 @@ def main():
         # Prints text in random font
         print(figlet.renderText(text))
 
-    elif len(sys.argv[]) == 3:
+    elif len(sys.argv) == 3:
+        # Check Command line arguments
+        
         # Get user font
-        fonts = figlet.getFonts()
-        rand_font = random.choice(fonts)
+
         figlet.setFont(font=rand_font)
         # Prints text in user given font
 
