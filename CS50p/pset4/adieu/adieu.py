@@ -15,7 +15,7 @@ def main():
         except EOFError:
             break
 
-    print(p.join(names))
+    print(f"Adieu, adieu, to {p.join(names)}")
 
 
 main()
