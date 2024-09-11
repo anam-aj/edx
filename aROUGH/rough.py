@@ -1,33 +1,17 @@
-# Program to place an order
+# Program to convert text to figlet
 
-menu = {
-    "Baja Taco": 4.25,
-    "Burrito": 7.50,
-    "Bowl": 8.50,
-    "Nachos": 11.00,
-    "Quesadilla": 8.50,
-    "Super Burrito": 8.50,
-    "Super Quesadilla": 9.50,
-    "Taco": 3.00,
-    "Tortilla Salad": 8.00,
-}
+import random
+import sys
+from pyfiglet import Figlet
 
 
 def main():
 
-    bill = 0
 
-    while True:
-        try:
-            item = input("Item: ").title()
-            bill += menu[item]
-        except KeyError:
-            pass
-        except EOFError:
-            print()
-            return
-        else:
-            print(f"${bill:.2f}")
+    figlet = Figlet()
+    # Get available fonts
+    fonts = figlet.getFonts()
+    print(fonts)
 
 
 main()
