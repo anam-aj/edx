@@ -40,7 +40,6 @@ def main():
             elif guess > correct_value:
                 print("Too large!")
             else:
-                print(guess, correct_value)
                 print("Just right!")
                 break
 
