@@ -9,9 +9,9 @@ def main():
     # Promts user to enter text
     text = input("Input:  ")
 
-    figlet = Figlet(text)
+    figlet = Figlet()
 
-    print(figlet)
+    print(figlet.renderText(text))
 
 
 main()
