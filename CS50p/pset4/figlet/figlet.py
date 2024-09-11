@@ -5,14 +5,14 @@ import sys
 from pyfiglet import Figlet
 
 # Get available fonts
-    figlet = Figlet()
-    fonts = figlet.getFonts()
+figlet = Figlet()
+fonts = figlet.getFonts()
 
 
 def main():
 
     if cmnd_line_args_valid():
-        
+
         # Promts user to enter text
         text = input("Input:  ")
 
