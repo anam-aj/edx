@@ -15,7 +15,7 @@ def main():
         except EOFError:
             break
 
-    
+    print(p.join(names))
 
 
 main()
