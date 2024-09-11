@@ -11,8 +11,11 @@ def main():
 
     # Command line argument not given
     if len(sys.argv[]) == 1:
+        # Get list of fonts
+        fonts = figlet.getFonts()
         # Prints text in random font
-        
+
+
     elif len(sys.argv[]) == 3:
         # Prints text in user given font
     else:
