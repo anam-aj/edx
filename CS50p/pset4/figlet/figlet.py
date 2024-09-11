@@ -14,13 +14,14 @@ def main():
     if len(sys.argv[]) == 1:
         # Get random font
         fonts = figlet.getFonts()
-        font = random.choice(fonts)
-        
+        rand_font = random.choice(fonts)
+        figlet.setFont(font=rand_font)
         # Prints text in random font
-
-
+        print(figlet.renderText(text))
+        
     elif len(sys.argv[]) == 3:
         # Prints text in user given font
+
     else:
         sys.exit("Please give valid Command Line Argument(s) i.e. '0' or '2'")
 
