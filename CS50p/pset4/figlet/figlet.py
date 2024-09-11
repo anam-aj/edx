@@ -7,6 +7,11 @@ from pyfiglet import Figlet
 
 def main():
 
+    figlet = Figlet()
+    # Get available fonts
+    fonts = figlet.getFonts()
+
+
     # Ensure number of command line arguments is valid
     if not (len(sys.argv) == 1 or len(sys.argv) == 3):
         sys.exit("Please give valid Command Line Argument(s) i.e. '0' or '2'")
@@ -20,9 +25,6 @@ def main():
         # Promts user to enter text
         text = input("Input:  ")
 
-        figlet = Figlet()
-        # Get available fonts
-        fonts = figlet.getFonts()
 
         # Command line argument not given
         if len(sys.argv) == 1:
