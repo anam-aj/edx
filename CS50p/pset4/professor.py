@@ -25,8 +25,6 @@ def main():
         else:
 
 
-
-
 def get_level(string):
 
     # Promts user for level
@@ -50,8 +48,10 @@ def generate_integer(level):
         return random.randint(1, 9)
     elif level == 2:
         return random.randint(1, 99)
-    if level == 3:
+    elif level == 3:
         return random.randint(1, 999)
+    else:
+        raise ValueError
 
 
 if __name__ == "__main__":
