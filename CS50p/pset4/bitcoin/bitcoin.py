@@ -7,7 +7,7 @@ import sys
 def main():
 
     if argv_is_valid():
-        number =  sys.argv[1]
+        number =  float(sys.argv[1])
 
 def argv_is_valid():
 
@@ -19,6 +19,8 @@ def argv_is_valid():
         num_of_bitcoin = float(num_of_bitcoin)
     except:
         sys.exit("Enter a valid number")
+    else:
+        return True
 
 
 main()
