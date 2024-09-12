@@ -30,7 +30,10 @@ def get_level(string):
 
 def generate_integer(level):
 
-    # 
+     # Level 1
+     if level == 1:
+         x = random.randint(1, 9)
+         y = random.randint(1, 9)
 
 
 if __name__ == "__main__":
@@ -53,7 +56,7 @@ def main():
 
 
     # Set correct value
-    correct_value = random.randint(1, level)
+    correct_value =
 
     # Ask user for guess
     while True:
