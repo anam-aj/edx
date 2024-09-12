@@ -16,12 +16,15 @@ def main():
 
         user_ans = input(f"{x} + {y} = ")
 
-        try:
-            user_ans = int(user_ans)
-            if user_ans != x + y:
-                raise ValueError
-        except:
-            print("EEE")
+        # Give 3 tries to answer the question correctly
+        for _ in range(3):
+            try:
+                user_ans = int(user_ans)
+                if user_ans != x + y:
+                    raise ValueError
+            except:
+                print("EEE")
+            
 
 
 def get_level(string):
