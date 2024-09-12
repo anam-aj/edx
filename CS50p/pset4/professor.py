@@ -7,8 +7,11 @@ def main():
 
     # Promt user for level
     level = get_level("Level: ")
+    print(f"Level: {level}")
 
-    # for
+    # Ask questions to user
+    for q in range(10):
+        
 
 
 
