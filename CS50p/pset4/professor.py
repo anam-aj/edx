@@ -1,8 +1,5 @@
 # program to implement "math professor"
 
-import random
-
-
 
 import random
 
@@ -30,10 +27,12 @@ def get_level(string):
 
 def generate_integer(level):
 
-     # Level 1
-     if level == 1:
-         x = random.randint(1, 9)
-         y = random.randint(1, 9)
+    if level == 1:
+        return random.randint(1, 9)
+    elif level == 2:
+        return random.randint(1, 99)
+    if level == 3:
+        return random.randint(1, 999)
 
 
 if __name__ == "__main__":
@@ -79,6 +78,3 @@ def main():
                 print("Just right!")
                 return
 
-
-if __name__ == "__main__":
-    main()
