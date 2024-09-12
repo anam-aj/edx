@@ -9,7 +9,7 @@ def main():
     level = get_level("Level: ")
     print(f"Level: {level}")
 
-    # Ask questions to user
+    # Ask 10 questions to user
     for q in range(10):
         x = generate_integer(level)
         y = generate_integer(level)
