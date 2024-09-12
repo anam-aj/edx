@@ -27,6 +27,7 @@ def main():
                 print("EEE")
             else:
                 correct_ans = True
+                break
 
         if not correct_ans:
             print(f"{x} + {y} = {x + y}")
