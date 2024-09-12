@@ -11,7 +11,7 @@ def main():
 
         total = num_of_coin * bitcoin_rate()
 
-
+    
 def argv_is_valid():
 
     if len(sys.argv) != 2:
