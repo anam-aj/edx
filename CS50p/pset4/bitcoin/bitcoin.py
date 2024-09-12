@@ -28,7 +28,13 @@ def argv_is_valid():
 
 def bitcoin_rate():
 
-    response = requests.get()
+    try:
+        response = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
+    except:
+        sys.exit("Unable to fetch coin details")
+
+    json_obj = response.json()
+
 
 
 main()
