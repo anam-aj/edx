@@ -46,7 +46,7 @@ def bitcoin_rate():
 
     # Obtain rate from json file
     json_obj = response.json()
-    rate = json_obj["bpi"][USD][rate_float]
+    rate = json_obj["bpi"]["USD"]["rate_float"]
 
     return rate
 
