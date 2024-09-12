@@ -8,7 +8,8 @@ def main():
 
     if argv_is_valid():
         num_of_coin = float(sys.argv[1])
-        
+
+        total = num_of_coin * bitcoin_rate()
 
 
 def argv_is_valid():
@@ -23,6 +24,11 @@ def argv_is_valid():
         sys.exit("Enter a valid number")
     else:
         return True
+
+
+def bitcoin_rate():
+
+    response = requests.get()
 
 
 main()
