@@ -14,6 +14,8 @@ def main():
 
     # Ask 10 questions to user
     for _ in range(10):
+
+        # Generate 2 random integers
         x = generate_integer(level)
         y = generate_integer(level)
 
@@ -22,7 +24,9 @@ def main():
 
         # Give 3 tries to answer the question correctly
         for _ in range(3):
+            # Ask question
             user_ans = input(f"{x} + {y} = ")
+            # Check answer
             try:
                 user_ans = int(user_ans)
                 if user_ans != x + y:
