@@ -17,6 +17,7 @@ def main():
         user_ans = input(f"{x} + {y} = ")
 
         # Give 3 tries to answer the question correctly
+        correct_ans = False
         for _ in range(3):
             try:
                 user_ans = int(user_ans)
@@ -24,7 +25,12 @@ def main():
                     raise ValueError
             except:
                 print("EEE")
-            
+            else:
+                corr_ans = True
+
+        if not correct_ans:
+            print(
+
 
 
 def get_level(string):
