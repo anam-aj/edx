@@ -17,11 +17,12 @@ def main():
         x = generate_integer(level)
         y = generate_integer(level)
 
-        user_ans = input(f"{x} + {y} = ")
+        # Varible to track if unser answers correctly
+        correct_ans = False
 
         # Give 3 tries to answer the question correctly
-        correct_ans = False
         for _ in range(3):
+            user_ans = input(f"{x} + {y} = ")
             try:
                 user_ans = int(user_ans)
                 if user_ans != x + y:
