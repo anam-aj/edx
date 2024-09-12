@@ -6,7 +6,7 @@ import random
 def main():
 
     # Promt user for level
-    level = get_level("Level: ")
+    level = get_level()
     print(f"Level: {level}")
 
     # Variable to track score
@@ -41,11 +41,11 @@ def main():
     print(f"Score: {score}")
 
 
-def get_level(string):
+def get_level():
 
     # Promts user for level
     while True:
-        level = input(string)
+        level = input("Level: ")
 
         # Ensure level is valid
         try:
