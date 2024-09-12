@@ -9,8 +9,11 @@ def main():
     level = get_level("Level: ")
     print(f"Level: {level}")
 
+    # Variable to track score
+    score = 0
+
     # Ask 10 questions to user
-    for q in range(10):
+    for _ in range(10):
         x = generate_integer(level)
         y = generate_integer(level)
 
@@ -26,12 +29,15 @@ def main():
             except:
                 print("EEE")
             else:
+                score += 1
                 correct_ans = True
                 break
 
         if not correct_ans:
             print(f"{x} + {y} = {x + y}")
 
+    # Print Score
+    print(f"Score: {score}")
 
 
 def get_level(string):
@@ -43,7 +49,7 @@ def get_level(string):
         # Ensure level is valid
         try:
             level = int(level)
-            if level not in [1,2,3]:
+            if level not in [1, 2, 3]:
                 raise ValueError
         except:
             pass
