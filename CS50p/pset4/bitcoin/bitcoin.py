@@ -6,7 +6,7 @@ import sys
 
 def main():
 
-    number =  sys.argv
+    number =  sys.argv[1]
 
 
 main()
