@@ -34,6 +34,7 @@ def main():
             except:
                 print("EEE")
             else:
+                # When user answers correctly
                 score += 1
                 correct_ans = True
                 break
@@ -41,7 +42,7 @@ def main():
         if not correct_ans:
             print(f"{x} + {y} = {x + y}")
 
-    # Print Score
+    # Print Final Score
     print(f"Score: {score}")
 
 
