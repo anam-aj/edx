@@ -11,7 +11,10 @@ def main():
 
     # Ask questions to user
     for q in range(10):
-        
+        x = generate_integer(level)
+        y = generate_integer(level)
+
+        user_ans = input(f"{x + }")
 
 
 
