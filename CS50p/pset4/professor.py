@@ -22,7 +22,6 @@ def main():
                 raise ValueError
         except:
             print("EEE")
-        else:
 
 
 def get_level(string):
