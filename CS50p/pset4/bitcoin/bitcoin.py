@@ -34,7 +34,7 @@ def bitcoin_rate():
         sys.exit("Unable to fetch coin details")
 
     json_obj = response.json()
-    rate = json_obj
+    rate = float(json_obj["bpi"][USD][rate])
 
 
 
