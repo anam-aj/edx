@@ -12,7 +12,7 @@ def main():
         # Ensure level is a positive integer
         try:
             level = int(level)
-            if level < 1:
+            if level not in [1,2,3]:
                 raise ValueError
         except:
             pass
