@@ -1,10 +1,14 @@
-# program to implement "math professor"
-
+# Program to implement "math professor"
 
 import random
 
 
 def main():
+
+    # Promt user for level
+    level = get_level("Level: ")
+
+    # for
 
 
 
