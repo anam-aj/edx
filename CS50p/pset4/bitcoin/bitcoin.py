@@ -6,6 +6,7 @@ import sys
 
 def main():
 
+    if is_valid()
     number =  sys.argv[1]
 
 
