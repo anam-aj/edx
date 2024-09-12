@@ -26,10 +26,10 @@ def main():
             except:
                 print("EEE")
             else:
-                corr_ans = True
+                correct_ans = True
 
         if not correct_ans:
-            print(
+            print(f"{x} + {y} = {x + y}")
 
 
 
