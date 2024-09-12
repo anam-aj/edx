@@ -29,7 +29,8 @@ def get_level(string):
 
 
 def generate_integer(level):
-    ...
+
+    # 
 
 
 if __name__ == "__main__":
