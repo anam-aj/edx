@@ -11,7 +11,7 @@ def main():
 
         total = num_of_coin * bitcoin_rate()
 
-    
+
 def argv_is_valid():
 
     if len(sys.argv) != 2:
@@ -34,6 +34,7 @@ def bitcoin_rate():
         sys.exit("Unable to fetch coin details")
 
     json_obj = response.json()
+    rate = json_obj
 
 
 
