@@ -14,7 +14,16 @@ def main():
         x = generate_integer(level)
         y = generate_integer(level)
 
-        user_ans = input(f"{x + }")
+        user_ans = input(f"{x} + {y} = ")
+
+        try:
+            user_ans = int(user_ans)
+            if user_ans != x + y:
+                raise ValueError
+        except:
+            print("EEE")
+        else:
+
 
 
 
@@ -47,44 +56,3 @@ def generate_integer(level):
 
 if __name__ == "__main__":
     main()
-
-
-
-
-
-
-
-
-
-
-
-
-
-def main():
-
-
-
-    # Set correct value
-    correct_value =
-
-    # Ask user for guess
-    while True:
-        guess = input("Guess: ")
-
-        try:
-            # Ensure guess is a positive integer
-            guess = int(guess)
-            if guess < 1:
-                raise ValueError
-        except:
-            pass
-        else:
-            # Check if user's guess is correct
-            if guess < correct_value:
-                print("Too small!")
-            elif guess > correct_value:
-                print("Too large!")
-            else:
-                print("Just right!")
-                return
-
