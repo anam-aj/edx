@@ -25,10 +25,10 @@ def convert(fraction):
         if not numer.isdigit() or not denom.isdigit():
             raise ValueError
         # Ensure fraction is not greater than 1
+        numer, denom = int(numer), int(denom)
         if numer > denom:
             raise ValueError
         # Generate and return the fraction
-        numer, denom = int(numer), int(denom)
         return (numer/denom)
     except ValueError:
         print("Input format 'X/Y' and X,Y are integers")
