@@ -6,6 +6,7 @@ def main():
     # Ask user to enter fraction
     while True:
         fraction = input("Fraction: ")
+
         if 0 <= convert(fraction) <= 100:
             percent = convert(fraction)
             break
