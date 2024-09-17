@@ -9,7 +9,8 @@ def main():
         percent = convert(fraction)
         if 0 <= percent <= 100:
             break
-
+        elif
+        
     # Print result to user
     print(gauge(percent))
 
