@@ -3,9 +3,12 @@
 
 def main():
 
+    # Ask user to enter fraction
     while True:
-        fraction = input(string)
-        if
+        fraction = input("Fraction: ")
+        if convert(fraction):
+            fraction = convert(fraction)
+            break
 
 
 def convert(fraction):
