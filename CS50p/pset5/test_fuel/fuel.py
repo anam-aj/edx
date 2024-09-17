@@ -7,7 +7,7 @@ def main():
     while True:
         fraction = input("Fraction: ")
         percent = convert(fraction)
-        if percent:
+        if percent != None:
             if 0 <= percent <= 100:
                 break
 
