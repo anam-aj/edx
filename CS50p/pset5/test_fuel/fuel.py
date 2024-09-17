@@ -10,6 +10,12 @@ def main():
             fraction = convert(fraction)
             break
 
+    # Convert to percent
+    percent = fraction * 100
+
+    # Print result to user
+    print gauge(percent)
+
 
 def convert(fraction):
 
@@ -33,29 +39,14 @@ def convert(fraction):
 
 
 def gauge(percentage):
-    ...
+
+    if percentage <= 1:
+        return "E"
+    elif percentage >= 99:
+        return "F"
+    else:
+        return f"{round(percentage)}%"
 
 
 if __name__ == "__main__":
     main()
-
-
-
-def main():
-
-
-    # Convert to percent
-    percent = fraction * 100
-
-    # Display result
-    if percent <= 1:
-        print("E")
-    elif percent >= 99:
-        print("F")
-    else:
-        print(f"{round(percent)}%")
-
-
-
-
-main()
