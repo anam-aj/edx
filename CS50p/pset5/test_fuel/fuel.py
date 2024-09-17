@@ -23,6 +23,7 @@ def convert(fraction):
         if not numer.isdigit() or not denom.isdigit():
             raise ValueError
         numer, denom = int(numer), int(denom)
+        fraction = numer / denom
         # Ensure fraction is not greater than 1
         if numer > denom:
             raise ValueError
@@ -31,9 +32,9 @@ def convert(fraction):
         raise
     except ZeroDivisionError:
         print("Division by zero not allowed")
+        raise
     else:
         # Convert to percent
-        fraction = numer / denom
         percent = int(round(fraction * 100))
         return percent
 
