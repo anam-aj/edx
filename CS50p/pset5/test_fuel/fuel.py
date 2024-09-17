@@ -29,7 +29,7 @@ def convert(fraction):
             raise ValueError
     except ValueError:
         print("Input format 'X/Y' and X,Y are integers")
-        #raise
+        raise
     except ZeroDivisionError:
         print("Division by zero not allowed")
         raise
