@@ -24,8 +24,8 @@ def convert(fraction):
         # Ensure both numerator and denominator are integers
         if not numer.isdigit() or not denom.isdigit():
             raise ValueError
-        # Ensure fraction is not greater than 1
         numer, denom = int(numer), int(denom)
+        # Ensure fraction is not greater than 1
         if numer > denom:
             raise ValueError
         # Generate and return the fraction
@@ -37,7 +37,6 @@ def convert(fraction):
     except ZeroDivisionError:
         #print("Division by zero not allowed")
         raise ZeroDivisionError("Division by zero not allowed")
-        return False
 
 
 def gauge(percentage):
