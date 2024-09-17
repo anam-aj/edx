@@ -33,9 +33,10 @@ def convert(fraction):
     except ValueError:
         #print("Input format 'X/Y' and X,Y are integers")
         raise ValueError("Input format 'X/Y' and X,Y are integers")
-        
+
     except ZeroDivisionError:
-        print("Division by zero not allowed")
+        #print("Division by zero not allowed")
+        raise ZeroDivisionError("Division by zero not allowed")
         return False
 
 
