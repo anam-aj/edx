@@ -43,11 +43,6 @@ if __name__ == "__main__":
 
 def main():
 
-    # Ask user to enter fraction
-    while True:
-        fraction = get_fraction("Fraction: ")
-        if 0 <= fraction <= 1:
-            break
 
     # Convert to percent
     percent = fraction * 100
