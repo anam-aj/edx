@@ -30,9 +30,9 @@ def convert(fraction):
         # Generate and return the fraction
         numer, denom = int(numer), int(denom)
         return (numer/denom)
-    except ValueError:
-        print("Input format 'X/Y' and X,Y are integers")
-        return False
+    #except ValueError:
+        #print("Input format 'X/Y' and X,Y are integers")
+        #return False
     except ZeroDivisionError:
         print("Division by zero not allowed")
         return False
