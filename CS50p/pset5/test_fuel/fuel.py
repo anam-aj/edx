@@ -31,12 +31,12 @@ def convert(fraction):
         # Generate and return the fraction
         return (numer/denom)
     except ValueError:
-        #print("Input format 'X/Y' and X,Y are integers")
-        raise ValueError("Input format 'X/Y' and X,Y are integers")
+        print("Input format 'X/Y' and X,Y are integers")
+        return False
 
     except ZeroDivisionError:
-        #print("Division by zero not allowed")
-        raise ZeroDivisionError("Division by zero not allowed")
+        print("Division by zero not allowed")
+        return False
 
 
 def gauge(percentage):
