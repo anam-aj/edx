@@ -10,7 +10,7 @@ def test_convert_split():
         convert("abc")
 
 
-def test_convert_fraction():
+def test_convert_high_fraction():
     with pytest.raises(ValueError):
         convert("3/2")
 
@@ -29,7 +29,7 @@ def test_convert_zero_division():
         convert("2/0")
 
 
-def test_convert_value_range():
+def test_convert_value():
     assert convert("2/10") == 20
 
 
