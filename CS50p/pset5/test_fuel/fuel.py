@@ -28,11 +28,11 @@ def convert(fraction):
         if numer > denom:
             raise ValueError
     except ValueError:
-        #print("Input format 'X/Y' and X,Y are integers")
-        raise
+        print("Input format 'X/Y' and X,Y are integers")
+        #raise
     except ZeroDivisionError:
-        #print("Division by zero not allowed")
-        raise
+        print("Division by zero not allowed")
+        #raise
     else:
         # Convert to percent
         percent = int(round(fraction * 100))
