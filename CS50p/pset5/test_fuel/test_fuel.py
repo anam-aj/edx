@@ -30,9 +30,10 @@ def test_convert_zero_division():
         convert("2/0")
 
 
-def test_convert _value_range():
-    assert convert("50/25") <= 100
-    
+def test_convert_value_range():
+    with pytest.raises(ValueError):
+        convert("50/5")
+
 
 def test_gauge():
 
