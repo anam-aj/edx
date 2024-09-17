@@ -23,6 +23,8 @@ def convert(fraction):
         if not numer.isdigit() or not denom.isdigit():
             raise ValueError
         numer, denom = int(numer), int(denom)
+        if denom == 0:
+            raise ZeroDivisionError
         fraction = numer / denom
         # Ensure fraction is not greater than 1
         if numer > denom:
