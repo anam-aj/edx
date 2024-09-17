@@ -31,7 +31,6 @@ def convert(fraction):
         raise
     except ZeroDivisionError:
         print("Division by zero not allowed")
-        raise
     else:
         # Convert to percent
         fraction = numer / denom
