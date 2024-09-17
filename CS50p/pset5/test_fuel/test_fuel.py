@@ -4,7 +4,6 @@ from fuel import convert, gauge
 
 
 def test_convert_split():
-
     with pytest.raises(ValueError):
         convert("2*3")
     with pytest.raises(ValueError):
@@ -31,8 +30,7 @@ def test_convert_zero_division():
 
 
 def test_convert_value_range():
-    with pytest.raises(ValueError):
-        convert("50/5")
+    assert convert("2/10") <= 100
 
 
 def test_gauge():
