@@ -7,8 +7,9 @@ def main():
     while True:
         fraction = input("Fraction: ")
         percent = convert(fraction)
-        if 0 <= percent <= 100:
-            break
+        if percent:
+            if 0 <= percent <= 100:
+                break
 
     # Print result to user
     print(gauge(percent))
