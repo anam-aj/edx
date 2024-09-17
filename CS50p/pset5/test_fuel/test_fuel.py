@@ -19,3 +19,9 @@ def test_convert():
         convert("a/b")
     with pytest.raises(ValueError):
         convert("2*3")
+    with pytest.raises(ZeroDivisionError):
+        convert("2/0")
+
+
+def test_gauge():
+    
