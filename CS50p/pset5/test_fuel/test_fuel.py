@@ -6,7 +6,7 @@ from fuel import convert, gauge
 def test_convert_split():
 
     with pytest.raises(ValueError):
-        convert(2*3)
+        convert("2*3")
     with pytest.raises(ValueError):
         convert("abc")
 
