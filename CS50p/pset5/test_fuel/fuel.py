@@ -10,8 +10,6 @@ def main():
             fraction = convert(fraction)
             break
 
-    # Convert to percent
-    percent = int(round(fraction * 100))
 
     # Print result to user
     print(gauge(percent))
@@ -35,8 +33,11 @@ def convert(fraction):
         print("Division by zero not allowed")
         return False
     else:
-        # Generate and return the fraction
-        return (numer/denom)
+        # Convert to percent
+        fraction = numer / denom
+        percent = int(round(fraction * 100))
+
+        return percent
 
 
 def gauge(percentage):
