@@ -30,7 +30,7 @@ def test_convert_zero_division():
 
 
 def test_convert_value_range():
-    assert convert("2/10") <= 100
+    assert convert("2/10") == 20
 
 
 def test_gauge():
