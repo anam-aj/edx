@@ -11,7 +11,7 @@ def main():
             break
 
     # Convert to percent
-    percent = fraction * 100
+    percent = int(round(fraction * 100)
 
     # Print result to user
     print(gauge(percent))
