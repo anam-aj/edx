@@ -36,7 +36,6 @@ def convert(fraction):
         # Convert to percent
         fraction = numer / denom
         percent = int(round(fraction * 100))
-
         return percent
 
 
