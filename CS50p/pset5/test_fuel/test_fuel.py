@@ -7,3 +7,15 @@ def test_convert():
 
     with pytest.raises(ValueError):
         convert("2*3")
+    with pytest.raises(ValueError):
+        convert("abc")
+    with pytest.raises(ValueError):
+        convert("3/2")
+    with pytest.raises(ValueError):
+        convert("a/2")
+    with pytest.raises(ValueError):
+        convert("2/a")
+    with pytest.raises(ValueError):
+        convert("a/b")
+    with pytest.raises(ValueError):
+        convert("2*3")
