@@ -14,7 +14,7 @@ def main():
     percent = fraction * 100
 
     # Print result to user
-    print gauge(percent)
+    print(gauge(percent))
 
 
 def convert(fraction):
