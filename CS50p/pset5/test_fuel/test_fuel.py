@@ -24,4 +24,5 @@ def test_convert():
 
 
 def test_gauge():
-    
+
+    assert gauge()
