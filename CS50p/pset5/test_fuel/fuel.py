@@ -28,10 +28,10 @@ def convert(fraction):
         if numer > denom:
             raise ValueError
     except ValueError:
-        print("Input format 'X/Y' and X,Y are integers")
+        #print("Input format 'X/Y' and X,Y are integers")
         raise
     except ZeroDivisionError:
-        print("Division by zero not allowed")
+        #print("Division by zero not allowed")
         raise
     else:
         # Convert to percent
