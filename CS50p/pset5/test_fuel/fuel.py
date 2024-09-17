@@ -28,14 +28,15 @@ def convert(fraction):
         # Ensure fraction is not greater than 1
         if numer > denom:
             raise ValueError
-        # Generate and return the fraction
-        return (numer/denom)
     except ValueError:
         print("Input format 'X/Y' and X,Y are integers")
         return False
     except ZeroDivisionError:
         print("Division by zero not allowed")
         return False
+    else:
+        # Generate and return the fraction
+        return (numer/denom)
 
 
 def gauge(percentage):
