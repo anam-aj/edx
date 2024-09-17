@@ -29,10 +29,10 @@ def convert(fraction):
             raise ValueError
     except ValueError:
         print("Input format 'X/Y' and X,Y are integers")
-        #raise
+        raise
     except ZeroDivisionError:
         print("Division by zero not allowed")
-        #raise
+        raise
     else:
         # Convert to percent
         percent = int(round(fraction * 100))
