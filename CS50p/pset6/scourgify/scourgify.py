@@ -26,7 +26,7 @@ def validate_arguments():
 
     # Ensure name are valid CSV files
     read_file = (sys.argv[1]).endswith(".csv")
-    write_file = not (sys.argv[2]).endswith(".csv")
+    write_file = (sys.argv[2]).endswith(".csv")
     if not read_file or not write_file:
         sys.exit("Please enter valid csv file")
 
