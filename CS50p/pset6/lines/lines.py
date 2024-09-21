@@ -20,12 +20,12 @@ def main():
 
     # Count the no of (valid)lines
     lines = file.readlines()
-    print((lines))
     line_count = 0
 
     for line in lines:
-        if not (line.startswith("#") or line.isspace()):
-            line_count += 1
+        print(line)
+        #if not (line.startswith("#") or line.isspace()):
+            #line_count += 1
 
     file.close()
 
