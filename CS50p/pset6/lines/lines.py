@@ -2,6 +2,7 @@
 
 import sys
 
+
 def main():
 
     # Ensure correct number of comand line argument
