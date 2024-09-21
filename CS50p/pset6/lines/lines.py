@@ -7,7 +7,8 @@ def main():
 
     validate_arguments()
 
-    with open_file(sys.argv[1]) as file:
+    file_name = sys.argv[1]
+    with open_file(file_name) as file:
 
         lines = file.readlines()
         line_count = 0
