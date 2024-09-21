@@ -19,13 +19,14 @@ def main():
         writer.writeheader()
 
         for row in reader:
-            last_name, first_first_name = row["name"].split(",")
+            last_name, first_name = row["name"].split(",")
             writer.writerow(
                 {
-                    
+                    "first": first_name,
+                    "last": last_name,
+                    "house": row["house"]
                 }
             )
-
 
 
 # Check validity of command line arguments
