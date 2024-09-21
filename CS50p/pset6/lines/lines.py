@@ -12,12 +12,13 @@ def main():
     if not (sys.argv[1]).endswith(".py"):
         sys.exit("Please enter valid python file")
 
-    # Open file
+    # Ensure file exist
     try:
         file = open(sys.argv[1])
     except FileNotFoundError:
         sys.exit("file not found")
 
+    # Count the no of (valid)lines
     lines = file.readlines()
     line_count = 0
 
