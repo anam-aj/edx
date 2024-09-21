@@ -19,7 +19,9 @@ def main():
         writer.writeheader()
 
         for row in reader:
+            last_name, first_first_name = row["name"].split(",")
             
+
 
 
 # Check validity of command line arguments
