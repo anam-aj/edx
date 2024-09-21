@@ -12,8 +12,13 @@ def main():
     if not (sys.argv[1]).endswith(".py"):
         sys.exit("Please enter valid python file")
 
-    
-    # Ensure file exists
+    # Open file
+    try:
+        with open(sys.argv[1]) as file:
+            
+    except FileNotFoundError:
+        sys.exit("file not found")
+
 
 
 main()
