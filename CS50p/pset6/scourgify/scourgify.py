@@ -20,6 +20,7 @@ def main():
 
         for row in reader:
             last_name, first_name = row["name"].split(",")
+            first_name, last_name = first_name.strip(), last_name.strip()
             writer.writerow(
                 {
                     "first": first_name,
