@@ -4,7 +4,7 @@ import sys
 
 def main():
 
-    
+    if sys.argv
 
 
 main()
