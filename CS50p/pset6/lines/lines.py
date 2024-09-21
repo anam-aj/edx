@@ -11,7 +11,7 @@ def main():
 
         lines = file.readlines()
         line_count = 0
-        # Count the no of (valid)lines
+        # Count the number of (valid)lines
         for line in lines:
             line = line.strip()
             if line and not line.startswith("#"):
