@@ -23,7 +23,6 @@ def main():
     line_count = 0
 
     for line in lines:
-        print(line)
         #if not (line.startswith("#") or line.isspace()):
             #line_count += 1
 
