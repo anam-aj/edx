@@ -1,4 +1,4 @@
-a = " abc \n xyz pqr \n"
+a = "  \n \n"
 
 print(a)
-print(a.isspace)
+print(a.isspace())
