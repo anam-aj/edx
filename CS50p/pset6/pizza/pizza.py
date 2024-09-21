@@ -1,6 +1,7 @@
 # Program to format pizza menu
 
-import csv, sys
+import csv
+import sys
 
 from tabulate import tabulate
 
