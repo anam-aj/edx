@@ -10,10 +10,11 @@ def main():
 
     validate_arguments()
 
-    file_name = sys.argv[1]
+    read_file = sys.argv[1]
+    write_file = sys.argv[2]
 
-    with open_file(file_name) as file:
-        reader = list(csv.reader(file))
+    with open_file(read_file) as file:
+        reader = (csv.reader(file))
         print(tabulate(reader, headers="firstrow", tablefmt="grid"))
 
 
