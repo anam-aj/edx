@@ -28,7 +28,7 @@ def get_fraction(string):
 
         try:
             numer, denom = fraction.split("/")
-            # Ensure both numerator and denominator are integers
+              # Ensure both numerator and denominator are integers
             if not numer.isdigit() or not denom.isdigit():
                 raise ValueError
             # Generate and return the fraction
