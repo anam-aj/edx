@@ -6,7 +6,7 @@ def main():
 
     # Ensure correct number of comand line argument
     if len(sys.argv) != 2:
-        sys.exit("Please give one file name only")
+        sys.exit("Please give one and only one file name")
 
     # Ensure name ends with .py
     if not (sys.argv[1]).endswith(".py"):
@@ -26,6 +26,8 @@ def main():
         if not (line.startswith("#") or line.isspace()):
             line_count += 1
 
+    # Prints line count to user
+    print(line_count)
 
 
 main()
