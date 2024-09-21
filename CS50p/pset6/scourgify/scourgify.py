@@ -10,10 +10,10 @@ def main():
 
     validate_arguments()
 
-    read_from = sys.argv[1]
-    write_to = sys.argv[2]
+    read_file = sys.argv[1]
+    write_file = sys.argv[2]
 
-    with open_file(read_from) as file, open(write_to, "w"):
+    with open_file(read_file) as input, open(write_file, "w") as output:
         reader = csv.reader(file)
 
 
