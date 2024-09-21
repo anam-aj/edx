@@ -1,4 +1,4 @@
-# Program to format pizza menu
+# Program to reformat and save data into new file
 
 import csv
 import sys
@@ -21,7 +21,7 @@ def main():
 def validate_arguments():
 
     # Ensure correct number of comand line argument
-    if len(sys.argv) != 2:
+    if len(sys.argv) != 3:
         sys.exit("Please give one and only one file name")
 
     # Ensure name ends with .py
