@@ -16,6 +16,7 @@ def main():
 
     with open_file(read_file) as input, open(write_file, "w") as output:
         reader = csv.DictReader(input)
+
         # Write Headers
         writer = csv.DictWriter(output, fieldnames=["first", "last", "house"])
         writer.writeheader()
