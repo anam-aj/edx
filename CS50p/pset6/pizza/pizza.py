@@ -12,8 +12,8 @@ def main():
     file_name = sys.argv[1]
 
     with open_file(file_name) as file:
-        reader = csv.DictReader(file)
-        print(tabulate(reader, headers="keys"))
+        reader = list(csv.reader(file))
+        print(tabulate(reader, headers="firstrow"))
 
 
 # Check validity of command line arguments
