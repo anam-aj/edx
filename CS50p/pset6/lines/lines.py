@@ -4,7 +4,13 @@ import sys
 
 def main():
 
-    if sys.argv
+    # Ensure correct number of comand line argument
+    if len(sys.argv) != 2:
+        
+
+    # Ensure name ends with py
+
+    # Ensure file exists
 
 
 main()
