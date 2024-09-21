@@ -1,3 +1,3 @@
-a = "\n"
-
-print(a.isspace())
+a = "   "
+print(a.rstrip())
+print(type(a))
