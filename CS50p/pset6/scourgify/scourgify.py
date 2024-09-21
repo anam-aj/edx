@@ -14,7 +14,7 @@ def main():
     write_file = sys.argv[2]
 
     with open_file(read_file) as input, open(write_file, "w") as output:
-        reader = csv.reader(file)
+        reader = csv.DictReader(input)
 
 
 
