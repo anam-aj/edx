@@ -14,8 +14,8 @@ def main():
     write_file = sys.argv[2]
 
     with open_file(read_file) as file:
-        reader = (csv.reader(file))
-        print(tabulate(reader, headers="firstrow", tablefmt="grid"))
+        reader = csv.reader(file)
+        
 
 
 # Check validity of command line arguments
