@@ -7,11 +7,7 @@ def main():
 
 
 
-    # Ensure file exist
-    try:
-        file = open(sys.argv[1])
-    except FileNotFoundError:
-        sys.exit("file not found")
+
 
     # Count the no of (valid)lines
     lines = file.readlines()
@@ -28,6 +24,7 @@ def main():
     print(line_count)
 
 
+# Check validity of command line arguments
 def args_valid():
 
     # Ensure correct number of comand line argument
@@ -38,7 +35,16 @@ def args_valid():
     if not (sys.argv[1]).endswith(".py"):
         sys.exit("Please enter valid python file")
 
+    return True
 
-def open_file()
+# Ensure file exist
+def open_file(file_name):
+
+    try:
+        return open(file_name)
+    except FileNotFoundError:
+        sys.exit("file not found")
+
+
 if __name__ == "__main__":
     main()
