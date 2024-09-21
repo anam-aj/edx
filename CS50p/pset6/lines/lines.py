@@ -14,10 +14,15 @@ def main():
 
     # Open file
     try:
-        with open(sys.argv[1]) as file:
-            
+        file = open(sys.argv[1])
     except FileNotFoundError:
         sys.exit("file not found")
+
+    lines = file.readlines()
+    line_count = 0
+
+    for line in lines:
+        if not line.startswith("#") or not line.isspace()
 
 
 
