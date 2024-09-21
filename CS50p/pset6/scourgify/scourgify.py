@@ -15,6 +15,7 @@ def main():
 
     with open_file(read_file) as input, open(write_file, "w") as output:
         reader = csv.DictReader(input)
+        writer = csv.DictWriter(output, fieldnames=reader.field)
 
 
 
