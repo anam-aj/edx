@@ -13,7 +13,8 @@ def main():
 
     with open_file(file_name) as file:
         reader = csv.DictReader(file)
-         print(reader)
+        for r in reader:
+            print(r)
         #print(tabulate(reader, headers="keys"))
 
 
