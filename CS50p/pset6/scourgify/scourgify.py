@@ -17,7 +17,9 @@ def main():
         reader = csv.DictReader(input)
         writer = csv.DictWriter(output, fieldnames=["first", "last", "house"])
         writer.writeheader()
-        
+
+        for row in reader:
+            
 
 
 # Check validity of command line arguments
