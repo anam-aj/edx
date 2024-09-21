@@ -24,7 +24,7 @@ def validate_arguments():
     if len(sys.argv) != 2:
         sys.exit("Please give one and only one file name")
 
-    # Ensure name ends with .py
+    # Ensure name is a valid CSV file
     if not (sys.argv[1]).endswith(".csv"):
         sys.exit("Please enter valid csv file")
 
