@@ -13,7 +13,7 @@ def main():
 
     with open_file(file_name) as file:
         reader = csv.DictReader(file)
-        print(tabulate(reader, headers="firstrow"))
+        print(tabulate(reader, headers="keys"))
 
 
 # Check validity of command line arguments
