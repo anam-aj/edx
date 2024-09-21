@@ -24,7 +24,7 @@ def main():
 
     for line in lines:
         line = line.strip()
-        if not (line.startswith("#") or line.isspace()):
+        if line and not line.startswith("#"):
             line_count += 1
 
     file.close()

@@ -1,3 +1,5 @@
 a = "   "
 print(a.rstrip())
-print(a)
+a = a.rstrip()
+print(len(a))
+print(bool(a))
