@@ -12,11 +12,8 @@ def main():
     file_name = sys.argv[1]
 
     with open_file(file_name) as file:
-        cursor = csv.DictReader(file)
-
-
-    # Prints line count to user
-    print(line_count)
+        reader = csv.DictReader(file)
+        print(line_count)
 
 
 # Check validity of command line arguments
