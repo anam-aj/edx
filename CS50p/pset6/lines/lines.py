@@ -26,6 +26,8 @@ def main():
         if not (line.startswith("#") or line.isspace()):
             line_count += 1
 
+    file.close()
+
     # Prints line count to user
     print(line_count)
 
