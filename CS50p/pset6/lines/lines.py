@@ -5,13 +5,7 @@ import sys
 
 def main():
 
-    # Ensure correct number of comand line argument
-    if len(sys.argv) != 2:
-        sys.exit("Please give one and only one file name")
 
-    # Ensure name ends with .py
-    if not (sys.argv[1]).endswith(".py"):
-        sys.exit("Please enter valid python file")
 
     # Ensure file exist
     try:
@@ -34,5 +28,17 @@ def main():
     print(line_count)
 
 
+def args_valid():
+
+    # Ensure correct number of comand line argument
+    if len(sys.argv) != 2:
+        sys.exit("Please give one and only one file name")
+
+    # Ensure name ends with .py
+    if not (sys.argv[1]).endswith(".py"):
+        sys.exit("Please enter valid python file")
+
+
+def open_file()
 if __name__ == "__main__":
     main()
