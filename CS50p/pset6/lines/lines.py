@@ -22,7 +22,7 @@ def main():
     line_count = 0
 
     for line in lines:
-        if not line.startswith("#") or not line.isspace()
+        if not (line.startswith("#") or line.isspace())
 
 
 
