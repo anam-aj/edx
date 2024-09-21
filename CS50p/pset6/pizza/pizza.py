@@ -1,6 +1,6 @@
 # Program to format pizza menu
 
-import sys
+import csv, sys
 
 from tabulate import tabulate
 
@@ -10,7 +10,7 @@ def main():
     validate_arguments()
 
     file_name = sys.argv[1]
-    
+
     with open_file(file_name) as file:
         cursor = csv.DictReader(file)
 
