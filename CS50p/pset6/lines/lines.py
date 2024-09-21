@@ -20,6 +20,7 @@ def main():
 
     # Count the no of (valid)lines
     lines = file.readlines()
+    print((lines))
     line_count = 0
 
     for line in lines:
