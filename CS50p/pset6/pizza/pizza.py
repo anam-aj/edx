@@ -13,7 +13,7 @@ def main():
 
     with open_file(file_name) as file:
         reader = list(csv.reader(file))
-        print(tabulate(reader, headers="firstrow"))
+        print(tabulate(reader, headers="firstrow", tablefmt="grid"))
 
 
 # Check validity of command line arguments
