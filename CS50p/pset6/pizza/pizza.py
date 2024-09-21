@@ -10,15 +10,10 @@ def main():
     validate_arguments()
 
     file_name = sys.argv[1]
+    
     with open_file(file_name) as file:
+        cursor = csv.DictReader(file)
 
-        lines = file.readlines()
-        line_count = 0
-        # Count the number of (valid)lines
-        for line in lines:
-            line = line.strip()
-            if line and not line.startswith("#"):
-                line_count += 1
 
     # Prints line count to user
     print(line_count)
