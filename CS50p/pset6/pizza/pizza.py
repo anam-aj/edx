@@ -2,6 +2,8 @@
 
 import sys
 
+from tabulate import tabulate
+
 
 def main():
 
