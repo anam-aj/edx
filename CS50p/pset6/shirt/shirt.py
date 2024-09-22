@@ -16,6 +16,7 @@ def main():
 
         user_photo = ImageOps.fit(user_photo, (600, 600))
         user_photo.paste(shirt_img, shirt_img)
+        
 
 
 
