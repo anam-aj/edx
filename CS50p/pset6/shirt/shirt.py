@@ -15,7 +15,7 @@ def main():
 
     with open_file(read_file) as input:
 
-        input = 
+        input = Ima
 
 
 # Check validity of command line arguments
