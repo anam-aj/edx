@@ -16,7 +16,9 @@ def main():
 
     with open_file(input_img) as user_photo, open_file("shirt.png") as shirt_img:
 
+        # Crops and resize user's photo to match shirt's image
         user_photo = ImageOps.fit(user_photo, (600, 600))
+        # Overlay shirt on user photo and save it
         user_photo.paste(shirt_img, shirt_img)
         user_photo.save(output_img)
 
