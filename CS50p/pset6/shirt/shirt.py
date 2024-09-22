@@ -14,23 +14,8 @@ def main():
     write_file = sys.argv[2]
 
     with open_file(read_file) as input:
-        image = imgae
 
-        # Write Headers
-        writer = csv.DictWriter(output, fieldnames=["first", "last", "house"])
-        writer.writeheader()
-
-        # Write rows or contents
-        for row in reader:
-            last_name, first_name = row["name"].split(",")
-            first_name, last_name = first_name.strip(), last_name.strip()
-            writer.writerow(
-                {
-                    "first": first_name,
-                    "last": last_name,
-                    "house": row["house"]
-                }
-            )
+        input = 
 
 
 # Check validity of command line arguments
