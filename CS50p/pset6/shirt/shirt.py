@@ -14,7 +14,7 @@ def main():
 
     with open_file(read_file) as input_img:
 
-        input_img = PIL.ImageOps.fit(image: input_img, size: (600, 600))
+        input_img = PIL.ImageOps.fit(input_img, (600, 600))
 
 
 # Check validity of command line arguments
