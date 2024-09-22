@@ -13,8 +13,8 @@ def main():
     read_file = sys.argv[1]
     write_file = sys.argv[2]
 
-    with open_file(read_file) as input, Image.open(write_file, "w") as output:
-        reader = csv.DictReader(input)
+    with open_file(read_file) as input:
+        image = imgae
 
         # Write Headers
         writer = csv.DictWriter(output, fieldnames=["first", "last", "house"])
