@@ -38,11 +38,11 @@ def validate_arguments():
 
     # Ensure correct number of comand line argument
     if len(sys.argv) != 3:
-        sys.exit("Please give one and only one file name")
+        sys.exit("Please give two file name")
 
-    # Ensure name are valid CSV files
-    read_file = (sys.argv[1]).endswith(".csv")
-    write_file = (sys.argv[2]).endswith(".csv")
+    # Ensure name are valid image files
+    read_file = (sys.argv[1]).lower().endswith(".jpg", ".jpeg", ".png")
+    write_file = (sys.argv[2]).lower().endswith(".jpg", ".jpeg", ".png")
     if not read_file or not write_file:
         sys.exit("Please enter valid csv file")
 
@@ -58,4 +58,3 @@ def open_file(file_name):
 
 if __name__ == "__main__":
     main()
-
