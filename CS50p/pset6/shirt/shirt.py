@@ -5,6 +5,7 @@ import sys
 
 from PIL import Image, ImageOps
 
+
 def main():
 
     validate_arguments()
@@ -18,7 +19,6 @@ def main():
         user_photo = ImageOps.fit(user_photo, (600, 600))
         user_photo.paste(shirt_img, shirt_img)
         user_photo.save(output_img)
-
 
 
 # Check validity of command line arguments
@@ -41,6 +41,7 @@ def validate_arguments():
     _, output_ext = os.path.splitext(sys.argv[2])
     if input_ext != output_ext:
         sys.exit("Input and Iutput file must have same type or extension")
+
 
 # Ensure file exist
 def open_file(file_name):
