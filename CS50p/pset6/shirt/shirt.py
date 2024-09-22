@@ -1,5 +1,6 @@
 # Program to overlay cs50 shirt on user image
 
+import os
 import sys
 
 from PIL import Image, ImageOps
@@ -34,7 +35,7 @@ def validate_arguments():
         sys.exit("Please enter image file")
 
     # Ensure both input and output have same extension
-    
+    input_ext = os.path.splitext(sys.argv[1])
 
 # Ensure file exist
 def open_file(file_name):
