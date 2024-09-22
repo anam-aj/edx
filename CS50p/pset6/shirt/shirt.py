@@ -12,7 +12,7 @@ def main():
     read_file = sys.argv[1]
     write_file = sys.argv[2]
 
-    with open_file(read_file) as user_photo, open_file(read_file) as user_photo:
+    with open_file(read_file) as user_photo, open_file("shirt.png") as user_photo:
 
         shirt = PIL.ImageOps.fit(shirt, (600, 600))
 
