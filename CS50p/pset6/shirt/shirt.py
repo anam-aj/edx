@@ -33,7 +33,7 @@ def validate_arguments():
     if not read_file or not write_file:
         sys.exit("Please enter image file")
 
-
+    # Ensure both input and outpun have same extension
 # Ensure file exist
 def open_file(file_name):
 
