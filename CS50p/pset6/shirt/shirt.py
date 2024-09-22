@@ -29,8 +29,8 @@ def validate_arguments():
         sys.exit("Please give two file name")
 
     # Ensure name are valid image files
-    read_file = (sys.argv[1]).lower().endswith(".jpg", ".jpeg", ".png")
-    write_file = (sys.argv[2]).lower().endswith(".jpg", ".jpeg", ".png")
+    read_file = ((sys.argv[1]).lower()).endswith(".jpg", ".jpeg", ".png")
+    write_file = ((sys.argv[2]).lower()).endswith(".jpg", ".jpeg", ".png")
     if not read_file or not write_file:
         sys.exit("Please enter image file")
 
