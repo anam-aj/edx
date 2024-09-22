@@ -35,7 +35,11 @@ def validate_arguments():
         sys.exit("Please enter image file")
 
     # Ensure both input and output have same extension
-    input_ext = os.path.splitext(sys.argv[1])
+    _, input_ext = os.path.splitext(sys.argv[1])
+    _, output_ext = os.path.splitext(sys.argv[2])
+
+    if input_ext != output_ext:
+        sys.exit("Input and Iutput file must have same type or extension")
 
 # Ensure file exist
 def open_file(file_name):
