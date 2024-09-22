@@ -44,7 +44,7 @@ def validate_arguments():
     read_file = (sys.argv[1]).lower().endswith(".jpg", ".jpeg", ".png")
     write_file = (sys.argv[2]).lower().endswith(".jpg", ".jpeg", ".png")
     if not read_file or not write_file:
-        sys.exit("Please enter valid csv file")
+        sys.exit("Please enter image file")
 
 
 # Ensure file exist
