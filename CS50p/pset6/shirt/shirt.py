@@ -13,7 +13,7 @@ def main():
     read_file = sys.argv[1]
     write_file = sys.argv[2]
 
-    with open_file(read_file) as input, open(write_file, "w") as output:
+    with open_file(read_file) as input, Image.open(write_file, "w") as output:
         reader = csv.DictReader(input)
 
         # Write Headers
@@ -51,7 +51,7 @@ def validate_arguments():
 def open_file(file_name):
 
     try:
-        return open(file_name)
+        return Image.open(file_name)
     except FileNotFoundError:
         sys.exit("file not found")
 
