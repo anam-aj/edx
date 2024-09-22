@@ -2,7 +2,7 @@
 
 import sys
 
-import PIL import Image, ImageOps
+from PIL import Image, ImageOps
 
 def main():
 
