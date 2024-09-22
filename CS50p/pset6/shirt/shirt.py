@@ -1,8 +1,7 @@
 # Program to overlay cs50 shirt on user image
 
+import PIL
 import sys
-
-from PIL import Image
 
 
 def main():
@@ -13,9 +12,9 @@ def main():
     read_file = sys.argv[1]
     write_file = sys.argv[2]
 
-    with open_file(read_file) as input:
+    with open_file(read_file) as input_img:
 
-        input = Ima
+        input_img = PIL.ImageOps.fit(image: input_img, size: (600, 600))
 
 
 # Check validity of command line arguments
@@ -36,7 +35,7 @@ def validate_arguments():
 def open_file(file_name):
 
     try:
-        return Image.open(file_name)
+        return PIL.Image.open(file_name)
     except FileNotFoundError:
         sys.exit("file not found")
 
