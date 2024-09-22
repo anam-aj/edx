@@ -28,18 +28,19 @@ def validate_arguments():
     if len(sys.argv) != 3:
         sys.exit("Please give two file name")
 
-    # Ensure name are valid image files
-    read_file = ((sys.argv[1]).lower()).endswith((".jpg", ".jpeg", ".png"))
-    write_file = ((sys.argv[2]).lower()).endswith((".jpg", ".jpeg", ".png"))
-    if not read_file or not write_file:
-        sys.exit("Please enter image file")
-
     # Ensure both input and output have same extension
     _, input_ext = os.path.splitext(sys.argv[1])
     _, output_ext = os.path.splitext(sys.argv[2])
 
     if input_ext != output_ext:
         sys.exit("Input and Iutput file must have same type or extension")
+
+    # Ensure name are valid image files
+    read_file = ((sys.argv[1]).lower()).endswith((".jpg", ".jpeg", ".png"))
+    write_file = ((sys.argv[2]).lower()).endswith((".jpg", ".jpeg", ".png"))
+    if not read_file or not write_file:
+        sys.exit("Please enter image file")
+
 
 # Ensure file exist
 def open_file(file_name):
