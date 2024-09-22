@@ -12,9 +12,9 @@ def main():
     read_file = sys.argv[1]
     write_file = sys.argv[2]
 
-    with open_file(read_file) as input_img:
+    with open_file(read_file) as shirt:
 
-        input_img = PIL.ImageOps.fit(input_img, (600, 600))
+        shirt = PIL.ImageOps.fit(shirt, (600, 600))
 
 
 # Check validity of command line arguments
