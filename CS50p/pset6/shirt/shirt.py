@@ -9,14 +9,14 @@ def main():
     validate_arguments()
 
     # Get command line arguments
-    read_file = sys.argv[1]
-    write_file = sys.argv[2]
+    input_img = sys.argv[1]
+    output_img = sys.argv[2]
 
-    with open_file(read_file) as user_photo, open_file("shirt.png") as shirt_img:
+    with open_file(input_img) as user_photo, open_file("shirt.png") as shirt_img:
 
         user_photo = ImageOps.fit(user_photo, (600, 600))
         user_photo.paste(shirt_img, shirt_img)
-        
+        user_photo.save(output_img)
 
 
 
