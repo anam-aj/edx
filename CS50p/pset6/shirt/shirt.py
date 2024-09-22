@@ -14,7 +14,8 @@ def main():
 
     with open_file(read_file) as user_photo, open_file("shirt.png") as shirt_img:
 
-        shirt = ImageOps.fit(shirt, (600, 600))
+        user_photo = ImageOps.fit(shirt, (600, 600))
+        user_photo.paste(shirt_image)
 
 
 # Check validity of command line arguments
