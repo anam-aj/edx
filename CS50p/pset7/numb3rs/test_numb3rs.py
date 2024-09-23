@@ -4,6 +4,7 @@ from numb3rs import validate
 def test_correct_input():
     assert validate("127.0.0.1") == True
     assert validate("255.255.255.255") == True
+    assert validate("219.229.239.249") == True
 
 
 def test_out_of_range():
