@@ -9,7 +9,8 @@ def main():
 
 
 def validate(ip):
-    pattern = r"^\d{}$"
+    pattern = r"^\d{1,3}#\d{1,3}#\d{1,3}#\d{1,3}$"
+    
 
 
 ...
