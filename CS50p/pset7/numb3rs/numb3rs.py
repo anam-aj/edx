@@ -11,8 +11,7 @@ def main():
 def validate(ip):
     pattern = r"^(([01]?\d{0,2}|2[0-4]\d|25[0-5])\.){3}([01]?\d{0,2}|2[0-4]\d|25[0-5])$"
 
-    match = re.search(pattern, ip)
-    if match:
+    if re.search(pattern, ip):
         return True
     else:
         return False
