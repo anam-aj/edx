@@ -9,7 +9,7 @@ def main():
 
 
 def validate(ip):
-    ...
+    pattern = r""
 
 
 ...
