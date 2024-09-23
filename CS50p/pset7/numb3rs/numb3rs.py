@@ -9,7 +9,7 @@ def main():
 
 
 def validate(ip):
-    pattern = r"^(0\d?\d?)|\.$"
+    pattern = r"^(0\d{0,2})|\.$"
 
     match = re.search(pattern, ip)
     if match:
