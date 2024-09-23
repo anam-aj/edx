@@ -16,6 +16,7 @@ def test_out_of_range():
     assert validate("1.1.1.1000") == False
     assert validate("100.555.555.555") == False
 
+
 def test_word():
     assert validate("cat") == False
     assert validate("cat.1.1.1") == False
