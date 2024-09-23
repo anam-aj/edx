@@ -5,7 +5,8 @@ def test_correct_input():
     assert validate("127.0.0.1") == True
     assert validate("255.255.255.255") == True
     assert validate("219.229.239.249") == True
-    assert validate("001.01.1.001") == True
+    assert validate("001.001.001.001") == True
+    assert validate("01.01.01.01") == True
 
 
 def test_out_of_range():
