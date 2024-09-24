@@ -1,3 +1,5 @@
+import pytest
+
 from working import convert
 
 
@@ -12,6 +14,5 @@ def test_invalid_time():
 
 
 def test_invalid_format():
-    with pytest.raises()
-    convert("19 AM to 5 PM") == "09:00 to 17:00"
-    assert convert("09:00 AM to 50:00 PM") == "09:00 to 17:00"
+    with pytest.raises(ValueError):
+        convert("19 AM to 5 PM")
