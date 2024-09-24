@@ -7,7 +7,7 @@ def main():
 
 
 def parse(s):
-    pattern = r"iframe src=https?://"
+    pattern = r'iframe src="https?://(www.)?youtube.com/embed/"'
 
 
 if __name__ == "__main__":
