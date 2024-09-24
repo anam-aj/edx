@@ -22,11 +22,9 @@ def convert(s):
         start_mn = match.group("start_min")
         end_hr = match.group("end_hour")
         end_mn = match.group("end_min")
-
         # Convert time to 24-hour format and return it
         end_hr = str(int(end_hr) + 12)
         time = f"{start_hr}:{start_mn} to {end_hr}:{end_mn}"
-
         return time
     # Found macthing pattern(PM to AM)
     elif match := re.search(pattern2, s.strip()):
@@ -34,11 +32,9 @@ def convert(s):
         start_mn = match.group("start_min")
         end_hr = match.group("end_hour")
         end_mn = match.group("end_min")
-
         # Convert time to 24-hour format and return it
         start_hr = str(int(start_hr) + 12)
         time = f"{start_hr}:{start_mn} to {end_hr}:{end_mn}"
-
         return time
     # Invalid input
     else:
