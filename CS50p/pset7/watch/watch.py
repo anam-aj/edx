@@ -3,6 +3,8 @@ import sys
 
 
 def main():
+
+    # Prints the shortend video-link
     print(parse(input("HTML: ")))
 
 
