@@ -13,7 +13,7 @@ def main():
 def convert(s):
 
     # Pattern for time
-    pattern = "^([1-9]|10|11|12):(0\d?|[1-5]\d?) AM to ([1-9]|10|11|12):(0\d?|[1-5]\d?) PM$"
+    pattern = "^(?P<start_hour>[1-9]|10|11|12):(0\d?|[1-5]\d?) AM to ([1-9]|10|11|12):(0\d?|[1-5]\d?) PM$"
 
     # Find macthing pattern
 
