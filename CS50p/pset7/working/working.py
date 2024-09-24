@@ -13,7 +13,7 @@ def main():
 def convert(s):
 
     # Pattern for time
-    pattern1 = "^(?P<start_hour>0?[1-9]|10|11|12):(?P<start_min>0?\d|[1-5]\d) AM to (?P<end_hour>0?[1-9]|10|11|12):(?P<end_min>0?\d|[1-5]\d) PM$"
+    pattern1 = r"^(?P<start_hour>0?[1-9]|10|11|12):(?P<start_min>0?\d|[1-5]\d) AM to (?P<end_hour>0?[1-9]|10|11|12):(?P<end_min>0?\d|[1-5]\d) PM$"
 
     # Find macthing pattern
     if match := re.search(pattern1, s.strip()):
