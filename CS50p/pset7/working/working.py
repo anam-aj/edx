@@ -13,7 +13,7 @@ def main():
 def convert(s):
 
     # Pattern for time
-    pattern = "^ AM to PM$"
+    pattern = "^[12]?\dAM to PM$"
 
     # Find macthing pattern
 
