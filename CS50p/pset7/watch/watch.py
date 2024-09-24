@@ -7,8 +7,11 @@ def main():
 
 
 def parse(s):
+
+    # Search for youtube link
     pattern = r'iframe src="https?://(?:www.)?youtube.com/embed/(.+)"></iframe>'
 
+    # Shortens the link and return it
     if match := re.search(pattern, s):
         video_id = match.group(1)
         return f"https://youtu.be/{video_id}"
