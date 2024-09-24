@@ -29,7 +29,7 @@ def convert(s):
 
         return time
     # Found macthing pattern(PM to AM)
-    elif match := re.search(pattern1, s.strip()):
+    elif match := re.search(pattern2, s.strip()):
         start_hr = match.group("start_hour")
         start_mn = match.group("start_min")
         end_hr = match.group("end_hour")
