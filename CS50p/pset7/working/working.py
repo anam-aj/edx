@@ -40,8 +40,9 @@ def convert(s):
         time = f"{start_hr}:{start_mn} to {end_hr}:{end_mn}"
 
         return time
-
-    # Return time in 24-hour format
+    # Invalid input
+    else:
+        raise ValueError("Invalid time")
 
 
 if __name__ == "__main__":
