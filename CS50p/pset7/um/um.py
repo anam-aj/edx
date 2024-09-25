@@ -11,11 +11,13 @@ def main():
 def count(s):
 
     pattern = r"(?:^(um)[^a-zA-Z])+|[^a-zA-Z]+(um)[^a-zA-Z]+|(?:[^a-zA-Z]*(um)$)|(?:^(um)$)"
-    if match := re.search(pattern, s, re.IGNORECASE):
-        print(match.groups())
-        return len(match.groups())
-    else:
-        return 0
+    match = re.search(pattern, s, re.IGNORECASE)
+    count = 0
+    for m in match.groups():
+        if m:
+            count += 1
+
+    return count
 
 if __name__ == "__main__":
     main()
