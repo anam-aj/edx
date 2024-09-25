@@ -15,8 +15,7 @@ def count(s):
         count = 0
         for m in match.groups():
             if m:
-            count += 1
-
+                count += 1
         return count
     else:
         return 0
