@@ -26,7 +26,7 @@ def convert(s):
         if int(start_hr) == 12:
             start_hr = "00"
         # Convert starting minute
-        if match.group("start_min"):
+        if !(start_mn):
             start_mn = match.group("start_min")
         else:
             start_mn = "00"
