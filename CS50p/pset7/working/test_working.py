@@ -9,8 +9,10 @@ def test_valid_time():
 
 
 def test_invalid_time():
-    assert convert("19 AM to 5 PM") == "09:00 to 17:00"
-    assert convert("09:00 AM to 50:00 PM") == "09:00 to 17:00"
+    with pytest.raises(ValueError):
+        convert("19 AM to 5 PM")
+    with pytest.raises(ValueError):
+        convert("09:00 AM to 50:00 PM")
 
 
 def test_invalid_format():
