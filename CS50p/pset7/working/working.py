@@ -43,7 +43,10 @@ def convert(s):
             start_mn = match.group("start_min")
         else:
             start_mn = "00"
-        end_hr = match.group("end_hour")
+        if int(end_hr) < 12:
+            end_hr = match.group("end_hour")
+        else:
+            end_hr = "00"
         if match.group("end_min"):
             end_mn = match.group("end_min")
         else:
