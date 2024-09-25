@@ -23,4 +23,7 @@ def test_invalid_time():
 
 def test_invalid_format():
     with pytest.raises(ValueError):
-        convert("19 AM to 5 PM")
+        convert("9 AM - 5 PM")
+    with pytest.raises(ValueError):
+        convert("09:00 AM - 17:00 PM")
+
