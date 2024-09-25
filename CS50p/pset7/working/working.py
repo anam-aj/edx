@@ -17,6 +17,7 @@ def convert(s):
     pattern2 = r"^(?P<start_hour>0?[1-9]|10|11|12):?(?P<start_min>0?\d|[1-5]\d)? PM to (?P<end_hour>0?[1-9]|10|11|12):?(?P<end_min>0?\d|[1-5]\d)? AM$"
 
     # Found macthing pattern(AM to PM)
+    print(s.strip())
     if match := re.search(pattern1, s.strip()):
         print(match)
         start_hr = match.group("start_hour")
