@@ -10,7 +10,7 @@ def main():
 
 def count(s):
 
-    pattern = r"[^a-zA-Z]+(um)[^a-zA-Z]+"
+    pattern = r"[^a-zA-Z]*(um)[^a-zA-Z]*"
     if match := re.search(pattern, s, re.IGNORECASE):
         return len(match)
 
