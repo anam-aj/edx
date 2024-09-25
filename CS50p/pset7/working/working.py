@@ -30,7 +30,7 @@ def convert(s):
         if not start_mn:
             start_mn = "00"
         # Convert ending hour
-        if end_hr < 12:
+        if int(end_hr) < 12:
             end_hr = str(int(end_hr) + 12)
         # Convert ending minute
         if not end_mn:
@@ -46,7 +46,7 @@ def convert(s):
         end_hr = match.group("end_hour")
         end_mn = match.group("end_min")
         # Convert starting hour
-        if start_hr < 12:
+        if int(start_hr) < 12:
             start_hr = str(int(start_hr) + 12)
         # Convert starting minute
         if not start_mn:
