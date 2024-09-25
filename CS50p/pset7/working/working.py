@@ -18,10 +18,12 @@ def convert(s):
 
     # Macthing pattern found(AM to PM)
     if match := re.search(pattern1, s.strip()):
+        start_hr = match.group("start_hour")
+        start_mn = match.group("start_min")
+        end_hr = match.group("end_hour")
+        end_mn = match.group("end_min")
         # Convert starting hour
-        if int(start_hr) < 12:
-            start_hr = match.group("start_hour")
-        else:
+        if int(start_hr) == 12:
             start_hr = "00"
         # Convert starting minute
         if match.group("start_min"):
