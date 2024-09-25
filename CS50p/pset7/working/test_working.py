@@ -13,6 +13,10 @@ def test_invalid_time():
         convert("19 AM to 5 PM")
     with pytest.raises(ValueError):
         convert("09:00 AM to 50:00 PM")
+    with pytest.raises(ValueError):
+        convert("5 AM to 19 PM")
+    with pytest.raises(ValueError):
+        convert("50:00 AM to 09:00 PM")
 
 
 def test_invalid_format():
