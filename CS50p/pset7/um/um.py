@@ -7,7 +7,9 @@ def main():
 
 
 def count(s):
-    pattern = r"[^a-zA-Z]um"
+    pattern = r"[^a-zA-Z]+um[^a-zA-Z]+"
+
+    if match := matches.
 
 if __name__ == "__main__":
     main()
