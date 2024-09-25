@@ -49,10 +49,7 @@ def convert(s):
         else:
             end_mn = "00"
         # Convert time to 24-hour format and return it
-        if int(start_hr) < 12:
-            start_hr = str(int(start_hr) + 12)
-        else:
-            start
+        start_hr = str(int(start_hr) + 12)
         time = f"{start_hr.zfill(2)}:{start_mn} to {end_hr.zfill(2)}:{end_mn}"
         return time
     # Invalid input
