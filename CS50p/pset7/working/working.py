@@ -19,6 +19,7 @@ def convert(s):
     # Found macthing pattern(AM to PM)
     if match := re.search(pattern1, s.strip()):
 
+        if int(start_hr)
         start_hr = match.group("start_hour")
         if match.group("start_min"):
             start_mn = match.group("start_min")
