@@ -30,7 +30,7 @@ def convert(s):
             end_mn = "00"
         # Convert time to 24-hour format and return it
         end_hr = str(int(end_hr) + 12)
-        time = f"{start_hr}:{start_mn} to {end_hr}:{end_mn}"
+        time = f"{start_hr.zfill(2)}:{start_mn} to {end_hr.zfill(2)}:{end_mn}"
         return time
     # Found macthing pattern(PM to AM)
     elif match := re.search(pattern2, s.strip()):
@@ -46,7 +46,7 @@ def convert(s):
             end_mn = "00"
         # Convert time to 24-hour format and return it
         start_hr = str(int(start_hr) + 12)
-        time = f"{start_hr}:{start_mn} to {end_hr}:{end_mn}"
+        time = f"{start_hr.zfill(3)}:{start_mn} to {end_hr.zfill(3)}:{end_mn}"
         return time
     # Invalid input
     else:
