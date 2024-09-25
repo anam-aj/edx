@@ -46,22 +46,18 @@ def convert(s):
         end_hr = match.group("end_hour")
         end_mn = match.group("end_min")
         # Convert starting hour
-        if start_hr < 12
+        if start_hr < 12:
             start_hr = str(int(start_hr) + 12)
         # Convert starting minute
         if not start_mn:
             start_mn = "00"
         # Convert ending hour
-        if int(end_hr) < 12:
-            end_hr = match.group("end_hour")
-        else:
+        if int(end_hr) == 12:
             end_hr = "00"
-        if match.group("end_min"):
-            end_mn = match.group("end_min")
-        else:
+        # Convert ending minute
+        if not end_mn:
             end_mn = "00"
         # Convert time to 24-hour format and return it
-
         time = f"{start_hr.zfill(2)}:{start_mn} to {end_hr.zfill(2)}:{end_mn}"
         return time
     # Invalid input
