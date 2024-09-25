@@ -7,7 +7,7 @@ def main():
 
 
 def count(s):
-    pattern = r"um"
+    pattern = r"[^a-zA-Z]um"
 
 if __name__ == "__main__":
     main()
