@@ -4,7 +4,7 @@ import sys
 
 def main():
 
-    text = "ab ab cd cd ef ef gh gh"
+    text = "ab ab cd ab cd ef ef gh gh"
     pattern = r"(ab)|(cd)|(ef)|(gh)"
 
     if match := re.findall(pattern, text, re.IGNORECASE):
