@@ -11,7 +11,7 @@ def main():
 def count(s):
 
     pattern = r"(?:^(um)[^a-zA-Z])|[^a-zA-Z](um)[^a-zA-Z]|(?:[^a-zA-Z](um)$)|(?:^(um)$)"
-    if match := re.search(pattern, s, re.IGNORECASE):
+    if match := re.findall(pattern, s, re.IGNORECASE):
         count = 0
         print(match.groups())
         for m in match.groups():
