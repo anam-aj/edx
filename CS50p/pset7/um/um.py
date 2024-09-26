@@ -10,7 +10,10 @@ def main():
 
 def count(s):
 
+    # regex to find all "ums"
     pattern = r"\b(um)\b"
+
+    # Find number of "um" case insensitively and return it
     if match := re.findall(pattern, s, re.IGNORECASE):
         return len(match)
     else:
