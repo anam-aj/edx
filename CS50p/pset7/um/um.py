@@ -10,7 +10,8 @@ def main():
 
 def count(s):
 
-    pattern = r"(?:^(um)[^a-zA-Z])|[^a-zA-Z](um)[^a-zA-Z]|(?:[^a-zA-Z](um)$)|(?:^(um)$)"
+    #pattern = r"(?:^(um)[^a-zA-Z])|[^a-zA-Z](um)[^a-zA-Z]|(?:[^a-zA-Z](um)$)|(?:^(um)$)"
+    pattern = r"(?:^(um)$)|[^a-zA-Z](um)[^a-zA-Z]|(?:[^a-zA-Z](um)$)"
     if match := re.search(pattern, s, re.IGNORECASE):
         count = 0
         print(match.groups())
