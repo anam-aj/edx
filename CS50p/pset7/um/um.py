@@ -10,7 +10,7 @@ def main():
 
 def count(s):
 
-    pattern = r"(?:^(um)[^a-zA-Z])|[^a-zA-Z](um)[^a-zA-Z]|(?:[^a-zA-Z](um)$)|(?:^(um)$)"
+    pattern = r"\b(um)\b"
     if match := re.findall(pattern, s, re.IGNORECASE):
         count = 0
         print(match)
