@@ -4,8 +4,8 @@ import sys
 
 def main():
 
-    text = "abc cd cd ef ef gh gh"
-    pattern = r"(abc)|(ab)|(ef)|(gh)"
+    text = "abc cd ab ef ef gh gh"
+    pattern = r"(abc)|(^ab)|(ef)|(gh)"
 
     if match := re.findall(pattern, text, re.IGNORECASE):
         print(match)
