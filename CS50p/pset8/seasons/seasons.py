@@ -16,7 +16,10 @@ def main():
     pattern = r"^\d{4}-\d{2}-\d{2}$"
     if not re.search(pattern, birthdate):
         sys.exit("birthdate format: YYYY-MM-DD")
-    
+
+    current_date = date.today
+
+    age = __sub__()
 
 
 
