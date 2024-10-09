@@ -22,7 +22,7 @@ def main():
 
     # Convert age to words and prints to user
     p = inflect.engine()
-    age = p.number_to_words(total_minutes)
+    age = p.number_to_words(total_minutes, andword=""   )
     print(f"{age.capitalize()} minutes")
 
 
