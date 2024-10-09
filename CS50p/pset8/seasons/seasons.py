@@ -10,12 +10,13 @@ from datetime import date
 
 def main():
 
-    # Get birt date from user
+    # Get date of birth from user
     birth_date = get_date("Enter date of birth: ")
 
     # Fetch current date
     current_date = date.today()
 
+    # Calculates age 
     age = operator.__sub__(current_date, birth_date)
     total_minutes = (age.days * 24 * 60) + (age.seconds // 60)
 
