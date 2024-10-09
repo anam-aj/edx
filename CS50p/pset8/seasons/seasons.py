@@ -3,10 +3,9 @@
 import re
 import sys
 import inflect
-
+import operator
 
 from datetime import date
-
 
 
 def main():
@@ -23,13 +22,14 @@ def main():
     birth_date = date(int(year), int(month), int(day))
     current_date = date.today()
 
-    age = __sub__(birth_date, current_date)
+    age = operator.__sub__(birth_date, current_date)
     total_minutes = (age.days * 24 * 60) + (age.seconds // 60)
 
     p = inflect.engine()
     age = p.number_to_words(total_minutes)
 
     print(age)
+
 
 if __name__ == "__main__":
     main()
