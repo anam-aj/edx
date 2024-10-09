@@ -19,7 +19,10 @@ def main():
         sys.exit("Invalid date, correct format: YYYY-MM-DD")
 
     year, month, day = birthdate.split("-")
-    birth_date = date(int(year), int(month), int(day))
+    try:
+        birth_date = date(int(year), int(month), int(day))
+    except ValueError:
+        sys.exit("Invalid date")
     current_date = date.today()
 
     age = operator.__sub__(birth_date, current_date)
