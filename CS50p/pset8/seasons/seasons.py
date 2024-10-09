@@ -10,7 +10,8 @@ from datetime import date
 
 def main():
 
-
+    # Get birt date from user
+    birth_date = get_date("Enter date of birth: ")
 
     # Fetch current date
     current_date = date.today()
@@ -35,12 +36,14 @@ def get_date(text):
     if not re.search(pattern, date):
         sys.exit("Invalid date, correct format: YYYY-MM-DD")
 
-    # Ensure birth date is valid and gets date object of bith date
+    # Ensure birth date is valid and converts to date-object
     year, month, day = date.split("-")
     try:
-        birth_date = date(int(year), int(month), int(day))
+        date = date(int(year), int(month), int(day))
     except ValueError:
         sys.exit("Invalid date")
+
+    return date
 
 
 if __name__ == "__main__":
