@@ -34,7 +34,7 @@ def main():
     p = inflect.engine()
     age = p.number_to_words(total_minutes)
 
-    print(f"{age} minutes")
+    print(f"{age.capitalize()} minutes")
 
 
 if __name__ == "__main__":
