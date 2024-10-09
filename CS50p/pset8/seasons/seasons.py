@@ -27,6 +27,9 @@ def main():
     total_minutes = (age.days * 24 * 60) + (age.seconds // 60)
 
     p = inflect.engine()
+    age = p.number_to_words(total_minutes)
+
+    print(age)
 
 if __name__ == "__main__":
     main()
