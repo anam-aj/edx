@@ -2,6 +2,8 @@
 
 import re
 import sys
+import inflect
+
 
 from datetime import date
 
@@ -24,6 +26,7 @@ def main():
     age = __sub__(birth_date, current_date)
     total_minutes = (age.days * 24 * 60) + (age.seconds // 60)
 
+    p = inflect.engine()
 
 if __name__ == "__main__":
     main()
