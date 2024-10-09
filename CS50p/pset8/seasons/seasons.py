@@ -1,9 +1,9 @@
 # Program to tell age in minutes
 
-import re
-import sys
 import inflect
 import operator
+import re
+import sys
 
 from datetime import date
 
