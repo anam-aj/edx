@@ -17,10 +17,10 @@ def main():
     if not re.search(pattern, birthdate):
         sys.exit("birthdate format: YYYY-MM-DD")
     year, month, day = birthdate.split("-")
-    birth_date = date(year, month, day)
-    current_date = date.today
+    birth_date = date(int(year), int(month), int(day))
+    current_date = date.today()
 
-    age = __sub__()
+    age = __sub__(birth_date)
 
 
 
