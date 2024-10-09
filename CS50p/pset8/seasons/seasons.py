@@ -30,21 +30,21 @@ def main():
 def get_date(text):
 
     # Promt user for date
-    date = input(text)
+    user_date = input(text)
 
     # Ensure birthdate is in YYYY-MM-DD format
     pattern = r"^\d{4}-\d{2}-\d{2}$"
-    if not re.search(pattern, date):
+    if not re.search(pattern, user_date):
         sys.exit("Invalid date, correct format: YYYY-MM-DD")
 
     # Ensure birth date is valid and converts to date-object
-    year, month, day = date.split("-")
+    year, month, day = user_date.split("-")
     try:
-        date = date(int(year), int(month), int(day))
+        user_date = date(int(year), int(month), int(day))
     except ValueError:
         sys.exit("Invalid date")
 
-    return date
+    return user_date
 
 
 if __name__ == "__main__":
