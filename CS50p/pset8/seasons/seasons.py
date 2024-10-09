@@ -52,5 +52,6 @@ def calculate_age_in_minutes(current_date, birth_date):
 
     return age_in_minutes
 
+
 if __name__ == "__main__":
     main()
