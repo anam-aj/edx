@@ -16,13 +16,13 @@ def main():
     # Fetch current date
     current_date = date.today()
 
-    # Calculates age 
+    # Calculate age in minutes
     age = operator.__sub__(current_date, birth_date)
     total_minutes = (age.days * 24 * 60) + (age.seconds // 60)
 
+    # Convert age to words and prints to user
     p = inflect.engine()
     age = p.number_to_words(total_minutes)
-
     print(f"{age.capitalize()} minutes")
 
 
