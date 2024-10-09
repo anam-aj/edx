@@ -1,4 +1,6 @@
-from seasons import main, get_date
+from seasons import get_date
 
 
-def test_
+def test_correct_format():
+    
+
