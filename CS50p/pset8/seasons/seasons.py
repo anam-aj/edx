@@ -18,11 +18,14 @@ def main():
     if not re.search(pattern, birthdate):
         sys.exit("Invalid date, correct format: YYYY-MM-DD")
 
+    # Ensure birth date is valid and gets date object of bith date
     year, month, day = birthdate.split("-")
     try:
         birth_date = date(int(year), int(month), int(day))
     except ValueError:
         sys.exit("Invalid date")
+
+    # Fetch current date
     current_date = date.today()
 
     age = operator.__sub__(birth_date, current_date)
