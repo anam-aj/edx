@@ -1,6 +1,7 @@
 # Program to tell age in minutes
 
 import re
+import sys
 
 from datetime import date
 
@@ -13,6 +14,9 @@ def main():
 
     # Ensure birthdate is in YYYY-MM-DD format
     pattern = r"^\d{4}-\d{2}-\d{2}$"
+    if not re.search(pattern, birthdate):
+        sys.exit("birthdate format: YYYY-MM-DD")
+    
 
 
 
