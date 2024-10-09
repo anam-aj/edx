@@ -47,7 +47,11 @@ def get_date(text):
     return user_date
 
 
-# f
+def calculate_age_in_minutes(current_date, birth_date):
+    age = operator.__sub__(current_date, birth_date)
+    age_in_minutes = (age.days * 24 * 60) + (age.seconds // 60)
+
+    return age_in_minutes
 
 if __name__ == "__main__":
     main()
