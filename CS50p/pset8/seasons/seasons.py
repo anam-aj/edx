@@ -14,7 +14,11 @@ def main():
     birth_date = input("Enter date of birth: ")
 
     if check_date_format(birth_date) == False:
-        sys.exit("Invalid date format, correct usage: YYYY-MM-YY")
+        sys.exit("Invalid format, correct usage: YYYY-MM-YY")
+
+    if not get_date_object(birth_date):
+        sys.exit("Invalid date")
+
 
     # Fetch current date
     current_date = date.today()
