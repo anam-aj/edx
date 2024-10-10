@@ -13,8 +13,8 @@ def main():
     # Get date of birth from user
     birth_date = input("Enter date of birth: ")
 
-    if is_date_valid(birth_date) == True:
-        ...
+    if is_date_valid(birth_date) == False:
+        sys.exit("Invalid date")
 
     # Fetch current date
     current_date = date.today()
@@ -31,15 +31,12 @@ def main():
 # Functions to get valid date object
 def is_date_valid(user_date):
 
-    # Promt user for date
-    user_date = input(text)
-
     # Ensure birthdate is in YYYY-MM-DD format
     pattern = r"^\d{4}-\d{2}-\d{2}$"
     if not re.search(pattern, user_date):
-        sys.exit("Invalid date, correct format: YYYY-MM-DD")
+        return False
 
-    # Ensure birth date is valid and converts to date-object
+    # Ensure birth date is valid
     year, month, day = user_date.split("-")
     try:
         user_date = date(int(year), int(month), int(day))
