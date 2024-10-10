@@ -18,10 +18,10 @@ def main():
         sys.exit("Invalid format, correct usage: YYYY-MM-YY")
 
     # Check validity, i.e. day-month-year are permissible values
-    if not get_date_object(birth_date):
+    if not date_object(birth_date):
         sys.exit("Invalid date")
 
-    birth_date = get_date_object(birth_date)
+    birth_date = date_object(birth_date)
 
     # Fetch current date
     current_date = date.today()
@@ -45,7 +45,7 @@ def check_date_format(user_date):
         return False
 
 # Functions to get valid date object
-def get_date_object(user_date):
+def date_object(user_date):
 
     year, month, day = user_date.split("-")
     try:
