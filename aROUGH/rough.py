@@ -7,7 +7,8 @@ class Hat:
 
     def sort(self, name):
         print(name, "is in", random.choice(self.houses))
-        ret
+        return "hello"
 
 hat = Hat()
-hat.sort("Harry")
+word = hat.sort("Harry")
+print(word)
