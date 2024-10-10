@@ -9,5 +9,5 @@ class Hat:
         print(name, "is in", random.choice(self.houses))
 
 
-#hat = Hat()
-Hat().sort("Harry")
+hat = Hat()
+hat.sort("Harry")
