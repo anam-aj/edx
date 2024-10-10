@@ -47,8 +47,8 @@ def check_date_format(user_date):
 # Functions to get valid date object
 def date_object(user_date):
 
-    year, month, day = user_date.split("-")
     try:
+        year, month, day = user_date.split("-")
         user_date = date(int(year), int(month), int(day))
     except ValueError:
         return False
