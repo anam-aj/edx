@@ -13,12 +13,16 @@ def main():
     # Get date of birth from user
     birth_date = input("Enter date of birth: ")
 
+    # Check format: YYYY-MM-DD
     if check_date_format(birth_date) == False:
         sys.exit("Invalid format, correct usage: YYYY-MM-YY")
 
+    # Check validity, i.e. day-month-year are permissible values
     if not get_date_object(birth_date):
         sys.exit("Invalid date")
 
+    # covert birth date to date object
+    birth_date = get_date_object(birth_date)
 
     # Fetch current date
     current_date = date.today()
