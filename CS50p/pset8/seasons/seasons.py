@@ -13,7 +13,7 @@ def main():
     # Get date of birth from user
     birth_date = input("Enter date of birth: ")
 
-    if date_format(birth_date) == False:
+    if check_date_format(birth_date) == False:
         sys.exit("Invalid date format, correct usage: YYYY-MM-YY")
 
     # Fetch current date
@@ -30,7 +30,7 @@ def main():
 
 
 # Ensure birthdate is in YYYY-MM-DD format
-def date_format(user_date):
+def check_date_format(user_date):
 
     pattern = r"^\d{4}-\d{2}-\d{2}$"
     if re.search(pattern, user_date):
@@ -39,7 +39,7 @@ def date_format(user_date):
         return False
 
 # Functions to get valid date object
-def get_date_object(user_date)
+def get_date_object(user_date):
 
     year, month, day = user_date.split("-")
     try:
