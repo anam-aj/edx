@@ -46,6 +46,7 @@ def get_date(text):
     return user_date
 
 
+# Function to calculate age in minutes
 def age_in_minutes(current_date, birth_date):
     age = operator.__sub__(current_date, birth_date)
     age_in_minutes = (age.days * 24 * 60) + (age.seconds // 60)
