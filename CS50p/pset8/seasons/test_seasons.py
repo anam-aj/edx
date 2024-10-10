@@ -1,6 +1,5 @@
-from seasons import get_date
+from seasons import cehck_date_format, 
 
 
-def test_correct_format():
-    
+
 
