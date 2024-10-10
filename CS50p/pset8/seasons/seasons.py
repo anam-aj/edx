@@ -41,7 +41,7 @@ def is_date_valid(user_date):
     try:
         user_date = date(int(year), int(month), int(day))
     except ValueError:
-        sys.exit("Invalid date")
+        return False
 
     return user_date
 
