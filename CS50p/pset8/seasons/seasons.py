@@ -11,7 +11,10 @@ from datetime import date
 def main():
 
     # Get date of birth from user
-    birth_date = get_date("Enter date of birth: ")
+    birth_date = input("Enter date of birth: ")
+
+    if is_date_valid(birth_date) == True:
+        ...
 
     # Fetch current date
     current_date = date.today()
@@ -26,7 +29,7 @@ def main():
 
 
 # Functions to get valid date object
-def get_date(text):
+def is_date_valid(user_date):
 
     # Promt user for date
     user_date = input(text)
