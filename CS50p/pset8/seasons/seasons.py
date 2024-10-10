@@ -13,8 +13,8 @@ def main():
     # Get date of birth from user
     birth_date = input("Enter date of birth: ")
 
-    if is_date_valid(birth_date) == False:
-        sys.exit("Invalid date")
+    if date_format(birth_date) == False:
+        sys.exit("Invalid date format, correct usage: YYYY-MM-YY")
 
     # Fetch current date
     current_date = date.today()
@@ -28,15 +28,19 @@ def main():
     print(f"{age.capitalize()} minutes")
 
 
-# Functions to get valid date object
-def is_date_valid(user_date):
 
-    # Ensure birthdate is in YYYY-MM-DD format
+# Ensure birthdate is in YYYY-MM-DD format
+def date_format(user_date):
+
     pattern = r"^\d{4}-\d{2}-\d{2}$"
-    if not re.search(pattern, user_date):
+    if re.search(pattern, user_date):
+        return True
+    else:
         return False
 
-    # Ensure birth date is valid
+# Functions to get valid date object
+def get_date_object(user_date)
+
     year, month, day = user_date.split("-")
     try:
         user_date = date(int(year), int(month), int(day))
