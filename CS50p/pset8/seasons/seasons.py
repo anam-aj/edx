@@ -34,7 +34,6 @@ def main():
     print(f"{age.capitalize()} minutes")
 
 
-
 # Ensure birthdate is in YYYY-MM-DD format
 def check_date_format(user_date):
 
@@ -45,6 +44,8 @@ def check_date_format(user_date):
         return False
 
 # Functions to get valid date object
+
+
 def date_object(user_date):
 
     try:
