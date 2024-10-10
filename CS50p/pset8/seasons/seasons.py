@@ -21,13 +21,11 @@ def main():
     if not get_date_object(birth_date):
         sys.exit("Invalid date")
 
-    # covert birth date to date object
     birth_date = get_date_object(birth_date)
 
     # Fetch current date
     current_date = date.today()
 
-    # Fetch age in minutes
     age_minutes = age_in_minutes(current_date, birth_date)
 
     # Convert age to words and prints to user
