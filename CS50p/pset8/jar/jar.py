@@ -1,7 +1,7 @@
 class Jar:
     def __init__(self, capacity=12, size):
         self.capacity = capacity
-        self.size = size    
+        self.size = size
 
     def __str__(self):
         return("🍪" * size)
@@ -26,7 +26,11 @@ class Jar:
     def size(self):
         return self._size
 
-
+    @size.setter
+    def capacity(self, size):
+        if not (int(size) > 0) or not (int(size) % 1 == 0):
+            raise ValueError
+        self.size = size
 
 def main():
 
