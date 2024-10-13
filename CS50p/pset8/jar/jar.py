@@ -18,7 +18,8 @@ class Jar:
         return self._capacity
 
     @capacity.setter
-    def 
+    def capacity():
+        
 
     @property
     def size(self):
