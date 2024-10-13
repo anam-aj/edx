@@ -1,7 +1,5 @@
 class Jar:
     def __init__(self, capacity=12, size):
-        if not (int(capacity) > 0) or not (int(capacity) % 1 == 0):
-            raise ValueError
         self.capacity = capacity
 
     def __str__(self):
@@ -18,8 +16,10 @@ class Jar:
         return self._capacity
 
     @capacity.setter
-    def capacity():
-        
+    def capacity(self):
+        if not (int(capacity) > 0) or not (int(capacity) % 1 == 0):
+            raise ValueError
+
 
     @property
     def size(self):
