@@ -4,3 +4,6 @@ def main():
 
 def cookie():
     return ("🍪" * 5)
+
+
+main()
