@@ -31,7 +31,7 @@ class Jar:
         return self._size
 
     @size.setter
-    def capacity(self, size):
+    def size(self, size):
         if not (int(size) > 0) or not (int(size) % 1 == 0):
             raise ValueError
         self._size = size
@@ -40,6 +40,12 @@ class Jar:
 def main():
 
     my_jar = Jar(15, 10)
+    print(my_jar)
+    my_jar.deposit(3)
+    print(my_jar)
+    my_jar.withdraw(2)
+    print(my_jar)
+    my_jar.deposit(5)
     print(my_jar)
 
 
