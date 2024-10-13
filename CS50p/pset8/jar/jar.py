@@ -19,9 +19,11 @@ class Jar:
 
     @property
     def size(self):
-
+        ...
 
 def main():
+
+    print("aasd")
     my_jar = Jar(10)
     print(my_jar)
 
