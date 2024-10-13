@@ -30,7 +30,7 @@ class Jar:
     def capacity(self, size):
         if not (int(size) > 0) or not (int(size) % 1 == 0):
             raise ValueError
-        self.size = size
+        self._size = size
 
 def main():
 
