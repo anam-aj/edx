@@ -1,5 +1,5 @@
 class Jar:
-    def __init__(self, capacity=12):
+    def __init__(self, capacity=12, size):
         if not (int(capacity) > 0) or not (int(capacity) % 1 == 0):
             raise ValueError
         self.capacity = capacity
