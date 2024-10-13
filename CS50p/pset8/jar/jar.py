@@ -15,7 +15,8 @@ class Jar:
 
     @property
     def capacity(self):
-        return self._capcity
+        return self._capacity
+
     @
 
     @property
