@@ -5,7 +5,7 @@ class Jar:
         self.capacity = capacity
 
     def __str__(self):
-        ...
+        return("abcd")
 
     def deposit(self, n):
         ...
@@ -22,5 +22,9 @@ class Jar:
 
 
 def main():
+    my_jar = Jar(10)
+    print(my_jar)
 
-    my_jar = jar()
+
+if __name__ == "__main__":
+    main()
