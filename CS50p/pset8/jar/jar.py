@@ -10,7 +10,7 @@ class Jar:
 
 def main():
 
-    my_jar = Jar(1.3)
+    my_jar = Jar("a")
     print(my_jar.capacity)
     print(my_jar)
 
