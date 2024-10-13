@@ -7,6 +7,8 @@ class Jar:
         return("🍪" * self.size)
 
     def deposit(self, n):
+        if n > (self.capacity - self.size):
+            raise ValueError
         self.size = self.size + n
 
     def withdraw(self, n):
