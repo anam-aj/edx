@@ -7,6 +7,21 @@ class Jar:
     def __str__(self):
         return("abcd")
 
+    def deposit(self, n):
+        ...
+
+    def withdraw(self, n):
+        ...
+
+    @property
+    def capacity(self):
+        ...
+
+    @property
+    def size(self):
+        ...
+
+
 
 def main():
 
