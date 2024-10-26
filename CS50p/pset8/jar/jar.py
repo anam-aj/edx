@@ -1,23 +1,22 @@
 class Jar:
-    def __init__(self, capacity=12, size=1):
+    def __init__(self, capacity=12):
         self.capacity = capacity
-        self.size = size
 
     def __str__(self):
-        return ("🍪" * self.size)
+        return ("🍪" * self.cookie_in_jar)
 
     def size(self, cookie_in_jar=0):
         self.cookie_in_jar = cookie_in_jar
 
     def deposit(self, n):
-        if n > (self.capacity - self.size):
+        if n > (self.capacity - self.cookie_in_jar):
             raise ValueError
         self.cookie_in_jar = self.cookie_in_jar + n
 
     def withdraw(self, n):
-        if n > self.size:
+        if n > self.cookie_in_jar:
             raise ValueError
-        self.size = self.size - n
+        self.cookie_in_jar = self.cookie_in_jar - n
 
     @property
     def capacity(self):
