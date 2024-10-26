@@ -6,6 +6,8 @@ class Jar:
     def __str__(self):
         return ("🍪" * self.size)
 
+    def size(self, )
+
     def deposit(self, n):
         if n > (self.capacity - self.size):
             raise ValueError
