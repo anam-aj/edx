@@ -45,8 +45,8 @@ def main():
     print(my_jar)
     my_jar.withdraw(2)
     print(my_jar)
-    my_jar.deposit(5)
-    print(my_jar)
+    #my_jar.deposit(5)
+    #print(my_jar)
 
 
 if __name__ == "__main__":
