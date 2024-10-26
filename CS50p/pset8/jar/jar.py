@@ -39,7 +39,7 @@ class Jar:
 
 def main():
 
-    my_jar = Jar(15, 10)
+    my_jar = Jar(15)
     print(my_jar)
     my_jar.deposit(3)
     print(my_jar)
