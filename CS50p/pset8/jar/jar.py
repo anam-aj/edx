@@ -6,12 +6,13 @@ class Jar:
     def __str__(self):
         return ("🍪" * self.size)
 
-    def size(self, )
+    def size(self, cookie_in_jar=0):
+        self.cookie_in_jar = cookie_in_jar
 
     def deposit(self, n):
         if n > (self.capacity - self.size):
             raise ValueError
-        self.size = self.size + n
+        self.cookie_in_jar = self.cookie_in_jar + n
 
     def withdraw(self, n):
         if n > self.size:
