@@ -27,6 +27,7 @@ def test_deposit():
 
 def test_withdraw():
     jar = Jar()
+    with pytest.ra
     jar.withdraw(1)
     assert jar.size == 1
     jar.deposit(11)
