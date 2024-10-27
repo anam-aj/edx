@@ -32,7 +32,7 @@ class Jar:
 
     @size.setter
     def size(self, size):
-        if not (int(size) > 0) or not (int(size) % 1 == 0):
+        if not (int(size) >= 0) or not (int(size) % 1 == 0):
             raise ValueError
         self._size = size
 
