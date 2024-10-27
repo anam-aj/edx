@@ -1,5 +1,8 @@
 from jar import Jar
 
+import pytest
+
+
 
 def test_init():
     jar = Jar()
@@ -27,8 +30,5 @@ def test_deposit():
 
 def test_withdraw():
     jar = Jar()
-    with pytest.ra
-    jar.withdraw(1)
-    assert jar.size == 1
-    jar.deposit(11)
-    assert jar.size == 12
+    with pytest.raises(ValueError):
+        jar.withdraw(1)
