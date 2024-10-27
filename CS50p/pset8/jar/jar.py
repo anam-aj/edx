@@ -41,10 +41,10 @@ def main():
 
     my_jar = Jar(15)
     print(my_jar)
-    my_jar.deposit(3)
-    print(my_jar)
-    my_jar.withdraw(2)
-    print(my_jar)
+    #my_jar.deposit(3)
+    #print(my_jar)
+    #my_jar.withdraw(2)
+    #print(my_jar)
     #my_jar.deposit(5)
     #print(my_jar)
 
