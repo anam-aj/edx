@@ -19,15 +19,15 @@ def test_str():
 
 def test_deposit():
     jar = Jar()
-    assert str(jar) == ""
     jar.deposit(1)
-    assert str(jar) == "🍪"
+    assert jar.size == 1
     jar.deposit(11)
+    assert jar.size == 12
 
 
 def test_withdraw():
     jar = Jar()
-    assert str(jar) == ""
     jar.deposit(1)
-    assert str(jar) == "🍪"
+    assert jar.size == 1
     jar.deposit(11)
+    assert jar.size == 12
