@@ -3,7 +3,6 @@ from jar import Jar
 import pytest
 
 
-
 def test_init():
     jar = Jar()
     assert jar.capacity == 12
