@@ -17,6 +17,7 @@ def create_shirtificate():
     # Render image:
     pdf.image("shirtificate.png")
     # Header text
+    pdf.set_font("Arial", size=24)
     pdf.text(0, 0,"hello")
     # Output file
     pdf.output("shirtificate.pdf")
