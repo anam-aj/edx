@@ -19,6 +19,10 @@ def create_shirtificate():
     # Header text
     pdf.set_font("Arial", "B", 40)
     pdf.cell(0, 30, "Text with new font",0 , 1, "C")
+    # Shirt text
+    pdf.set_text_color(255, 255, 255)
+    pdf.set_font("Arial", "B", 40)
+    pdf.cell(0, 30, "Text with new font",0 , 1, "C")
     # Output file
     pdf.output("shirtificate.pdf")
 
