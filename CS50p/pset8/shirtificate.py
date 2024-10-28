@@ -3,14 +3,14 @@
 from fpdf import FPDF
 
 def main():
-    create_shirtificate()
+    create_shirtificate("anam")
 
 
-def create_shirtificate():
+def create_shirtificate(name):
     pdf = FPDF()
     pdf.add_page()
     pdf.set_font("helvetica", "B", 16)
-    pdf.cell(40, 10, "Hello World!")
+    pdf.cell(40, 10, name)
     pdf.output("shirtificate.pdf")
 
 
