@@ -25,8 +25,7 @@ def main():
 def create_shirtificate(name):
     pdf = PDF()
     pdf.add_page()
-    pdf.set_font("helvetica", "B", 16)
-    pdf.cell(0, 10, name, align='C')
+    pdf.cell(0, 10, f"{name} took CS50")
     pdf.output("shirtificate.pdf")
 
 
