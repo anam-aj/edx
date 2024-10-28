@@ -18,7 +18,7 @@ def create_shirtificate():
     pdf.image("shirtificate.png")
     # Header text
     pdf.set_font("Arial", size=24)
-    pdf.text(0, 0,"hello")
+    pdf.text(10, 10,"hello")
     # Output file
     pdf.output("shirtificate.pdf")
 
