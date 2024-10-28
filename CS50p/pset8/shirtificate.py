@@ -19,9 +19,14 @@ def main():
 
 
 def create_shirtificate(name):
-    pdf = PDF()
+
+    # Create object
+    pdf = FPDF()
+    # Add page
     pdf.add_page()
-    
+    # Rendering image:
+    pdf.image("shirtificate.png")
+
     pdf.cell(0, 10, f"{name} took CS50")
     pdf.output("shirtificate.pdf")
 
