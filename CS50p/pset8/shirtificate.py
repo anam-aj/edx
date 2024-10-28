@@ -15,7 +15,7 @@ def create_shirtificate():
     pdf = FPDF()
     pdf.add_page()
     # Render image:
-    pdf.image("shirtificate.png", x=5, y=60, w=200)
+    pdf.image("shirtificate.png", x=10, y=60, w=190)
     # Header text
     pdf.set_font("Arial", size=24)
     pdf.text(50, 50,"hello")
