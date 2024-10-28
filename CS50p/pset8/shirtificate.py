@@ -17,7 +17,7 @@ def create_shirtificate():
     # Render image:
     pdf.image("shirtificate.png")
     # Header text
-    pdf.text(0, 0, "hello")
+    pdf.text(0, 0,"hello")
     # Output file
     pdf.output("shirtificate.pdf")
 
