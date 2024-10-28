@@ -17,8 +17,8 @@ def create_shirtificate():
     # Render image:
     pdf.image("shirtificate.png", x=10, y=60, w=190)
     # Header text
-    pdf.set_font("Arial", "B", size=70)
-    pdf.text(50, 50,"CS50 Shirtificate")
+    pdf.set_font("Times", "B", 14)
+    pdf.cell(0, 10, "Text with new font")
     # Output file
     pdf.output("shirtificate.pdf")
 
