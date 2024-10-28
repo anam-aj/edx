@@ -21,7 +21,7 @@ def create_shirtificate():
     pdf.cell(0, 30, "CS50 Shirtificate",0 , 1, "C")
     # Shirt text
     pdf.set_text_color(255, 255, 255)
-    pdf.set_font("Arial", "B", 20)
+    pdf.set_font("Courier", "B", 30)
     pdf.cell(0, 140, "anam took CS50",0 , 1, "C")
     # Output file
     pdf.output("shirtificate.pdf")
