@@ -19,7 +19,7 @@ def create_shirtificate(user_text):
     # Setting font: helvetica bold 15
     pdf.set_font("helvetica", "B", 15)
     # Add name and msg
-    pdf.cell(0, 10, f"{user_text} took CS50", h=-10, align="C")
+    pdf.cell(0, 10, f"{user_text} took CS50", align="C")
     # Generate output
     pdf.output("shirtificate.pdf")
 
