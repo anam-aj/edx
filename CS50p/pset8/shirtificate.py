@@ -23,7 +23,7 @@ def main():
 
 
 def create_shirtificate(name):
-    pdf = FPDF()
+    pdf = PDF()
     pdf.add_page()
     pdf.set_font("helvetica", "B", 16)
     pdf.cell(0, 10, name, align='C')
