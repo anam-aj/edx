@@ -1,3 +1,5 @@
+# Program to create shirtificate
+
 from fpdf import FPDF
 
 pdf = FPDF()
