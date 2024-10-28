@@ -11,7 +11,7 @@ def create_shirtificate():
     pdf.add_page()
     pdf.set_font("helvetica", "B", 16)
     pdf.cell(40, 10, "Hello World!")
-    pdf.output("tuto1.pdf")
+    pdf.output("shirtificate.pdf")
 
 
 if __name__ == "__main__":
