@@ -4,12 +4,12 @@ from fpdf import FPDF
 
 
 def main():
-    name  = input("Enter your name: ")
+    #name  = input("Enter your name: ")
 
-    create_shirtificate(name)
+    create_shirtificate()
 
 
-def create_shirtificate(user_text):
+def create_shirtificate():
 
     # Create object
     pdf = FPDF()
@@ -17,7 +17,7 @@ def create_shirtificate(user_text):
     # Rendering image:
     pdf.image("shirtificate.png")
     # Header text
-    pdf.text()
+    pdf.text(0, 0, "hello")
     # Output file
     pdf.output("shirtificate.pdf")
 
