@@ -12,7 +12,7 @@ def create_shirtificate(name):
     pdf = FPDF()
     pdf.add_page()
     pdf.set_font("helvetica", "B", 16)
-    pdf.cell(0, 10, name, 0, 1, 'C')
+    pdf.cell(0, 10, name, align=Align.C)
     pdf.output("shirtificate.pdf")
 
 
