@@ -15,7 +15,7 @@ def create_shirtificate(user_text):
     pdf = FPDF()
     pdf.add_page()
     # Rendering image:
-    pdf.image("shirtificate.png")
+    pdf.image("shirtificate.png", x=0, y=0, w=pdf.w, h=pdf.h        )
     # Setting font: helvetica bold 15
     pdf.set_font("helvetica", "B", 15)
     # Add name and msg
