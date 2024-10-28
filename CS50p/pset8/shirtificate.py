@@ -17,7 +17,7 @@ def create_shirtificate():
     # Render image:
     pdf.image("shirtificate.png", x=10, y=60, w=190)
     # Header text
-    pdf.set_font("Arial", "B", 40)
+    pdf.set_font("Courier", "B", 40)
     pdf.cell(0, 30, "CS50 Shirtificate",0 , 1, "C")
     # Shirt text
     pdf.set_text_color(255, 255, 255)
