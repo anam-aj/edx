@@ -3,7 +3,9 @@
 from fpdf import FPDF
 
 def main():
-    create_shirtificate("anam")
+    name  = input("Enter your name: ")
+
+    create_shirtificate(name)
 
 
 def create_shirtificate(name):
