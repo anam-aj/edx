@@ -14,7 +14,7 @@ def create_shirtificate():
     # Create object
     pdf = FPDF()
     pdf.add_page()
-    # Rendering image:
+    # Render image:
     pdf.image("shirtificate.png")
     # Header text
     pdf.text(0, 0, "hello")
