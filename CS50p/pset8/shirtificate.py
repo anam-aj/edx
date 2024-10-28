@@ -9,7 +9,7 @@ def main():
     create_shirtificate(name)
 
 
-def create_shirtificate(name):
+def create_shirtificate(user_text):
 
     # Create object
     pdf = FPDF()
@@ -20,7 +20,7 @@ def create_shirtificate(name):
     # Setting font: helvetica bold 15
     pdf.set_font("helvetica", "B", 15)
     # Add name and msg
-    pdf.cell(0, 10, f"{name} took CS50")
+    pdf.cell(0, 10, f"{user_text} took CS50", align="C")
     # Generate output
     pdf.output("shirtificate.pdf")
 
