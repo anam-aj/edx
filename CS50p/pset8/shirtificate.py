@@ -13,8 +13,8 @@ def create_shirtificate(user_text):
 
     # Create object
     pdf = FPDF()
-    # Add page
     pdf.add_page()
+    pdf.set_margin(0)
     # Rendering image:
     pdf.image("shirtificate.png")
     # Setting font: helvetica bold 15
