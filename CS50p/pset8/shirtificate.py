@@ -3,7 +3,7 @@
 from fpdf import FPDF
 
 def main():
-    ...
+    create_shirtificate()
 
 
 def create_shirtificate():
