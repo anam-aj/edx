@@ -16,6 +16,8 @@ def create_shirtificate(user_text):
     pdf.add_page()
     # Rendering image:
     pdf.image("shirtificate.png")
+    # Header text
+    pdf.text()
     # Output file
     pdf.output("shirtificate.pdf")
 
