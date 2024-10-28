@@ -16,13 +16,6 @@ def create_shirtificate(user_text):
     pdf.add_page()
     # Rendering image:
     pdf.image("shirtificate.png")
-    # Setting font: helvetica bold 15
-    pdf.set_font("helvetica", "B", 15)
-    # Add name and msg
-    pdf.cell(0, 50, f"{user_text} took CS50", border=1, align="C")
-    pdf.cell(0, 50, f"{user_text} took CS50", border=1, align="C")
-    # Generate output
-    pdf.output("shirtificate.pdf")
 
 
 if __name__ == "__main__":
