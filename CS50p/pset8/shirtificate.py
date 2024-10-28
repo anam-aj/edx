@@ -18,11 +18,11 @@ def create_shirtificate():
     pdf.image("shirtificate.png", x=10, y=60, w=190)
     # Header text
     pdf.set_font("Arial", "B", 40)
-    pdf.cell(0, 30, "Text with new font",0 , 1, "C")
+    pdf.cell(0, 30, "CS50 Shirtificate",0 , 1, "C")
     # Shirt text
     pdf.set_text_color(255, 255, 255)
-    pdf.set_font("Arial", "B", 40)
-    pdf.cell(0, 30, "Text with new font",0 , 1, "C")
+    pdf.set_font("Arial", "B", 20)
+    pdf.cell(0, 140, "anam took CS50",0 , 1, "C")
     # Output file
     pdf.output("shirtificate.pdf")
 
