@@ -1,8 +1,12 @@
 # Program to implement To-Do List
 
 
-class To_do_list():
+class task():
+    def __init__(self, detail):
+        self.detail = detail
 
+
+class To_Do_List():
     def __init__(self):
         with open "MyList.txt" as "my_list":
             pass
@@ -14,4 +18,6 @@ class To_do_list():
     def delete_task(self, task):
         ...
 
+
+def main():
 
