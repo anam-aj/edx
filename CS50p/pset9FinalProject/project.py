@@ -12,14 +12,13 @@ class task:
 
 class To_Do_List():
     def __init__(self):
-        to_do_list = []
+        self.to_do_list = []
 
     def add_task(self, task):
+        self.to_do_list.append(task)
 
-
-
-    def delete_task(self, task):
-        ...
+    def delete_task(self, task_number):
+        self.to_do_list.pop()
 
 
 def main():
