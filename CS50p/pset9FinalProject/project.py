@@ -18,7 +18,9 @@ class To_Do_List():
         self.task_list.append(task)
 
     def delete_task(self, task_number):
-        self.task_list.pop(task_number)
+        self.task_list.pop(task_number - 1)
 
 
 def main():
+
+    
