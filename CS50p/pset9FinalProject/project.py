@@ -14,9 +14,10 @@ class To_Do_List():
     def __init__(self):
         with open "MyList.txt" as "my_list":
             pass
+        to_do_list = []
 
     def add_task(self, task):
-        ...
+
 
     def delete_task(self, task):
         ...
