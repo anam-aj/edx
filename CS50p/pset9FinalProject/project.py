@@ -1,7 +1,7 @@
 # Program to implement To-Do List
 
 
-class task():
+class task:
     def __init__(self, detail):
         self.detail = detail
         self.status = False
@@ -12,11 +12,10 @@ class task():
 
 class To_Do_List():
     def __init__(self):
-        with open "MyList.txt" as "my_list":
-            pass
         to_do_list = []
 
     def add_task(self, task):
+
 
 
     def delete_task(self, task):
