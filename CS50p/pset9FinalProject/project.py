@@ -7,4 +7,3 @@ class To_do_list():
         self.my_list = open("my_list.txt", "w")
 
 
-
