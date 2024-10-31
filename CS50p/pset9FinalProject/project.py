@@ -4,6 +4,7 @@
 class task():
     def __init__(self, detail):
         self.detail = detail
+        self.status = False
 
 
 class To_Do_List():
