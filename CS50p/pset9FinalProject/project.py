@@ -7,6 +7,9 @@ class To_do_list():
         with open "MyList.txt" as "my_list":
             pass
 
-    def 
+    def add_task(self, task):
+        ...
+
+    
 
 
