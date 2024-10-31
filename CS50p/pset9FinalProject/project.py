@@ -6,6 +6,8 @@ class task():
         self.detail = detail
         self.status = False
 
+    def str
+
 
 class To_Do_List():
     def __init__(self):
