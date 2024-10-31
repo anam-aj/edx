@@ -4,6 +4,7 @@
 class To_do_list():
 
     def __init__(self):
-        with open "My"
+        with open "MyList.txt" as "my_list":
+            
 
 
