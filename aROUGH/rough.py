@@ -1,1 +1,2 @@
-file = open("file.txt", "w")
+def func():
+    print('a')
