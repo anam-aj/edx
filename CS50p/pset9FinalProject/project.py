@@ -10,6 +10,7 @@ class To_do_list():
     def add_task(self, task):
         ...
 
+    def delete_task(self, task):
+        ...
+
     
-
-
