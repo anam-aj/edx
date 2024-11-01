@@ -121,6 +121,9 @@ def wrap_text(text):
     # Wrap your text
     wrapped_text = textwrap.fill(text, width=20)
 
+    # Split the wrapped text into lines
+    lines = wrapped_text.split('\n')
+
     # Create the top border
     top_border = "+" + "-" * 22 + "+"
 
