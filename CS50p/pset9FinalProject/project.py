@@ -35,8 +35,8 @@ def main():
         choice = input("Please enter the option number: ")
 
         if choice == '1':
-            for number, task in enumerate(my_list):
-                print(f"{number + 1}: {task} - {task.status}")
+            for number, task in enumerate(my_list.task_list):
+                print(f"{number + 1}: {task}")
         elif choice == '2':
             task = input('Please enter task: ')
             task = Task(task)
