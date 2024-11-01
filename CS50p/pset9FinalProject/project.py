@@ -27,7 +27,6 @@ class To_Do_List():
 
 
 def main():
-
     my_list = To_Do_List()
 
     while True:
@@ -39,8 +38,7 @@ def main():
         choice = input("Please enter the option number: ")
 
         if choice == '1':
-            for number, task in enumerate(my_list.task_list):
-                print(f"{number + 1}: {task.detail} - {task.status}")
+
         elif choice == '2':
             task = input('Please enter task: ')
             task = Task(task)
@@ -60,6 +58,8 @@ def menu():
 
 def fetch_list(task_list):
     
+    for number, task in enumerate(my_list.task_list):
+                print(f"{number + 1}: {task.detail} - {task.status}")
 
 
 main()
