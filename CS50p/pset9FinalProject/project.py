@@ -59,7 +59,7 @@ def main():
             except:
                 print("Invalid Task-Number")
 
-            print(f"{deleted_task} has been successfully removed!")
+            print(f"{deleted_task.detail} has been successfully removed!")
 
         # Change Task Completion Status
         elif choice == '4':
