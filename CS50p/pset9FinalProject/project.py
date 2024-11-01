@@ -63,7 +63,11 @@ def main():
                 print("Invalid Task-Number!\n")
         # Change Task Completion Status
         elif choice == '4':
-            ...
+            # Ask user for task to be removed
+            task_number = input(
+                "Please enter below the task-number to be removed\n"
+                "TaskNumber:  "
+                )
         else:
             print(
                 "\nPlease enter a valid choice"
