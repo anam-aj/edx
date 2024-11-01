@@ -55,7 +55,7 @@ def main():
                 )
 
             try:
-                deleted_task = my_list.delete_task(task_number)
+                deleted_task = my_list.delete_task(int(task_number))
             except:
                 print("Invalid Task-Number")
 
