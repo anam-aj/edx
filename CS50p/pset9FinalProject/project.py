@@ -56,10 +56,11 @@ def main():
 
             try:
                 deleted_task = my_list.delete_task(int(task_number))
+                print(f"{deleted_task.detail} has been successfully removed!")
             except:
                 print("Invalid Task-Number")
 
-            print(f"{deleted_task.detail} has been successfully removed!")
+
 
         # Change Task Completion Status
         elif choice == '4':
