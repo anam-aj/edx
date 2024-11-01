@@ -57,7 +57,7 @@ def main():
         elif choice == '4':
             ...
         else:
-            print("Please enter a valid choice or Enter 'exit' to quit program")
+            print("\nPlease enter a valid choice or Enter 'exit' to quit program\n")
 
 
 def menu():
