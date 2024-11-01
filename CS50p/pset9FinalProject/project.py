@@ -25,7 +25,8 @@ def main():
 
         menu = ("View Tasks", "Add Task", "Remove Task", "Mark Task as Done")
 
-        print((menu))
+        for number, option in enumerate(menu):
+             print(f"{number + 1} : {option}")
 
 main()
 
