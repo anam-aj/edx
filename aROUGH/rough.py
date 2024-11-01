@@ -26,4 +26,4 @@ boxed_text = "\n".join(boxed_text)
 # Colorize your text
 colored_text = colored(boxed_text, "red")
 
-print(colored_text)
+return colored_text)

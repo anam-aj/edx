@@ -142,6 +142,6 @@ def wrap_text(text):
     # Colorize your text
     colored_text = colored(boxed_text, "red")
 
-    print(colored_text)
+    return colored_text
 
 main()
