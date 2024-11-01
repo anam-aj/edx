@@ -56,10 +56,10 @@ def menu():
         print(f"{number + 1}: {option}")
 
 
-def fetch_list(tasks_list):
+def fetch_list(list_object):
     tasks = []
-    for number, task in enumerate(my_list.task_list):
-                print(f"{number + 1}: {task.detail} - {task.status}")
+    for number, task in enumerate(list_object.task_list):
+        print(f"{number + 1}: {task.detail} - {task.status}")
 
 
 main()
