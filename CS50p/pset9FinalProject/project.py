@@ -16,15 +16,12 @@ class To_Do_List():
     def __init__(self):
         self.task_list = []
 
-    def __str__(self):
-        return self.task_list
-
     def add_task(self, task):
         self.task_list.append(task)
 
     def delete_task(self, task_number):
-        self.task_list.pop(task_number - 1)
-
+        task = self.task_list.pop(task_number - 1)
+        return task
 
 def main():
     my_list = To_Do_List()
@@ -56,7 +53,13 @@ def main():
                 "Please enter below the task-number to be removed\n"
                 "TaskNumber:  "
                 )
-        
+
+            try:
+                deleted_task = my_list.delete_task(task_number)
+            except:
+                print("Invalid Task-Number")
+
+            print(f"{deleted_task} has been successfully removed!")
 
         # Change Task Completion Status
         elif choice == '4':
