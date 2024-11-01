@@ -40,11 +40,13 @@ def main():
         # Exit condition
         if choice.lower() == 'exit':
             break
+        # Display all tasks
         elif choice == '1':
             tasks_list = fetch_list(my_list)
             print(f"\n{tasks_list}\n")
+        # Add Task to the list
         elif choice == '2':
-            task = input('Please enter task: ')
+            task = input('Please enter task below\nTask: ')
             task = Task(task)
             my_list.add_task(task)
             print("Task has been succesfully added to list\n")
