@@ -37,12 +37,12 @@ def main():
         # Ask user choice
         choice = input("Please enter the option number: ")
 
+        # Exit condition
         if choice.lower() == 'exit':
             break
         elif choice == '1':
             tasks_list = fetch_list(my_list)
-            print(tasks_list)
-            #print(tabulate(tasks_list, headers=['No.', 'Task', 'Status']))
+            print(f"/n{tasks_list}/n")
         elif choice == '2':
             task = input('Please enter task: ')
             task = Task(task)
@@ -64,15 +64,16 @@ def menu():
 
 
 def fetch_list(list_object):
-    """""""
+    """Create table of tasks"""
 
     tasks = []
 
-    # Fetch tasks from list object into list
+    # Fetch tasks from list_object into list
     for number, task in enumerate(list_object.task_list):
         list_item = [number + 1, task.detail, task.status]
         tasks.append(list_item)
 
+    # Tabulate all tasks
     tasks = tabulate(tasks, headers=['No.', 'Task', 'Status'])
 
     return tasks
