@@ -1,5 +1,4 @@
-import pandas as pd
+from tabulate import tabulate
 
-data = {'Name': ['Ghost', 'Zombie'], 'Age': [100, 200]}
-df = pd.DataFrame(data)
-print(df)
+data = [['Ghost', 100], ['Zombie', 200]]
+print(tabulate(data, headers=['Name', 'Age']))
