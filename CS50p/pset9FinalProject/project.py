@@ -56,6 +56,7 @@ def main():
 def menu():
     menu = ("View Tasks", "Add Task", "Remove Task", "Mark Task as Done")
 
+    # Diplay menu items
     for number, option in enumerate(menu):
         print(f"{number + 1}: {option}")
 
@@ -63,6 +64,7 @@ def menu():
 def fetch_list(list_object):
     tasks = []
 
+    # Fetch tasks from list object into list
     for number, task in enumerate(list_object.task_list):
         list_item = [number + 1, task.detail, task.status]
         tasks.append(list_item)
