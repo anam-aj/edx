@@ -23,13 +23,20 @@ class To_Do_List():
 
 def main():
 
-        menu = ("View Tasks", "Add Task", "Remove Task", "Mark Task as Done")
+        # Display Menu
+        menu()
+
+        # Ask user choice
+        choice = input("Please enter the option number: ")
+
+        if 
+
+
+def menu():
+     menu = ("View Tasks", "Add Task", "Remove Task", "Mark Task as Done")
 
         for number, option in enumerate(menu):
              print(f"{number + 1} : {option}")
-
-        choice = input
-
 main()
 
 
