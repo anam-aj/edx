@@ -63,14 +63,14 @@ def main():
                 print("Invalid Task-Number!\n")
         # Change Task Completion Status
         elif choice == '4':
-            # Ask user for task to be removed
+            # Ask user for task to be marked as complete
             task_number = input(
                 "Please enter below the task-number which is complete\n"
                 "TaskNumber:  "
                 )
             # Change completion status
             try:
-                deleted_task = my_list.delete_task(int(task_number))
+                completed_task = my_list.delete_task(int(task_number))
                 print(f"Task '{deleted_task}' has been successfully removed!\n")
             except:
                 print("Invalid Task-Number!\n")
