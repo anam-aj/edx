@@ -38,7 +38,8 @@ def main():
             for number, task in enumerate(my_list):
                 print(f"{number + 1}: {task}")
         elif choice == '2':
-
+            task = input('Please enter task: ')
+            
 
 
         else:
