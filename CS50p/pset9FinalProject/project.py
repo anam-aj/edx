@@ -97,7 +97,7 @@ def menu():
     # Diplay menu items
     print("Please select the option number from below")
     for number, option in enumerate(menu):
-        print(f"{number + 1}: {option}")
+        print(colored(f"{number + 1}: {option}", "yellow"))
     print()
 
 
