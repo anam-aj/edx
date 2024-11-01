@@ -4,7 +4,7 @@
 class Task:
     def __init__(self, detail):
         self.detail = detail
-        self.status = False
+        self.status = 'Incomplete'
 
     def __str__(self):
         return self.detail
