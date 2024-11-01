@@ -58,10 +58,12 @@ def menu():
 
 def fetch_list(list_object):
     tasks = []
-    
+
     for number, task in enumerate(list_object.task_list):
         list_item = [number + 1, task.detail, task.status]
         tasks.append(list_item)
+
+    return tasks[]
 
 
 main()
