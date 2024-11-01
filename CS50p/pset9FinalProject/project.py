@@ -50,7 +50,7 @@ def main():
             print(f"\n{colored_list}\n")
         # Add Task to the list
         elif choice == '2':
-            task = input('Please enter task below\nTask: ')
+            task = input(colored('Please enter task below\nTask: ', "magenta"))
             task = Task(task)
             my_list.add_task(task)
             print(wrap_text("Task has been succesfully added to list!"))
