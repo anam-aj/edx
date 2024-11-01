@@ -26,27 +26,27 @@ class To_Do_List():
 
 def main():
 
-        my_list = To_Do_List()
+    my_list = To_Do_List()
 
-        while True:
+    while True:
 
-            # Display Menu
-            menu()
+        # Display Menu
+        menu()
 
-            # Ask user choice
-            choice = input("Please enter the option number: ")
+        # Ask user choice
+        choice = input("Please enter the option number: ")
 
-            if choice == '1':
-                for number, task in enumerate(my_list.task_list):
-                    print(f"{number + 1}: {task.detail} - {task.status}")
-            elif choice == '2':
-                task = input('Please enter task: ')
-                task = Task(task)
-                my_list.add_task(task)
-            elif choice == '3':
-                ...
-            else:
-                print("Please enter a valid choice or Enter 'exit' to quit program")
+        if choice == '1':
+            for number, task in enumerate(my_list.task_list):
+                print(f"{number + 1}: {task.detail} - {task.status}")
+        elif choice == '2':
+            task = input('Please enter task: ')
+            task = Task(task)
+            my_list.add_task(task)
+        elif choice == '3':
+            ...
+        else:
+            print("Please enter a valid choice or Enter 'exit' to quit program")
 
 
 def menu():
