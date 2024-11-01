@@ -28,23 +28,25 @@ def main():
 
         my_list = To_Do_List()
 
-        # Display Menu
-        menu()
+        while True:
 
-        # Ask user choice
-        choice = input("Please enter the option number: ")
+            # Display Menu
+            menu()
 
-        if choice == '1':
-            for number, task in enumerate(my_list.task_list):
-                print(f"{number + 1}: {task.detail} - {task.status}")
-        elif choice == '2':
-            task = input('Please enter task: ')
-            task = Task(task)
-            my_list.add_task(task)
-        elif choice == '3':
-            ...
-        else:
-            print("Please enter a valid choice or Enter 'exit' to quit program")
+            # Ask user choice
+            choice = input("Please enter the option number: ")
+
+            if choice == '1':
+                for number, task in enumerate(my_list.task_list):
+                    print(f"{number + 1}: {task.detail} - {task.status}")
+            elif choice == '2':
+                task = input('Please enter task: ')
+                task = Task(task)
+                my_list.add_task(task)
+            elif choice == '3':
+                ...
+            else:
+                print("Please enter a valid choice or Enter 'exit' to quit program")
 
 
 def menu():
