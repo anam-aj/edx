@@ -42,7 +42,7 @@ def main():
             break
         elif choice == '1':
             tasks_list = fetch_list(my_list)
-            print(f"/n{tasks_list}/n")
+            print(f"\n{tasks_list}\n")
         elif choice == '2':
             task = input('Please enter task: ')
             task = Task(task)
@@ -61,7 +61,7 @@ def menu():
     # Diplay menu items
     for number, option in enumerate(menu):
         print(f"{number + 1}: {option}")
-
+    print()
 
 def fetch_list(list_object):
     """Create table of tasks"""
