@@ -39,7 +39,8 @@ def main():
                 print(f"{number + 1}: {task}")
         elif choice == '2':
             task = input('Please enter task: ')
-            
+            task = Task(task)
+            my_list.add_task(task)
 
 
         else:
