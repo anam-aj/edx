@@ -37,8 +37,11 @@ def main():
         # Ask user choice
         choice = input("Please enter the option number: ")
 
-        if choice == '1':
-
+        if choice.lower() == 'exit':
+            break
+        elif choice == '1':
+            tasks_list = fetch_list(my_list)
+            print(tasks_list)
         elif choice == '2':
             task = input('Please enter task: ')
             task = Task(task)
@@ -63,7 +66,7 @@ def fetch_list(list_object):
         list_item = [number + 1, task.detail, task.status]
         tasks.append(list_item)
 
-    return tasks[]
+    return tasks
 
 
 main()
