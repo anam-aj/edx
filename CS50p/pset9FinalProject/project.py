@@ -38,7 +38,6 @@ def main():
 
         # Ask user choice
         choice = input(colored("Please enter the option number: ", "yellow"))
-        print()
 
         # Exit condition
         if choice.lower() == 'exit':
