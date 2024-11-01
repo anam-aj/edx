@@ -52,7 +52,7 @@ def main():
             task = input('Please enter task below\nTask: ')
             task = Task(task)
             my_list.add_task(task)
-            print("Task has been succesfully added to list!\n")
+            print(wrap_text("Task has been succesfully added to list!"))
         # Remove Task
         elif choice == '3':
             # Ask user for task to be removed
