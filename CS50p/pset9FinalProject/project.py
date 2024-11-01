@@ -108,7 +108,7 @@ def fetch_list(list_object):
 
     # Fetch tasks from list_object into list
     for number, task in enumerate(list_object.task_list):
-        list_item = [number + 1, task.detail, task.status]
+        list_item = [number + 1, textwrap.fill(task.detail, width=20), task.status]
         tasks.append(list_item)
 
     # Tabulate all tasks
