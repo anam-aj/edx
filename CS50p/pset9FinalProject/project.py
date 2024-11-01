@@ -33,6 +33,7 @@ def main():
 
         # Ask user choice
         choice = input("Please enter the option number: ")
+        print()
 
         # Exit condition
         if choice.lower() == 'exit':
