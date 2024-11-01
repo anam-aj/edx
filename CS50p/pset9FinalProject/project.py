@@ -52,7 +52,7 @@ def main():
             print("Task has been succesfully added to list!\n")
         # Remove Task
         elif choice == '3':
-            ...
+            task_number = input()
         # Change Task Completion Status
         elif choice == '4':
             ...
