@@ -70,8 +70,9 @@ def main():
                 )
             # Change completion status
             try:
-                completed_task = my_list.delete_task(int(task_number))
-                print(f"Task '{deleted_task}' has been successfully removed!\n")
+                completed_task = my_list.task_list[int(task_number)]
+                completed_task.status = "Complete"
+                print(f"Task '{completed_task}' has been successfully completed!\n")
             except:
                 print("Invalid Task-Number!\n")
         else:
