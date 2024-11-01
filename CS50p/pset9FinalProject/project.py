@@ -41,7 +41,8 @@ def main():
             break
         elif choice == '1':
             tasks_list = fetch_list(my_list)
-            print(tabulate(tasks_list, headers=['No.', 'Task', 'Status']))
+            print(tasks_list)
+            #print(tabulate(tasks_list, headers=['No.', 'Task', 'Status']))
         elif choice == '2':
             task = input('Please enter task: ')
             task = Task(task)
@@ -65,7 +66,8 @@ def fetch_list(list_object):
     for number, task in enumerate(list_object.task_list):
         list_item = [number + 1, task.detail, task.status]
         tasks.append(list_item)
-        #tasks = tabulate(tasks, headers=['No.', 'Task', 'Status'])
+
+    tasks = tabulate(tasks, headers=['No.', 'Task', 'Status'])
 
     return tasks
 
