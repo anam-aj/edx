@@ -50,11 +50,12 @@ def main():
             print("Task has been succesfully added to list!\n")
         # Remove Task
         elif choice == '3':
+            # Ask user for task to be removed
             task_number = input(
                 "Please enter below the task-number to be removed\n"
                 "TaskNumber:  "
                 )
-
+            
             try:
                 deleted_task = my_list.delete_task(int(task_number))
                 print(f"{deleted_task.detail} has been successfully removed!\n")
