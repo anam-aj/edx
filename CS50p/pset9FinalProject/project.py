@@ -36,7 +36,7 @@ def main():
 
         if choice == 1:
             for number, task in enumerate(my_list):
-                print
+                print(f"{number}: {task}")
 
 
         else:
@@ -47,7 +47,7 @@ def menu():
      menu = ("View Tasks", "Add Task", "Remove Task", "Mark Task as Done")
 
         for number, option in enumerate(menu):
-             print(f"{number + 1} : {option}")
+             print(f"{number + 1}: {option}")
 main()
 
 
