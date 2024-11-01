@@ -2,7 +2,7 @@ import textwrap
 from termcolor import colored
 
 # Wrap your text
-wrapped_text = textwrap.fill("Happy Halloween!", width=20)
+wrapped_text = textwrap.fill("Happy Halloween Happy Halloween Happy Halloween !", width=20)
 
 # Split the wrapped text into lines
 lines = wrapped_text.split('\n')
