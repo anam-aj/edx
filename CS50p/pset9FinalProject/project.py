@@ -144,4 +144,5 @@ def wrap_text(text):
 
     return colored_text
 
+
 main()
