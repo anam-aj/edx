@@ -65,7 +65,7 @@ def main():
         elif choice == '4':
             # Ask user for task to be removed
             task_number = input(
-                "Please enter below the task-number to be removed\n"
+                "Please enter below the task-number which is complete\n"
                 "TaskNumber:  "
                 )
         else:
