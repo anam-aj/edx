@@ -1,7 +1,7 @@
 # Program to implement To-Do List
 
 
-class task:
+class Task:
     def __init__(self, detail):
         self.detail = detail
         self.status = False
@@ -23,4 +23,4 @@ class To_Do_List():
 
 def main():
 
-    
+
