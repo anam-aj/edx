@@ -75,6 +75,7 @@ def menu():
         print(f"{number + 1}: {option}")
     print()
 
+
 def fetch_list(list_object):
     """Create table of tasks"""
 
