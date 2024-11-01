@@ -47,6 +47,7 @@ def main():
             task = input('Please enter task: ')
             task = Task(task)
             my_list.add_task(task)
+            print("Task has been succesfully added to list\n")
         elif choice == '3':
             ...
         else:
@@ -59,6 +60,7 @@ def menu():
     menu = ("View Tasks", "Add Task", "Remove Task", "Mark Task as Done")
 
     # Diplay menu items
+    
     for number, option in enumerate(menu):
         print(f"{number + 1}: {option}")
     print()
