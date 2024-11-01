@@ -23,4 +23,7 @@ class To_Do_List():
 
 def main():
     while True:
+
+        menu = ("View Tasks", "Add Task", "Remove Task", "Mark Task as Done")
         
+
