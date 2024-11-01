@@ -59,7 +59,7 @@ def main():
         else:
             print(
                 "\nPlease enter a valid choice"
-                "\nor"
+                "\nOR"
                 "\nEnter 'exit' to quit program\n"
             )
 
