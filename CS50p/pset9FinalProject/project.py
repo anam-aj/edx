@@ -54,6 +54,8 @@ def main():
 
 
 def menu():
+    """Genereate Menu"""
+
     menu = ("View Tasks", "Add Task", "Remove Task", "Mark Task as Done")
 
     # Diplay menu items
@@ -62,6 +64,8 @@ def menu():
 
 
 def fetch_list(list_object):
+    """""""
+
     tasks = []
 
     # Fetch tasks from list object into list
