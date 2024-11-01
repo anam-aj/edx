@@ -118,31 +118,27 @@ def fetch_list(list_object):
 
 def wrap_text(text):
 
+    # Wrap your text
+    wrapped_text = textwrap.fill(text, width=20)
 
-# Wrap your text
-wrapped_text = textwrap.fill("Happy Halloween!", width=20)
+    # Create the top border
+    top_border = "+" + "-" * 22 + "+"
 
-# Split the wrapped text into lines
-lines = wrapped_text.split('\n')
+    # Create the bottom border
+    bottom_border = top_border
 
-# Create the top border
-top_border = "+" + "-" * 22 + "+"
+    # Add side borders to each line
+    boxed_text = [top_border]
+    for line in lines:
+        boxed_text.append("| " + line.ljust(20) + " |")
+    boxed_text.append(bottom_border)
 
-# Create the bottom border
-bottom_border = top_border
+    # Join the boxed text into a single string
+    boxed_text = "\n".join(boxed_text)
 
-# Add side borders to each line
-boxed_text = [top_border]
-for line in lines:
-    boxed_text.append("| " + line.ljust(20) + " |")
-boxed_text.append(bottom_border)
+    # Colorize your text
+    colored_text = colored(boxed_text, "red")
 
-# Join the boxed text into a single string
-boxed_text = "\n".join(boxed_text)
-
-# Colorize your text
-colored_text = colored(boxed_text, "red")
-
-print(colored_text)
+    print(colored_text)
 
 main()
