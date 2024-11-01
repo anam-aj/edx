@@ -37,7 +37,7 @@ def main():
         menu()
 
         # Ask user choice
-        choice = input(colored("Please enter the option number: ", "cyan"))
+        choice = input(colored("Please enter the option number: ", "yellow"))
         print()
 
         # Exit condition
@@ -50,7 +50,7 @@ def main():
             print(f"\n{colored_list}\n")
         # Add Task to the list
         elif choice == '2':
-            task = input(colored('Please enter task below\nTask: ', "magenta"))
+            task = input(colored('Please enter task below\nTask: ', "cyan"))
             task = Task(task)
             my_list.add_task(task)
             print(wrap_text("Task has been succesfully added to list!"))
