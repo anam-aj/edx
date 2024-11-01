@@ -41,10 +41,10 @@ def main():
             task = input('Please enter task: ')
             task = Task(task)
             my_list.add_task(task)
-
-
+        elif choice == '3':
+            ...
         else:
-            print("Please enter a valid choice or Enter 'exit' to quit")
+            print("Please enter a valid choice or Enter 'exit' to quit program")
 
 
 def menu():
