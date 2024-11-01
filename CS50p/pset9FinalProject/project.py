@@ -57,7 +57,7 @@ def menu():
 
 
 def fetch_list(task_list):
-    
+    tasks = []
     for number, task in enumerate(my_list.task_list):
                 print(f"{number + 1}: {task.detail} - {task.status}")
 
