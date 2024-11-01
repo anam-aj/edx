@@ -58,4 +58,8 @@ def menu():
         print(f"{number + 1}: {option}")
 
 
+def fetch_list(task_list):
+    
+
+
 main()
