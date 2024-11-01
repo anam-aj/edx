@@ -65,6 +65,7 @@ def fetch_list(list_object):
     for number, task in enumerate(list_object.task_list):
         list_item = [number + 1, task.detail, task.status]
         tasks.append(list_item)
+        tasks = tabulate(tasks, headers=['S. No.', 'Task', 'Status'])
 
     return tasks
 
