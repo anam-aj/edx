@@ -46,7 +46,7 @@ def main():
         # Display all tasks
         elif choice == '1':
             tasks_list = fetch_list(my_list)
-            colored_list = colored(tasks_list, "Green")
+            colored_list = colored(tasks_list, "blue")
             print(f"\n{colored_list}\n")
         # Add Task to the list
         elif choice == '2':
@@ -141,7 +141,7 @@ def wrap_text(text):
     boxed_text = "\n".join(boxed_text)
 
     # Colorize your text
-    colored_text = colored(boxed_text, "red")
+    colored_text = colored(boxed_text, "green")
 
     return colored_text
 
