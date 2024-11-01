@@ -28,6 +28,8 @@ def main():
         for number, option in enumerate(menu):
              print(f"{number + 1} : {option}")
 
+        choice = input
+
 main()
 
 
