@@ -50,7 +50,11 @@ def main():
             task = Task(task)
             my_list.add_task(task)
             print("Task has been succesfully added to list!\n")
+        # Remove Task
         elif choice == '3':
+            ...
+        # Change Task Completion Status
+        elif choice == '4':
             ...
         else:
             print("Please enter a valid choice or Enter 'exit' to quit program")
