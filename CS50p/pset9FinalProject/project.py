@@ -55,14 +55,12 @@ def main():
                 "Please enter below the task-number to be removed\n"
                 "TaskNumber:  "
                 )
-
+            # Remove task and show confirmation
             try:
                 deleted_task = my_list.delete_task(int(task_number))
                 print(f"Task '{deleted_task}' has been successfully removed!\n")
             except:
                 print("Invalid Task-Number!\n")
-
-
         # Change Task Completion Status
         elif choice == '4':
             ...
