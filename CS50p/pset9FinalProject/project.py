@@ -52,7 +52,12 @@ def main():
             print("Task has been succesfully added to list!\n")
         # Remove Task
         elif choice == '3':
-            task_number = input()
+            task_number = input(
+                "Please enter below the task-number to be removed\n"
+                "TaskNumber:  "
+                )
+        
+
         # Change Task Completion Status
         elif choice == '4':
             ...
