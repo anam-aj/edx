@@ -49,7 +49,7 @@ def main():
             task = input('Please enter task below\nTask: ')
             task = Task(task)
             my_list.add_task(task)
-            print("Task has been succesfully added to list\n")
+            print("Task has been succesfully added to list!\n")
         elif choice == '3':
             ...
         else:
