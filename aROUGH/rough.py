@@ -3,6 +3,7 @@ from termcolor import colored
 
 # Wrap your text
 wrapped_text = textwrap.fill("Haaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa !", width=20)
+print(wrapped_text)
 
 # Split the wrapped text into lines
 lines = wrapped_text.split('\n')
