@@ -41,7 +41,7 @@ def main():
             break
         elif choice == '1':
             tasks_list = fetch_list(my_list)
-            print(tasks_list)
+            print(tabulate(tasks_list, headers=['No.', 'Task', 'Status']))
         elif choice == '2':
             task = input('Please enter task: ')
             task = Task(task)
