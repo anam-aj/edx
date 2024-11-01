@@ -46,7 +46,8 @@ def main():
         # Display all tasks
         elif choice == '1':
             tasks_list = fetch_list(my_list)
-            print(f"\n{tasks_list}\n")
+            colored_list = colored(tasks_list, "Green")
+            print(f"\n{colored_list}\n")
         # Add Task to the list
         elif choice == '2':
             task = input('Please enter task below\nTask: ')
