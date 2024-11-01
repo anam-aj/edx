@@ -29,7 +29,11 @@ def main():
         # Ask user choice
         choice = input("Please enter the option number: ")
 
-        if 
+        if choice == 1:
+            
+
+        else:
+            print("Please enter a valid choice or Enter 'exit' to quit")
 
 
 def menu():
