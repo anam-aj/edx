@@ -37,7 +37,7 @@ def main():
         menu()
 
         # Ask user choice
-        choice = input("Please enter the option number: ")
+        choice = input(colored("Please enter the option number: ", "cyan"))
         print()
 
         # Exit condition
