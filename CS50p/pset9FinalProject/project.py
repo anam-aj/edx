@@ -26,7 +26,7 @@ class To_Do_List():
 
 def main():
 
-        my_list = To_Do_List():
+        my_list = To_Do_List()
 
         # Display Menu
         menu()
@@ -48,10 +48,10 @@ def main():
 
 
 def menu():
-     menu = ("View Tasks", "Add Task", "Remove Task", "Mark Task as Done")
+    menu = ("View Tasks", "Add Task", "Remove Task", "Mark Task as Done")
 
-        for number, option in enumerate(menu):
-             print(f"{number + 1}: {option}")
+    for number, option in enumerate(menu):
+        print(f"{number + 1}: {option}")
+
+
 main()
-
-
