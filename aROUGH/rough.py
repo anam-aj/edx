@@ -1,4 +1,10 @@
-from tabulate import tabulate
+from termcolor import colored
+import textwrap
 
-data = [['Ghost', 100], ['Zombie', 200]]
-print(tabulate(data, headers=['Name', 'Age']))
+# Colorize your text
+colored_text = colored("Happy Halloween!", "red")
+
+# Wrap your text
+wrapped_text = textwrap.fill(colored_text, width=20)
+
+print(wrapped_text)
