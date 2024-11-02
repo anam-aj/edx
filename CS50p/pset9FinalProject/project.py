@@ -71,29 +71,32 @@ def main():
         elif choice == '3':
             # Ask user for task to be removed
             text = ("Please enter below the task-number to be removed\n"
-                "TaskNumber: ")
+                    "TaskNumber: ")
             task_number = input(colored(text, "cyan"))
 
             # Remove task and show confirmation
             try:
                 deleted_task = my_list.delete_task(int(task_number))
                 print(wrap_text(
-                    f"Task '{deleted_task}' has been successfully removed!
-                    \n", "green"))
+                    f"Task '{deleted_task}' has been successfully removed!"
+                    "\n", "green"))
             except:
                 print(wrap_text("Invalid Task-Number!\n", "red"))
 
         # Change Task Completion Status
         elif choice == '4':
             # Ask user for task to be marked as complete
-            text = "Please enter below the task-number which is complete\nTaskNumber: "
+            text = ("Please enter below the task-number which is complete"
+                    "\nTaskNumber: ")
             task_number = input(colored(text, "cyan"))
 
             # Change completion status
             try:
                 completed_task = my_list.task_list[int(task_number)]
                 completed_task.status = "Complete"
-                print(wrap_text(f"Task '{completed_task}' has been successfully completed!\n", "green"))
+                print(wrap_text(
+                    f"Task '{completed_task}' has been successfully completed!
+                    "\n", "green"))
             except:
                 print(wrap_text("Invalid Task-Number!\n", "red"))
         else:
@@ -103,7 +106,8 @@ def main():
 def menu():
     """Genereate Menu"""
 
-    menu = ("View Tasks", "Add Task", "Remove Task", "Mark Task as Done", "Exit program")
+    menu = ("View Tasks", "Add Task", "Remove Task", "Mark Task as Done",
+            "Exit program")
 
     # Diplay menu items
     print(colored("\nSelect the option number from below", "yellow"))
