@@ -58,10 +58,11 @@ def main():
         # Remove Task
         elif choice == '3':
             # Ask user for task to be removed
-            task_number = input(
-                "Please enter below the task-number to be removed\n"
-                "TaskNumber:  "
-                )
+            text = ("Please enter below the task-number to be removed\n"
+                "TaskNumber: "
+            )
+            task_number = input(colored(text, "cyan"))
+            
             # Remove task and show confirmation
             try:
                 deleted_task = my_list.delete_task(int(task_number))
