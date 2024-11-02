@@ -47,8 +47,8 @@ def main():
         # Display all tasks
         elif choice == '1':
             tasks_list = fetch_list(my_list)
-            #colored_list = colored(tasks_list, "white")
-            print(f"\n{tasks_list}\n")
+            colored_list = colored(tasks_list, "yellow")
+            print(f"\n{colored_list}\n")
 
         # Add Task to the list
         elif choice == '2':
@@ -93,9 +93,9 @@ def menu():
     menu = ("View Tasks", "Add Task", "Remove Task", "Mark Task as Done", "Exit program")
 
     # Diplay menu items
-    print(colored("Select the option number from below", "yellow"))
+    print("Select the option number from below")
     for number, option in enumerate(menu):
-        print(colored(f"{number + 1}: {option}", "yellow"))
+        print(f"{number + 1}: {option}")
     print()
 
 
