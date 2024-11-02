@@ -55,7 +55,7 @@ def main():
             task = input(colored('Enter Task: ', "cyan"))
             task = Task(task)
             my_list.add_task(task)
-            print(wrap_text("Task succesfully added to list!"))
+            print(wrap_text("Task succesfully added to list!", "green"))
 
         # Remove Task
         elif choice == '3':
@@ -66,7 +66,7 @@ def main():
             # Remove task and show confirmation
             try:
                 deleted_task = my_list.delete_task(int(task_number))
-                print(wrap_text(f"Task '{deleted_task}' has been successfully removed!\n"))
+                print(wrap_text(f"Task '{deleted_task}' has been successfully removed!\n", "green"))
             except:
                 print("Invalid Task-Number!\n")
 
@@ -80,7 +80,7 @@ def main():
             try:
                 completed_task = my_list.task_list[int(task_number)]
                 completed_task.status = "Complete"
-                print(wrap_text(f"Task '{completed_task}' has been successfully completed!\n"))
+                print(wrap_text(f"Task '{completed_task}' has been successfully completed!\n", "green"))
             except:
                 print(colored("Invalid Task-Number!\n", "red"))
         else:
