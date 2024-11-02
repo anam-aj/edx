@@ -42,3 +42,4 @@ color = "red"
 result = wrap_text(text, color)
 
 
+print(result)
