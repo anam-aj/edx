@@ -54,6 +54,7 @@ def main():
                 print(f"\n{colored_list}\n")
             else:
                 print(wrap_text("Task list is Empty\n", "red"))
+                
         # Add Task to the list
         elif choice == '2':
             task = input(colored('Enter Task: ', "cyan"))
