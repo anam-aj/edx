@@ -41,12 +41,8 @@ def main():
         # Ask user choice
         choice = input(colored("Please enter the option number: ", "yellow"))
 
-        # Exit condition
-        if choice == "5":
-            break
-
         # Display all tasks
-        elif choice == "1":
+        if choice == "1":
             tasks_list = fetch_list(my_list)
             if tasks_list:
                 # Tabulate all tasks
@@ -110,6 +106,12 @@ def main():
                 )
             except:
                 print(wrap_text("Invalid Task-Number!\n", "red"))
+
+        # Save list and Exit
+        elif choice == "5":
+            save_list(my_list)
+            break
+
         else:
             print(wrap_text("Please enter a valid choice", "red"))
 
