@@ -28,7 +28,9 @@ class To_Do_List():
         task = self.task_list.pop(task_number - 1)
         return task
 
+
 def main():
+    # Create a empty list_object
     my_list = To_Do_List()
 
     while True:
@@ -52,7 +54,7 @@ def main():
             task = input(colored('Enter Task: ', "cyan"))
             task = Task(task)
             my_list.add_task(task)
-            print(wrap_text("Task has been succesfully added to list!"))
+            print(wrap_text("Task succesfully added to list!"))
         # Remove Task
         elif choice == '3':
             # Ask user for task to be removed
