@@ -84,7 +84,7 @@ def main():
             except:
                 print(wrap_text("Invalid Task-Number!\n", "red"))
         else:
-            print(wrap_text("\nPlease enter a valid choice", "red"))
+            print(wrap_text("Please enter a valid choice", "red"))
 
 
 def menu():
