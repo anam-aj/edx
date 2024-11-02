@@ -21,7 +21,7 @@ def test_menu(capsys):
 
 def test_fetch_list():
     task_list = fetch_list(list1)
-    assert task_list[0] == task1
-    assert task_list[1] == task2
+    assert task_list[0].detail == "Buy Pen"
+    assert task_list[1].detail == "Car Wash"
 
 
