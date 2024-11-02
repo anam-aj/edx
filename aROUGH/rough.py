@@ -1,14 +1,6 @@
-from tabulate import tabulate
-from termcolor import colored
 
-data = [
-    ["Red", "Apple"],
-    ["Green", "Lime"],
-    ["Blue", "Berry"]
-]
+li = [2]
+print(li)
+li.pop(0)
+print(li)
 
-table = tabulate(data, headers=["Color", "Fruit"])
-colored_table = colored(table, 'blue')  # This will color the table blue
-
-print(table)
-print(colored_table)
