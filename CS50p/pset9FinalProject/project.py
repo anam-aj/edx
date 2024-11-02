@@ -67,9 +67,7 @@ def main():
         # Remove Task
         elif choice == "3":
             # Ask user for task to be removed
-            text = (
-                "Please enter below the task-number to be removed\nTaskNumber: "
-            )
+            text = "Please enter below the task-number to be removed\nTaskNumber: "
             task_number = input(colored(text, "cyan"))
 
             # Remove task and show confirmation
@@ -78,7 +76,7 @@ def main():
                 print(
                     wrap_text(
                         f"Task '{deleted_task}' has been successfully removed!\n",
-                        "green"
+                        "green",
                     )
                 )
             except:
@@ -88,8 +86,7 @@ def main():
         elif choice == "4":
             # Ask user for task to be marked as complete
             text = (
-                "Please enter below the task-number which is complete"
-                "\nTaskNumber: "
+                "Please enter below the task-number which is complete" "\nTaskNumber: "
             )
             task_number = input(colored(text, "cyan"))
 
@@ -101,7 +98,7 @@ def main():
                     wrap_text(
                         f"Task '{completed_task}' has been successfully completed!"
                         "\n",
-                        "green"
+                        "green",
                     )
                 )
             except:
@@ -158,7 +155,7 @@ def open_list():
 
 
 def save_list(list_object):
-    with open('todolist.pkl', 'wb') as file:
+    with open("todolist.pkl", "wb") as file:
         pickle.dump(list_object, file)
 
 
