@@ -90,7 +90,8 @@ def main():
         elif choice == "4":
             # Ask user for task to be marked as complete
             text = (
-                "Please enter below the task-number which is complete" "\nTaskNumber: "
+                "Please enter below the task-number which is complete"
+                "\nTaskNumber: "
             )
             task_number = input(colored(text, "cyan"))
 
