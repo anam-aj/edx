@@ -9,6 +9,7 @@ from tabulate import tabulate
 
 
 class Task:
+    
     def __init__(self, detail):
         self.detail = detail
         self.status = 'Incomplete'
