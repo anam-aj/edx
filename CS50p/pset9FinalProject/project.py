@@ -25,7 +25,7 @@ class ToDoList():
         self.task_list.append(task)
 
     def delete_task(self, task_number):
-        task = self.task_list.pop(task_number - 2)
+        task = self.task_list.pop(task_number)
         return task
 
 
