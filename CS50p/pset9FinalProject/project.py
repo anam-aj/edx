@@ -36,7 +36,7 @@ def main():
         with open("todolist.pkl", "rb") as file:
             my_list = pickle.load(file)
     except FileNotFoundError:
-        my_list = ToDolist()
+        my_list = ToDoList()
 
     while True:
         # Display Menu
