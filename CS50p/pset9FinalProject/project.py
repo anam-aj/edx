@@ -93,9 +93,9 @@ def menu():
     menu = ("View Tasks", "Add Task", "Remove Task", "Mark Task as Done", "Exit program")
 
     # Diplay menu items
-    print("Select the option number from below")
+    print(colored("Select the option number from below", "yellow"))
     for number, option in enumerate(menu):
-        print(f"{number + 1}: {option}")
+        print(colored(f"{number + 1}: {option}", "yellow"))
     print()
 
 
