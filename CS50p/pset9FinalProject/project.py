@@ -70,7 +70,8 @@ def main():
         # Remove Task
         elif choice == '3':
             # Ask user for task to be removed
-            text = ("Please enter below the task-number to be removed\nTaskNumber: ")
+            text = ("Please enter below the task-number to be removed"
+                    "\nTaskNumber: ")
             task_number = input(colored(text, "cyan"))
 
             # Remove task and show confirmation
