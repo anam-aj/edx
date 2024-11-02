@@ -61,9 +61,7 @@ def main():
         # Remove Task
         elif choice == '3':
             # Ask user for task to be removed
-            text = ("Please enter below the task-number to be removed\n"
-                "TaskNumber: "
-            )
+            text = "Please enter below the task-number to be removed\nTaskNumber: "
             task_number = input(colored(text, "cyan"))
 
             # Remove task and show confirmation
@@ -76,8 +74,7 @@ def main():
         # Change Task Completion Status
         elif choice == '4':
             # Ask user for task to be marked as complete
-            text = "Please enter below the task-number which is complete\n"
-                "TaskNumber: "
+            text = "Please enter below the task-number which is complete\nTaskNumber: "
             task_number = input(colored(text, "cyan"))
 
             # Change completion status
