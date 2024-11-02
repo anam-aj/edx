@@ -49,10 +49,11 @@ def main():
             tasks_list = fetch_list(my_list)
             if tasks_list:
                 # Tabulate all tasks
-                tasks = tabulate(tasks, headers=['No.', 'Task', 'Status'])
-                colored_list = colored(tasks_list, "cyan")
+                tabulated_task_list = tabulate(tasks_list, headers=['No.', 'Task', 'Status'])
+                colored_list = colored(tabulated_task_list, "cyan")
                 print(f"\n{colored_list}\n")
-
+            else:
+                print(wrap_text("Task can not be empty\n", "red"))
         # Add Task to the list
         elif choice == '2':
             task = input(colored('Enter Task: ', "cyan"))
