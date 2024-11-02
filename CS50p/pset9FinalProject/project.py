@@ -76,9 +76,10 @@ def main():
         # Change Task Completion Status
         elif choice == '4':
             # Ask user for task to be marked as complete
+            text = "Please enter below the task-number which is complete\n"
+                "TaskNumber: "
             task_number = input(
-                "Please enter below the task-number which is complete\n"
-                "TaskNumber:  "
+
                 )
             # Change completion status
             try:
