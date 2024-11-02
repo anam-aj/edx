@@ -70,16 +70,14 @@ def main():
         # Remove Task
         elif choice == '3':
             # Ask user for task to be removed
-            text = ("Please enter below the task-number to be removed\n"
-                    "TaskNumber: ")
+            text = ("Please enter below the task-number to be removed\nTaskNumber: ")
             task_number = input(colored(text, "cyan"))
 
             # Remove task and show confirmation
             try:
                 deleted_task = my_list.delete_task(int(task_number))
                 print(wrap_text(
-                    f"Task '{deleted_task}' has been successfully removed!"
-                    "\n", "green"))
+                    f"Task '{deleted_task}' has been successfully removed!\n", "green"))
             except:
                 print(wrap_text("Invalid Task-Number!\n", "red"))
 
@@ -94,9 +92,7 @@ def main():
             try:
                 completed_task = my_list.task_list[int(task_number)]
                 completed_task.status = "Complete"
-                print(wrap_text(
-                    f"Task '{completed_task}' has been successfully completed!
-                    "\n", "green"))
+                print(wrap_text(f"Task '{completed_task}' has been successfully completed!\n", "green"))
             except:
                 print(wrap_text("Invalid Task-Number!\n", "red"))
         else:
