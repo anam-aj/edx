@@ -41,8 +41,8 @@ def test_wrap_text():
     expected = (
         "+----------------------+\n"
         "| This is a test text  |\n"
-        "| to be wrapped and    |\n"
-        "| colorized.           |\n"
+        "|  to be wrapped and   |\n"
+        "|     colorized.       |\n"
         "+----------------------+\n"
     )
     expected_colored = colored(expected, color)
