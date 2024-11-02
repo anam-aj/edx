@@ -17,7 +17,7 @@ class Task:
         return self.detail
 
 
-class To_Do_List():
+class ToDoList():
     def __init__(self):
         self.task_list = []
 
@@ -31,7 +31,7 @@ class To_Do_List():
 
 def main():
     # Create a empty list_object
-    my_list = To_Do_List()
+    my_list = ToDoList()
 
     while True:
         # Display Menu
