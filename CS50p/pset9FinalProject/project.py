@@ -32,12 +32,7 @@ class ToDoList:
 
 
 def main():
-    # Load data into list_object
-    try:
-        with open("todolist.pkl", "rb") as file:
-            my_list = pickle.load(file)
-    except FileNotFoundError:
-        my_list = ToDoList()
+    my_list = open_list()
 
     while True:
         # Display Menu
@@ -150,6 +145,16 @@ def fetch_list(list_object):
         tasks.append(list_item)
 
     return tasks
+
+
+def open_list():
+    try:
+        with open("todolist.pkl", "rb") as file:
+            list_object = pickle.load(file)
+    except FileNotFoundError:
+        list_object = ToDoList()
+
+    return list_object
 
 
 def save_list(list_object):
