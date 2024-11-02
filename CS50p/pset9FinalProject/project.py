@@ -119,7 +119,7 @@ def menu():
         "Add Task",
         "Remove Task",
         "Mark Task as Done",
-        "Exit program",
+        "Save list and Exit program",
     )
 
     # Diplay menu items
