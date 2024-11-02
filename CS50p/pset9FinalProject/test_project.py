@@ -1,8 +1,8 @@
 import pytest
 
 
-from project import Task, ToDoList,menu, fetch_list
-
+from project import Task, ToDoList, menu, fetch_list, wrap_text
+from termcolor import colored
 
 task1 = Task("Buy Pen")
 task2 = Task("Car Wash")
@@ -31,4 +31,18 @@ def test_fetch_list():
     assert task_list[1][2] == "Incomplete"
 
 
-def test_
+def test_wrap_text():
+    text = "this is a test text"
+    color = "red"
+
+    result = wrap_text(text, color)
+
+    expected = (
+        "+----------------------+\n"
+        "| this is a test text  |\n"
+        "+----------------------+\n"
+    )
+
+    expected_coloured = colored(expected, color)
+
+    assert result == expected_coloured
