@@ -8,6 +8,8 @@ task1 = Task("Buy Pen")
 task2 = Task("Car Wash")
 
 list1 = ToDoList()
+list1.add_task(task1)
+list1.add_task(task2)
 
 def test_menu(capsys):
     menu()
@@ -17,5 +19,6 @@ def test_menu(capsys):
     assert "5: Save list and Exit program" in captured.out
 
 
-def test_fetch_list():
-    
+def test_fetch_list(list1):
+
+
