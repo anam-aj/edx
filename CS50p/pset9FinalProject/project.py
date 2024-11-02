@@ -16,6 +16,9 @@ class Task:
     def __str__(self):
         return self.detail
 
+    def mark_complete(self):
+        self.status = 'Complete'
+
 
 class ToDoList():
     def __init__(self):
