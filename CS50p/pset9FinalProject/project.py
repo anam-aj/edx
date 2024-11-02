@@ -78,9 +78,7 @@ def main():
             # Ask user for task to be marked as complete
             text = "Please enter below the task-number which is complete\n"
                 "TaskNumber: "
-            task_number = input(
-
-                )
+            task_number = input(colored(text, "cyan"))
             # Change completion status
             try:
                 completed_task = my_list.task_list[int(task_number)]
