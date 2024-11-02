@@ -34,7 +34,6 @@ def main():
     my_list = To_Do_List()
 
     while True:
-
         # Display Menu
         menu()
 
@@ -42,7 +41,7 @@ def main():
         choice = input(colored("Please enter the option number: ", "yellow"))
 
         # Exit condition
-        if choice.lower() == 'exit':
+        if choice == '5':
             break
 
         # Display all tasks
@@ -95,7 +94,7 @@ def main():
 def menu():
     """Genereate Menu"""
 
-    menu = ("View Tasks", "Add Task", "Remove Task", "Mark Task as Done")
+    menu = ("View Tasks", "Add Task", "Remove Task", "Mark Task as Done", "Exit program")
 
     # Diplay menu items
     print(colored("Select the option number from below", "yellow"))
