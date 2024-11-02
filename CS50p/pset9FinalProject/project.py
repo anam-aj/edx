@@ -120,7 +120,7 @@ def fetch_list(list_object):
     return tasks
 
 
-def wrap_text(text):
+def wrap_text(text, color):
 
     # Wrap your text
     wrapped_text = textwrap.fill(text, width=20)
@@ -144,7 +144,7 @@ def wrap_text(text):
     boxed_text = "\n".join(boxed_text)
 
     # Colorize your text
-    colored_text = colored(boxed_text, "green")
+    colored_text = colored(boxed_text, color)
 
     return colored_text
 
