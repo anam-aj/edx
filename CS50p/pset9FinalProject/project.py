@@ -144,7 +144,7 @@ def wrap_text(text, color):
     # Join the boxed text into a single string
     boxed_text = "\n".join(boxed_text)
 
-    # Colorize your text
+    # Colorize text
     colored_text = colored(boxed_text, color)
 
     return colored_text
