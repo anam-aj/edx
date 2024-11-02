@@ -31,18 +31,20 @@ def test_fetch_list():
     assert task_list[1][2] == "Incomplete"
 
 
+
 def test_wrap_text():
-    text = "this is a test text"
+    text = "This is a test text to be wrapped and colorized."
     color = "red"
 
     result = wrap_text(text, color)
 
     expected = (
         "+----------------------+\n"
-        "| this is a test text  |\n"
+        "| This is a test text  |\n"
+        "| to be wrapped and    |\n"
+        "| colorized.           |\n"
         "+----------------------+\n"
     )
+    expected_colored = colored(expected, color)
 
-    expected_coloured = colored(expected, color)
-
-    assert result == expected_coloured
+    assert result == expected_colored
