@@ -86,7 +86,7 @@ def main():
                 completed_task.status = "Complete"
                 print(wrap_text(f"Task '{completed_task}' has been successfully completed!\n"))
             except:
-                print(colored("Invalid Task-Number!\n", "red")
+                print(colored("Invalid Task-Number!\n", "red"))
         else:
             print(colored(
                 "\nPlease enter a valid choice"
