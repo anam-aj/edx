@@ -102,8 +102,7 @@ def main():
 def menu():
     """Genereate Menu"""
 
-    menu = ("View Tasks", "Add Task", "Remove Task", "Mark Task as Done",
-            "Exit program")
+    menu = ("View Tasks", "Add Task", "Remove Task", "Mark Task as Done", "Exit program")
 
     # Diplay menu items
     print(colored("\nSelect the option number from below", "yellow"))
