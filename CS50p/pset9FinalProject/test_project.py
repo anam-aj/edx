@@ -1,7 +1,7 @@
 import pytest
 
 
-from project import Task, ToDoList, menu, fetch_list, wrap_text
+from project import Task, ToDoList, menu, fetch_list, open_list
 from termcolor import colored
 
 task1 = Task("Buy Pen")
@@ -32,19 +32,6 @@ def test_fetch_list():
 
 
 
-def test_wrap_text():
-    text = "This is a test text to be wrapped and colorized."
-    color = "red"
-
-    result = wrap_text(text, color)
-
-    expected = (
-        "+----------------------+\n"
-        "| This is a test text  |\n"
-        "|  to be wrapped and   |\n"
-        "|      colorized.      |\n"
-        "+----------------------+\n"
-    )
-    expected_colored = colored(expected, color)
-
-    assert result == expected_colored
+def test_open_list():
+    result = open_list()
+    assert isinstance(result, ToDoList)
