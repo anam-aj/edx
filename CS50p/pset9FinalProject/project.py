@@ -123,7 +123,7 @@ def fetch_list(list_object):
 
 def wrap_text(text, color):
 
-    # Wrap your text
+    # Wrap text
     wrapped_text = textwrap.fill(text, width=20)
 
     # Split the wrapped text into lines
