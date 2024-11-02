@@ -79,19 +79,20 @@ def main():
             text = "Please enter below the task-number which is complete\n"
                 "TaskNumber: "
             task_number = input(colored(text, "cyan"))
+
             # Change completion status
             try:
                 completed_task = my_list.task_list[int(task_number)]
                 completed_task.status = "Complete"
-                print(f"Task '{completed_task}' has been successfully completed!\n")
+                print(wrap_text(f"Task '{completed_task}' has been successfully completed!\n"))
             except:
-                print("Invalid Task-Number!\n")
+                print(colored("Invalid Task-Number!\n", "red")
         else:
-            print(
+            print(colored(
                 "\nPlease enter a valid choice"
                 "\nOR"
-                "\nEnter 'exit' to quit program\n"
-            )
+                "\nEnter 'exit' to quit program\n", "red"
+            ))
 
 
 def menu():
