@@ -104,7 +104,7 @@ def main():
                 print(
                     wrap_text(
                         f"Task '{completed_task}' has been successfully completed!"
-                        "\n","green"
+                        "\n", "green"
                     )
                 )
             except:
