@@ -90,7 +90,7 @@ def main():
 
             # Change completion status
             try:
-                completed_task = my_list.task_list[int(task_number)]
+                completed_task = my_list.task_list[int(task_number) - 1]
                 completed_task.status = "Complete"
                 print(wrap_text(f"Task '{completed_task}' has been successfully completed!\n", "green"))
             except:
