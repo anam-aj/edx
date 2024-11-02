@@ -58,7 +58,7 @@ def main():
                 my_list.add_task(task)
                 print(wrap_text("Task succesfully added to list!", "green"))
             else:
-                print(wrap_text("ta\n", "red"))
+                print(wrap_text("Task can not be empty\n", "red"))
 
         # Remove Task
         elif choice == '3':
