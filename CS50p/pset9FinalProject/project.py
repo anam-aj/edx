@@ -44,17 +44,20 @@ def main():
         # Exit condition
         if choice.lower() == 'exit':
             break
+
         # Display all tasks
         elif choice == '1':
             tasks_list = fetch_list(my_list)
             #colored_list = colored(tasks_list, "white")
             print(f"\n{tasks_list}\n")
+
         # Add Task to the list
         elif choice == '2':
             task = input(colored('Enter Task: ', "cyan"))
             task = Task(task)
             my_list.add_task(task)
             print(wrap_text("Task succesfully added to list!"))
+
         # Remove Task
         elif choice == '3':
             # Ask user for task to be removed
@@ -69,6 +72,7 @@ def main():
                 print(wrap_text(f"Task '{deleted_task}' has been successfully removed!\n"))
             except:
                 print("Invalid Task-Number!\n")
+
         # Change Task Completion Status
         elif choice == '4':
             # Ask user for task to be marked as complete
