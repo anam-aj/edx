@@ -54,7 +54,7 @@ def main():
                 print(f"\n{colored_list}\n")
             else:
                 print(wrap_text("Task list is Empty\n", "red"))
-                
+
         # Add Task to the list
         elif choice == '2':
             task = input(colored('Enter Task: ', "cyan"))
@@ -88,7 +88,8 @@ def main():
             try:
                 completed_task = my_list.task_list[int(task_number)]
                 completed_task.status = "Complete"
-                print(wrap_text(f"Task '{completed_task}' has been successfully completed!\n", "green"))
+                print(
+                    wrap_text(f"Task '{completed_task}' has been successfully completed!\n", "green"))
             except:
                 print(wrap_text("Invalid Task-Number!\n", "red"))
         else:
