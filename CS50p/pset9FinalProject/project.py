@@ -31,8 +31,12 @@ class ToDoList:
 
 
 def main():
-    # Create a empty list_object
-    my_list = ToDoList()
+    # Load data into list_object
+    try:
+        with open("todolist.pkl", "rb") as file:
+            my_list = pickle.load(file)
+    except FileNotFoundError:
+        my_list = ToDolist()
 
     while True:
         # Display Menu
