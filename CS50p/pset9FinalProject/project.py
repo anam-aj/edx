@@ -47,8 +47,11 @@ def main():
         # Display all tasks
         elif choice == '1':
             tasks_list = fetch_list(my_list)
-            colored_list = colored(tasks_list, "cyan")
-            print(f"\n{colored_list}\n")
+            if tasks_list:
+                # Tabulate all tasks
+                tasks = tabulate(tasks, headers=['No.', 'Task', 'Status'])
+                colored_list = colored(tasks_list, "cyan")
+                print(f"\n{colored_list}\n")
 
         # Add Task to the list
         elif choice == '2':
@@ -111,9 +114,6 @@ def fetch_list(list_object):
     for number, task in enumerate(list_object.task_list):
         list_item = [number + 1, textwrap.fill(task.detail, width=20), task.status]
         tasks.append(list_item)
-
-    # Tabulate all tasks
-    tasks = tabulate(tasks, headers=['No.', 'Task', 'Status'])
 
     return tasks
 
