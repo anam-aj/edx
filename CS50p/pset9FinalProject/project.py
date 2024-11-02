@@ -9,16 +9,16 @@ from tabulate import tabulate
 
 
 class Task:
-    
+
     def __init__(self, detail):
         self.detail = detail
-        self.status = 'Incomplete'
+        self.status = "Incomplete"
 
     def __str__(self):
         return self.detail
 
 
-class ToDoList():
+class ToDoList:
     def __init__(self):
         self.task_list = []
 
@@ -42,16 +42,16 @@ def main():
         choice = input(colored("Please enter the option number: ", "yellow"))
 
         # Exit condition
-        if choice == '5':
+        if choice == "5":
             break
 
         # Display all tasks
-        elif choice == '1':
+        elif choice == "1":
             tasks_list = fetch_list(my_list)
             if tasks_list:
                 # Tabulate all tasks
                 tabulated_task_list = tabulate(
-                    tasks_list, headers=['No.', 'Task', 'Status']
+                    tasks_list, headers=["No.", "Task", "Status"]
                 )
                 colored_list = colored(tabulated_task_list, "cyan")
                 print(f"\n{colored_list}\n")
@@ -59,8 +59,8 @@ def main():
                 print(wrap_text("To-Do list is Empty\n", "red"))
 
         # Add Task to the list
-        elif choice == '2':
-            task = input(colored('Enter Task: ', "cyan"))
+        elif choice == "2":
+            task = input(colored("Enter Task: ", "cyan"))
             if task:
                 task = Task(task)
                 my_list.add_task(task)
@@ -69,32 +69,41 @@ def main():
                 print(wrap_text("Task can not be empty\n", "red"))
 
         # Remove Task
-        elif choice == '3':
+        elif choice == "3":
             # Ask user for task to be removed
-            text = ("Please enter below the task-number to be removed"
-                    "\nTaskNumber: ")
+            text = "Please enter below the task-number to be removed" "\nTaskNumber: "
             task_number = input(colored(text, "cyan"))
 
             # Remove task and show confirmation
             try:
                 deleted_task = my_list.delete_task(int(task_number))
-                print(wrap_text(
-                    f"Task '{deleted_task}' has been successfully removed!\n", "green"))
+                print(
+                    wrap_text(
+                        f"Task '{deleted_task}' has been successfully removed!\n",
+                        "green",
+                    )
+                )
             except:
                 print(wrap_text("Invalid Task-Number!\n", "red"))
 
         # Change Task Completion Status
-        elif choice == '4':
+        elif choice == "4":
             # Ask user for task to be marked as complete
-            text = ("Please enter below the task-number which is complete"
-                    "\nTaskNumber: ")
+            text = (
+                "Please enter below the task-number which is complete" "\nTaskNumber: "
+            )
             task_number = input(colored(text, "cyan"))
 
             # Change completion status
             try:
                 completed_task = my_list.task_list[int(task_number) - 1]
                 completed_task.status = "Complete"
-                print(wrap_text(f"Task '{completed_task}' has been successfully completed!\n", "green"))
+                print(
+                    wrap_text(
+                        f"Task '{completed_task}' has been successfully completed!\n",
+                        "green",
+                    )
+                )
             except:
                 print(wrap_text("Invalid Task-Number!\n", "red"))
         else:
@@ -104,7 +113,13 @@ def main():
 def menu():
     """Genereate Menu"""
 
-    menu = ("View Tasks", "Add Task", "Remove Task", "Mark Task as Done", "Exit program")
+    menu = (
+        "View Tasks",
+        "Add Task",
+        "Remove Task",
+        "Mark Task as Done",
+        "Exit program",
+    )
 
     # Diplay menu items
     print(colored("\nSelect the option number from below", "yellow"))
@@ -132,7 +147,7 @@ def wrap_text(text, color):
     wrapped_text = textwrap.fill(text, width=20)
 
     # Split the wrapped text into lines
-    lines = wrapped_text.split('\n')
+    lines = wrapped_text.split("\n")
 
     # Create the top border
     top_border = "+" + "-" * 22 + "+"
