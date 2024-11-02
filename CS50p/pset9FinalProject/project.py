@@ -45,7 +45,7 @@ def main():
         if choice == "1":
             tasks_list = fetch_list(my_list)
             if tasks_list:
-                # Tabulate all tasks
+                # Tabulate and clorize all tasks
                 tabulated_task_list = tabulate(
                     tasks_list, headers=["No.", "Task", "Status"]
                 )
