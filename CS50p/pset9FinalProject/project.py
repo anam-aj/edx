@@ -47,8 +47,8 @@ def main():
         # Display all tasks
         elif choice == '1':
             tasks_list = fetch_list(my_list)
-            colored_list = colored(tasks_list, "green")
-            print(f"\n{colored_list}\n")
+            #colored_list = colored(tasks_list, "green")
+            print(f"\n{tasks_list}\n")
 
         # Add Task to the list
         elif choice == '2':
