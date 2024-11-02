@@ -66,7 +66,7 @@ def main():
             # Remove task and show confirmation
             try:
                 deleted_task = my_list.delete_task(int(task_number))
-                print(wrap_text(f"Task '{deleted_task}'""has been successfully removed!\n"))
+                print(wrap_text(f"Task '{deleted_task}' has been successfully removed!\n"))
             except:
                 print("Invalid Task-Number!\n")
         # Change Task Completion Status
