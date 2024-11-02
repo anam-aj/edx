@@ -175,7 +175,10 @@ def wrap_text(text, color):
 
     return colored_text
 
+
 def save_list(list_object):
+    with open('todolist.pkl', 'wb') as file:
+        pickle.dump(list_object, file)
 
 
 if __name__ == "__main__":
