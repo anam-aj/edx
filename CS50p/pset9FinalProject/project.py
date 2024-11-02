@@ -82,7 +82,7 @@ def main():
                 print(
                     wrap_text(
                         f"Task '{deleted_task}' has been successfully removed!\n",
-                        "green",
+                        "green"
                     )
                 )
             except:
@@ -105,7 +105,7 @@ def main():
                     wrap_text(
                         f"Task '{completed_task}' has been successfully completed!"
                         "\n",
-                        "green",
+                        "green"
                     )
                 )
             except:
