@@ -49,7 +49,9 @@ def main():
             tasks_list = fetch_list(my_list)
             if tasks_list:
                 # Tabulate all tasks
-                tabulated_task_list = tabulate(tasks_list, headers=['No.', 'Task', 'Status'])
+                tabulated_task_list = tabulate(
+                    tasks_list, headers=['No.', 'Task', 'Status']
+                )
                 colored_list = colored(tabulated_task_list, "cyan")
                 print(f"\n{colored_list}\n")
             else:
@@ -68,7 +70,8 @@ def main():
         # Remove Task
         elif choice == '3':
             # Ask user for task to be removed
-            text = "Please enter below the task-number to be removed\nTaskNumber: "
+            text = "Please enter below the task-number to be removed\n"
+                "TaskNumber: "
             task_number = input(colored(text, "cyan"))
 
             # Remove task and show confirmation
