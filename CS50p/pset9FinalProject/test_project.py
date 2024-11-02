@@ -3,7 +3,8 @@ import pytest
 
 from project import Task, ToDoList,menu, fetch_list
 
-
+task1 = Task("Buy Pen")
+task2 = Task
 def test_menu(capsys):
     menu()
     captured = capsys.readouterr()
@@ -13,4 +14,4 @@ def test_menu(capsys):
 
 
 def test_fetch_list():
-    
+
