@@ -85,10 +85,10 @@ def main():
             except:
                 print(colored("Invalid Task-Number!\n", "red"))
         else:
-            print(colored(
+            print(wrap_text(
                 "\nPlease enter a valid choice"
                 "\nOR"
-                "\nEnter 'exit' to quit program\n", "red"
+                "\nEnter 'exit' to quit program\n"
             ))
 
 
