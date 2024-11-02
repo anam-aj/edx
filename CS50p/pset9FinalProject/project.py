@@ -101,8 +101,8 @@ def main():
                 completed_task.status = "Complete"
                 print(
                     wrap_text(
-                        f"Task '{completed_task}' has been successfully completed!\n",
-                        "green",
+                        f"Task '{completed_task}' has been successfully completed!"
+                        "\n","green"
                     )
                 )
             except:
