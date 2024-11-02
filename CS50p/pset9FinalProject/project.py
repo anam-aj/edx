@@ -16,9 +16,6 @@ class Task:
     def __str__(self):
         return self.detail
 
-    def mark_complete(self):
-        self.status = 'Complete'
-
 
 class ToDoList():
     def __init__(self):
@@ -90,7 +87,7 @@ def main():
             # Change completion status
             try:
                 completed_task = my_list.task_list[int(task_number)]
-                completed_task.mark_complete()
+                completed_task.status = "Complete"
                 print(wrap_text(f"Task '{completed_task}' has been successfully completed!\n", "green"))
             except:
                 print(wrap_text("Invalid Task-Number!\n", "red"))
