@@ -53,9 +53,12 @@ def main():
         # Add Task to the list
         elif choice == '2':
             task = input(colored('Enter Task: ', "cyan"))
-            task = Task(task)
-            my_list.add_task(task)
-            print(wrap_text("Task succesfully added to list!", "green"))
+            if task:
+                task = Task(task)
+                my_list.add_task(task)
+                print(wrap_text("Task succesfully added to list!", "green"))
+            else:
+                print(wrap_text("ta\n", "red"))
 
         # Remove Task
         elif choice == '3':
