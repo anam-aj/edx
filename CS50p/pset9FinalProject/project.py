@@ -53,7 +53,7 @@ def main():
                 colored_list = colored(tabulated_task_list, "cyan")
                 print(f"\n{colored_list}\n")
             else:
-                print(wrap_text("Task can not be empty\n", "red"))
+                print(wrap_text("Task list is Empty\n", "red"))
         # Add Task to the list
         elif choice == '2':
             task = input(colored('Enter Task: ', "cyan"))
