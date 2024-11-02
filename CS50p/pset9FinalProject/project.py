@@ -174,4 +174,5 @@ def wrap_text(text, color):
     return colored_text
 
 
-main()
+if __name__ == "__main__":
+    main()
