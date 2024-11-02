@@ -3,6 +3,7 @@ import pytest
 
 from project import Task, ToDoList,menu, fetch_list
 
+
 task1 = Task("Buy Pen")
 task2 = Task("Car Wash")
 
@@ -17,4 +18,4 @@ def test_menu(capsys):
 
 
 def test_fetch_list():
-    ...
+    
