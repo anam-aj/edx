@@ -132,7 +132,7 @@ def wrap_text(text, color):
     # Add side borders to each line
     boxed_text = [top_border]
     for line in lines:
-        boxed_text.append("| " + line.ljust(20) + " |")
+        boxed_text.append("| " + line.center(20) + " |")
     boxed_text.append(bottom_border)
 
     # Join the boxed text into a single string
