@@ -10,7 +10,6 @@ from tabulate import tabulate
 
 
 class Task:
-
     def __init__(self, detail):
         self.detail = detail
         self.status = "Incomplete"
@@ -143,6 +142,7 @@ def fetch_list(list_object):
 
 
 def open_list():
+    """Load list_object and create it if not found"""
     try:
         with open("todolist.pkl", "rb") as file:
             list_object = pickle.load(file)
@@ -153,11 +153,13 @@ def open_list():
 
 
 def save_list(list_object):
+    """Save list object in binary file"""
     with open("todolist.pkl", "wb") as file:
         pickle.dump(list_object, file)
 
 
 def wrap_text(text, color):
+    """Colorize and Decorate text in a Box"""
 
     # Wrap text
     wrapped_text = textwrap.fill(text, width=20)
