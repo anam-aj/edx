@@ -82,13 +82,9 @@ def main():
                 completed_task.status = "Complete"
                 print(wrap_text(f"Task '{completed_task}' has been successfully completed!\n", "green"))
             except:
-                print(colored("Invalid Task-Number!\n", "red"))
+                print(wrap_text("Invalid Task-Number!\n", "red"))
         else:
-            print(colored(
-                "\nPlease enter a valid choice"
-                "\nOR"
-                "\nEnter 'exit' to quit program\n", "red"
-            ))
+            print(wrap_text("\nPlease enter a valid choice", "red"))
 
 
 def menu():
