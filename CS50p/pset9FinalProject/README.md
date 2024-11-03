@@ -15,7 +15,7 @@ A terminal based "To-Do List" program
 
 ### Description:
 
-Poject's root directory contains 4 files namely
+Project's root directory contains 4 files namely
 
 * project.py : contains the code of the program
 * test_project.py : contains test functions that can be checked with pytest
