@@ -44,7 +44,7 @@ def main():
         if choice == "1":
             tasks_list = fetch_list(my_list)
             if tasks_list:
-                # Tabulate and clorize all tasks
+                # Tabulate and colorize all tasks
                 tabulated_task_list = tabulate(
                     tasks_list, headers=["No.", "Task", "Status"]
                 )
@@ -121,7 +121,7 @@ def main():
 
 
 def menu():
-    """Genereate Menu"""
+    """Generate Menu"""
 
     menu = (
         "View Tasks",
@@ -131,7 +131,7 @@ def menu():
         "Save list and Exit program",
     )
 
-    # Diplay menu items
+    # Display menu items
     print(colored("\nSelect the option number from below", "yellow"))
     for number, option in enumerate(menu):
         print(colored(f"{number + 1}: {option}", "yellow"))
