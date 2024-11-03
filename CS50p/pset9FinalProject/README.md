@@ -3,7 +3,7 @@
 A terminal based "To-Do List" program
 
 
-### Video Demo: https://opulent-chainsaw-4jgvrqprxq4qhqg5r.github.dev/
+### Video Demo: https://youtu.be/nQXkEzX55L0
 
 
 ### pip install libraries:
