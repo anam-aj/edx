@@ -153,6 +153,7 @@ def fetch_list(list_object):
 
 def open_list():
     """Load list_object and create it if not found"""
+
     try:
         with open("todolist.pkl", "rb") as file:
             list_object = pickle.load(file)
@@ -164,6 +165,7 @@ def open_list():
 
 def save_list(list_object):
     """Save list object in binary file"""
+
     with open("todolist.pkl", "wb") as file:
         pickle.dump(list_object, file)
 
