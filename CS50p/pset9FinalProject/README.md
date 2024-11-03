@@ -2,9 +2,9 @@
 
 A terminal based "To-Do List" program
 
-#### Video Demo: https://opulent-chainsaw-4jgvrqprxq4qhqg5r.github.dev/
+### Video Demo: https://opulent-chainsaw-4jgvrqprxq4qhqg5r.github.dev/
 
-#### pip install libraries:
+### pip install libraries:
 
 * textwrap
 * termcolor
@@ -18,7 +18,8 @@ An in-depth paragraph about your project and overview of use.
 
 
 
-## Acknowledgments
+### Acknowledgments
 
-Inspiration, code snippets, etc.
+* #### CS50 Duck:
+        
 
