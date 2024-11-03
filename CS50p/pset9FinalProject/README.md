@@ -63,10 +63,10 @@ Main code file "project.py" contains the following classes and functions:
     It has the choices for menu options stored as a list. It fetches menu items from list, enumerates them and then generate and print a nicely colored formatted menu to user.
 
 #### fetch_list:
-    Takes a 'ToDoList' object as argument, fetch 'Tasks' from it and then generate one string per task contianing the task-number, task-detail and task-status. Returns a list containing all tasks as such formatted strings.
+    Takes a 'ToDoList' object as argument, fetch 'Tasks' from it and then generate one string per task containing the task-number, task-detail and task-status. Returns a list containing all tasks as such formatted strings.
 
 #### open_list:
-    Check if there is a saved file for 'ToDolist' and load it. If not fount instantiate a new 'ToDoList'.
+    Check if there is a saved file for 'ToDolist' and load it. If not found instantiate a new 'ToDoList'.
 
 #### save_list:
     Saves the user generated 'ToDoList' for persistant usage. It uses pickle module to save the file for future retrieval.
