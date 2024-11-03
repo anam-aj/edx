@@ -42,7 +42,6 @@ def main():
 
         # Display all tasks
         if choice == "1":
-            print("----TO DO LIST---- ")
             tasks_list = fetch_list(my_list)
             if tasks_list:
                 # Tabulate and clorize all tasks
@@ -50,7 +49,7 @@ def main():
                     tasks_list, headers=["No.", "Task", "Status"]
                 )
                 colored_list = colored(tabulated_task_list, "cyan")
-                print(f"\n{colored_list}\n")
+                print(f"----TO DO LIST----\n{colored_list}\n")
             else:
                 print(wrap_text("To-Do list is Empty\n", "red"))
 
