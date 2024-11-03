@@ -105,6 +105,8 @@ def main():
                             "green",
                         )
                     )
+                else:
+                    raise ValueError
             except:
                 print(wrap_text("Invalid Task-Number!\n", "red"))
 
