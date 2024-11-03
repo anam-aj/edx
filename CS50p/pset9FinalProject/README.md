@@ -37,12 +37,13 @@ and then user is promted for choice with a descriptive message as given below
 user can then enter the option number and then further, easy to follow,
 instructions are displayed on screen.
 
-Main code file "project.py" contains the following classes and functions(other than main):
+Main code file "project.py" contains the following classes and functions:
 
 * Class
     * Task
     * ToDoList
 * Function
+    * main
     * menu
     * fetch_list
     * open_list
@@ -55,9 +56,12 @@ Main code file "project.py" contains the following classes and functions(other t
 #### ToDoList:
     Creates a 'ToDoList' object, intialized with an instance variable 'task_list' which is an empty list when instantiated. This 'task_list' is then used to store 'Task' objects. It has methods 'add_task' and 'delete_task' which adds or deletes 'Task' objects from 'task_list'.
 
+#### main:
+    Contain the core logic of pprogram. It loads  or cre
+
 #### menu:
     It has the choices for menu options stored as list. It fetches menu items from list, enumerates them and then generate and print a nicely colored formatted menu to user.
-    
+
 #### fetch_list:
     Takes a 'ToDoList' object as argument, fetch 'Tasks' from it and format each task as one string per task contianing the task-number, task-detail and task-status. Returns a list of such strings.
 
