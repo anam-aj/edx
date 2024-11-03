@@ -15,9 +15,10 @@ A terminal based "To-Do List" program
 
 ### Description:
 
+A To-do list program that can be run from terminal. 
 
 
-### Acknowledgment: 
+### Acknowledgment:
 
 * #### CS50 Duck
     The duck has been a GREAT help! Saved a lot of time by helping in finding required libraries and helping with syntax usage, thus I could invest my time to focus more on core logic.
