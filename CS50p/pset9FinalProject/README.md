@@ -49,7 +49,21 @@ Main code file "project.py" contains the following classes and functions(other t
     * save_list
     * wrap_text
 
+#### Task:
+Creates an 'Task' object with two attributes namely 'detail' and 'status'. 'detail' contains the description of task and 'status' represent wether task is complete or not.
+
+#### ToDoList:
+
 #### menu:
+It has the choices for menu options stored as list. It fetches menu items from list, enumerates them and then generate and print a nicely formatted menu to user.
+
+#### fetch_list:
+
+#### open_list:
+
+#### save_list:
+
+#### wrap_text:
 
 
 ### Acknowledgment:
