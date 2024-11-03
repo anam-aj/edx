@@ -22,7 +22,7 @@ Poject's root directory contains 4 files namely
 * requirements.txt : contains information about libraires required
 * README.md : Detailed description of project
 
-It is a To-do list program which can be completely run from terminal. I made it very easy to use. One can simply use the program by reading only what is being shown on screen. User friendly feedback messages are displayed making it easy for the user to understand the flow of program.
+It is a To-do list program which can be completely run from terminal. I made it very easy to use. One can simply use the program by reading only what is being shown on screen. User friendly feedback messages are displayed making it easy for the user to understand the working of program. 
 
 When initiated it provides the user a menu of choices namely
 * 1: View Tasks
