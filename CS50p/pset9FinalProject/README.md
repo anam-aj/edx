@@ -71,7 +71,7 @@ Main code file "project.py" contains the following classes and functions(other t
     Helps other function by formatting text. Colorize text and put it in a 'box' for better visibility readability.
 
 
-### Acknowledgment:
+### Acknowledgment: 
 
 * #### CS50 Duck
     The duck has been a GREAT help! Saved a lot of time by helping in finding required libraries and helping with syntax usage, thus I could invest my time to focus more on core logic.
