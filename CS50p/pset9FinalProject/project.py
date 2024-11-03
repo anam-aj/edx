@@ -1,4 +1,4 @@
-# Program to implement a 'To-Do List'
+# Program to implement a 'To-Do List' app
 
 
 import pickle
