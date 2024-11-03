@@ -59,6 +59,7 @@ Main code file "project.py" contains the following classes and functions(other t
     It has the choices for menu options stored as list. It fetches menu items from list, enumerates them and then generate and print a nicely formatted menu to user.
 
 #### fetch_list:
+    Takes a 'ToDoList' object as argument, 
 
 
 #### open_list:
