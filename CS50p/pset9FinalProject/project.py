@@ -141,10 +141,10 @@ def fetch_list(list_object):
     return tasks
 
 
-def open_list(file_name):
+def open_list():
     """Load list_object and create it if not found"""
     try:
-        with open(file_name, "rb") as file:
+        with open("todolist.pkl", "rb") as file:
             list_object = pickle.load(file)
             print(type(list_object))
     except FileNotFoundError:
