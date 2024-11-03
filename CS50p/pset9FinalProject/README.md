@@ -68,7 +68,7 @@ Main code file "project.py" contains the following classes and functions(other t
     Saves the user generated 'ToDoList' for persistant usage. It uses pickle module to
 
 #### wrap_text:
-    Helps other function by formatting text. Takes two arguments Colorize text and put it in a 'box' for better visibility readability.
+    Helps other function by formatting text. Takes two arguments 'text' and 'color'.It colorize the supplied text in the given colour and put it in a 'box' for better visibility and readability.
 
 
 ### Acknowledgment:
