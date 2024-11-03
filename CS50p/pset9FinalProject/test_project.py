@@ -34,5 +34,5 @@ def test_fetch_list():
 
 def test_open_list():
     result = open_list()
-    assert isinstance(result, ToDoList)
+    assert isinstance(result.task_list, list)
 
