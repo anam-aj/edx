@@ -15,7 +15,15 @@ A terminal based "To-Do List" program
 
 ### Description:
 
-A To-do list program that can be run from terminal. 
+A To-do list program that can be run from terminal. Poject's root directory contains 4 files namely
+
+* project.py : contains the code of the program
+* test_project.py : contains test functions that can be checked with pytest
+* requirements.txt : contains information about libraires required
+* README.md : Detailed description of project
+
+
+
 
 
 ### Acknowledgment:
