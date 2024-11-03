@@ -57,7 +57,7 @@ Main code file "project.py" contains the following classes and functions:
     Creates a 'ToDoList' object, intialized with an instance variable 'task_list' which is an empty list when instantiated. This 'task_list' is then used to store 'Task' objects. It has methods 'add_task' and 'delete_task' which adds or deletes 'Task' objects from 'task_list'.
 
 #### main:
-    Contain the core logic of pprogram. It loads  or cre
+    Contain the core logic of pprogram. First, it loads or create a 'TodoList' object then it presents 
 
 #### menu:
     It has the choices for menu options stored as list. It fetches menu items from list, enumerates them and then generate and print a nicely colored formatted menu to user.
