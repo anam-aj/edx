@@ -21,6 +21,6 @@ An in-depth paragraph about your project and overview of use.
 ### Acknowledgment
 
 * #### CS50 Duck
-    The duck has been a GREAT help! Saved a lot of time by helping in finding required libraries and helping with syntax usage. There by 
+    The duck has been a GREAT help! Saved a lot of time by helping in finding required libraries and helping with syntax usage, thus I could invest my time to focus more on core logic.
 
 
