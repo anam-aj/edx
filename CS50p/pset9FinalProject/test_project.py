@@ -1,5 +1,3 @@
-import pytest
-
 from project import Task, ToDoList, menu, fetch_list, open_list, save_list
 
 
