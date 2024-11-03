@@ -56,8 +56,7 @@ Main code file "project.py" contains the following classes and functions(other t
     Creates a 'ToDoList' object, intialized with an instance variable 'task_list' which is an empty list when instantiated. This 'task_list' is then used to store 'Task' objects. It has methods 'add_task' and 'delete_task' which adds or deletes 'Task' objects from 'task_list'.
 
 #### menu:
-    It has the choices for menu options stored as list. It fetches menu items from list, enumerates them and then generate and print a nicely formatted menu to user. It uses Tabulate library
-
+    It has the choices for menu options stored as list. It fetches menu items from list, enumerates them and then generate and print a nicely formatted menu to user.
 #### fetch_list:
     Takes a 'ToDoList' object as argument, fetch 'Tasks' from it and format each task as one string per task contianing the task-number, task-detail and task-status. Returns a list of such strings.
 
