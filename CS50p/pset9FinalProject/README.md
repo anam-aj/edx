@@ -25,7 +25,6 @@ Poject's root directory contains 4 files namely
 It is a To-do list program which can be completely run from terminal. I made it very easy to use. One can simply use the program by reading only what is being shown on screen. User friendly feedback messages are displayed making it easy for the user to understand the flow of program.
 
 When initiated it provides the user a menu of choices namely
-
 * 1: View Tasks
 * 2: Add Task
 * 3: Remove Task
@@ -33,17 +32,25 @@ When initiated it provides the user a menu of choices namely
 * 5: Save list and Exit program
 
 and then user is promted for choice with a descriptive message as given below
-
 * Please enter the option number:
 
 user can then enter the option number and then further, easy to follow,
 instructions are displayed on screen.
 
-project.py contains the following classes and functions:
+Main code file "project.py" contains the following classes and functions(other than main):
 
 * Class
     * Task
-    * 
+    * ToDoList
+* Function
+    * menu
+    * fetch_list
+    * open_list
+    * save_list
+    * wrap_text
+
+#### menu:
+
 
 ### Acknowledgment:
 
