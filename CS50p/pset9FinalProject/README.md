@@ -22,7 +22,7 @@ A To-do list program that can be run from terminal. Poject's root directory cont
 * requirements.txt : contains information about libraires required
 * README.md : Detailed description of project
 
-
+It is a To-
 
 
 
