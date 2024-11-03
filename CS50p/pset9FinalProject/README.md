@@ -39,7 +39,11 @@ and then user is promted for choice with a descriptive message as given below
 user can then enter the option number and then further, easy to follow,
 instructions are displayed on screen.
 
-It contains 2 classes and 
+project.py contains the following classes and functions:
+
+* Class
+    * Task
+    * 
 
 ### Acknowledgment:
 
