@@ -60,7 +60,7 @@ def main():
             if task:
                 task = Task(task)
                 my_list.add_task(task)
-                print(wrap_text("Task succesfully added to list!", "green"))
+                print(wrap_text("Task successfully added to list!", "green"))
             else:
                 print(wrap_text("Task can not be empty\n", "red"))
 
