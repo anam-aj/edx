@@ -10,11 +10,18 @@ list1 = ToDoList()
 list1.add_task(task1)
 list1.add_task(task2)
 
+
 def test_Task():
     assert task1.detail == "Buy Pen"
     assert task1.status == "Incomplete"
     assert task2.detail == "Car Wash"
     assert task2.status == "Incomplete"
+
+
+def test_ToDolist():
+    assert list1.task_list[0] == task1
+    assert list1.task_list[1] == task2
+
 
 def test_menu(capsys):
     menu()
