@@ -21,10 +21,13 @@ def test_menu(capsys):
 
 def test_fetch_list():
     task_list = fetch_list(list1)
+
+    # Test 1st 'task_object'
     assert task_list[0][0] == 1
     assert task_list[0][1] == "Buy Pen"
     assert task_list[0][2] == "Incomplete"
 
+    # Test 2nd 'task_object'
     assert task_list[1][0] == 2
     assert task_list[1][1] == "Car Wash"
     assert task_list[1][2] == "Incomplete"
