@@ -32,11 +32,11 @@ When initiated it provides the user a menu of choices namely
 * 4: Mark Task as Done
 * 5: Save list and Exit program
 
-and then user is promted for choice with a descriptive msg as given below
+and then user is promted for choice with a descriptive message as given below
 
 * Please enter the option number:
 
-user can then enter the option no
+user can then enter the option number
 
 ### Acknowledgment:
 
