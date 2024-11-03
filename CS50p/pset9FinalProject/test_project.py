@@ -1,12 +1,11 @@
-import pytest
+from project import Task, ToDoList, menu, fetch_list, open_list, save_list
 
 
-from project import Task, ToDoList, menu, fetch_list, open_list
-from termcolor import colored
-
+# Sample Tasks for Testing
 task1 = Task("Buy Pen")
 task2 = Task("Car Wash")
 
+# Sample List for Testing
 list1 = ToDoList()
 list1.add_task(task1)
 list1.add_task(task2)
@@ -31,8 +30,7 @@ def test_fetch_list():
     assert task_list[1][2] == "Incomplete"
 
 
-
 def test_open_list():
+    save_list(list1)
     result = open_list()
-    assert isinstance(result.task_list, list)
-
+    assert isinstance(result, ToDoList)

@@ -106,6 +106,7 @@ def main():
             save_list(my_list)
             break
 
+        # Invalid input
         else:
             print(wrap_text("Please enter a valid choice", "red"))
 
