@@ -72,7 +72,7 @@ def main():
             # Remove task and show confirmation
             try:
                 integer = int(task_number)
-                if integer > 0
+                if integer > 0:
                     deleted_task = my_list.delete_task(integer)
                     print(
                         wrap_text(
