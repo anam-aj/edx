@@ -2,9 +2,9 @@
 
 A terminal based "To-Do List" program
 
-#### Video Demo:
+### Video Demo:
 
-#### Description
+### Description:
 
 An in-depth paragraph about your project and overview of use.
 
