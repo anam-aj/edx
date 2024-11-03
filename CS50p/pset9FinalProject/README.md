@@ -36,7 +36,10 @@ and then user is promted for choice with a descriptive message as given below
 
 * Please enter the option number:
 
-user can then enter the option number
+user can then enter the option number and then further, easy to follow,
+instructions are displayed on screen.
+
+
 
 ### Acknowledgment:
 
