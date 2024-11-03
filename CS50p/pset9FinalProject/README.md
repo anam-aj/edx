@@ -1,6 +1,6 @@
-# Project Title
+# To-do App
 
-To-Do App
+A terminal based "To-Do List" program
 
 ## Description
 
