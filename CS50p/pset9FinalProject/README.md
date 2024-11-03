@@ -22,7 +22,7 @@ Poject's root directory contains 4 files namely
 * requirements.txt : contains information about libraires required
 * README.md : Detailed description of project
 
-It is a To-do list program which can be completely run from terminal. I made it very easy to use. One can simply use the program by reading only what is being shown on screen. User friendly feedback messages are displayed making it easy for the user to understand the working of program. Feedback messages and Instructions are colourized and boxed to making it easy to read.
+It is a To-do list program which can be completely run from terminal. It lets user create a 'To-do list' which contains a list of tasks.   I made it very easy to use. One can simply use the program by reading only what is being shown on screen. User friendly feedback messages are displayed making it easy for the user to understand the working of program. Feedback messages and Instructions are colourized and boxed to making it easy to read.
 
 When initiated it provides the user a menu of choices namely
 * 1: View Tasks
@@ -65,10 +65,10 @@ Main code file "project.py" contains the following classes and functions(other t
     Check if there is a saved file for 'ToDolist' and load it. If not fount instantiate a new 'ToDoList'.
 
 #### save_list:
-    Saves the user generated 'ToDoList' for persistant usage. It uses pickle module to 
+    Saves the user generated 'ToDoList' for persistant usage. It uses pickle module to
 
 #### wrap_text:
-    Helps other function by formatting text. Colorize text and put it in a 'box' for better visibility readability.
+    Helps other function by formatting text. Takes two arguments Colorize text and put it in a 'box' for better visibility readability.
 
 
 ### Acknowledgment:
