@@ -94,15 +94,17 @@ def main():
 
             # Change completion status
             try:
-                completed_task = my_list.task_list[int(task_number) - 1]
-                completed_task.status = "Complete"
-                print(
-                    wrap_text(
-                        f"Task '{completed_task}' has been successfully completed!"
-                        "\n",
-                        "green",
+                integer = int(task_number)
+                if integer > 0:
+                    completed_task = my_list.task_list[integer - 1]
+                    completed_task.status = "Complete"
+                    print(
+                        wrap_text(
+                            f"Task '{completed_task}' has been successfully completed!"
+                            "\n",
+                            "green",
+                        )
                     )
-                )
             except:
                 print(wrap_text("Invalid Task-Number!\n", "red"))
 
