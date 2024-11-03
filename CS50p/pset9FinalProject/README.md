@@ -54,10 +54,10 @@ Main code file "project.py" contains the following classes and functions:
     Creates a 'Task' object with two attributes namely 'detail' and 'status'. 'detail' contains the description of task and 'status' represent whether task is complete or not.
 
 #### ToDoList:
-    Creates a 'ToDoList' object, intialized with an instance variable 'task_list' which is an empty list when instantiated. This 'task_list' is then used to store 'Task' objects. It has methods 'add_task' and 'delete_task' which adds or deletes 'Task' objects from 'task_list'.
+    Creates a 'ToDoList' object, initialized with an instance variable 'task_list' which is an empty list when instantiated. This 'task_list' is then used to store 'Task' objects. It has methods 'add_task' and 'delete_task' which adds or deletes 'Task' objects from 'task_list'.
 
 #### main:
-    Contain the core logic of program. It executes the program using other helper funtion. First, it loads or create a 'TodoList' object using 'open_list' function and then it print choices to user using 'menu' function. Next it promts user for choice and then according to the input provided by user carry out the respective operation using corresponding helper function.
+    Contain the core logic of program. It executes the program using other helper functions. First, it loads or create a 'TodoList' object using 'open_list' function and then it print choices to user using 'menu' function. Next it promts user for choice and then according to the input provided by user carry out the respective operation using corresponding helper function.
 
 #### menu:
     It has the choices for menu options stored as a list. It fetches menu items from list, enumerates them and then generate and print a nicely colored formatted menu to user.
