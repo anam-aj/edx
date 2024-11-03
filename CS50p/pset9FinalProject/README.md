@@ -68,7 +68,7 @@ Main code file "project.py" contains the following classes and functions(other t
     Saves the user generated 'ToDoList' for persistant usage.
 
 #### wrap_text:
-    Helps other function in formatting text. Colorize text and put it in a 'box' for better 
+    Helps other function by formatting text. Colorize text and put it in a 'box' for better visibility readability.
 
 
 ### Acknowledgment:
