@@ -20,6 +20,6 @@ An in-depth paragraph about your project and overview of use.
 
 ### Acknowledgments
 
-* #### CS50 Duck:
-        
+* #### CS50 Duck
+
 
