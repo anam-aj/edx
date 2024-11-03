@@ -22,7 +22,7 @@ Project's root directory contains 4 files namely
 * requirements.txt : contains information about libraires required
 * README.md : Detailed description of project
 
-It is a To-do list program which can be completely run from terminal. It lets user create a 'To-do list' which contains a list of tasks. It also gives users the option to view, add, delete task and also mark task as done. When exiting the program it saves the list using pickle module for persistent usage. Program interface is very easy to use. One can simply use the program by reading only what is being shown on screen. User friendly feedback messages are displayed making it easy for the user to understand the working of program. Feedback messages and instructions are colourized and boxed to make it easy to read.
+It is a To-do list program which can be completely run from terminal. It lets user create a 'To-do list' which contains a list of tasks. It also gives users the option to view, add, delete task and also mark task as done. When exiting the program it saves the list using pickle module for persistent usage. Program interface is very easy to use. One can simply use the program by reading only what is being shown on screen. User friendly feedback messages are displayed making it easy for the user to understand the working of program. Feedback messages and instructions are colorized and boxed to make it easy to read.
 
 When program is run it provides the user a menu of choices namely
 * 1: View Tasks
