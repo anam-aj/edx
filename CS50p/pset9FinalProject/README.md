@@ -65,7 +65,7 @@ Main code file "project.py" contains the following classes and functions(other t
     Check if there is a saved file for 'ToDolist' and load it. If not fount instantiate a new 'ToDoList'.
 
 #### save_list:
-    Saves the user generated 'ToDoList' for persistant usage.
+    Saves the user generated 'ToDoList' for persistant usage. It uses pickle module to 
 
 #### wrap_text:
     Helps other function by formatting text. Colorize text and put it in a 'box' for better visibility readability.
