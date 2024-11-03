@@ -26,9 +26,17 @@ It is a To-do list program which can be completely run from terminal. I made it 
 
 When initiated it provides the user a menu of choices namely
 
-*
+* 1: View Tasks
+* 2: Add Task
+* 3: Remove Task
+* 4: Mark Task as Done
+* 5: Save list and Exit program
 
+and then user is promted for choice with a descriptive msg as given below
 
+* Please enter the option number:
+
+user can then enter the option no
 
 ### Acknowledgment:
 
