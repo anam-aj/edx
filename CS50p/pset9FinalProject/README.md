@@ -51,7 +51,7 @@ Main code file "project.py" contains the following classes and functions:
     * wrap_text
 
 #### Task:
-    Creates an 'Task' object with two attributes namely 'detail' and 'status'. 'detail' contains the description of task and 'status' represent whether task is complete or not.
+    Creates a 'Task' object with two attributes namely 'detail' and 'status'. 'detail' contains the description of task and 'status' represent whether task is complete or not.
 
 #### ToDoList:
     Creates a 'ToDoList' object, intialized with an instance variable 'task_list' which is an empty list when instantiated. This 'task_list' is then used to store 'Task' objects. It has methods 'add_task' and 'delete_task' which adds or deletes 'Task' objects from 'task_list'.
