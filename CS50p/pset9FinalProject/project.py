@@ -156,7 +156,7 @@ def open_list():
 
     try:
         with open("todolist.pkl", "rb") as file:
-            list_object = pickle.load(file)
+            list_object = pickle.load(file
     except FileNotFoundError:
         list_object = ToDoList()
 
