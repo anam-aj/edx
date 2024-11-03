@@ -4,15 +4,17 @@ A terminal based "To-Do List" program
 
 ### Video Demo:
 
-### Description:
 
-An in-depth paragraph about your project and overview of use.
 
 #### pip install libraries
 
 * textwrap
 * termcolor
 * tabulate
+
+### Description:
+
+An in-depth paragraph about your project and overview of use.
 
 ## Authors
 
