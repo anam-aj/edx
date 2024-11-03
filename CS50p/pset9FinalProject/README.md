@@ -1,4 +1,4 @@
-# To-do App
+# To-do List App
 
 A terminal based "To-Do List" program
 
