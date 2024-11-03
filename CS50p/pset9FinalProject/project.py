@@ -42,6 +42,7 @@ def main():
 
         # Display all tasks
         if choice == "1":
+            print("----TO DO LIST---- ")
             tasks_list = fetch_list(my_list)
             if tasks_list:
                 # Tabulate and clorize all tasks
