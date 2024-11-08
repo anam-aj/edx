@@ -55,3 +55,18 @@ tbody
     background-color: rgba(179, 208, 255, 0.3);
     font-weight: bold;
 }
+
+.menuBar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: rgb(102, 153, 255);
+}
+
+.MenuItem {
+    background-color: rgb(102, 153, 255);
+    color: red;
+    margin: 10px;
+    text-align: center;
+    /*font-size: 25px;*/
+}
