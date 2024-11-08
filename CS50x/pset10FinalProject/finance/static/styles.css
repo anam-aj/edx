@@ -70,3 +70,15 @@ tbody
     text-align: center;
     /*font-size: 25px;*/
 }
+
+.navbar-brand {
+    margin-right: 10px;
+}
+
+.navbar-nav {
+    flex-direction: row;
+}
+
+.nav-item {
+    margin: 0 10px;
+}
