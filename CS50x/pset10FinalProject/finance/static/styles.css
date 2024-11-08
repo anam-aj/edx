@@ -60,7 +60,7 @@ tbody
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: rgb(102, 153, 255);
+    background-color: rgb(255, 255, 255);
 }
 
 .MenuItem {
