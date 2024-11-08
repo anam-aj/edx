@@ -5,16 +5,6 @@
 {% endblock %}
 
 {% block main %}
-    <table>
-        <thead>
-            <tr>
-                <th>Stock's Symbol</th>
-                <th>No. of Shares</th>
-                <th>Price per Share</th>
-                <th>Method</th>
-                <th>Date and Time</th>
-            </tr>
-        </thead>
 
         <tbody>
             <!-- Loop through the database entries to display them in this table -->
@@ -27,6 +17,13 @@
                     <td>{{ row.date_time }}</td>
                 </tr>
             {% endfor %}
+
+            <div class="card bg-primary text-white" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Card Title</h5>
+                    <p class="card-text">Some text inside the card.</p>
+                </div>
+            </div>
         </tbody>
     </table>
 {% endblock %}
