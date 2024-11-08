@@ -9,21 +9,13 @@
         <tbody>
             <!-- Loop through the database entries to display them in this table -->
             {% for row in transactions_data %}
-                <tr>
-                    <td>{{ row.symbol }}</td>
-                    <td>{{ row.shares }}</td>
-                    <td>{{ row.rate | usd }}</td>
-                    <td>{{ row.method }}</td>
-                    <td>{{ row.date_time }}</td>
-                </tr>
-            {% endfor %}
-
             <div class="card bg-primary text-white" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title">Card Title</h5>
-                    <p class="card-text">Some text inside the card.</p>
+                    <h5 class="card-title">{{ row.symbol }}</h5>
+                    <p class="card-text">{{ row.method }}</p>
                 </div>
             </div>
+            {% endfor %}
         </tbody>
-    </table>
+        
 {% endblock %}
