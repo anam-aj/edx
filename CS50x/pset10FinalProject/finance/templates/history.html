@@ -7,13 +7,17 @@
 {% block main %}
 
     <!-- Loop through the database entries to display them in this table -->
-    {% for row in transactions_data %}
-    <div class="card bg-primary text-white" style="width: 18rem;">
-        <div class="card-body">
-            <h5 class="card-title">{{ row.symbol }}</h5>
-            <p class="card-text">{{ row.method }}</p>
+    <div class="row">
+        {% for row in transactions_data %}
+        <div class="col-md-4"></div>
+            <div class="card bg-primary text-white" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ row.symbol }}</h5>
+                    <p class="card-text">{{ row.method }}</p>
+                </div>
+            </div>
         </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 
 {% endblock %}
