@@ -30,13 +30,6 @@
                 -->
                 <div class="collapse navbar-collapse" id="navbar">
                     {% if session["user_id"] %}
-                        <ul class="navbar-nav me-auto mt-2">
-                            <li class="nav-item"><a class="nav-link" href="/quote">Quote</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/buy">Buy</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/sell">Sell</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/history">History</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/addcash">Add Cash</a></li>
-                        </ul>
                         <ul class="navbar-nav ms-auto mt-2">
                             <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
                         </ul>
@@ -57,7 +50,7 @@
                     {% if session["user_id"] %}
                         <div class="d-flex justify-content-center w-100">
                             <ul class="navbar-nav mt-2">
-                                <h3><li class="nav-item"><a class="nav-link" href="/quote">Quote</a></li></h3>
+                                <h4><li class="nav-item"><a class="nav-link" href="/quote">Quote</a></li></h4>
                                 <li class="nav-item"><a class="nav-link" href="/buy">Buy</a></li>
                                 <li class="nav-item"><a class="nav-link" href="/sell">Sell</a></li>
                                 <li class="nav-item"><a class="nav-link" href="/history">History</a></li>
