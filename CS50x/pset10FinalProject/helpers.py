@@ -92,7 +92,7 @@ def add_note(notes_dictionary, title, detail):
     notes_dictionary[title] = detail
 
 
-def open_list():
+def open_user_notes():
     """Load list_object and create it if not found"""
 
     try:
