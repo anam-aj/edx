@@ -44,7 +44,7 @@ def login():
         # Ensure username was submitted
         if not request.form.get("username"):
             flash("Username required")
-            return render_template('login.html')
+            return render_template("login.html")
         # Ensure password was submitted
         elif not request.form.get("password"):
             flash("password required")
@@ -71,7 +71,6 @@ def login():
         return render_template("login.html")
 
 
-
 @app.route("/")
 @login_required
 def index():
@@ -86,7 +85,9 @@ def index():
     cash = round(cash, 2)
 
     # User's share holdings
-    holdings_dict = db.execute("SELECT * FROM holdings WHERE user_id = ? AND shares > 0", user_id)
+    holdings_dict = db.execute(
+        "SELECT * FROM holdings WHERE user_id = ? AND shares > 0", user_id
+    )
     grand_total = cash
     for row in holdings_dict:
         symbol = row["symbol"]
@@ -98,7 +99,12 @@ def index():
         row["price"] = price
         row["total"] = total
     grand_total = round(grand_total, 2)
-    return render_template("index.html", holdings_data=holdings_dict, user_cash=cash, user_total=grand_total)
+    return render_template(
+        "index.html",
+        holdings_data=holdings_dict,
+        user_cash=cash,
+        user_total=grand_total,
+    )
 
 
 @app.route("/buy", methods=["GET", "POST"])
@@ -142,7 +148,9 @@ def buy():
         # If stock exist
         else:
             # Fetch cash available
-            cash_dict = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+            cash_dict = db.execute(
+                "SELECT cash FROM users WHERE id = ?", session["user_id"]
+            )
             cash = cash_dict[0]["cash"]
 
             # Calculates bill for purchase
@@ -156,35 +164,54 @@ def buy():
             # If user have enough cash, makes the purchase
             else:
                 # Add transaction (to the "transaction" table)
-                userid_dict = db.execute("SELECT id FROM users WHERE id = ?", session["user_id"])
+                userid_dict = db.execute(
+                    "SELECT id FROM users WHERE id = ?", session["user_id"]
+                )
                 user_id = userid_dict[0]["id"]
                 method = "buy"
                 db.execute(
                     "INSERT INTO transactions "
                     "(user_id, symbol, shares, rate, total, method) "
                     "VALUES (?, ?, ?, ?, ?, ?)",
-                    user_id, symbol, shares, share_price, bill, method)
+                    user_id,
+                    symbol,
+                    shares,
+                    share_price,
+                    bill,
+                    method,
+                )
 
                 # Add/Update share holdings (in the "holdings" table)
                 share_dict = db.execute(
-                    "SELECT shares FROM holdings "
-                    "WHERE user_id = ? AND symbol = ?", user_id, symbol)
+                    "SELECT shares FROM holdings " "WHERE user_id = ? AND symbol = ?",
+                    user_id,
+                    symbol,
+                )
                 if share_dict:
                     shares_old = share_dict[0]["shares"]
                     shares_new = shares_old + shares
                     db.execute(
                         "UPDATE holdings SET shares = ? "
                         "WHERE user_id = ? AND symbol = ?",
-                        shares_new, user_id, symbol)
+                        shares_new,
+                        user_id,
+                        symbol,
+                    )
                 else:
-                    db.execute("INSERT INTO holdings "
-                               "(user_id, symbol, shares) "
-                               "VALUES (?, ?, ?)",
-                               user_id, symbol, shares)
+                    db.execute(
+                        "INSERT INTO holdings "
+                        "(user_id, symbol, shares) "
+                        "VALUES (?, ?, ?)",
+                        user_id,
+                        symbol,
+                        shares,
+                    )
 
                 # Update cash (in the "users" table)
                 cash = cash - bill
-                db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, session["user_id"])
+                db.execute(
+                    "UPDATE users SET cash = ? WHERE id = ?", cash, session["user_id"]
+                )
                 return redirect("/")
 
     else:
@@ -221,9 +248,9 @@ def sell():
 
         # Query database to ensure user has enough shares for selling
         shares_dict = db.execute(
-            "SELECT shares FROM holdings "
-            "WHERE user_id = ? AND symbol = ?",
-            session["user_id"], symbol
+            "SELECT shares FROM holdings " "WHERE user_id = ? AND symbol = ?",
+            session["user_id"],
+            symbol,
         )
         shares_avail = shares_dict[0]["shares"]
 
@@ -238,10 +265,14 @@ def sell():
             total = shares * share_price
 
             # Update cash (in "users" table)
-            cash_dict = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+            cash_dict = db.execute(
+                "SELECT cash FROM users WHERE id = ?", session["user_id"]
+            )
             cash = cash_dict[0]["cash"]
             cash = cash + total
-            db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, session["user_id"])
+            db.execute(
+                "UPDATE users SET cash = ? WHERE id = ?", cash, session["user_id"]
+            )
 
             # Add transaction (to "transaction" table)
             method = "sell"
@@ -249,26 +280,37 @@ def sell():
                 "INSERT INTO transactions "
                 "(user_id, symbol, shares, rate, total, method) "
                 "VALUES (?, ?, ?, ?, ?, ?)",
-                session["user_id"], symbol, shares, share_price, total, method)
+                session["user_id"],
+                symbol,
+                shares,
+                share_price,
+                total,
+                method,
+            )
 
             # Update share holding (in "holdings" table)
             share_dict = db.execute(
-                "SELECT shares FROM holdings "
-                "WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
+                "SELECT shares FROM holdings " "WHERE user_id = ? AND symbol = ?",
+                session["user_id"],
+                symbol,
+            )
 
             shares_old = share_dict[0]["shares"]
             shares_new = shares_old - shares
             db.execute(
-                "UPDATE holdings SET shares = ? "
-                "WHERE user_id = ? AND symbol = ?",
-                shares_new, session["user_id"], symbol)
+                "UPDATE holdings SET shares = ? " "WHERE user_id = ? AND symbol = ?",
+                shares_new,
+                session["user_id"],
+                symbol,
+            )
 
             return redirect("/")
     else:
         # If requested via GET
         holdings_dict = db.execute(
-            "SELECT symbol FROM holdings "
-            "WHERE user_id = ? AND shares > 0", session["user_id"])
+            "SELECT symbol FROM holdings " "WHERE user_id = ? AND shares > 0",
+            session["user_id"],
+        )
 
         return render_template("sell.html", data=holdings_dict)
 
@@ -277,7 +319,9 @@ def sell():
 @login_required
 def history():
     """Show history of transactions"""
-    transactions = db.execute("SELECT * FROM transactions WHERE user_id = ?", session["user_id"])
+    transactions = db.execute(
+        "SELECT * FROM transactions WHERE user_id = ?", session["user_id"]
+    )
     return render_template("history.html", transactions_data=transactions)
 
 
@@ -355,7 +399,9 @@ def register():
 
         # Insert user into database if username does not exist already
         try:
-            db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", name, password_hash)
+            db.execute(
+                "INSERT INTO users (username, hash) VALUES(?, ?)", name, password_hash
+            )
             return redirect("/login")
 
         except ValueError:
@@ -391,7 +437,9 @@ def addcash():
             return apology("please enter positive whole number for amount")
 
         # Fetch cash available
-        cash_dict = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+        cash_dict = db.execute(
+            "SELECT cash FROM users WHERE id = ?", session["user_id"]
+        )
         cash = cash_dict[0]["cash"]
 
         # Update cash (in the "users" table)
