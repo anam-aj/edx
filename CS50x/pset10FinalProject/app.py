@@ -42,7 +42,9 @@ def login():
     if request.method == "POST":
         # Ensure username was submitted
         if not request.form.get("username"):
-            return apology("must provide username", 403)
+            flash("Username required")
+
+            #return apology("must provide username", 403)
 
         # Ensure password was submitted
         elif not request.form.get("password"):
