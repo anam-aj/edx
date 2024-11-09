@@ -5,7 +5,7 @@ from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
 from werkzeug.security import check_password_hash, generate_password_hash
 
-from helpers import apology, login_required, lookup, usd
+from helpers import apology, login_required, open_user_notes, lookup, usd
 
 # Configure application
 app = Flask(__name__)
@@ -80,15 +80,9 @@ def index():
     # User_id of logged-in user
     user_id = session["user_id"]
 
-    # Cash available with user
-    user_dict = db.execute("SELECT * FROM users WHERE id = ?", user_id)
-    cash = user_dict[0]["cash"]
-    cash = round(cash, 2)
+    # Fetch user's Notes
+    notes_dictionary = open_user_notes(user_id)
 
-    # User's share holdings
-    holdings_dict = db.execute(
-        "SELECT * FROM holdings WHERE user_id = ? AND shares > 0", user_id
-    )
     grand_total = cash
     for row in holdings_dict:
         symbol = row["symbol"]
