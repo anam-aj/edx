@@ -83,23 +83,8 @@ def index():
     # Fetch user's Notes
     notes_dictionary = open_user_notes(user_id)
 
-    grand_total = cash
-    for row in holdings_dict:
-        symbol = row["symbol"]
-        stock = lookup(symbol)
-        price = stock["price"]
-        shares = row["shares"]
-        total = price * shares
-        grand_total = grand_total + total
-        row["price"] = price
-        row["total"] = total
-    grand_total = round(grand_total, 2)
     return render_template(
-        "index.html",
-        holdings_data=holdings_dict,
-        user_cash=cash,
-        user_total=grand_total,
-    )
+        "index.html", notes_di)
 
 
 @app.route("/buy", methods=["GET", "POST"])
