@@ -88,7 +88,7 @@ def index():
 
 @app.route("/addnote", methods=["GET", "POST"])
 @login_required
-def buy():
+def addnote():
     """Add Note to note list/file"""
 
     # Check if request method is POST
