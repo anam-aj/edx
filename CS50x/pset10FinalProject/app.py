@@ -133,7 +133,7 @@ def removenote():
     if request.method == "POST":
 
         # Get title from user
-        title = request.form.get("title").upper()
+        title = request.form.get("title")
         # Ensure title is given by user
         if not title:
             flash("Please enter Title")
@@ -147,6 +147,7 @@ def removenote():
         save_notes(user_id, notes_dictionary)
 
         return redirect("/")
+
     else:
         # If requested via GET
         holdings_dict = db.execute(
