@@ -89,7 +89,7 @@ def index():
 @app.route("/addnote", methods=["GET", "POST"])
 @login_required
 def addnote():
-    """Add Note to notes collection"""
+    """Add Note to collection"""
 
     # User_id of logged-in user
     user_id = session["user_id"]
@@ -121,10 +121,10 @@ def addnote():
         return render_template("addnote.html")
 
 
-@app.route("/sell", methods=["GET", "POST"])
+@app.route("/removenote", methods=["GET", "POST"])
 @login_required
-def sell():
-    """Sell shares of stock"""
+def removenote():
+    """Remove Note from collection"""
 
     # If requested via POST
     if request.method == "POST":
