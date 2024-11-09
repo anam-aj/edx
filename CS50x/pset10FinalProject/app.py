@@ -122,7 +122,7 @@ def addnote():
 
     else:
         # Renders buy page(user request via GET)
-        return render_template("buy.html")
+        return render_template("addnote.html")
 
 
 @app.route("/sell", methods=["GET", "POST"])
