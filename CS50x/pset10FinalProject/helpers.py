@@ -102,4 +102,3 @@ def open_user_notes(user_id):
         notes_dictionary = {}
 
     return notes_dictionary
-
