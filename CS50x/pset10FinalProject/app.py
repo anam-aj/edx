@@ -86,7 +86,7 @@ def index():
     return render_template("index.html", notes_dictionary=notes_dictionary)
 
 
-@app.route("/buy", methods=["GET", "POST"])
+@app.route("/addnote", methods=["GET", "POST"])
 @login_required
 def buy():
     """Buy shares of stock"""
