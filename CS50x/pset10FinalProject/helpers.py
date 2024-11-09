@@ -93,7 +93,7 @@ def open_user_notes(user_id):
     """Load user notes from saved file OR Create new file if none exist"""
 
     try:
-        with open(f"{user_id}.pkl", "rb") as file:
+        with open(f"savedfiles/{user_id}.pkl", "rb") as file:
             notes_dictionary = pickle.load(file)
     except FileNotFoundError:
         notes_dictionary = {}
@@ -105,5 +105,5 @@ def open_user_notes(user_id):
 def save_notes(user_id, notes_dictionary):
     """Save notes in binary file"""
 
-    with open(f"{user_id}.pkl", "wb") as file:
+    with open(f"savedfiles/{user_id}.pkl", "wb") as file:
         pickle.dump(notes_dictionary, file)
