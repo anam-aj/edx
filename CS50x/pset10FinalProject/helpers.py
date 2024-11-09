@@ -102,3 +102,10 @@ def open_user_notes(user_id):
         notes_dictionary = {}
 
     return notes_dictionary
+
+
+def save_list(user_id):
+    """Save notes in binary file"""
+
+    with open(f"{user_id}.pkl", "wb") as file:
+        pickle.dump(list_object, file)
