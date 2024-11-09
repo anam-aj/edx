@@ -141,7 +141,7 @@ def removenote():
 
         # Delete note from collection
         notes_dictionary = open_user_notes(user_id)
-        notes_dictionary[title] = detail
+        del notes_dictionary[title]
 
         # Save file
         save_notes(user_id, notes_dictionary)
