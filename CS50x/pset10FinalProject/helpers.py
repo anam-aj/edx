@@ -97,7 +97,7 @@ def open_user_notes(user_id):
             notes_dictionary = pickle.load(file)
     except FileNotFoundError:
         notes_dictionary = {}
-        save_list(user_id, notes_dictionary)
+        save_notes(user_id, notes_dictionary)
 
     return notes_dictionary
 
