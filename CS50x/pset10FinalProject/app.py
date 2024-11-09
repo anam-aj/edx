@@ -152,7 +152,7 @@ def removenote():
         # If requested via GET
         notes_dictionary = open_user_notes(user_id)
 
-        return render_template("sell.html", notes_dictionary=notes_dictionary)
+        return render_template("removenote.html", notes_dictionary=notes_dictionary)
 
 
 @app.route("/history")
