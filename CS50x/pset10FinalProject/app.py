@@ -155,16 +155,6 @@ def removenote():
         return render_template("removenote.html", notes_dictionary=notes_dictionary)
 
 
-@app.route("/history")
-@login_required
-def history():
-    """Show history of transactions"""
-    transactions = db.execute(
-        "SELECT * FROM transactions WHERE user_id = ?", session["user_id"]
-    )
-    return render_template("history.html", transactions_data=transactions)
-
-
 @app.route("/logout")
 def logout():
     """Log user out"""
@@ -174,36 +164,6 @@ def logout():
 
     # Redirect user to login form
     return redirect("/")
-
-
-@app.route("/quote", methods=["GET", "POST"])
-@login_required
-def quote():
-    """Get stock quote."""
-
-    # Check if request method is POST
-    if request.method == "POST":
-
-        # Get symbol from user
-        symbol = request.form.get("symbol")
-
-        # Ensure symbol is provided
-        if not symbol:
-            return apology("please enter symbol")
-
-        # Look for stock
-        stock = lookup(symbol)
-
-        # Display stock price if found
-        if stock:
-            price = stock["price"]
-            return render_template("quote_response.html", price=price, symbol=symbol)
-        else:
-            return apology("stock/symbol not found")
-
-    else:
-        # Renders quote page(user request via GET)
-        return render_template("quote.html")
 
 
 @app.route("/register", methods=["GET", "POST"])
