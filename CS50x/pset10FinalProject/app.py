@@ -84,7 +84,7 @@ def index():
     notes_dictionary = open_user_notes(user_id)
 
     return render_template(
-        "index.html", notes_di)
+                "index.html", notes_dictionary)
 
 
 @app.route("/buy", methods=["GET", "POST"])
