@@ -97,9 +97,9 @@ def open_user_notes(user_id):
 
     try:
         with open(f"{user_id}.pkl", "rb") as file:
-            my_notes = pickle.load(file)
+            notes_dictionary = pickle.load(file)
     except FileNotFoundError:
-        list_object = ToDoList()
+        notes_dictionary = {}
 
-    return list_object
+    return notes_dictionary
 
