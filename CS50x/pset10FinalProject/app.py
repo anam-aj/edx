@@ -112,6 +112,7 @@ def addnote():
             return render_template("addnote.html")
 
         notes_dictionary = open_user_notes(user_id)
+        notes_dictionary[title] = detail
 
         return redirect("/")
 
