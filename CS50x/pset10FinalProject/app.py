@@ -95,11 +95,11 @@ def buy():
     if request.method == "POST":
 
         # Get symbol from user
-        symbol = request.form.get("symbol")
+        title = request.form.get("title")
 
         # Ensure symbol is given by user
-        if not symbol:
-            return apology("please enter symbol")
+        if not title:
+            return apology("Please enter Title")
 
         # Get shares from user
         shares = request.form.get("shares")
