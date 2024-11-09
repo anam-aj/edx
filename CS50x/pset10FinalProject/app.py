@@ -89,7 +89,10 @@ def index():
 @app.route("/addnote", methods=["GET", "POST"])
 @login_required
 def addnote():
-    """Add Note to note collection"""
+    """Add Note to notes collection"""
+
+    # User_id of logged-in user
+    user_id = session["user_id"]
 
     # Check if request method is POST
     if request.method == "POST":
@@ -108,7 +111,7 @@ def addnote():
             flash("Please enter Detail")
             return render_template("addnote.html")
 
-        open_user_notes
+        notes_dictionary = open_user_notes(user_id)
 
         return redirect("/")
 
