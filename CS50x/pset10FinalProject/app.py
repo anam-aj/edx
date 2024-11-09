@@ -44,8 +44,7 @@ def login():
         # Ensure username was submitted
         if not request.form.get("username"):
             flash("Username required")
-            return redirect("/login")
-            #return render_template("login.html")
+            return render_template("login.html")
         # Ensure password was submitted
         elif not request.form.get("password"):
             flash("password required")
