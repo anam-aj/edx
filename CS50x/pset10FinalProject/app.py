@@ -98,7 +98,7 @@ def addnote():
     if request.method == "POST":
 
         # Get title from user
-        title = request.form.get("title")
+        title = request.form.get("title").upper()
         # Ensure title is given by user
         if not title:
             flash("Please enter Title")
