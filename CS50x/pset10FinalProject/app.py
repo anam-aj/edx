@@ -43,13 +43,15 @@ def login():
         # Ensure username was submitted
         if not request.form.get("username"):
             flash("Username required")
-            return render_template("login.html")
+            return render_template('/')
 
             #return apology("must provide username", 403)
 
         # Ensure password was submitted
         elif not request.form.get("password"):
-            return apology("must provide password", 403)
+            flash("password required")
+            return render_template("login.html")
+            #return apology("must provide password", 403)
 
         # Query database for username
         rows = db.execute(
