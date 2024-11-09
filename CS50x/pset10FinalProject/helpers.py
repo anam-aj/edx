@@ -93,7 +93,7 @@ def add_note(notes_dictionary, title, detail):
 
 
 def open_user_notes():
-    """Load list_object and create it if not found"""
+    """Load user notes from saved file OR Create new file if none exixs"""
 
     try:
         with open("todolist.pkl", "rb") as file:
