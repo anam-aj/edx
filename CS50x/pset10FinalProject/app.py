@@ -106,10 +106,6 @@ def addnote():
 
         # Get detail from user
         detail = request.form.get("detail")
-        # Ensure detail is given by user
-        if not detail:
-            flash("Please enter Detail")
-            return render_template("addnote.html")
 
         # Add note to collection
         notes_dictionary = open_user_notes(user_id)
