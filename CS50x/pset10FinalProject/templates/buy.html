@@ -7,13 +7,13 @@
 {% block main %}
     <form action="/addnote" method="post">
         <div class="mb-3">
-            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="symbol" placeholder="Symbol" type="text">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="symbol" placeholder="Name" type="text">
         </div>
 
         <div class="mb-3">
-            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="shares" placeholder="Shares" type="number" min="1">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="shares" placeholder="Detail" type="number" min="1">
         </div>
 
-        <button class="btn btn-primary" type="submit">Buy</button>
+        <button class="btn btn-primary" type="submit">AddNote</button>
     </form>
 {% endblock %}
