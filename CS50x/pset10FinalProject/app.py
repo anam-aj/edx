@@ -178,19 +178,21 @@ def register():
 
         # Ensure username is submitted
         if not name:
-            return apology("must provide username")
-
+            flash("must provide username")
+            return render_template("register.html")
         # Ensure password is submitted
         elif not password:
-            return apology("must provide password")
-
+            flash("must provide password")
+            return render_template("register.html")
         # Ensure pasword is re-entered
         elif not re_entered_password:
-            return apology("must re-enter password")
+            flash("must re-enter password")
+            return render_template("register.html")
 
         # Ensure re-entered password matches with password
         elif password != re_entered_password:
-            return apology("re-entered password does not match")
+            flash("re-entered password does not match")
+            return render_template("register.html")
 
         # Hash the user’s password
         password_hash = generate_password_hash(password)
@@ -203,7 +205,8 @@ def register():
             return redirect("/login")
 
         except ValueError:
-            return apology("user name already taken, please use a different username")
+            flash("user name already taken, please use a different username")
+            return render_template("register.html")
 
     else:
         # If request method is GET
