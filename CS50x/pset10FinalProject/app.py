@@ -139,6 +139,12 @@ def removenote():
             flash("Please enter Title")
             return render_template("addnote.html")
 
+        # Delete note from collection
+        notes_dictionary = open_user_notes(user_id)
+        notes_dictionary[title] = detail
+
+        # Save file
+        save_notes(user_id, notes_dictionary)
 
         return redirect("/")
     else:
