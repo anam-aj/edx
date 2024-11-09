@@ -5,7 +5,7 @@ from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
 from werkzeug.security import check_password_hash, generate_password_hash
 
-from helpers import apology, login_required, open_user_notes, lookup, usd
+from helpers import apology, login_required, open_user_notes, open_user_notes
 
 # Configure application
 app = Flask(__name__)
@@ -89,7 +89,7 @@ def index():
 @app.route("/addnote", methods=["GET", "POST"])
 @login_required
 def addnote():
-    """Add Note to note list/file"""
+    """Add Note to note collection"""
 
     # Check if request method is POST
     if request.method == "POST":
@@ -108,7 +108,7 @@ def addnote():
             flash("Please enter Detail")
             return render_template("addnote.html")
 
-        
+        open_user_notes
 
         return redirect("/")
 
