@@ -96,8 +96,8 @@ def open_user_notes(user_id):
     """Load user notes from saved file OR Create new file if none exist"""
 
     try:
-        with open("mynotes.pkl", "rb") as file:
-            list_object = pickle.load(file)
+        with open(f"{user_id}.pkl", "rb") as file:
+            my_no = pickle.load(file)
     except FileNotFoundError:
         list_object = ToDoList()
 
