@@ -88,4 +88,6 @@ def usd(value):
     return f"${value:,.2f}"
 
 
-def user
+def user_data():
+
+    
