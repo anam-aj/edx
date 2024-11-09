@@ -111,8 +111,12 @@ def addnote():
             flash("Please enter Detail")
             return render_template("addnote.html")
 
+        # Add note to collection
         notes_dictionary = open_user_notes(user_id)
         notes_dictionary[title] = detail
+
+        # Save file
+        save_list(user_id, notes_dictionary)
 
         return redirect("/")
 

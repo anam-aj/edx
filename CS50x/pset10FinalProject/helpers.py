@@ -89,10 +89,6 @@ def usd(value):
     return f"${value:,.2f}"
 
 
-def add_note(notes_dictionary, title, detail):
-    notes_dictionary[title] = detail
-
-
 def open_user_notes(user_id):
     """Load user notes from saved file OR Create new file if none exist"""
 
