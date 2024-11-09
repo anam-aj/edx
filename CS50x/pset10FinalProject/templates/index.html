@@ -6,19 +6,5 @@
 
 {% block main %}
 
-    <!-- Loop through the database entries to display them in this table -->
-    <div class="row">
-        {% for row in transactions_data %}
-            <div class="col-md-4">
-                <div class="card bg-light text-dark m-3" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ row.symbol }}</h5>
-                        <p class="card-text">{{ row.method }}</p>
-                        <button class="btn btn-danger" type="submit">Quote</button>
-                    </div>
-                </div>
-            </div>
-        {% endfor %}
-    </div>
 
 {% endblock %}
