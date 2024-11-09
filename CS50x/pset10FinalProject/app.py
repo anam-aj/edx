@@ -29,6 +29,55 @@ def after_request(response):
     return response
 
 
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    """Register user"""
+
+    # Check if request method is POST
+    if request.method == "POST":
+
+        # Get data from form
+        name = request.form.get("username")
+        password = request.form.get("password")
+        re_entered_password = request.form.get("confirmation")
+
+        # Ensure username is submitted
+        if not name:
+            flash("must provide username")
+            return render_template("register.html")
+        # Ensure password is submitted
+        elif not password:
+            flash("must provide password")
+            return render_template("register.html")
+        # Ensure pasword is re-entered
+        elif not re_entered_password:
+            flash("must re-enter password")
+            return render_template("register.html")
+
+        # Ensure re-entered password matches with password
+        elif password != re_entered_password:
+            flash("re-entered password does not match")
+            return render_template("register.html")
+
+        # Hash the user’s password
+        password_hash = generate_password_hash(password)
+
+        # Insert user into database if username does not exist already
+        try:
+            db.execute(
+                "INSERT INTO users (username, hash) VALUES(?, ?)", name, password_hash
+            )
+            return redirect("/login")
+
+        except ValueError:
+            flash("user name already taken, please use a different username")
+            return render_template("register.html")
+
+    else:
+        # If request method is GET
+        return render_template("register.html")
+
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
     """Log user in"""
@@ -164,50 +213,3 @@ def logout():
     return redirect("/")
 
 
-@app.route("/register", methods=["GET", "POST"])
-def register():
-    """Register user"""
-
-    # Check if request method is POST
-    if request.method == "POST":
-
-        # Get data from form
-        name = request.form.get("username")
-        password = request.form.get("password")
-        re_entered_password = request.form.get("confirmation")
-
-        # Ensure username is submitted
-        if not name:
-            flash("must provide username")
-            return render_template("register.html")
-        # Ensure password is submitted
-        elif not password:
-            flash("must provide password")
-            return render_template("register.html")
-        # Ensure pasword is re-entered
-        elif not re_entered_password:
-            flash("must re-enter password")
-            return render_template("register.html")
-
-        # Ensure re-entered password matches with password
-        elif password != re_entered_password:
-            flash("re-entered password does not match")
-            return render_template("register.html")
-
-        # Hash the user’s password
-        password_hash = generate_password_hash(password)
-
-        # Insert user into database if username does not exist already
-        try:
-            db.execute(
-                "INSERT INTO users (username, hash) VALUES(?, ?)", name, password_hash
-            )
-            return redirect("/login")
-
-        except ValueError:
-            flash("user name already taken, please use a different username")
-            return render_template("register.html")
-
-    else:
-        # If request method is GET
-        return render_template("register.html")
