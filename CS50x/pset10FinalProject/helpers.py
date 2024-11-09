@@ -92,11 +92,11 @@ def add_note(notes_dictionary, title, detail):
     notes_dictionary[title] = detail
 
 
-def open_user_notes():
-    """Load user notes from saved file OR Create new file if none exixs"""
+def open_user_notes(user_id):
+    """Load user notes from saved file OR Create new file if none exist"""
 
     try:
-        with open("todolist.pkl", "rb") as file:
+        with open("mynotes.pkl", "rb") as file:
             list_object = pickle.load(file)
     except FileNotFoundError:
         list_object = ToDoList()
