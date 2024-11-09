@@ -58,7 +58,8 @@ def login():
         if len(rows) != 1 or not check_password_hash(
             rows[0]["hash"], request.form.get("password")
         ):
-            return apology("invalid username and/or password", 403)
+            flash("invalid username and/or password")
+            return render_template("login.html")
 
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
