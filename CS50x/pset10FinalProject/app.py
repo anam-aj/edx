@@ -43,8 +43,7 @@ def login():
         # Ensure username was submitted
         if not request.form.get("username"):
             flash("Username required")
-            return render_template('/')
-            #return apology("must provide username", 403)
+            return render_template('login.html')
         # Ensure password was submitted
         elif not request.form.get("password"):
             flash("password required")
