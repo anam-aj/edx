@@ -94,16 +94,16 @@ def buy():
     # Check if request method is POST
     if request.method == "POST":
 
-        # Get symbol from user
+        # Get title from user
         title = request.form.get("title")
-        # Ensure symbol is given by user
+        # Ensure title is given by user
         if not title:
             flash("Please enter Title")
             return render_template("addnote.html")
 
-        # Get shares from user
+        # Get detail from user
         detail = request.form.get("detail")
-        # Ensure shares is given by user
+        # Ensure detail is given by user
         if not detail:
             flash("Please enter Detail")
             return render_template("addnote.html")
