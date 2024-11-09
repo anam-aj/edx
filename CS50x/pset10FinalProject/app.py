@@ -75,7 +75,7 @@ def login():
 @app.route("/")
 @login_required
 def index():
-    """Show portfolio of stocks"""
+    """Show Notes"""
 
     # User_id of logged-in user
     user_id = session["user_id"]
