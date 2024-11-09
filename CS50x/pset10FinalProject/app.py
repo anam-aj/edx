@@ -83,8 +83,7 @@ def index():
     # Fetch user's Notes
     notes_dictionary = open_user_notes(user_id)
 
-    return render_template(
-                "index.html", notes_dictionary)
+    return render_template("index.html", notes_dictionary)
 
 
 @app.route("/buy", methods=["GET", "POST"])
