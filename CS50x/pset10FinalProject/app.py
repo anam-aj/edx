@@ -126,87 +126,21 @@ def addnote():
 def removenote():
     """Remove Note from collection"""
 
-    # If requested via POST
+    # User_id of logged-in user
+    user_id = session["user_id"]
+
+    # Check if request method is POST
     if request.method == "POST":
 
-        # Get stock selected by user
-        symbol = request.form.get("symbol")
+        # Get title from user
+        title = request.form.get("title").upper()
+        # Ensure title is given by user
+        if not title:
+            flash("Please enter Title")
+            return render_template("addnote.html")
 
-        # Get shares entered by user
-        shares = request.form.get("shares")
 
-        # Ensure shares is given by user
-        if not shares:
-            return apology("please enter shares")
-
-        # Ensure shares is positive integer
-        try:
-            shares = float(shares)
-            if (shares % 1) != 0 or shares <= 0:
-                return apology("please enter positive whole number for shares")
-            shares = int(shares)
-        except ValueError:
-            return apology("please enter positive whole number for shares")
-
-        # Query database to ensure user has enough shares for selling
-        shares_dict = db.execute(
-            "SELECT shares FROM holdings " "WHERE user_id = ? AND symbol = ?",
-            session["user_id"],
-            symbol,
-        )
-        shares_avail = shares_dict[0]["shares"]
-
-        # Not enough shares
-        if shares_avail < shares:
-            return apology("you do not have enough shares")
-
-        # Enough shares
-        else:
-            # Calculate shares' total price
-            share_price = lookup(symbol)["price"]
-            total = shares * share_price
-
-            # Update cash (in "users" table)
-            cash_dict = db.execute(
-                "SELECT cash FROM users WHERE id = ?", session["user_id"]
-            )
-            cash = cash_dict[0]["cash"]
-            cash = cash + total
-            db.execute(
-                "UPDATE users SET cash = ? WHERE id = ?", cash, session["user_id"]
-            )
-
-            # Add transaction (to "transaction" table)
-            method = "sell"
-            db.execute(
-                "INSERT INTO transactions "
-                "(user_id, symbol, shares, rate, total, method) "
-                "VALUES (?, ?, ?, ?, ?, ?)",
-                session["user_id"],
-                symbol,
-                shares,
-                share_price,
-                total,
-                method,
-            )
-
-            # Update share holding (in "holdings" table)
-            share_dict = db.execute(
-                "SELECT shares FROM holdings " "WHERE user_id = ? AND symbol = ?",
-                session["user_id"],
-                symbol,
-            )
-
-            shares_old = share_dict[0]["shares"]
-            shares_new = shares_old - shares
-            db.execute(
-                "UPDATE holdings SET shares = ? " "WHERE user_id = ? AND symbol = ?",
-                shares_new,
-                session["user_id"],
-                symbol,
-            )
-
-            return redirect("/")
+        return redirect("/")
     else:
         # If requested via GET
         holdings_dict = db.execute(
