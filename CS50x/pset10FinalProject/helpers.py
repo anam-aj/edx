@@ -92,5 +92,14 @@ def add_note(notes_dictionary, title, detail):
     notes_dictionary[title] = detail
 
 
-def 
+def open_list():
+    """Load list_object and create it if not found"""
+
+    try:
+        with open("todolist.pkl", "rb") as file:
+            list_object = pickle.load(file)
+    except FileNotFoundError:
+        list_object = ToDoList()
+
+    return list_object
 
