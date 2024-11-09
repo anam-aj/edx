@@ -150,12 +150,9 @@ def removenote():
 
     else:
         # If requested via GET
-        holdings_dict = db.execute(
-            "SELECT symbol FROM holdings " "WHERE user_id = ? AND shares > 0",
-            session["user_id"],
-        )
+        notes_dictionary = open_user_notes(user_id)
 
-        return render_template("sell.html", data=holdings_dict)
+        return render_template("sell.html", notes_dictionary=notes_dictionary)
 
 
 @app.route("/history")
