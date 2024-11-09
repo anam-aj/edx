@@ -102,7 +102,7 @@ def addnote():
         # Ensure title is given by user
         if not title:
             flash("Please enter Title")
-            return render_template("removenote.html")
+            return render_template("addnote.html")
 
         # Get detail from user
         detail = request.form.get("detail")
@@ -118,7 +118,7 @@ def addnote():
 
     else:
         # Renders buy page(user request via GET)
-        return render_template("addnote.html", )
+        return render_template("addnote.html")
 
 
 @app.route("/removenote", methods=["GET", "POST"])
