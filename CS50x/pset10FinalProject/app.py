@@ -96,33 +96,17 @@ def buy():
 
         # Get symbol from user
         title = request.form.get("title")
-
         # Ensure symbol is given by user
         if not title:
-            return apology("Please enter Title")
+            flash("Please enter Title")
+            return render_template("addnote.html")
 
         # Get shares from user
-        shares = request.form.get("shares")
-
+        detail = request.form.get("detail")
         # Ensure shares is given by user
-        if not shares:
-            return apology("please enter shares")
-
-        # Ensure shares is positive integer
-        try:
-            shares = float(shares)
-            if (shares % 1) != 0 or shares <= 0:
-                return apology("please enter positive whole number for shares")
-            shares = int(shares)
-        except ValueError:
-            return apology("please enter positive whole number for shares")
-
-        # Look for stock
-        stock = lookup(symbol)
-
-        # If stock does not exist
-        if not stock:
-            return apology("stock/symbol not found")
+        if not detail:
+            flash("Please enter Detail")
+            return render_template("addnote.html")
 
         # If stock exist
         else:
