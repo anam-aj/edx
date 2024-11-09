@@ -88,9 +88,9 @@ def usd(value):
     return f"${value:,.2f}"
 
 
-def add_note(title, detail):
+def add_note(notes_dictionary, title, detail):
 
-    notes_dict = {}
-    
+    notes_dictionary[title] = detail
+
 
 
