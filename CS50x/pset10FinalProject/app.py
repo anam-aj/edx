@@ -89,7 +89,7 @@ def index():
 @app.route("/addnote", methods=["GET", "POST"])
 @login_required
 def buy():
-    """Buy shares of stock"""
+    """Add Note to note list/file"""
 
     # Check if request method is POST
     if request.method == "POST":
@@ -108,74 +108,9 @@ def buy():
             flash("Please enter Detail")
             return render_template("addnote.html")
 
-        # If stock exist
-        else:
-            # Fetch cash available
-            cash_dict = db.execute(
-                "SELECT cash FROM users WHERE id = ?", session["user_id"]
-            )
-            cash = cash_dict[0]["cash"]
+        
 
-            # Calculates bill for purchase
-            share_price = stock["price"]
-            bill = share_price * shares
-
-            # If user does not have enough cash
-            if cash < bill:
-                return apology("you do not have enough balance")
-
-            # If user have enough cash, makes the purchase
-            else:
-                # Add transaction (to the "transaction" table)
-                userid_dict = db.execute(
-                    "SELECT id FROM users WHERE id = ?", session["user_id"]
-                )
-                user_id = userid_dict[0]["id"]
-                method = "buy"
-                db.execute(
-                    "INSERT INTO transactions "
-                    "(user_id, symbol, shares, rate, total, method) "
-                    "VALUES (?, ?, ?, ?, ?, ?)",
-                    user_id,
-                    symbol,
-                    shares,
-                    share_price,
-                    bill,
-                    method,
-                )
-
-                # Add/Update share holdings (in the "holdings" table)
-                share_dict = db.execute(
-                    "SELECT shares FROM holdings " "WHERE user_id = ? AND symbol = ?",
-                    user_id,
-                    symbol,
-                )
-                if share_dict:
-                    shares_old = share_dict[0]["shares"]
-                    shares_new = shares_old + shares
-                    db.execute(
-                        "UPDATE holdings SET shares = ? "
-                        "WHERE user_id = ? AND symbol = ?",
-                        shares_new,
-                        user_id,
-                        symbol,
-                    )
-                else:
-                    db.execute(
-                        "INSERT INTO holdings "
-                        "(user_id, symbol, shares) "
-                        "VALUES (?, ?, ?)",
-                        user_id,
-                        symbol,
-                        shares,
-                    )
-
-                # Update cash (in the "users" table)
-                cash = cash - bill
-                db.execute(
-                    "UPDATE users SET cash = ? WHERE id = ?", cash, session["user_id"]
-                )
-                return redirect("/")
+        return redirect("/")
 
     else:
         # Renders buy page(user request via GET)
