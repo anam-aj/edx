@@ -58,7 +58,7 @@ Description of the above mentioned is as follows:
 
         * ##### layout.html
 
-            * parent template that contains the basic structure of all the webpages.
+            * parent template that contains the basic structure of all the webpages. links all the pages to bootstrap
 
         * ##### login.html
         * ##### register.html
