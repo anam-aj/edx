@@ -141,3 +141,8 @@ Description of the above mentioned is as follows:
 
 * #### users.db
     SQL database. Contains one table to store users login credentials i.e. username and hashed-password. Table is Indexed for faster access.
+
+### Acknowledgment:
+
+* #### CS50 Duck
+    The duck has been a GREAT help! Saved a lot of time by helping in finding required libraries and helping with syntax usage, thus I could invest my time to focus more on core logic.
