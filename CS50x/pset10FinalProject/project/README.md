@@ -36,7 +36,7 @@ Description of the above mentioned is as follows:
 
 * #### savedfiles:
 
-    * Notes created by user are saved here. Saved files are created using "user_id" as name of file which is unique for every user.
+    * Notes created by user are saved here. Saved files are created using "user_id" as name of save_file which is unique for every user.
 
 * #### static:
 
@@ -49,4 +49,8 @@ Description of the above mentioned is as follows:
         * addnote.html
         * index.html
         * layout.html
-        * 
+        * login.html
+        * register.html
+        * removenote.html
+
+    "layout.html" is the main file and all other 
