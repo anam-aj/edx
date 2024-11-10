@@ -89,7 +89,7 @@ Description of the above mentioned is as follows:
 
         * #### after_request
             * Executed after each request to the web application.
-            * The function modifies the response headers to prevent caching.
+
 
         * ##### "/register"
             * Renders register page.
