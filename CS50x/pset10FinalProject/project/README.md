@@ -1,16 +1,16 @@
-# To-do List App
+# MyNotes web App
 
-A terminal based "To-Do List" program
+A web app to make notes.
 
 
-### Video Demo: https://youtu.be/nQXkEzX55L0
-
+### Video Demo:
 
 ### pip install libraries:
 
-* textwrap
-* termcolor
-* tabulate
+cs50
+Flask
+Flask-Session
+requests
 
 
 ### Description:
