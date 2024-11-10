@@ -88,8 +88,8 @@ Description of the above mentioned is as follows:
     * Main application file that contains the following function and routes:
 
         * #### after_request
+            * * Ensure responses aren't cached.
             * Executed after each request to the web application.
-
 
         * ##### "/register"
             * Renders register page.
