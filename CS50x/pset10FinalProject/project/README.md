@@ -61,5 +61,7 @@ Description of the above mentioned is as follows:
             * Parent template that contains the basic structure of all the webpages. Bootstraps the webpages and also includes meta tag to make webpages look good on small screen devices like mobile phone.
 
         * ##### login.html
+
+             * 
         * ##### register.html
         * ##### removenote.html
