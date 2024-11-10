@@ -50,7 +50,7 @@ Description of the above mentioned is as follows:
 
         * ##### addnote.html
 
-            * Contains two input fields 'title' and 'detail' and a button 'addnote' which submits the details entered by user to the route "/addnote"
+            * Contains two input fields 'title' and 'detail' and a button 'addnote' which submits the details entered by user to the route "/addnote".
 
         * ##### index.html
 
@@ -62,6 +62,7 @@ Description of the above mentioned is as follows:
 
         * ##### login.html
 
-             * 
+             * Hosts to input field namely 'username' and 'password' and a submit button named 'login'.
+
         * ##### register.html
         * ##### removenote.html
