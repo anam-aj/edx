@@ -211,5 +211,3 @@ def logout():
 
     # Redirect user to login form
     return redirect("/")
-
-
