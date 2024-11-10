@@ -67,6 +67,7 @@ def register():
             db.execute(
                 "INSERT INTO users (username, hash) VALUES(?, ?)", name, password_hash
             )
+            flash("Succesfully Registered")
             return redirect("/login")
 
         except ValueError:
