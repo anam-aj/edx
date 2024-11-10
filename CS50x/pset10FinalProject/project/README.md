@@ -63,7 +63,7 @@ Root directory is named "project" and it contains the following files and folder
     Contains images and the CSS file for styling the pages.
 
 * #### templates:
-    * Contains the HTML templates used in the project as given below where "layout.html" is the main template and all other templates extends this using jinja:
+    Contains the HTML templates used in the project as given below where "layout.html" is the main template and all other templates extends this using jinja:
 
         * ##### addnote.html
             Contains two input fields 'title' and 'detail' and a button 'addnote' which submits the details entered by user to the route "/addnote".
@@ -84,7 +84,8 @@ Root directory is named "project" and it contains the following files and folder
             Dynamically generates a dropdown list of user's notes. Thus provides functionality to select and delete notes.
 
 * #### app.py
-    
+    Main application files thats containd the following routes:
+
 
 * #### helpers.py
 
