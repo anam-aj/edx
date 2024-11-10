@@ -2,15 +2,8 @@
 
 This is a web application that allows users to register, log in, and manage their personal notes. Users can add, view, and remove notes.
 
+
 ### Video Demo:
-
-
-### PIP install libraries:
-
-cs50
-Flask
-Flask-Session
-requests
 
 
 ### Description:
@@ -35,21 +28,26 @@ A Flask app that allows user to store Notes online. It provides user the option 
     * Log in with your credentials.
     * Add, view, and remove notes.
 
+* #### PIP install libraries:
+    * cs50
+    * Flask
+    * Flask-Session
+    * requests
+
 * #### File Structure
     * app.py: Main application file.
     * templates/: HTML templates for rendering web pages.
     * helpers.py: Helper functions for managing notes and user sessions.
 
+### Detailed description of project Structure and Code
 Root directory is named "project" and it contains the following files and folders:
 
 * #### Folders
-
     * savedfiles
     * static
     * templates
 
 * #### Files
-
     * app.py
     * helpers.py
     * README.md
