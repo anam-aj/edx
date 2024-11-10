@@ -54,7 +54,7 @@ Root directory is named "project" and it contains the following files and folder
     * requirements.txt
     * users.db
 
-#### Description of the above mentioned is as follows:
+Description of the above mentioned is as follows:
 
 * #### savedfiles:
     Notes created by user are saved here. Saved files are created using "user_id" as name of save_file which is unique for every user.
@@ -63,7 +63,7 @@ Root directory is named "project" and it contains the following files and folder
     Contains images and the CSS file for styling the pages.
 
 * #### templates:
-    Contains the HTML templates used in the project as given below where "layout.html" is the main template and all other templates extends this using jinja:
+    * Contains the HTML templates used in the project as given below where "layout.html" is the main template and all other templates extends this using jinja:
 
         * ##### addnote.html
             Contains two input fields 'title' and 'detail' and a button 'addnote' which submits the details entered by user to the route "/addnote".
@@ -78,13 +78,25 @@ Root directory is named "project" and it contains the following files and folder
             Hosts two input field namely 'username' and 'password' and a submit button named 'login'.
 
         * ##### register.html
-            Ask user to input 'username' and 'password'. Also mandates to re-enter password for to ensure correctness.
+            Ask user to input 'username' and 'password'. Also mandates re-entering password to ensure correctness.
 
         * ##### removenote.html
             Dynamically generates a dropdown list of user's notes. Thus provides functionality to select and delete notes.
 
 * #### app.py
-    Main application files thats containd the following routes:
+    * Main application file that contains the following routes:
+
+        * ##### /register
+
+        * ##### 
+
+        * #####
+
+        * #####
+
+        * #####
+
+        * #####
 
 
 * #### helpers.py
