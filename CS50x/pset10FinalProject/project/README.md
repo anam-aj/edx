@@ -1,4 +1,4 @@
-# MyNotes web App
+# MyNotes web app
 
 A web app to make notes.
 
@@ -6,7 +6,7 @@ A web app to make notes.
 ### Video Demo:
 
 
-### pip install libraries:
+### PIP install libraries:
 
 cs50
 Flask
@@ -20,4 +20,9 @@ A Flask app that allows user to store Notes online. It provides user the option
 to add and delete notes. Initially user is greeted with a login page. Login
 credentials are stored in SQL database. For unregistered user there is an option
 given the login page itself. After successfully logging in user is taken to home
-page where all user notes are dispalyed as nice formatted cards. 
+page where all user notes are dispalyed as nice formatted cards. Also user is
+provided with menu of options namely "Home", "AddNote", "RemoveNote" upon clicking
+which user is taken to the respective pages.
+
+* Templates used are:
+    *
