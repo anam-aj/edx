@@ -5,7 +5,7 @@ This is a web application that allows users to register, log in, and manage thei
 
 ### Video Demo:
 
-p
+
 ### Description:
 
 A Flask app that allows user to store Notes online. It provides user the option to add and delete notes. Initially user is greeted with a login page. Login credentials are stored in SQL database. For unregistered user there is an option to register themselves given at the login page itself. After successfully logging in user is taken to home page where all user notes are displayed as nicely formatted cards. Also user is provided with menu of options namely "Home", "AddNote", "RemoveNote" upon clicking which user is taken to the respective pages.
