@@ -50,15 +50,15 @@ Description of the above mentioned is as follows:
 
         * ##### addnote.html
 
-            * contains two input fields 'title' and 'detail' and a button 'addnote' which submits the details entered by user to the route "/addnote"
+            * Contains two input fields 'title' and 'detail' and a button 'addnote' which submits the details entered by user to the route "/addnote"
 
         * ##### index.html
 
-            * loops through the user's note's dictionary and dynamically generate and displays the information formatted as cards.
+            * Loops through the user's note's dictionary and dynamically generate and displays the information formatted as cards.
 
         * ##### layout.html
 
-            * parent template that contains the basic structure of all the webpages. links all the pages to bootstrap
+            * Parent template that contains the basic structure of all the webpages. Bootstraps the webpages and also includes meta tag to make webpages look good on small screen devices like mobile phone.
 
         * ##### login.html
         * ##### register.html
