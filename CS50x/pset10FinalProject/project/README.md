@@ -119,6 +119,9 @@ Description of the above mentioned is as follows:
             * Logs user out
 
 * #### helpers.py
+    * Contains the following helper functions
+
+        * #####
 
 
 * #### README.md
