@@ -86,17 +86,18 @@ Description of the above mentioned is as follows:
 * #### app.py
     * Main application file that contains the following routes:
 
-        * ##### /register
+        * ##### "/register"
+            
 
-        * ##### 
+        * ##### "/login"
 
-        * #####
+        * ##### "/"
 
-        * #####
+        * ##### "/addnote"
 
-        * #####
+        * ##### "/removenote"
 
-        * #####
+        * ##### "/logout"
 
 
 * #### helpers.py
