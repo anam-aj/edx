@@ -38,6 +38,15 @@ Description of the above mentioned is as follows:
 
     * Notes created by user are saved here. Saved files are created using "user_id" as name of file which is unique for every user.
 
-* #### savedfiles:
+* #### static:
 
-* #### savedfiles:
+    * Contains images and the CSS file for styling the pages.
+
+* #### templates:
+
+    * Contains the HTML templates used in the project namely:
+
+        * addnote.html
+        * index.html
+        * layout.html
+        * 
