@@ -140,7 +140,7 @@ Description of the above mentioned is as follows:
     List of pip installable libraries.
 
 * #### users.db
-    SQL database. Contains one table to store users login credentials i.e. username and hashed-password. Table is Indexed for faster access.
+    SQL database. Contains table to store users login credentials i.e. username and hashed-password. Table is Indexed for faster access.
 
 ### Acknowledgment:
 
