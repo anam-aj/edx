@@ -85,7 +85,10 @@ Description of the above mentioned is as follows:
             Dynamically generates a dropdown list of user's notes. Thus provides functionality to select and delete notes.
 
 * #### app.py
-    * Main application file that contains the following routes:
+    * Main application file that contains the following function and routes:
+
+        * #### after_request
+            * executed after each request to the web application. The function modifies the response headers to prevent caching by setting specific cache control directives. It then returns the modified response.
 
         * ##### "/register"
             * Renders register page.
