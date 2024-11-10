@@ -5,6 +5,7 @@ A web app to make notes.
 
 ### Video Demo:
 
+
 ### pip install libraries:
 
 cs50
@@ -15,4 +16,4 @@ requests
 
 ### Description:
 
-A Flask app p
+A Flask app that allows user to store Notes online. 
