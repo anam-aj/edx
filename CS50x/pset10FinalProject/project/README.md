@@ -88,9 +88,11 @@ Description of the above mentioned is as follows:
 
         * ##### "/register"
             * When accessed via 'get'
-                * Renders login page.
+                * Renders register page.
             * When accessed via 'post'
-                * it checks for correctness of username and password
+                * ensure username, password and re-enter fields are not empty
+                * ensure re-entered password matches password
+                * 
 
         * ##### "/login"
 
