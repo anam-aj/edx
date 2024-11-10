@@ -57,37 +57,43 @@ Root directory is named "project" and it contains the following files and folder
 #### Description of the above mentioned is as follows:
 
 * #### savedfiles:
-
-    * Notes created by user are saved here. Saved files are created using "user_id" as name of save_file which is unique for every user.
+    Notes created by user are saved here. Saved files are created using "user_id" as name of save_file which is unique for every user.
 
 * #### static:
-
-    * Contains images and the CSS file for styling the pages.
+    Contains images and the CSS file for styling the pages.
 
 * #### templates:
-
     * Contains the HTML templates used in the project as given below where "layout.html" is the main template and all other templates extends this using jinja:
 
         * ##### addnote.html
-
-            * Contains two input fields 'title' and 'detail' and a button 'addnote' which submits the details entered by user to the route "/addnote".
+            Contains two input fields 'title' and 'detail' and a button 'addnote' which submits the details entered by user to the route "/addnote".
 
         * ##### index.html
-
-            * Loops through the user's note's dictionary and dynamically generate and displays the information formatted as cards.
+            Loops through the user's note's dictionary and dynamically generate and displays the information formatted as cards.
 
         * ##### layout.html
-
-            * Parent template that contains the basic structure of all the webpages. Bootstraps the webpages and also includes meta tag to make webpages look good on small screen devices like mobile phone.
+            Parent template that contains the basic structure of all the webpages. Bootstraps the webpages and also includes meta tag to make webpages look good on small screen devices like mobile phone.
 
         * ##### login.html
-
-            * Hosts two input field namely 'username' and 'password' and a submit button named 'login'.
+            Hosts two input field namely 'username' and 'password' and a submit button named 'login'.
 
         * ##### register.html
-            * Ask user to input 'username' and 'password'. Also mandates to re-enter password for to ensure correctness.
+            Ask user to input 'username' and 'password'. Also mandates to re-enter password for to ensure correctness.
 
         * ##### removenote.html
-            * Dynamically generates a dropdown list of user's notes. Thus provides functionality to select and delete notes.
+            Dynamically generates a dropdown list of user's notes. Thus provides functionality to select and delete notes.
 
-* ####
+* #### app.py
+
+
+* #### helpers.py
+
+
+* #### README.md
+
+
+* #### requirements.txt
+
+
+* #### users.db
+
