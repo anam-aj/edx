@@ -63,7 +63,7 @@ Description of the above mentioned is as follows:
     Contains images and the CSS file for styling the pages.
 
 * #### templates:
-    * Contains the HTML templates used in the project as given below where "layout.html" is the main template and all other templates extends this using jinja:
+    * Contains the HTML templates used in the project where "layout.html" is the main template and all other templates extends it:
 
         * ##### addnote.html
             Contains two input fields 'title' and 'detail' and a button 'addnote' which submits the details entered by user to the route "/addnote".
