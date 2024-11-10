@@ -92,7 +92,8 @@ Description of the above mentioned is as follows:
             * When accessed via 'post'
                 * ensure username, password and re-enter fields are not empty
                 * ensure re-entered password matches password
-                * 
+                * hashes the password
+                * stores the user login credentials in SQL database "users.db"
 
         * ##### "/login"
 
