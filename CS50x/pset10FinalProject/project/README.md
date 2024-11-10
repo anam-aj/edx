@@ -1,7 +1,6 @@
 # MyNotes web app
 
-A web app to make notes.
-
+This is a web application that allows users to register, log in, and manage their personal notes. Users can add, view, and remove notes.
 
 ### Video Demo:
 
