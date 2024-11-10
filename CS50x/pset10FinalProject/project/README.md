@@ -87,7 +87,7 @@ Description of the above mentioned is as follows:
     * Main application file that contains the following routes:
 
         * ##### "/register"
-            
+            When accessed via 'get' renders login page. When accessed via 'post' 
 
         * ##### "/login"
 
