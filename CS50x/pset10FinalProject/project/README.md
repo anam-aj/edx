@@ -34,4 +34,4 @@ Root directory is named "project" and it contains the following files and folder
 
 Description of the above mentioned is as follows:
 
-* savedfiles: Notes created by user are saved here. Saved files are created using "user_id" as name of file which is unique for every user. 
+* savedfiles: Notes created by user are saved here. Saved files are created using "user_id" as name of file which is unique for every user.
