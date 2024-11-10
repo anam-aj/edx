@@ -101,13 +101,22 @@ Description of the above mentioned is as follows:
             * Provide relevant feedback to user using 'flash'.
 
         * ##### "/"
+            * Renders home page.
+            * Access users notes using helper function.
+            * Displays user notes formatted as rectangular cards.
 
         * ##### "/addnote"
+            * Renders addnote page.
+            * Lets user enter the 'title' and 'details' of note.
+            * Adds the information to notes collection and save to file.
 
         * ##### "/removenote"
+            * Renders removenote page.
+            * Lets user select the 'title' of note from a dropdown list.
+            * Deletes the note from collection and save the file.
 
         * ##### "/logout"
-
+            * Logs user out
 
 * #### helpers.py
 
