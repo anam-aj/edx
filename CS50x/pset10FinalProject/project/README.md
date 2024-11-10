@@ -89,8 +89,8 @@ Description of the above mentioned is as follows:
         * ##### "/register"
             * Renders register page.
             * Ensure validity of username and password.
-            * Hashes the password.
-            * Stores the user login credentials in SQL database "users.db".
+            * Hashes the password using 'Werkzeug'.
+            * Stores the user login credentials in SQL database 'users.db'.
             * Use placeholders in SQL queries to avoid injection attack.
             * Provide relevant feedback to user using 'flash'.
 
@@ -134,10 +134,10 @@ Description of the above mentioned is as follows:
 
 
 * #### README.md
-    Detailed descrioption of project.
+    Detailed description of project.
 
 * #### requirements.txt
     List of pip installable libraries.
 
 * #### users.db
-    
+    SQL database. Contains one table to store users login credentials i.e. username and hashed-password. Table is Indexed for faster access.
