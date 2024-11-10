@@ -46,7 +46,7 @@ Description of the above mentioned is as follows:
 
 * #### templates:
 
-    * Contains the HTML templates used in the project are given below where "layout.html" is the main template and all other templates extends this using jinja:
+    * Contains the HTML templates used in the project as given below where "layout.html" is the main template and all other templates extends this using jinja:
 
         * ##### addnote.html
 
