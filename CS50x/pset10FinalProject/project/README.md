@@ -49,10 +49,16 @@ Description of the above mentioned is as follows:
     * Contains the HTML templates used in the project are given below where "layout.html" is the main template and all other templates extends this using jinja:
 
         * ##### addnote.html
+
             * contains two input fields 'title' and 'detail' and a button 'addnote' which submits the details entered by user to the route "/addnote"
         * ##### index.html
-            * 
+
+            * loops through the user's note's dictionary and dynamically generate and displays the information formatted as cards.
+
         * ##### layout.html
+
+            * parent template that contains the basic structure of all the webpages. 
+
         * ##### login.html
         * ##### register.html
         * ##### removenote.html
