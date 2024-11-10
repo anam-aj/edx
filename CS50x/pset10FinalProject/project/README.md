@@ -88,7 +88,7 @@ Description of the above mentioned is as follows:
     * Main application file that contains the following function and routes:
 
         * #### after_request
-            * executed after each request to the web application. The function modifies the response headers to prevent caching by setting specific cache control directives. It then returns the modified response.
+            * Executed after each request to the web application. The function modifies the response headers to prevent caching,
 
         * ##### "/register"
             * Renders register page.
