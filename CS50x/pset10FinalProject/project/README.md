@@ -87,15 +87,14 @@ Description of the above mentioned is as follows:
     * Main application file that contains the following routes:
 
         * ##### "/register"
-            * When accessed via 'get'
-                * Renders register page.
-            * When accessed via 'post'
-                * ensure username, password and re-enter fields are not empty
-                * ensure re-entered password matches password
-                * hashes the password
-                * stores the user login credentials in SQL database "users.db"
+            * Renders register page.
+            * Ensure validity of username and password.
+            * Hashes the password
+            * Stores the user login credentials in SQL database "users.db"
+            * Provide relevant feedback to user using 'flash'
 
         * ##### "/login"
+            * 
 
         * ##### "/"
 
