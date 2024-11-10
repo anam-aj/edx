@@ -84,7 +84,7 @@ Root directory is named "project" and it contains the following files and folder
             Dynamically generates a dropdown list of user's notes. Thus provides functionality to select and delete notes.
 
 * #### app.py
-
+    
 
 * #### helpers.py
 
