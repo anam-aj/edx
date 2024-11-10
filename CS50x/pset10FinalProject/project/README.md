@@ -19,10 +19,13 @@ A Flask app that allows user to store Notes online. It provides user the option 
 
 This project is created using Python, Jinja, HTML, CSS, JavaScript and Flask.
 
-    * #### File Structure
+* #### File Structure
 
     * app.py: Main application file.
-    * templates/: HTML templates for rendering web pages.*helpers.py: Helper functions for managing notes and user sessions.
+
+    * templates/: HTML templates for rendering web pages.
+
+    * helpers.py: Helper functions for managing notes and user sessions.
 
 Root directory is named "project" and it contains the following files and folders:
 
