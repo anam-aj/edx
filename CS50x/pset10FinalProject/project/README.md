@@ -17,6 +17,12 @@ requests
 
 A Flask app that allows user to store Notes online. It provides user the option to add and delete notes. Initially user is greeted with a login page. Login credentials are stored in SQL database. For unregistered user there is an option to register themselves given at the login page itself. After successfully logging in user is taken to home page where all user notes are dispalyed as nice formatted cards. Also user is provided with menu of options namely "Home", "AddNote", "RemoveNote" upon clicking which user is taken to the respective pages.
 
+* #### Features
+    * User registration and login
+    * Password hashing for security
+    * Session management
+    * Add, view, and remove notes
+
 * #### Technologies Used
     * Python
     * Flask
@@ -24,11 +30,14 @@ A Flask app that allows user to store Notes online. It provides user the option 
     * CS50 Library
     * Werkzeug for password hashing
 
+* #### Usage
+    * Register a new user account.
+    * Log in with your credentials.
+    * Add, view, and remove notes.
+
 * #### File Structure
     * app.py: Main application file.
-
     * templates/: HTML templates for rendering web pages.
-
     * helpers.py: Helper functions for managing notes and user sessions.
 
 Root directory is named "project" and it contains the following files and folders:
