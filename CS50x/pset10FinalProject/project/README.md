@@ -49,9 +49,9 @@ Description of the above mentioned is as follows:
     * Contains the HTML templates used in the project are given below where "layout.html" is the main template and all other templates extends this using jinja:
 
         * ##### addnote.html
-            * 
+            * contains two input fields 'title' and 'detail' and a button 'addnote' which submits the details entered by user to the route "/addnote"
         * ##### index.html
-            *
+            * 
         * ##### layout.html
         * ##### login.html
         * ##### register.html
