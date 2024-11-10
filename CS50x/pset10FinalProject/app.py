@@ -68,7 +68,7 @@ def register():
                 "INSERT INTO users (username, hash) VALUES(?, ?)", name, password_hash
             )
             flash("Succesfully Registered")
-            return redirect("/login")
+            return render_template("register.html")
 
         except ValueError:
             flash("user name already taken, please use a different username")
