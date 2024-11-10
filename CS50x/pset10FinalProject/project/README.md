@@ -82,7 +82,12 @@ Root directory is named "project" and it contains the following files and folder
 
         * ##### login.html
 
-             * Hosts to input field namely 'username' and 'password' and a submit button named 'login'.
+            * Hosts two input field namely 'username' and 'password' and a submit button named 'login'.
 
         * ##### register.html
+            * Ask user to input 'username' and 'password'. Also mandates to re-enter password for to ensure correctness.
+
         * ##### removenote.html
+            * Dynamically generates a dropdown list of user's notes. Thus provides functionality to select and delete notes.
+
+* ####
