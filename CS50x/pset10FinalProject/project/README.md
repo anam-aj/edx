@@ -119,24 +119,25 @@ Description of the above mentioned is as follows:
             * Logs user out
 
 * #### helpers.py
-    * Contains the following helper functions
+    * Contains the following helper functions:
 
         * ##### login_required
             Ensures that a valid user is logged in.
 
         * ##### open_user_notes
-            Fethes the notes of current logged in user. In case no saved file exist for the current user then creates a new file.
+            Fetches the notes of current logged in user. In case no saved file exist for the current user then creates a new file.
 
         * ##### save_notes
-            Saves the notes of the user in a binary file using pickle module. 
+            Saves the notes of the user in a binary file using pickle module. And uses
+            "user_id" from user database as file name to ensure uniqueness of file.
 
 
 
 * #### README.md
-
+    Detailed descrioption of project.
 
 * #### requirements.txt
-
+    List of pip installable libraries.
 
 * #### users.db
-
+    
