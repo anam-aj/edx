@@ -97,8 +97,6 @@ Description of the above mentioned is as follows:
         * ##### "/login"
             * Renders login page.
             * Ensure validity of username and password.
-            * Hashes the password.
-            * Stores the user login credentials in SQL database "users.db".
             * Use placeholders in SQL queries to avoid injection attack.
             * Provide relevant feedback to user using 'flash'.
 
