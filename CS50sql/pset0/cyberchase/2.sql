@@ -1,3 +1,3 @@
 SELECT season, title
 FROM episodes
-WHERE
+WHERE season =
