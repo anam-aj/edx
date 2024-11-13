@@ -1,3 +1,3 @@
 SELECT title
 FROM episodes
-WHERE air_date = 2004-31-12;
+WHERE air_date = 2004-12-31;
