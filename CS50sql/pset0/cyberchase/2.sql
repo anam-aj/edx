@@ -1,3 +1,3 @@
 SELECT season, title
 FROM episodes
-WHERE season =
+WHERE episode_in_season = 1;
