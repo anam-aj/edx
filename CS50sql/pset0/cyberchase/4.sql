@@ -1,3 +1,3 @@
 SELECT title
 FROM episodes
-WHERE topic IS Null ;
+WHERE topic IS NULL;
