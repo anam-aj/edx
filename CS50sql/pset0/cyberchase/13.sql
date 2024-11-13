@@ -1,4 +1,4 @@
 SELECT *
 FROM episodes
 WHERE season = 1
-AND 
+AND episode_in_season = 1;
