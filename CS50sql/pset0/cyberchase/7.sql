@@ -1,3 +1,3 @@
 SELECT title, topic
 FROM episodes
-WHERE topic LIKE 'fraction';
+WHERE topic LIKE '%fraction%';
