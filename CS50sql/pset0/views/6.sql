@@ -1,4 +1,3 @@
-SELECT AVERAGE(ENTROPY 2) AS "Maximum Contrast"
+SELECT ROUND(AVG(ENTROPY), 2) AS "Hiroshige Average Entropy"
 FROM views
-ORDER BY contrast DESC
-LIMIT 1;
+WHERE artist = 'Hiroshige';
