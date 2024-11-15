@@ -1,3 +1,3 @@
 SELECT average_color
 FROM views
-WHERE 
+WHERE artist = 
