@@ -1,4 +1,5 @@
-SELECT first_name, last_name
+SELECT COUNT(first_name)
 FROM players
-WHERE bats = 'R'
+WHERE (bats = 'R' AND throws = 'L')
+OR (bats = 'L' AND throws = )
 ORDER BY first_name, last_name;
