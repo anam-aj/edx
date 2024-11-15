@@ -1,4 +1,5 @@
 SELECT first_name, last_name, debut
 FROM players
-WHERE bats = 'R'
-ORDER BY first_name, last_name;
+WHERE birth_city = 'Pittsburgh'
+AND birth_state = 'PA'
+ORDER BY debut DESC, first_name, last_name;
