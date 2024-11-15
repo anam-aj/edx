@@ -1,4 +1,4 @@
-SELECT "0m", latitude, longitude
+SELECT latitude, longitude,  "0m"
 FROM normals
-WHERE (latitude BETWEEN 0 AND 20)
-AND (longitude BETWEEN 55 AND 75);
+ORDER BY "0m"
+LIMIT 10;
