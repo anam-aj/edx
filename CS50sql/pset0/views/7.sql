@@ -1,4 +1,4 @@
-SELECT english_title AS "Maximum Contrast"
+SELECT english_title
 FROM views
-ORDER BY contrast DESC
+ORDER BY brightness DESC
 LIMIT 5;
