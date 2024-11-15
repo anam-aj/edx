@@ -1,4 +1,3 @@
 SELECT ROUND(AVG("0m"), 2)
 FROM normals
-WHERE (latitude BETWEEN 0 AND 20)
-AND (longitude BETWEEN 55 AND 75);
+WHERE latitude BETWEEN -0.5 AND 0.5;
