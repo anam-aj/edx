@@ -1,3 +1,3 @@
 SELECT id
 FROM players
-WHERE debut IS NONE;
+WHERE debut IS NULL;
