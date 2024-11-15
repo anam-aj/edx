@@ -1,4 +1,4 @@
-SELECT ROUND(AVG(first_name)
+SELECT ROUND(AVG(height), 2) AS "Average Height", ROUND(AVG(weight), 2) AS "Average Weight"
 FROM players
 WHERE (bats = 'R' AND throws = 'L')
 OR (bats = 'L' AND throws = 'R');
