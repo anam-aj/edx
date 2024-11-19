@@ -1,3 +1,5 @@
 SELECT names
 FROM schools
-WHERE 
+WHERE district_id IN (
+    se
+)
