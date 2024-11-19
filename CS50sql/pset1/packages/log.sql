@@ -45,7 +45,7 @@ WHERE id = 854
 -- Get scan of the package
 SELECT *
 FROM scans
-WHERE id = 384
+WHERE package_id = 384
 
 
 
