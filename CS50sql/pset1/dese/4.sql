@@ -1,4 +1,4 @@
-SELECT city, count(city) AS "Number of Schools"
+SELECT city, count(*) AS "Number of Schools"
 FROM schools
 WHERE type = 'Public School'
 GROUP BY city
