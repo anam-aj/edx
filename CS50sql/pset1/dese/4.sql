@@ -1,4 +1,4 @@
-SELECT city, count("name") AS "Number of Schools"
+SELECT city, count(*) AS "Number of Schools"
 FROM schools
 GROUP BY city
 ORDER BY "Number of Schools" DESC, city
