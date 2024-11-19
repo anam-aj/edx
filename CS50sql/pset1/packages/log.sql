@@ -6,11 +6,11 @@ SELECT *
 FROM addresses
 WHERE address = '900 Somerville Avenue'
 /*
-+-----+
-| id  |
-+-----+
-| 432 |
-+-----+
++-----+-----------------------+-------------+
+| id  |        address        |    type     |
++-----+-----------------------+-------------+
+| 432 | 900 Somerville Avenue | Residential |
++-----+-----------------------+-------------+
 */
 
 -- Get ID of receiver's address
