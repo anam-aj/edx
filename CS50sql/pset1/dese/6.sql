@@ -1,1 +1,2 @@
-    
+SELECT names
+FROM schools
