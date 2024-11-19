@@ -5,20 +5,29 @@
 SELECT id
 FROM addresses
 WHERE address = '900 Somerville Avenue'
+/*
++-----+
+| id  |
++-----+
+| 432 |
++-----+
+*/
 
---
+-- Get ID of receiver's address
 SELECT id
+FROM addresses
+WHERE address LIKE '%2%Finnegan%Street%uptown%'
+-- Not Found
+
+-- Find details of package corresponding sender's address
+SELECT *
 FROM packages
 WHERE from_address_id = (
     SELECT id
     FROM addresses
     WHERE address = '900 Somerville Avenue'
 )
-AND to_address_id = (
-    SELECT id
-    FROM addresses
-    WHERE address LIKE '%2%Finnegan%Street%uptown%'
-)
+
 
 
 -- *** The Devious Delivery ***
