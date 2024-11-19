@@ -1,5 +1,12 @@
 
 -- *** The Lost Letter ***
+
+-- Get ID of sender's address
+SELECT id
+FROM addresses
+WHERE address = '900 Somerville Avenue'
+
+--
 SELECT id
 FROM packages
 WHERE from_address_id = (
