@@ -1,0 +1,1 @@
+SELECT city, count(name)
