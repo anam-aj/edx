@@ -29,8 +29,8 @@ WHERE from_address_id = (
 )
 -- | 384  | Congratulatory letter | 432             | 854
 
--- Get address with id 854
-SELECT address
+-- Get address details with id 854
+SELECT *
 FROM addresses
 WHERE id = 854
 /*
