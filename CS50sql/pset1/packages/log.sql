@@ -57,8 +57,29 @@ WHERE package_id = 384
 
 -- *** The Devious Delivery ***
 
--- Get 
+-- Get details of packages without sender's address
+SELECT *
+FROM packages
+WHERE from_address_id IS NULL
+/*
++------+---------------+-----------------+---------------+
+|  id  |   contents    | from_address_id | to_address_id |
++------+---------------+-----------------+---------------+
+| 5098 | Duck debugger | NULL            | 50            |
++------+---------------+-----------------+---------------+
+*/
 
+-- Get address details corresponding to id = 50
+SELECT *
+FROM addresses
+WHERE id = 50
+/*
++----+-------------------+-------------+
+| id |      address      |    type     |
++----+-------------------+-------------+
+| 50 | 123 Sesame Street | Residential |
++----+-------------------+-------------+
+*/
 
 
 -- *** The Forgotten Gift ***
