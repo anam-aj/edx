@@ -94,5 +94,10 @@ WHERE package_id = 5098
 +-------+-----------+------------+------------+--------+----------------------------+
 */
 
+-- Get address details for id = 348
+SELECT *
+FROM addresses
+WHERE id = 
+
 -- *** The Forgotten Gift ***
 
