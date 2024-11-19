@@ -1,6 +1,7 @@
 SELECT name
 FROM schools
-JOIN graduation rates ON schools.id = 
+JOIN graduation rates ON schools.id = graduation_rates.school_id
+JOIN
 
 SELECT name, per_pupil_expenditure
 FROM districts
