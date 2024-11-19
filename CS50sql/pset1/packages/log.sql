@@ -5,13 +5,12 @@ FROM packages
 WHERE (from_address_id = (
     SELECT id
     FROM addresses
-    WHERE address = '900 Somerville Avenue')
+    WHERE address = '900 Somerville Avenue'))
     AND
     (to_address_id = (
     SELECT id
     FROM addresses
-    WHERE address LIKE '900 Somerville Avenue')
-))
+    WHERE address LIKE '900 Somerville Avenue'))
 
 
 -- *** The Devious Delivery ***
