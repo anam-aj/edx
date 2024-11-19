@@ -114,3 +114,23 @@ SELECT *
 FROM addresses
 WHERE address = '109 Tileston Street'
 
+-- Find details of package corresponding sender's address
+SELECT *
+FROM packages
+WHERE from_address_id = (
+    SELECT id
+    FROM addresses
+    WHERE address = '109 Tileston Street'
+)
+/*
++------+----------+-----------------+---------------+
+|  id  | contents | from_address_id | to_address_id |
++------+----------+-----------------+---------------+
+| 9523 | Flowers  | 9873            | 4983          |
++------+----------+-----------------+---------------+
+*/
+
+-- Find scan details of package
+SELECT *
+FROM scans
+WHERE package_id = 9528
