@@ -1,5 +1,7 @@
 SELECT names
 FROM schools
 WHERE district_id IN (
-    se
+    SELECT id
+    FROM districts
+    WHERE name = "Cambridge"
 )
