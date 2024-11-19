@@ -81,6 +81,11 @@ WHERE id = 50
 +----+-------------------+-------------+
 */
 
+-- Get scan details of package
+SELECT *
+FROM scans
+WHERE 
+
 
 -- *** The Forgotten Gift ***
 
