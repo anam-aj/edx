@@ -84,7 +84,7 @@ WHERE id = 50
 -- Get scan details of package
 SELECT *
 FROM scans
-WHERE 
+WHERE package_id = 5098
 
 
 -- *** The Forgotten Gift ***
