@@ -1,8 +1,8 @@
 
 -- *** The Lost Letter ***
 
--- Get ID of sender's address
-SELECT id
+-- Get Details of sender's address
+SELECT *
 FROM addresses
 WHERE address = '900 Somerville Avenue'
 /*
@@ -34,11 +34,11 @@ SELECT *
 FROM addresses
 WHERE id = 854
 /*
-+-------------------+
-|      address      |
-+-------------------+
-| 2 Finnigan Street |
-+-------------------+
++-----+-------------------+-------------+
+| id  |      address      |    type     |
++-----+-------------------+-------------+
+| 854 | 2 Finnigan Street | Residential |
++-----+-------------------+-------------+
 */
 
 -- Get scan of the package
