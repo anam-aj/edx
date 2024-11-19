@@ -151,18 +151,6 @@ WHERE package_id = 9523
 +-------+-----------+------------+------------+--------+----------------------------+
 */
 
--- Get details of receiver's address
-SELECT *
-FROM addresses
-WHERE id = 7432
-/*
-+------+------------------------+-----------+
-|  id  |        address         |   type    |
-+------+------------------------+-----------+
-| 7432 | 950 Brannon Harris Way | Warehouse |
-+------+------------------------+-----------+
-*/
-
 -- Get driver's details
 SELECT *
 FROM drivers
