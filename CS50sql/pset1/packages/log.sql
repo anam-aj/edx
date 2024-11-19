@@ -109,5 +109,8 @@ WHERE id = 348
 
 -- *** The Forgotten Gift ***
 
-    
+-- Get Details of sender's address
+SELECT *
+FROM addresses
+WHERE address = '109 Tileston Street'
 
