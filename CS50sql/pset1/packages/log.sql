@@ -98,6 +98,13 @@ WHERE package_id = 5098
 SELECT *
 FROM addresses
 WHERE id = 348
+/*
++-----+------------------+----------------+
+| id  |     address      |      type      |
++-----+------------------+----------------+
+| 348 | 7 Humboldt Place | Police Station |
++-----+------------------+----------------+
+*/
 
 -- *** The Forgotten Gift ***
 
