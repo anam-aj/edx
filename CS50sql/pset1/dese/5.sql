@@ -1,4 +1,4 @@
-SELECT city, COUNT("name") AS "Number of Schools"
+SELECT city, COUNT("city") AS "Number of Schools"
 FROM schools
 WHERE "Number of Schools" < 4
 GROUP BY city
