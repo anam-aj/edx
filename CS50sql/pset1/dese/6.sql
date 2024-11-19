@@ -1,4 +1,4 @@
-SELECT names
+SELECT name
 FROM schools
 WHERE id = (
     SELECT school_id
