@@ -1,2 +1,2 @@
-SELECT name
-FROM districts
+SELECT name, pupils
+FROM districts JOIN 
