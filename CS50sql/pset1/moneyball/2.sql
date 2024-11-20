@@ -1,7 +1,8 @@
 SELECT year, salary
 FROM salaries
 WHERE player_id = (
-    SELECT id
+    SELECT id, fr
     FROM players
-    WHERE 
+    WHERE first_name LIKE 'Cal%'
+    AND last_name LIKE '%Ripken Jr.'
 )
