@@ -1,9 +1,9 @@
-SELECT year
-FROM salaries
+SELECT year, HR
+FROM performances
 WHERE player_id = (
     SELECT id
     FROM players
-    WHERE first_name = 'Cal'
-    AND last_name = 'Ripken'
+    WHERE first_name = 'Ken'
+    AND last_name = 'Griffey'
 )
 ORDER BY year DESC
