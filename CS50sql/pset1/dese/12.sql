@@ -1,4 +1,4 @@
-SELECT name, per_pupil_expenditure, exemplary
+SELECT count(name)--, per_pupil_expenditure, exemplary
 FROM districts
 JOIN expenditures ON districts.id = expenditures.district_id
 JOIN staff_evaluations ON districts.id = staff_evaluations.district_id
