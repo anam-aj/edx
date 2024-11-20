@@ -1,6 +1,6 @@
 SELECT name
 FROM teams
-WHERE id = (
+WHERE id IN (
     SELECT team_id
     FROM performances
     WHERE player_id = (
