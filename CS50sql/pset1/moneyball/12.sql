@@ -1,6 +1,6 @@
 SELECT first_name, last_name
 FROM (
-    SELECT *
+    SELECT first_name, last_name
     FROM (
         SELECT first_name, last_name, players.id
         FROM players
@@ -16,7 +16,7 @@ FROM (
 
     INTERSECT
 
-    SELECT *
+    SELECT first_name, last_name
     FROM (
         SELECT first_name, last_name, players.id
         FROM players
