@@ -29,6 +29,6 @@ FROM (
         ORDER BY ("salary" / "RBI")
         LIMIT 10
     )
-
-    ORDER BY id
 )
+
+ORDER BY id
