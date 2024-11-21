@@ -8,7 +8,9 @@ AND H > 0
 AND salary >= 0
 ORDER BY ("salary" / "H")
 LIMIT 10
+
 INTERSECT
+
 SELECT first_name, last_name
 FROM players
 JOIN salaries ON players.id = salaries.player_id
