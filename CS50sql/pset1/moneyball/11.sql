@@ -5,5 +5,6 @@ JOIN performances ON players.id = performances.player_id
 WHERE salaries.year = performances.year
 AND salaries.year = 2001
 AND H IS NOT NULL
+AND salary IS NOT NULL
 ORDER BY "dollars per hit", first_name, last_name
 LIMIT 10
