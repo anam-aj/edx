@@ -14,6 +14,8 @@ FROM (
 
 INTERSECT
 
+SELECT first_name, last_name
+FROM (
     SELECT first_name, last_name
     FROM players
     JOIN salaries ON players.id = salaries.player_id
@@ -24,3 +26,4 @@ INTERSECT
     AND salary >= 0
     ORDER BY ("salary" / "RBI")
     LIMIT 10
+) AS lowest_rbi_price
