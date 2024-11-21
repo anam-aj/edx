@@ -1,4 +1,4 @@
-SELECT first_name, last_name, id
+SELECT first_name, last_name
 FROM (
     SELECT first_name, last_name, players.id
     FROM players
@@ -14,7 +14,7 @@ FROM (
 
 INTERSECT
 
-SELECT first_name, last_name, id
+SELECT first_name, last_name
 FROM (
     SELECT first_name, last_name, players.id
     FROM players
