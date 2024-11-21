@@ -1,6 +1,5 @@
-SELECT first_name, last_name
-FROM(
-    SELECT first_name, last_name, ("salary" / "H") AS "dollars per hit"
+
+    SELECT first_name, last_name
     FROM players
     JOIN salaries ON players.id = salaries.player_id
     JOIN performances ON players.id = performances.player_id
@@ -8,7 +7,7 @@ FROM(
     AND salaries.year = 2001
     AND H > 0
     AND salary >= 0
-    ORDER BY "dollars per hit", first_name, last_name
+    ORDER BY ("salary" / "H"), first_name, last_name
     LIMIT 10
     INTERSECT
     SELECT first_name, last_name, ("salary" / "RBI") AS "RBI per hit"
@@ -22,6 +21,6 @@ FROM(
     ORDER BY "dollars per hit", first_name, last_name
     LIMIT 10
 
-)
+
 
 
