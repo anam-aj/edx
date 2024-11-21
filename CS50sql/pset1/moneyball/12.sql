@@ -1,4 +1,4 @@
-SELECT first_name, last_name
+SELECT first_name, last_name, players.id
 FROM (
     SELECT first_name, last_name, players.id
     FROM players
@@ -14,7 +14,7 @@ FROM (
 
 INTERSECT
 
-SELECT first_name, last_name
+SELECT first_name, last_name, players.id
 FROM (
     SELECT first_name, last_name, players.id
     FROM players
@@ -27,5 +27,3 @@ FROM (
     ORDER BY ("salary" / "RBI")
     LIMIT 10
 ) AS lowest_rbi_price
-
-
