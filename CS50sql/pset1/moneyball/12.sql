@@ -28,4 +28,4 @@ FROM (
     LIMIT 10
 ) AS lowest_rbi_price
 
-ORDER BY players.id
+
