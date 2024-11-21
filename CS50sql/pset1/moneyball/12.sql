@@ -1,6 +1,6 @@
 SELECT first_name, last_name
 FROM (
-    SELECT first_name, last_name
+    SELECT first_name, last_name, players.id
     FROM players
     JOIN salaries ON players.id = salaries.player_id
     JOIN performances ON players.id = performances.player_id
@@ -16,7 +16,7 @@ INTERSECT
 
 SELECT first_name, last_name
 FROM (
-    SELECT first_name, last_name
+    SELECT first_name, last_name, players.id
     FROM players
     JOIN salaries ON players.id = salaries.player_id
     JOIN performances ON players.id = performances.player_id
