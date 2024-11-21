@@ -27,3 +27,5 @@ FROM (
     ORDER BY ("salary" / "RBI")
     LIMIT 10
 ) AS lowest_rbi_price
+
+order by id
