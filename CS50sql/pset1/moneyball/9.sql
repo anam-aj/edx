@@ -4,4 +4,4 @@ JOIN salaries ON teams.id = salaries.team_id
 --WHERE year = 2001
 GROUP BY team_id
 ORDER BY "average salary"
-LIMIT 5
+LIMIT 50
