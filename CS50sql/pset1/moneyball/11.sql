@@ -1,2 +1,7 @@
 SELECT first_name, last_name, (salary / H) AS "dollars per hit"
-FROM 
+FROM players
+JOIN salaries ON players.id = salaries.player_id
+JOIN performances ON players.id = performances.player_id
+WHERE salaries.year = performances.year
+AND H IS NOT NULL
+ORDER BY "dollars per hit" DESC, first_name, last_name
