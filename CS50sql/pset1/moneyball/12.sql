@@ -12,7 +12,7 @@ FROM (
         AND salary >= 0
         ORDER BY ("salary" / "H")
         LIMIT 10
-    ) AS lowest_hit_price
+    ) --AS lowest_hit_price
 
     INTERSECT
 
@@ -28,7 +28,7 @@ FROM (
         AND salary >= 0
         ORDER BY ("salary" / "RBI")
         LIMIT 10
-    ) AS lowest_rbi_price
+    ) --AS lowest_rbi_price
 
     ORDER BY id
 )
