@@ -16,6 +16,7 @@ CREATE TABLE donuts (
 CREATE TABLE orders (
     id INTEGER,
     customer_id INTEGER NOT NULL,
+    order_date_time NUMERIC N
     PRIMARY KEY(id),
     FOREIGN KEY(customer_id) REFERENCES customers(id)
 );
