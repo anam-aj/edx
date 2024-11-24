@@ -35,5 +35,4 @@ CREATE TABLE flights (
     arrival_time NUMERIC NOT NULL,
     PRIMARY KEY(id),
     FOREIGN KEY(airline_id) REFERENCES airlines(id),
-    FOREIGN KEY(flight_id) REFERENCES flights(id)
 );
