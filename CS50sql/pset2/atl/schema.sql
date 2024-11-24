@@ -1,2 +1,4 @@
-CREATE TABLE passengers
+CREATE TABLE passengers (
     
+)
+
