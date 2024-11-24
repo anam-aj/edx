@@ -1,7 +1,5 @@
--- Table for storing passengers data
-CREATE TABLE passengers2 (
-    "first name" ,
-    'last name',
-    "age"
-);
+drop table passengers;
 
+drop table passengers1;
+
+drop table passengers2;
