@@ -43,3 +43,15 @@ CREATE TABLE user_school_connection (
     FOREIGN KEY(user_id) REFERENCES users(id),
     FOREIGN KEY(school_id) REFERENCES schools(id)
 );
+
+CREATE TABLE user_company_connection (
+    id INTEGER,
+    user_id INTEGER,
+    company_id INTEGER,
+    start_date NUMERIC NOT NULL,
+    end_date NUMERIC,
+    title TEXT NOT NULL,
+    PRIMARY KEY(id),
+    FOREIGN KEY(user_id) REFERENCES users(id),
+    FOREIGN KEY(company_id) REFERENCES companies(id)
+);
