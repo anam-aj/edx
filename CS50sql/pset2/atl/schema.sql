@@ -5,3 +5,12 @@ CREATE TABLE passengers (
     age INTEGER NOT NULL,
     PRIMARY KEY(id)
 );
+
+
+CREATE TABLE check_in (
+    id INTEGER
+    passenger_id INTEGER,
+    flight_id INTEGER,
+    age INTEGER NOT NULL,
+    PRIMARY KEY(id)
+);
