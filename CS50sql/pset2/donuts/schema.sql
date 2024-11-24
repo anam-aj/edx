@@ -13,3 +13,9 @@ CREATE TABLE donuts (
     PRIMARY KEY(id)
 );
 
+CREATE TABLE customers (
+    id INTEGER,
+    name TEXT NOT NULL,
+    rate NUMERIC NOT NULL,
+    PRIMARY KEY(id)
+);
