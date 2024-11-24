@@ -13,6 +13,16 @@ CREATE TABLE donuts (
     PRIMARY KEY(id)
 );
 
+CREATE TABLE orders (
+    id INTEGER,
+    customer_id INTEGER,
+    gluten_free TEXT NOT NULL CHECK(gluten_free IN ('yes', 'no'))
+    rate NUMERIC NOT NULL,
+    PRIMARY KEY(id)
+    FOREIGN KEY(customer_id) REFERENCES customers(id)
+
+);
+
 CREATE TABLE customers (
     id INTEGER,
     first_name TEXT NOT NULL,
