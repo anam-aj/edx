@@ -5,6 +5,3 @@ CREATE TABLE passengers1 (
     "age"
 );
 
-
-
-
