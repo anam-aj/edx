@@ -6,7 +6,6 @@ CREATE TABLE passengers (
     PRIMARY KEY(id)
 );
 
-
 CREATE TABLE check_in (
     id INTEGER,
     passenger_id INTEGER,
@@ -17,9 +16,11 @@ CREATE TABLE check_in (
     FOREIGN KEY(flight_id) REFERENCES flights(id)
 );
 
-
 CREATE TABLE airlines (
     id INTEGER,
     name TEXT NOT NULL,
-    concourse TEXT NOT NULL CHECK(concourse IN (A, B, C, D, E, F, T))
+    concourse TEXT NOT NULL CHECK(concourse IN (A, B, C, D, E, F, T)),
+    PRIMARY KEY(id)
 );
+
+
