@@ -36,6 +36,9 @@ CREATE TABLE user_school_connection (
     id INTEGER,
     user_id INTEGER,
     school_id INTEGER,
+    start_date NUMERIC NOT NULL,
+    end_date NUMERIC,
+    degree TEXT NOT NULL,
     PRIMARY KEY(id),
     FOREIGN KEY(user_id) REFERENCES users(id),
     FOREIGN KEY(school_id) REFERENCES schools(id)
