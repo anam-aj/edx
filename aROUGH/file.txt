@@ -1,2 +1,2 @@
-INSERT INTO table_name (first_name, last_name, age)
+INSERT INTO passengers1 (first_name, last_name, age)
 VALUES ('value1', 'value2', 3);
