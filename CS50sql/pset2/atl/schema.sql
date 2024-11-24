@@ -27,6 +27,7 @@ CREATE TABLE flights (
     id INTEGER,
     flight_number INTEGER NOT NULL,
     airline_id INTEGER,
+    airport_code TEXT NOT NULL,
     date_time NUMERIC NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY(id),
     FOREIGN KEY(airline_id) REFERENCES airlines(id),
