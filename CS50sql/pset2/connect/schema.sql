@@ -9,7 +9,7 @@ CREATE TABLE users (
 
 CREATE TABLE schools (
     id INTEGER,
-    passenger_id INTEGER,
+    name TEXT NOT NULL,
     flight_id INTEGER,
     date_time NUMERIC NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY(id),
