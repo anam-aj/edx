@@ -16,9 +16,7 @@ CREATE TABLE donuts (
 CREATE TABLE orders (
     id INTEGER,
     customer_id INTEGER,
-    gluten_free TEXT NOT NULL CHECK(gluten_free IN ('yes', 'no'))
-    rate NUMERIC NOT NULL,
-    PRIMARY KEY(id)
+    PRIMARY KEY(id),
     FOREIGN KEY(customer_id) REFERENCES customers(id)
 
 );
