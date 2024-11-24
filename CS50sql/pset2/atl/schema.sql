@@ -11,6 +11,7 @@ CREATE TABLE check_in (
     id INTEGER
     passenger_id INTEGER,
     flight_id INTEGER,
-    age INTEGER NOT NULL,
     PRIMARY KEY(id)
+    FOREIGN KEY(passenger_id) REFERENCES passengers(id)
+    FOREIGN KEY(flight_id) REFERENCES flights(id)
 );
