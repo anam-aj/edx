@@ -23,4 +23,12 @@ CREATE TABLE airlines (
     PRIMARY KEY(id)
 );
 
-
+CREATE TABLE flights (
+    id INTEGER,
+    passenger_id INTEGER,
+    flight_number INTEGER NOT NULL,
+    date_time NUMERIC NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY(id),
+    FOREIGN KEY(passenger_id) REFERENCES passengers(id),
+    FOREIGN KEY(flight_id) REFERENCES flights(id)
+);
