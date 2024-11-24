@@ -15,11 +15,20 @@ CREATE TABLE donuts (
 
 CREATE TABLE orders (
     id INTEGER,
-    customer_id INTEGER,
+    customer_id INTEGER NOT NULL,
     PRIMARY KEY(id),
     FOREIGN KEY(customer_id) REFERENCES customers(id)
 
 );
+
+CREATE TABLE order_items (
+    order_id INTEGER,
+    donut_id INTEGER,
+    quantity INTEGER NOT NULL CHECK(quantity > 0),
+    FOREIGN KEY(order_id) REFRENCES orders(id)
+
+
+)
 
 CREATE TABLE customers (
     id INTEGER,
