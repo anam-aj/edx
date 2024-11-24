@@ -18,7 +18,6 @@ CREATE TABLE orders (
     customer_id INTEGER NOT NULL,
     PRIMARY KEY(id),
     FOREIGN KEY(customer_id) REFERENCES customers(id)
-
 );
 
 CREATE TABLE order_items (
@@ -35,5 +34,3 @@ CREATE TABLE customers (
     last_name TEXT NOT NULL,
     PRIMARY KEY(id)
 );
-
-
