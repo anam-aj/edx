@@ -13,24 +13,30 @@ CREATE TABLE schools (
     type TEXT NOT NULL,
     address TEXT NOT NULL,
     year TEXT NOT NULL,
-    PRIMARY KEY(id),
-);
-
-CREATE TABLE airlines (
-    id INTEGER,
-    name TEXT NOT NULL,
-    concourse TEXT NOT NULL CHECK(concourse IN ('A', 'B', 'C', 'D', 'E', 'F', 'T')),
     PRIMARY KEY(id)
 );
 
-CREATE TABLE flights (
+CREATE TABLE companies (
     id INTEGER,
-    flight_number INTEGER NOT NULL,
-    airline_id INTEGER,
-    departure_airport_code TEXT NOT NULL,
-    arrival_airport_code TEXT NOT NULL,
-    departure_date_time DATETIME NOT NULL,
-    arrival_date_time DATETIME NOT NULL,
+    name TEXT NOT NULL,
+    industry TEXT NOT NULL,
+    PRIMARY KEY(id)
+);
+
+CREATE TABLE user_user_connection (
+    id INTEGER,
+    user_id_1 INTEGER,
+    user_id_2 INTEGER,
     PRIMARY KEY(id),
-    FOREIGN KEY(airline_id) REFERENCES airlines(id)
+    FOREIGN KEY(user_id_1) REFERENCES users(id),
+    FOREIGN KEY(user_id_2) REFERENCES users(id)
+);
+
+CREATE TABLE user_school_connection (
+    id INTEGER,
+    user_id INTEGER,
+    school_id INTEGER,
+    PRIMARY KEY(id),
+    FOREIGN KEY(user_id) REFERENCES users(id),
+    FOREIGN KEY(school_id) REFERENCES schools(id)
 );
