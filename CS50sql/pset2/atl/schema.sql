@@ -29,10 +29,8 @@ CREATE TABLE flights (
     airline_id INTEGER,
     departure_airport_code TEXT NOT NULL,
     arrival_airport_code TEXT NOT NULL,
-    departure_date NUMERIC NOT NULL,
-    departure_time NUMERIC NOT NULL,
-    arrival_date NUMERIC NOT NULL,
-    arrival_time NUMERIC NOT NULL,
+    departure_date_time DATETIME NOT NULL,
+    arrival_date_time DATETIME NOT NULL,
     PRIMARY KEY(id),
     FOREIGN KEY(airline_id) REFERENCES airlines(id),
 );
