@@ -7,7 +7,7 @@ CREATE TABLE users (
     PRIMARY KEY(id)
 );
 
-CREATE TABLE check_in (
+CREATE TABLE schools (
     id INTEGER,
     passenger_id INTEGER,
     flight_id INTEGER,
