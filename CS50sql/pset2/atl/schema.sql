@@ -19,7 +19,7 @@ CREATE TABLE check_in (
 CREATE TABLE airlines (
     id INTEGER,
     name TEXT NOT NULL,
-    concourse TEXT NOT NULL CHECK(concourse IN (A, B, C, D, E, F, T)),
+    concourse TEXT NOT NULL CHECK(concourse IN ('A', 'B', 'C', 'D', 'E', 'F', 'T')),
     PRIMARY KEY(id)
 );
 
@@ -32,5 +32,5 @@ CREATE TABLE flights (
     departure_date_time DATETIME NOT NULL,
     arrival_date_time DATETIME NOT NULL,
     PRIMARY KEY(id),
-    FOREIGN KEY(airline_id) REFERENCES airlines(id),
+    FOREIGN KEY(airline_id) REFERENCES airlines(id)
 );
