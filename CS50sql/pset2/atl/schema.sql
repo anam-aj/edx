@@ -25,10 +25,10 @@ CREATE TABLE airlines (
 
 CREATE TABLE flights (
     id INTEGER,
-    passenger_id INTEGER,
     flight_number INTEGER NOT NULL,
+    airline_id INTEGER,
     date_time NUMERIC NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY(id),
-    FOREIGN KEY(passenger_id) REFERENCES passengers(id),
+    FOREIGN KEY(airline_id) REFERENCES airlines(id),
     FOREIGN KEY(flight_id) REFERENCES flights(id)
 );
