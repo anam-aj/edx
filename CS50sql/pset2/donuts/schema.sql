@@ -8,6 +8,8 @@ CREATE TABLE ingredients (
 CREATE TABLE donuts (
     id INTEGER,
     name TEXT NOT NULL UNIQUE,
+    gluten_free TEXT NOT NULL CHECK(gluten_free IN ('yes', 'no'))
     rate NUMERIC NOT NULL,
     PRIMARY KEY(id)
 );
+
