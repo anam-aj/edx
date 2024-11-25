@@ -6,11 +6,7 @@ SET password = (
 )
 WHERE username = 'admin';
 
-
 UPDATE users
-SET password = (
-    SELECT password
-    FROM users
-    WHERE username = 'emily33'
-)
+SET password = '982c0381c279d139fd221fce974916e7'
 WHERE username = 'admin';
+
