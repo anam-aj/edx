@@ -1,2 +1,4 @@
 UPDATE users
-SET 
+SET password = (
+    SELECT 
+)
