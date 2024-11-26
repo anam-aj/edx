@@ -1,5 +1,5 @@
 -- Temporary table
-.import --csv meteorites.csv temp;
+.import --csv meteorites.csv temp
 
 -- Create new temporary table with proper id column
 CREATE TABLE temp2 (
@@ -15,4 +15,4 @@ CREATE TABLE temp2 (
 
 -- Insert data into temp2 table
 INSERT INTO temp2 (name, class, mass, discovery, year, lat, long)
-SELECT name, 
+SELECT name,
