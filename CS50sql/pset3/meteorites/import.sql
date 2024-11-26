@@ -2,7 +2,7 @@
 .import --csv meteorites.csv temp
 
 -- Create new temporary table with proper id column
-CREATE TABLE temp2 (
+CREATE TABLE temp3 (
     id INTEGER,
     name TEXT,
     class TEXT,
