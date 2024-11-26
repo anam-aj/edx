@@ -45,8 +45,6 @@ RENAME TO meteorites;
 
 -- Round the value to 2 decimal places
 UPDATE meteorites
-SET (
-    mass = ROUND(mass, 2),
+SET mass = ROUND(mass, 2),
     lat = ROUND(lat, 2),
-    long = ROUND(long, 2)
-);
+    long = ROUND(long, 2);
