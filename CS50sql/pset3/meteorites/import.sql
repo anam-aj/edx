@@ -41,4 +41,5 @@ DROP TABLE temp;
 ALTER TABLE temp2
 RENAME TO temp;
 
-
+UPDATE temp
+SET 
