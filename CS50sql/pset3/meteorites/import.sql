@@ -44,7 +44,7 @@ ALTER TABLE temp2
 RENAME TO meteorites;
 
 -- Round the value to 2 decimal places
-UPDATE temp
+UPDATE meteorites
 SET (
     mass = ROUND(mass, 2),
     lat = ROUND(lat, 2),
