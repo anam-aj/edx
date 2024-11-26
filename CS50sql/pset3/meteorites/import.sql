@@ -33,3 +33,5 @@ SELECT
     NULLIF(lat, ''),
     NULLIF(long, '')
 FROM temp;
+
+
