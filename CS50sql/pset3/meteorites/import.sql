@@ -15,4 +15,5 @@ CREATE TABLE temp2 (
 
 -- Insert data into temp2 table
 INSERT INTO temp2 (name, class, mass, discovery, year, lat, long)
-SELECT name,
+SELECT name, type, mass, discovery, year, lat, long;
+
