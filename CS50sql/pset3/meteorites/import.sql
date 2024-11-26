@@ -35,4 +35,10 @@ SELECT
 FROM temp;
 
 -- Delete table 'temp'
-DROP 
+DROP TABLE temp;
+
+-- Rename 'temp2' to 'temp'
+ALTER TABLE temp2
+RENAME TO temp;
+
+
