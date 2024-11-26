@@ -34,4 +34,5 @@ SELECT
     NULLIF(long, '')
 FROM temp;
 
-
+-- Delete table 'temp'
+DROP 
