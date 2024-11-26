@@ -18,4 +18,3 @@ CREATE TABLE temp2 (
 INSERT INTO temp2 (name, class, mass, discovery, year, lat, long)
 SELECT name, class, mass, discovery, year, lat, long
 FROM temp;
-
