@@ -11,6 +11,7 @@ CREATE TABLE temp2 (
     year NUMERIC DEFAULT NULL,
     lat NUMERIC DEFAULT NULL,
     long NUMERIC DEFAULT NULL
+    
 );
 
 -- Insert data into temp2 table
