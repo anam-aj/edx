@@ -1,4 +1,5 @@
 -- Temporary table
 .import --csv meteorites.csv temp;
 
--- Remove id 
+-- Create new temporary table with proper id column
+
