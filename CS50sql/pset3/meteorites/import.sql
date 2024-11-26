@@ -6,7 +6,7 @@ CREATE TABLE temp3 (
     id INTEGER,
     name TEXT,
     class TEXT,
-    mass NUMERIC
+    mass NUMERIC,
     discovery TEXT,
     year NUMERIC,
     lat NUMERIC,
