@@ -33,7 +33,7 @@ SELECT
     NULLIF(lat, ''),
     NULLIF(long, '')
 FROM temp
-;
+WHERE nametype != ';
 
 -- Delete table 'temp'
 DROP TABLE temp;
