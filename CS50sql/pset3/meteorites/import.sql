@@ -1,4 +1,2 @@
 -- Temporary table
-CREATE TABLE temp (
-    id 
-)
+cat import.sql | sqlite3 meteorites.db
