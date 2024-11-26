@@ -4,12 +4,12 @@
 -- Create new temporary table with proper id column
 CREATE TABLE temp2 (
     id INTEGER,
-    name TEXT ,
-    class TEXT ,
+    name TEXT,
+    class TEXT,
     mass NUMERIC
     discovery TEXT,
-    year NUMERIC ,
-    lat NUMERIC ,
+    year NUMERIC,
+    lat NUMERIC,
     long NUMERIC
     PRIMARY KEY(id)
 );
