@@ -32,7 +32,8 @@ SELECT
     NULLIF(year, ''),
     NULLIF(lat, ''),
     NULLIF(long, '')
-FROM temp;
+FROM temp
+;
 
 -- Delete table 'temp'
 DROP TABLE temp;
