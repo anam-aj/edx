@@ -41,5 +41,10 @@ DROP TABLE temp;
 ALTER TABLE temp2
 RENAME TO temp;
 
+-- Round the value to 2 decimal places
 UPDATE temp
-SET 
+SET (
+    mass = ROUND(mass, 2),
+    lat = ROUND(lat, 2),
+    long = ROUND(long, 2)
+)
