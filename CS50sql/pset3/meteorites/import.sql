@@ -15,6 +15,21 @@ CREATE TABLE temp2 (
 );
 
 -- Insert data into temp2 table
-INSERT INTO temp2 (name, class, mass, discovery, year, lat, long)
-SELECT name, class, mass, discovery, year, lat, long
+INSERT INTO temp2 (
+    name,
+    class,
+    mass,
+    discovery,
+    year,
+    lat,
+    long
+)
+SELECT
+    NULLIF(name, ''),
+    NULLIF(class, ''),
+    NULLIF(mass, ''),
+    NULLIF(discovery, ''),
+    NULLIF(year, ''),
+    NULLIF(lat, ''),
+    NULLIF(long, '')
 FROM temp;
