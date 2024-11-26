@@ -10,7 +10,7 @@ CREATE TABLE temp2 (
     discovery TEXT DEFAULT NULL,
     year NUMERIC DEFAULT NULL,
     lat NUMERIC DEFAULT NULL,
-    long NUMERIC DEFAULT NULL,
+    long NUMERIC DEFAULT NULL
 );
 
 -- Insert data into temp2 table
