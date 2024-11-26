@@ -10,7 +10,7 @@ CREATE TABLE temp2 (
     discovery TEXT,
     year NUMERIC,
     lat NUMERIC,
-    long NUMERIC
+    long NUMERIC,
     PRIMARY KEY(id)
 );
 
