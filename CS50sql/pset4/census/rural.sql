@@ -1,4 +1,4 @@
 CREATE VIEW "rural" AS
 SELECT *
 FROM "census"
-WHERE "locality" LIKE '%rural%'
+WHERE "locality" LIKE '%rural%';
