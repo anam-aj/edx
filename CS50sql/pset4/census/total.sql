@@ -1,2 +1,6 @@
 CREATE VIEW "total" AS
-SELECT 
+SELECT
+    SUM("families") AS "families",
+    SUM("households") AS "households",
+    SUM("population") AS "population",
+    SUM;
