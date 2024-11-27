@@ -1,6 +1,6 @@
 CREATE VIEW "by_district" AS
 SELECT
-    "district"
+    "district",
     SUM("families") AS "families",
     SUM("households") AS "households",
     SUM("population") AS "population",
