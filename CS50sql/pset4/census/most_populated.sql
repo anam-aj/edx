@@ -6,6 +6,6 @@ SELECT
     SUM("population") AS "population",
     SUM("male") AS "male",
     SUM("female") AS "female"
-FROM census
+FROM "census"
 GROUP BY "district"
 ORDER BY "population" DESC;
