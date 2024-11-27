@@ -1,1 +1,2 @@
-CREATE VIEW "rural" 
+CREATE VIEW "rural" AS
+
