@@ -65,6 +65,7 @@ WITH "message table" AS (
     FROM "sentences"
     WHERE id = 3041
 )
+
 CREATE VIEW "message" AS
 SELECT "phrase"
 FROM "message table"
