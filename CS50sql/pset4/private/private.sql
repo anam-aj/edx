@@ -1,4 +1,4 @@
-CREATE VIEW "message" AS
+
 SELECT TRIM(substr("sentence", 98, 4)) AS "phrase"
 FROM "sentences"
 WHERE id = 14
@@ -64,4 +64,5 @@ UNION
 SELECT "id", TRIM(substr("sentence", 14, 5))
 FROM "sentences"
 WHERE id = 3041;
-*/
+CREATE VIEW "message" AS
+
