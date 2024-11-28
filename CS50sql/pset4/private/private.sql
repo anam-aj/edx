@@ -1,5 +1,5 @@
 CREATE VIEW "message" AS
-SELECT substr("sentence", 98, 4)
+SELECT substr("sentence", 98, 4) AS "phrase"
 FROM "sentences"
 WHERE id = 14
 UNION
