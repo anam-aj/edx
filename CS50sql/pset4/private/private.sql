@@ -32,7 +32,8 @@ FROM "sentences"
 WHERE id = 3041
 ORDER BY "id";
 
-/*SELECT "id", TRIM(substr("sentence", 98, 4)) AS "phrase"
+WITH "message table" AS
+SELECT "id", TRIM(substr("sentence", 98, 4)) AS "phrase"
 FROM "sentences"
 WHERE id = 14
 UNION
