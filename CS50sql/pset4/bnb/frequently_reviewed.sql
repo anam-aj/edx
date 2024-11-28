@@ -1,5 +1,5 @@
 CREATE VIEW frequently_reviewed AS
-SELECT listings.id AS id, property_type, host_name, COUNT(*) AS review
+SELECT listings.id AS id, property_type, host_name, COUNT(reviews.id) AS review
 FROM listings
 JOIN reviews ON listings.id = reviews.listing_id
-GROUP BY listin;
+GROUP BY listing_id;
