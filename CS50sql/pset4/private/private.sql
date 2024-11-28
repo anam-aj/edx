@@ -27,7 +27,6 @@ SELECT substr("sentence", 44, 10)
 FROM "sentences"
 WHERE id = 2346
 UNION
-SELECT substr("sentence", 14, 5 )
+SELECT substr("sentence", 14, 5)
 FROM "sentences"
-WHERE id = 3041
-UNION;
+WHERE id = 3041;
