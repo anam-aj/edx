@@ -1,3 +1,4 @@
+-- Create temporary view with id and phrase
 CREATE VIEW "temp message" AS
 SELECT "id", TRIM(substr("sentence", 98, 4)) AS "phrase"
 FROM "sentences"
@@ -31,7 +32,7 @@ SELECT "id", TRIM(substr("sentence", 14, 5))
 FROM "sentences"
 WHERE id = 3041;
 
-
+-- Creates the required view "message"
 CREATE VIEW "message" AS
 SELECT "phrase"
 FROM "temp message"
