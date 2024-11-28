@@ -34,5 +34,5 @@ WHERE id = 3041;
 
 CREATE VIEW "message" AS
 SELECT "phrase"
-FROM "message table"
+FROM "temp message"
 ORDER BY "id";
