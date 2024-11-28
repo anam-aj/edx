@@ -1,6 +1,5 @@
 CREATE VIEW june_vacancies AS
-SELECT listings.id AS id, property_type, host_name, COUNT(reviews.id) AS reviews
+SELECT listings.id AS id, property_type, host_name, date
 FROM listings
-JOIN reviews ON listings.id = reviews.listing_id
-GROUP BY listing_id
-ORDER BY reviews DESC, property_type, host_name;
+JOIN availabilities ON listings.id = availabilities.listing_id
+WHERE available = 1;
