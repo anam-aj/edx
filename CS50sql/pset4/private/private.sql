@@ -32,7 +32,7 @@ FROM "sentences"
 WHERE id = 3041
 ORDER BY "id";*/
 
-WITH "message table" AS (
+CREATE VIEW "message" AS
     SELECT "id", TRIM(substr("sentence", 98, 4)) AS "phrase"
     FROM "sentences"
     WHERE id = 14
@@ -64,7 +64,7 @@ WITH "message table" AS (
     SELECT "id", TRIM(substr("sentence", 14, 5))
     FROM "sentences"
     WHERE id = 3041
-)
+
 
 CREATE VIEW "message" AS
 SELECT "phrase"
