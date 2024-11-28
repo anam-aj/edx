@@ -30,7 +30,7 @@ UNION
 SELECT TRIM(substr("sentence", 14, 5))
 FROM "sentences"
 WHERE id = 3041
-ORDER BY "ID";
+ORDER BY "id";
 
 /*SELECT "id", TRIM(substr("sentence", 98, 4)) AS "phrase"
 FROM "sentences"
