@@ -5,4 +5,6 @@ WHERE from_user_id = (
     FROM users
     WHERE username = 'creativewisdom377'
 )
-GROUP BY 
+GROUP BY to_user_id
+ORDER BY COUNT(to_user_id) DESC
+LIMIT 3;
