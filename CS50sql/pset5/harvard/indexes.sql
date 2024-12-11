@@ -1,1 +1,1 @@
-CREATE INDEX indx_course_id
+CREATE INDEX indx_course_id ON 
