@@ -3,6 +3,7 @@ SELECT phone_number
 FROM users
 WHERE joined_date < '2020-01-01'
 LIMIT 10;
+
 /*
 select *
 from users
