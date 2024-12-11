@@ -1,3 +1,1 @@
-DROP INDEX search_users_by_last_login
-DROP INDEX search_messages_by_from_user_id
-DROP INDEX search_messages_by_to_user_id
+CREATE INDEX 
