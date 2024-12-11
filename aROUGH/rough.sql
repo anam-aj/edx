@@ -1,4 +1,5 @@
-CREATE INDEX
+CREATE INDEX test_index
+ON users ()
 
 
 select *
