@@ -1,6 +1,8 @@
-CREATE INDEX test_index
-ON users (phone_number)
-WHERE joined_date < '2010-01-01';
+EXPLAIN QUERY PLAN
+SELECT phone_number
+FROM users
+WHERE joined_date < '2010-01-01'
+LIMIT 10;
 
 
 /*
