@@ -13,5 +13,3 @@ CREATE INDEX index_course_id ON satisfies (course_id);
 CREATE INDEX index_course_id ON satisfies (course_id);
 
 CREATE INDEX index_requirement_id ON satisfies (requirement_id);
-
-CREATE INDEX index_name ON requirements (name);
