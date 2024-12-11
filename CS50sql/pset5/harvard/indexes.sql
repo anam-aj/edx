@@ -10,6 +10,4 @@ CREATE INDEX index_semester ON courses (semester);
 
 CREATE INDEX index_course_id ON satisfies (course_id);
 
-CREATE INDEX index_course_id ON satisfies (course_id);
-
 CREATE INDEX index_requirement_id ON satisfies (requirement_id);
