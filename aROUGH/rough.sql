@@ -1,24 +1,3 @@
-CREATE TABLE transactions (
-    id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-    user_id integer,
-    symbol TEXT,
-    shares INTEGER,
-    rate FLOAT,
-    total FLOAT,
-    method TEXT,
-    date_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY(user_id) REFERENCES users(id)
-);
-
-CREATE INDEX userid ON transactions (user_id)
-
-
-CREATE TABLE holdings (
-    id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-    user_id integer,
-    symbol TEXT,
-    shares INTEGER,
-    FOREIGN KEY(user_id) REFERENCES users(id)
-);
-
-CREATE UNIQUE INDEX userid_symbol ON holdings (user_id, symbol)
+DROP INDEX search_users_by_last_login
+DROP INDEX search_messages_by_from_user_id
+DROP INDEX search_messages_by_to_user_id
