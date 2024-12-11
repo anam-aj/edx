@@ -1,8 +1,11 @@
 EXPLAIN QUERY PLAN
 SELECT phone_number
 FROM users
-WHERE joined_date < '2010-01-01'
+WHERE joined_date < '2020-01-01'
 LIMIT 10;
+
+
+
 
 
 /*
