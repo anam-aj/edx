@@ -2,4 +2,6 @@ CREATE INDEX index_student_id ON enrollments (student_id);
 
 CREATE INDEX index_course_id ON enrollments (course_id);
 
-CREATE INDEX index_
+CREATE INDEX index_department_number_semester ON courses (department, number, semester);
+
+
