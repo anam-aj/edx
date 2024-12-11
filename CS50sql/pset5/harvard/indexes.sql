@@ -1,1 +1,1 @@
-CREATE INDEX indx_course_id ON 
+CREATE INDEX indx_course_id ON enrollments
