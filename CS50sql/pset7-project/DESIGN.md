@@ -29,7 +29,7 @@ This database will support:
 
 ## Representation
 
-Entities are captured in MYSQL tables with the following schema.
+Information is captured in MYSQL tables with the following schema.
 
 ### Entities
 
@@ -47,9 +47,6 @@ The `users` table contains the following
 * `address`: User's address (optional).
 * `role`: Specifies if the user is a 'member' or 'staff' (non-nullable).
 
-
-* ##### Primary Key: `id`
-* ##### Indexes: email (unique index, automatically created due to the UNIQUE constraint).
 
 ### Relationships
 
