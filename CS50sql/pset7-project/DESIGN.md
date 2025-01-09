@@ -99,6 +99,10 @@ The `borrowing_transactions` table contains the following columns
 * `index_authors_name on authors(name)`: Speeds up searches for authors by their names, such as when querying books written by a specific author.
 * `index_publishers_name on publishers(name)`: Improves performance for queries involving publisher names, such as retrieving books by a specific publisher.
 * `idx_books_author_id on books(author_id)`: Optimizes searches for books based on their authors, as author_id is a foreign key in the books table.
+* `idx_books_publisher_id on books(publisher_id)`: Enhances the speed of lookups for books associated with specific publishers.
+* `idx_books_availability_status on books(availability_status)`: Facilitates quick filtering of books by availability, such as checking for available or borrowed books.
+* `idx_borrowing_transactions_user_id on borrowing_transactions(user_id)`: Improves performance when retrieving transaction history for a specific user.
+* `idx_borrowing_transactions_book_id on borrowing_transactions(book_id)`: Speeds up searches for transactions involving specific books.
 
 ### Triggers
 
