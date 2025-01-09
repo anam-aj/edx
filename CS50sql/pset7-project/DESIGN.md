@@ -87,6 +87,13 @@ The `borrowing_transactions` table contains the following columns
 * `date_time`: The date and time of the transaction (default is the current timestamp).
 * `action`: The action performed, either 'Borrowed' or 'Returned' (non-nullable).
 
+
+### Relationships
+
+![ER Diagram](ERdiagram.png)
+
+## Optimizations
+
 ### Triggers
 
 #### book_status_update
@@ -104,17 +111,6 @@ The `borrowing_transactions` table contains the following columns
 * `user_borrowing_history`: This stored procedure shows the borrowing history for a specific user, identified by their email address.
 * `book_by_author`: This stored procedure shows all books by a given author.
 * `book_by_publisher`: This stored procedure returns all books published by a given publisher.
-
-
-### Relationships
-
-In this section you should include your entity relationship diagram and describe the relationships between the entities in your database.
-
-## Optimizations
-
-In this section you should answer the following questions:
-
-* Which optimizations (e.g., indexes, views) did you create? Why?
 
 ## Limitations
 
