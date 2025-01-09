@@ -92,6 +92,12 @@ The `borrowing_transactions` table contains the following columns
 #### book_status_update
 * The `book_status_update` trigger automatically updates the availability status of books in the books table when a borrow or return transaction is recorded in the `borrowing_transactions` table. After Insert, whenever a new row is inserted into the `borrowing_transactions` table, this trigger checks the action field: If the action is 'Borrowed', the availability status of the corresponding book is set to 'not_available'. If the action is 'Returned', the availability status is set to 'available'.
 
+### Views
+
+* `available_books`:  This view lists all the books that are currently available for borrowing.
+* `borrowed_books`:  This view lists all the books that have been borrowed by users and are not currently available.
+* `members`:  This view lists all users who are registered as members.
+* `staff`:  This view lists all users who are registered as staff.
 
 ### Relationships
 
