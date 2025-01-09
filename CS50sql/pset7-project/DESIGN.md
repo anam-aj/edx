@@ -133,6 +133,7 @@ In this structure, the Books table serves as a central entity, linking authors, 
 * `book_by_author`: This stored procedure shows all books by a given author.
 * `book_by_publisher`: This stored procedure returns all books published by a given publisher.
 
+
 ## Limitations
 
 * Given schema doesn't take into account for due dates, any notification mechanism and charges or fine related any to book borrowing transactions.
