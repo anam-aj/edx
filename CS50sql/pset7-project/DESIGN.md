@@ -29,7 +29,7 @@ This database will support:
 
 ## Representation
 
-Information is captured in MYSQL tables with the following schema.
+Information is captured in MYSQL database with the following schema.
 
 ### Entities
 
@@ -47,6 +47,15 @@ The `users` table contains the following
 * `address`: User's address (optional).
 * `role`: Specifies if the user is a 'member' or 'staff' (non-nullable).
 
+#### 2. authors
+
+The `authors` table contains the following
+
+
+* `id`: A unique identifier for each author (auto-incremented).
+* `name`: The name of the author (non-nullable).
+* `birth_year`: The birth year of the author (optional).
+* `bio`: A short biography of the author (optional).
 
 ### Relationships
 
