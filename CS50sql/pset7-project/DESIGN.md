@@ -94,8 +94,13 @@ The `borrowing_transactions` table contains the following columns
 
 ## Optimizations
 
-### Triggers
+### Indexes
 
+* `index_authors_name on authors(name)`: Speeds up searches for authors by their names, such as when querying books written by a specific author.
+* `index_publishers_name on publishers(name)`: Improves performance for queries involving publisher names, such as retrieving books by a specific publisher.
+* `idx_books_author_id on books(author_id)`: Optimizes searches for books based on their authors, as author_id is a foreign key in the books table.
+
+### Triggers
 
 * `book_status_update`: This trigger automatically updates the availability status of books in the books table when a borrow or return transaction is recorded in the `borrowing_transactions` table. After Insert, whenever a new row is inserted into the `borrowing_transactions` table, this trigger checks the action field: If the action is 'Borrowed', the availability status of the corresponding book is set to 'not_available'. If the action is 'Returned', the availability status is set to 'available'.
 
