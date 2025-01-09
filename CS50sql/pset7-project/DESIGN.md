@@ -92,6 +92,18 @@ The `borrowing_transactions` table contains the following columns
 
 ![ER Diagram](ERdiagram.png)
 
+As detailed by the diagram:
+
+* The Users table is connected to the Borrowing_Transactions table through a one-to-many relationship. This means that a single user can perform multiple transactions, such as borrowing or returning books. The user_id in the borrowing_transactions table acts as a foreign key referencing the id column in the users table. This relationship allows the system to track all transactions performed by individual users.
+
+* The Books table is also linked to the Borrowing_Transactions table in a one-to-many relationship. Each book can be borrowed and returned multiple times, and every transaction record refers to a specific book. The book_id in the borrowing_transactions table is a foreign key pointing to the id column in the books table, enabling the system to associate transactions with specific books.
+
+The Authors table has a one-to-many relationship with the Books table. An author can write multiple books, but each book is written by a single author. This connection is established through the author_id column in the books table, which serves as a foreign key referencing the id column in the authors table. This setup allows the system to retrieve all books written by a specific author efficiently.
+
+The Publishers table is similarly connected to the Books table through a one-to-many relationship. A publisher can publish multiple books, but each book is published by a single publisher. The publisher_id in the books table acts as a foreign key referencing the id column in the publishers table. This relationship facilitates the retrieval of books associated with particular publishers.
+
+In this structure, the Books table serves as a central entity, linking authors, publishers, and transactions. The Borrowing_Transactions table functions as a junction between users and books, recording each borrowing and return action. This ER diagram ensures that the database is normalized, minimizing redundancy while supporting efficient querying and data management.
+
 ## Optimizations
 
 ### Indexes
