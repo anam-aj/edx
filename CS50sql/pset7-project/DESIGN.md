@@ -123,7 +123,4 @@ The `borrowing_transactions` table contains the following columns
 
 ## Limitations
 
-In this section you should answer the following questions:
-
-* What are the limitations of your design?
-* What might your database not be able to represent very well?
+Given schema doesn't take into account for due dates, any notification mechanism and charges or fine related any to book borrowing transactions.
