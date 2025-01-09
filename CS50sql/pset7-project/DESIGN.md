@@ -35,10 +35,22 @@ Entities are captured in MYSQL tables with the following schema.
 
 The database includes the following entities:
 
-* Which entities will you choose to represent in your database?
-* What attributes will those entities have?
-* Why did you choose the types you did?
-* Why did you choose the constraints you did?
+#### 1. users
+
+The users table stores information about the library members and staff. It includes details like the user's name, email, phone number, address, and role (either "member" or "staff").
+
+Columns:
+id: A unique identifier for each user (auto-incremented).
+first_name: User's first name (non-nullable).
+last_name: User's last name (non-nullable).
+email: User's email address (non-nullable and unique).
+phone_number: User's phone number (non-nullable).
+address: User's address (optional).
+role: Specifies if the user is a 'member' or 'staff' (non-nullable).
+Primary Key:
+id
+Indexes:
+email (unique index, automatically created due to the UNIQUE constraint).
 
 ### Relationships
 
