@@ -1,2 +1,41 @@
--- In this SQL file, write (and comment!) the typical SQL queries
--- users will run on your database
+List all available books:
+SELECT * FROM available_books;
+
+
+List all borrowed books:
+SELECT * FROM borrowed_books;
+
+Get borrowing history of a user by email:
+CALL user_borrowing_history('user@example.com');
+
+
+Get all books by a specific author:
+
+CALL book_by_author('J.K. Rowling');
+Get all books by a specific publisher:
+
+sql
+Copy code
+CALL book_by_publisher('Penguin Books');
+List all members:
+
+sql
+Copy code
+SELECT * FROM members;
+List all staff:
+
+sql
+Copy code
+SELECT * FROM staff;
+Add a new book transaction (Borrowed):
+
+sql
+Copy code
+INSERT INTO borrowing_transactions (user_id, book_id, action)
+VALUES (1, 101, 'Borrowed');
+Add a new book transaction (Returned):
+
+sql
+Copy code
+INSERT INTO borrowing_transactions (user_id, book_id, action)
+VALUES (1, 101, 'Returned');
