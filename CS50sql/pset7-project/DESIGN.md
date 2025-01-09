@@ -17,11 +17,10 @@ Out of the scope are borrowing charge, fine, due date, borrowing rules.
 
 ## Functional Requirements
 
-In this section you should answer the following questions:
+This database will support:
 
-* What should a user be able to do with your database?
-* What's beyond the scope of what a user should be able to do with your database?
-
+* CRUD operations for users, books, authors and publishers.
+* 
 ## Representation
 
 ### Entities
