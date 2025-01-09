@@ -139,7 +139,7 @@ In this structure, the Books table serves as a central entity, linking authors, 
 * Given schema doesn't take into account for due dates, any notification mechanism and charges or fine related any to book borrowing transactions.
 * It is assumed that one book will have one and only one author. So books authored by more than one author is not taken into account. Similar argument also hols true for publisher as well.
 
-### Acknowledgment:
+## Acknowledgment:
 
 * #### CS50 Duck
     The duck has been a GREAT help! Saved a lot of time by helping in finding required libraries, helping with syntax usage and finding typos. Thus I could invest my time to focus more on core logic.
