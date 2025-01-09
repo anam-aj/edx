@@ -1,6 +1,6 @@
-# Design Document
+# Library Management System Database
 
-By YOUR NAME HERE
+By ANAM ZAHID
 
 Video overview: <URL HERE>
 
