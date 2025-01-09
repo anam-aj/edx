@@ -94,10 +94,17 @@ The `borrowing_transactions` table contains the following columns
 
 ### Views
 
-* `available_books`:  This view lists all the books that are currently available for borrowing.
-* `borrowed_books`:  This view lists all the books that have been borrowed by users and are not currently available.
-* `members`:  This view lists all users who are registered as members.
-* `staff`:  This view lists all users who are registered as staff.
+* `available_books`: This view lists all the books that are currently available for borrowing.
+* `borrowed_books`: This view lists all the books that have been borrowed by users and are not currently available.
+* `members`: This view lists all users who are registered as members.
+* `staff`: This view lists all users who are registered as staff.
+
+### Stored Procedures
+
+* `user_borrowing_history`: This stored procedure shows the borrowing history for a specific user, identified by their email address.
+* `book_by_author`: This stored procedure shows all books by a given author.
+* `book_by_publisher`: This stored procedure returns all books published by a given publisher.
+
 
 ### Relationships
 
