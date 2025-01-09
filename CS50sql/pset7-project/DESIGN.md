@@ -2,7 +2,9 @@
 
 By ANAM ZAHID
 
+
 Video overview: <URL HERE>
+
 
 ## Scope
 
@@ -15,17 +17,23 @@ This Library Management System (LMS) database schema is designed to efficiently 
 
 Out of the scope are borrowing charge, fine, due date, borrowing rules.
 
+
 ## Functional Requirements
 
 This database will support:
 
 * CRUD operations for users, books, authors and publishers.
-* 
+* Availability status of books.
+* Keep track of borrowed books, date and the user who borrowed.
+
+
 ## Representation
+
+Entities are captured in MYSQL tables with the following schema.
 
 ### Entities
 
-In this section you should answer the following questions:
+The database includes the following entities:
 
 * Which entities will you choose to represent in your database?
 * What attributes will those entities have?
