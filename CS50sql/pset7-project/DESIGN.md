@@ -11,8 +11,9 @@ This Library Management System (LMS) database schema is designed to efficiently 
 * Users, including both member and staff with baisc identifying information.
 * Authors, including basic idenitfying information.
 * Publishers, including name and some description.
-* Books, alongwith
-* Which people, places, things, etc. are *outside* the scope of your database?
+* Books, including associated relevant information like author, publisher, genre etc.
+
+Out of the scope are borrowing charge, fine, due date, borrowing rules.
 
 ## Functional Requirements
 
