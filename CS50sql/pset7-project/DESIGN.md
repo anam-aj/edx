@@ -9,7 +9,8 @@ Video overview: <URL HERE>
 This Library Management System (LMS) database schema is designed to efficiently manage various aspects of a library, including user data, book information, authors, publishers, transactions (borrows and returns), and the availability status of books.As such, included in the database's scope is:
 
 * Users, including both member and staff with baisc identifying information.
-* Authors, including 
+* Authors, including basic idenitfying information.
+* Publishers, including name and some description.
 * Books, alongwith
 * Which people, places, things, etc. are *outside* the scope of your database?
 
