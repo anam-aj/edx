@@ -35,7 +35,7 @@ Entities are captured in MYSQL tables with the following schema.
 
 The database includes the following entities:
 
-#### 1. users
+#### 1. Users
 
 The users table stores information about the library members and staff. It includes details like the user's name, email, phone number, address, and role (either "member" or "staff").
 
