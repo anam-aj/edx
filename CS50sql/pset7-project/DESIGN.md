@@ -37,7 +37,7 @@ The database includes the following entities:
 
 #### 1. Users
 
-The `users` table contains the following
+The `users` table contains the following columns
 
 * `id`: A unique identifier for each user (auto-incremented).
 * `first_name`: User's first name (non-nullable).
@@ -47,15 +47,35 @@ The `users` table contains the following
 * `address`: User's address (optional).
 * `role`: Specifies if the user is a 'member' or 'staff' (non-nullable).
 
-#### 2. authors
+#### 2. Authors
 
-The `authors` table contains the following
-
+The `authors` table contains the following columns
 
 * `id`: A unique identifier for each author (auto-incremented).
 * `name`: The name of the author (non-nullable).
 * `birth_year`: The birth year of the author (optional).
 * `bio`: A short biography of the author (optional).
+
+#### 3. Publishers
+
+The publishers table contains the following columns
+
+* `id`: A unique identifier for each publisher (auto-incremented).
+* `name`: The name of the publisher (non-nullable).
+* `bio`: A short biography of the publisher (optional).
+
+#### 4. books
+
+The books table contains the following columns
+
+* `id`: A unique identifier for each book (auto-incremented).
+* `title`: The title of the book (non-nullable).
+* `author_id`: Foreign key referencing the authors table.
+* `publisher_id`: Foreign key referencing the publishers table.
+* `publication_year`: The year the book was published (optional).
+* `genre`: The genre of the book (optional).
+* `availability_status`: The availability of the book, either 'available' or 'not_available' (default is 'available').
+
 
 ### Relationships
 
