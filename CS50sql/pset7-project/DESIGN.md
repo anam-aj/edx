@@ -123,4 +123,6 @@ The `borrowing_transactions` table contains the following columns
 
 ## Limitations
 
-Given schema doesn't take into account for due dates, any notification mechanism and charges or fine related any to book borrowing transactions.
+* Given schema doesn't take into account for due dates, any notification mechanism and charges or fine related any to book borrowing transactions.
+* It is assumed that one book will have one and only one author.
+* It is assumed that one book will have one and only one publisher.
