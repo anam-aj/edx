@@ -37,20 +37,19 @@ The database includes the following entities:
 
 #### 1. Users
 
-The `users` table stores information about the library members and staff. It includes details like the user's name, email, phone number, address, and role (either "member" or "staff").
+The `users` table contains the following
 
-Columns:
-id: A unique identifier for each user (auto-incremented).
-first_name: User's first name (non-nullable).
-last_name: User's last name (non-nullable).
-email: User's email address (non-nullable and unique).
-phone_number: User's phone number (non-nullable).
-address: User's address (optional).
-role: Specifies if the user is a 'member' or 'staff' (non-nullable).
-Primary Key:
-id
-Indexes:
-email (unique index, automatically created due to the UNIQUE constraint).
+* `id`: A unique identifier for each user (auto-incremented).
+* `first_name`: User's first name (non-nullable).
+* `last_name`: User's last name (non-nullable).
+* `email`: User's email address (non-nullable and unique).
+* `phone_number`: User's phone number (non-nullable).
+* `address`: User's address (optional).
+* `role`: Specifies if the user is a 'member' or 'staff' (non-nullable).
+
+
+* ##### Primary Key: `id`
+* ##### Indexes: email (unique index, automatically created due to the UNIQUE constraint).
 
 ### Relationships
 
