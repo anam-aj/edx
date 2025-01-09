@@ -37,7 +37,7 @@ The database includes the following entities:
 
 #### 1. Users
 
-The users table stores information about the library members and staff. It includes details like the user's name, email, phone number, address, and role (either "member" or "staff").
+The `users` table stores information about the library members and staff. It includes details like the user's name, email, phone number, address, and role (either "member" or "staff").
 
 Columns:
 id: A unique identifier for each user (auto-incremented).
