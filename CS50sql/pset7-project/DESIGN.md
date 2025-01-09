@@ -58,15 +58,15 @@ The `authors` table contains the following columns
 
 #### 3. Publishers
 
-The publishers table contains the following columns
+The `publishers` table contains the following columns
 
 * `id`: A unique identifier for each publisher (auto-incremented).
 * `name`: The name of the publisher (non-nullable).
 * `bio`: A short biography of the publisher (optional).
 
-#### 4. books
+#### 4. Books
 
-The books table contains the following columns
+The `books` table contains the following columns
 
 * `id`: A unique identifier for each book (auto-incremented).
 * `title`: The title of the book (non-nullable).
@@ -75,6 +75,17 @@ The books table contains the following columns
 * `publication_year`: The year the book was published (optional).
 * `genre`: The genre of the book (optional).
 * `availability_status`: The availability of the book, either 'available' or 'not_available' (default is 'available').
+
+
+#### 5. Borrowing Transactions Table
+
+The `borrowing_transactions` table contains the following columns
+
+* `id`: A unique identifier for each transaction (auto-incremented).
+* `user_id`: Foreign key referencing the users table.
+* `book_id`: Foreign key referencing the books table.
+* `date_time`: The date and time of the transaction (default is the current timestamp).
+* `action`: The action performed, either 'Borrowed' or 'Returned' (non-nullable).
 
 
 ### Relationships
