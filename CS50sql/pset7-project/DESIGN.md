@@ -6,9 +6,8 @@ Video overview: <URL HERE>
 
 ## Scope
 
-In this section you should answer the following questions:
+This Library Management System (LMS) database schema is designed to efficiently manage various aspects of a library, including user data, book information, authors, publishers, transactions (borrows and returns), and the availability status of books.
 
-* What is the purpose of your database?
 * Which people, places, things, etc. are you including in the scope of your database?
 * Which people, places, things, etc. are *outside* the scope of your database?
 
