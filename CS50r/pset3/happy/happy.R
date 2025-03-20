@@ -20,6 +20,7 @@ for (year in c(2020:2024)) {
     country_row <- subset(df, country == country)
     values <- df( , -c(1,ncol(df)))
     score <- sum(value[1, ])
+    cat()
 
   }
 }
