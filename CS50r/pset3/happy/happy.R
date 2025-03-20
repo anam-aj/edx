@@ -2,6 +2,11 @@
 country <- readline("Country: ")
 
 # Read CSVs
+report <- data.frame()
+
+for (year in c(2020:2024)) {
+
+}
 year_2020 <- read.csv("2020.csv")
 year_2020$year <- 2020
 year_2021 <- read.csv("2021.csv")
