@@ -22,5 +22,7 @@ for (current_year in c(2020:2024)) {
     score <- sum(values[1, ], na.rm = TRUE)
     score <- round(score, 2)
     cat(user_country, paste0("(", current_year,"):"), score, "\n")
+  } else {
+    cat(user_country, paste0("(", current_year,"):"), "unavailable", "\n")
   }
 }
