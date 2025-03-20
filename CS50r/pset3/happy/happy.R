@@ -21,7 +21,7 @@ for (current_year in c(2020:2024)) {
     values <- df[ , -c(1,ncol(df))]
     score <- sum(values[1, ])
     score <- round(score, 2)
-    cat(user_country, paste0("(", current_United Statesyear,"):"), score, "\n")
+    cat(user_country, paste0("(", current_year,"):"), score, "\n")
   }
 }
 
