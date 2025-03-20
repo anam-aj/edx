@@ -1,9 +1,10 @@
 # Ask user the name of country
 country <- readline("Country: ")
 
-# Read CSVs
+# Empty data frame
 report <- data.frame()
 
+# Read CSVs into report dataframe
 for (year in c(2020:2024)) {
 
 }
