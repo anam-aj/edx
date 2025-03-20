@@ -15,8 +15,7 @@ for (year in c(2020:2024)) {
 
 # Output the happiness score year wise
 for (year in c(2020:2024)) {
-  df <- subset(report, year == year)
-  head(df)
+  df <- subset(report, report$year == year)
+  print(nrow(df))
 }
 
-# Data absent
