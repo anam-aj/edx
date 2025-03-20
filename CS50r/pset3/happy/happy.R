@@ -19,7 +19,7 @@ for (current_year in c(2020:2024)) {
   if (user_country %in% df$country) {
     country_row <- subset(df, country == user_country)
     values <- country_row[ , -c(1,ncol(df))]
-    score <- sum(values[1, ])
+    score <- sum(values[1, ], na.rm = TRUE)
     score <- round(score, 2)
     cat(user_country, paste0("(", current_year,"):"), score, "\n")
   }
