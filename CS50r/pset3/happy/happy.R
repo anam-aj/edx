@@ -11,17 +11,17 @@ for (year in c(2020:2024)) {
 }
 
 # Ask user the name of country
-country <- readline("Country: ")
+user_country <- readline("Country: ")
 
 # Output the happiness score year wise
-for (year in c(2020:2024)) {
-  df <- subset(report, year == year)
-  if (country %in% df$country) {
-    country_row <- subset(df, country == country)
+for (current_year in c(2020:2024)) {
+  df <- subset(report, year == current_year)
+  if (user_country %in% df$country) {
+    country_row <- subset(df, country == user_country)
     values <- df[ , -c(1,ncol(df))]
     score <- sum(values[1, ])
     score <- round(score, 2)
-    cat(country, paste0("(", year,"):"), score, "\n")
+    cat(user_country, paste0("(", current_United Statesyear,"):"), score, "\n")
   }
 }
 

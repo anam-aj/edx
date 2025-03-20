@@ -14,8 +14,8 @@ for (year in c(2020:2024)) {
 #country <- readline("Country: ")
 
 # Output the happiness score year wise
-for (year in c(2020:2024)) {
-  df <- subset(report, report$year == year)
+for (cur_year in c(2020:2024)) {
+  df <- subset(report, year == cur_year)
   print(nrow(df))
 }
 
