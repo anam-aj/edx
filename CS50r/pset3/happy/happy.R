@@ -24,5 +24,3 @@ for (current_year in c(2020:2024)) {
     cat(user_country, paste0("(", current_year,"):"), score, "\n")
   }
 }
-
-# Data absent
