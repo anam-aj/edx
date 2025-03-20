@@ -18,12 +18,11 @@ for (year in c(2020:2024)) {
   df <- subset(report, year == year)
   if (country %in% df$country) {
     country_row <- subset(df, country == country)
-    values <- df( , -c(1,ncol(df)))
-    score <- sum(value[1, ])
-    cat(country,
-
+    values <- df[ , -c(1,ncol(df))]
+    score <- sum(values[1, ])
+    score <- round(score, 2)
+    cat(country, paste0("(", year,"):"), score, "\n")
   }
 }
-
 
 # Data absent
