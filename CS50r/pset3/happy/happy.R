@@ -19,6 +19,8 @@ for (year in c(2020:2024)) {
   if (country %in% df$country) {
     country_row <- subset(df, country == country)
     values <- df( , -c(1,ncol(df)))
+    score <- sum(value[1, ])
+
   }
 }
 
