@@ -3,10 +3,14 @@ country <- readline("Country: ")
 
 # Empty data frame
 report <- data.frame()
+report_temp <- data.frame()
 
-# Read CSVs into report dataframe
+# Read CSVs into report data frame
 for (year in c(2020:2024)) {
-
+  file_name <- paste0(year, ".csv")
+  report_temp <- read.csv(file_name)
+  report_temp$year <- year
+  report <- rbind(report, report_temp)
 }
 year_2020 <- read.csv("2020.csv")
 year_2020$year <- 2020

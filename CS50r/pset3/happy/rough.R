@@ -1,8 +1,11 @@
-file_names <- c()
-for (a in c(2020:2024)) {
-  file_names <- c(file_names, (paste0("year_", a)))
-}
+# Empty data frame
+report <- data.frame()
+report_temp <- data.frame()
 
-for (name in file_names) {
-  name <- read
+# Read CSVs into report data frame
+for (year in c(2020:2024)) {
+  file_name <- paste0(year, ".csv")
+  report_temp <- read.csv(file_name)
+  report_temp$year <- year
+  report <- rbind(report, report_temp)
 }
