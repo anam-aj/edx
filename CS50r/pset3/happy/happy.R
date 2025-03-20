@@ -17,7 +17,8 @@ country <- readline("Country: ")
 for (year in c(2020:2024)) {
   df <- subset(report, year == year)
   if (country %in% df$country) {
-
+    country_row <- subset(df, country == country)
+    values <- df( , -c(1,ncol(df)))
   }
 }
 
