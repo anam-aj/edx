@@ -50,3 +50,11 @@ df.loc['Math', 'Alice':'Charlie']
 df['Alice':'Charlie']
 
 df['Math':'English', 'Alice':'Charlie']
+
+df['Math':'English']
+
+df['Math']
+
+df['Alice':'Charlie']
+
+df['Alice']
