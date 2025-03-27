@@ -59,4 +59,14 @@ df['Alice':'Charlie']
 
 df['Alice']
 
-df.iloc[2:4, 2:4]
+df.iloc[[2,3,4], [1,2,4]]
+
+df.loc[['Math','English','History'], ['Alice','Charlie']]
+
+df.loc[['History', 'Math', 'English'], ['Alice','Charlie']]
+
+df.loc[['Alice','Charlie'], ['History', 'Math', 'English']]
+
+df[['Math','English','History'], ['Alice','Charlie']]
+
+df[['Alice','Charlie'], ['History', 'Math', 'English']]
