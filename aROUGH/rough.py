@@ -58,3 +58,5 @@ df['Math']
 df['Alice':'Charlie']
 
 df['Alice']
+
+df.iloc[2:4, 2:4]
