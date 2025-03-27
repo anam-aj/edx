@@ -1,45 +1,27 @@
-import textwrap
+import pandas as pd
+import numpy as np
 
+seriesA = pd.Series(
+    [1,2,3,4,5],
+    index = ['a', 'b', 'c', 'd', 'e']
+)
 
-from termcolor import colored
+seriesB = pd.Series(
+    [1000,2000,-1000,-5000,1000],
+    index = ['a', 'b', 'c', 'd', 'e']
+)
 
+seriesC = pd.Series(
+    [10,20,-10,-50,100],
+    index = ['z', 'y', 'a', 'c', 'e']
+)
 
+df1 = pd.DataFrame(seriesA)
 
+df2 = pd.DataFrame(seriesA, seriesB)
 
-def wrap_text(text, color):
-    """Colorize and Decorate text in a Box"""
+df3 = pd.DataFrame([seriesA, seriesB])
 
-    # Wrap text
-    wrapped_text = textwrap.fill(text, width=20)
+df4 = pd.DataFrame([seriesA, seriesC])
 
-    # Split the wrapped text into lines
-    lines = wrapped_text.split("\n")
-
-    # Create the top border
-    top_border = "+" + "-" * 22 + "+"
-
-    # Create the bottom border
-    bottom_border = top_border
-
-    # Add side borders to each line
-    boxed_text = [top_border]
-    for line in lines:
-        boxed_text.append("| " + line.center(20) + " |")
-    boxed_text.append(bottom_border)
-
-    # Join the boxed text into a single string
-    boxed_text = "\n".join(boxed_text)
-
-    # Colorize text
-    colored_text = colored(boxed_text, color)
-
-    return colored_text
-
-
-text = "This is a test text to be wrapped and colorized."
-color = "red"
-
-result = wrap_text(text, color)
-
-
-print(result)
+df5 = pd.DataFrame([seriesA, seriesB, seriesC])

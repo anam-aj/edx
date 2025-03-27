@@ -1,0 +1,15 @@
+random_character <- function() {
+  # Return one random letter
+  word <- sample(letters, 1)
+
+}
+
+print_sequence <- function(length) {
+  # Print a random sequence of specified length
+  for (i in c(1:length)) {
+    cat(random_character())
+    Sys.sleep(0.25)
+  }
+}
+
+print_sequence(20)
