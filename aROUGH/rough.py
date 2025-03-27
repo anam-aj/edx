@@ -80,3 +80,5 @@ df[[True, False, True, False, True], [True, False, True, False, True]]
 df[[True, False, True, False, True]]
 
 df[[True, False, True, False, 'Emma']]
+
+df[['Alice', 'Emma']]
