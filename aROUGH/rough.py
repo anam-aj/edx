@@ -87,4 +87,4 @@ filter = (df.loc[['Math','English','History'], ['Alice','Charlie']] > 0)
 
 df.loc(filter)
 
-filter = (df.loc[['Math','English','History']] > 0)
+filter = (df.loc[:] > 50)
