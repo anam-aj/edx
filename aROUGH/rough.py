@@ -70,3 +70,5 @@ df.loc[['Alice','Charlie'], ['History', 'Math', 'English']]
 df[['Math','English','History'], ['Alice','Charlie']]
 
 df[['Alice','Charlie'], ['History', 'Math', 'English']]
+
+df.iloc[[2,3,4], True]
