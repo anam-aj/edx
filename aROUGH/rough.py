@@ -49,4 +49,4 @@ df.loc['Math', 'Alice':'Charlie']
 
 df['Alice':'Charlie']
 
-df['Math':'English']
+df['Math':'English', 'Alice':'Charlie']
