@@ -45,6 +45,6 @@ df.loc['Math':'English', 'Alice']
 
 df.loc['Math':, 'Alice':'Charlie']
 
-df.loc['Math':'English', 'Alice':'Charlie']
+df.loc['Math', 'Alice':'Charlie']
 
 df.iloc[1:3, 2:4]
