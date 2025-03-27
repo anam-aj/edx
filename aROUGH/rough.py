@@ -25,3 +25,14 @@ df3 = pd.DataFrame([seriesA, seriesB])
 df4 = pd.DataFrame([seriesA, seriesC])
 
 df5 = pd.DataFrame([seriesA, seriesB, seriesC])
+
+
+import pandas as pd
+import numpy as np
+
+# Creating the DataFrame
+df = pd.DataFrame(
+    np.random.randint(0, 101, (5, 5)),  # Random marks between 0 and 100
+    index=['Math', 'Science', 'English', 'History', 'Computer Science'],  # Row labels (Subjects)
+    columns=['Alice', 'Bob', 'Charlie', 'David', 'Emma']  # Column labels (Students)
+)
