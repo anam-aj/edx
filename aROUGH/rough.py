@@ -82,3 +82,5 @@ df[[True, False, True, False, True]]
 df[[True, False, True, False, 'Emma']]
 
 df[['Alice', 'Emma']]
+
+df.loc[['Math','English','History'], ['Alice','Charlie']] > 0
