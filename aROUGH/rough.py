@@ -71,4 +71,4 @@ df[['Math','English','History'], ['Alice','Charlie']]
 
 df[['Alice','Charlie'], ['History', 'Math', 'English']]
 
-df.iloc[[2,False,4], : ]
+df.iloc[[2,False,False], : ]
