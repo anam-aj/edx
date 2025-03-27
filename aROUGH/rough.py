@@ -83,4 +83,6 @@ df[[True, False, True, False, 'Emma']]
 
 df[['Alice', 'Emma']]
 
-df.loc[['Math','English','History'], ['Alice','Charlie']] > 0
+filter = (df.loc[['Math','English','History'], ['Alice','Charlie']] > 0)
+
+df.loc(filter)
