@@ -36,3 +36,15 @@ df = pd.DataFrame(
     index=['Math', 'Science', 'English', 'History', 'Computer Science'],  # Row labels (Subjects)
     columns=['Alice', 'Bob', 'Charlie', 'David', 'Emma']  # Column labels (Students)
 )
+
+df.loc['Math':'English', 'Alice':'Charlie']
+
+df.loc['Math':'English', 'Alice':]
+
+df.loc['Math':'English', 'Alice']
+
+df.loc['Math':, 'Alice':'Charlie']
+
+df.loc['Math':'English', 'Alice':'Charlie']
+
+df.iloc[1:3, 2:4]
