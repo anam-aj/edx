@@ -73,6 +73,10 @@ df[['Alice','Charlie'], ['History', 'Math', 'English']]
 
 df.iloc[[True, False, True, False, True], [True, False, True, False, True]]
 
+df.loc[[True, False, True, False, True], [True, False, True, False, True]]
+
 df[[True, False, True, False, True], [True, False, True, False, True]]
 
-df.loc[[True, False, True, False, True], [True, False, True, False, True]]
+df[[True, False, True, False, True]]
+
+df[[True, False, True, False]]
