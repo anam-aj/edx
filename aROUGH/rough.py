@@ -43,3 +43,7 @@ dfmishti = df[df['Name'] == 'Mishti']
 df.aggregate(['max', 'min', 'count'])
 
 df.aggregate(['max', 'min', 'count'], axis = 1)
+
+>>> dfUT1 = df[df.UT == 1]
+
+>>> print(dfUT1)
