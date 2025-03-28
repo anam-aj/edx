@@ -55,3 +55,5 @@ dfUT1.set_index('Name', inplace=True)
 dfUT1.reset_index('Name', inplace = True)
 
 dfUT1.reset_index(inplace = True)
+
+dfUT1.reset_index('UT', inplace = True)
