@@ -48,7 +48,7 @@ dfUT1 = df[df.UT == 1]
 
 dfUT1.reset_index(inplace=True)
 
-dfUT1.drop(columns=[‘index’],inplace=True)
+dfUT1.drop(columns=['index'], inplace=True)
 
 dfUT1.set_index('Name', inplace=True)
 
