@@ -29,10 +29,17 @@ df = pd.DataFrame(data)
 10   Mishti   2     18       21    25     24   23
 11   Mishti   3     17       18    20     25   20
 
-df[['Name', 'UT']]
 
-df['UT'] ==  2
+filter = df.loc[ :, 'Name'] == 'Mishti'
+df['Name'] == 'Mishti'
 
-df[df['UT'] ==  2]
 
-df[[True, False]]
+df[df['Name'] == 'Mishti']
+df.loc[df['Name'] == 'Mishti']
+
+
+dfmishti = df[df['Name'] == 'Mishti']
+
+df.aggregate(['max', 'min', 'count'])
+
+df.aggregate(['max', 'min', 'count'], axis = 1)
