@@ -6,10 +6,10 @@ def insertion_Sort(list3):
         while j >= 0 and temp < list3[j]:
             list3[j+1] = list3[j]
             j = j-1
-            list3[j+1] = temp
+        list3[j+1] = temp
 
 
-numList = [2, 1, -3, 0]
+numList = [2, 1, 1, 1, -3, 0]
 insertion_Sort(numList)
 print("The sorted list is :")
 for i in range(len(numList)):
