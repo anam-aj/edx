@@ -9,7 +9,7 @@ def insertion_Sort(list3):
             list3[j+1] = temp
 
 
-numList = [8, 7, 13, 1, -9, 4]
+numList = [5, 3, 4, 2]
 insertion_Sort(numList)
 print("The sorted list is :")
 for i in range(len(numList)):
