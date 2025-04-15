@@ -2,7 +2,7 @@ def insertion_Sort(list3):
     n= len(list3)
     for i in range(n): # Traverse through all elements
         temp = list3[i]
-        j = i-1
+        j = i - 1
         while j >=0 and temp< list3[j] :
             list3[j+1] = list3[j]
             j = j-1
