@@ -5,16 +5,21 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <strings.h>
+#include <string.h>
 
 unsigned int hash(const char *word);
 
 int main(void)
 {
-    const char *word = "a 1 !";
-    hash(word);
+    char name[80];
+    int length;
+    printf("Enter your name: ");
+    gets(name);
+    length=strlen(name);
+    printf("Your name has %d characters\n", length); }
 }
 
-// Hashes word to a number
+/*// Hashes word to a number
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
@@ -44,4 +49,4 @@ unsigned int hash(const char *word)
 
     return (sum % 100);
 }
-
+*/
