@@ -1,4 +1,4 @@
-def insertion_Sort(list3):
+def binary_search(sortedList, ):
     n = len(list3)
     for i in range(n):
         temp = list3[i]
