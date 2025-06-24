@@ -191,9 +191,12 @@ class CrosswordCreator():
 
         # Loop through all variables
         for variable in self.domains:
+
+            # Assigment incomplete
             if variable not in assignment or not assignment[variable]:
                 return False
 
+        # Assignment complete
         return True
 
     def consistent(self, assignment):
