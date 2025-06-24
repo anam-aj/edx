@@ -165,6 +165,7 @@ class CrosswordCreator():
 
         # Loops through arcs until queue is empty
         while arcs:
+            
             # Make variable arc consistent
             arc = arcs.pop(0)
             x, y = arc
