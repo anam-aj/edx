@@ -205,8 +205,13 @@ class CrosswordCreator():
         puzzle without conflicting characters); return False otherwise.
         """
 
-        for variables in assignment:
+        for variable in assignment:
+            if list(assignment.values()) != set(assignment.values()):
+                return False
+            if len(assignment[variable]) != variable.length:
+                return False
             if 
+
 
     def order_domain_values(self, var, assignment):
         """
