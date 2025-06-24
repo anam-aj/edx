@@ -160,7 +160,9 @@ class CrosswordCreator():
                         arc = (x, y)
                         arcs.append(arc)
             for arc in arcs:
-                
+                x, y = arc
+                revise(x, y)
+
         for arc in arcs:
             ...
 
