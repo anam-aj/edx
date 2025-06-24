@@ -153,7 +153,7 @@ class CrosswordCreator():
         """
 
         if arcs is None:
-            global arcs = []
+            arcs = []
             for x in self.domains:
                 for y in self.domains:
                     if x != y:
