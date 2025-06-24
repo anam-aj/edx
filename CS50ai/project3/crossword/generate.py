@@ -176,20 +176,21 @@ class CrosswordCreator():
 
             return True
 
-        for arc in arcs:
-            x, y = arc
-            revised = self.revise(x, y)
-            if revised:
-                neighbors = self.crossword.neighbors(x)
-                for neighbor in neighbors:
-                    arc = (x, neighbor)
-                    arcs.append(arc)
+        else:
+            for arc in arcs:
+                x, y = arc
+                revised = self.revise(x, y)
+                if revised:
+                    neighbors = self.crossword.neighbors(x)
+                    for neighbor in neighbors:
+                        arc = (x, neighbor)
+                        arcs.append(arc)
 
-            for variable in self.domains:
-                if len(self.domains[variable]) == 0:
-                    return False
+                for variable in self.domains:
+                    if len(self.domains[variable]) == 0:
+                        return False
 
-            return True
+                return True
 
     def assignment_complete(self, assignment):
         """
