@@ -210,7 +210,7 @@ class CrosswordCreator():
                 return False
             if len(assignment[variable]) != variable.length:
                 return False
-            if 
+            if  
 
 
     def order_domain_values(self, var, assignment):
