@@ -165,7 +165,7 @@ class CrosswordCreator():
 
         # Loops through arcs until queue is empty
         while arcs:
-            
+
             # Make variable arc consistent
             arc = arcs.pop(0)
             x, y = arc
@@ -188,7 +188,10 @@ class CrosswordCreator():
         Return True if `assignment` is complete (i.e., assigns a value to each
         crossword variable); return False otherwise.
         """
-        raise NotImplementedError
+
+        # Loop through all variables
+        for variable in self.domains:
+            
 
     def consistent(self, assignment):
         """
