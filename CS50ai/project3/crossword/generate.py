@@ -152,46 +152,34 @@ class CrosswordCreator():
         return False if one or more domains end up empty.
         """
 
+        # Create all possible arcs if arcs is empty
         if arcs is None:
             arcs = []
-
             for x in self.domains:
                 for y in self.domains:
+                    # Check overlap
                     if (x != y) and (self.crossword.overlaps[x, y]):
                         arc = (x, y)
+                        # Add arc
                         arcs.append(arc)
 
-            for arc in arcs:
-                x, y = arc
-                revised = self.revise(x, y)
-                if revised:
-                    if len(self.domains[x]) == 0:
-                        return False
-                    neighbors = self.crossword.neighbors(x)
-                    for neighbor in neighbors:
-                        arc = (neighbor, x)
-                        arcs.append(arc)
+        # Loops through arcs until queue is empty
+        while arcs:
+            # Make variable arc consistent
+            arc = arcs.pop(0)
+            x, y = arc
+            revised = self.revise(x, y)
+            if revised:
+                # Empty domain, No solution possible
+                if len(self.domains[x]) == 0:
+                    return False
+                # Add new arcs to list if variable is revised
+                neighbors = self.crossword.neighbors(x)
+                for neighbor in neighbors:
+                    arc = (neighbor, x)
+                    arcs.append(arc)
 
-            #for variable in self.domains:
-                #if len(self.domains[variable]) == 0:
-                    #return False
-
-            return True
-
-        else:
-            for arc in arcs:
-                x, y = arc
-                revised = self.revise(x, y)
-                if revised:
-                    neighbors = self.crossword.neighbors(x)
-                    for neighbor in neighbors:
-                        arc = (x, neighbor)
-                        arcs.append(arc)
-
-                for variable in self.domains:
-                    if len(self.domains[variable]) == 0:
-                        return False
-
+        # All variables are arc consistent
         return True
 
     def assignment_complete(self, assignment):
