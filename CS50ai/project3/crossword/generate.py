@@ -169,7 +169,7 @@ class CrosswordCreator():
                         return False
                     neighbors = self.crossword.neighbors(x)
                     for neighbor in neighbors:
-                        arc = (x, neighbor)
+                        arc = (neighbor, x)
                         arcs.append(arc)
 
             #for variable in self.domains:
