@@ -163,9 +163,9 @@ class CrosswordCreator():
                 x, y = arc
                 revised = self.revise(x, y)
                 if revised:
-                    neighbours = self.crossword.neighbours(x)
-                    for neighbour in neighbours:
-                        arc = (x, neighbour)
+                    neighbors = self.crossword.neighbors(x)
+                    for neighbor in neighbors:
+                        arc = (x, neighbor)
                         arcs.append(arc)
 
 
