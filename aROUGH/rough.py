@@ -1,14 +1,4 @@
-n = 3
-print(n)
+l = [1, 2, 3, 4, 5]
 
-def fn(n):
-    print(n)
-    if True:
-        b =  2
-        n = b
-        print(n)
-
-print(n)
-
-fn(1)
-print(n)
+for n in l:
+    print (n)
