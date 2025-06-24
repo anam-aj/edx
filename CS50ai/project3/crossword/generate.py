@@ -191,7 +191,7 @@ class CrosswordCreator():
 
         # Loop through all variables
         for variable in self.domains:
-            
+            if assignment[variable]
 
     def consistent(self, assignment):
         """
