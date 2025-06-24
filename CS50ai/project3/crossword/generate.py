@@ -169,7 +169,7 @@ class CrosswordCreator():
                     for neighbor in neighbors:
                         arc = (x, neighbor)
                         arcs.append(arc)
-
+            for 
 
         for arc in arcs:
             ...
