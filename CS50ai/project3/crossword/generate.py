@@ -162,9 +162,11 @@ class CrosswordCreator():
             for arc in arcs:
                 x, y = arc
                 revised = self.revise(x, y)
-                if revised and x is:
+                if revised:
                     neighbours = self.crossword.neighbours(x)
-                    arcs.extend(neighbours)
+                    for neighbour in neighbours:
+                        x
+                        arcs.append(arc)
 
 
         for arc in arcs:
