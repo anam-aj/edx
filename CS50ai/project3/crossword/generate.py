@@ -191,8 +191,9 @@ class CrosswordCreator():
 
         # Loop through all variables
         for variable in self.domains:
-            
+            if variable not in assignment or not assignment[variable]:
                 return False
+
         return True
 
     def consistent(self, assignment):
