@@ -161,7 +161,7 @@ class CrosswordCreator():
                         arcs.append(arc)
             for arc in arcs:
                 x, y = arc
-                self.revise(x, y)
+                revised = self.revise(x, y)
 
         for arc in arcs:
             ...
