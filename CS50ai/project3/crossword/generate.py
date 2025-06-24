@@ -161,6 +161,7 @@ class CrosswordCreator():
                         arcs.append(arc)
 
         for arc in arcs:
+            ...
 
     def assignment_complete(self, assignment):
         """
