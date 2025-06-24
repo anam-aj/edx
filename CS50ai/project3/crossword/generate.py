@@ -192,7 +192,7 @@ class CrosswordCreator():
                     if len(self.domains[variable]) == 0:
                         return False
 
-                return True
+        return True
 
     def assignment_complete(self, assignment):
         """
