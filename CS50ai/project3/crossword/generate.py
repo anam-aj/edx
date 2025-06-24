@@ -156,7 +156,7 @@ class CrosswordCreator():
             arcs = []
             for x in self.domains:
                 for y in self.domains:
-                    if x != y:
+                    if self.crossword.overlaps[x, y]:
                         arc = (x, y)
                         arcs.append(arc)
 
