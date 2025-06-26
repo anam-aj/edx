@@ -206,12 +206,18 @@ class CrosswordCreator():
         """
 
         for variable in assignment:
-            if list(assignment.values()) != set(assignment.values()):
+            if len(list(assignment.values())) != len(set(assignment.values())):
                 return False
             if len(assignment[variable]) != variable.length:
                 return False
-            if  
+            neighbors = self.crossword.neighbors(variable)
+            for neighbor in neighbors:
+                if neighbor in assignment:
+                    i, j = self.crossword.overlaps[variable, neighbor]
+                    if assignment[variable][i] != assignment[neighbor][j]:
+                        return False
 
+        return True
 
     def order_domain_values(self, var, assignment):
         """
