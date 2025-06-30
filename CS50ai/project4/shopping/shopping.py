@@ -60,12 +60,15 @@ def load_data(filename):
     is 1 if Revenue is true, and 0 otherwise.
     """
 
-    # Read CSV file as dictionary object
+    # Empty dictionary to hold each list as a key-value pair
+    # key = columnname, value = list of correspondig values from all rows
+    data = {}
+
+    # Open CSV file
     with open (filename) as file:
         rows = csv.DictReader(file)
 
         for row in rows:
-            
 
 
 
