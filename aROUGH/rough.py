@@ -18,4 +18,9 @@ with open ("shopping.csv") as file:
         for col, val in row.items():
             data[col].append(val)
 
-    print(data)
+    count = 0
+    for key, value in data.items():
+        print(key)
+        print(data[key])
+
+
