@@ -63,6 +63,7 @@ def load_data(filename):
     # Open CSV file
     with open (filename) as file:
         rows = csv.reader(file)
+        header = next(rows)
         for row in rows:
 
 
