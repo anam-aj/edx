@@ -63,8 +63,8 @@ def load_data(filename):
     # Open CSV file
     with open (filename) as file:
         rows = csv.reader(file)
-        for i in range(5):
-           
+        for row in rows:
+
 
 
 def train_model(evidence, labels):
