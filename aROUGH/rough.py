@@ -21,6 +21,6 @@ with open ("shopping.csv") as file:
     count = 0
     for key, value in data.items():
         print(key)
-        print(data[key])
+        print(data[key][0:4])
 
 
