@@ -69,7 +69,7 @@ def load_data(filename):
         rows = csv.DictReader(file)
 
         # Add column names to 'data' as keys
-        columns = rows.keys()
+        columns = rows.fieldnames
         for name in columns:
             data[name] = []
 
@@ -77,8 +77,6 @@ def load_data(filename):
         for row in rows:
             for col, val in row.items:
                 data[col].append(val)
-
-
 
 
 def train_model(evidence, labels):
