@@ -75,7 +75,8 @@ def load_data(filename):
 
         # Populate the columns(keys) in 'data' with values
         for row in rows:
-
+            for col, val in row.items:
+                data[col].append(val)
 
 
 
