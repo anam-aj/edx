@@ -1,9 +1,4 @@
-import csv
-
-# Open CSV file
-with open ("shopping.csv") as file:
-    rows = csv.reader(file)
-    count = 0
-    header = next(rows)
-    print (header)
-
+my_dict = {"name": "Alice", "age": 25, "city": "New York"}
+for key, value in my_dict.items():
+    print(5)
+    print(key, value)
