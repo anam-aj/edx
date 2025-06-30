@@ -61,8 +61,8 @@ def load_data(filename):
     """
 
     # Open CSV file
-    with open filename as file:
-        ...
+    with open (filename) as file:
+        rows = csv.reader(file)
 
 
 def train_model(evidence, labels):
