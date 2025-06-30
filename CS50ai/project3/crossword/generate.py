@@ -205,11 +205,18 @@ class CrosswordCreator():
         puzzle without conflicting characters); return False otherwise.
         """
 
+        # Loop through each variable present in assignment
         for variable in assignment:
-            if len(list(assignment.values())) != len(set(assignment.values())):
+
+            # Check if all values are distinct
+            if len(assignment) != len(set(assignment.values())):
                 return False
+
+            # Check if all values are of correct length
             if len(assignment[variable]) != variable.length:
                 return False
+
+            # Check for conflict with neighbours
             neighbors = self.crossword.neighbors(variable)
             for neighbor in neighbors:
                 if neighbor in assignment:
@@ -217,6 +224,7 @@ class CrosswordCreator():
                     if assignment[variable][i] != assignment[neighbor][j]:
                         return False
 
+        # Assignment is consistent
         return True
 
     def order_domain_values(self, var, assignment):
@@ -226,7 +234,35 @@ class CrosswordCreator():
         The first value in the list, for example, should be the one
         that rules out the fewest values among the neighbors of `var`.
         """
-        raise NotImplementedError
+
+        # Get neighbors
+        neighbors = self.crossword.neighbors(var)
+
+        # Get words from domain
+        words = self.domains[var]
+
+        # Empty dictionary to store 'words : elimiminations'
+        eliminations = {}
+
+        # For every word in domain, calculates the number of elimination(n)
+        for word in words:
+            n = 0
+            for neighbor in neighbors:
+                if neighbor not in assignment:
+                    i, j = self.crossword.overlaps[var, neighbor]
+                    neighbor_words = self.domains[neighbor]
+                    for w in neighbor_words:
+                        if word[i] != w[j]:
+                            n += 1
+
+            # Add 'word' and corresponding 'eliminations' to dictionary
+            eliminations[n] = word
+
+        # Sort values in ascending order
+        eliminations = dict(sorted(eliminations.items()))
+        values = list(eliminations.values())
+
+        return values
 
     def select_unassigned_variable(self, assignment):
         """
@@ -236,7 +272,49 @@ class CrosswordCreator():
         degree. If there is a tie, any of the tied variables are acceptable
         return values.
         """
-        raise NotImplementedError
+
+        # Get unassigned variables
+        unassign_var = []
+        for variable in self.domains:
+            if variable not in assignment:
+                unassign_var.append(variable)
+
+        # Map the number of remaining values to each unassigned variable
+        # as '(number, variable)' tuple
+        rem_val = []
+        for variable in unassign_var:
+            num = len(self.domains[variable])
+            rem_val.append((num, variable))
+        # Sort by number of remaining values
+        rem_val = sorted(rem_val, key=lambda x: x[0])
+
+        # No Tie (among number of remaining values)
+        if len(rem_val) == 1:
+            return rem_val[0][1]
+        else:
+            num1 = rem_val[0][0]
+            num2 = rem_val[1][0]
+            if num1 != num2:
+                return rem_val[0][1]
+
+        # List of variable with same number of remaining values
+        var = []
+        min_val = rem_val[0][0]
+        for item in rem_val:
+            if item[0] == min_val:
+                var.append(item[1])
+            else:
+                break
+
+        # Get degree of each variable
+        degree = []
+        for variable in var:
+            deg = self.crossword.neighbors(variable)
+            degree.append((deg, variable))
+
+        # Return varibale with least degree
+        degree = sorted(degree, key=lambda x: x[0])
+        return degree[0][1]
 
     def backtrack(self, assignment):
         """
@@ -247,7 +325,20 @@ class CrosswordCreator():
 
         If no assignment is possible, return None.
         """
-        raise NotImplementedError
+
+        if self.assignment_complete(assignment):
+            return assignment
+        else:
+            var = self.select_unassigned_variable(assignment)
+            for word in self.domains[var]:
+                assignment[var] = word
+                if self.consistent(assignment):
+                    result = self.backtrack(assignment)
+                    if result is not None:
+                        return result
+                del assignment[var]
+
+            return None
 
 
 def main():
