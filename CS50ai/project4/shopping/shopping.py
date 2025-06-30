@@ -68,6 +68,12 @@ def load_data(filename):
     with open (filename) as file:
         rows = csv.DictReader(file)
 
+        # Add column names to 'data' as keys
+        columns = rows.keys()
+        for name in columns:
+            data[name] = []
+
+        # Populate the columns(keys) in 'data' with values
         for row in rows:
 
 
