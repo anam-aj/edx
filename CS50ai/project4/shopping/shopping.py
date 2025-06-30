@@ -66,7 +66,7 @@ def load_data(filename):
 
     # Open CSV file
     with open (filename) as file:
-        rows = csv.reader(file)
+        rows = csv.DictReader(file)
 
         # Add headers as keys
         header = next(rows)
@@ -76,7 +76,7 @@ def load_data(filename):
         # Add values from all rows
         for row in rows:
             for item in row:
-                
+
 
 
 
