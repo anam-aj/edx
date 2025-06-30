@@ -68,14 +68,8 @@ def load_data(filename):
     with open (filename) as file:
         rows = csv.DictReader(file)
 
-        # Add headers as keys
-        header = next(rows)
-        for name in header:
-            data[name] : []
-
-        # Add values from all rows
         for row in rows:
-            for item in row:
+            
 
 
 
