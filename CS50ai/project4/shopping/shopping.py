@@ -60,10 +60,20 @@ def load_data(filename):
     is 1 if Revenue is true, and 0 otherwise.
     """
 
+    # Empty dictionary to hold each list a key-value pair
+    # key = columnname, value = list of correspondig values from all rows
+    data = {}
+
     # Open CSV file
     with open (filename) as file:
         rows = csv.reader(file)
+
+        # Add headers as keys
         header = next(rows)
+        for name in header:
+            data[name] : []
+
+        # Add values from all rows
         for row in rows:
 
 
