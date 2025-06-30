@@ -75,6 +75,8 @@ def load_data(filename):
 
         # Add values from all rows
         for row in rows:
+            for item in row:
+                
 
 
 
