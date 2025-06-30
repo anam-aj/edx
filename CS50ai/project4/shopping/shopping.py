@@ -65,7 +65,7 @@ def load_data(filename):
     data = {}
 
     # Open CSV file
-    with open (filename) as file:
+    with open (filename, newline='') as file:
         rows = csv.DictReader(file)
 
         # Add column names to 'data' as keys
