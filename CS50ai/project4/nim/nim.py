@@ -101,6 +101,7 @@ class NimAI():
         Return the Q-value for the state `state` and the action `action`.
         If no Q-value exists yet in `self.q`, return 0.
         """
+        state = tuple(state)
         if (state, action) in self.q and self.q[state, action]:
             return self.q[state, action]
         else:
