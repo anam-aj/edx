@@ -60,23 +60,74 @@ def load_data(filename):
     is 1 if Revenue is true, and 0 otherwise.
     """
 
-    # Empty dictionary to hold each list as a key-value pair
-    # key = columnname, value = list of correspondig values from all rows
-    data = {}
-
     # Open CSV file
-    with open (filename, newline='') as file:
+    with open(filename, newline='') as file:
         rows = csv.DictReader(file)
 
-        # Add column names to 'data' as keys
-        columns = rows.fieldnames
-        for name in columns:
-            data[name] = []
+        # Empty 'evidence' list and 'label' list
+        evidence = []
+        label = []
 
-        # Populate the columns(keys) in 'data' with values
+        # Dictionary to map months to index
+        months = {
+            "Jan": 0,
+            "Feb": 1,
+            "Mar": 2,
+            "Apr": 3,
+            "May": 4,
+            "June": 5,
+            "Jul": 6,
+            "Aug": 7,
+            "Sep": 8,
+            "Oct": 9,
+            "Nov": 10,
+            "Dec": 11
+        }
+
         for row in rows:
-            for col, val in row.items:
-                data[col].append(val)
+
+            # Empty list to hold one evidence
+            curr_evidence = []
+
+            # Populate one piece of evidence
+            curr_evidence.append(int(row['Administrative']))
+            curr_evidence.append(float(row['Administrative_Duration']))
+            curr_evidence.append(int(row['Informational']))
+            curr_evidence.append(float(row['Informational_Duration']))
+            curr_evidence.append(int(row['ProductRelated']))
+            curr_evidence.append(float(row['ProductRelated_Duration']))
+            curr_evidence.append(float(row['BounceRates']))
+            curr_evidence.append(float(row['ExitRates']))
+            curr_evidence.append(float(row['PageValues']))
+            curr_evidence.append(float(row['SpecialDay']))
+            curr_evidence.append(months[row["Month"]])
+            curr_evidence.append(int(row['OperatingSystems']))
+            curr_evidence.append(int(row['Browser']))
+            curr_evidence.append(int(row['Region']))
+            curr_evidence.append(int(row['TrafficType']))
+
+            # Add 'visitor type' value
+            if row['VisitorType'] == 'Returning_Visitor':
+                curr_evidence.append(1)
+            else:
+                curr_evidence.append(0)
+
+            # Add 'weekend' value
+            if row['Weekend'] == 'TRUE':
+                curr_evidence.append(1)
+            else:
+                curr_evidence.append(0)
+
+            # Add 'current evidence' to 'evidence list'
+            evidence.append(curr_evidence)
+
+            # Add label
+            if row['Revenue'] == 'TRUE':
+                label.append(1)
+            else:
+                label.append(0)
+
+        return (evidence, label)
 
 
 def train_model(evidence, labels):
@@ -84,7 +135,14 @@ def train_model(evidence, labels):
     Given a list of evidence lists and a list of labels, return a
     fitted k-nearest neighbor model (k=1) trained on the data.
     """
-    raise NotImplementedError
+
+    # Select model
+    model = KNeighborsClassifier(n_neighbors=1)
+
+    # Fit model
+    model.fit(evidence, labels)
+
+    return model
 
 
 def evaluate(labels, predictions):
@@ -102,7 +160,25 @@ def evaluate(labels, predictions):
     representing the "true negative rate": the proportion of
     actual negative labels that were accurately identified.
     """
-    raise NotImplementedError
+
+    # Total positive and negatives
+    total_pos = sum(labels)
+    total_neg = len(labels) - total_pos
+
+    # True positives and negatives
+    true_pos = 0
+    true_neg = 0
+
+    for i in range(len(labels)):
+        if labels[i] == 1 and predictions[i] == 1:
+            true_pos += 1
+        elif labels[i] == 0 and predictions[i] == 0:
+            true_neg += 1
+
+    sensitivity = true_pos / total_pos
+    specificity = true_neg / total_neg
+
+    return (sensitivity, specificity)
 
 
 if __name__ == "__main__":
