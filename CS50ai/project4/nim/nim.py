@@ -102,7 +102,9 @@ class NimAI():
         If no Q-value exists yet in `self.q`, return 0.
         """
         if self.q[(state, action)]:
-            return 
+            return self.q[(state, action)]
+        else:
+            return 0
 
 
     def update_q_value(self, state, action, old_q, reward, future_rewards):
