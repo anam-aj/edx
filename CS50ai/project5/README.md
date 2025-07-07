@@ -5,5 +5,3 @@
     hidden-activation-function = relu
     dropout = 0.25
     output-activation-function = softmax
-
-
