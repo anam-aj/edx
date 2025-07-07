@@ -103,7 +103,7 @@ def get_model():
     tf.keras.layers.Flatten(),
 
     # Add a hidden layer with dropout
-    tf.keras.layers.Dense(256, activation="relu"),
+    tf.keras.layers.Dense(64, activation="relu"),
     tf.keras.layers.Dropout(0.5),
 
     # Add an output layer with output units for 43 catogories
