@@ -107,7 +107,7 @@ def get_model():
     tf.keras.layers.Dropout(0.25),
 
     # Add an output layer with output units for 43 catogories
-    tf.keras.layers.Dense(NUM_CATEGORIES, activation="softmax")
+    tf.keras.layers.Dense(NUM_CATEGORIES, activation="relu")
     ])
 
     # Train neural network
