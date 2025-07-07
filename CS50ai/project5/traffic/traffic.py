@@ -91,23 +91,23 @@ def get_model():
     # Create model
     model = tf.keras.models.Sequential([
 
-    # Convolutional layer. Learn 32 filters using a 3x3 kernel
-    tf.keras.layers.Conv2D(
-        32, (6, 6), activation="relu", input_shape=(IMG_WIDTH, IMG_HEIGHT, 3)
-    ),
+        # Convolutional layer. Learn 32 filters using a 3x3 kernel
+        tf.keras.layers.Conv2D(
+            32, (6, 6), activation="relu", input_shape=(IMG_WIDTH, IMG_HEIGHT, 3)
+        ),
 
-    # Max-pooling layer, using 2x2 pool size
-    tf.keras.layers.MaxPooling2D(pool_size=(2, 2)),
+        # Max-pooling layer, using 2x2 pool size
+        tf.keras.layers.MaxPooling2D(pool_size=(2, 2)),
 
-    # Flatten units
-    tf.keras.layers.Flatten(),
+        # Flatten units
+        tf.keras.layers.Flatten(),
 
-    # Add a hidden layer with dropout
-    tf.keras.layers.Dense(64, activation="relu"),
-    tf.keras.layers.Dropout(0.25),
+        # Add a hidden layer with dropout
+        tf.keras.layers.Dense(64, activation="relu"),
+        tf.keras.layers.Dropout(0.25),
 
-    # Add an output layer with output units for 43 catogories
-    tf.keras.layers.Dense(NUM_CATEGORIES, activation="softmax")
+        # Add an output layer with output units for 43 catogories
+        tf.keras.layers.Dense(NUM_CATEGORIES, activation="softmax")
     ])
 
     # Train neural network
