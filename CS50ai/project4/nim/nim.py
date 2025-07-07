@@ -101,12 +101,14 @@ class NimAI():
         Return the Q-value for the state `state` and the action `action`.
         If no Q-value exists yet in `self.q`, return 0.
         """
+
+        # Change state's data type
         state = tuple(state)
-        if (state, action) in self.q and self.q[state, action]:
-            return self.q[state, action]
+
+        if (state, action) in self.q and self.q[(state, action)]:
+            return self.q[(state, action)]
         else:
             return 0
-
 
     def update_q_value(self, state, action, old_q, reward, future_rewards):
         """
@@ -123,7 +125,15 @@ class NimAI():
         `alpha` is the learning rate, and `new value estimate`
         is the sum of the current reward and estimated future rewards.
         """
-        raise NotImplementedError
+
+        # Change state's data type
+        state = tuple(state)
+
+        # Calculate new q value
+        new_q_value = old_q + self.alpha * ((reward + future_rewards) - old_q)
+
+        # Update new q value for given action and state
+        self.q[(state, action)] = new_q_value
 
     def best_future_reward(self, state):
         """
@@ -135,7 +145,26 @@ class NimAI():
         Q-value in `self.q`. If there are no available actions in
         `state`, return 0.
         """
-        raise NotImplementedError
+
+        # Change state's data type
+        state = tuple(state)
+
+        keys = self.q.keys()
+        poss_state_actions = []
+
+        # Get all available keys for given state
+        for key in keys:
+            if key[0] == state:
+                poss_state_actions.append(key)
+
+        # Get the best Q-value for given state
+        best_q_value = 0
+        if poss_state_actions:
+            for key in poss_state_actions:
+                if self.q[key] > best_q_value:
+                    best_q_value = self.q[key]
+
+        return best_q_value
 
     def choose_action(self, state, epsilon=True):
         """
@@ -152,7 +181,38 @@ class NimAI():
         If multiple actions have the same Q-value, any of those
         options is an acceptable return value.
         """
-        raise NotImplementedError
+
+        # Change state's data type
+        state = tuple(state)
+
+        keys = self.q.keys()
+        poss_actions = []
+
+        # Get all available actions for given state
+        for key in keys:
+            if key[0] == state:
+                poss_actions.append(key[1])
+
+        # Evaluate best action possible
+        best_action = None
+        best_q_value = 0
+
+        for action in poss_actions:
+            if self.q[(state, action)] > best_q_value:
+                best_q_value = self.q[(state, action)]
+                best_action = action
+
+        # Greedy approach(epsilon=False)
+        if not epsilon:
+            return best_action
+
+        # Epsilon-Greedy approach(epsilon=True)
+        else:
+            actions = [random.choice(poss_actions), best_action]
+            probabs = [self.epsilon, 1 - self.epsilon]
+            chosen_action = random.choices(actions, probabs)[0]
+
+            return chosen_action
 
 
 def train(n):
