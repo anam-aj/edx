@@ -1,1 +1,3 @@
-Initially tried
+1st:
+    dropout = 0.1
+
