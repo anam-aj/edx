@@ -8,6 +8,9 @@
     Convul-filter = 32
     hidden-units = 64
     dropout = 0.50
-    RESULT:
+    RESULT: 333/333 - 1s - 4ms/step - accuracy: 0.0553 - loss: 3.5020
 3rd:
-
+    Convul-filter = 64
+    hidden-units = 64
+    dropout = 0.50
+    RESULT: 333/333 - 1s - 4ms/step - accuracy: 0.0553 - loss: 3.5020
