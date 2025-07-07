@@ -42,5 +42,5 @@
 8th:
     Convul-filter = 256
     hidden-units = 64
-    dropout = 0.25
+    dropout = 0.75
     RESULT:

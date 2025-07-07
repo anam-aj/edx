@@ -104,7 +104,7 @@ def get_model():
 
     # Add a hidden layer with dropout
     tf.keras.layers.Dense(64, activation="relu"),
-    tf.keras.layers.Dropout(0.25),
+    tf.keras.layers.Dropout(0.75),
 
     # Add an output layer with output units for 43 catogories
     tf.keras.layers.Dense(NUM_CATEGORIES, activation="softmax")
