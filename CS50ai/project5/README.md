@@ -1,4 +1,9 @@
 1st:
-    dropout = 0.1
     Convul-filter = 32
+    convul-activation-function = relu
+    hidden-units = 64
+    hidden-activation-function = relu
+    dropout = 0.25
+    output-activation-function = softmax
+
 
