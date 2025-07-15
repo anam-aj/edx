@@ -47,7 +47,18 @@ def get_mask_token_index(mask_token_id, inputs):
     """
 
     # Get tokens id
-    ids = inputs[]
+    ids = inputs['input_ids'][0]
+
+    # Return index of mask token
+    index = 0
+    for id in ids:
+        if id == mask_token_id:
+            return index
+        else:
+            index += 1
+
+    # Mask token not present
+    return None
 
 
 def get_color_for_attention_score(attention_score):
