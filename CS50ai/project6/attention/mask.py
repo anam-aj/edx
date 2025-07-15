@@ -67,15 +67,10 @@ def get_color_for_attention_score(attention_score):
     given `attention_score`. Each value should be in the range [0, 255].
     """
 
-    # Get color attention score
-    r, g, b = attention_score
-
     # Convert attention score to RGB values
-    r = round(r * 255)
-    g = round(g * 255)
-    b = round(b * 255)
+    r = round(attention_score * 255)
 
-    return (r, g, b)
+    return (r, r, r)
 
 
 def visualize_attentions(tokens, attentions):
