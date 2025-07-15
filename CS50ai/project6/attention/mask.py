@@ -70,7 +70,8 @@ def get_color_for_attention_score(attention_score):
     # Get color attention score
     r, g, b = attention_score
 
-    # 
+    # Convert attention score to RGB values
+    r = r
 
 
 def visualize_attentions(tokens, attentions):
