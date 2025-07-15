@@ -68,7 +68,7 @@ def get_color_for_attention_score(attention_score):
     """
 
     # Convert attention score to RGB values
-    r = round(attention_score * 255)
+    r = tf.round(attention_score * 255)
 
     return (r, r, r)
 
