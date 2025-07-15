@@ -1,5 +1,5 @@
 import sys
-import tensorfplow as tf
+import tensorflow as tf
 
 from PIL import Image, ImageDraw, ImageFont
 from transformers import AutoTokenizer, TFBertForMaskedLM
