@@ -8,3 +8,4 @@ cat(roll_dice(5))
 
 generate_password()
 generate_password(10)
+
