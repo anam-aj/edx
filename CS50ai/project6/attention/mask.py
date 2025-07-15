@@ -46,7 +46,8 @@ def get_mask_token_index(mask_token_id, inputs):
     `None` if not present in the `inputs`.
     """
 
-    # 
+    # Get tokens id
+    ids = inputs[]
 
 
 def get_color_for_attention_score(attention_score):
