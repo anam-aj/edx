@@ -1,4 +1,4 @@
-q = ['a',1]
+a = [1, 2, 3]
+a, b, c = a
 
-if "a" in q:
-    print(2)
+print(a, b, c)

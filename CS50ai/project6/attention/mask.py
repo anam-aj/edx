@@ -67,7 +67,9 @@ def get_color_for_attention_score(attention_score):
     given `attention_score`. Each value should be in the range [0, 255].
     """
 
-    # 
+    r, g, b = attention_score
+
+    
 
 
 def visualize_attentions(tokens, attentions):
