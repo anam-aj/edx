@@ -49,7 +49,6 @@ def get_mask_token_index(mask_token_id, inputs):
     raise NotImplementedError
 
 
-
 def get_color_for_attention_score(attention_score):
     """
     Return a tuple of three integers representing a shade of gray for the
@@ -57,7 +56,6 @@ def get_color_for_attention_score(attention_score):
     """
     # TODO: Implement this function
     raise NotImplementedError
-
 
 
 def visualize_attentions(tokens, attentions):
