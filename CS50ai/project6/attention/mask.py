@@ -85,13 +85,13 @@ def visualize_attentions(tokens, attentions):
     """
     # TODO: Update this function to produce diagrams for all layers and heads.
     for i in range(12):
-        for j in range(12)
-        generate_diagram(
-            i + 1,
-            i + 1,
-            tokens,
-            attentions[0][0][0]
-        )
+        for j in range(12):
+            generate_diagram(
+                i + 1,
+                j + 1,
+                tokens,
+                attentions[0][0][0]
+            )
 
 
 def generate_diagram(layer_number, head_number, tokens, attention_weights):
