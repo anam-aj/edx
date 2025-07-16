@@ -90,7 +90,7 @@ def visualize_attentions(tokens, attentions):
                 i + 1,
                 j + 1,
                 tokens,
-                attentions[0][0][0]
+                attentions[i][0][j]
             )
 
 
