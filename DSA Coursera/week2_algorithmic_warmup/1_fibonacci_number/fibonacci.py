@@ -1,14 +1,14 @@
 def fibonacci_number(n):
-    first_num = 0
-    second_num = 1
+    first_number = 0
+    second_number = 1
 
     if n == 1:
-        return first_num
+        return first_number
     elif n == 2:
         return second_number
     elif n > 2:
-        for number in range(n):
-
+        for number in range(2, n):
+             next_number = first_number + second_numbr
 
 
 
