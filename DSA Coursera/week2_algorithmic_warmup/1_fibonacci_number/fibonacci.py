@@ -1,8 +1,13 @@
 def fibonacci_number(n):
-    if n <= 1:
-        return n
+    first_num = 0
+    second_num = 1
 
-    return fibonacci_number(n - 1) + fibonacci_number(n - 2)
+    if n == 0 or n == 1:
+        return n
+    if n == 1:
+        return 1
+    else:
+
 
 
 if __name__ == '__main__':
