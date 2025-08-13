@@ -58,6 +58,6 @@ def last_digit_of_sum(n):
 
 
 if __name__ == '__main__':
-    input = sys.stdin.read();
-    from_, to = map(int, input.split())
+    #input = sys.stdin.read();
+    from_, to = map(int, input().split())
     print(fibonacci_partial_sum_naive(from_, to))
