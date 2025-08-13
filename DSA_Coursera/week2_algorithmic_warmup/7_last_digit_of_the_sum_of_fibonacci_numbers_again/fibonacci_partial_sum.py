@@ -15,6 +15,13 @@ def fibonacci_partial_sum_naive(from_, to):
 
     return _sum % 10'''
 
+    a = last_digit_of_sum(to)
+    b = last_digit_of_sum(from_)
+    
+
+
+def last_digit_of_sum(n):
+
     if n < 1:
         return 0
 
@@ -41,7 +48,7 @@ def fibonacci_partial_sum_naive(from_, to):
             repeat_after += 1
 
     index = n % repeat_after
-    modulo_of_pre_cur_sum[index - 1][2]
+    return modulo_of_pre_cur_sum[index - 1][2]
 
 
 if __name__ == '__main__':
