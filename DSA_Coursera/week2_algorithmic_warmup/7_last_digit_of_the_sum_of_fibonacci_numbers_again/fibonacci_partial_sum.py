@@ -41,7 +41,7 @@ def fibonacci_partial_sum_naive(from_, to):
             repeat_after += 1
 
     index = n % repeat_after
-    return modulo_of_pre_cur_sum[index - 1][2]
+    modulo_of_pre_cur_sum[index - 1][2]
 
 
 if __name__ == '__main__':
