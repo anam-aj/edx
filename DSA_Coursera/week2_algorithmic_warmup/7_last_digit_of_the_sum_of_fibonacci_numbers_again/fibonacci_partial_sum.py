@@ -18,8 +18,6 @@ def fibonacci_partial_sum_naive(from_, to):
     a = last_digit_of_sum(to)
     b = last_digit_of_sum(from_ - 1)
 
-    print(a, b)
-
     if a >= b:
         return a - b
     else:
