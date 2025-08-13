@@ -3,9 +3,11 @@ def fibonacci_last_digit(n):
         return n
 
     previous = 0
-    current  = 1
+    current = 1
 
     for _ in range(n - 1):
+        previous %= 10
+        current %= 10
         previous, current = current, previous + current
 
     return current % 10

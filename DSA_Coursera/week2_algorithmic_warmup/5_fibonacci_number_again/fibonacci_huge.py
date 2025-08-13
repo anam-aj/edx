@@ -1,7 +1,7 @@
 def fibonacci_huge_naive(n, m):
 
     previous = 0
-    current  = 1
+    current = 1
     repeat_after = 1
 
     if n < (m * m):
@@ -22,8 +22,8 @@ def fibonacci_huge_naive(n, m):
             modulo.append(current_modulo_pair)
             repeat_after += 1
 
-    print(modulo)
-    print(repeat_after)
+    index = n % repeat_after
+    return modulo[index - 1][1]
 
 
 if __name__ == '__main__':
