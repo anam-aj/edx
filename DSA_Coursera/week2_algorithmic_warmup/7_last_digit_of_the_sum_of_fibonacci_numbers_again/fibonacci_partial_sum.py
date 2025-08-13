@@ -15,7 +15,7 @@ def fibonacci_partial_sum_naive(from_, to):
 
     return _sum % 10'''
 
-    if n < 1:
+    if to < 1:
         return 0
 
     previous, current, _sum = 0, 1, 1
