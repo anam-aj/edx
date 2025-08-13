@@ -23,7 +23,7 @@ def fibonacci_sum_squares(n):
         small = 10 ** 3
 
     for _ in range(1, small):
-        previous, current = current, previous + current
+        previous, current = current ** 2, (previous + current) ** 2
         _sum = _sum + current
         previous %= 10
         current %= 10
