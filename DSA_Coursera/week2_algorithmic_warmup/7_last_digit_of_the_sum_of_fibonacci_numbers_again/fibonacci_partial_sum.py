@@ -16,7 +16,7 @@ def fibonacci_partial_sum_naive(from_, to):
     return _sum % 10'''
 
     a = last_digit_of_sum(to)
-    b = last_digit_of_sum(from_)
+    b = last_digit_of_sum(from_ - 1)
 
     if a >= b:
         return a - b
