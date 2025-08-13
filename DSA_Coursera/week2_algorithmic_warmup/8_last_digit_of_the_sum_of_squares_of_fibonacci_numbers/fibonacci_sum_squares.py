@@ -14,7 +14,8 @@ def fibonacci_sum_squares(n):
         return 0
 
     previous, current, _sum = 0, 1, 1
-    modulo_of_pre_cur_sum = [(0, 1, 1)]
+    pre_sq, cur_sq, sum_sq = 0, 1, 1
+    modulo_of_sq_pre_cur_sum = [(0, 1, 1)]
     repeat_after = 1
 
     if n < (10 ** 3):
