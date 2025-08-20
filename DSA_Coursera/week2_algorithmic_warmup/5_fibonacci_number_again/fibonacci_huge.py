@@ -1,5 +1,8 @@
 def fibonacci_huge_naive(n, m):
 
+    if n < 1:
+        return n
+
     previous = 0
     current = 1
     repeat_after = 1
