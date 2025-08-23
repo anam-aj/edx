@@ -1,25 +1,43 @@
-import csv
+def naive_poly_mult(P, Q):
+    n = max(len(P), len(Q))
 
-# Empty dictionary to hold each list as a key-value pair
-# key = columnname, value = list of correspondig values from all rows
-data = {}
-rows = {}
+    # Base case: single coefficient
+    if n == 1:
+        return [P[0] * Q[0]]
 
-# Open CSV file
-with open ("shopping.csv") as file:
-    rows = list(csv.DictReader(file))
+    # Pad both polynomials to length n (power of 2 helps)
+    while len(P) < n:
+        P.append(0)
+    while len(Q) < n:
+        Q.append(0)
 
-# Add column names to 'data' as keys
-columns = rows[0].keys()
-for name in columns:
-    data[name] = []
+    m = n // 2
 
-# Populate the columns(keys) in 'data' with values
-for row in rows:
-    for col, val in row.items():
-        data[col].append(val)
+    # Split
+    P_low, P_high = P[:m], P[m:]
+    Q_low, Q_high = Q[:m], Q[m:]
 
-count = 0
-for key, value in data.items():
-    print(key)
-    print(data[key][0:4])
+    # Recursive multiplications
+    L = naive_poly_mult(P_low, Q_low)
+    H = naive_poly_mult(P_high, Q_high)
+    M1 = naive_poly_mult(P_low, Q_high)
+    M2 = naive_poly_mult(P_high, Q_low)
+
+    # Allocate result (size 2n-1)
+    result = [0] * (2 * n - 1)
+
+    # Add L
+    for i in range(len(L)):
+        result[i] += L[i]
+
+    # Add M1+M2 shifted by m
+    for i in range(len(M1)):
+        result[i + m] += M1[i]
+    for i in range(len(M2)):
+        result[i + m] += M2[i]
+
+    # Add H shifted by 2m
+    for i in range(len(H)):
+        result[i + 2*m] += H[i]
+
+    return result
