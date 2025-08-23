@@ -2,8 +2,22 @@ from sys import stdin
 
 
 def optimal_value(capacity, weights, values):
-    value = 0.
-    # write your code here
+    value = 0.0
+
+    sorted_indices = sorted(range(len(weights)), key=lambda i: values[i]/weights[i], reverse=True)
+
+    for i in sorted_indices:
+        if capacity <= 0:
+            return value
+        else:
+            weight = weights[i]
+
+            if weight <= capacity:
+                value += (values[i])
+            else:
+                value += ((capacity/weight) * values[i])
+
+            capacity -= weight
 
     return value
 

@@ -2,12 +2,8 @@ from itertools import permutations
 
 
 def largest_number_naive(numbers):
-    numbers = list(map(str, numbers))
-
-    largest = 0
-
-    for permutation in permutations(numbers):
-        largest = max(largest, int("".join(permutation)))
+    sorted_numbers = sorted(numbers, key=lambda n: str(n) * 5, reverse=True)
+    largest = "".join(str(n) for n in sorted_numbers)
 
     return largest
 
