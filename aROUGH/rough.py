@@ -12,7 +12,8 @@ def quick_sort(elements, l, r):
 def partition(elements, l, r):
 
     pivot = elements[l]
-    j = l
+    index1 = l
+    index2 = l
 
     for i in range(l + 1, r + 1):
         if elements[i] > pivot:
