@@ -17,11 +17,15 @@ def binary_search(keys, query):
         else:
             start = mid + 1
 
-    while index > 0:
-        if keys[index - 1] == query:
-            index -= 1
-        else:
+    while end >= start:
+        mid = (end + start) // 2
+
+        if query == keys[mid]:
+            end = mid
             break
+        elif query < keys[mid]:
+            end = mid - 1
+        else:
 
     return index
 
