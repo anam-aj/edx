@@ -36,3 +36,7 @@ if __name__ == '__main__':
 
     for q in input_queries:
         print(binary_search(input_keys, q), end=' ')
+'''7
+2 4 4 4 7 7 9
+4
+9 4 5 2'''
