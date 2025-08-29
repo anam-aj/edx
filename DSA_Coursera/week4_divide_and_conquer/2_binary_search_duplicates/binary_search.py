@@ -21,6 +21,7 @@ def binary_search(keys, query):
             index -= 1
         else:
             break
+
     return index
 
 
