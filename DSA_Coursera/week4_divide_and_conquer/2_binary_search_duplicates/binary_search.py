@@ -4,7 +4,7 @@ def binary_search(keys, query):
     start = 0
     end = len(keys) - 1
 
-    index = None
+    index = -1
 
     while end >= start:
         mid = (end + start) // 2
@@ -16,7 +16,7 @@ def binary_search(keys, query):
         else:
             start = mid + 1
 
-    return -1
+    
 
 
 if __name__ == '__main__':
