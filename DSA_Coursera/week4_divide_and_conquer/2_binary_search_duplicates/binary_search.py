@@ -11,6 +11,7 @@ def binary_search(keys, query):
 
         if query == keys[mid]:
             index = mid
+            break
         elif query < keys[mid]:
             end = mid - 1
         else:
