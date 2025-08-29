@@ -35,6 +35,7 @@ def partition(elements, l, r):
     tmp = elements[l]
     elements[l] = elements[index1 - 1]
     elements[index1 - 1] = tmp
+    index1 -= 1
 
     return (index1, index2)
 
