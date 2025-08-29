@@ -22,6 +22,7 @@ def binary_search(keys, query):
         mid = (end + start) // 2
 
         if query == keys[mid]:
+            index = mid
             end = mid
         else:
             start = mid + 1
