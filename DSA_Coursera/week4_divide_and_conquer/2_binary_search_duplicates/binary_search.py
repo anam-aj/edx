@@ -20,7 +20,7 @@ def binary_search(keys, query):
     while end >= start:
         mid = (end + start) // 2
 
-        if query != keys[mid]:
+        if query == keys[mid]:
             end = mid
         elif query < keys[mid]:
             end = mid - 1
