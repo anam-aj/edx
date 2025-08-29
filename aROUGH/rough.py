@@ -1,31 +1,36 @@
-def fibonacci_huge_naive(n, m):
+def quick_sort(elements, l, r):
 
-    previous = 0
-    current  = 1
-    repeat_after = 1
+    if l >= r:
+        return
 
-    if n < (m * m):
-        small = n
-    else:
-        small = m * m
+    index1, index2 = partition(elements, l, r)
 
-    modulo = [(0, 1)]
-
-    for _ in range(1, small):
-        previous, current = current, previous + current
-        previous %= m
-        current %= m
-        current_modulo_pair = (previous, current)
-        if current_modulo_pair == (0, 1):
-            break
-        else:
-            modulo.append(current_modulo_pair)
-            repeat_after += 1
-
-    print(modulo)
-    print(repeat_after)
+    quick_sort(elements, l, index1 - 1)
+    quick_sort(elements, index2 + 1 , r)
 
 
-if __name__ == '__main__':
-    n, m = map(int, input().split())
-    print(fibonacci_huge_naive(n, m))
+def partition(elements, l, r):
+
+    pivot = elements[l]
+    j = l
+
+    for i in range(l + 1, r + 1):
+        if elements[i] > pivot:
+            pass
+        elif elements[i] <= pivot:
+            tmp = elements[j + 1]
+            elements[j + 1] = elements[i]
+            elements[i] = tmp
+            j += 1
+
+    tmp = elements[l]
+    elements[l] = elements[j]
+    elements[j] = tmp
+
+    return j
+
+
+l = [2, 3, 1, 1, 4, 10, 1, 7, 6, 1, 1]
+r = len(l) - 1
+quick_sort(l, 0, r)
+print(l)
