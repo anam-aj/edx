@@ -1,5 +1,6 @@
 def binary_search(keys, query):
     # write your code here
+
     start = 0
     end = len(keys) - 1
 
