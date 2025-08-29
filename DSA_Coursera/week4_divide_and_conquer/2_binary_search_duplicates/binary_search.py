@@ -16,7 +16,8 @@ def binary_search(keys, query):
         else:
             start = mid + 1
 
-    
+    while index > 0:
+        if keys[index] == query
 
 
 if __name__ == '__main__':
