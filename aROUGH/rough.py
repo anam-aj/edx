@@ -32,9 +32,9 @@ def partition(elements, l, r):
             index1 += 1
             index2 += 1
 
-    tmp = elements[index1 - 1]
-    elements[index1 - 1] = elements[j]
-    elements[j] = tmp
+    tmp = elements[l]
+    elements[l] = elements[index1 - 1]
+    elements[index1 - 1] = tmp
 
     return (index1, index2)
 
