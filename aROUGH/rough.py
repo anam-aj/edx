@@ -21,9 +21,12 @@ def partition(elements, l, r):
         elif elements[i] == pivot:
             tmp = elements[index2 + 1]
             elements[index2 + 1] = elements[i]
-        elif elements[i] <= pivot:
-            tmp = elements[j + 1]
-            elements[j + 1] = elements[i]
+            elements[i] = tmp
+        elif elements[i] < pivot:
+            tmp_id1 = elements[index1]
+            tmp = elements[index2 + 1]
+            elements[index1] = elements[i]
+            elements[index2 + 1] = tmp_id1
             elements[i] = tmp
             j += 1
 
