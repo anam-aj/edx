@@ -69,13 +69,15 @@ l = [100, -50, 200, 0, -10, 75, 150, -200]
 
 l = [2, 3, 1, 1, 4, 10, 1, 7, 6, 1, 1, 22, -1, -1, 3, -10]
 
+l = [-3, -1, 4, -3, 5]
+
 
 
 r = len(l) - 1
 randomized_quick_sort(l, 0, r)
 print(l)
 
-failures = []
+'''failures = []
 for _ in range(5000):  # test 5000 random arrays
     size = random.randint(0, 12)
     arr = [random.randint(-5, 5) for _ in range(size)]
@@ -87,4 +89,4 @@ for _ in range(5000):  # test 5000 random arrays
 
 print("Number of failures:", len(failures))
 if failures:
-    print("Examples:", failures[:5])
+    print("Examples:", failures[:5])'''
