@@ -14,7 +14,7 @@ def randomized_quick_sort(elements, l, r):
 
 def partition3(elements, l, r):
 
-    pivot = elements[l]
+    pivot = randint(l, r)
     index1 = l
     index2 = l
 
