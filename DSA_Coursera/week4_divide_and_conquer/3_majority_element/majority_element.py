@@ -5,7 +5,6 @@ def majority_element_naive(elements):
 
     n = len(elements)
 
-    if n
     mid = n // 2
 
     if n % 2 == 0:
