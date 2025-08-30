@@ -1,5 +1,7 @@
+import random
+
 def majority_element_naive(elements):
-    quick_sort(elements, 0, len(elements) - 1)
+    randomized_quick_sort(elements, 0, len(elements) - 1)
 
     n = len(elements)
     mid = n // 2
@@ -16,18 +18,21 @@ def majority_element_naive(elements):
             return 0
 
 
-def quick_sort(elements, l, r):
+def randomized_quick_sort(elements, l, r):
 
     if l >= r:
         return
 
-    index1, index2 = partition(elements, l, r)
+    index1, index2 = partition3(elements, l, r)
 
-    quick_sort(elements, l, index1 - 1)
-    quick_sort(elements, index2 + 1 , r)
+    randomized_quick_sort(elements, l, index1 - 1)
+    randomized_quick_sort(elements, index2 + 1 , r)
 
 
-def partition(elements, l, r):
+def partition3(elements, l, r):
+
+    rand_pivot = random.randint(l, r)
+    elements[l], elements[rand_pivot] = elements[rand_pivot], elements[l]
 
     pivot = elements[l]
     index1 = l
