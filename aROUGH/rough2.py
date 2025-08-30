@@ -1,43 +1,68 @@
-def naive_poly_mult(P, Q):
-    n = max(len(P), len(Q))
+def quick_sort(elements, l, r):
 
-    # Base case: single coefficient
-    if n == 1:
-        return [P[0] * Q[0]]
+    if l >= r:
+        return
 
-    # Pad both polynomials to length n (power of 2 helps)
-    while len(P) < n:
-        P.append(0)
-    while len(Q) < n:
-        Q.append(0)
+    index1, index2 = partition(elements, l, r)
 
-    m = n // 2
+    quick_sort(elements, l, index1 - 1)
+    quick_sort(elements, index2 + 1 , r)
 
-    # Split
-    P_low, P_high = P[:m], P[m:]
-    Q_low, Q_high = Q[:m], Q[m:]
 
-    # Recursive multiplications
-    L = naive_poly_mult(P_low, Q_low)
-    H = naive_poly_mult(P_high, Q_high)
-    M1 = naive_poly_mult(P_low, Q_high)
-    M2 = naive_poly_mult(P_high, Q_low)
+def partition(elements, l, r):
 
-    # Allocate result (size 2n-1)
-    result = [0] * (2 * n - 1)
+    pivot = elements[l]
+    index1 = l
+    index2 = l
 
-    # Add L
-    for i in range(len(L)):
-        result[i] += L[i]
+    for i in range(l + 1, r + 1):
+        if elements[i] > pivot:
+            pass
+        elif elements[i] == pivot:
+            tmp = elements[index2 + 1]
+            elements[index2 + 1] = elements[i]
+            elements[i] = tmp
+            index2 += 1
+        elif elements[i] < pivot:
+            tmp = elements[index1]
+            elements[index1] = elements[i]
+            elements[i] = tmp
+            tmp = elements[index2 + 1]
+            elements[index2 + 1] = elements[i]
+            elements[i] = tmp
+            index1 += 1
+            index2 += 1
 
-    # Add M1+M2 shifted by m
-    for i in range(len(M1)):
-        result[i + m] += M1[i]
-    for i in range(len(M2)):
-        result[i + m] += M2[i]
+    return (index1, index2)
 
-    # Add H shifted by 2m
-    for i in range(len(H)):
-        result[i + 2*m] += H[i]
 
-    return result
+l = [2, 4, -1, -10]
+
+#Already sorted list
+l = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+#Reverse sorted list
+l = [9, 8, 7, 6, 5, 4, 3, 2, 1]
+
+#List with duplicates
+l = [4, 2, 7, 2, 4, 9, 1, 2]
+
+#Single element list
+l = [5]
+
+#Empty list
+l = []
+
+#All elements equal
+l = [3, 3, 3, 3, 3]
+
+#Random order (medium size)
+l = [10, 3, 5, 8, 2, 7, 6, 1, 4, 9]
+
+#Large range mixed
+l = [100, -50, 200, 0, -10, 75, 150, -200]
+
+l = [2, 3, 1, 1, 4, 10, 1, 7, 6, 1, 1, 22, -1, -1, 3, -10]
+r = len(l) - 1
+quick_sort(l, 0, r)
+print(l)
