@@ -54,7 +54,30 @@ def partition(elements, l, r):
 
 
 #l = [2, 4, -1, -10]
-l = [2, 3, 1, 1, 4, 10, 1, 7, 6, 1, 1, 22, -1, -1, 3, -10]
+#Already sorted list l = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+#Reverse sorted list
+l = [9, 8, 7, 6, 5, 4, 3, 2, 1]
+
+#List with duplicates
+l = [4, 2, 7, 2, 4, 9, 1, 2]
+
+#Single element list
+l = [5]
+
+#Empty list
+l = []
+
+#All elements equal
+l = [3, 3, 3, 3, 3]
+
+#Random order (medium size)
+l = [10, 3, 5, 8, 2, 7, 6, 1, 4, 9]
+
+#Large range mixed
+l = [100, -50, 200, 0, -10, 75, 150, -200]
+
+#l = [2, 3, 1, 1, 4, 10, 1, 7, 6, 1, 1, 22, -1, -1, 3, -10]
 r = len(l) - 1
 quick_sort(l, 0, r)
 print(l)
