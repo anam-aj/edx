@@ -42,20 +42,6 @@ def partition3(elements, l, r):
     return (index1, index2)
 
 
-'''def partition3(array, left, right):
-    # write your code here
-
-
-def randomized_quick_sort(array, left, right):
-    if left >= right:
-        return
-    k = randint(left, right)
-    array[left], array[k] = array[k], array[left]
-    m1, m2 = partition3(array, left, right)
-    randomized_quick_sort(array, left, m1 - 1)
-    randomized_quick_sort(array, m2 + 1, right)'''
-
-
 if __name__ == '__main__':
     input_n = int(input())
     elements = list(map(int, input().split()))
