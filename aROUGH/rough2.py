@@ -13,10 +13,10 @@ def randomized_quick_sort(elements, l, r):
 
 def partition3(elements, l, r):
 
-    #rand_pivot = random.randint(l, r)
-    #elements[l], elements[rand_pivot] = elements[rand_pivot], elements[l]
+    rand_pivot = random.randint(l, r)
+    elements[l], elements[rand_pivot] = elements[rand_pivot], elements[l]
 
-    pivot = l
+    pivot = elements[l]
     index1 = l
     index2 = l
 
@@ -77,7 +77,7 @@ r = len(l) - 1
 randomized_quick_sort(l, 0, r)
 print(l)
 
-'''failures = []
+failures = []
 for _ in range(5000):  # test 5000 random arrays
     size = random.randint(0, 12)
     arr = [random.randint(-5, 5) for _ in range(size)]
@@ -89,4 +89,4 @@ for _ in range(5000):  # test 5000 random arrays
 
 print("Number of failures:", len(failures))
 if failures:
-    print("Examples:", failures[:5])'''
+    print("Examples:", failures[:5])
