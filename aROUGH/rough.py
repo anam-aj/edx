@@ -37,6 +37,17 @@ def partition(elements, l, r):
             index2 += 1
         print("i=", i, elements)
 
+        '''elif elements[i] < pivot:
+            print('index1:', index1, 'index2:', index2)
+            tmp_id1 = elements[index1]
+            tmp = elements[index2 + 1]
+            elements[index1] = elements[i]
+            elements[index2 + 1] = tmp_id1
+            elements[i] = tmp
+            index1 += 1
+            index2 += 1
+        print("i=", i, elements)'''
+
     '''tmp = elements[l]
     elements[l] = elements[index1 - 1]
     elements[index1 - 1] = tmp
