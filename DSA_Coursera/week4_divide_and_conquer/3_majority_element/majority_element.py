@@ -6,7 +6,10 @@ def majority_element_naive(elements):
 
     n = len(elements)
 
-    half = n // 2
+    if n % 2 == 1:
+        half = n // 2
+    else:
+        half = (n // 2) - 1
 
     for i in range(half):
         if elements[i] == elements[i + half]:
