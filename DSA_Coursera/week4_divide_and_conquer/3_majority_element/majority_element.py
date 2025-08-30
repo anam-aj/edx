@@ -42,18 +42,14 @@ def partition(elements, l, r):
             elements[i] = tmp
             index2 += 1
         elif elements[i] < pivot:
-            tmp_id1 = elements[index1]
-            tmp = elements[index2 + 1]
+            tmp = elements[index1]
             elements[index1] = elements[i]
-            elements[index2 + 1] = tmp_id1
+            elements[i] = tmp
+            tmp = elements[index2 + 1]
+            elements[index2 + 1] = elements[i]
             elements[i] = tmp
             index1 += 1
             index2 += 1
-
-    '''tmp = elements[l]
-    elements[l] = elements[index1 - 1]
-    elements[index1 - 1] = tmp
-    index1 -= 1'''
 
     return (index1, index2)
 
