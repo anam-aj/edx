@@ -4,6 +4,8 @@ def majority_element_naive(elements):
     randomized_quick_sort(elements, 0, len(elements) - 1)
 
     n = len(elements)
+
+    if n
     mid = n // 2
 
     if n % 2 == 0:
