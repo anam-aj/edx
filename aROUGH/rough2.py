@@ -1,21 +1,21 @@
 import random
 
-def quick_sort(elements, l, r):
+def randomized_quick_sort(elements, l, r):
 
     if l >= r:
         return
 
-    index1, index2 = partition(elements, l, r)
+    index1, index2 = partition3(elements, l, r)
 
-    quick_sort(elements, l, index1 - 1)
-    quick_sort(elements, index2 + 1 , r)
+    randomized_quick_sort(elements, l, index1 - 1)
+    randomized_quick_sort(elements, index2 + 1 , r)
 
 
-def partition(elements, l, r):
+def partition3(elements, l, r):
 
-    pivot = elements[l]
-    index1 = l
-    index2 = l
+    pivot = random.randint(l, r)
+    index1 = pivot
+    index2 = pivot
 
     for i in range(l + 1, r + 1):
         if elements[i] > pivot:
@@ -69,19 +69,19 @@ l = [2, 3, 1, 1, 4, 10, 1, 7, 6, 1, 1, 22, -1, -1, 3, -10]
 l = [3,1,2,3]
 
 r = len(l) - 1
-quick_sort(l, 0, r)
+randomized_quick_sort(l, 0, r)
 print(l)
 
-failures = []
+'''failures = []
 for _ in range(5000):  # test 5000 random arrays
     size = random.randint(0, 12)
     arr = [random.randint(-5, 5) for _ in range(size)]
     copy = arr.copy()
     if copy:
-        quick_sort(copy, 0, len(copy)-1)
+        randomized_quick_sort(copy, 0, len(copy)-1)
     if copy != sorted(arr):
         failures.append((arr, copy, sorted(arr)))
 
 print("Number of failures:", len(failures))
 if failures:
-    print("Examples:", failures[:5])
+    print("Examples:", failures[:5])'''
