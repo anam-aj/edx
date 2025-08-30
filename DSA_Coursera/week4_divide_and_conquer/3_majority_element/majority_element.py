@@ -5,16 +5,16 @@ def majority_element_naive(elements):
     randomized_quick_sort(elements, 0, len(elements) - 1)
 
     n = len(elements)
+    half = n // 2
 
     if n % 2 == 0:
-        half = n // 2
-        for i in range(half)
-    else:
-        half = n // 2
-
-    for i in range(half):
-        if elements[i] == elements[i + half]:
+        for i in range(half):
+            if elements[i] == elements[i + half]:
             return 1
+    else:
+        for i in range(half):
+            if elements[i] == elements[i + half]:
+                return 1
 
     return 0
 
