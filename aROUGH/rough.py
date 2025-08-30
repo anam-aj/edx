@@ -27,6 +27,7 @@ def partition(elements, l, r):
             elements[i] = tmp
             index2 += 1
         elif elements[i] < pivot:
+            print('index1:', index1, 'index2:', index2)
             tmp_id1 = elements[index1]
             tmp = elements[index2 + 1]
             elements[index1] = elements[i]
