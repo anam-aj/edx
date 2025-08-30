@@ -14,8 +14,9 @@ def randomized_quick_sort(elements, l, r):
 def partition3(elements, l, r):
 
     pivot = random.randint(l, r)
-    index1 = pivot
-    index2 = pivot
+    elements[l], elements[pivot] = elements[pivot], elements[l]
+    index1 = l
+    index2 = l
 
     for i in range(l + 1, r + 1):
         if elements[i] > pivot:
