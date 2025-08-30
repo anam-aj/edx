@@ -14,8 +14,10 @@ def partition(elements, l, r):
     pivot = elements[l]
     index1 = l
     index2 = l
+
+    print("before loop", elements)
     print("l, r", l, r)
-    print("i=", i, elements)
+
     for i in range(l + 1, r + 1):
         if elements[i] > pivot:
             pass
