@@ -8,6 +8,7 @@ def majority_element_naive(elements):
 
     if n % 2 == 0:
         half = (n // 2) - 1
+        for i in range(half)
     else:
         half = n // 2
 
