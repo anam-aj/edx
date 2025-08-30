@@ -15,8 +15,6 @@ def partition(elements, l, r):
     index1 = l
     index2 = l
 
-    print("before loop", elements)
-    print("l, r", l, r)
 
     for i in range(l + 1, r + 1):
         if elements[i] > pivot:
@@ -33,6 +31,8 @@ def partition(elements, l, r):
             tmp = elements[index2 + 1]
             elements[index2 + 1] = elements[i]
             elements[i] = tmp
+            index1 += 1
+            index2 += 1
 
         '''elif elements[i] < pivot:
             print('index1:', index1, 'index2:', index2)
@@ -50,7 +50,6 @@ def partition(elements, l, r):
     elements[index1 - 1] = tmp
     index1 -= 1'''
 
-    print("index", index1, index2)
     return (index1, index2)
 
 
