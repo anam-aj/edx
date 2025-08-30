@@ -12,7 +12,7 @@ def majority_element_naive(elements):
             if elements[i] == elements[i + half]:
                 return 1
     else:
-        for i in range(half):
+        for i in range(half + 1):
             if elements[i] == elements[i + half]:
                 return 1
 
