@@ -7,12 +7,12 @@ def majority_element_naive(elements):
     mid = n // 2
 
     if n % 2 == 0:
-        if elements[mid] == elements[0] or elements[mid - 1] == elements[-1]:
+        if (elements[mid] == elements[0]) or (elements[mid - 1] == elements[-1]):
             return 1
         else:
             return 0
     else:
-        if elements[mid] == elements[0] or elements[mid] == elements[-1]:
+        if (elements[mid] == elements[0]) or (elements[mid] == elements[-1]):
             return 1
         else:
             return 0
