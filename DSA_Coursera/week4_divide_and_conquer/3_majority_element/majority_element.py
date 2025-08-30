@@ -6,18 +6,12 @@ def majority_element_naive(elements):
     n = len(elements)
 
     half = n // 2
-    curr_element = elements[0]
 
     for i in range(n):
-
-        if elements[i + half] == curr_element:
+        if elements[i] == elements[i + half]:
             return 1
-        if elements[i] != curr_element:
-            curr_element = elements[i]
 
-
-
-
+    return 0
 
 def randomized_quick_sort(elements, l, r):
 
