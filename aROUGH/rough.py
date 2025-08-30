@@ -27,15 +27,12 @@ def partition(elements, l, r):
             elements[i] = tmp
             index2 += 1
         elif elements[i] < pivot:
-            print('index1:', index1, 'index2:', index2)
-            tmp_id1 = elements[index1]
-            tmp = elements[index2 + 1]
+            tmp = elements[index1]
             elements[index1] = elements[i]
-            elements[index2 + 1] = tmp_id1
             elements[i] = tmp
-            index1 += 1
-            index2 += 1
-        print("i=", i, elements)
+            tmp = elements[index2 + 1]
+            elements[index2 + 1] = elements[i]
+            elements[i] = tmp
 
         '''elif elements[i] < pivot:
             print('index1:', index1, 'index2:', index2)
@@ -57,8 +54,8 @@ def partition(elements, l, r):
     return (index1, index2)
 
 
-l = [2, 4, -1, -10]
-#l = [2, 3, 1, 1, 4, 10, 1, 7, 6, 1, 1, 22, -1, -1, 3, -10]
+#l = [2, 4, -1, -10]
+l = [2, 3, 1, 1, 4, 10, 1, 7, 6, 1, 1, 22, -1, -1, 3, -10]
 r = len(l) - 1
 quick_sort(l, 0, r)
 print(l)
