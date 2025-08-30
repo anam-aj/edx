@@ -9,7 +9,8 @@ def majority_element_naive(elements):
     curr_element = elements[0]
 
     for i in range(n):
-        if elements[i + half]
+        if elements[i + half] == curr_element:
+            return 1
 
 
 
