@@ -14,7 +14,7 @@ def partition(elements, l, r):
     pivot = elements[l]
     index1 = l
     index2 = l
-    print(l, r)
+    print("l, r", l, r)
     for i in range(l + 1, r + 1):
         print("i=", i, elements)
         if elements[i] > pivot:
@@ -38,6 +38,7 @@ def partition(elements, l, r):
     elements[index1 - 1] = tmp
     index1 -= 1'''
 
+    print("index", index1, index2)
     return (index1, index2)
 
 
