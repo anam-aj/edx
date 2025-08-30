@@ -1,5 +1,6 @@
 import random
 
+
 def majority_element_naive(elements):
     randomized_quick_sort(elements, 0, len(elements) - 1)
 
@@ -12,6 +13,7 @@ def majority_element_naive(elements):
             return 1
 
     return 0
+
 
 def randomized_quick_sort(elements, l, r):
 
