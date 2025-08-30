@@ -1,6 +1,6 @@
 def quick_sort(elements, l, r):
 
-    if l > r:
+    if l >= r:
         return
 
     index1, index2 = partition(elements, l, r)
