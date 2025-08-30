@@ -38,6 +38,7 @@ def partition3(elements, l, r):
 
     return (index1, index2)
 
+
 '''def partition3(array, left, right):
     # write your code here
 
