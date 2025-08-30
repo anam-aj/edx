@@ -11,11 +11,13 @@ def quick_sort(elements, l, r):
 
 def partition(elements, l, r):
 
+    print(elements)
     pivot = elements[l]
     index1 = l
     index2 = l
 
     for i in range(l + 1, r + 1):
+        print(elements)
         if elements[i] > pivot:
             pass
         elif elements[i] == pivot:
@@ -40,8 +42,8 @@ def partition(elements, l, r):
     return (index1, index2)
 
 
-l = [2, 3, 1, 1, 4, 10, 1, 7, 6, 1, 1, 22, -1, -1, 3, -10]
-l = [2, 3, 1, 1, 4, 10, 1, 7, 6, 1, 1, 22, -1, -1, 3, -10]
+l = [2, 4, -1, -10]
+#l = [2, 3, 1, 1, 4, 10, 1, 7, 6, 1, 1, 22, -1, -1, 3, -10]
 r = len(l) - 1
 quick_sort(l, 0, r)
 print(l)
