@@ -11,7 +11,7 @@ def quick_sort(elements, l, r):
 
 def partition(elements, l, r):
 
-    print(elements)
+    print("I:", elements)
     pivot = elements[l]
     index1 = l
     index2 = l
