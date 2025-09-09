@@ -13,13 +13,14 @@ def points_cover_naive(starts, ends, points):
     sorted_starts = mergesort(starts)
     sorted_ends = mergesort(ends)
 
+
     for index, point in enumerate(points):
         ...
 
     return count
 
 
-def binary_search_duplicate(keys, query):
+def search_index(keys, query):
     # write your code here
 
     start = 0
@@ -32,19 +33,9 @@ def binary_search_duplicate(keys, query):
 
         if keys[mid] <= query:
             index = mid
-            start = mid
-            break
+            start = mid + 1
         else:
             end = mid - 1
-
-    while end > start:
-        mid = (end + start) // 2
-
-        if query == keys[mid]:
-            index = mid
-            start = mid
-        else:
-            start = mid + 1
 
     return index
 
