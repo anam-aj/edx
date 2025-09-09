@@ -61,6 +61,7 @@ def search_index_ends(keys, query):
 
     return index
 
+
 def mergesort(array):
 
     length = len(array)
