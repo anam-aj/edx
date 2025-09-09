@@ -15,14 +15,14 @@ def points_cover_naive(starts, ends, points):
 
 
     for index, point in enumerate(points):
-        lesser_starts = search_index(sorted_starts, point)
-        lesser_ends = search_index(sorted_ends, point)
-        
+        lesser_starts = search_index_starts(sorted_starts, point)
+        lesser_ends = search_index_ends(sorted_ends, point)
+
 
     return count
 
 
-def search_index(keys, query):
+def search_index_starts(keys, query):
     # write your code here
 
     start = 0
@@ -41,6 +41,25 @@ def search_index(keys, query):
 
     return index
 
+
+def search_index_ends(keys, query):
+    # write your code here
+
+    start = 0
+    end = len(keys) - 1
+
+    index = -1
+
+    while end >= start:
+        mid = (end + start) // 2
+
+        if keys[mid] <= query:
+            index = mid
+            start = mid + 1
+        else:
+            end = mid - 1
+
+    return index
 
 def mergesort(array):
 
