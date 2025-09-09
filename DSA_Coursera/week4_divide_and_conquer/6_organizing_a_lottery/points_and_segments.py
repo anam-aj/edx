@@ -15,7 +15,9 @@ def points_cover_naive(starts, ends, points):
 
 
     for index, point in enumerate(points):
-        ...
+        lesser_starts = search_index(sorted_starts, point)
+        lesser_ends = search_index(sorted_ends, point)
+        
 
     return count
 
