@@ -32,10 +32,9 @@ def binary_search_duplicate(keys, query):
 
         if keys[mid] <= query:
             index = mid
-            end = mid
             break
         else:
-            start = mid + 1
+            end = mid
 
     while end > start:
         mid = (end + start) // 2
