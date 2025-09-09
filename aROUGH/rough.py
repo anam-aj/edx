@@ -17,6 +17,7 @@ def binary_search_duplicate(keys, query):
 
     return index
 
+
 def search_index_ends(keys, query):
     # write your code here
 
