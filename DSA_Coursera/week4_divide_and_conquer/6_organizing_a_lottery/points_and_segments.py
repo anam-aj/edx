@@ -42,7 +42,7 @@ def binary_search_duplicate(keys, query):
 
         if query == keys[mid]:
             index = mid
-            end = mid
+            start = mid
         else:
             start = mid + 1
 
