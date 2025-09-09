@@ -35,7 +35,7 @@ def binary_search_duplicate(keys, query):
             start = mid
             break
         else:
-            end = mid
+            end = mid - 1
 
     while end > start:
         mid = (end + start) // 2
@@ -47,25 +47,6 @@ def binary_search_duplicate(keys, query):
             start = mid + 1
 
     return index
-
-
-def binary_search(keys, query):
-    # write your code here
-
-    start = 0
-    end = len(keys) - 1
-
-    while end >= start:
-        mid = (end + start) // 2
-
-        if query == keys[mid]:
-            return mid
-        elif query < keys[mid]:
-            end = mid - 1
-        else:
-            start = mid + 1
-
-    return -1
 
 
 def mergesort(array):
