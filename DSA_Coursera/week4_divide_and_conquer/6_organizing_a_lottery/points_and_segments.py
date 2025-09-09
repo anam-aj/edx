@@ -20,6 +20,38 @@ def points_cover_naive(starts, ends, points):
     return count
 
 
+def binary_search_duplicate(keys, query):
+    # write your code here
+
+    start = 0
+    end = len(keys) - 1
+
+    index = -1
+
+    while end >= start:
+        mid = (end + start) // 2
+
+        if query == keys[mid]:
+            index = mid
+            end = mid
+            break
+        elif query < keys[mid]:
+            end = mid - 1
+        else:
+            start = mid + 1
+
+    while end > start:
+        mid = (end + start) // 2
+
+        if query == keys[mid]:
+            index = mid
+            end = mid
+        else:
+            start = mid + 1
+
+    return index
+
+
 def binary_search(keys, query):
     # write your code here
 
