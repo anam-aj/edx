@@ -16,7 +16,6 @@ def points_cover_naive(starts, ends, points):
     for index, point in enumerate(points):
         ...
 
-
     return count
 
 
