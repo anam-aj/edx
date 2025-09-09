@@ -28,7 +28,7 @@ def search_index_ends(keys, query):
     while end >= start:
         mid = (end + start) // 2
 
-        if keys[mid] <= query:
+        if keys[mid] < query:
             index = mid
             start = mid + 1
         else:
@@ -39,4 +39,4 @@ def search_index_ends(keys, query):
 l = [ 1.1,1.4,1.5,1.6,2,2,3,3,3,3,3,4,4,4,5,5,6,6]
 k = [ 0  ,1  ,2  ,3  ,4,5,6,7,8,9,0,1,2,3,4,5,6,7]
 
-print(binary_search_duplicate(l,1))
+print(binary_search_duplicate(l,2))
