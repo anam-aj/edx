@@ -19,6 +19,7 @@ def minimum_distance_squared_naive(sorted_points):
     if len(sorted_points) <= 3:
         
 
+
     min_distance_squared = float("inf")
 
     sorted_points[]
