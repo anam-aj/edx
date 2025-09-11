@@ -30,7 +30,9 @@ def shortest_distance(sorted_points):
     start = 0
     end = len(sorted_points) - 1
 
-    index -1 
+    min_distance = float("inf")
+
+    
 
 
 
