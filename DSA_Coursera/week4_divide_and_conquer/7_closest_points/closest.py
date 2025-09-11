@@ -12,37 +12,19 @@ def distance_squared(first_point, second_point):
 
 def minimum_distance_squared_naive(points):
 
-    points_sorted_by_x = mergesort(points)
-    min_distance_squared = float("inf")
-    d = shortest_distance(points_sorted_by_x)
-
     '''for p, q in combinations(points, 2):
         min_distance_squared = min(min_distance_squared,
                                    distance_squared(p, q))'''
+
+    points_sorted_by_x = mergesort(points)
+
+    min_distance_squared = float("inf")
+    d = shortest_distance(points_sorted_by_x)
 
     for p in points:
         ...
 
     return min_distance_squared
-
-
-def shortest_distance(sorted_points):
-
-    length = len(sorted_points)
-
-    if length == 1:
-        return sorted_points
-
-    start = 0
-    end = len(sorted_points) - 1
-    min_distance = float("inf")
-    mid = length // 2
-    left = shortest_distance(sorted_points[:mid])
-    right = shortest_distance(sorted_points[mid:length])
-
-    
-
-
 
 
 def mergesort(array):
