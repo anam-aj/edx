@@ -18,7 +18,8 @@ def minimum_distance_squared_naive(sorted_points):
 
     min_distance_squared = float("inf")
 
-    d = shortest_distance(points_sorted_by_x)
+    sorted_points[]
+    d1 = minimum_distance_squared_naive()
 
     for p in sorted_points:
         ...
