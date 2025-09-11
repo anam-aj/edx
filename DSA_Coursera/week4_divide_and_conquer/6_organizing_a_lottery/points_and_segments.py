@@ -5,25 +5,19 @@ def points_cover_naive(starts, ends, points):
     assert len(starts) == len(ends)
     count = [0] * len(points)
 
-    '''for index, point in enumerate(points):
-        for start, end in zip(starts, ends):
-            if start <= point <= end:
-                count[index] += 1'''
-
     sorted_starts = mergesort(starts)
     sorted_ends = mergesort(ends)
 
-
     for index, point in enumerate(points):
-        lesser_starts = search_index_starts(sorted_starts, point)
-        lesser_ends = search_index_ends(sorted_ends, point)
-
+        lesser_starts = search_index_starts(sorted_starts, point) + 1
+        lesser_ends = search_index_ends(sorted_ends, point) + 1
+        num_ranges = lesser_starts - lesser_ends
+        count[index] = num_ranges
 
     return count
 
 
 def search_index_starts(keys, query):
-    # write your code here
 
     start = 0
     end = len(keys) - 1
@@ -43,7 +37,6 @@ def search_index_starts(keys, query):
 
 
 def search_index_ends(keys, query):
-    # write your code here
 
     start = 0
     end = len(keys) - 1
@@ -53,7 +46,7 @@ def search_index_ends(keys, query):
     while end >= start:
         mid = (end + start) // 2
 
-        if keys[mid] <= query:
+        if keys[mid] < query:
             index = mid
             start = mid + 1
         else:
