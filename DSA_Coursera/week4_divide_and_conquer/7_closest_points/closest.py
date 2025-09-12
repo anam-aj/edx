@@ -10,25 +10,77 @@ def distance_squared(first_point, second_point):
     return (first_point.x - second_point.x) ** 2 + (first_point.y - second_point.y) ** 2
 
 
-def minimum_distance_squared_naive(sorted_points):
+def minimum_distance(sorted_points_by_x):
 
     '''for p, q in combinations(points, 2):
         min_distance_squared = min(min_distance_squared,
                                    distance_squared(p, q))'''
 
-    if len(sorted_points) <= 3:
-        
-
-
     min_distance_squared = float("inf")
 
-    sorted_points[]
-    d1 = minimum_distance_squared_naive()
+    if len(sorted_points_by_x) <= 3:
+        for p, q in combinations(sorted_points_by_x, 2):
+            min_distance_squared = min(min_distance_squared, distance_squared(p, q))
+            min_dist = sqrt(min_distance_squared)
 
-    for p in sorted_points:
-        ...
+        return min_dist
 
-    return min_distance_squared
+    length = len(sorted_points_by_x)
+    mid = length // 2
+    d1 = minimum_distance(sorted_points_by_x[:mid])
+    d2 = minimum_distance(sorted_points_by_x[mid:length])
+
+    d = min(d1, d2)
+    strip_points = strip(sorted_points_by_x, d, sorted_points_by_x[mid].x)
+
+
+
+def strip(sorted_points_by_x, d, mid_x):
+
+    min_x = mid_x - d
+    max_x = mid_x + d
+
+    min_index = search_index_starts(sorted_points_by_x, min_x)
+
+
+
+
+def search_index_starts(sorted_points_by_x, min_x):
+
+    start = 0
+    end = len(sorted_points_by_x) - 1
+
+    index = -1
+
+    while end >= start:
+        mid = (end + start) // 2
+
+        if sorted_points_by_x[mid].x <= min_x:
+            index = mid
+            start = mid + 1
+        else:
+            end = mid - 1
+
+    return index
+
+
+def search_index_ends(keys, query):
+
+    start = 0
+    end = len(keys) - 1
+
+    index = -1
+
+    while end >= start:
+        mid = (end + start) // 2
+
+        if keys[mid] < query:
+            index = mid
+            start = mid + 1
+        else:
+            end = mid - 1
+
+    return index
 
 
 def mergesort(array):
