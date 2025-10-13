@@ -25,7 +25,6 @@ def compute_operations(n):
 
         steps_list.append(least_steps)
 
-
-    return steps_list
+    return steps_list[n]
 
 print(compute_operations(1))
