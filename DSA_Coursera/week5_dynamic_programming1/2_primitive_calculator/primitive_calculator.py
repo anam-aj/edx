@@ -13,10 +13,6 @@ def compute_operations(n):
             ...
 
 
-
-
-    for
-
     return []
 
 
