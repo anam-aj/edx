@@ -4,7 +4,8 @@ def compute_operations(n):
     steps = [[], [1], ]
 
     for num in range(2, n + 1):
-        min_steps.append(float('inf'))
+        steps.append([])
+        if num - 1
 
 
 
