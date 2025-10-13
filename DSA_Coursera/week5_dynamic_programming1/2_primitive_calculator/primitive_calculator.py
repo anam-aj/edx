@@ -1,4 +1,16 @@
 def compute_operations(n):
+
+    min_steps = [0]
+    steps = [[1]]
+
+    for num in range(2, n + 1):
+        min_steps.append(float('inf'))
+
+
+
+
+    for
+
     return []
 
 
