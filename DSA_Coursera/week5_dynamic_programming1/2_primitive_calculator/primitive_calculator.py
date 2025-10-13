@@ -5,7 +5,7 @@ def compute_operations(n):
 
     for num in range(2, n + 1):
         steps.append([])
-        if num - 1
+        if num - 1 
 
 
 
