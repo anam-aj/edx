@@ -25,7 +25,7 @@ def compute_operations(n):
 
         steps_list.append(least_steps)
 
-    return steps_list[num]
+    return steps_list[n]
 
 
 if __name__ == '__main__':
