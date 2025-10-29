@@ -1,5 +1,5 @@
 -- 1. Create the database
-sqlite3 Contact.db;
+--    sqlite3 Contact.db;
 
 -- 3. Create Contacts table
 CREATE TABLE Contacts (
