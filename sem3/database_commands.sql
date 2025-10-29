@@ -1,14 +1,14 @@
--- 1. Create the database
+--  Create the database
 --    sqlite3 Contact.db;
 
--- 3. Create Contacts table
+--  Create Contacts table
 CREATE TABLE Contacts (
     Contact_ID INT PRIMARY KEY,
     First_Name VARCHAR(50),
     Last_Name VARCHAR(50)
 );
 
--- 4. Create Phone_Numbers table
+--  Create Phone_Numbers table
 CREATE TABLE Phone_Numbers (
     Phone_ID INT PRIMARY KEY,
     Contact_ID INT,
@@ -17,7 +17,7 @@ CREATE TABLE Phone_Numbers (
     FOREIGN KEY (Contact_ID) REFERENCES Contacts(Contact_ID)
 );
 
--- 5. Create Emails table
+--  Create Emails table
 CREATE TABLE Emails (
     Email_ID INT PRIMARY KEY,
     Contact_ID INT,
@@ -26,7 +26,7 @@ CREATE TABLE Emails (
     FOREIGN KEY (Contact_ID) REFERENCES Contacts(Contact_ID)
 );
 
--- 6. Create Addresses table
+--  Create Addresses table
 CREATE TABLE Addresses (
     Address_ID INT PRIMARY KEY,
     Contact_ID INT,
