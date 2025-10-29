@@ -10,7 +10,7 @@ SELECT
 FROM Contacts c
 LEFT JOIN Phone_Numbers p ON c.Contact_ID = p.Contact_ID
 LEFT JOIN Emails e ON c.Contact_ID = e.Contact_ID
-WHERE c.Contact_ID = 101;  -- Replace 101 with desired Contact_ID
+WHERE c.Contact_ID = 1;  
 
 
 
