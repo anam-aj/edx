@@ -1,66 +1,110 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Node for adjacency list
 struct Node {
-    int data;
+    int vertex;
     struct Node* next;
 };
 
-struct Node* createNode(int data) {
+// Graph structure
+struct Graph {
+    int numVertices;
+    struct Node** adjLists;
+};
+
+// Create a new node
+struct Node* createNode(int v) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
-    newNode->data = data;
+    newNode->vertex = v;
     newNode->next = NULL;
     return newNode;
 }
 
-struct Node* mergeSortedLists(struct Node* list1, struct Node* list2) {
-    struct Node dummy;   // Dummy node
-    struct Node* tail = &dummy;
-    dummy.next = NULL;
+// Create a graph
+struct Graph* createGraph(int vertices) {
+    struct Graph* graph = (struct Graph*)malloc(sizeof(struct Graph));
+    graph->numVertices = vertices;
+    graph->adjLists = (struct Node**)malloc(vertices * sizeof(struct Node*));
+    for (int i = 0; i < vertices; i++)
+        graph->adjLists[i] = NULL;
+    return graph;
+}
 
-    while (list1 && list2) {
-        if (list1->data <= list2->data) {
-            tail->next = list1;
-            list1 = list1->next;
-        } else {
-            tail->next = list2;
-            list2 = list2->next;
+// Add edge (undirected)
+void addEdge(struct Graph* graph, int u, int v) {
+    struct Node* nodeV = createNode(v);
+    nodeV->next = graph->adjLists[u];
+    graph->adjLists[u] = nodeV;
+
+    struct Node* nodeU = createNode(u);
+    nodeU->next = graph->adjLists[v];
+    graph->adjLists[v] = nodeU;
+}
+
+// Delete edge
+void deleteEdge(struct Graph* graph, int u, int v) {
+    struct Node **prev, *curr;
+
+    // Remove v from u's list
+    prev = &graph->adjLists[u];
+    curr = graph->adjLists[u];
+    while (curr != NULL) {
+        if (curr->vertex == v) {
+            *prev = curr->next;
+            free(curr);
+            break;
         }
-        tail = tail->next;
+        prev = &curr->next;
+        curr = curr->next;
     }
 
-    // Attach remaining nodes
-    if (list1) tail->next = list1;
-    if (list2) tail->next = list2;
-
-    return dummy.next;
-}
-
-void printList(struct Node* head) {
-    while (head) {
-        printf("%d -> ", head->data);
-        head = head->next;
+    // Remove u from v's list
+    prev = &graph->adjLists[v];
+    curr = graph->adjLists[v];
+    while (curr != NULL) {
+        if (curr->vertex == u) {
+            *prev = curr->next;
+            free(curr);
+            break;
+        }
+        prev = &curr->next;
+        curr = curr->next;
     }
-    printf("NULL\n");
 }
 
+// Print adjacency list
+void printGraph(struct Graph* graph) {
+    for (int i = 0; i < graph->numVertices; i++) {
+        struct Node* temp = graph->adjLists[i];
+        printf("%d: ", i);
+        while (temp) {
+            printf("%d -> ", temp->vertex);
+            temp = temp->next;
+        }
+        printf("NULL\n");
+    }
+}
+
+// Driver code
 int main() {
-    struct Node* list1 = createNode(1);
-    list1->next = createNode(3);
-    list1->next->next = createNode(5);
+    int V = 5; // Number of vertices
+    struct Graph* graph = createGraph(V);
 
-    struct Node* list2 = createNode(2);
-    list2->next = createNode(4);
-    list2->next->next = createNode(6);
+    addEdge(graph, 0, 1);
+    addEdge(graph, 0, 4);
+    addEdge(graph, 1, 2);
+    addEdge(graph, 1, 3);
+    addEdge(graph, 1, 4);
+    addEdge(graph, 2, 3);
+    addEdge(graph, 3, 4);
 
-    printf("List 1: ");
-    printList(list1);
-    printf("List 2: ");
-    printList(list2);
+    printf("Graph adjacency list:\n");
+    printGraph(graph);
 
-    struct Node* mergedList = mergeSortedLists(list1, list2);
-    printf("Merged Sorted List: ");
-    printList(mergedList);
+    printf("\nDeleting edge 1-4\n");
+    deleteEdge(graph, 1, 4);
+    printGraph(graph);
 
     return 0;
 }
