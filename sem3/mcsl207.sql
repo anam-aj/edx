@@ -21,3 +21,9 @@ CREATE TABLE BookIssued (
     FOREIGN KEY(BookID) REFERENCES Book(BookId)
 );
 
+INSERT INTO Member VALUES
+('0001', 'Alice', 'Delhi', '12345'),
+('0002', 'Bob', 'Mumbai', '67890'),
+('0003', 'Charlie', 'Kolkata', '54321'),
+('0004', 'David', 'Chennai', '12345'),
+('0005', 'Eve', 'Bangalore', '98765');
