@@ -20,3 +20,4 @@ CREATE TABLE BookIssued (
     FOREIGN KEY(memberID) REFERENCES Member(memberId),
     FOREIGN KEY(BookID) REFERENCES Book(BookId)
 );
+
