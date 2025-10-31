@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <table>
+        <thead>
+            <tr>
+                <th>Stock's Symbol</th>
+                <th>No. of Shares</th>
+                <th>Price per Share</th>
+                <th>Method</th>
+                <th>Date and Time</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!-- Loop through the database entries to display them in this table -->
+            {% for row in transactions_data %}
+                <tr>
+                    <td>{{ row.symbol }}</td>
+                    <td>{{ row.shares }}</td>
+                    <td>{{ row.rate | usd }}</td>
+                    <td>{{ row.method }}</td>
+                    <td>{{ row.date_time }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

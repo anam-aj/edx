@@ -1,0 +1,136 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    background-color: rgb(140, 140, 140);
+    margin: 0px;
+    padding: 10px;
+    color: white;
+}
+
+p {
+    text-align: center;
+    background-color: rgb(200, 200, 200);
+    margin: 0px;
+    font-size: 30px;
+    color: white;
+}
+
+.menuBar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: rgb(102, 153, 255);
+}
+
+.MenuItem {
+    background-color: rgb(102, 153, 255);
+    color: white;
+    margin: 10px;
+    text-align: center;
+    /*font-size: 25px;*/
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#image {
+    margin: auto;
+    margin-top: 50px;
+}
+
+#disclaimer {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 15px;
+    background-color: white;
+    color: rgb(200, 200, 200)
+}
+
+#description {
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    font-size: clamp(0.5rem, 5vw, 2rem);
+}
+
+#greeting {
+    font-size: 100px;
+    color: rgb(102, 153, 255);
+}
+
+#intro {
+    line-height: 2;
+}
+
+footer {
+    background-color: rgb(255, 153, 153);
+    bottom: 0;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+#copyright {
+    font-size: 160%;
+    vertical-align: sub;
+}
+
+.impBlue {
+    font-size: 130%;
+    color: rgb(102, 153, 255);
+}
+
+.impRed {
+    font-size: 130%;
+    color: rgb(255, 153, 153);
+}
+
+.buttonBlue {
+    background-color: rgb(102, 153, 255);
+    border: none;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+button {
+    background-color: rgb(102, 153, 255);
+    border: none;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+button:hover {
+    text-decoration: underline;
+}
+
+button:active {
+    background-color: green;
+}

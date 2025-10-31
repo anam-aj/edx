@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <table>
+        <thead>
+            <tr>
+                <th>Stock's Symbol</th>
+                <th>No. of Shares</th>
+                <th>Price per Share</th>
+                <th>Total Value</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!-- Loop through the database entries to display them in this table -->
+            {% for row in holdings_data %}
+                <tr>
+                    <td>{{ row.symbol }}</td>
+                    <td>{{ row.shares }}</td>
+                    <td>{{ row.price | usd }}</td>
+                    <td>{{ row.total | usd }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+
+        <tfoot>
+            <tr>
+            	<td colspan="2"></td>
+                <td class="cashtotal">Cash</td>
+                <td class="cashtotal">{{ user_cash | usd }}</td>
+            </tr>
+            <tr>
+            	<td colspan="2"></td>
+                <td class="cashtotal">TOTAL</td>
+                <td class="cashtotal">{{ user_total | usd }}</td>
+            </tr>
+        </tfoot>
+    </table>
+{% endblock %}

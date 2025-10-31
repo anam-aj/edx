@@ -1,0 +1,18 @@
+sort1 uses: Bubble Sort
+
+How do you know?: big_omega(5000)  = 0.03s, big_O(5000)  = 0.07s
+                  big_omega(10000) = 0.06s, big_O(10000) = 0.26s
+                  Significant gap between best and worst case, thus Bubble Sort.
+
+sort2 uses: Merge Sort
+
+How do you know?: big_omega(5000)  = 0.03s, big_O(5000)  = 0.04s
+                  big_omega(10000) = 0.08s, big_O(10000) = 0.08s
+                  Best and Worst almost same, but faster than sort3, thus Merge Sort.
+
+sort3 uses: Selection Sort
+
+How do you know?: big_omega(5000)  = 0.05s, big_O(5000)  = 0.05s
+                  big_omega(10000) = 0.13s, big_O(10000) = 0.15s
+                  Best and Worst almost same, but slower than sort2, thus Selection Sort.
+                  Also by method of ommision.
