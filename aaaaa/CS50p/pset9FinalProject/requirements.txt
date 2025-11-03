@@ -1,4 +1,0 @@
-pip-installable libraries
-    1: textwrap
-    2: termcolor
-    3: tabulate

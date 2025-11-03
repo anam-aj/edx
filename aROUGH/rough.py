@@ -1,30 +1,12 @@
-def compute_operations(n):
-
-    steps_list = [[], [1], ]
-
-    for num in range(2, n + 1):
-
-        least_steps = []
-
-        if num - 1 > 0:
-            steps = steps_list[num - 1].copy()
-            steps.append(num)
-            least_steps[:] = steps
-
-        if num % 2 == 0:
-            new_steps = steps_list[num // 2].copy()
-            new_steps.append(num)
-            if len(new_steps) < len(least_steps):
-                least_steps[:] = new_steps
-
-        if num % 3 == 0:
-            new_steps = steps_list[num // 3].copy()
-            new_steps.append(num)
-            if len(new_steps) < len(least_steps):
-                least_steps[:] = new_steps
-
-        steps_list.append(least_steps)
-
-    return steps_list[n]
-
-print(compute_operations(1))
+{
+    "Date": "Sun, 02 Nov 2025 16:55:57 GMT",
+    "X-Clv-Request-Id": "880c7bb4-02e6-4b48-9921-0387ced6ee2b",
+    "Server": "Cleversafe",
+    "X-Clv-S3-Version": "2.5",
+    "Accept-Ranges": "bytes",
+    "x-amz-request-id": "880c7bb4-02e6-4b48-9921-0387ced6ee2b",
+    "ETag": '"8bb44578fff8fdcc3d2972be9ece0164"',
+    "Content-Type": "image/png",
+    "Last-Modified": "Wed, 16 Nov 2022 03:32:41 GMT",
+    "Content-Length": "78776",
+}
