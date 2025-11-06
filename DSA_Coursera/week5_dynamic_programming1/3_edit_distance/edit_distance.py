@@ -24,9 +24,12 @@ def edit_distance(first_string, second_string):
             mis_match = edit_distances[i - 1][j - 1] + 1
             match = edit_distances[i - 1][j - 1]
 
-            if first_string
+            if first_string[i] == second_string[j]:
+                edit_distances[i][j] = min(insertion, deletion, match)
+            else:
+                edit_distances[i][j] = min(insertion, deletion, mis_match)
 
-    return 0
+    return edit_distances[m][n]
 
 
 if __name__ == "__main__":
