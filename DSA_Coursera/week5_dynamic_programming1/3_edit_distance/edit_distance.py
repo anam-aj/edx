@@ -2,7 +2,14 @@ def edit_distance(first_string, second_string):
 
     m, n = len(first_string), len(second_string)
 
-    dist_matrix = [[]]
+    dist_matrix = []
+
+    for i in range(m + 1):
+        dist_matrix.append([])
+        for _ in range(n + 1):
+            dist_matrix[i].append(0)
+
+print(dist_matrix)dist_matrix = [[]]
 
     for i in range(m + 1):
         dist_matrix[i][0] = i
