@@ -1,6 +1,6 @@
 def lcs2(first_sequence, second_sequence):
 
-    m, n = len(first_string), len(second_string)
+    m, n = len(first_sequence), len(second_sequence)
 
     edit_distances = []
     count = 0
@@ -32,8 +32,10 @@ def lcs2(first_sequence, second_sequence):
             else:
                 edit_distances[i][j] = min(insertion, deletion, mis_match)
                 if min(insertion, deletion, mis_match) == deletion or min(insertion, deletion, mis_match) == mis_match:
+                    count += 1
+    los = m - count
 
-    return edit_distances[m][n]
+    return los
 
 if __name__ == '__main__':
     n = int(input())
