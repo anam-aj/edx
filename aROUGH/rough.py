@@ -1,7 +1,11 @@
 m, n = 3, 4
 dist_matrix = []
 
-for i in range m
+for i in range(m + 1):
+    dist_matrix.append([])
+    for j in range(n + 1):
+        
+
 
 for i in range(m + 1):
     dist_matrix[i][0] = i
