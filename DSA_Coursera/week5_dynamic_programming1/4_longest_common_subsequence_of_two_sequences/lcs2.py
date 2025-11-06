@@ -1,13 +1,9 @@
 def lcs2(first_sequence, second_sequence):
-    edit_dist = edit_distance(first_sequence)
-    return 0
-
-
-def edit_distance(first_string, second_string):
 
     m, n = len(first_string), len(second_string)
 
     edit_distances = []
+    count = 0
 
     # Create empty matrix for edit distances
     for i in range(m + 1):
@@ -29,10 +25,13 @@ def edit_distance(first_string, second_string):
             mis_match = edit_distances[i - 1][j - 1] + 1
             match = edit_distances[i - 1][j - 1]
 
-            if first_string[i - 1] == second_string[j - 1]:
+            if first_sequence[i - 1] == second_sequence[j - 1]:
                 edit_distances[i][j] = min(insertion, deletion, match)
+                if min(insertion, deletion, match) == deletion:
+                    count += 1
             else:
                 edit_distances[i][j] = min(insertion, deletion, mis_match)
+                if min(insertion, deletion, mis_match) == deletion or min(insertion, deletion, mis_match) == mis_match:
 
     return edit_distances[m][n]
 
