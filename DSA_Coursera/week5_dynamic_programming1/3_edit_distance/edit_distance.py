@@ -1,4 +1,8 @@
 def edit_distance(first_string, second_string):
+
+    m, n = len(first_string), len(second_string)
+    
+
     return 0
 
 
