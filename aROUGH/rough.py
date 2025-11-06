@@ -1,4 +1,4 @@
-'''m, n = 3, 4
+m, n = 3, 4
 dist_matrix = [[]]
 
 for i in range(m + 1):
@@ -6,7 +6,6 @@ for i in range(m + 1):
 for i in range(n + 1):
     dist_matrix[0][i] = i
 
-print(dist_matrix)'''
+print(dist_matrix)
 
-lis = []
 
