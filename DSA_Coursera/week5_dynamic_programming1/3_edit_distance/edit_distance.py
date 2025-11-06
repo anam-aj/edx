@@ -22,7 +22,9 @@ def edit_distance(first_string, second_string):
             insertion = edit_distances[i][j - 1] + 1
             deletion  = edit_distances[i -1][j] + 1
             mis_match = edit_distances[i - 1][j - 1] + 1
-            
+            match = edit_distances[i - 1][j - 1]
+
+            if first_string
 
     return 0
 
