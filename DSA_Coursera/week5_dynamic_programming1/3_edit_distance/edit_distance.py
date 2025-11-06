@@ -24,7 +24,7 @@ def edit_distance(first_string, second_string):
             mis_match = edit_distances[i - 1][j - 1] + 1
             match = edit_distances[i - 1][j - 1]
 
-            if first_string[i] == second_string[j]:
+            if first_string[i - 1] == second_string[j - 1]:
                 edit_distances[i][j] = min(insertion, deletion, match)
             else:
                 edit_distances[i][j] = min(insertion, deletion, mis_match)
