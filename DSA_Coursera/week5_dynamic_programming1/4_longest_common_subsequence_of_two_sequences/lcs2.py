@@ -37,6 +37,7 @@ def lcs2(first_sequence, second_sequence):
 
     return los
 
+
 if __name__ == '__main__':
     n = int(input())
     a = list(map(int, input().split()))
