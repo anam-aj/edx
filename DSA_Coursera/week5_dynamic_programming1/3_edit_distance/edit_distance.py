@@ -19,7 +19,7 @@ def edit_distance(first_string, second_string):
     # Compute edit distances for all i and j positions
     for i in range(1, m + 1):
         for j in range(1, n + 1):
-            insertion = edit_distances[]
+            insertion = edit_distances[i][j - 1]
 
 
     return 0
