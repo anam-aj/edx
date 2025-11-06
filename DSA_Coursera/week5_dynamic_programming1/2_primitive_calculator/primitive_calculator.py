@@ -4,15 +4,18 @@ def compute_operations(n):
 
     for num in range(2, n + 1):
 
+        # Add 1
         least_steps = steps_list[num - 1].copy()
         least_steps.append(num)
 
+        # Multiply by 2
         if num % 2 == 0:
             new_steps = steps_list[num // 2].copy()
             new_steps.append(num)
             if len(new_steps) < len(least_steps):
                 least_steps[:] = new_steps
 
+        # Multiply by 3
         if num % 3 == 0:
             new_steps = steps_list[num // 3].copy()
             new_steps.append(num)
