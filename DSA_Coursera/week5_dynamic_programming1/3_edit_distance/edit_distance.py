@@ -16,6 +16,8 @@ def edit_distance(first_string, second_string):
     for i in range(n + 1):
         dist_matrix[0][i] = i
 
+    for i in range(1, )
+
 
     return 0
 
