@@ -3,7 +3,6 @@ def lcs2(first_sequence, second_sequence):
     m, n = len(first_sequence), len(second_sequence)
 
     lcs = []
-    count = 0
 
     # Create empty matrix for edit distances
     for i in range(m + 1):
@@ -27,16 +26,11 @@ def lcs2(first_sequence, second_sequence):
             match = lcs[i - 1][j - 1] + 1
 
             if first_sequence[i - 1] == second_sequence[j - 1]:
-                lcs[i][j] = min(insertion, deletion, match)
-                if min(insertion, deletion, match) == deletion:
-                    count += 1
+                lcs[i][j] = max(insertion, deletion, match)
             else:
-                edit_distances[i][j] = min(insertion, deletion, mis_match)
-                if min(insertion, deletion, mis_match) == deletion or min(insertion, deletion, mis_match) == mis_match:
-                    count += 1
-    los = m - count
+                lcs[i][j] = max(insertion, deletion, mis_match)
 
-    return los
+    return lcs[m][n]
 
 
 if __name__ == '__main__':
