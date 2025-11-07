@@ -2,7 +2,13 @@ def lcs3(first_sequence, second_sequence, third_sequence):
 
     m, n, r = len(first_sequence), len(second_sequence), len(third_sequence)
 
-    lcs = [[0] * (n + 1) for _ in range(m + 1)]
+    lcs = []
+    for i in range(m + 1):
+        lcs.append([])
+        for j in range(n + 1):
+            lcs[i].append([])
+            for k in range(r + 1):
+                lcs[i][j].append(0)
 
     for i in range(1, m + 1):
         for j in range(1, n + 1):
