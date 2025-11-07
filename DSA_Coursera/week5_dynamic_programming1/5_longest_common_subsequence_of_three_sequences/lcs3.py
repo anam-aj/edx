@@ -21,7 +21,7 @@ def lcs3(first_sequence, second_sequence, third_sequence):
                 else:
                     lcs[i][j][k] = max(lcs[i - 1][j][k], lcs[i][j - 1][k], lcs[i][j][k - 1])
 
-    return lcs[m][n]
+    return lcs[m][n][r]
 
 
 if __name__ == '__main__':
