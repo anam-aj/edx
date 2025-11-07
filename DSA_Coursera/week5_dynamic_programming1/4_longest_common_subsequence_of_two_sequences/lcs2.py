@@ -9,13 +9,6 @@ def lcs2(first_sequence, second_sequence):
         lcs.append([])
         for _ in range(n + 1):
             lcs[i].append(0)
-    '''
-    # Fill in edit distance for first row and first column
-    for i in range(m + 1):
-        edit_distances[i][0] = i
-    for i in range(n + 1):
-        edit_distances[0][i] = i
-    '''
 
     # Compute edit distances for all i and j positions
     for i in range(1, m + 1):
