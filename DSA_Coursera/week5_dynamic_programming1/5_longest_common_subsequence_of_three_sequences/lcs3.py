@@ -15,12 +15,13 @@ def lcs3(first_sequence, second_sequence, third_sequence):
             for k in range(1, r + 1):
 
                 if (first_sequence[i - 1] == second_sequence[j - 1] and
-                    first_sequence[i - 1] == second_sequence[j - 1]):
-                    dp[i][j] = dp[i - 1][j - 1] + 1
-                else:
-                    dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
+                    first_sequence[i - 1] == third_sequence[k - 1]):
 
-    return dp[m][n]
+                    lcs[i][j][k] = lcs[i - 1][j - 1][k - 1] + 1
+                else:
+                    lcs[i][j][k] = max(lcs[i - 1][j][k], lcs[i][j - 1][k], lcs[i][j][k - 1])
+
+    return lcs[m][n]
 
 
 if __name__ == '__main__':
