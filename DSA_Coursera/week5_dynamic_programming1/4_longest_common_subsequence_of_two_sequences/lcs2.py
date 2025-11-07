@@ -21,13 +21,13 @@ def lcs2(first_sequence, second_sequence):
     # Compute edit distances for all i and j positions
     for i in range(1, m + 1):
         for j in range(1, n + 1):
-            insertion = edit_distances[i][j - 1] + 1
-            deletion  = edit_distances[i -1][j] + 1
-            mis_match = edit_distances[i - 1][j - 1] + 1
-            match = edit_distances[i - 1][j - 1]
+            insertion = lcs[i][j - 1]
+            deletion  = lcs[i -1][j]
+            mis_match = lcs[i - 1][j - 1]
+            match = lcs[i - 1][j - 1] + 1
 
             if first_sequence[i - 1] == second_sequence[j - 1]:
-                edit_distances[i][j] = min(insertion, deletion, match)
+                lcs[i][j] = min(insertion, deletion, match)
                 if min(insertion, deletion, match) == deletion:
                     count += 1
             else:
