@@ -2,14 +2,14 @@ def lcs2(first_sequence, second_sequence):
 
     m, n = len(first_sequence), len(second_sequence)
 
-    edit_distances = []
+    lcs = []
     count = 0
 
     # Create empty matrix for edit distances
     for i in range(m + 1):
-        edit_distances.append([])
+        lcs.append([])
         for _ in range(n + 1):
-            edit_distances[i].append(0)
+            lcs[i].append(0)
 
     # Fill in edit distance for first row and first column
     for i in range(m + 1):
