@@ -1,11 +1,11 @@
-weights = [1, 3, 4, 4, 5]
-capacity = 3
+n = 4
 
-dp_value = []
+ls = [[False] * n] * n
+print(ls)
+print(type(ls))
 
-for m in range(len(weights) + 1):
-    dp_value.append([0])
-    for n in range(capacity):
-        dp_value[m].append(0)
+ls2 = [[False] * n for _ in range(n)]
+print(ls2)
+print(type(ls2))
 
-print(dp_value)
+print(ls==ls2)
