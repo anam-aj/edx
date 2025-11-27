@@ -22,7 +22,10 @@ def partition3(values):
                 if dp_table[s1][s2]:
                     if s1 + value <= target:
                         new_dp[s1 + value][s2] = True
-                    if s2 + value
+                    if s2 + value <= target:
+                        new_dp[s1][s2 + value] = True
+
+        dp_table = new_dp
 
 
 if __name__ == '__main__':
