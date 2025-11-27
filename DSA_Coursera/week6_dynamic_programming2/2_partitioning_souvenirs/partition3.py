@@ -2,7 +2,10 @@ from sys import stdin
 
 
 def partition3(values):
-    target
+    if values.sum() % 3 != 0:
+        return False
+    else:
+        target = values.sum()
 
 if __name__ == '__main__':
     input_n, *input_values = list(map(int, stdin.read().split()))
