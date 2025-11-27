@@ -28,7 +28,7 @@ def partition3(values):
 
         dp_table = new_dp
 
-    return dp_table[target][target]
+    return int(dp_table[target][target])
 
 
 if __name__ == '__main__':
