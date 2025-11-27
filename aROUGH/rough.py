@@ -1,16 +1,11 @@
-m, n = 3, 4
-dist_matrix = []
+weights = [1, 3, 4, 4, 5]
+capacity = 3
 
-for i in range(m + 1):
-    dist_matrix.append([])
-    for j in range(n + 1):
-        dist_matrix[i].append(0)
+dp_value = []
 
-for i in range(m + 1):
-    dist_matrix[i][0] = i
-for i in range(n + 1):
-    dist_matrix[0][i] = i
+for m in range(len(weights) + 1):
+    dp_value.append([0])
+    for n in range(capacity):
+        dp_value[m].append(0)
 
-print(dist_matrix)
-
-
+print(dp_value)
