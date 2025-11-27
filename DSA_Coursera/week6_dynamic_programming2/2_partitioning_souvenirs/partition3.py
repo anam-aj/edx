@@ -13,7 +13,9 @@ def partition3(values):
     dp_table = [[False] * (target + 1) for _ in range(target + 1)]
     dp_table[0][0] = True
 
-    for s1 in range(target +)
+    for s1 in range(target + 1):
+        for s2 in range(target + 1):
+            
 
 if __name__ == '__main__':
     input_n, *input_values = list(map(int, stdin.read().split()))
