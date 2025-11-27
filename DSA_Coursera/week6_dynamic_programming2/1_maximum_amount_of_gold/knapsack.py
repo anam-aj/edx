@@ -4,6 +4,7 @@ from sys import stdin
 def maximum_gold(capacity, weights):
 
     dp_value = []
+
     for m in range(len(weights) + 1):
         dp_value.append([0])
         for n in range(capacity):
@@ -17,6 +18,7 @@ def maximum_gold(capacity, weights):
 
             if weight_i <= current_capacity:
                 val = dp_value[item - 1][current_capacity - weight_i] + weight_i
+
                 if dp_value[item][current_capacity] < val:
                     dp_value[item][current_capacity] = val
 
