@@ -3,9 +3,9 @@ import copy
 
 
 def partition3(values):
-    if values.sum() % 3 != 0:
+    if sum(values) % 3 != 0:
         return False
-    target = values.sum() // 3
+    target = sum(values) // 3
 
     for value in values:
         if value > target:
