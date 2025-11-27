@@ -10,7 +10,10 @@ def partition3(values):
         if value > target:
             return False
 
-    dp_table = [[False] * n for _ in range(target + 1)]
+    dp_table = [[False] * (target + 1) for _ in range(target + 1)]
+    dp_table[0][0] = True
+
+    for s1 in range(target +)
 
 if __name__ == '__main__':
     input_n, *input_values = list(map(int, stdin.read().split()))
