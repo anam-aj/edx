@@ -1,5 +1,4 @@
 from sys import stdin
-import copy
 
 
 def partition3(values):
