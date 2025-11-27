@@ -14,10 +14,15 @@ def partition3(values):
     dp_table[0][0] = True
 
     for value in values:
-        new_dp = 
+        new_dp = dp_table.copy()
 
-    for s1 in range(target + 1):
-        for s2 in range(target + 1):
+        for s1 in range(target + 1):
+            for s2 in range(target + 1):
+
+                if dp_table[s1][s2]:
+                    if s1 + value <= target:
+                        new_dp[s1 + value][s2] = True
+                    if s2 + value
 
 
 if __name__ == '__main__':
