@@ -15,7 +15,7 @@ def partition3(values):
     dp_table[0][0] = True
 
     for value in values:
-        new_dp = copy.deepcopy(dp_table)
+        new_dp = [row[:] for row in dp_table]
 
         for s1 in range(target + 1):
             for s2 in range(target + 1):
