@@ -1,4 +1,5 @@
 from sys import stdin
+import copy
 
 
 def partition3(values):
@@ -14,7 +15,7 @@ def partition3(values):
     dp_table[0][0] = True
 
     for value in values:
-        new_dp = dp_table.copy()
+        new_dp = copy.deepcopy(dp_table)
 
         for s1 in range(target + 1):
             for s2 in range(target + 1):
