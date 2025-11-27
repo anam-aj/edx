@@ -27,6 +27,8 @@ def partition3(values):
 
         dp_table = new_dp
 
+    return dp_table[target][target]
+
 
 if __name__ == '__main__':
     input_n, *input_values = list(map(int, stdin.read().split()))
