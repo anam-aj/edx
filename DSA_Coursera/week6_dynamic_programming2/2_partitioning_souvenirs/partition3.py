@@ -3,12 +3,12 @@ from sys import stdin
 
 def partition3(values):
     if sum(values) % 3 != 0:
-        return False
+        return int(False)
     target = sum(values) // 3
 
     for value in values:
         if value > target:
-            return False
+            return int(False)
 
     dp_table = [[False] * (target + 1) for _ in range(target + 1)]
     dp_table[0][0] = True
