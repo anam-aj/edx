@@ -19,7 +19,8 @@ def compute_height(n, parents):
 
     queue = []
     queue.append(child_list[root_node])
-    while queue
+    while queue:
+        
 
 
 
