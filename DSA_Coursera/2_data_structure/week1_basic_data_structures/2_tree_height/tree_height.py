@@ -13,6 +13,9 @@ def compute_height(n, parents):
     for i, parent in enumerate(parents):
         child_list[parent].append(i)
 
+    queue = []
+    
+
     '''# Replace this code with a faster implementation
     max_height = 0
     for vertex in range(n):
