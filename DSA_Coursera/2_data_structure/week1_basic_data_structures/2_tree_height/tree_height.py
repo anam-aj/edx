@@ -23,17 +23,15 @@ def compute_height(n, parents):
 
     return height(root_node)'''
 
-    heights = 0
+    depth = 0
     queue = []
     queue.append(child_list[root_node])
-    heights[root_node] += 1
+    depth[root_node] += 1
     while queue:
         curr_node_child = queue.pop(0)
         for child in curr_node_child:
-            
-        heights[curr_node] += 1
-        if child_list[curr_node]:
-            queue.append(child_list[curr_node])
+            depth[child] = depth[root_node] + 1
+            queue.append(child_list[child])
 
     return (max(heights))
 
