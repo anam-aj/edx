@@ -23,7 +23,7 @@ def compute_height(n, parents):
 
     return height(root_node)'''
 
-    max_heights = 0
+    heights = 0
     queue = []
     queue.append(root_node)
     while queue:
