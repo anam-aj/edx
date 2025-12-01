@@ -5,7 +5,12 @@ import threading
 
 
 def compute_height(n, parents):
-    # Replace this code with a faster implementation
+
+    child_list = []
+
+    for i, parent in enumerate(parents):
+        
+    '''# Replace this code with a faster implementation
     max_height = 0
     for vertex in range(n):
         height = 0
@@ -14,7 +19,7 @@ def compute_height(n, parents):
             height += 1
             current = parents[current]
         max_height = max(max_height, height)
-    return max_height
+    return max_height'''
 
 
 def main():
