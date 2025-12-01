@@ -21,7 +21,7 @@ def compute_height(n, parents):
             return 1
         return 1 + max(height(child) for child in child_list[node])
 
-    return height(root)
+    return height(root_node)
 
     '''max_heights = 0
     queue = []
