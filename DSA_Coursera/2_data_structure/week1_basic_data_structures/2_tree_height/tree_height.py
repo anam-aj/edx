@@ -16,7 +16,14 @@ def compute_height(n, parents):
         else:
             child_list[parent].append(i)
 
-    max_heights = 0
+    def height(node):
+        if not child_list[node]:
+            return 1
+        return 1 + max(height(child) for child in child_list[node])
+
+    return height(root)
+
+    '''max_heights = 0
     queue = []
     queue.append(root_node)
     while queue:
@@ -25,7 +32,7 @@ def compute_height(n, parents):
         if child_list[curr_node]:
             queue.append(child_list[curr_node])
 
-    return (max(heights))
+    return (max(heights))'''
 
 
 def main():
