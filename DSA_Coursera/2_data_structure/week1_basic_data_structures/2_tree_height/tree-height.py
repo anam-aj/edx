@@ -5,7 +5,7 @@ sys.setrecursionlimit(10**7) # max depth of recursion
 threading.stack_size(2**27)  # new thread will get stack of such size
 
 class TreeHeight:
-        def read(self):
+        def read(self)
                 self.n = int(sys.stdin.readline())
                 self.parent = list(map(int, sys.stdin.readline().split()))
 
