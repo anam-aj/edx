@@ -25,7 +25,7 @@ def compute_height(n, parents):
         heights[curr_node] += 1
         queue.append(child_list[curr_node])
 
-    
+    return (max(heights))
 
 
 
