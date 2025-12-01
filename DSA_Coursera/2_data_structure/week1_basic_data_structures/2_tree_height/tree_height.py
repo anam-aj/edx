@@ -18,8 +18,8 @@ def compute_height(n, parents):
 
 
     queue = []
-    for parent, children in enumerate(child_list):
-        
+    queue.append(chi)
+
 
 
     '''# Replace this code with a faster implementation
