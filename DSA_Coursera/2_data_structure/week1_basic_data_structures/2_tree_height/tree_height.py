@@ -11,10 +11,16 @@ def compute_height(n, parents):
         child_list.append([])
 
     for i, parent in enumerate(parents):
-        child_list[parent].append(i)
+        if parent == -1:
+            root_node = i
+        else:
+            child_list[parent].append(i)
+
 
     queue = []
-    
+    for parent, children in enumerate(child_list):
+        
+
 
     '''# Replace this code with a faster implementation
     max_height = 0
