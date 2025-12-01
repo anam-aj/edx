@@ -11,6 +11,7 @@ def compute_height(n, parents):
         child_list.append([])
 
     for i, parent in enumerate(parents):
+        child_list[parent].append(i)
 
     '''# Replace this code with a faster implementation
     max_height = 0
