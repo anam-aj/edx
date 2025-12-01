@@ -16,7 +16,6 @@ def compute_height(n, parents):
         else:
             child_list[parent].append(i)
 
-
     heights = [0] * n
     queue = []
     queue.append(root_node)
@@ -26,19 +25,6 @@ def compute_height(n, parents):
         queue.append(child_list[curr_node])
 
     return (max(heights))
-
-
-
-    '''# Replace this code with a faster implementation
-    max_height = 0
-    for vertex in range(n):
-        height = 0
-        current = vertex
-        while current != -1:
-            height += 1
-            current = parents[current]
-        max_height = max(max_height, height)
-    return max_height'''
 
 
 def main():
