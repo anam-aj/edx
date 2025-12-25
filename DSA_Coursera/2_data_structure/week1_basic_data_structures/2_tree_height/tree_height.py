@@ -16,24 +16,24 @@ def compute_height(n, parents):
         else:
             child_list[parent].append(i)
 
+    depth = [0] * n
+    queue = []
+    queue.append(root_node)
+    depth[root_node] = 1
+    while queue:
+        parent_node = queue.pop(0)
+        for child in child_list[parent_node]:
+            depth[child] = depth[parent_node] + 1
+            queue.append(child)
+
+    return max(depth)
+
     '''def height(node):
         if not child_list[node]:
             return 1
         return 1 + max(height(child) for child in child_list[node])
 
     return height(root_node)'''
-
-    depth = 0
-    queue = []
-    queue.append(child_list[root_node])
-    depth[root_node] += 1
-    while queue:
-        curr_node_child = queue.pop(0)
-        for child in curr_node_child:
-            depth[child] = depth[root_node] + 1
-            queue.append(child_list[child])
-
-    return (max(heights))
 
 
 def main():

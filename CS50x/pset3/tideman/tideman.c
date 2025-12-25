@@ -181,7 +181,6 @@ void add_pairs(void)
 // Sort pairs in decreasing order by strength of victory
 void sort_pairs(void)
 {
-    // TODO
     // Bubble sort
     int p = pair_count;
     for (int j = 0; j < pair_count - 1; j++)
@@ -211,7 +210,6 @@ void sort_pairs(void)
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
-    // TODO
     for (int i = 0; i < pair_count; i++)
     {
         if (check_loop(pairs[i].winner, i) == 0)
@@ -226,7 +224,6 @@ void lock_pairs(void)
 // Print the winner of the election
 void print_winner(void)
 {
-    // TODO
 
     for (int i = 0; i < candidate_count; i++)
     {
@@ -258,7 +255,6 @@ void print_winner(void)
 
 // Checks if pair having "wiiner_index" as winner will create loop
 // Return -1 if it creates loop, otherwise return 0
-// Yay ! finally used recursive function
 int check_loop(int winner_index, int pair_number)
 {
     for (int i = 0; i < candidate_count; i++)
