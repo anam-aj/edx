@@ -12,8 +12,39 @@ class Buffer:
         self.finish_time = []
 
     def process(self, request):
-        # write your code here
-        return Response(False, -1)
+        # Buffer empty
+        if not self.finish_time:
+            self.finish_time.append(request.arrived_at + request.time_to_process)
+            return Response(False, request.arrived_at)
+        # Buffer not full
+        elif len(self.finish_time) < self.size:
+            current_finish_time = self.finish_time[-1]
+            if request.arrived_at >= current_finish_time:
+                new_finish_time = request.arrived_at + request.time_to_process
+                self.finish_time.append(new_finish_time)
+                return Response(False, request.arrived_at)
+            else:
+                new_finish_time = current_finish_time + request.time_to_process
+                self.finish_time.append(new_finish_time)
+                return Response(False, current_finish_time)
+        # Buffer full
+        else:
+            if self.finish_time[0] <= request.arrived_at:
+                self.finish_time.pop(0)
+                if not self.finish_time:
+                    self.finish_time.append(request.arrived_at + request.time_to_process)
+                    return Response(False, request.arrived_at)
+                current_finish_time = self.finish_time[-1]
+                if request.arrived_at >= current_finish_time:
+                    new_finish_time = request.arrived_at + request.time_to_process
+                    self.finish_time.append(new_finish_time)
+                    return Response(False, request.arrived_at)
+                else:
+                    new_finish_time = current_finish_time + request.time_to_process
+                    self.finish_time.append(new_finish_time)
+                    return Response(False, current_finish_time)
+            else:
+                return Response(True, -1)
 
 
 def process_requests(requests, buffer):

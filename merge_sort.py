@@ -22,7 +22,6 @@ def merge(arr1, arr2):
     i, j = 0, 0
 
     while i < len(arr1) and j < len(arr2):
-
         element_1, element_2 = arr1[i], arr2[j]
 
         if element_1 <= element_2:
