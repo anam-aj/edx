@@ -12,6 +12,9 @@ def build_heap(data):
     # case gives a quadratic number of swaps.
     #
     # TODO: replace by a more efficient implementation
+
+    for i in range(len(data)):
+
     swaps = []
     for i in range(len(data)):
         for j in range(i + 1, len(data)):
@@ -19,6 +22,15 @@ def build_heap(data):
                 swaps.append((i, j))
                 data[i], data[j] = data[j], data[i]
     return swaps
+
+
+def shift_down(index, array):
+    parent = (index + 1) // 2
+    left_child = index + 1 
+
+
+
+
 
 
 def main():
