@@ -25,8 +25,10 @@ def build_heap(data):
 
 
 def shift_down(index, array):
+    if index % 2 == 0:
+        
     parent = (index + 1) // 2
-    left_child = index + 1 
+    left_child = index + 1
 
 
 
