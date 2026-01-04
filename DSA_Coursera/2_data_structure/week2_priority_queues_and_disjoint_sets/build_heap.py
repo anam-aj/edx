@@ -17,10 +17,8 @@ def build_heap(data):
 
     swaps = []
     for i in range(len(data) // 2, -1, -1):
-        shift_down(i, data)
-            if data[i] > data[j]:
-                swaps.append((i, j))
-                data[i], data[j] = data[j], data[i]
+        shift_down(i, data, swaps)
+
     return swaps
 
 
@@ -41,6 +39,7 @@ def shift_down(index, array, swaps):
             break
         else:
             array[index], array[min_index] = array[min_index], array[index]
+            
             index = min_index
 
 
