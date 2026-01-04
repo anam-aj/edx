@@ -24,7 +24,7 @@ def build_heap(data):
     return swaps
 
 
-def shift_down(index, array):
+def shift_down(index, array, swaps):
     while True:
         left_child = 2 * index + 1
         right_child = 2 * index + 2
