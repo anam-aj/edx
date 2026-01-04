@@ -26,12 +26,7 @@ def build_heap(data):
 
 def shift_down(index, array):
 
-    if index == 0:
-        parent = 0
-    elif index % 2 == 0:
-        parent = (index // 2) - 1
-    else:
-        parent = index //
+
 
     left_child = 2 * index + 1
     right_child = 2 * index + 2
@@ -45,6 +40,17 @@ def shift_down(index, array):
         array[index], array[min_index] = array[min_index], array[index]
 
     shift_down(min_index, array)
+
+def left_child(index):
+    
+def parent(index):
+    if index == 0:
+        parnt = 0
+    elif index % 2 == 0:
+        parnt = (index // 2) - 1
+    else:
+        parnt = index // 2
+    return parnt
 
 
 def main():
