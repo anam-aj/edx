@@ -38,8 +38,8 @@ def shift_down(index, array, swaps):
         if min_index == index:
             break
         else:
+            swaps.append(index, min_index)
             array[index], array[min_index] = array[min_index], array[index]
-            
             index = min_index
 
 
