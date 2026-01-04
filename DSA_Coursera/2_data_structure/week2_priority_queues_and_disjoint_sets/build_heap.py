@@ -41,6 +41,7 @@ def shift_down(index, array):
             break
         else:
             array[index], array[min_index] = array[min_index], array[index]
+            index = min_index
 
 
 def parent(index):
