@@ -32,17 +32,16 @@ def shift_down(index, array):
             break
 
         min_index = index
-
         if left_child < len(array) and array[left_child] < array[min_index]:
             min_index = left_child
         if right_child < len(array) and array[right_child] < array[min_index]:
             min_index = right_child
+
         if min_index == index:
+            break
+        else:
             array[index], array[min_index] = array[min_index], array[index]
 
-    shift_down(min_index, array)
-
-def left_child(index):
 
 def parent(index):
     if index == 0:
