@@ -28,7 +28,7 @@ def shift_down(index, array):
     while True:
         left_child = 2 * index + 1
         right_child = 2 * index + 2
-        if left_child >= len(array) and right_child >= len(array):
+        if left_child >= len(array):
             break
 
         min_index = index
