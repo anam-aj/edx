@@ -25,24 +25,25 @@ def build_heap(data):
 
 
 def shift_down(index, array):
+    while True:
+        left_child = 2 * index + 1
+        right_child = 2 * index + 2
+        if left_child > len(array) and right_child(array) > len(array):
+            break
 
+        min_index = index
 
-
-    left_child = 2 * index + 1
-    right_child = 2 * index + 2
-    min_index = index
-
-    if left_child < len(array) and array[left_child] < array[min_index]:
-        min_index = left_child
-    if right_child < len(array) and array[right_child] < array[min_index]:
-        min_index = right_child
-    if min_index != index:
-        array[index], array[min_index] = array[min_index], array[index]
+        if left_child < len(array) and array[left_child] < array[min_index]:
+            min_index = left_child
+        if right_child < len(array) and array[right_child] < array[min_index]:
+            min_index = right_child
+        if min_index == index:
+            array[index], array[min_index] = array[min_index], array[index]
 
     shift_down(min_index, array)
 
 def left_child(index):
-    
+
 def parent(index):
     if index == 0:
         parnt = 0
