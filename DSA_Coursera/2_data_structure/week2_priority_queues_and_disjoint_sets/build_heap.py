@@ -41,19 +41,9 @@ def shift_down(index, array):
         min_index = left_child
     if right_child < len(array) and array[right_child] < array[min_index]:
         min_index = right_child
-
-    array[index], array[min_index] = array[min_index], array[index]
+    if min_index != index:
+        array[index], array[min_index] = array[min_index], array[index]
     
-
-
-
-
-
-
-
-
-
-
 
 
 def main():
