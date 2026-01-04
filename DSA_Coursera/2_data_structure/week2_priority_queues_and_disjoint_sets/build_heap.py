@@ -37,7 +37,7 @@ def shift_down(index, array):
     right_child = 2 * index + 2
     max_index = index
 
-    if array[max_index] 
+    if left_child < len(array) and array[max_index] 
 
 
 
