@@ -16,8 +16,8 @@ def build_heap(data):
     for i in range(len(data)):
 
     swaps = []
-    for i in range(len(data)):
-        for j in range(i + 1, len(data)):
+    for i in range(len(data) // 2, -1, -1):
+        shift_down(i, data)
             if data[i] > data[j]:
                 swaps.append((i, j))
                 data[i], data[j] = data[j], data[i]
