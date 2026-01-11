@@ -1,17 +1,26 @@
 #include <iostream>
+
 using namespace std;
+
+
 int main() {
-    // Player statistics
-    int baseScore = 85;
-    int bonusPoints = 15;
-    int timeBonus = 10;
-    // Basic calculations
-    int totalScore = baseScore + bonusPoints + timeBonus;
-    cout << "Total Score: " << totalScore << endl;
-    // Division and modulus examples
-    int averageScore = totalScore / 3;  //Integer division
-    int remainder = totalScore % 10;    // Remainder when divided by 10
-    cout << "Average per section: " << averageScore << endl;
-    cout << "Score remainder: " << remainder << endl;
+    // Player attributes
+    int playerLevel = 3;
+    int playerScore = 1250;
+    int minimumLevel = 5;
+    int minimumScore = 1000;
+    bool hasCompleteMap = true;
+    // Relational comparisons
+    bool levelQualified = playerLevel >= minimumLevel;
+    bool scoreQualified = playerScore >= minimumScore;
+    cout << "Level qualified: " << (levelQualified ? "Yes" : "No") << endl;
+    cout << "Score qualified: " << (scoreQualified ? "Yes" : "No") << endl;
+    // Logical combinations
+    bool basicAchievement = levelQualified && scoreQualified;
+    bool specialAchievement = basicAchievement && hasCompleteMap;
+    bool anyQualification = levelQualified || scoreQualified;
+    cout << "Basic achievement: " << (basicAchievement ? "Earned" : "Not earned") << endl;
+    cout << "Special achievement: " << (specialAchievement ? "Earned" : "Not earned") << endl;
+    cout << "Any qualification: " << (anyQualification ? "Yes" : "No") << endl;
     return 0;
 }
