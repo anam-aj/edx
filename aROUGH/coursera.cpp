@@ -1,26 +1,17 @@
-#include<iostream>
-
+#include <iostream>
 using namespace std;
-
-
-class Calc{
-    public:
-    int num1,num2;
-    void doMath(){
-        num1 = 10; num2 = 20;
-        int result = num1 + num2;
-        cout << "result is " << result << endl;
-        if(result > 25){
-            cout << "big number" << endl;
-        }else{
-            cout << "small number" << endl;
-        }
-    }
-};
-
-
-int main(){
-    Calc c;
-    c.doMath();
+int main() {
+    // Player statistics
+    int baseScore = 85;
+    int bonusPoints = 15;
+    int timeBonus = 10;
+    // Basic calculations
+    int totalScore = baseScore + bonusPoints + timeBonus;
+    cout << "Total Score: " << totalScore << endl;
+    // Division and modulus examples
+    int averageScore = totalScore / 3;  //Integer division
+    int remainder = totalScore % 10;    // Remainder when divided by 10
+    cout << "Average per section: " << averageScore << endl;
+    cout << "Score remainder: " << remainder << endl;
     return 0;
 }
