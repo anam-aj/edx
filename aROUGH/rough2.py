@@ -1,6 +1,6 @@
-a = 3
-
-if a == 3:
-    print('if')
-elif a > 2:
-    print('elif')
+for i in range(3):
+    y = (((i + 3)
+        - (4))
+        * (5)
+        % 10)
+    print(y)
