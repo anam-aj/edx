@@ -100,6 +100,7 @@
           "Codeium.codeium",
           "Codeium.codeium-enterprise-updater",
           "github.copilot",
+          "GitHub.copilot-chat",
           "ms-toolsai.vscode-jupyter-cell-tags",
           "tabnine.tabnine-vscode"
         ],
@@ -246,7 +247,7 @@
     8082,
     8787
   ],
-  "image": "ghcr.io/cs50/codespace:2d3b8076f88def07c2c882f7e8ca3969ee8be6ad",
+  "image": "ghcr.io/cs50/codespace:a35ed926bc4e036c0797080188a4d9b4a2ad27d6",
   "mounts": [
     {
       "source": "/var/run/docker.sock",
