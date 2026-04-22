@@ -1,0 +1,23 @@
+/* Sets the background color and default text color for the whole page */
+body {
+    background-color: lightyellow;
+    color: darkgreen;
+    font-family: Arial, sans-serif;
+}
+
+/* Sets heading color to Blue */
+h1 {
+    color: blue;
+}
+
+/* Targets all labels to be 16-point italics */
+label {
+    font-size: 16pt;
+    font-style: italic;
+}
+
+/* Slightly adjusts the radio button labels so they aren't completely huge next to the button */
+.radio-label {
+    font-size: 12pt;
+    font-style: italic;
+}   
