@@ -1,9 +1,11 @@
-public class BankAccount {
-    // Private variable: hidden from outside classes
-    private double balance;
+abstract class Shape {
+    // Abstract method (no body)
+    abstract void draw();
+}
 
-    // Public method to safely access the private variable
-    public void deposit(double amount) {
-        if(amount > 0) balance += amount;
+class Circle extends Shape {
+    // Providing implementation
+    void draw() {
+        System.out.println("Drawing a circle");
     }
 }
