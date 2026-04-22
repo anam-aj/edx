@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Dynamism</title>
+    <style>
+        /* Optional: Centers the text on the screen and makes it look presentable for your viva */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+        }
+
+        #dynamicText {
+            padding: 20px;
+            border: 2px dashed #999;
+            cursor: pointer; /* Changes the mouse cursor to a pointer so it feels interactive */
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="dynamicText">The Power of JavaScript is Dynamism</h1>
+
+    <script>
+        // 1. Select the HTML element using its ID
+        const textElement = document.getElementById('dynamicText');
+
+        // 2. Add an event listener for when the mouse pointer hovers OVER the text
+        textElement.addEventListener('mouseover', function() {
+            textElement.innerText = "This is a Demonstration of Dynamism";
+        });
+
+        // 3. ASSUMPTION: The text should revert to the original when the mouse leaves.
+        // Without this, the text would change once and stay that way forever.
+        textElement.addEventListener('mouseout', function() {
+            textElement.innerText = "The Power of JavaScript is Dynamism";
+        });
+    </script>
+
+</body>
+</html>
