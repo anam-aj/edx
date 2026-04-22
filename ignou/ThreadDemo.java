@@ -1,4 +1,12 @@
-class MyThread extends Thread {
+interface Drawable {
+    void draw(); // implicitly public and abstract
+}
+
+class Rectangle implements Drawable {
+    public void draw() {
+        System.out.println("Drawing a rectangle");
+    }
+}class MyThread extends Thread {
     public void run() {
         for(int i=1; i<=3; i++) {
             System.out.println(Thread.currentThread().getName() + " executing");
