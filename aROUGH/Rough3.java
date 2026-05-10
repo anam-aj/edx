@@ -1,4 +1,5 @@
-
+Question 1
+Write a Java program using method for addition.
 
 class Rough3 {
 
@@ -13,8 +14,8 @@ class Rough3 {
     }
 }
 
-Question 2
 
+Question 2
 Write a Java program to find factorial using method.
 
 class MethodFactorial
@@ -38,8 +39,8 @@ class MethodFactorial
     }
 }
 
-Question 3
 
+Question 3
 Write a Java program to find square using method.
 
 class SquareMethod
@@ -58,8 +59,8 @@ class SquareMethod
     }
 }
 
-Question 4
 
+Question 4
 Write a Java program demonstrating method overloading.
 
 class Overloading {
