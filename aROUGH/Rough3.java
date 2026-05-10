@@ -20,7 +20,7 @@ class Rough3 {
 
 
 
-/*
+
 Question 2
 
 Write a Java
