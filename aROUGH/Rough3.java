@@ -1,8 +1,8 @@
 Question 1
 Write a Java program using method for addition.
 
-class Rough3 {
-
+class Rough3
+{
     static int add(int a, int b)
     {
         return a + b;
@@ -20,21 +20,20 @@ Write a Java program to find factorial using method.
 
 class MethodFactorial
 {
-
     static int fact(int n)
     {
         int f = 1;
 
         for (int i = 1; i <= n; i++)
-
+        {
             f *= i;
+        }
 
         return f;
     }
 
     public static void main(String[] args)
     {
-
         System.out.println(fact(5));
     }
 }
@@ -45,16 +44,13 @@ Write a Java program to find square using method.
 
 class SquareMethod
 {
-
     static int square(int n)
     {
-
         return n * n;
     }
 
     public static void main(String[] args)
     {
-
         System.out.println(square(6));
     }
 }
@@ -63,8 +59,8 @@ class SquareMethod
 Question 4
 Write a Java program demonstrating method overloading.
 
-class Overloading {
-
+class Overloading
+{
     void add(int a, int b)
     {
         System.out.println(a + b);
@@ -82,4 +78,23 @@ class Overloading {
         obj.add(10, 20, 30);
     }
 }
-*/
+
+
+Question 5
+Write a Java program to swap numbers using method.
+
+class SwapMethod
+{
+    static void swap(int a, int b)
+    {
+        int temp = a;
+        a = b;
+        b = temp;
+        System.out.println(a + " " + b);
+    }
+
+    public static void main(String[] args)
+    {
+        swap(5, 10);
+    }
+}
