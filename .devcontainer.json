@@ -66,7 +66,7 @@
         "editor.foldingHighlight": false,
         "editor.formatOnSave": false,
         "editor.guides.indentation": false,
-        "editor.hover.enabled": false,
+        "editor.hover.enabled": "off",
         "editor.lightbulb.enabled": "off",
         "editor.matchBrackets": "never",
         "editor.minimap.enabled": false,
@@ -140,9 +140,9 @@
         "java.debug.settings.enableRunDebugCodeLens": false,
         "java.inlayHints.parameterNames.enabled": "none",
         "java.server.launchMode": "Standard",
-        "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
-        "javascript.suggest.enabled": false,
-        "javascript.validate.enable": false,
+        "js/ts.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+        "js/ts.suggest.enabled": false,
+        "js/ts.validate.enabled": false,
         "Prettier-SQL.keywordCase": "upper",
         "problems.decorations.enabled": false,
         "problems.visibility": false,
@@ -247,7 +247,7 @@
     8082,
     8787
   ],
-  "image": "ghcr.io/cs50/codespace:a35ed926bc4e036c0797080188a4d9b4a2ad27d6",
+  "image": "ghcr.io/cs50/codespace:2740961eb064ee6bc98e590fe324a2e901695eae",
   "mounts": [
     {
       "source": "/var/run/docker.sock",
