@@ -1,0 +1,104 @@
+.link 
+{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.link > a 
+{
+    margin-left: 15px; 
+}
+
+.logo
+{
+    display: block;      /* Allows the margin: auto to work */
+    margin: 100px auto auto auto; /* Centers it horizontally */
+}
+
+:is(#index, #imageSearch) > input[type="text"]
+{
+    display: block;      /* Allows the margin: auto to work */
+    margin: 20px auto auto auto; /* Centers it horizontally */
+    
+    /* Styling for the box itself */
+    width: 480px;
+    padding: 12px 20px;
+    border-radius: 24px;
+    border: 1px solid rgb(200,200,200);
+    outline: none;
+}   
+
+:is(#index, #imageSearch, #advanceSearch ) > .button_block
+{
+    display: flex;      /* Allows the margin: auto to work */
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+:is(#index, #imageSearch)> .button_block > input[type="submit"]
+{
+    padding: 5px 5px;   /* Increases vertical and horizontal size */
+    font-size: 15px;      /* Optional: Makes the text larger to match */
+    min-width: 120px;     /* Optional: Ensures a consistent minimum width */
+    border-radius: 8px;
+    border: 1px solid #dfe1e5;
+    background-color: rgb(240);
+
+}
+
+:is(#index, #imageSearch) > .button_block > input[type="submit"]:hover
+{
+    background-color: rgb(230,230,230); /* Only changes the background color */
+    cursor: pointer;
+}
+
+:is(#index, #imageSearch) > .button_block > input[type="submit"]:active {
+    border: 1px solid rgb(50, 109, 192);
+}
+
+#advanceSearch > div {
+    display: flex;         /* 1. Creates the two horizontal partitions */
+    align-items: center;   /* 2. Vertically aligns Label and Input */
+    
+    margin: 10px auto;     /* 3. Keeps the rows stacked vertically */
+    width: 600px;          /* 4. Total width of your form area */
+    gap: 5px;
+    margin-top: 20px;
+}
+
+#advanceSearch > div > label 
+{
+    flex: 0 0 200px;
+    font-size: 22px;       
+}
+
+#advanceSearch > div > input[type="text"] 
+{
+    flex: 1 0 300px;                /* Partition 2 (Flexible) */
+    padding: 12px 20px;
+}
+
+#advanceSearch > .button_block > input[type="submit"]
+{
+    padding: 13px 13px;   /* Increases vertical and horizontal size */
+    font-size: 15px;
+    color: white;      /* Optional: Makes the text larger to match */
+    min-width: 120px;     /* Optional: Ensures a consistent minimum width */
+    border-radius: 22px;
+    border: 1px solid #dfe1e5;
+    background-color: rgb(52, 103, 212);
+
+}
+
+#advanceSearch  > .button_block > input[type="submit"]:hover
+{
+    background-color: rgb(31, 73, 208); /* Only changes the background color */
+    cursor: pointer;
+}
+
+#advanceSearch  > .button_block > input[type="submit"]:active 
+{
+    border: 2px solid rgb(25, 0, 255);
+}
